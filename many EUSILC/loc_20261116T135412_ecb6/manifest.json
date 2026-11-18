@@ -1,0 +1,121 @@
+{
+ "job_id": "loc_20261116T135412_ecb6",
+ "flow": "harmonize",
+ "survey_id": "IRL_2025_EU-SILC",
+ "status": "completed",
+ "finished": "2026-11-16T13:55:01+00:00",
+ "files": {
+  "decisions.json": {
+   "sha256": "f39271aeb1bc19c127e5c5da5c203ce4a306dfa4244e71de56644c8693c00060",
+   "size": 287
+  },
+  "job.json": {
+   "sha256": "4b642c65e31cb58f00d5f2cc4637b8ba82444cd2387742452637c903f98bb577",
+   "size": 9138
+  },
+  "output/harmonized.dta": {
+   "sha256": "e0654ad2031d641fe89af1f30ef22856439e4e8603cde500a6641a00f3d4bf03",
+   "size": 3508174
+  },
+  "output/harmonized_reasons.dta": {
+   "sha256": "59190a997c9750d8b8684990a79c4121b2a63c8bc458f6e465659aa65d335cd3",
+   "size": 2057173
+  },
+  "output/quality.json": {
+   "sha256": "200ae9c4300f8891eeac22c9c8e5951f13ef5cd207a5bf55c3cecdb0d3b39e00",
+   "size": 142517
+  },
+  "output/run.json": {
+   "sha256": "52a7a10c59f2384e6cf107a859940e0b36814120cb5818088113e4ca1e2d3167",
+   "size": 3076
+  },
+  "output/targets.json": {
+   "sha256": "4dc300a92d17c818eda574fe270541d8a863cdf103390293d31023b95142e972",
+   "size": 170605
+  },
+  "profile/data_scan.json": {
+   "sha256": "5ad00145cbd0d49cf37521ab1268c4f5cd3b84dd50d1bf1ca9333f23ddf06e88",
+   "size": 434454
+  },
+  "profile/file_links.json": {
+   "sha256": "0e3cdfd7ddfcc7cc73d99943b8b2750baf43d4c3851c47cdca85d5a02326620e",
+   "size": 388
+  },
+  "profile/key_checks.json": {
+   "sha256": "89cf4814f66ae7fed2c7a1cb372ebf0dde6af68339fde5eb82f4c22992b9464b",
+   "size": 1595
+  },
+  "profile/overlay.json": {
+   "sha256": "6b218c4914cb18e09f89fdd0ac919dbd688fd447bab019ebeace07c2706e7029",
+   "size": 844
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__D.svis.json": {
+   "sha256": "1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9",
+   "size": 28652
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__H.svis.json": {
+   "sha256": "abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368",
+   "size": 343063
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__P.svis.json": {
+   "sha256": "e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed",
+   "size": 553083
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__R.svis.json": {
+   "sha256": "e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e",
+   "size": 261699
+  },
+  "profile/standard.json": {
+   "sha256": "36c9a6c5abe3374690f31a72bbf26236ed38fa8672e6994ecb5f3fb3b6d43fed",
+   "size": 85719
+  },
+  "run.lock.json": {
+   "sha256": "b40ac07e38a4511dc036dce506cdc83b3fd90718ba1bced4658a69cd8fa9a3bf",
+   "size": 4245
+  },
+  "spec/hspec.json": {
+   "sha256": "2e7868394594d9e0bed8ee8976413790794af48623346761072e249e375af6d2",
+   "size": 147952
+  },
+  "spec/hspec.stamp.json": {
+   "sha256": "7f3304389f652e17193d015a113ec3e26e456c65ca78b6790525f066eda1f1b5",
+   "size": 54707
+  },
+  "spec/standard_DEM-agecat.py": {
+   "sha256": "d4be0494c205ba5108ccaddcbf4f416afddd1193a9971e9bedbd898623e5ebed",
+   "size": 1163
+  },
+  "spec/standard_isced_level.py": {
+   "sha256": "732b1cc5ef42997b6aa0f6f39622d9825f97b67f34ebe6c11481838b9c8c19f6",
+   "size": 918
+  },
+  "spec/standard_LBR-labor.py": {
+   "sha256": "8f5ca3dad08dc670703b27c7d42655d5f028088b8807c7effd42125d6f251378",
+   "size": 1892
+  },
+  "spec/standard_LBR-wage.py": {
+   "sha256": "3a6469ed7c3b03b15de9f57e5b8f3d7413fa34afd3a17d531a00f4c7a5418937",
+   "size": 1452
+  },
+  "spec/standard_welfare_pc.py": {
+   "sha256": "06e4f81769b40f332c44b29503be2c9fa4ffebe93f9b474728a4d05fe1ec56dd",
+   "size": 1417
+  },
+  "staged.json": {
+   "sha256": "67d8130c1fa7d74669ad1f9fa11037411793f011796a3af3e1786ae026b42cf2",
+   "size": 1393
+  },
+  "trail/harmonize/identity.json": {
+   "sha256": "555396e10cb0787b606911f642166ca62aa371005107a1bb6c312149e0a3ef9c",
+   "size": 447
+  },
+  "trail/harmonize/log.txt": {
+   "sha256": "88e88b714dcd0dcab450d41f92615af46862aa30179b7cade7404807ab105102",
+   "size": 15270
+  },
+  "trail/harmonize/state.json": {
+   "sha256": "18cd4b1e813a9d278e30fa0bd0aa97f90787d475b11b1125547aaa93bc3cbbc8",
+   "size": 1410
+  }
+ }
+}

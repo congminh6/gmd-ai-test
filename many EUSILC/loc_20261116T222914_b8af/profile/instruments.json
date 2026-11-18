@@ -1,0 +1,88 @@
+{
+  "by_route": {
+    "image": 1,
+    "pdf_mixed": 1,
+    "pdf_text": 1
+  },
+  "files": [
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "\"Equivalence scale/equivalised household disposable income:\"",
+        "kind": "report",
+        "language": "English",
+        "reason": "The sample contains publication front matter, a table of contents, and methodological/definition prose (e.g., equivalence scale, income distribution concepts) rather than interview questions or variable-by-variable listings.",
+        "sample": "pages 1, 2, 3, 14 of 26: 6000 characters"
+      },
+      "detail": "14 text / 1 ocr / 0 empty of 15 sampled page(s); 2353 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "a report, not a questionnaire"
+      },
+      "format": "pdf",
+      "n_pages": 26,
+      "ocr_page_index": [
+        2
+      ],
+      "ocr_pages": 1,
+      "pages_sampled": 15,
+      "path": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 3550504,
+      "text_chars_per_page": 2353,
+      "text_pages": 14,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "detail": "a jpeg image: no reader takes images",
+      "ext": "jpg",
+      "extractable": false,
+      "format": "jpeg",
+      "ocr_page_index": [],
+      "path": "Turkish/GYKA MVS (Kesit), 2024 kapak.jpg",
+      "route": "image",
+      "size_bytes": 396616
+    },
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "İÇİNDEKİLER … 3. Meta Veri 3.1 Amaç 3.2 Tarihçe 3.3 Kapsam 3.4 Yöntem 3.5 Tanım ve Kavramlar",
+        "kind": "report",
+        "language": "Turkish",
+        "reason": "The sample is mainly a microdata publication/user guide with sections like metadata (purpose, scope, method) and conceptual definitions, not a variable-by-variable listing of the data file or a questionnaire form.",
+        "sample": "pages 1, 2, 3, 14 of 26: 4837 characters"
+      },
+      "detail": "15 text / 0 ocr / 0 empty of 15 sampled page(s); 2268 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "a report, not a questionnaire"
+      },
+      "format": "pdf",
+      "n_pages": 26,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "Turkish/GYKA MVS (Kesit), 2024 TR son.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 3643622,
+      "text_chars_per_page": 2268,
+      "text_pages": 15,
+      "tool": "pymupdf"
+    }
+  ],
+  "n_files": 3,
+  "root": "M:\\datalib\\TUR\\TUR_2024_SILC-C\\TUR_2024_SILC-C_v01_M\\Doc",
+  "skipped_extensions": {}
+}

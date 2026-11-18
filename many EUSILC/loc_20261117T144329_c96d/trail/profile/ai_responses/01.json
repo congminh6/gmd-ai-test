@@ -1,0 +1,14 @@
+{
+ "request_id": "01-associate_instruments-survey",
+ "file_links": {},
+ "unassociated": [
+  {
+   "table": "Regional Deflators_NUTS2",
+   "reason": "reference/lookup table of regional deflators by NUTS2 and year; not populated from a questionnaire instrument",
+   "evidence": [
+    "inventory#Regional Deflators_NUTS2#identity"
+   ],
+   "missing": []
+  }
+ ]
+}

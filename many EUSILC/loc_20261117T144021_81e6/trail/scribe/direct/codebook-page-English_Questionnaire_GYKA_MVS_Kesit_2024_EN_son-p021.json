@@ -1,0 +1,315 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p21",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 4377,
+  "output_token_count": 1495,
+  "total_token_count": 5872,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 158,
+  "reasoning_output_token_count": 158
+ },
+ "images": 3,
+ "answer": {
+  "tables": [
+   {
+    "heading": "",
+    "header": [],
+    "rows": [
+     {
+      "cells": [
+       "HH100",
+       "BATHTUB or SHOWER UNIT in the dwelling",
+       "1",
+       "1- Yes (For sole use of the household)\n2- Yes (Shared)\n3- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH110",
+       "INDOOR FLUSHING TOILET in the dwelling",
+       "1",
+       "1- Yes (For sole use of the household)\n2- Yes (Shared)\n3- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH120",
+       "KITCHEN in the dwelling",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH130",
+       "PIPED WATER SYSTEM in the dwelling",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH140",
+       "HOT WATER SYSTEM in the dwelling (Central hot water,\ngeyser, water heater, solar energy system etc.)",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH145",
+       "Overall satisfaction with the dwelling",
+       "1",
+       "1- Very dissatisfied\n2- Dissatisfied\n3- Satisfied\n4- Very satisfied"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH150",
+       "TELEPHONE LINE possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH160",
+       "MOBILE PHONE possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH170",
+       "COLOUR TV possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH180",
+       "COMPUTER possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH190",
+       "INTERNET connection possession of the household\n[HH180 = “1” ]",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH200",
+       "WASHING MACHINE possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH210",
+       "REFRIGERATOR possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH220",
+       "DISHWASHER possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH230",
+       "AIR CONDITIONER possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH240",
+       "CAR (for private use only) possession of the household",
+       "1",
+       "1- Yes\n2- No, cannot afford\n3- No, other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Problems with Dwelling and Environment",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "HS010",
+       "Leaking roof, damp walls or rot in window frames problems",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS020",
+       "Heating problems because of insulation",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS030",
+       "Problems such as darkness of rooms or lack of day-light",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS040",
+       "Noise from neighbours or from street",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS050",
+       "Shortage of space in the dwelling",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS060",
+       "Pollution, grime or other environmental problems",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HS070",
+       "Crime, violence or vandalism in the area",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Financial Situation",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "HE010",
+       "Arrears on MORTGAGE, LOAN REPAYMENTS or RENT\nPAYMENTS in the last 12 months",
+       "1",
+       "1- Yes (Once)\n2- Yes (Twice or more)\n3- No\n4- There is no such kind of payment"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE020",
+       "Arrears on UTILITY BILLS in the last 12 months\n(Paying through borrowing is considered as paid through own\nsources)",
+       "1",
+       "1- Yes (Once)\n2- Yes (Twice or more)\n3- No\n4- There is no such kind of payment"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE030",
+       "Arrears on HIRE PURCHASE INSTALMENTS, CREDIT\nCARDS or OTHER LOAN PAYMENTS in the last 12\nmonths",
+       "1",
+       "1- Yes (Once)\n2- Yes (Twice or more)\n3- No\n4- There is no such kind of payment"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE040",
+       "Ability to MAKE ENDS MEET with total household income",
+       "1",
+       "1- With a great difficulty\n2- With difficulty\n3- With some difficulty\n4- Fairly easily\n5- Easily\n6- Very easily"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE050",
+       "Lowest monthly income of household to make ends meet",
+       "7",
+       "1..9999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE060",
+       "Financial burden of the total housing cost\n(Repayment of an interest for a loan or credit on dwelling for owner\noccupiers or rent paid for tenants , utility bills , heating expenses,\npenalties for utility bills, collective expenses of apartment and\nregular repair and maintenance costs are all covered.)",
+       "1",
+       "1- A heavy burden\n2- A slight burden\n3- Not burden at all"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE070",
+       "Financial burden of the repayment of debts from hire\npurchases or loans excluding housing costs",
+       "1",
+       "1- A heavy burden\n2- A slight burden\n3- Not burden at all\n4- There is no such kind of repayment"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

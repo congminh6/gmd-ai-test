@@ -1,0 +1,17 @@
+{
+  "checks": {},
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "pers_id"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 80727,
+      "source_file": "silc24_pr.dta",
+      "table": "silc24_pr"
+    }
+  ],
+  "key_maps": {}
+}

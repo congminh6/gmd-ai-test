@@ -1,0 +1,5402 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "output_sha256": "2cd35d6d5abc4897df9029c04a33324c086b138b066ebf55751326f7ba81440c",
+  "spec": "hspec.json",
+  "profile": {
+    "rows": 80727,
+    "weight": "weight",
+    "columns": {
+      "hhid": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 25925
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 25925
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 80727
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 80727
+      },
+      "age": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.997485,
+        "valued_w": 0.997833,
+        "reasons": {
+          ".c": 0.002515
+        },
+        "reasons_w": {
+          ".c": 0.002167
+        },
+        "mean": 35.087042,
+        "p5": 4.0,
+        "p50": 34.0,
+        "p95": 73.0,
+        "min": 0.0,
+        "max": 109.0,
+        "mean_w": 35.267238,
+        "p50_w": 34.0
+      },
+      "childmth": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.064192,
+        "valued_w": 0.060454,
+        "reasons": {
+          ".c": 0.935808
+        },
+        "reasons_w": {
+          ".c": 0.939546
+        },
+        "mean": 30.961212,
+        "p5": 3.0,
+        "p50": 31.0,
+        "p95": 57.0,
+        "min": 0.0,
+        "max": 59.0,
+        "mean_w": 31.193833,
+        "p50_w": 32.0
+      },
+      "childyr": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.064192,
+        "valued_w": 0.060454,
+        "reasons": {
+          ".c": 0.935808
+        },
+        "reasons_w": {
+          ".c": 0.939546
+        },
+        "mean": 2.124855,
+        "p5": 0.0,
+        "p50": 2.0,
+        "p95": 4.0,
+        "min": 0.0,
+        "max": 4.0,
+        "mean_w": 2.145406,
+        "p50_w": 2.0
+      },
+      "educat4": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.748969,
+        "valued_w": 0.766208,
+        "reasons": {
+          ".c": 0.251031
+        },
+        "reasons_w": {
+          ".c": 0.233792
+        },
+        "codes": {
+          "3": {
+            "share": 0.343439,
+            "share_w": 0.352539
+          },
+          "2": {
+            "share": 0.320069,
+            "share_w": 0.317952
+          },
+          "4": {
+            "share": 0.198505,
+            "share_w": 0.20625
+          },
+          "1": {
+            "share": 0.137987,
+            "share_w": 0.12326
+          }
+        }
+      },
+      "educat5": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.748969,
+        "valued_w": 0.766208,
+        "reasons": {
+          ".c": 0.251031
+        },
+        "reasons_w": {
+          ".c": 0.233792
+        },
+        "codes": {
+          "3": {
+            "share": 0.446512,
+            "share_w": 0.442351
+          },
+          "4": {
+            "share": 0.216996,
+            "share_w": 0.228139
+          },
+          "5": {
+            "share": 0.198505,
+            "share_w": 0.20625
+          },
+          "1": {
+            "share": 0.137987,
+            "share_w": 0.12326
+          }
+        }
+      },
+      "educat7": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.748969,
+        "valued_w": 0.766208,
+        "reasons": {
+          ".c": 0.251031
+        },
+        "reasons_w": {
+          ".c": 0.233792
+        },
+        "codes": {
+          "3": {
+            "share": 0.320069,
+            "share_w": 0.317952
+          },
+          "5": {
+            "share": 0.216996,
+            "share_w": 0.228139
+          },
+          "7": {
+            "share": 0.198505,
+            "share_w": 0.20625
+          },
+          "1": {
+            "share": 0.137987,
+            "share_w": 0.12326
+          },
+          "4": {
+            "share": 0.126443,
+            "share_w": 0.124399
+          }
+        }
+      },
+      "educy": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.748969,
+        "valued_w": 0.766208,
+        "reasons": {
+          ".c": 0.251031
+        },
+        "reasons_w": {
+          ".c": 0.233792
+        },
+        "mean": 7.986884,
+        "p5": 0.0,
+        "p50": 8.0,
+        "p95": 16.0,
+        "min": 0.0,
+        "max": 21.0,
+        "mean_w": 8.217258,
+        "p50_w": 8.0
+      },
+      "male": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.51004,
+            "share_w": 0.501211
+          },
+          "1": {
+            "share": 0.48996,
+            "share_w": 0.498789
+          }
+        }
+      },
+      "marital": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "codes": {
+          "1": {
+            "share": 0.660075,
+            "share_w": 0.621865
+          },
+          "2": {
+            "share": 0.241358,
+            "share_w": 0.274696
+          },
+          "5": {
+            "share": 0.062947,
+            "share_w": 0.064132
+          },
+          "4": {
+            "share": 0.035621,
+            "share_w": 0.039306
+          }
+        }
+      },
+      "mineducatage": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 16.0,
+        "p5": 16.0,
+        "p50": 16.0,
+        "p95": 16.0,
+        "min": 16.0,
+        "max": 16.0,
+        "mean_w": 16.0,
+        "p50_w": 16.0
+      },
+      "primarycomp": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.748969,
+        "valued_w": 0.766208,
+        "reasons": {
+          ".c": 0.251031
+        },
+        "reasons_w": {
+          ".c": 0.233792
+        },
+        "codes": {
+          "1": {
+            "share": 0.862013,
+            "share_w": 0.87674
+          },
+          "0": {
+            "share": 0.137987,
+            "share_w": 0.12326
+          }
+        }
+      },
+      "school": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "codes": {
+          "0": {
+            "share": 0.888804,
+            "share_w": 0.884392
+          },
+          "1": {
+            "share": 0.111196,
+            "share_w": 0.115608
+          }
+        }
+      },
+      "literacy": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "codes": {
+          "1": {
+            "share": 0.917634,
+            "share_w": 0.927874
+          },
+          "0": {
+            "share": 0.082366,
+            "share_w": 0.072126
+          }
+        }
+      },
+      "everattend": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "codes": {
+          "1": {
+            "share": 0.864729,
+            "share_w": 0.878959
+          },
+          "0": {
+            "share": 0.135271,
+            "share_w": 0.121041
+          }
+        }
+      },
+      "ac": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.740867,
+            "share_w": 0.717656
+          },
+          "1": {
+            "share": 0.259133,
+            "share_w": 0.282344
+          }
+        }
+      },
+      "acqui_house": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "areaspace": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 116.110038,
+        "p5": 70.0,
+        "p50": 110.0,
+        "p95": 180.0,
+        "min": 25.0,
+        "max": 550.0,
+        "mean_w": 113.897481,
+        "p50_w": 110.0
+      },
+      "bath": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.991205,
+            "share_w": 0.994366
+          },
+          "0": {
+            "share": 0.008795,
+            "share_w": 0.005634
+          }
+        }
+      },
+      "car": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.520297,
+            "share_w": 0.506006
+          },
+          "1": {
+            "share": 0.479703,
+            "share_w": 0.493994
+          }
+        }
+      },
+      "cellphone": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.994141,
+            "share_w": 0.994258
+          },
+          "0": {
+            "share": 0.005859,
+            "share_w": 0.005742
+          }
+        }
+      },
+      "computer": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.583696,
+            "share_w": 0.539575
+          },
+          "1": {
+            "share": 0.416304,
+            "share_w": 0.460425
+          }
+        }
+      },
+      "dweltyp": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "3": {
+            "share": 0.591586,
+            "share_w": 0.631974
+          },
+          "1": {
+            "share": 0.244107,
+            "share_w": 0.206473
+          },
+          "6": {
+            "share": 0.082575,
+            "share_w": 0.08112
+          },
+          "2": {
+            "share": 0.078573,
+            "share_w": 0.076692
+          },
+          "9": {
+            "share": 0.003159,
+            "share_w": 0.003741
+          }
+        }
+      },
+      "fridge": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.996829,
+            "share_w": 0.997072
+          },
+          "0": {
+            "share": 0.003171,
+            "share_w": 0.002928
+          }
+        }
+      },
+      "internet": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "3": {
+            "share": 0.912582,
+            "share_w": 0.920603
+          },
+          "4": {
+            "share": 0.087418,
+            "share_w": 0.079397
+          }
+        }
+      },
+      "kitchen": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.992605,
+            "share_w": 0.994753
+          },
+          "0": {
+            "share": 0.007395,
+            "share_w": 0.005247
+          }
+        }
+      },
+      "landphone": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.96949,
+            "share_w": 0.965179
+          },
+          "1": {
+            "share": 0.03051,
+            "share_w": 0.034821
+          }
+        }
+      },
+      "ownhouse": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.572733,
+            "share_w": 0.560511
+          },
+          "2": {
+            "share": 0.276525,
+            "share_w": 0.289216
+          },
+          "3": {
+            "share": 0.150743,
+            "share_w": 0.150273
+          }
+        }
+      },
+      "phone": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.995689,
+            "share_w": 0.995861
+          },
+          "0": {
+            "share": 0.004311,
+            "share_w": 0.004139
+          }
+        }
+      },
+      "rooms": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 3.58491,
+        "p5": 2.0,
+        "p50": 4.0,
+        "p95": 5.0,
+        "min": 1.0,
+        "max": 10.0,
+        "mean_w": 3.583316,
+        "p50_w": 4.0
+      },
+      "tv": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.990437,
+            "share_w": 0.990311
+          },
+          "0": {
+            "share": 0.009563,
+            "share_w": 0.009689
+          }
+        }
+      },
+      "washmach": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.992258,
+            "share_w": 0.992777
+          },
+          "0": {
+            "share": 0.007742,
+            "share_w": 0.007223
+          }
+        }
+      },
+      "geo_code": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 26
+      },
+      "subnatid1": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 12
+      },
+      "subnatid2": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 26
+      },
+      "subnatidsurvey": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 26
+      },
+      "countrycode": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "int_year": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2024.0,
+        "p5": 2024.0,
+        "p50": 2024.0,
+        "p95": 2024.0,
+        "min": 2024.0,
+        "max": 2024.0,
+        "mean_w": 2024.0,
+        "p50_w": 2024.0
+      },
+      "weight": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 1042.150409,
+        "p5": 293.15567,
+        "p50": 873.350159,
+        "p95": 2622.04126,
+        "min": 282.698456,
+        "max": 3552.764893,
+        "mean_w": 1510.520168,
+        "p50_w": 1286.282959
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2024.0,
+        "p5": 2024.0,
+        "p50": 2024.0,
+        "p95": 2024.0,
+        "min": 2024.0,
+        "max": 2024.0,
+        "mean_w": 2024.0,
+        "p50_w": 2024.0
+      },
+      "contract": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.24926,
+        "valued_w": 0.270769,
+        "reasons": {
+          ".c": 0.75074
+        },
+        "reasons_w": {
+          ".c": 0.729231
+        },
+        "codes": {
+          "1": {
+            "share": 0.951446,
+            "share_w": 0.951952
+          },
+          "0": {
+            "share": 0.048554,
+            "share_w": 0.048048
+          }
+        }
+      },
+      "empstat": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "1": {
+            "share": 0.74177,
+            "share_w": 0.764139
+          },
+          "4": {
+            "share": 0.15162,
+            "share_w": 0.135803
+          },
+          "2": {
+            "share": 0.068308,
+            "share_w": 0.058057
+          },
+          "3": {
+            "share": 0.038301,
+            "share_w": 0.042001
+          }
+        }
+      },
+      "industrycat10": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "10": {
+            "share": 0.225753,
+            "share_w": 0.219079
+          },
+          "3": {
+            "share": 0.167766,
+            "share_w": 0.188134
+          },
+          "1": {
+            "share": 0.155233,
+            "share_w": 0.124359
+          },
+          "6": {
+            "share": 0.135068,
+            "share_w": 0.148103
+          },
+          "9": {
+            "share": 0.09179,
+            "share_w": 0.079168
+          },
+          "8": {
+            "share": 0.077303,
+            "share_w": 0.089084
+          },
+          "5": {
+            "share": 0.073359,
+            "share_w": 0.071282
+          },
+          "7": {
+            "share": 0.05795,
+            "share_w": 0.065312
+          },
+          "4": {
+            "share": 0.009363,
+            "share_w": 0.010095
+          },
+          "2": {
+            "share": 0.006414,
+            "share_w": 0.005384
+          }
+        }
+      },
+      "industrycat4": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "3": {
+            "share": 0.587864,
+            "share_w": 0.600745
+          },
+          "2": {
+            "share": 0.256903,
+            "share_w": 0.274896
+          },
+          "1": {
+            "share": 0.155233,
+            "share_w": 0.124359
+          }
+        }
+      },
+      "laborincome": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.352076,
+        "valued_w": 0.374554,
+        "reasons": {
+          ".c": 0.647924
+        },
+        "reasons_w": {
+          ".c": 0.625446
+        },
+        "mean": 207799.888318,
+        "p5": 25105.0,
+        "p50": 149436.0,
+        "p95": 483130.15,
+        "min": -358670.0,
+        "max": 17600000.0,
+        "mean_w": 215030.569227,
+        "p50_w": 150000.0
+      },
+      "lstatus": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "codes": {
+          "3": {
+            "share": 0.511351,
+            "share_w": 0.49396
+          },
+          "1": {
+            "share": 0.438622,
+            "share_w": 0.453017
+          },
+          "2": {
+            "share": 0.050027,
+            "share_w": 0.053023
+          }
+        }
+      },
+      "minlaborage": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 15.0,
+        "p5": 15.0,
+        "p50": 15.0,
+        "p95": 15.0,
+        "min": 15.0,
+        "max": 15.0,
+        "mean_w": 15.0,
+        "p50_w": 15.0
+      },
+      "minlaborage_year": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 15.0,
+        "p5": 15.0,
+        "p50": 15.0,
+        "p95": 15.0,
+        "min": 15.0,
+        "max": 15.0,
+        "mean_w": 15.0,
+        "p50_w": 15.0
+      },
+      "occup": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "5": {
+            "share": 0.18336,
+            "share_w": 0.188576
+          },
+          "2": {
+            "share": 0.148597,
+            "share_w": 0.147118
+          },
+          "6": {
+            "share": 0.134663,
+            "share_w": 0.104571
+          },
+          "7": {
+            "share": 0.130903,
+            "share_w": 0.135359
+          },
+          "9": {
+            "share": 0.127474,
+            "share_w": 0.129416
+          },
+          "8": {
+            "share": 0.08803,
+            "share_w": 0.091765
+          },
+          "3": {
+            "share": 0.071589,
+            "share_w": 0.078647
+          },
+          "4": {
+            "share": 0.058097,
+            "share_w": 0.062911
+          },
+          "1": {
+            "share": 0.057286,
+            "share_w": 0.061636
+          }
+        }
+      },
+      "ocusec": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "2": {
+            "share": 0.792421,
+            "share_w": 0.824194
+          },
+          "1": {
+            "share": 0.207579,
+            "share_w": 0.175806
+          }
+        }
+      },
+      "socialsec": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "codes": {
+          "1": {
+            "share": 0.705828,
+            "share_w": 0.733962
+          },
+          "0": {
+            "share": 0.294172,
+            "share_w": 0.266038
+          }
+        }
+      },
+      "unempldur_l": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "mean": 0.629451,
+        "p5": 0.0,
+        "p50": 0.0,
+        "p95": 6.0,
+        "min": 0.0,
+        "max": 12.0,
+        "mean_w": 0.662562,
+        "p50_w": 0.0
+      },
+      "unempldur_u": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.766113,
+        "valued_w": 0.782189,
+        "reasons": {
+          ".c": 0.233887
+        },
+        "reasons_w": {
+          ".c": 0.217811
+        },
+        "mean": 0.629451,
+        "p5": 0.0,
+        "p50": 0.0,
+        "p95": 6.0,
+        "min": 0.0,
+        "max": 12.0,
+        "mean_w": 0.662562,
+        "p50_w": 0.0
+      },
+      "whours": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.336034,
+        "valued_w": 0.354345,
+        "reasons": {
+          ".c": 0.663966
+        },
+        "reasons_w": {
+          ".c": 0.645655
+        },
+        "mean": 46.517934,
+        "p5": 30.0,
+        "p50": 45.0,
+        "p95": 70.0,
+        "min": 1.0,
+        "max": 99.0,
+        "mean_w": 46.699731,
+        "p50_w": 45.0
+      },
+      "wmonths": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 0.311631,
+        "valued_w": 0.327003,
+        "reasons": {
+          ".c": 0.688369
+        },
+        "reasons_w": {
+          ".c": 0.672997
+        },
+        "mean": 11.120881,
+        "p5": 4.0,
+        "p50": 12.0,
+        "p95": 12.0,
+        "min": 1.0,
+        "max": 12.0,
+        "mean_w": 11.079582,
+        "p50_w": 12.0
+      },
+      "central_acc": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.901297,
+            "share_w": 0.907671
+          },
+          "1": {
+            "share": 0.098703,
+            "share_w": 0.092329
+          }
+        }
+      },
+      "piped": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.995763,
+            "share_w": 0.997851
+          },
+          "0": {
+            "share": 0.004237,
+            "share_w": 0.002149
+          }
+        }
+      },
+      "piped_to_prem": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.995763,
+            "share_w": 0.997851
+          },
+          "0": {
+            "share": 0.004237,
+            "share_w": 0.002149
+          }
+        }
+      },
+      "toilet_acc": {
+        "kind": "coded",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.971596,
+            "share_w": 0.979884
+          },
+          "0": {
+            "share": 0.028404,
+            "share_w": 0.020116
+          }
+        }
+      },
+      "hsize": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2.807177,
+        "p5": 1.0,
+        "p50": 2.0,
+        "p95": 5.0,
+        "min": 1.0,
+        "max": 10.0,
+        "mean_w": 2.977367,
+        "p50_w": 3.0
+      },
+      "welfare": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 146520.512527,
+        "p5": 37991.333333,
+        "p50": 104119.916667,
+        "p95": 366341.8,
+        "min": 2070.0,
+        "max": 8802496.0,
+        "mean_w": 155296.422129,
+        "p50_w": 109706.0
+      },
+      "welfarenom": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 146520.512527,
+        "p5": 37991.333333,
+        "p50": 104119.916667,
+        "p95": 366341.8,
+        "min": 2070.0,
+        "max": 8802496.0,
+        "mean_w": 155296.422129,
+        "p50_w": 109706.0
+      },
+      "welfaretype": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "welfshprosperity": {
+        "kind": "numeric",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 146520.512527,
+        "p5": 37991.333333,
+        "p50": 104119.916667,
+        "p95": 366341.8,
+        "min": 2070.0,
+        "max": 8802496.0,
+        "mean_w": 155296.422129,
+        "p50_w": 109706.0
+      },
+      "welfshprtype": {
+        "kind": "text",
+        "rows": 80727,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "ac-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ac"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ac storage type",
+      "detail": ""
+    },
+    {
+      "id": "ac-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ac"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ac outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "acqui_house-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "acqui_house"
+      ],
+      "n_flagged": null,
+      "base": 80727,
+      "share": null,
+      "description": "acqui_house storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "acqui_house-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "acqui_house"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "acqui_house outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "age-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "age storage type",
+      "detail": ""
+    },
+    {
+      "id": "age-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "age outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "areaspace-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "areaspace"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "areaspace storage type",
+      "detail": ""
+    },
+    {
+      "id": "bath-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "bath"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "bath storage type",
+      "detail": ""
+    },
+    {
+      "id": "bath-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "bath"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "bath outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "car-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "car"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "car storage type",
+      "detail": ""
+    },
+    {
+      "id": "car-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "car"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "car outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "cellphone-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "cellphone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "cellphone storage type",
+      "detail": ""
+    },
+    {
+      "id": "cellphone-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "cellphone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "cellphone outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "central_acc-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "central_acc"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "central_acc storage type",
+      "detail": ""
+    },
+    {
+      "id": "central_acc-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "central_acc"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "central_acc outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "childmth-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childmth"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "childmth storage type",
+      "detail": ""
+    },
+    {
+      "id": "childmth-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childmth"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "childmth outside [0, 59]",
+      "detail": ""
+    },
+    {
+      "id": "childyr-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "childyr storage type",
+      "detail": ""
+    },
+    {
+      "id": "childyr-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "childyr outside [0, 5]",
+      "detail": ""
+    },
+    {
+      "id": "computer-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "computer"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "computer storage type",
+      "detail": ""
+    },
+    {
+      "id": "computer-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "computer"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "computer outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "contract-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "contract storage type",
+      "detail": ""
+    },
+    {
+      "id": "contract-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "contract outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "countrycode-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "countrycode"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "countrycode storage type",
+      "detail": ""
+    },
+    {
+      "id": "dweltyp-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "dweltyp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "dweltyp storage type",
+      "detail": ""
+    },
+    {
+      "id": "dweltyp-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "dweltyp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "dweltyp outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat4-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat4 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat4-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat4 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat5-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat5 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat5-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat5 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat7-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat7 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat7-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat7 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educy-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educy storage type",
+      "detail": ""
+    },
+    {
+      "id": "educy-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educy outside [0, 30]",
+      "detail": ""
+    },
+    {
+      "id": "empstat-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "empstat storage type",
+      "detail": ""
+    },
+    {
+      "id": "empstat-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "empstat outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "everattend-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "everattend"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "everattend storage type",
+      "detail": ""
+    },
+    {
+      "id": "everattend-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "everattend"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "everattend outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "fridge-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "fridge"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "fridge storage type",
+      "detail": ""
+    },
+    {
+      "id": "fridge-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "fridge"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "fridge outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "geo_code-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "geo_code"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "geo_code storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hhid storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hhid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "hsize-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hsize storage type",
+      "detail": ""
+    },
+    {
+      "id": "hsize-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hsize outside [1, 100]",
+      "detail": ""
+    },
+    {
+      "id": "industrycat10-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat10"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "industrycat10 storage type",
+      "detail": ""
+    },
+    {
+      "id": "industrycat10-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat10"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "industrycat10 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "industrycat4-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat4"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "industrycat4 storage type",
+      "detail": ""
+    },
+    {
+      "id": "industrycat4-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat4"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "industrycat4 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "internet-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "internet"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "internet storage type",
+      "detail": ""
+    },
+    {
+      "id": "internet-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "internet"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "internet outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "int_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_year"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "int_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "kitchen-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "kitchen"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "kitchen storage type",
+      "detail": ""
+    },
+    {
+      "id": "kitchen-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "kitchen"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "kitchen outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "laborincome-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "laborincome"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "laborincome storage type",
+      "detail": ""
+    },
+    {
+      "id": "landphone-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "landphone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "landphone storage type",
+      "detail": ""
+    },
+    {
+      "id": "landphone-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "landphone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "landphone outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "literacy-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "literacy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "literacy storage type",
+      "detail": ""
+    },
+    {
+      "id": "literacy-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "literacy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "literacy outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "lstatus storage type",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "lstatus outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "male-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "male storage type",
+      "detail": ""
+    },
+    {
+      "id": "male-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "male outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "marital-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "marital storage type",
+      "detail": ""
+    },
+    {
+      "id": "marital-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "marital outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "mineducatage-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "mineducatage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "mineducatage storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "minlaborage storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "minlaborage outside [0, 20]",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage_year"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "minlaborage_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage_year"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "minlaborage_year outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "occup-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "occup storage type",
+      "detail": ""
+    },
+    {
+      "id": "occup-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "occup outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "ocusec-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ocusec"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ocusec storage type",
+      "detail": ""
+    },
+    {
+      "id": "ocusec-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ocusec"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ocusec outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "ownhouse-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ownhouse"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ownhouse storage type",
+      "detail": ""
+    },
+    {
+      "id": "ownhouse-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ownhouse"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "ownhouse outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "phone-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "phone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "phone storage type",
+      "detail": ""
+    },
+    {
+      "id": "phone-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "phone"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "phone outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "pid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "pid storage type",
+      "detail": ""
+    },
+    {
+      "id": "pid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "pid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "piped-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "piped"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "piped storage type",
+      "detail": ""
+    },
+    {
+      "id": "piped-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "piped"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "piped outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "piped_to_prem-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "piped_to_prem"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "piped_to_prem storage type",
+      "detail": ""
+    },
+    {
+      "id": "piped_to_prem-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "piped_to_prem"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "piped_to_prem outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "primarycomp storage type",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "primarycomp outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "rooms-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "rooms"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "rooms storage type",
+      "detail": ""
+    },
+    {
+      "id": "school-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "school"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "school storage type",
+      "detail": ""
+    },
+    {
+      "id": "school-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "school"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "school outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "socialsec-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "socialsec"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "socialsec storage type",
+      "detail": ""
+    },
+    {
+      "id": "socialsec-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "socialsec"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "socialsec outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "subnatid1-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "subnatid1 storage type",
+      "detail": ""
+    },
+    {
+      "id": "subnatid2-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatid2"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "subnatid2 storage type",
+      "detail": ""
+    },
+    {
+      "id": "subnatidsurvey-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "subnatidsurvey storage type",
+      "detail": ""
+    },
+    {
+      "id": "toilet_acc-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "toilet_acc"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "toilet_acc storage type",
+      "detail": ""
+    },
+    {
+      "id": "toilet_acc-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "toilet_acc"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "toilet_acc outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "tv-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "tv"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "tv storage type",
+      "detail": ""
+    },
+    {
+      "id": "tv-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "tv"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "tv outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_l-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "unempldur_l storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_l-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "unempldur_l outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "unempldur_u storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "unempldur_u outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "washmach-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "washmach"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "washmach storage type",
+      "detail": ""
+    },
+    {
+      "id": "washmach-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "washmach"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "washmach outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "weight-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "weight storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfare-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfare storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfare-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfare outside [0, 1000000000]",
+      "detail": ""
+    },
+    {
+      "id": "welfarenom-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfarenom"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfarenom storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfarenom-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfarenom"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfarenom outside [0, 1000000000]",
+      "detail": ""
+    },
+    {
+      "id": "welfaretype-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfaretype"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfaretype storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfshprosperity-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprosperity"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfshprosperity storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfshprosperity-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprosperity"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfshprosperity outside [0, 1000000000]",
+      "detail": ""
+    },
+    {
+      "id": "welfshprtype-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfshprtype storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "whours storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "whours outside [0, 168]",
+      "detail": ""
+    },
+    {
+      "id": "wmonths-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "wmonths storage type",
+      "detail": ""
+    },
+    {
+      "id": "wmonths-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "wmonths outside [0, 12]",
+      "detail": ""
+    },
+    {
+      "id": "year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "year storage type",
+      "detail": ""
+    },
+    {
+      "id": "weight-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Weight is not constant within household.",
+      "detail": ""
+    },
+    {
+      "id": "welfare-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not numeric.",
+      "detail": ""
+    },
+    {
+      "id": "welfare-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "welfare has negative values.",
+      "detail": ""
+    },
+    {
+      "id": "welfarenom-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfarenom"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not numeric.",
+      "detail": ""
+    },
+    {
+      "id": "welfaretype-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfaretype"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is different from INC, CONS or EXP.",
+      "detail": ""
+    },
+    {
+      "id": "welfshprosperity-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprosperity"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not numeric.",
+      "detail": ""
+    },
+    {
+      "id": "welfshprtype-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is different from INC, CONS or EXP.",
+      "detail": ""
+    },
+    {
+      "id": "hsize-1",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 45684,
+      "base": 80727,
+      "share": 0.5659000000000001,
+      "description": "More household members than indicated by household size",
+      "detail": ""
+    },
+    {
+      "id": "hsize-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Less household members than indicated by household size",
+      "detail": ""
+    },
+    {
+      "id": "hsize-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hsize is equal to zero or negative.",
+      "detail": ""
+    },
+    {
+      "id": "hsize-4",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "hsize contain missings.",
+      "detail": ""
+    },
+    {
+      "id": "educy-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4",
+        "educat5",
+        "educat7",
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Positive years of education and no education in -educat-",
+      "detail": ""
+    },
+    {
+      "id": "educy-2",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "educat7",
+        "educy"
+      ],
+      "n_flagged": 19352,
+      "base": 80727,
+      "share": 0.2397,
+      "description": "Less than 5 years of education and completed primary or higher education level",
+      "detail": "",
+      "samples": [
+        {
+          "value": "3",
+          "rows": 19352
+        }
+      ]
+    },
+    {
+      "id": "educy-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7",
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Less than 10 years of education and completed secondary or higher education level",
+      "detail": ""
+    },
+    {
+      "id": "educy-4",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "educat7",
+        "educy"
+      ],
+      "n_flagged": 3818,
+      "base": 80727,
+      "share": 0.0473,
+      "description": "Less than 15 years of education and university",
+      "detail": "",
+      "samples": [
+        {
+          "value": "7",
+          "rows": 3818
+        }
+      ]
+    },
+    {
+      "id": "educy-5",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Years of education higher than (age - 3)",
+      "detail": ""
+    },
+    {
+      "id": "educat4-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4",
+        "educy"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "No education and more than four years of education",
+      "detail": ""
+    },
+    {
+      "id": "educat4-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4",
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat4 does not match with educat5",
+      "detail": ""
+    },
+    {
+      "id": "educat5-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "educat5 does not match with educat7",
+      "detail": ""
+    },
+    {
+      "id": "educat7-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not an integer in the range [1,7].",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Inconsistent with educat5 level of education",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7",
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Inconsistent with educat7 level of education",
+      "detail": ""
+    },
+    {
+      "id": "year-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Year is not a four digit number.",
+      "detail": ""
+    },
+    {
+      "id": "subnatid1-2",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": 80727,
+      "base": 80727,
+      "share": 1.0,
+      "description": "It is not if the form [0-9]-[a-z]",
+      "detail": "",
+      "samples": [
+        {
+          "value": "TRC",
+          "rows": 11235
+        },
+        {
+          "value": "TR3",
+          "rows": 9414
+        },
+        {
+          "value": "TR6",
+          "rows": 8157
+        },
+        {
+          "value": "TR8",
+          "rows": 7255
+        },
+        {
+          "value": "TR1",
+          "rows": 6950
+        }
+      ]
+    },
+    {
+      "id": "subnatid2-2",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "subnatid2"
+      ],
+      "n_flagged": 80727,
+      "base": 80727,
+      "share": 1.0,
+      "description": "It is not if the form [0-9]-[a-z]",
+      "detail": "",
+      "samples": [
+        {
+          "value": "TR10",
+          "rows": 6950
+        },
+        {
+          "value": "TRC3",
+          "rows": 4500
+        },
+        {
+          "value": "TR51",
+          "rows": 4177
+        },
+        {
+          "value": "TRB2",
+          "rows": 4093
+        },
+        {
+          "value": "TRC2",
+          "rows": 4054
+        }
+      ]
+    },
+    {
+      "id": "age-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Variable is neither an integer or zero",
+      "detail": ""
+    },
+    {
+      "id": "marital-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Classified as married for a child younger than 6 years old",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat",
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "lstatus equal to employed without employment type defined in empstat",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "lstatus",
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not missing for individuals less than the required age (MINLABORAGE)",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not an integer",
+      "detail": ""
+    },
+    {
+      "id": "empstat-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat",
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "Employment type is defined but lstatus is not.",
+      "detail": ""
+    },
+    {
+      "id": "empstat-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "empstat",
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "It is not missing for individuals less than the required age (MINLABORAGE)",
+      "detail": ""
+    },
+    {
+      "id": "industrycat4-3",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "industrycat10",
+        "industrycat4"
+      ],
+      "n_flagged": 6124,
+      "base": 80727,
+      "share": 0.0759,
+      "description": "Mismatch between industrycat10 and industrycat4",
+      "detail": "",
+      "samples": [
+        {
+          "value": "10",
+          "rows": 6124
+        }
+      ]
+    },
+    {
+      "id": "acqui_house-universe",
+      "kind": "universe",
+      "implicates": [
+        "acqui_house"
+      ],
+      "gate": "VAR-ownhouse == 1",
+      "status": "flagged",
+      "n_flagged": 34492,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 34492,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34492,
+        "inside": 46235,
+        "undetermined": 0
+      },
+      "expression": "(ownhouse == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 1.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "childmth-universe",
+      "kind": "universe",
+      "implicates": [
+        "childmth"
+      ],
+      "gate": "VAR-age < 5",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 75342,
+        "inside": 5182,
+        "undetermined": 203
+      },
+      "expression": "(age < 5)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "childyr-universe",
+      "kind": "universe",
+      "implicates": [
+        "childyr"
+      ],
+      "gate": "VAR-age < 5",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 75342,
+        "inside": 5182,
+        "undetermined": 203
+      },
+      "expression": "(age < 5)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "contract-universe",
+      "kind": "universe",
+      "implicates": [
+        "contract"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 7005,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 7005
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.25823
+      }
+    },
+    {
+      "id": "educat4-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat4"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 91,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 91
+      },
+      "bases": {
+        "outside": 19971,
+        "inside": 60553,
+        "undetermined": 203
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001503
+      }
+    },
+    {
+      "id": "educat5-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat5"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 91,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 91
+      },
+      "bases": {
+        "outside": 19971,
+        "inside": 60553,
+        "undetermined": 203
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001503
+      }
+    },
+    {
+      "id": "educat7-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat7"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 91,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 91
+      },
+      "bases": {
+        "outside": 19971,
+        "inside": 60553,
+        "undetermined": 203
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001503
+      }
+    },
+    {
+      "id": "educy-universe",
+      "kind": "universe",
+      "implicates": [
+        "educy"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 91,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 91
+      },
+      "bases": {
+        "outside": 19971,
+        "inside": 60553,
+        "undetermined": 203
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001503
+      }
+    },
+    {
+      "id": "empstat-universe",
+      "kind": "universe",
+      "implicates": [
+        "empstat"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "industrycat10-universe",
+      "kind": "universe",
+      "implicates": [
+        "industrycat10"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "industrycat4-universe",
+      "kind": "universe",
+      "implicates": [
+        "industrycat4"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "lstatus-universe",
+      "kind": "universe",
+      "implicates": [
+        "lstatus"
+      ],
+      "gate": "VAR-age >= PARAM-LBR-MIN-LABOR-AGE",
+      "parameters": {
+        "PARAM-LBR-MIN-LABOR-AGE": {
+          "value": 15,
+          "from": "output column minlaborage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 94,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 94
+      },
+      "bases": {
+        "outside": 18584,
+        "inside": 61940,
+        "undetermined": 203
+      },
+      "expression": "(age >= 15)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001518
+      }
+    },
+    {
+      "id": "occup-universe",
+      "kind": "universe",
+      "implicates": [
+        "occup"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "ocusec-universe",
+      "kind": "universe",
+      "implicates": [
+        "ocusec"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "primarycomp-universe",
+      "kind": "universe",
+      "implicates": [
+        "primarycomp"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 91,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 91
+      },
+      "bases": {
+        "outside": 19971,
+        "inside": 60553,
+        "undetermined": 203
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.001503
+      }
+    },
+    {
+      "id": "socialsec-universe",
+      "kind": "universe",
+      "implicates": [
+        "socialsec"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "unempldur_l-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "gate": "VAR-lstatus == 2",
+      "samples": [
+        {
+          "value": "0",
+          "rows": 55926
+        },
+        {
+          "value": "6",
+          "rows": 477
+        },
+        {
+          "value": "2",
+          "rows": 337
+        },
+        {
+          "value": "3",
+          "rows": 329
+        },
+        {
+          "value": "4",
+          "rows": 304
+        }
+      ],
+      "status": "flagged",
+      "n_flagged": 58752,
+      "counts": {
+        "value_outside": 58752,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 58752,
+        "inside": 3094,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 2)",
+      "shares": {
+        "value_outside": 1.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "unempldur_u-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "gate": "VAR-lstatus == 2",
+      "samples": [
+        {
+          "value": "0",
+          "rows": 55926
+        },
+        {
+          "value": "6",
+          "rows": 477
+        },
+        {
+          "value": "2",
+          "rows": 337
+        },
+        {
+          "value": "3",
+          "rows": 329
+        },
+        {
+          "value": "4",
+          "rows": 304
+        }
+      ],
+      "status": "flagged",
+      "n_flagged": 58752,
+      "counts": {
+        "value_outside": 58752,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 58752,
+        "inside": 3094,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 2)",
+      "shares": {
+        "value_outside": 1.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "whours-universe",
+      "kind": "universe",
+      "implicates": [
+        "whours"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "wmonths-universe",
+      "kind": "universe",
+      "implicates": [
+        "wmonths"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 1970,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 1970
+      },
+      "bases": {
+        "outside": 34719,
+        "inside": 27127,
+        "undetermined": 18881
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.072621
+      }
+    },
+    {
+      "id": "educat4-derivation",
+      "kind": "derivation",
+      "implicates": [
+        "educat4",
+        "educat7"
+      ],
+      "rule": "educat4 = recode(educat7)",
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 60462,
+      "share": 0.0,
+      "child_empty_where_parent_maps": 0
+    },
+    {
+      "id": "educat5-derivation",
+      "kind": "derivation",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "rule": "educat5 = recode(educat7)",
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 60462,
+      "share": 0.0,
+      "child_empty_where_parent_maps": 0
+    },
+    {
+      "id": "pid-unique",
+      "kind": "relational",
+      "implicates": [
+        "pid"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 80727,
+      "share": 0.0,
+      "description": "pid repeats across the output's rows"
+    },
+    {
+      "id": "ac-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "ac"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "ac differs within a household"
+    },
+    {
+      "id": "acqui_house-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "acqui_house"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "acqui_house differs within a household"
+    },
+    {
+      "id": "areaspace-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "areaspace"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "areaspace differs within a household"
+    },
+    {
+      "id": "bath-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "bath"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "bath differs within a household"
+    },
+    {
+      "id": "car-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "car"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "car differs within a household"
+    },
+    {
+      "id": "cellphone-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "cellphone"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "cellphone differs within a household"
+    },
+    {
+      "id": "central_acc-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "central_acc"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "central_acc differs within a household"
+    },
+    {
+      "id": "computer-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "computer"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "computer differs within a household"
+    },
+    {
+      "id": "dweltyp-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "dweltyp"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "dweltyp differs within a household"
+    },
+    {
+      "id": "fridge-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "fridge"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "fridge differs within a household"
+    },
+    {
+      "id": "geo_code-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "geo_code"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "geo_code differs within a household"
+    },
+    {
+      "id": "hhid_orig-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "hhid_orig differs within a household"
+    },
+    {
+      "id": "hsize-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hsize"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "hsize differs within a household"
+    },
+    {
+      "id": "int_year-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "int_year"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "int_year differs within a household"
+    },
+    {
+      "id": "internet-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "internet"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "internet differs within a household"
+    },
+    {
+      "id": "kitchen-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "kitchen"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "kitchen differs within a household"
+    },
+    {
+      "id": "landphone-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "landphone"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "landphone differs within a household"
+    },
+    {
+      "id": "ownhouse-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "ownhouse"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "ownhouse differs within a household"
+    },
+    {
+      "id": "phone-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "phone"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "phone differs within a household"
+    },
+    {
+      "id": "piped-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "piped"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "piped differs within a household"
+    },
+    {
+      "id": "piped_to_prem-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "piped_to_prem"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "piped_to_prem differs within a household"
+    },
+    {
+      "id": "rooms-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "rooms"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "rooms differs within a household"
+    },
+    {
+      "id": "subnatid1-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatid1"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "subnatid1 differs within a household"
+    },
+    {
+      "id": "subnatid2-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatid2"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "subnatid2 differs within a household"
+    },
+    {
+      "id": "subnatidsurvey-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "subnatidsurvey differs within a household"
+    },
+    {
+      "id": "toilet_acc-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "toilet_acc"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "toilet_acc differs within a household"
+    },
+    {
+      "id": "tv-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "tv"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "tv differs within a household"
+    },
+    {
+      "id": "washmach-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "washmach"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "washmach differs within a household"
+    },
+    {
+      "id": "weight-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "weight"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "weight differs within a household"
+    },
+    {
+      "id": "welfare-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfare"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "welfare differs within a household"
+    },
+    {
+      "id": "welfarenom-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfarenom"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "welfarenom differs within a household"
+    },
+    {
+      "id": "welfaretype-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfaretype"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "welfaretype differs within a household"
+    },
+    {
+      "id": "welfshprosperity-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfshprosperity"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "welfshprosperity differs within a household"
+    },
+    {
+      "id": "welfshprtype-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 25925,
+      "share": 0.0,
+      "description": "welfshprtype differs within a household"
+    }
+  ],
+  "reference": {
+    "path": "TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03_GMD.dta",
+    "found_by": "given",
+    "sha256": "211dc59fc108ad093b9ea598cdad8c6d833e248ecb4698677f459fdf2bdc5d0b"
+  },
+  "comparison": {
+    "alignment": {
+      "key": {
+        "ours": [
+          "hhid",
+          "pid"
+        ],
+        "theirs": [
+          "hhid",
+          "pid_orig"
+        ]
+      },
+      "matched": 80727,
+      "ours_rows": 80727,
+      "theirs_rows": 80727,
+      "ours_only": 0,
+      "theirs_only": 0
+    },
+    "weighted": true,
+    "summary": {
+      "shared": 35,
+      "median_agreement": 1.0,
+      "ours_only": 33,
+      "theirs_only": 22,
+      "ranked": [
+        "pid",
+        "internet",
+        "subnatid1",
+        "subnatid2",
+        "subnatidsurvey",
+        "welfare",
+        "welfarenom",
+        "unempldur_l",
+        "unempldur_u",
+        "hsize",
+        "educat4",
+        "primarycomp",
+        "age",
+        "marital",
+        "hhid",
+        "hhid_orig",
+        "pid_orig",
+        "male",
+        "school",
+        "literacy",
+        "ac",
+        "car",
+        "cellphone",
+        "computer",
+        "fridge",
+        "landphone",
+        "tv",
+        "washmach",
+        "countrycode",
+        "int_year",
+        "weight",
+        "year",
+        "lstatus",
+        "minlaborage",
+        "welfaretype"
+      ]
+    },
+    "columns": {
+      "hhid": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "age": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 80523,
+          "differ": 1,
+          "ours_value_only": 0,
+          "theirs_value_only": 203,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.997473,
+          "differ": 1.2e-05,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.002515,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.999988,
+        "disagreement": 0.002527,
+        "ours_reason_where_theirs_has_a_value": {
+          ".c": 203
+        },
+        "abs_diff": {
+          "median": 10.0,
+          "mean": 10.0
+        }
+      },
+      "educat4": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 60462,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 1384,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.748969,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.017144,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.017144,
+        "ours_reason_where_theirs_has_a_value": {
+          ".c": 1384
+        },
+        "reason_pairs": {
+          ".c / .": 18881
+        },
+        "tvd_w": 0.012342
+      },
+      "male": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "marital": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 61845,
+          "differ": 1,
+          "ours_value_only": 0,
+          "theirs_value_only": 8,
+          "both_empty_same": 0,
+          "both_empty_other": 18873
+        },
+        "shares": {
+          "agree": 0.766101,
+          "differ": 1.2e-05,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 9.9e-05,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233788
+        },
+        "agreement": 0.999984,
+        "disagreement": 0.000111,
+        "ours_reason_where_theirs_has_a_value": {
+          ".c": 8
+        },
+        "reason_pairs": {
+          ".c / .": 18873
+        },
+        "top_pairs": {
+          "1 / 2": 1
+        },
+        "tvd_w": 1.3e-05
+      },
+      "primarycomp": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 60462,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 1384,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.748969,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.017144,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.017144,
+        "ours_reason_where_theirs_has_a_value": {
+          ".c": 1384
+        },
+        "reason_pairs": {
+          ".c / .": 18881
+        },
+        "tvd_w": 0.002219
+      },
+      "school": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 61846,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.766113,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 18881
+        },
+        "tvd_w": 0.0
+      },
+      "literacy": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 61846,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.766113,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 18881
+        },
+        "tvd_w": 0.0
+      },
+      "ac": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "car": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "cellphone": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "computer": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "fridge": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "internet": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "top_pairs": {
+          "3 / 1": 73670,
+          "4 / 0": 7057
+        },
+        "tvd_w": 1.0
+      },
+      "landphone": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "tv": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "washmach": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "subnatid1": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "code_part_agreement": 1.0
+      },
+      "subnatid2": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "code_part_agreement": 1.0
+      },
+      "subnatidsurvey": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "code_part_agreement": 1.0
+      },
+      "countrycode": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "int_year": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "weight": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "lstatus": {
+        "kind": "coded",
+        "rows": 80727,
+        "counts": {
+          "agree": 61846,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.766113,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 18881
+        },
+        "tvd_w": 0.0
+      },
+      "minlaborage": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unempldur_l": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 3094,
+          "differ": 0,
+          "ours_value_only": 58752,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.038327,
+          "differ": 0.0,
+          "ours_value_only": 0.727786,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.727786,
+        "theirs_reason_where_ours_has_a_value": {
+          ".": 58752
+        },
+        "reason_pairs": {
+          ".c / .": 18881
+        }
+      },
+      "unempldur_u": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 3094,
+          "differ": 0,
+          "ours_value_only": 58752,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 18881
+        },
+        "shares": {
+          "agree": 0.038327,
+          "differ": 0.0,
+          "ours_value_only": 0.727786,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.233887
+        },
+        "agreement": 1.0,
+        "disagreement": 0.727786,
+        "theirs_reason_where_ours_has_a_value": {
+          ".": 58752
+        },
+        "reason_pairs": {
+          ".c / .": 18881
+        }
+      },
+      "hsize": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 35043,
+          "differ": 45684,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.434093,
+          "differ": 0.565907,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.434093,
+        "disagreement": 0.565907,
+        "abs_diff": {
+          "median": 2.0,
+          "mean": 2.027975
+        }
+      },
+      "welfare": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "abs_diff": {
+          "median": 18057.410714,
+          "mean": 39496.718514
+        }
+      },
+      "welfarenom": {
+        "kind": "numeric",
+        "rows": 80727,
+        "counts": {
+          "agree": 0,
+          "differ": 80727,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 1.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.0,
+        "disagreement": 1.0,
+        "abs_diff": {
+          "median": 18057.410714,
+          "mean": 39496.718514
+        }
+      },
+      "welfaretype": {
+        "kind": "text",
+        "rows": 80727,
+        "counts": {
+          "agree": 80727,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      }
+    },
+    "ours_only": {
+      "childmth": 0.064192,
+      "childyr": 0.064192,
+      "educat5": 0.748969,
+      "educat7": 0.748969,
+      "educy": 0.748969,
+      "mineducatage": 1.0,
+      "everattend": 0.766113,
+      "acqui_house": 0.0,
+      "areaspace": 1.0,
+      "bath": 1.0,
+      "dweltyp": 1.0,
+      "kitchen": 1.0,
+      "ownhouse": 1.0,
+      "phone": 1.0,
+      "rooms": 1.0,
+      "geo_code": 1.0,
+      "contract": 0.24926,
+      "empstat": 0.336034,
+      "industrycat10": 0.336034,
+      "industrycat4": 0.336034,
+      "laborincome": 0.352076,
+      "minlaborage_year": 1.0,
+      "occup": 0.336034,
+      "ocusec": 0.336034,
+      "socialsec": 0.336034,
+      "whours": 0.336034,
+      "wmonths": 0.311631,
+      "central_acc": 1.0,
+      "piped": 1.0,
+      "piped_to_prem": 1.0,
+      "toilet_acc": 1.0,
+      "welfshprosperity": 1.0,
+      "welfshprtype": 1.0
+    },
+    "theirs_only": {
+      "harmonization": 1.0,
+      "vermast": 1.0,
+      "veralt": 1.0,
+      "survey": 1.0,
+      "weight_orig": 1.0,
+      "weighttype": 1.0,
+      "female": 1.0,
+      "relationcs": 1.0,
+      "relationharm": 1.0,
+      "ed_mod_age": 1.0,
+      "lstatus_tr": 1.0,
+      "nlfreason": 0.391752,
+      "wage_total": 0.328254,
+      "popw": 1.0,
+      "hhsize": 1.0,
+      "spdef": 1.0,
+      "welfaredef": 1.0,
+      "imp_wat_rec": 1.0,
+      "imp_san_rec": 1.0,
+      "heating_acc": 1.0,
+      "weight_h": 1.0,
+      "weight_p": 1.0
+    }
+  },
+  "summary": {
+    "rows": 80727,
+    "targets": 68,
+    "weighted": true,
+    "checks_applied": 207,
+    "checks_flagged": 17,
+    "by_kind": {
+      "base": {
+        "applied": 150,
+        "flagged": 6
+      },
+      "universe": {
+        "applied": 20,
+        "flagged": 11
+      },
+      "derivation": {
+        "applied": 2,
+        "flagged": 0
+      },
+      "relational": {
+        "applied": 35,
+        "flagged": 0
+      }
+    },
+    "universe_cells": {
+      "value_outside": 117504,
+      "reason_outside_not_c": 34492,
+      "c_inside": 9524
+    },
+    "derivation_mismatches": 0,
+    "reference": {
+      "matched": 80727,
+      "ours_rows": 80727,
+      "theirs_rows": 80727,
+      "key": {
+        "ours": [
+          "hhid",
+          "pid"
+        ],
+        "theirs": [
+          "hhid",
+          "pid_orig"
+        ]
+      },
+      "shared": 35,
+      "median_agreement": 1.0
+    },
+    "line": "68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared"
+  }
+}

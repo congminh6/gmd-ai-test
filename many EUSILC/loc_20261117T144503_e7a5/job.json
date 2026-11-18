@@ -1,0 +1,240 @@
+{
+ "job_id": "loc_20261117T144503_e7a5",
+ "flow": "harmonize",
+ "survey_id": "TUR_2024_SILC-C",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "TUR_2024_SILC-C",
+  "country": "TUR",
+  "year": 2024,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc"
+  },
+  "input_job": "loc_20261117T144329_c96d",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "profile",
+    "act": "approve",
+    "by": "zs",
+    "at": "2026-11-17T14:45:03+00:00",
+    "note": "end-to-end run asked of Claude Code by the user; profile read by the agent, not in the app",
+    "binds": {
+     "manifest_sha256": "344afc85137c242bf05d7ba460a4930b50a4bb99f38339e7e375307874987647",
+     "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+    }
+   }
+  ],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-17T14:45:03+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T144503_e7a5",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261117T144329_c96d",
+  "flow": "profile",
+  "status": "completed",
+  "manifest_sha256": "344afc85137c242bf05d7ba460a4930b50a4bb99f38339e7e375307874987647",
+  "files": 10,
+  "partial": false
+ },
+ "updated": "2026-11-17T14:58:12+00:00",
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged": {
+  "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 7,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "ss_export": "surveys/TUR_2024_SILC-C/ss",
+   "svis": "surveys/TUR_2024_SILC-C/svis",
+   "reference": "surveys/TUR_2024_SILC-C/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile 61058aa179ff approved by zs at 2026-11-17T14:45:05+00:00)",
+  "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+  "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+  "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+  "B.modules": "ok(3 module(s) in the canon)",
+  "B.bind-standard": "ok(EU-SILC eu-silc-2021: 0 binding(s) copied, 11 absence(s), 18 left to the author, 3 outside the run's modules)",
+  "B.pin-engine-ids": "ok(pinned VAR-hhid (absent), VAR-hhidorig (absent), VAR-pid (person), VAR-pidorig (person))",
+  "B.locate-sources": "ok(all 3 modules)",
+  "B.author-bindings": "ok(all modules)",
+  "B.review-prelude": "ok(3 prelude(s) read, 1 concern(s), 1 advisory)",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(21 targets; 4/54 checks flagged; 150684 universe cells; no reference)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "locate_sources",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 78676,
+    "output_token_count": 1173,
+    "total_token_count": 79849,
+    "reasoning_output_token_count": 604
+   },
+   "reasoning_effort": "low",
+   "seconds": 31.1
+  },
+  {
+   "request": "02",
+   "task": "locate_sources",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 74669,
+    "output_token_count": 1545,
+    "total_token_count": 76214,
+    "reasoning_output_token_count": 551
+   },
+   "reasoning_effort": "low",
+   "seconds": 31.0
+  },
+  {
+   "request": "03",
+   "task": "locate_sources",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 18,
+   "usage": {
+    "input_token_count": 146580,
+    "output_token_count": 2125,
+    "total_token_count": 148705,
+    "reasoning_output_token_count": 1248
+   },
+   "reasoning_effort": "low",
+   "seconds": 51.6
+  },
+  {
+   "request": "04",
+   "task": "author_bindings",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 14,
+   "usage": {
+    "input_token_count": 166912,
+    "output_token_count": 4550,
+    "total_token_count": 171462,
+    "reasoning_output_token_count": 1531
+   },
+   "reasoning_effort": "low",
+   "seconds": 94.1
+  },
+  {
+   "request": "05",
+   "task": "author_bindings",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 20,
+   "usage": {
+    "input_token_count": 460952,
+    "output_token_count": 20221,
+    "total_token_count": 481173,
+    "reasoning_output_token_count": 5578
+   },
+   "reasoning_effort": "low",
+   "seconds": 298.9
+  },
+  {
+   "request": "06",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 19,
+   "usage": {
+    "input_token_count": 325439,
+    "output_token_count": 13444,
+    "total_token_count": 338883,
+    "reasoning_output_token_count": 4366
+   },
+   "reasoning_effort": "low",
+   "seconds": 193.3
+  },
+  {
+   "request": "07",
+   "task": "review_prelude",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 1,
+   "usage": {
+    "input_token_count": 15838,
+    "output_token_count": 1065,
+    "total_token_count": 16903,
+    "reasoning_output_token_count": 735
+   },
+   "reasoning_effort": "low",
+   "seconds": 22.6
+  }
+ ],
+ "total_tokens": 1313189,
+ "log_tail": [
+  "        resolved: B-age: table 'silc24_pr' (from column '__derived.age__')",
+  "        resolved: B-childmth: table 'silc24_pr' (from column '__derived.childmth__')",
+  "        resolved: B-childyr: table 'silc24_pr' (from column '__derived.childyr__')",
+  "        resolved: B-male: table 'silc24_pr' (from column 'fk090')",
+  "        resolved: B-marital: table 'silc24_p' (from column 'fb100')",
+  "        resolved: B-primarycomp: table 'silc24_p' (from column 'fe030')",
+  "        resolved: B-school: table 'silc24_p' (from column 'fe010')",
+  "        kind: silc24_p.fe030: numeric",
+  "        kind: silc24_pr.fk090: numeric",
+  "        kind: silc24_p.fb100: numeric",
+  "        kind: silc24_p.fe010: numeric",
+  "        resolved: B-age: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-childmth: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-childyr: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-educat4: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-educat5: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-educat7: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-educy: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-male: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-marital: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-primarycomp: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-school: unit_keys ['pers_id'] (from data_scan)",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-17T14:57:42+00:00); coverage bound 21, documented 27",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran",
+  "  [det] hspec-run",
+  "      PASS — 80727 rows, 21 target(s); contract clean. Outputs in C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T144503_e7a5\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T144503_e7a5\\output\\quality.json: 21 targets; 4/54 checks flagged; 150684 universe cells; no reference",
+  "  CHECK F: ok — 21 targets; 4/54 checks flagged; 150684 universe cells; no reference",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-17T14:58:12+00:00"
+}

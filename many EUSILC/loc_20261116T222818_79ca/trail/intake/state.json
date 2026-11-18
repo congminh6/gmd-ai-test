@@ -1,0 +1,9 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "steps": {
+    "I.scan-data": "ok(4 table(s) -> profile\\data_scan.json \u00b7 data TUR_2024_SILC-C_v01_M)",
+    "I.scan-docs": "ok(3 file(s): image=1, pdf_mixed=1, pdf_text=1 -> profile\\instruments.json)",
+    "I.check": "ok"
+  },
+  "updated": "2026-11-16T22:28:42+00:00"
+}

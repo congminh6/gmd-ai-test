@@ -1,0 +1,138 @@
+{
+ "request_id": "14-author_bindings-MOD-WLF",
+ "preludes": [
+  {
+   "id": "wlf-hhsize_welfare_pc",
+   "reason": "Household size is not present as a single household-level column; it must be counted from the person roster and then used to normalize total household disposable income (HG110) to a per-capita welfare aggregate.",
+   "produces": [
+    "__derived.hsize__",
+    "__derived.welfare_pc__"
+   ],
+   "output_table": "wlf_hh",
+   "keys": [
+    "hh_id"
+   ],
+   "invariants": [
+    "One row per hh_id present in silc24_h",
+    "__derived.hsize__ >= 1 for all households"
+   ],
+   "code_file": "wlf-hhsize_welfare_pc.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-hsize",
+   "target": "VAR-hsize",
+   "roles": {
+    "raw_value": "__derived.hsize__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "resolved",
+   "evidence": "Derived by counting silc24_p.pers_id rows per silc24_p.hh_id; no household-size column found in silc24_h (searches). Evidence: silc24_p schema and hh_id/pers_id keys. (t2, t7, t11)"
+  },
+  {
+   "binding_id": "B-welfare_pc",
+   "target": "VAR-welfare",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "evidence": "Per-capita welfare constructed as Total household disposable income (silc24_h.hg110) divided by derived household size. hg110 is explicitly a disposable income aggregate (HG110). (t8)"
+  },
+  {
+   "binding_id": "B-welfarenom_pc",
+   "target": "VAR-welfarenom",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "evidence": "Nominal welfare set equal to per-capita disposable income (HG110 / hsize); no separate deflated series provided. (t8)"
+  },
+  {
+   "binding_id": "B-welfshprosperity_pc",
+   "target": "VAR-welfshprosperity",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "evidence": "Shared prosperity welfare set to same underlying per-capita disposable income aggregate (HG110 / hsize). (t8)"
+  },
+  {
+   "binding_id": "B-welfaretype",
+   "target": "VAR-welfaretype",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant": "INC",
+   "register": "resolved",
+   "evidence": "Survey welfare aggregate source is labelled 'Total household disposable income' (silc24_h.hg110), i.e., an income concept. (t8)"
+  },
+  {
+   "binding_id": "B-welfshprtype",
+   "target": "VAR-welfshprtype",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant": "INC",
+   "register": "resolved",
+   "evidence": "Shared prosperity aggregate is set equal to the same income aggregate as welfare (HG110 / hsize), so type is income. (t8)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-welfaredef",
+   "kind": "searched_not_found",
+   "reason": "No spatially-deflated/real welfare aggregate column found in silc24_h; region identifier exists (hb031) but no deflator/spatial-price-index variable is present, and the referenced deflators table is not bindable in this survey delivery. (t3, t8, t13)",
+   "searches": [
+    {
+     "terms": "deflat|deflator|price",
+     "in": "silc24_h labels/questions/names (regex search)"
+    },
+    {
+     "terms": "real welfare|spatial price|price index",
+     "in": "silc24_h labels/questions/names"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-welfareother",
+   "kind": "searched_not_found",
+   "reason": "No secondary final welfare aggregate (consumption/expenditure alternative) is present in the household file; only the income aggregate HG110 is apparent. (t3, t12)",
+   "searches": [
+    {
+     "terms": "consumption|expenditure|aggregate|welfare",
+     "in": "silc24_h labels/questions/names (regex search)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-welfareothertype",
+   "kind": "searched_not_found",
+   "reason": "Because no secondary welfare aggregate is present (welfareother absent), no corresponding welfareothertype can be sourced. (t12)",
+   "searches": [
+    {
+     "terms": "consumption|expenditure|aggregate|welfare",
+     "in": "silc24_h labels/questions/names (regex search)"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

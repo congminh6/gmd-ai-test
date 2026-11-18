@@ -1,0 +1,44 @@
+{
+  "grain": {
+    "household_key": "hh_id",
+    "person_key": [
+      "pers_id"
+    ],
+    "roster": "silc24_pr",
+    "weight": "hb040"
+  },
+  "links": [],
+  "overlay_version": "0.1",
+  "survey": "TUR_2024_SILC-C",
+  "tables": {
+    "Regional Deflators_NUTS2": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "reference"
+      }
+    },
+    "silc24_h": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "silc24_p": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "silc24_pr": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    }
+  },
+  "year": 2024
+}

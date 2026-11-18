@@ -1,0 +1,623 @@
+{
+  "country_code": "",
+  "extraction_date": "2026-11-10",
+  "source_file": "eu-silc-2021/2024/udb/D",
+  "source_format": "codebook",
+  "survey_id": "standard:eu-silc-2021",
+  "survey_name": "EU-SILC",
+  "variables": [
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "YEAR OF THE SURVEY",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; flags: -; unit: Format:  Four-digit number, no decimals",
+      "question_text": "The year in which the survey-data collection, or most of the collection, is carried out. Household register (D-File)                                          D",
+      "raw_name": "DB010",
+      "review_reasons": [],
+      "source_page": 96,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "text",
+      "extraction_confidence": 1.0,
+      "label": "COUNTRY OF RESIDENCE",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: Yes. Before 2012, Greece was abbreviated as GR. Montenegro, North Macedonia, Serbia, Albania and Kosovo added (North Macedonia in 2010, Montenegro and Serbia in 2013, Albania in 2017, Kosovo in 2018 and Bosnia and Herzegovina in 2022); flags: -; unit: SCL GEO code BE Belgium         NL Netherlands BG Bulgaria        AT Austria CZ Czechia         PL  Poland DK Denmark         PT Portugal DE Germany         RO Romania EE Estonia         SI  Slovenia IE  Ireland        SK Slovakia EL  Greece         FI  Finland ES Spain           SE Sweden FR France          UK United Kingdom HR Croatia         CH Switzerland IT  Italy          IS  Iceland CY Cyprus          NO Norway LV  Latvia         ME Montenegro LT  Lithuania      MK North Macedonia LU Luxembourg      RS Serbia HU Hungary         TR T�rkiye MT Malta           AL  Albania XK Kosovo BA Bosnia and Herzegovina",
+      "question_text": "The country of residence is the country in which the usual residence of the person/household is located. The list of countries is defined according to the Eurostat Standard Code list (SCL) GEO which is largely based on the International Organization for Standardization (ISO) 3166 country codes (3166-1 alpha-2).",
+      "raw_name": "DB020",
+      "review_reasons": [],
+      "source_page": 97,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "text",
+      "extraction_confidence": 1.0,
+      "label": "HOUSEHOLD ID",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: ---; flags: -; unit: ID number Household number 1 - 9999999 (maximum seven digits) Household ID = Household number + split number (two digits)",
+      "question_text": "Household ID (maximum nine digits) = Household number (maximum seven digits) + split number (two digits)",
+      "raw_name": "DB030",
+      "review_reasons": [],
+      "source_page": 98,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "text",
+      "extraction_confidence": 1.0,
+      "label": "REGION OF RESIDENCE",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: Yes, in 2012 and 2015, 2021 (changed the label).; flags: year >=2021 1 filled according NUTS -1 missing year >=2015 1 filled according NUTS-13 -1 missing year>= 2012 and <2015 1 filled according to NUTS-10 -1 missing year<2012 1 filled according to NUTS-03 2 filled according to NUTS-08 -1 missing; unit: NUTS 2 digits; UDB: recoded — NUTS 1 level only.",
+      "question_text": "The region of residence is the region within the country of residence in which the usual residence of the household is located at the date of interview.",
+      "raw_name": "DB040",
+      "review_reasons": [],
+      "source_page": 99,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "filled according NUTS"
+        },
+        {
+          "code": "-1",
+          "is_missing": true,
+          "label": "missing"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "REGION OF RESIDENCE — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB040; UDB: recoded — NUTS 1 level only.",
+      "raw_name": "DB040_F",
+      "review_reasons": [],
+      "source_page": 99,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "STRATUM",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "Stratum identifier; in use: Yes, since 2008; series: Yes (2014) (description and flags applied changes from 2014), the variable label slightly changed in 2021 based on standardised variable names; flags: From 2014 onwards 1 Filled 2 Self-representing primary sampling unit (PSU) 3 Collapsed stratum due to single PSU (only for households selected in the stratum with the single PSU) -2 Not applicable (no stratification) Before 2014 1 Filled -2 Not applicable (no stratification); UDB: not disseminated in general; released where a country's rules add it",
+      "numeric_range": {
+        "max_value": 99999.0,
+        "min_value": 1.0
+      },
+      "question_text": "DB050 reports on the primary stratum corresponding to each observation unit (individual or household) in case the target population (or a part thereof) is stratified at the first stage of the sample design, providing identification codes for the different strata. The information on the variable should be filled in for all waves, and it should always refer to the situation at the time the concerned unit (individual or household) is selected; it consequently does not refer to the strata used for post-stratification. DB050 collects information about primary strata, the strata used in selecting the sample. The variable label is changed from `Primary strata' [Primary strata as used in the selection of the sample]' used before, to `Stratum' used from 2021 onwards, harmonised with social standardised variables.",
+      "raw_name": "DB050",
+      "review_reasons": [],
+      "source_page": 100,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Filled"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Self-representing primary sampling unit (PSU)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Collapsed stratum due to single PSU (only for households selected in the stratum with the single PSU)"
+        },
+        {
+          "code": "-2",
+          "is_missing": true,
+          "label": "Not applicable (no stratification)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "STRATUM — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB050; UDB: not disseminated in general; released where a country's rules add it",
+      "raw_name": "DB050_F",
+      "review_reasons": [],
+      "source_page": 100,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "PRIMARY SAMPLING UNITS [PSU]",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: Yes (2014); flags: From 2014 onwards 1 Rotation is implemented at primary sampling unit (PSU) level (the PSU rotates in and out of the sample) 2 Rotation is implemented at secondary sampling unit (SSU) or household level (The PSU remains in the sample for the entire duration of EU-SILC) -2 Not applicable (no first or second sampling stage) Before 2014 1 Filled -2 Not applicable (no first or second sampling stage); UDB: recoded — Randomised.",
+      "numeric_range": {
+        "max_value": 99999.0,
+        "min_value": 1.0
+      },
+      "question_text": "DB060 measures PSUs as used in selecting the sample and it is part of a standardised list of variables. If direct-element sampling is either impossible (lack of a sampling frame) or too expensive to implement (the population is widely distributed geographically), multi-stage selections can be done. Firstly, the population is divided into disjoint sub-populations, called primary sampling units (PSUs). A sample of PSUs is then selected (first�stage sampling). Secondly, each sampled PSU is itself divided into disjoint sub-populations, called secondary sampling units (SSUs). SSUs are then independently drawn from each PSU (second- stage sampling) and so on.",
+      "raw_name": "DB060",
+      "review_reasons": [],
+      "source_page": 102,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Rotation is implemented at primary sampling unit (PSU) level (the PSU rotates in and out of the sample)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Rotation is implemented at secondary sampling unit (SSU) or household level (The PSU remains in the sample for the entire duration of EU-SILC)"
+        },
+        {
+          "code": "-2",
+          "is_missing": true,
+          "label": "Not applicable (no first or second sampling stage)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "PRIMARY SAMPLING UNITS [PSU] — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB060; UDB: recoded — Randomised.",
+      "raw_name": "DB060_F",
+      "review_reasons": [],
+      "source_page": 102,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "SECONDARY SAMPLING UNITS [SSU]",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: Yes (2014); flags: From 2014 onwards 1 Rotation is implemented at primary sampling unit (PSU) level (the PSU rotates in and out of the sample) 2 Rotation is implemented at secondary sampling unit (SSU) or household level (The PSU remains in the sample for the entire duration of EU-SILC) -2 Not applicable (no first or second sampling stage) Before 2014 1 Filled -2 Not applicable (no first or second sampling stage); UDB: recoded — Randomised.",
+      "numeric_range": {
+        "max_value": 99999.0,
+        "min_value": 1.0
+      },
+      "question_text": "If direct-element sampling is either impossible (lack of sampling frame) or too expensive to implement (the population is widely distributed geographically), multi-stage selections can be done. Firstly, the population is divided into disjoint sub-populations, called primary sampling units (PSUs). A sample of PSUs is then selected (first�stage sampling). Secondly, each sampled PSU is divided itself into disjoint sub-populations, called secondary sampling units (SSUs). SSUs are then independently drawn from each PSU (second- stage sampling) and so on, see DB060. DB062 provides identification codes for the selected PSUs (SSUs) as used in selecting the sample, secondary sampling units. In the case that the same SSU is selected several times (`multiple hits'), the SSU receives a unique value for every hit. If the first stage of the sample design consists of a selection of households, households receive a unique code for variable DB060 that remains the same throughout EU-SILC's entire duration. In the latter case split- off households keep their original value at the moment they are selected for variable DB060. In case there is at least a third stage of selection, additional variables DB06i must be transmitted as identification numbers for the units sampled at stage `i'. In the case of self-representing PSUs (for a definition see variable DB050), SSUs should be treated as if they were PSUs and receive a unique code for variable DB060. If households are selected at the second stage, they receive a unique value for variable DB060 that remains the same throughout EU-SILC's entire duration. In the latter case split-off households keep their original value at the moment of selection for variable DB060. The identification of the self-representing units themselves is implemented in variable DB050. Household register (D-File)              D",
+      "raw_name": "DB062",
+      "review_reasons": [],
+      "source_page": 104,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Rotation is implemented at primary sampling unit (PSU) level (the PSU rotates in and out of the sample)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Rotation is implemented at secondary sampling unit (SSU) or household level (The PSU remains in the sample for the entire duration of EU-SILC)"
+        },
+        {
+          "code": "-2",
+          "is_missing": true,
+          "label": "Not applicable (no first or second sampling stage)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "SECONDARY SAMPLING UNITS [SSU] — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB062; UDB: recoded — Randomised.",
+      "raw_name": "DB062_F",
+      "review_reasons": [],
+      "source_page": 104,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "ORDER OF SELECTION OF PSU",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; series: Yes (2014); flags: From 2021 (revised flags) 11         Order on sampling frame is fixed for all EU-SILC survey years and primary sampling units (PSUs) have an equal probability of selection (within explicit strata) 12         Order on sampling frame is fixed for all EU-SILC survey years and PSUs have an unequal probability of selection (within explicit strata) 21         Order on sampling frame may change over time…",
+      "numeric_range": {
+        "max_value": 99999.0,
+        "min_value": 1.0
+      },
+      "question_text": "If primary sampling units (or households in case of direct-element sampling) are selected systematically, DB070 contains the rank of selection of those units, order of selection of PSU, and order of selection of PSU as used in the selection of the sample. If PSUs rotate in and out of the sample, this rank should correspond to the rank on the sampling frame, such that PSUs newly selected in the sample could be grouped together on the basis of the order of all PSUs on the sampling frame. The value for DB070 of every selected PSU remains the same for the entire duration of EU-SILC. This information is important for variance estimation purposes because a systematic drawing from a judiciously ordered sampling frame may substantially reduce sampling errors.",
+      "raw_name": "DB070",
+      "review_reasons": [],
+      "source_page": 105,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "11",
+          "is_missing": false,
+          "label": "Order on sampling frame is fixed for all EU-SILC survey years and primary sampling units (PSUs) have an equal probability of selection (within explicit strata)"
+        },
+        {
+          "code": "12",
+          "is_missing": false,
+          "label": "Order on sampling frame is fixed for all EU-SILC survey years and PSUs have an unequal probability of selection (within explicit strata)"
+        },
+        {
+          "code": "21",
+          "is_missing": false,
+          "label": "Order on sampling frame may change over time and PSUs have an equal probability of selection (within explicit strata)"
+        },
+        {
+          "code": "22",
+          "is_missing": false,
+          "label": "Order on sampling frame may change over time and PSUs have an unequal probability of selection (within explicit strata)"
+        },
+        {
+          "code": "-2",
+          "is_missing": true,
+          "label": "Not applicable (no systematic selection)"
+        },
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "order on sampling frame is fixed for all EU-SILC survey years"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "order on sampling frame may change over time Second digit: probability of selection of PSUs"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "ORDER OF SELECTION OF PSU — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB070",
+      "raw_name": "DB070_F",
+      "review_reasons": [],
+      "source_page": 105,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "ROTATION GROUP",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "in use: Yes, since the first year of EU-SILC data collection; flags: 1          Filled -2         Not applicable (no rotational design used)",
+      "numeric_range": {
+        "max_value": 9.0,
+        "min_value": 1.0
+      },
+      "question_text": "This variable must be filled only for the countries using a rotational design.",
+      "raw_name": "DB075",
+      "review_reasons": [],
+      "source_page": 107,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Filled"
+        },
+        {
+          "code": "-2",
+          "is_missing": true,
+          "label": "Not applicable (no rotational design used)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "ROTATION GROUP — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB075",
+      "raw_name": "DB075_F",
+      "review_reasons": [],
+      "source_page": 107,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "INTERVIEW WAVE",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "Wave number; in use: New, from 2021; flags: Filled Not applicable (DB010 < 2021) 1 -7",
+      "numeric_range": {
+        "max_value": 9.0,
+        "min_value": 1.0
+      },
+      "question_text": "The wave corresponds to the number of years the respective household stays in the survey. If the household is in the data sample for the first time, the value 1 should be selected. If the household is in the sample for the second time, the value 2 should be selected, value 3 for the third time, value 4 for the fourth time, etc. The same approach should be used when using a longer panel.",
+      "raw_name": "DB076",
+      "review_reasons": [],
+      "source_page": 108,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Filled"
+        },
+        {
+          "code": "-7",
+          "is_missing": true,
+          "label": "Not applicable (DB010 < 2021)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "INTERVIEW WAVE — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB076",
+      "raw_name": "DB076_F",
+      "review_reasons": [],
+      "source_page": 108,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 1.0,
+      "label": "HOUSEHOLD CROSS-SECTIONAL WEIGHT",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "0 (format 2.5) Weight; in use: Yes, since the first year of EU-SILC data collection; series: Yes, 2014; flags: From 2014 onwards 1            Filled -7           Not applicable (DB010  last year of operation) Before 2014 1        Filled; unit: Required format      Household cross-sectional weights will be coded with at least one integer and five decimals. In the regular transmission (reconciled file format) these variables should only be filled in for the records related to the last year of operation.",
+      "question_text": "The household cross-sectional weights are the final estimation weights. Only the households that are accepted into the database (DB135 = 1) have a cross-sectional weight; the others are assigned a weight of 0. The calibration is done taking all rotational groups together.",
+      "raw_name": "DB090",
+      "review_reasons": [],
+      "source_page": 110,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Filled"
+        },
+        {
+          "code": "-7",
+          "is_missing": true,
+          "label": "Not applicable (DB010  last year of operation)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "HOUSEHOLD CROSS-SECTIONAL WEIGHT — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB090",
+      "raw_name": "DB090_F",
+      "review_reasons": [],
+      "source_page": 110,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Cities"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Towns and suburbs"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Rural areas"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "DEGREE OF URBANISATION",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "From 2021 onwards; Before 2021 (previous framework, codes not taken); in use: Yes, since the first year of EU-SILC data collection; series: Yes (2012 and 2021 modalities were changed); flags: 1            Filled -1           Missing (allowed only from wave 2 onwards)",
+      "question_text": "This variable reports on the degree of urbanisation in the area where the usual residence of the person or the household is located.",
+      "raw_name": "DB100",
+      "review_reasons": [],
+      "source_page": 114,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Filled"
+        },
+        {
+          "code": "-1",
+          "is_missing": true,
+          "label": "Missing (allowed only from wave 2 onwards)"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 1.0,
+      "label": "DEGREE OF URBANISATION — flag",
+      "module": "Technical items",
+      "needs_review": false,
+      "notes": "companion flag of DB100",
+      "raw_name": "DB100_F",
+      "review_reasons": [],
+      "source_page": 114,
+      "unit_of_analysis": "household",
+      "universe": "Household"
+    }
+  ],
+  "x_harmon": {
+    "instrument_id": "eu-silc-2021/2024/udb/D",
+    "instrument_name": "EU-SILC 2024 udb D",
+    "kind": "standard",
+    "variables": {
+      "DB010": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.96"
+        ]
+      },
+      "DB020": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.97"
+        ]
+      },
+      "DB030": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.98"
+        ]
+      },
+      "DB040": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.99"
+        ]
+      },
+      "DB040_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.99"
+        ]
+      },
+      "DB050": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.100"
+        ]
+      },
+      "DB050_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.100"
+        ]
+      },
+      "DB060": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.102"
+        ]
+      },
+      "DB060_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.102"
+        ]
+      },
+      "DB062": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.104"
+        ]
+      },
+      "DB062_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.104"
+        ]
+      },
+      "DB070": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.105"
+        ]
+      },
+      "DB070_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.105"
+        ]
+      },
+      "DB075": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.107"
+        ]
+      },
+      "DB075_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.107"
+        ]
+      },
+      "DB076": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.108"
+        ]
+      },
+      "DB076_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.108"
+        ]
+      },
+      "DB090": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.110"
+        ]
+      },
+      "DB090_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.110"
+        ]
+      },
+      "DB100": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.114"
+        ]
+      },
+      "DB100_F": {
+        "by": "udb/deterministic",
+        "cites": [
+          "Methodological guidelines 2024 operation_v7.pdf p.114"
+        ]
+      }
+    }
+  },
+  "year": 2024
+}

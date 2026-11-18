@@ -1,0 +1,125 @@
+{
+ "job_id": "loc_20261116T144013_3f4f",
+ "flow": "harmonize",
+ "survey_id": "ESP_2025_EU-SILC",
+ "status": "completed",
+ "finished": "2026-11-16T14:42:56+00:00",
+ "files": {
+  "decisions.json": {
+   "sha256": "f421a5ae88a62a81a23460ca66373728257d5ffa79afca768cc6fc675d8e6e19",
+   "size": 287
+  },
+  "job.json": {
+   "sha256": "025da1ed2c7528db4d5e264932fcc05e7f62293be4ed41c03cb82afc5ac60ff4",
+   "size": 9091
+  },
+  "output/harmonized.dta": {
+   "sha256": "6bab77fb9c402716fd735f13228b1c11a87a5bc1d8899bdbd6d9fe8d63802895",
+   "size": 22263564
+  },
+  "output/harmonized_reasons.dta": {
+   "sha256": "d7ebd2ab20c32bf90983cb53f96c3d375524ba809e41be4090a8e3114a0a00f9",
+   "size": 12482943
+  },
+  "output/quality.json": {
+   "sha256": "c6795fedb2e3446a56ff546debd073defc4a4103c58da4ddfd5741d83d1338ca",
+   "size": 145187
+  },
+  "output/run.json": {
+   "sha256": "dcb97e7a66045e17a5e11799808626ddbe0b29311194c2a3bf80a78a8edcc374",
+   "size": 3416
+  },
+  "output/targets.json": {
+   "sha256": "1f8ec3c709f335c3c0a1d2cf5d135fda17b18879d90b397d320d2f02a4adc061",
+   "size": 172818
+  },
+  "profile/data_scan.json": {
+   "sha256": "d194b4eb2149455f10feac97b702839de5c938b7ce1d195b440bd15c04814d5b",
+   "size": 379145
+  },
+  "profile/file_links.json": {
+   "sha256": "80c5b1c1c71cb6a91a2b141ad116909a5232c783ea51c4b93ab549da91edc708",
+   "size": 388
+  },
+  "profile/key_checks.json": {
+   "sha256": "ac2bb2c4901baabf372021f6efd495962cd06a1600e32f9b3f0d6cdb838b0c5d",
+   "size": 1599
+  },
+  "profile/overlay.json": {
+   "sha256": "9e9e880563741ecb3b26d79da141138c4de4b851902e1a81589cf042ea05cd83",
+   "size": 844
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__D.svis.json": {
+   "sha256": "1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9",
+   "size": 28652
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__H.svis.json": {
+   "sha256": "abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368",
+   "size": 343063
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__P.svis.json": {
+   "sha256": "e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed",
+   "size": 553083
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2025__udb__R.svis.json": {
+   "sha256": "e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e",
+   "size": 261699
+  },
+  "profile/standard.json": {
+   "sha256": "ea17261c3917f75d820f2672ac95e650f214c49342a08bd700fefe38d845f5cf",
+   "size": 85507
+  },
+  "run.lock.json": {
+   "sha256": "e8e2a9bcf8b97c3d20a5bbddb5f5c5620a589d4a885b0dd806eecf68973455e1",
+   "size": 4337
+  },
+  "spec/hspec.json": {
+   "sha256": "29d2613540a151f46058b94f41c57d5bab8b557a57b2888042a926ad5ad0ad2f",
+   "size": 147346
+  },
+  "spec/hspec.stamp.json": {
+   "sha256": "4df836b5c69565f87a5b73b44b395dcc533de7daf827916b5964abcc5e11c78f",
+   "size": 54334
+  },
+  "spec/standard_DEM-agecat.py": {
+   "sha256": "a88c1beb36937c36e8643d973cb12145befaaa930d5681011ab4909ff8816ce8",
+   "size": 1163
+  },
+  "spec/standard_isced_level.py": {
+   "sha256": "182b2b333596dc6c7fb0dbcd73330df6a66e1338d3f4aedf8b17bac1968a7c68",
+   "size": 918
+  },
+  "spec/standard_LBR-labor.py": {
+   "sha256": "aa60521b1f9c505966d4d36f5021324039df4d6ea5560fe7ebefbdae64f02459",
+   "size": 1892
+  },
+  "spec/standard_LBR-wage.py": {
+   "sha256": "0bb08ae888b41f83df99e26aa07256ea219d4d2f27967221d4e8fc0f7d198a00",
+   "size": 1452
+  },
+  "spec/standard_marital_status.py": {
+   "sha256": "0628e514010bc395bbdfc141d0be75f21d97046af69f46485c76b6b399f4546a",
+   "size": 1402
+  },
+  "spec/standard_welfare_pc.py": {
+   "sha256": "3d480a28ca18b0329aca91b77e4f17b096d5f1da5f0def0fa963148d9c3bc086",
+   "size": 1417
+  },
+  "staged.json": {
+   "sha256": "924f567d51bb8d56c566c356c9f286705ce3ae7f85ec066358b233ce9c404852",
+   "size": 1393
+  },
+  "trail/harmonize/identity.json": {
+   "sha256": "6d63bf268928241ae4f1a43cf6cd3793c7851b83841e897f1a464a8112488cfe",
+   "size": 447
+  },
+  "trail/harmonize/log.txt": {
+   "sha256": "f761b71f58d296028b158a22c2724b19e63b745902d2efc5d7e0d01eeb3563bc",
+   "size": 15013
+  },
+  "trail/harmonize/state.json": {
+   "sha256": "f3d0eb78d8ee592a111e9cbc08c004582c95974cf8e48ef243a3e08478741f71",
+   "size": 1385
+  }
+ }
+}

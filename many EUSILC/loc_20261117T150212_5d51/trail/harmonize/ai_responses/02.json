@@ -1,0 +1,135 @@
+{
+ "request_id": "02-locate_sources-MOD-DWL",
+ "routing": {
+  "VAR-ac": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh230",
+    "why": "Direct question on AIR CONDITIONER possession of the household"
+   }
+  ],
+  "VAR-areaspace": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh070",
+    "why": "Size of dwelling in square meters (m2)"
+   }
+  ],
+  "VAR-bath": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh100",
+    "why": "Bathtub or shower unit in the dwelling (yes/shared/no)"
+   }
+  ],
+  "VAR-car": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh240",
+    "why": "Direct question on CAR possession of the household"
+   }
+  ],
+  "VAR-cellphone": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh160",
+    "why": "Direct question on MOBILE PHONE possession of the household"
+   }
+  ],
+  "VAR-computer": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh180",
+    "why": "Direct question on COMPUTER possession of the household"
+   }
+  ],
+  "VAR-fridge": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh210",
+    "why": "Direct question on REFRIGERATOR possession of the household"
+   }
+  ],
+  "VAR-internet": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh190",
+    "why": "Direct question on INTERNET connection possession of the household"
+   }
+  ],
+  "VAR-kitchen": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh120",
+    "why": "Direct question on presence of a KITCHEN in the dwelling"
+   }
+  ],
+  "VAR-landphone": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh150",
+    "why": "Direct question on TELEPHONE LINE possession of the household"
+   }
+  ],
+  "VAR-phone": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh150",
+    "why": "Telephone line possession; candidate source for any-telephone ownership"
+   },
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh160",
+    "why": "Mobile phone possession; candidate source for any-telephone ownership"
+   }
+  ],
+  "VAR-rooms": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh060",
+    "why": "Number of rooms available to the household (excludes kitchen/bath/toilet)"
+   }
+  ],
+  "VAR-tv": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh170",
+    "why": "Direct question on COLOUR TV possession of the household"
+   }
+  ],
+  "VAR-washmach": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh200",
+    "why": "Direct question on WASHING MACHINE possession of the household"
+   }
+  ],
+  "VAR-dweltyp": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh010",
+    "why": "Dwelling type categories (detached house/apartment/etc)"
+   }
+  ],
+  "VAR-ownhouse": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh020",
+    "why": "Tenure status (owner/tenant/lodging/free); candidate for ownership/renting categories"
+   }
+  ],
+  "VAR-acquihouse": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "column": "silc24_h.hh030",
+    "why": "Year of purchasing or possessing of the house; only acquisition-related item observed (no direct method categories)"
+   }
+  ],
+  "VAR-typlivqrt": [
+   {
+    "survey_module": "## Dwelling and Housing Conditions",
+    "why": "Potentially derivable from dwelling type (HH010) and presence of basic facilities (e.g., kitchen HH120, bath HH100, toilet HH110, piped water HH130)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,4069 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": "the survey's identity; the standard carries the country as DB020/HB020 'Country of residence' in every file (DOCSILC065 2021 op. v8: DB020 p.95, HB020 p.121)",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": "the survey's identity; DB010/HB010 'Year of the survey' equal it in every file (DOCSILC065 2021 op. v8: DB010 p.94, HB010 p.120)",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-intyear",
+      "evidence": "HB060 'Year of household interview' (four digits) (DOCSILC065 2021 op. v8: HB060 p.125) — EU-SILC eu-silc-2021: HB060 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hb060 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb060",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-intyear"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": "DB090 'Household cross-sectional weight', the final estimation weight of every household accepted into the database (DB135 = 1); the canon's weight is the household weighting coefficient. RB050 is the same weight carried per member (personal cross-sectional weight, all ages) (DOCSILC065 2021 op. v8: DB090 p.108, RB050 p.236) — EU-SILC eu-silc-2021: DB090 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db090 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "db090",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-urban",
+      "evidence": "DB100 'Degree of urbanisation' (DEGURBA, 2021 modalities): 1 cities and 2 towns and suburbs read as urban, 3 rural areas as rural. The canon asks for the national urban/rural definition of the sampling frame; DEGURBA is the standard's only locality classification, so this placement is a draft for the GMD team (DOCSILC065 2021 op. v8: DB100 p.112) — EU-SILC eu-silc-2021: DB100 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db100 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "db100",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "route_reason": "DEGURBA is an international classification (Eurostat), not a national one: no country layer applies",
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-urban",
+      "value_map": {
+        "1": 1,
+        "2": 1,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-subnatid1",
+      "evidence": "DB040 'Region of residence', the NUTS 2-digit code. The canon's form is '<code> - <name>'; the names are the country's (a per-survey link), so the code alone is kept here (DOCSILC065 2021 op. v8: DB040 p.97) — EU-SILC eu-silc-2021: DB040 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db040 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "db040",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-subnatid1"
+    },
+    {
+      "binding_id": "B-subnatidsurvey",
+      "evidence": "the survey's own region variable, DB040 (DOCSILC065 2021 op. v8: DB040 p.97) — EU-SILC eu-silc-2021: DB040 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db040 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "db040",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-subnatidsurvey"
+    },
+    {
+      "binding_id": "B-psu",
+      "evidence": "DB060 'Primary sampling units [PSU]' as used in selecting the sample, 1-99999 (DOCSILC065 2021 op. v8: DB060 p.100) — EU-SILC eu-silc-2021: DB060 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db060 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "db060",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-psu"
+    },
+    {
+      "binding_id": "B-strata",
+      "evidence": "DB050 'Stratum', the primary stratum of the sample design, 1-99999; the canon's '<code> - <name>' form needs the country's names, so the code alone is kept here (DOCSILC065 2021 op. v8: DB050 p.98) — EU-SILC eu-silc-2021: DB050 is IRL__EU-SILC_v01_M_v01_A_UDB-C_D.db050 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "db050",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+      "target": "VAR-strata"
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": "RB090 'Sex': 1 male → 1, 2 female → 0 (R-file, every household member) (DOCSILC065 2021 op. v8: RB090 p.248) — EU-SILC eu-silc-2021: RB090 is IRL__EU-SILC_v01_M_v01_A_UDB-C_R.rb090 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "rb090",
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": "PB190 'Marital status' (de jure): 1 never married → 2, 2 married (registered partnerships included) → 1, 3 separated → 4, 4 widowed → 5, 5 divorced → 4 (the canon's one code for divorced/separated). Universe: members aged 16 and over; younger members have no P-file row (.c). PB200 'Consensual union' is a separate, de facto item: the canon's 3 'living together' is not fed from it here, so 3 is never emitted (a question for the GMD team) (DOCSILC065 2021 op. v8: PB190 p.299, PB200 p.300) — EU-SILC eu-silc-2021: PB190 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pb190 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pb190",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 2,
+        "2": 1,
+        "3": 4,
+        "4": 5,
+        "5": 4
+      }
+    },
+    {
+      "binding_id": "B-school",
+      "evidence": "PE010 'Participation in formal education and training (student or apprentice)': 1 yes → 1, 2 no → 0; members aged 16 and over (.c under 16) (DOCSILC065 2021 op. v8: PE010 p.310) — EU-SILC eu-silc-2021: PE010 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pe010 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pe010",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-school",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-educat7",
+      "evidence": "PE041 'Educational attainment level', the ISCED-2011 three-digit attainment codes of the 2021+ framework (0, 100, 200, 34x/35x/39x, 44x/45x/49x, 54x/55x/59x, 600, 700, 800); the hundreds digit is the ISCED level the canon's ISCED-2011 anchor places (prelude isced_level); members aged 16 and over (.c under 16) (DOCSILC065 2021 op. v8: PE041 p.315)",
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.isced_level__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-educat7",
+      "value_map_source": {
+        "standard": "ISCED-2011"
+      }
+    },
+    {
+      "binding_id": "B-hsize",
+      "evidence": "HB120 'Household size' (new in 2021): the number of current household members (RB110 = 1 to 4), 1-99 (DOCSILC065 2021 op. v8: HB120 p.130, RB110 p.250) — EU-SILC eu-silc-2021: HB120 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hb120 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb120",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-hsize"
+    },
+    {
+      "binding_id": "B-welfaretype",
+      "constant": "INC",
+      "evidence": "INC: EU-SILC's welfare aggregate is disposable income, HY020 (canon values INC / CONS / EXP) (DOCSILC065 2021 op. v8: HY020 p.163)",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-welfaretype"
+    },
+    {
+      "binding_id": "B-welfare",
+      "evidence": "UDB: all income variables are in euro; HX010 'Change rate' is the conversion factor euro -> national currency, missing when the national currency is the euro (disclosure control rules, 1. General rules: income variables; 3. Calculated variables: HX010). HY020 * HX010 is disposable household income in the national currency, divided by HB120 household size (prelude welfare_pc, the UDB version)",
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".b",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.welfare_pc__",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-welfare"
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": "UDB: RX010 'Age at the time of interview' is Eurostat's calculated age, date of interview less date of birth in years and months, top-coded at 80 (disclosure control rules, 3. Calculated variables). It equals RB082 in every row of the deliveries that carry both (AUT, POL, SRB 2025: 100 %), and it is filled where RB082 is not released (ITA and NOR 2025: RB082 all missing) — EU-SILC eu-silc-2021: RX010 is IRL__EU-SILC_v01_M_v01_A_UDB-C_R.rx010 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "rx010",
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-agecat",
+      "evidence": "RB080 'YEAR OF BIRTH' as the delivery releases it, for a delivery with no age in years (prelude DEM-agecat). The canon uses agecat 'only when the survey did not collect age in years' and asks for the survey's own categories, carried as they are. The decision is the delivery's, never a row's: where any row has an age (RX010) the column is .c, 'Age categories not collected in this survey', in every row; where none has, every person gets the class (and only when every row has one: a partly filled agecat is not an output). Eurostat's disclosure rules give year of birth in 5-year classes where the age variables are 'not provided' (Malta in every operation; Germany from 2023), and code the classes differently by country and by year (a class number with a label in Malta 2021, the lowest year of the class in Malta 2025, the highest in Germany: udb_rules.json, country rules), so no age bounds are written here. Before, this binding copied the age in years, which the canon names a common mistake — decided with the team 2026-11-13 — EU-SILC eu-silc-2021: RB080 is IRL__EU-SILC_v01_M_v01_A_UDB-C_R.rb080 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.agecat_applies__ == 1"
+      },
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "rb080",
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-agecat"
+    },
+    {
+      "binding_id": "B-car",
+      "evidence": "09:t9#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: HS110 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hs110 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hs110",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-car",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-childmth",
+      "evidence": "Only completed years (rb082) available; cannot derive months without birth month/day or interview date; emit cannot_harmonize (.b) for under-5. Evidence: 08:t3 (rb082/rb080) and 08:t2 (VAR-childmth canon). — authored on ESP_2022_EU-SILC | age read from the calculated RX010, equal to RB082 where both are filled — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds — EU-SILC eu-silc-2021: RX010 is IRL__EU-SILC_v01_M_v01_A_UDB-C_R.rx010 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "rx010 < 5"
+      },
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "rx010",
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-childmth"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": "rb082 is age in completed years at interview; use as childyr under gate age<5. Evidence: 08:t3 (rb082). — authored on ESP_2022_EU-SILC | age read from the calculated RX010, equal to RB082 where both are filled — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds — EU-SILC eu-silc-2021: RX010 is IRL__EU-SILC_v01_M_v01_A_UDB-C_R.rx010 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "rx010 < 5"
+      },
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "rx010",
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-communicationdisability",
+      "evidence": "PH151 difficulty communicating; codes 1-4 align to canon. Evidence: 08:t4 (ph151). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PH151 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.ph151 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "ph151",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-communicationdisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-computer",
+      "evidence": "09:t13#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: HS090 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hs090 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hs090",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-computer",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-concentrationdisorder",
+      "evidence": "PH131 difficulty remembering or concentrating with 4-level response codes 1-4 matching canon. Evidence: 08:t3 (ph131). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PH131 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.ph131 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "ph131",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-concentrationdisorder",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-contract",
+      "evidence": "PL141 'Permanency of main job': 11 fixed-term written contract, 12 fixed-term verbal contract, 21 permanent written contract, 22 permanent verbal contract (the 2024 reading). The canon's contract is whether the worker has a contract: a written one is, a verbal agreement is not (assumed: the canon does not say whether a verbal contract counts) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL141 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl141 in this delivery (conformance; observed codes within the declared)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl141",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-contract",
+      "value_map": {
+        "11": 1,
+        "12": 0,
+        "21": 1,
+        "22": 0
+      }
+    },
+    {
+      "binding_id": "B-contract_year",
+      "evidence": "PL141 'Permanency of main job': 11 fixed-term written contract, 12 fixed-term verbal contract, 21 permanent written contract, 22 permanent verbal contract (the 2024 reading). The canon's contract is whether the worker has a contract: a written one is, a verbal agreement is not (assumed: the canon does not say whether a verbal contract counts) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL141 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl141 in this delivery (conformance; observed codes within the declared)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus_year == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatusyear"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl141",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-contractyear",
+      "value_map": {
+        "11": 1,
+        "12": 0,
+        "21": 1,
+        "22": 0
+      }
+    },
+    {
+      "binding_id": "B-dweltyp",
+      "evidence": "09:t11#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: HH010 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hh010 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh010",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-dweltyp",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 8
+      }
+    },
+    {
+      "binding_id": "B-empstat",
+      "evidence": "17:t3#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL040A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl040a in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pl040a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-empstat",
+      "value_map": {
+        "1": 3,
+        "2": 4,
+        "3": 1,
+        "4": 2
+      }
+    },
+    {
+      "binding_id": "B-empstat_year",
+      "evidence": "17:t3#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL040A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl040a in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl040a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-empstatyear",
+      "value_map": {
+        "1": 3,
+        "2": 4,
+        "3": 1,
+        "4": 2
+      }
+    },
+    {
+      "binding_id": "B-everattend",
+      "evidence": "Ever attended inferred from educational attainment pe041: 0=no education => 0; any ISCED>=1 (>=100) => 1. Evidence: 08:t4 (pe041). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PE041 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pe041 in this delivery (conformance; observed codes 1, 2, 3, 4, 5, 6, 7, 8 are not declared by the standard)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pe041",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-everattend",
+      "value_map": {
+        "0": 0,
+        "100": 1,
+        "200": 1,
+        "340": 1,
+        "342": 1,
+        "343": 1,
+        "344": 1,
+        "349": 1,
+        "350": 1,
+        "352": 1,
+        "353": 1,
+        "354": 1,
+        "359": 1,
+        "390": 1,
+        "392": 1,
+        "393": 1,
+        "394": 1,
+        "399": 1,
+        "440": 1,
+        "450": 1,
+        "490": 1,
+        "500": 1,
+        "540": 1,
+        "550": 1,
+        "590": 1,
+        "600": 1,
+        "700": 1,
+        "800": 1
+      }
+    },
+    {
+      "binding_id": "B-eyedisability",
+      "evidence": "PH101 difficulty seeing; codes 1-4 align to canon. Evidence: 08:t3 (ph101). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PH101 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.ph101 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "ph101",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-eyedisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-heardisability",
+      "evidence": "PH111 difficulty hearing; codes 1-4 align to canon. Evidence: 08:t3 (ph111). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PH111 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.ph111 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "ph111",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-heardisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-industry_orig",
+      "evidence": "17:t3#identity — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL111A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl111a in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pl111a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-industryorig"
+    },
+    {
+      "binding_id": "B-industry_orig_year",
+      "evidence": "17:t3#identity — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL111A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl111a in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl111a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-industryorigyear"
+    },
+    {
+      "binding_id": "B-lstatus",
+      "evidence": "PL032 'Self-defined current economic status': 1 employed and 7 compulsory military or civilian service are in employment (a conscript is employed in the labor-force framework), 2 unemployed, 3 retired, 4 unable to work, 5 student, 6 domestic tasks, 8 other are outside the labor force — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs — EU-SILC eu-silc-2021: PL032 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl032 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pl032",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-lstatus",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 1,
+        "8": 3
+      }
+    },
+    {
+      "binding_id": "B-lstatus_year",
+      "evidence": "PL032 'Self-defined current economic status': 1 employed and 7 compulsory military or civilian service are in employment (a conscript is employed in the labor-force framework), 2 unemployed, 3 retired, 4 unable to work, 5 student, 6 domestic tasks, 8 other are outside the labor force — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs — EU-SILC eu-silc-2021: PL032 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl032 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl032",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-lstatusyear",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 3,
+        "6": 3,
+        "7": 1,
+        "8": 3
+      }
+    },
+    {
+      "binding_id": "B-mineducatage",
+      "constant_source": {
+        "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+      },
+      "evidence": "08:t1#universe — authored on AUT_2024_EU-SILC",
+      "injected": {
+        "unit_keys": "overlay"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rx030",
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+      "target": "VAR-mineducatage"
+    },
+    {
+      "binding_id": "B-minlaborage",
+      "constant_source": {
+        "parameter": "PARAM-LBR-MIN-LABOR-AGE"
+      },
+      "evidence": "17:t3#universe — authored on AUT_2024_EU-SILC",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-minlaborage"
+    },
+    {
+      "binding_id": "B-minlaborage_year",
+      "constant_source": {
+        "parameter": "PARAM-LBR-MIN-LABOR-AGE-YEAR"
+      },
+      "evidence": "17:t3#universe — authored on AUT_2024_EU-SILC",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-minlaborageyear"
+    },
+    {
+      "binding_id": "B-nlfreason",
+      "evidence": "PL032 'Self-defined current economic status': 3 retired, 4 unable to work due to long-standing health problems, 5 student or pupil, 6 fulfilling domestic tasks, 7 compulsory military or civilian service, 8 other (the 2024 reading) placed on the canon's reasons (1 student, 2 housewife, 3 retired, 4 disabled, 5 other), for the persons VAR-lstatus places outside the labor force — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL032 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl032 in this delivery (conformance; observed codes within the declared)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 3"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": {
+          "code": ".c",
+          "waive": "1 employed, 2 unemployed and 7 compulsory service are in the labor force: the gate on VAR-lstatus writes .c for them before the map is read"
+        }
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl032",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-nlfreason",
+      "value_map": {
+        "3": 3,
+        "4": 4,
+        "5": 1,
+        "6": 2,
+        "8": 5
+      }
+    },
+    {
+      "binding_id": "B-occup_orig",
+      "evidence": "17:t3#question — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL051A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl051a in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl051a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-occuporig"
+    },
+    {
+      "binding_id": "B-occup_orig_year",
+      "evidence": "17:t3#question — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL051A is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl051a in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl051a",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-occuporigyear"
+    },
+    {
+      "binding_id": "B-ownhouse",
+      "evidence": "09:t10#codes — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: HH021 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hh021 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh021",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-ownhouse",
+      "value_map": {
+        "1": 1,
+        "2": 1,
+        "3": 2,
+        "4": 2,
+        "5": 3
+      }
+    },
+    {
+      "binding_id": "B-rooms",
+      "evidence": "09:t12#identity — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: HH030 is IRL__EU-SILC_v01_M_v01_A_UDB-C_H.hh030 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh030",
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-rooms"
+    },
+    {
+      "binding_id": "B-unempldur_l",
+      "evidence": "PL271 'Duration of the most recent unemployment spell' (months), bounded to the canon's universe (the unemployed) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL271 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl271 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pl271",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-unempldurl"
+    },
+    {
+      "binding_id": "B-unempldur_l_year",
+      "evidence": "PL271 'Duration of the most recent unemployment spell' (months), bounded to the canon's universe (the unemployed) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL271 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl271 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus_year == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatusyear"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl271",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-unempldurlyear"
+    },
+    {
+      "binding_id": "B-unempldur_u",
+      "evidence": "PL271 'Duration of the most recent unemployment spell' (months), bounded to the canon's universe (the unemployed) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL271 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl271 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl271",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-unemplduru"
+    },
+    {
+      "binding_id": "B-unempldur_u_year",
+      "evidence": "PL271 'Duration of the most recent unemployment spell' (months), bounded to the canon's universe (the unemployed) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it) — EU-SILC eu-silc-2021: PL271 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl271 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus_year == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatusyear"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl271",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-unemplduruyear"
+    },
+    {
+      "binding_id": "B-walkdisability",
+      "evidence": "PH121 difficulty walking/climbing steps; codes 1-4 align to canon. Evidence: 08:t3 (ph121). — authored on ESP_2022_EU-SILC — EU-SILC eu-silc-2021: PH121 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.ph121 in this delivery (conformance; observed codes within the declared)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "ph121",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-walkdisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-welfshprtype",
+      "constant": "INC",
+      "evidence": "15:t2#AUT__EU-SILC_v01_M_v01_A_UDB-C_H.hx090#question (equivalised disposable income; income) + 15:t1#VAR-welfshprtype#definition (INC/CONS/EXP). — authored on AUT_2024_EU-SILC",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".b",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "unit_keys": [
+          "rx030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+      "target": "VAR-welfshprtype"
+    },
+    {
+      "binding_id": "B-whours",
+      "evidence": "17:t4#question — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL060 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl060 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "pl060",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-whours"
+    },
+    {
+      "binding_id": "B-whours_2",
+      "evidence": "PL100 usual hours per week in 2nd/3rd+ jobs combined — authored on POL_2023_EU-SILC | bounded to the canon's universe (the employed; the round found a value in about 40 % of the rows outside it) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries) — EU-SILC eu-silc-2021: PL100 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl100 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1 AND pl100 > 0"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl100",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-whours2"
+    },
+    {
+      "binding_id": "B-whours_2_year",
+      "evidence": "No distinct yearly hours-secondary; using PL100 — authored on POL_2023_EU-SILC | bounded to the canon's universe (the employed; the round found a value in about 40 % of the rows outside it) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries) — EU-SILC eu-silc-2021: PL100 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl100 in this delivery (conformance)",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus_year == 1 AND pl100 > 0"
+      },
+      "gate_reads": [
+        "VAR-lstatusyear"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl100",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-whours2year"
+    },
+    {
+      "binding_id": "B-whours_year",
+      "evidence": "17:t4#question — authored on AUT_2024_EU-SILC — EU-SILC eu-silc-2021: PL060 is IRL__EU-SILC_v01_M_v01_A_UDB-C_P.pl060 in this delivery (conformance)",
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "pl060",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-whoursyear"
+    },
+    {
+      "binding_id": "B-industrycat4",
+      "evidence": "PL111A 'Economic activity of the local unit (main job)' holds the NACE Rev. 2 sections as the user database groups them (a, b - e, f, g, h, i, j, k, l - n, o, p, q, r - u: the same 13 values in all 27 deliveries of 2025); placed on the canon's four categories by the structure of NACE (prelude LBR-labor), for the employed. Assumed: the canon has no record of the classification and no edge from it yet — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.industrycat4__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-industrycat4"
+    },
+    {
+      "binding_id": "B-occup",
+      "evidence": "PL051A 'Occupation (main job)' is ISCO-08, two digits in most deliveries and one in a few: the major group is its first digit (0 the armed forces), which is the canon's one-digit code (prelude LBR-labor), for the employed. Assumed: the canon has no record of ISCO-08 and no edge from it yet — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.isco_major__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-occup",
+      "value_map": {
+        "0": 10,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9
+      }
+    },
+    {
+      "binding_id": "B-wage_nc",
+      "evidence": "PY010G 'Employee cash or near cash income' (gross, income reference year), converted from the user database's euro to the national currency by HX010 (prelude LBR-wage). Assumed: the canon asks for the last wage payment and an income survey has the annual amount; the unit says so (annual) — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1 AND empstat <= 2"
+      },
+      "gate_reads": [
+        "VAR-lstatus",
+        "VAR-empstat"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.wage_annual__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "wage_lcu",
+      "target": "VAR-wagenc"
+    },
+    {
+      "binding_id": "B-unitwage",
+      "constant": 8,
+      "evidence": "the wage bound to VAR-wagenc is an annual amount: the canon's unit 8 (annually), for the employees — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1 AND empstat == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus",
+        "VAR-empstat"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-unitwage"
+    },
+    {
+      "binding_id": "B-wage_total",
+      "evidence": "the annualized wage of an annual amount is the amount itself. PY010G 'Employee cash or near cash income' (gross, income reference year), converted from the user database's euro to the national currency by HX010 (prelude LBR-wage). Assumed: the canon asks for the last wage payment and an income survey has the annual amount; the unit says so (annual) — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1 AND empstat == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus",
+        "VAR-empstat"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.wage_annual__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "wage_lcu",
+      "target": "VAR-wagetotal"
+    },
+    {
+      "binding_id": "B-wmonths",
+      "evidence": "PL073 to PL076, the months of the income reference year spent in full-time or part-time work as an employee or self-employed: each month of the calendar has one main activity (the eleven month columns sum to 12 for every person, AUT / ESP / POL 2024), so their sum is the months worked (prelude LBR-labor), for the employed. Assumed: the calendar is the previous year's and counts any job, the canon asks for the main job — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.wmonths__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-wmonths"
+    },
+    {
+      "binding_id": "B-wmonthsyear",
+      "evidence": "PL073 to PL076, the months of the income reference year spent in full-time or part-time work as an employee or self-employed: each month of the calendar has one main activity (the eleven month columns sum to 12 for every person, AUT / ESP / POL 2024), so their sum is the months worked (prelude LBR-labor), for the employed. Assumed: the calendar is the previous year's and counts any job, the canon asks for the main job — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus_year == 1"
+      },
+      "gate_reads": [
+        "VAR-lstatusyear"
+      ],
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.wmonths__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+      "target": "VAR-wmonthsyear"
+    },
+    {
+      "binding_id": "B-laborincome",
+      "evidence": "PY010G 'Employee cash or near cash income' + PY050G 'Cash benefits or losses from self-employment' (gross, income reference year): the income from every job, converted from the user database's euro to the national currency by HX010 (prelude LBR-wage). Assumed: a loss from self-employment can make it negative; non-cash employee income is left out — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition",
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "kind": "recode",
+      "missing_map": {
+        "absent": ".c",
+        "null": ".b"
+      },
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.labor_income__",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "table": "wage_lcu",
+      "target": "VAR-laborincome"
+    },
+    {
+      "binding_id": "B-educat5",
+      "derived_from": "VAR-educat7",
+      "evidence": "the canon's educat7 → educat5 recode (VAR-educat5 correspondence_output)",
+      "injected": {
+        "unit_keys": "parent"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "educat7",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "route_reason": "derived from educat7 by the canon's own educat7 recode (VAR-educat5 correspondence_output); the national education categories enter once, at educat7's ISCED placement, never here",
+      "target": "VAR-educat5",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 4,
+        "6": 5,
+        "7": 5
+      }
+    },
+    {
+      "binding_id": "B-educat4",
+      "derived_from": "VAR-educat7",
+      "evidence": "the canon's educat7 → educat4 recode (VAR-educat4 correspondence_output)",
+      "injected": {
+        "unit_keys": "parent"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "educat7",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "route_reason": "derived from educat7 by the canon's own educat7 recode (VAR-educat4 correspondence_output); the national education categories enter once, at educat7's ISCED placement, never here",
+      "target": "VAR-educat4",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 3,
+        "5": 3,
+        "6": 4,
+        "7": 4
+      }
+    },
+    {
+      "binding_id": "B-primarycomp",
+      "derived_from": "VAR-educat7",
+      "evidence": "primary completed = educat7 at or above 'primary complete' (canon value 3)",
+      "injected": {
+        "unit_keys": "parent"
+      },
+      "kind": "recode",
+      "note": "from the source standard eu-silc-2021 (reference layer 0.1.0)",
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "educat7",
+        "unit_keys": [
+          "rb030"
+        ]
+      },
+      "target": "VAR-primarycomp",
+      "value_map": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    }
+  ],
+  "coverage": [
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "no literacy variable in the standard: Part II has no item on reading or writing ability (the education variables are PE010, PE021, PE041) (DOCSILC065 2021 op. v8: PE010 p.310, PE041 p.315)",
+      "status": "absent",
+      "variable": "VAR-literacy"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "no language item in Part II (the person variables cover birth country RB280, citizenship RB290) (DOCSILC065 2021 op. v8: RB280 p.261, RB290 p.265)",
+      "status": "absent",
+      "variable": "VAR-language"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "PH030 'Limitation in activities because of health problems' (GALI) is the standard's only functioning item; there are no Washington Group domain items (seeing, hearing, walking, remembering, self-care, communicating) (DOCSILC065 2021 op. v8: PH030 p.323)",
+      "status": "absent",
+      "variable": "VAR-selfcaredisability"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "HB050 'Month of household interview' is grouped into quarters in the UDB (disclosure control rules, 1. General rules: grouping / recoding): a month cannot be stated",
+      "status": "absent",
+      "variable": "VAR-intmonth"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No air conditioner item among EU-SILC household durable item variables; searched survey for air conditioner/AC and reviewed household H table HS items list. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "label,question,codes survey-wide",
+          "terms": "air conditioner|ac"
+        },
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_H columns",
+          "terms": "HS* items list"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ac"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "EU-SILC H table includes tenure status but no acquisition mode (purchased/inherited/other) for house. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-acquihouse"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No residential land ownership/acquisition questions in provided EU-SILC tables; search for acquisition/purchased/inherited and land yielded only income/tax mentions. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-acquiland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "EU-SILC instrument does not include agricultural land use/ownership modules in provided tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-agriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No agricultural land ownership document type variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-agrilandownti"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-areaagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No agricultural land documentation/area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-areadocuagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No inherited agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-areainheragriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No owned agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-areaownagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No purchased agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-areapurchagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rented-in agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-arearentinagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rented-out agricultural land area variables in survey. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-arearentoutagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No bicycle ownership variable found; search bicycle/bike returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-bcycle"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No boat ownership variable found; search boat returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-boat"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No canoe ownership variable found; search canoe returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-canoe"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No cell/mobile phone ownership variable found in tables; searches for cellphone/mobile/cell/telephone found no ownership item. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-cellphone"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "EU-SILC UDB H/P tables do not include annual telecom expenditure items (cell/landline); only internet access indicator PD080 and housing cost HH070 were found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-cellphoneexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No central heating access/source variable in household housing section; closest is HH050 affordability to keep home warm (not access) and HH070 total housing cost (includes heating). — authored on ESP_2022_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-centralacc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate central heating expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-centralexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No fuel-specific expenditure variables (coal, wood, peat, etc.) in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-coalexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-telexp",
+        "VAR-internetexp",
+        "VAR-telefaxexp"
+      ],
+      "reason": "Telecom expenditure would require telexp/internetexp/telefaxexp; survey provides no expenditure components (PD080 is access only). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-commexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No cooking fuel source questions in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-cooksource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No fuel-specific expenditure variables in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dieselexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No documented agricultural land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-docuagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No residential land legal document variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-doculand"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No dwelling maintenance materials expenditure variables in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dwelmatexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No dwelling other services expenditure variables in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dwelothsvcexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No dwelling legal title variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dwelownlti"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No dwelling legal document type variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dwelownti"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No dwelling repair services expenditure variables in EU-SILC UDB H/P tables. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-dwelsvcexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No electricity connection/access variable in EU-SILC UDB; HH070 is cost concept, not access. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-elecacc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No hours-of-electricity-availability variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-elechracc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No electricity access in dwelling variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-electricity"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No lighting/electricity type (source) variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-electyp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate electricity expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-elecxp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-empstat2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-empstat2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No electronic tablet ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-etablet"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No electric water pump ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ewpump"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No electric fan ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-fan"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sex-disaggregated agricultural land ownership variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-femagrilandownti"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sex-disaggregated residential land documentation variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-femdoculand"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sex-disaggregated dwelling title variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-femdwelownlti"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size / number of employees variable found in P table searches. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        },
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t14",
+          "terms": "employees"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (secondary job). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel2"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (12-month ref, secondary). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (12-month ref). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizelyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (secondary job). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu2"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (12-month ref, secondary). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No firm size variable found (12-month ref). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+          "terms": "firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeuyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No floor material variable found; search floor returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-floor"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No country-specific floor material text variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-floorcs"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No refrigerator/fridge ownership variable found; search refrigerator/fridge returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-fridge"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No garbage collection expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-garbageexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No gas connection/usage type variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-gas"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate gas expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-gasexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No gasoline expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-gasolineexp"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No health insurance coverage indicator found in P table. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t5",
+          "terms": "health insurance"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-healthins"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No health insurance coverage indicator found in P table. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t5",
+          "terms": "health insurance"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-healthinsyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate heating expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-heatingexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate hot water supply expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-hwaterexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-watersource"
+      ],
+      "reason": "Improved water requires watersource; no water source question/column found in EU-SILC UDB (search water source/piped/tap/borehole). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-impwatrec"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat10"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat102"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat102year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat10year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat42"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat42year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-industrycat4year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-industryorig2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-industryorig2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No inherited agricultural land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-inheragriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Only personal internet connection at home (pd080) is available and does not distinguish in-house vs outside access per DWL definition; no household internet access variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-internet"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "PD080 is an internet access indicator, not expenditure; no internet expenditure question found — authored on POL_2023_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-internetexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No kerosene expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-kerosenexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate-kitchen indicator found; only hh030 definition mentions kitchens as room types. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-kitchen"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No residential land ownership document type variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-landownti"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No landline phone ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-landphone"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No landline phone expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-landphoneexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No lighting source questions in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-lightsource"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-gasolineexp",
+        "VAR-dieselexp",
+        "VAR-kerosenexp",
+        "VAR-othliqexp"
+      ],
+      "reason": "Liquid fuel expenditure aggregate requires gasoline/diesel/kerosene/other liquid fuel; none collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-liquidexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No LPG expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-lpgexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No motorcycle ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-mcycle"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No natural gas expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ngasexp"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No number of jobs variable identified in P table searches. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t8",
+          "terms": "number jobs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-njobs"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-lstatusyear"
+      ],
+      "reason": "Could be derived from pl032 inactive categories, but not built. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-nlfreasonyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-occup2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-occup2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-occuporig2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-occuporig2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051a) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-occupyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No sector of activity variable found (secondary). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+          "terms": "public private sector"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ocusec2"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No sector of activity variable found (secondary, year). — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+          "terms": "public private sector"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ocusec2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sanitation facility availability question in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-opendef"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No 'other fuels' expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-othfuelexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-dwelmatexp",
+        "VAR-dwelsvcexp"
+      ],
+      "reason": "Other housing maintenance/repair expenditure requires dwelling materials + services; neither collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-othhousingexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No other liquid fuels expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-othliqexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No other solid fuels expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-othsolexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No agricultural land ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ownagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No residential land ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ownland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No oxcart ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-oxcart"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No peat expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-peatexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No telephone ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-phone"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No piped water access variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-piped"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No piped water on premises variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-pipedtoprem"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No purchased agricultural land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-purchagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate water supply expenditure variable; HH070 is total housing cost including utilities. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-pwaterexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No radio ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-radio"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)",
+      "status": "absent",
+      "variable": "VAR-relationcs"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)",
+      "status": "absent",
+      "variable": "VAR-relationharm"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rent-in agricultural land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-rentinagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rent-out agricultural land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-rentoutagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rice cooker ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ricecook"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No roof material variable found; search roof returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-roof"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No country-specific roof material text variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-roofcs"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No country-specific sanitation facility text variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sanitationoriginal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sanitation facility question/column found in EU-SILC UDB (search toilet/flush/sewer/septic/latrine). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sanitationsource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rights to sell agricultural land variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sellagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No right to sell dwelling variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-selldwel"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No right to sell residential land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sellland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sewage collection expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sewageexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sewer connection variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sewer"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No sewing machine ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-sewmach"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No personal social security coverage indicator found in P table. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+          "terms": "social security"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-socialsec"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No personal social security coverage indicator found in P table. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+          "terms": "social security"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-socialsecyear"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-coalexp",
+        "VAR-woodexp",
+        "VAR-peatexp",
+        "VAR-othsolexp"
+      ],
+      "reason": "Solid fuel expenditure aggregate requires coal/wood/peat/other solid; none collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-solidexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No stove ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-stove"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)",
+      "status": "absent",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No telefax expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-telefaxexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-landphoneexp",
+        "VAR-cellphoneexp"
+      ],
+      "reason": "Total phone expenditure requires landphoneexp + cellphoneexp; neither collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-telexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "Monthly activity calendar variables (pl211*) exist but do not provide hours; derivation not built. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-thoursannual"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No flush toilet access question/column found in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-toiletacc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No rights to transfer agricultural land variables found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-transagriland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No right to transfer dwelling variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-transdwel"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No personal transportation fuel expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-transfuelexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No right to transfer residential land variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-transland"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No TV ownership variable found; search tv returned none relevant (only mentioned in pd080 text). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-tv"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No cable TV ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-tvcable"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No television broadcasting services expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-tvexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-telexp",
+        "VAR-internetexp",
+        "VAR-tvexp"
+      ],
+      "reason": "TV/internet/telephone expenditure requires telexp+internetexp+tvexp; no expenditure components collected (PD080 is access only). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-tvintphexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-wagenc",
+        "VAR-unitwage",
+        "VAR-wagenc2",
+        "VAR-unitwage2",
+        "VAR-twagencothers"
+      ],
+      "reason": "Requires last wage amount and unit variables which are not collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagencotal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No wage components for other jobs collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagencothers"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No wage components for other jobs collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagencothersyear"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-wagencyear",
+        "VAR-unitwageyear",
+        "VAR-wagenc2year",
+        "VAR-unitwage2year",
+        "VAR-twagencothersyear"
+      ],
+      "reason": "Requires last wage amount and unit variables which are not collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagencototalyear"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-twagencothers"
+      ],
+      "reason": "Depends on twagencothers not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twageothers"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-twagencothersyear"
+      ],
+      "reason": "Depends on twagencothersyear not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twageothersyear"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-twagencotal"
+      ],
+      "reason": "Depends on twagencotal not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagetotal"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-twagencototalyear"
+      ],
+      "reason": "Depends on twagencototalyear not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-twagetotalyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No type of living quarters variable beyond dwelling type (hh010) found that matches GMD typlivqrt 3-category. — authored on POL_2023_EU-SILC",
+      "searches": [
+        {
+          "in": "t5",
+          "terms": "living quarters|accommodation type"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-typlivqrt"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No trade union membership variable found; only consensual union flag present. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t4",
+          "terms": "union"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-union"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No trade union membership variable found. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t4",
+          "terms": "union"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unionyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+          "terms": "unit wage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unitwage2"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+          "terms": "unit wage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unitwage2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "lineage": "absent",
+      "reason": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC",
+      "searches": [
+        {
+          "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+          "terms": "unit wage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unitwageyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No separate utilities expenditure aggregate collected; HH070 is only total housing cost including utilities — authored on POL_2023_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-utlexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No video player ownership variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-video"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No time-to-water-source questions in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-w30m"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagenc2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagenc2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagencyear"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-wagenc2",
+        "VAR-unitwage2",
+        "VAR-wmonths2",
+        "VAR-whours2"
+      ],
+      "reason": "Would require wagenc2 + unitwage2 + months/hours; not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagetotal2"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-wagenc2year",
+        "VAR-unitwage2year",
+        "VAR-wmonths2year",
+        "VAR-whours2year"
+      ],
+      "reason": "Would require wagenc2year + unitwage2year + months/hours; not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagetotal2year"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-wagencyear",
+        "VAR-unitwageyear",
+        "VAR-wmonthsyear",
+        "VAR-whoursyear"
+      ],
+      "reason": "Would require wagencyear + unitwageyear + months/hours; not available. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wagetotalyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No wall material variable found; search wall returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wall"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No country-specific wall material text variable found. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wallcs"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No washing machine ownership variable found; search washing returned none. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-washmach"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No solid waste disposal type question in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-waste"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-garbageexp",
+        "VAR-sewageexp"
+      ],
+      "reason": "Waste expenditure aggregate requires garbageexp+sewageexp; neither collected. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wasteexp"
+    },
+    {
+      "kind": "derivable_not_built",
+      "lineage": "absent",
+      "needs": [
+        "VAR-pwaterexp",
+        "VAR-hwaterexp"
+      ],
+      "reason": "Water+hot water expenditure aggregate requires pwaterexp+hwaterexp; neither collected separately (HH070 is total housing cost). — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-waterexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No country-specific water source text variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wateroriginal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No drinking water source question/column found in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-watersource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No water question type indicator in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-watertypequest"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No water availability/reliability question in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-wavail"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No firewood expenditure variable in EU-SILC UDB. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-woodexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "No year dwelling built variable found; search year built/construction returned only weights construction references. — authored on AUT_2024_EU-SILC",
+      "status": "absent",
+      "variable": "VAR-ybuilt"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds",
+      "status": "absent",
+      "variable": "VAR-welfaredef"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds",
+      "status": "absent",
+      "variable": "VAR-welfarenom"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds",
+      "status": "absent",
+      "variable": "VAR-welfareother"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds",
+      "status": "absent",
+      "variable": "VAR-welfareothertype"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds",
+      "status": "absent",
+      "variable": "VAR-welfshprosperity"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "status": "absent",
+      "variable": "VAR-wmonths2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs",
+      "status": "absent",
+      "variable": "VAR-wmonths2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition",
+      "status": "absent",
+      "variable": "VAR-thoursothers"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition",
+      "status": "absent",
+      "variable": "VAR-thoursothersyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the standard's employee income (PY010G / PY010N) includes bonuses and is not split from them: the wage income excluding bonuses cannot be given (PY010N is the NET amount, another distinction) — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition",
+      "status": "absent",
+      "variable": "VAR-lincnc"
+    },
+    {
+      "asks": 0,
+      "binding_sha": "227468e0f2ea91758e12c72212b0dbbc24a666e30cf967aededa2796afbd9075",
+      "by": "flow",
+      "findings": [
+        "$.bindings[29] (B-everattend) target=VAR-everattend col=pe041: code(s) [1, 2, 3, 4, 5, 6, 7, 8] are declared or observed but not handled — map them, route them in missing_map, or waive them (missing_map.unmapped: {code, waive: <why>})"
+      ],
+      "kind": "not_reasked",
+      "reason": "left out by the flow (not_reasked): $.bindings[29] (B-everattend) target=VAR-everattend col=pe041: code(s) [1, 2, 3, 4, 5, 6, 7, 8] are declared or observed but not handled — map them, route them in missing_map, or waive them (missing_map.unmapped: {code, waive: <why>})",
+      "status": "blocked",
+      "variable": "VAR-everattend"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "IRL",
+      "year": 2025
+    },
+    "country_parameters": [],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "output": {
+    "grain": [
+      "rx030",
+      "rb030"
+    ],
+    "households": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+    "roster": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+    "unit_of_analysis": "individual"
+  },
+  "parameters": {
+    "PARAM-EDU-MIN-EDUCATION-AGE": {
+      "evidence": "08:t1#universe — authored on AUT_2024_EU-SILC",
+      "method": "questionnaire_universe",
+      "value": 16
+    },
+    "PARAM-LBR-MIN-LABOR-AGE": {
+      "evidence": "11:t1#universe — authored on AUT_2024_EU-SILC",
+      "method": "questionnaire_universe",
+      "value": 16
+    },
+    "PARAM-LBR-MIN-LABOR-AGE-YEAR": {
+      "evidence": "11:t1#universe — authored on AUT_2024_EU-SILC",
+      "method": "questionnaire_universe",
+      "value": 16
+    }
+  },
+  "prelude": [
+    {
+      "code_ref": "standard_isced_level.py",
+      "id": "isced_level",
+      "invariants": [
+        "isced_level in 0..8 where PE041 is not missing"
+      ],
+      "produces": [
+        "__derived.isced_level__"
+      ],
+      "reads": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_P"
+      ],
+      "reason": "PE041's hundreds digit is the ISCED-2011 level the canon's anchor places (DOCSILC065 2021 op. v8: PE041 p.315)",
+      "register": "resolved",
+      "writes": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_P"
+      ]
+    },
+    {
+      "code_ref": "standard_welfare_pc.py",
+      "id": "welfare_pc",
+      "invariants": [
+        "welfare_pc = HY020 * HX010 / HB120"
+      ],
+      "produces": [
+        "__derived.welfare_pc__"
+      ],
+      "reads": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_H"
+      ],
+      "reason": "HY020 (euro) * HX010 (euro -> national currency, 1 for euro countries) / HB120 (disclosure control rules: income variables, HX010)",
+      "register": "resolved",
+      "writes": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_H"
+      ]
+    },
+    {
+      "code_ref": "standard_LBR-labor.py",
+      "id": "LBR-labor",
+      "invariants": [
+        "wmonths <= 12",
+        "isco_major in 0..9",
+        "industrycat4 in 1..4"
+      ],
+      "produces": [
+        "__derived.industrycat4__",
+        "__derived.isco_major__",
+        "__derived.wmonths__"
+      ],
+      "reads": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_P"
+      ],
+      "reason": "the four-category industry from the grouped NACE sections of PL111A, the ISCO-08 major group from PL051A, and the months worked as the sum of the four calendar work columns PL073 to PL076",
+      "register": "assumed",
+      "writes": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_P"
+      ]
+    },
+    {
+      "code_ref": "standard_LBR-wage.py",
+      "id": "LBR-wage",
+      "invariants": [
+        "wage_annual = PY010G * HX010",
+        "labor_income = (PY010G + PY050G) * HX010"
+      ],
+      "keys": [
+        "rb030"
+      ],
+      "output_table": "wage_lcu",
+      "produces": [
+        "__derived.wage_annual__",
+        "__derived.labor_income__"
+      ],
+      "reads": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_P"
+      ],
+      "reason": "PY010G (euro in the user database) * HX010 (euro -> national currency): the annual gross employee income, and with PY050G the annual income from every job, in the national currency",
+      "register": "assumed",
+      "writes": [
+        "wage_lcu"
+      ]
+    },
+    {
+      "code_ref": "standard_DEM-agecat.py",
+      "id": "DEM-agecat",
+      "invariants": [
+        "agecat_applies is the same in every row"
+      ],
+      "produces": [
+        "__derived.agecat_applies__"
+      ],
+      "reads": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_R"
+      ],
+      "reason": "whether the delivery carries the year of birth as released (RB080) as its age category: 1 in every row when no row has an age (RX010) and every row has a year of birth, 0 in every row otherwise",
+      "register": "assumed",
+      "writes": [
+        "IRL__EU-SILC_v01_M_v01_A_UDB-C_R"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "flags": {
+          "db040": {
+            "column": "db040_f",
+            "reasons": {
+              "-1": "missing"
+            }
+          },
+          "db050": {
+            "column": "db050_f",
+            "reasons": {
+              "-2": "Not applicable (no stratification)"
+            }
+          },
+          "db060": {
+            "column": "db060_f",
+            "reasons": {
+              "-2": "Not applicable (no first or second sampling stage)"
+            }
+          },
+          "db090": {
+            "column": "db090_f",
+            "reasons": {
+              "-7": "Not applicable (DB010  last year of operation)"
+            }
+          },
+          "db100": {
+            "column": "db100_f",
+            "reasons": {
+              "-1": "Missing (allowed only from wave 2 onwards)"
+            }
+          }
+        },
+        "injected": {
+          "flags": "profile",
+          "key_map": "overlay",
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "key_map": {
+          "db030": "rx030"
+        },
+        "kinds": {
+          "db040": "string",
+          "db050": "numeric",
+          "db060": "numeric",
+          "db090": "numeric",
+          "db100": "numeric"
+        },
+        "name": "IRL__EU-SILC_v01_M_v01_A_UDB-C_D",
+        "provenance": {
+          "declared_by": "scan_seed",
+          "verdict": "raw"
+        },
+        "sha256": "327fd3dc264df030e9a55bdc0030de7cc7a87168ab89e5c59f7c07810045305a",
+        "source_file": "IRL_2025_EU-SILC_v01_M_v01_A_UDB-C_D.dta"
+      },
+      {
+        "flags": {
+          "hb060": {
+            "column": "hb060_f",
+            "reasons": {
+              "-1": "missing (not filled)",
+              "-2": "not applicable (filter)",
+              "-3": "not selected respondent",
+              "-4": "not applicable (no data in the household register)",
+              "-5": "not applicable (missing by design)",
+              "-7": "not applicable (variable not collected this year)"
+            }
+          },
+          "hb120": {
+            "column": "hb120_f",
+            "reasons": {
+              "-7": "Not applicable (HB010 < 2021)"
+            }
+          },
+          "hh010": {
+            "column": "hh010_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "hh021": {
+            "column": "hh021_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "hh030": {
+            "column": "hh030_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "hs090": {
+            "column": "hs090_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "hs110": {
+            "column": "hs110_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          }
+        },
+        "injected": {
+          "flags": "profile",
+          "key_map": "overlay",
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "key_map": {
+          "hb030": "rx030"
+        },
+        "kinds": {
+          "hb060": "numeric",
+          "hb120": "numeric",
+          "hh010": "numeric",
+          "hh021": "numeric",
+          "hh030": "numeric",
+          "hs090": "numeric",
+          "hs110": "numeric"
+        },
+        "name": "IRL__EU-SILC_v01_M_v01_A_UDB-C_H",
+        "provenance": {
+          "declared_by": "scan_seed",
+          "verdict": "raw"
+        },
+        "sha256": "0a0b93cdaded79723014dc9d5ec054f2e435ec7a50e880941faa2c51bbd77046",
+        "source_file": "IRL_2025_EU-SILC_v01_M_v01_A_UDB-C_H.dta"
+      },
+      {
+        "flags": {
+          "pb190": {
+            "column": "pb190_f",
+            "reasons": {
+              "-1": "missing (not filled)",
+              "-2": "not applicable (filter)",
+              "-3": "not selected respondent",
+              "-4": "not applicable (no data in the household register)",
+              "-5": "not applicable (missing by design)",
+              "-7": "not applicable (variable not collected this year)"
+            }
+          },
+          "pe010": {
+            "column": "pe010_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "pe041": {
+            "column": "pe041_f",
+            "reasons": {
+              "-1": "missing (not filled)",
+              "-2": "not applicable (filter)",
+              "-3": "not selected respondent",
+              "-4": "not applicable (no data in the household register)",
+              "-5": "not applicable (missing by design)",
+              "-7": "not applicable (variable not collected this year)"
+            }
+          },
+          "ph101": {
+            "column": "ph101_f",
+            "reasons": {
+              "-1": "Missing",
+              "-3": "Not selected respondent",
+              "-7": "Not applicable (PB010  current year of operation)"
+            }
+          },
+          "ph111": {
+            "column": "ph111_f",
+            "reasons": {
+              "-1": "Missing",
+              "-3": "Not selected respondent",
+              "-7": "Not applicable (PB010  current year of operation)"
+            }
+          },
+          "ph121": {
+            "column": "ph121_f",
+            "reasons": {
+              "-1": "Missing",
+              "-3": "Not selected respondent",
+              "-7": "Not applicable (PB010  current year of operation)"
+            }
+          },
+          "ph131": {
+            "column": "ph131_f",
+            "reasons": {
+              "-1": "Missing",
+              "-3": "Not selected respondent",
+              "-7": "Not applicable (PB010  current year of operation)"
+            }
+          },
+          "ph151": {
+            "column": "ph151_f",
+            "reasons": {
+              "-1": "Missing",
+              "-3": "Not selected respondent",
+              "-7": "Not applicable (PB010  current year of operation)"
+            }
+          },
+          "pl032": {
+            "column": "pl032_f",
+            "reasons": {
+              "-1": "Missing",
+              "-7": "Not applicable (PB010 < 2021)"
+            }
+          },
+          "pl040a": {
+            "column": "pl040a_f",
+            "reasons": {
+              "-1": "missing (not filled)",
+              "-2": "not applicable (filter)",
+              "-3": "not selected respondent",
+              "-4": "not applicable (no data in the household register)",
+              "-5": "not applicable (missing by design)",
+              "-7": "not applicable (variable not collected this year)"
+            }
+          },
+          "pl051a": {
+            "column": "pl051a_f",
+            "reasons": {
+              "-1": "Missing",
+              "-2": "Not applicable (PL032 not equal to 1)",
+              "-7": "Not applicable (PB010 < 2021)"
+            }
+          },
+          "pl060": {
+            "column": "pl060_f",
+            "reasons": {
+              "-1": "Missing",
+              "-2": "Not applicable (PL032 not equal to 1)",
+              "-6": "Hours varying (when an average of over four weeks is not possible)"
+            }
+          },
+          "pl100": {
+            "column": "pl100_f",
+            "reasons": {
+              "-1": "Missing",
+              "-2": "Not applicable (PL032 not equal to 1)",
+              "-4": "Not applicable (Not second, third...job)",
+              "-6": "Hours varying (when an average for over four weeks is not possible)"
+            }
+          },
+          "pl111a": {
+            "column": "pl111a_f",
+            "reasons": {
+              "-1": "Missing",
+              "-2": "Not applicable (PL032 not equal to 1)",
+              "-3": "Not applicable (Non-selected respondent (RB245 equal to 3))",
+              "-7": "Not applicable (PB010 < 2021)"
+            }
+          },
+          "pl141": {
+            "column": "pl141_f",
+            "reasons": {
+              "-1": "Not applicable (Non-selected respondent (RB245 equal to 3))",
+              "-2": "Not applicable (PB010 < 2021)"
+            }
+          },
+          "pl271": {
+            "column": "pl271_f",
+            "reasons": {
+              "-1": "Missing",
+              "-2": "Not applicable (Respondent not in working age 16-74)",
+              "-3": "Not applicable (Non-selected respondent (RB245 equal to 3))",
+              "-7": "Not applicable (PB010 < 2021)"
+            }
+          }
+        },
+        "injected": {
+          "flags": "profile",
+          "key_map": "overlay",
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "key_map": {
+          "pb030": "rb030",
+          "px030": "rx030"
+        },
+        "kinds": {
+          "pb190": "numeric",
+          "pe010": "numeric",
+          "pe041": "numeric",
+          "ph101": "numeric",
+          "ph111": "numeric",
+          "ph121": "numeric",
+          "ph131": "numeric",
+          "ph151": "numeric",
+          "pl032": "numeric",
+          "pl040a": "numeric",
+          "pl051a": "numeric",
+          "pl060": "numeric",
+          "pl100": "numeric",
+          "pl111a": "string",
+          "pl141": "numeric",
+          "pl271": "numeric"
+        },
+        "name": "IRL__EU-SILC_v01_M_v01_A_UDB-C_P",
+        "provenance": {
+          "declared_by": "scan_seed",
+          "verdict": "raw"
+        },
+        "sha256": "2b0025359a1ce8785ae702a1c7e5cfc8176288610a47ae3c0f968c07fceac287",
+        "source_file": "IRL_2025_EU-SILC_v01_M_v01_A_UDB-C_P.dta"
+      },
+      {
+        "flags": {
+          "rb080": {
+            "column": "rb080_f",
+            "reasons": {
+              "-1": "Missing"
+            }
+          },
+          "rb090": {
+            "column": "rb090_f",
+            "reasons": {
+              "-1": "missing (not filled)",
+              "-2": "not applicable (filter)",
+              "-3": "not selected respondent",
+              "-4": "not applicable (no data in the household register)",
+              "-5": "not applicable (missing by design)",
+              "-7": "not applicable (variable not collected this year)"
+            }
+          }
+        },
+        "injected": {
+          "flags": "profile",
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "rb080": "numeric",
+          "rb090": "numeric",
+          "rx010": "numeric"
+        },
+        "name": "IRL__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "provenance": {
+          "declared_by": "scan_seed",
+          "verdict": "raw"
+        },
+        "sha256": "1218eefdbfc6b64f1caea387010b60bef93d8175beaa46b895be412a81c5efa7",
+        "source_file": "IRL_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta"
+      }
+    ]
+  },
+  "survey_id": "IRL_2025_EU-SILC",
+  "targets": [
+    "VAR-countrycode",
+    "VAR-year",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-urban",
+    "VAR-subnatid1",
+    "VAR-subnatidsurvey",
+    "VAR-psu",
+    "VAR-strata",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-school",
+    "VAR-educat7",
+    "VAR-hsize",
+    "VAR-welfaretype",
+    "VAR-welfare",
+    "VAR-age",
+    "VAR-agecat",
+    "VAR-car",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-communicationdisability",
+    "VAR-computer",
+    "VAR-concentrationdisorder",
+    "VAR-contract",
+    "VAR-contractyear",
+    "VAR-dweltyp",
+    "VAR-empstat",
+    "VAR-empstatyear",
+    "VAR-everattend",
+    "VAR-eyedisability",
+    "VAR-heardisability",
+    "VAR-industryorig",
+    "VAR-industryorigyear",
+    "VAR-lstatus",
+    "VAR-lstatusyear",
+    "VAR-mineducatage",
+    "VAR-minlaborage",
+    "VAR-minlaborageyear",
+    "VAR-nlfreason",
+    "VAR-occuporig",
+    "VAR-occuporigyear",
+    "VAR-ownhouse",
+    "VAR-rooms",
+    "VAR-unempldurl",
+    "VAR-unempldurlyear",
+    "VAR-unemplduru",
+    "VAR-unemplduruyear",
+    "VAR-walkdisability",
+    "VAR-welfshprtype",
+    "VAR-whours",
+    "VAR-whours2",
+    "VAR-whours2year",
+    "VAR-whoursyear",
+    "VAR-industrycat4",
+    "VAR-occup",
+    "VAR-wagenc",
+    "VAR-unitwage",
+    "VAR-wagetotal",
+    "VAR-wmonths",
+    "VAR-wmonthsyear",
+    "VAR-laborincome",
+    "VAR-educat5",
+    "VAR-educat4",
+    "VAR-primarycomp",
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig"
+  ]
+}

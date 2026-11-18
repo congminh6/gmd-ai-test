@@ -1,0 +1,508 @@
+{
+  "reask_reason": "your last answer for this module has open findings (listed under Fix these)",
+  "task_type": "author_bindings",
+  "scope_id": "MOD-DEM",
+  "scope_ids": [
+    "VAR-age",
+    "VAR-agecat",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-communicationdisability",
+    "VAR-concentrationdisorder",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-everattend",
+    "VAR-eyedisability",
+    "VAR-heardisability",
+    "VAR-language",
+    "VAR-literacy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-relationcs",
+    "VAR-relationharm",
+    "VAR-school",
+    "VAR-selfcaredisability",
+    "VAR-walkdisability"
+  ],
+  "data": "\\\\wbgfscifs01\\GPWG-GMD\\datalib-ECA\\datalib\\TUR\\TUR_2024_SILC-C\\TUR_2024_SILC-C_v01_M\\Data\\Stata",
+  "prior_findings": [
+    "BOUND TARGET DECLARED ABSENT: VAR-literacy has a binding in the spec and no open finding — a re-ask revises what the findings name: send a delta (`delta: true`) with only the records you change, or keep that binding as it is"
+  ],
+  "prior_answer": {
+    "parameters": {
+      "PARAM-EDU-MIN-EDUCATION-AGE": {
+        "value": 15,
+        "method": "authored",
+        "evidence": "Education section applies from age 15 (observed education variables in silc24_p; age is fk070 as of Dec 31, 2023) (01:t2,01:t18)"
+      }
+    },
+    "preludes": [
+      {
+        "id": "dem-age-derived",
+        "reason": "Clean invalid age (-1) and derive under-5 age measures using year/month of birth; passthrough/value_map cannot do arithmetic.",
+        "produces": [
+          "__derived.age__",
+          "__derived.childyr__",
+          "__derived.childmth__"
+        ],
+        "invariants": [
+          "__derived.age__ in [0,120] or NA",
+          "__derived.childmth__ in [0,59] when age<5"
+        ],
+        "code_file": "dem-age-derived.py"
+      }
+    ],
+    "bindings": [
+      {
+        "binding_id": "B-age",
+        "target": "VAR-age",
+        "roles": {
+          "raw_value": "__derived.age__"
+        },
+        "predicate": "all",
+        "passthrough": true,
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b"
+        },
+        "register": "resolved",
+        "evidence": "Age in years from silc24_pr.fk070 (cleaned: -1 -> NA) (01:t2,01:t13)"
+      },
+      {
+        "binding_id": "B-childyr",
+        "target": "VAR-childyr",
+        "roles": {
+          "raw_value": "__derived.childyr__"
+        },
+        "predicate": "all",
+        "gate": {
+          "predicate": "__derived.age__ < 5",
+          "else_code": ".c"
+        },
+        "passthrough": true,
+        "missing_map": {
+          "null": ".b",
+          "unmapped": ".b"
+        },
+        "register": "resolved",
+        "evidence": "Derived from fk070 (age) for children under 5 (01:t2,01:t13,01:t12)"
+      },
+      {
+        "binding_id": "B-childmth",
+        "target": "VAR-childmth",
+        "roles": {
+          "raw_value": "__derived.childmth__"
+        },
+        "predicate": "all",
+        "gate": {
+          "predicate": "__derived.age__ < 5",
+          "else_code": ".c"
+        },
+        "passthrough": true,
+        "missing_map": {
+          "null": ".b",
+          "unmapped": ".b"
+        },
+        "register": "resolved",
+        "evidence": "Derived from year/month of birth (fk080,fk075) at 31 Dec 2023 for children under 5 (01:t13,01:t2,01:t12)"
+      },
+      {
+        "binding_id": "B-male",
+        "target": "VAR-male",
+        "roles": {
+          "raw_value": "fk090"
+        },
+        "predicate": "all",
+        "value_map": {
+          "1": 1,
+          "2": 0
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".o"
+        },
+        "register": "resolved",
+        "evidence": "Gender codes: 1 Male, 2 Female (silc24_pr.fk090) (01:t2)"
+      },
+      {
+        "binding_id": "B-marital",
+        "target": "VAR-marital",
+        "roles": {
+          "raw_value": "fb100"
+        },
+        "predicate": "all",
+        "value_map": {
+          "1": 1,
+          "2": 2,
+          "3": 5,
+          "4": 4
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "Marital status codes: 1 Married, 2 Never married, 3 Widowed, 4 Divorced (01:t2)"
+      },
+      {
+        "binding_id": "B-school",
+        "target": "VAR-school",
+        "roles": {
+          "raw_value": "fe010"
+        },
+        "predicate": "all",
+        "value_map": {
+          "1": 1,
+          "2": 0
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "Current education activity: 1 Yes, 2 No (01:t2)"
+      },
+      {
+        "binding_id": "B-everattend",
+        "target": "VAR-everattend",
+        "roles": {
+          "raw_value": "fe030"
+        },
+        "predicate": "all",
+        "value_map": {
+          "0": 0,
+          "1": 1,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "assumed",
+        "evidence": "Derived from highest education attained: Illiterate -> never attended; all other categories -> attended (01:t2)"
+      },
+      {
+        "binding_id": "B-mineducatage",
+        "target": "VAR-mineducatage",
+        "table": "silc24_pr",
+        "roles": {
+          "unit_keys": [
+            "hh_id",
+            "pers_id"
+          ]
+        },
+        "predicate": "all",
+        "constant_source": {
+          "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".a"
+        },
+        "register": "resolved",
+        "evidence": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE (01:t15)"
+      },
+      {
+        "binding_id": "B-educat7",
+        "target": "VAR-educat7",
+        "table": "silc24_p",
+        "roles": {
+          "raw_value": "fe030"
+        },
+        "predicate": "all",
+        "gate_reads": [
+          "VAR-age"
+        ],
+        "gate": {
+          "predicate": "age >= 15",
+          "else_code": ".c"
+        },
+        "value_map_source": {
+          "correspondence": "education"
+        },
+        "missing_map": {
+          "null": ".c",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "Highest education level attained FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t18)"
+      },
+      {
+        "binding_id": "B-educat5",
+        "target": "VAR-educat5",
+        "table": "silc24_p",
+        "roles": {
+          "raw_value": "fe030"
+        },
+        "predicate": "all",
+        "gate_reads": [
+          "VAR-age"
+        ],
+        "gate": {
+          "predicate": "age >= 15",
+          "else_code": ".c"
+        },
+        "value_map_source": {
+          "correspondence": "education"
+        },
+        "missing_map": {
+          "null": ".c",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t19)"
+      },
+      {
+        "binding_id": "B-educat4",
+        "target": "VAR-educat4",
+        "table": "silc24_p",
+        "roles": {
+          "raw_value": "fe030"
+        },
+        "predicate": "all",
+        "gate_reads": [
+          "VAR-age"
+        ],
+        "gate": {
+          "predicate": "age >= 15",
+          "else_code": ".c"
+        },
+        "value_map_source": {
+          "correspondence": "education"
+        },
+        "missing_map": {
+          "null": ".c",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t19)"
+      },
+      {
+        "binding_id": "B-primarycomp",
+        "target": "VAR-primarycomp",
+        "roles": {
+          "raw_value": "educat7"
+        },
+        "predicate": "all",
+        "derived_from": "VAR-educat7",
+        "value_map": {
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1
+        },
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b"
+        },
+        "register": "resolved",
+        "evidence": "Derived from educat7: 1/2=0, 3-7=1 (01:t14)"
+      },
+      {
+        "binding_id": "B-educy",
+        "target": "VAR-educy",
+        "table": "silc24_p",
+        "roles": {
+          "raw_value": "fe030"
+        },
+        "predicate": "all",
+        "gate_reads": [
+          "VAR-age"
+        ],
+        "gate": {
+          "predicate": "age >= 15",
+          "else_code": ".c"
+        },
+        "value_map_source": {
+          "correspondence": "education"
+        },
+        "missing_map": {
+          "null": ".c",
+          "unmapped": ".b",
+          "absent": ".c"
+        },
+        "register": "resolved",
+        "evidence": "Years of education via education correspondence for FE030; age gate aligned to mineducatage=15 (01:t2,01:t18)"
+      }
+    ],
+    "absent": [
+      {
+        "target": "VAR-agecat",
+        "kind": "not_collected_by_design",
+        "reason": "Survey provides continuous age (fk070); age categories are not an item (t2,t12)",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-communicationdisability",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-concentrationdisorder",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-eyedisability",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-heardisability",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-selfcaredisability",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-walkdisability",
+        "kind": "searched_not_found",
+        "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+        "searches": [
+          {
+            "terms": "disability difficulty seeing hearing walking self-care communicat concentrat",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-language",
+        "kind": "searched_not_found",
+        "reason": "No language item found in bindable tables (t6)",
+        "searches": [
+          {
+            "terms": "language tongue mother",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-literacy",
+        "kind": "searched_not_found",
+        "reason": "No literacy (read/write) item found in bindable tables (t5)",
+        "searches": [
+          {
+            "terms": "literacy read write",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-relationcs",
+        "kind": "searched_not_found",
+        "reason": "No relationship-to-head item found in bindable tables (t3,t7,t9)",
+        "searches": [
+          {
+            "terms": "relationship head relation fb110 rel",
+            "in": "survey (all tables)"
+          }
+        ],
+        "status": "absent"
+      },
+      {
+        "target": "VAR-relationharm",
+        "kind": "derivable_not_built",
+        "reason": "Harmonized relation requires country-specific relationcs, which is not collected (t3,t7,t9,t12)",
+        "needs": [
+          "VAR-relationcs"
+        ],
+        "status": "absent"
+      }
+    ]
+  },
+  "prior_files": {
+    "dem-age-derived.py": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T160356_bcef\\trail\\harmonize\\ai_responses\\01_dem-age-derived.py"
+  },
+  "resolved_since": [
+    "$.review target=VAR-educat7: output review: the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15",
+    "$.review target=VAR-educat5: output review: the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15",
+    "$.review target=VAR-educat4: output review: the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15",
+    "$.review target=VAR-educy: output review: the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15",
+    "$.review target=VAR-primarycomp: output review: the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+  ],
+  "request_id": "02-author_bindings-MOD-DEM",
+  "tools": [
+    "canon",
+    "check",
+    "codes",
+    "column",
+    "columns",
+    "contract",
+    "current",
+    "onset",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "90da524f026cb9014897c1b3fef4263cb2fe485c7cfb6ce21369847e70448957",
+  "untrusted": [
+    "prior_answer",
+    "prior_findings",
+    "reask_reason",
+    "resolved_since"
+  ],
+  "transport": "direct",
+  "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

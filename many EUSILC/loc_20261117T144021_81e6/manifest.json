@@ -1,0 +1,89 @@
+{
+ "job_id": "loc_20261117T144021_81e6",
+ "flow": "scribe",
+ "survey_id": "TUR_2024_SILC-C",
+ "status": "completed",
+ "finished": "2026-11-17T14:42:45+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "274dfc851fe546a7c3835a251a04066b67fd698ca3fbd924b3aaa9e156ce8fea",
+   "size": 10201
+  },
+  "profile/data_scan.json": {
+   "sha256": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+   "size": 135008
+  },
+  "profile/file_links.json": {
+   "sha256": "795cfd3ac9bbbd99900ffc1ba3d86f5641081c6115466b232a46dec7a33e85ac",
+   "size": 227
+  },
+  "profile/instruments.json": {
+   "sha256": "a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f",
+   "size": 7719
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": {
+   "sha256": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+   "size": 57871
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": {
+   "sha256": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+   "size": 55651
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": {
+   "sha256": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb",
+   "size": 8434
+  },
+  "staged.json": {
+   "sha256": "beec0cb42dcf38087dc2d4912cf76fefe4f37c5cffb95036fb5edd95c0d80c48",
+   "size": 1332
+  },
+  "trail/scribe/direct/classify-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son.json": {
+   "sha256": "33f858636155ec7dec75d0db1b73557f322ce5aac7ade43a9da6ecbfc02686b4",
+   "size": 7080
+  },
+  "trail/scribe/direct/classify-Turkish_GYKA_MVS_Kesit_2024_TR_son.json": {
+   "sha256": "1b4a11f097a74c9d22484beaa71e0aeef17cb0835287a18255f056a4645ebb1c",
+   "size": 6385
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p020.json": {
+   "sha256": "4f2d78b4a0c8f9309274cc71ceae868cf008d718da30cf555848fdd930009ad9",
+   "size": 5646
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p021.json": {
+   "sha256": "e88d2d01a856293883ff11a1eba78130c23274433477c85e1fbad5899aec05ba",
+   "size": 7608
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p022.json": {
+   "sha256": "c86db121b95fe9da792844a2b1ed3fb55dd988c9d3f2c9a35b61b72a6672ced7",
+   "size": 6793
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p023.json": {
+   "sha256": "9e9e9060245d213b900b8908bd582966f44c5ea54edb3a74ed731bb1df4d6a1f",
+   "size": 3360
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p024.json": {
+   "sha256": "b11c0fefa0dae7cc83c73f6405159b5436b68d0af25277ce75fb9bc01cde6938",
+   "size": 8254
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p025.json": {
+   "sha256": "ec1e538853eca60c48b2d92a690e2ae3d024dfc2b7bf33f4a7292a53919dc93e",
+   "size": 5859
+  },
+  "trail/scribe/direct/codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p026.json": {
+   "sha256": "b8376a49c0636fc494dca327069178bb91886effbd0e8294141b43126577f0f9",
+   "size": 7103
+  },
+  "trail/scribe/identity.json": {
+   "sha256": "685fc7ab38f5eda581e239d2c692500f5141e553c9ee45d7dcd9b1b54315c210",
+   "size": 449
+  },
+  "trail/scribe/log.txt": {
+   "sha256": "c10cefe776869160853321198d2ca669e5becb46de9700d24818f590cce1a372",
+   "size": 2026
+  },
+  "trail/scribe/state.json": {
+   "sha256": "0f2c1829384f22baec7ff264ecf2e288819dc37326be2f98006ba5e5eccb389d",
+   "size": 997
+  }
+ }
+}

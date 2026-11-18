@@ -1,0 +1,35 @@
+# profile SRB_2022_EU-SILC @ 2026-11-16T14:28:48+00:00
+  data=\\wurepliprdfs05\ecafile\eca_databank\datalib_eurostat\SRB\SRB_2022_EU-SILC\SRB_2022_EU-SILC_v01_M_v02_A_UDB-C\Data\Harmonized  modules=[]  direct=False
+  identity: survey-harmonization local (testing — no sync stamp); canon none; data SRB_2022_EU-SILC_v01_M_v02_A_UDB-C
+
+== Phase A — profile ==
+  [det] from-intake
+  [det] questionnaire
+  [det] conformance
+      D: SRB__EU-SILC_v01_M_v02_A_UDB-C_D — 12 of 12 variables (100%), 0 extra column(s)
+      H: SRB__EU-SILC_v01_M_v02_A_UDB-C_H — 152 of 152 variables (100%), 4 extra column(s)
+      R: SRB__EU-SILC_v01_M_v02_A_UDB-C_R — 56 of 64 variables (88%), 0 extra column(s)
+      P: SRB__EU-SILC_v01_M_v02_A_UDB-C_P — 222 of 222 variables (100%), 2 extra column(s)
+      undeclared codes in 4 variable(s): PH080, PH090, PH100, PS050
+  [skip] merge — profile\overlay.json exists
+  [det] prefill-file-links
+    4 table(s) associated by structure; 0 left for judgment
+  [judge] associate
+  [judge] describe
+    describe: skipped [describe.skipped_no_candidates] `SRB__EU-SILC_v01_M_v02_A_UDB-C_H`: 10 column(s) not described — every question of its instrument(s) is matched to a column already
+    describe: skipped [describe.skipped_no_candidates] `SRB__EU-SILC_v01_M_v02_A_UDB-C_P`: 8 column(s) not described — every question of its instrument(s) is matched to a column already
+  [judge] author-overlay
+    AI CALL [author_overlay / survey] → trail\profile\ai_calls\01_author_overlay.brief.md
+    (optional judgment skipped: not_implemented)
+  [judge] heal
+  [det] check-keys
+      SRB__EU-SILC_v01_M_v02_A_UDB-C_R: rx030, rb030 -> unique over 15398 rows
+      grain (person) SRB__EU-SILC_v01_M_v02_A_UDB-C_R: rx030, rb030 -> unique over 15398 rows
+      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_D.db030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)
+      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_H.hb030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)
+      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_P.pb030 -> rb030: 100% of 13423 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)
+      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_P.px030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)
+  CHECK A: ok — profile recorded (profile d71984d42419) — review it and approve (the review app's profile review, or `harmon signoff C:\Users\wb249563\.harmon\work\runs\loc_20261116T142848_1b64`)
+
+== all phases complete ==
+  profile complete (profile d71984d42419). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\Users\wb249563\.harmon\work\runs\loc_20261116T142848_1b64` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop.

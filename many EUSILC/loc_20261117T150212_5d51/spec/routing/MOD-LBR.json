@@ -1,0 +1,284 @@
+{
+  "routing": {
+    "VAR-lstatus": [
+      {
+        "survey_module": "## Labour",
+        "column": "silc24_p.fi010",
+        "why": "Self-defined current economic status with employed/unemployed/inactive categories suitable to derive labor status (7-day ref)."
+      },
+      {
+        "survey_module": "## silc24_pr",
+        "column": "silc24_pr.fk210",
+        "why": "Self-defined current activity status (at work / looking / retired / other inactive) alternative source for labor status."
+      }
+    ],
+    "VAR-lstatusyear": [
+      {
+        "survey_module": "## Labour",
+        "column": "silc24_p.fi010",
+        "why": "Self-defined current economic status; can support 12-month labor status construction."
+      },
+      {
+        "survey_module": "## silc24_pr",
+        "column": "silc24_pr.fk210",
+        "why": "Self-defined current activity status (at work / looking / inactive) alternative for 12-month labor status."
+      }
+    ],
+    "VAR-nlfreason": [
+      {
+        "survey_module": "## Labour",
+        "column": "silc24_p.fi010",
+        "why": "Includes student/education, domestic tasks, retired, disabled, other inactive categories matching NLF reasons."
+      }
+    ],
+    "VAR-nlfreasonyear": [
+      {
+        "survey_module": "## Labour",
+        "column": "silc24_p.fi010",
+        "why": "Includes detailed inactive categories (education, retired, disabled, domestic, other) usable for 12-month NLF reason."
+      }
+    ],
+    "VAR-empstat": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi120",
+        "why": "Employment status in the main job (employee/casual/employer/self-employed/unpaid family worker) aligns with primary-job employment status."
+      }
+    ],
+    "VAR-empstatyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi120",
+        "why": "Employment status in the main job; candidate for primary-job status for 12-month ref."
+      }
+    ],
+    "VAR-contract": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi210",
+        "why": "Type of contract of employees in the main job (permanent/temporary/etc.); candidate for contract (yes/no) in primary job."
+      }
+    ],
+    "VAR-contractyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi210",
+        "why": "Type of contract of employees in the main job; candidate for 12-month contract indicator."
+      }
+    ],
+    "VAR-occup": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi130",
+        "why": "Occupation code of the main job (ISCO-08 major groups 1–9) matches 1-digit occupation classification for primary job."
+      }
+    ],
+    "VAR-occupyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi130",
+        "why": "Occupation code of the main job (ISCO-08 major groups 1–9); candidate for 12-month primary occupation."
+      }
+    ],
+    "VAR-industrycat10": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi140",
+        "why": "Economic activity of local unit of the main job (NACE Rev.2 sections 1–18) matches 1-digit industry category for primary job."
+      }
+    ],
+    "VAR-industrycat10year": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi140",
+        "why": "Economic activity of local unit of the main job (NACE Rev.2 sections) candidate for 12-month primary industry category."
+      }
+    ],
+    "VAR-industrycat4": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi140",
+        "why": "NACE Rev.2 section for main job could be collapsed to 4-category industry (Agriculture/Industry/Services/Other)."
+      }
+    ],
+    "VAR-industrycat4year": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi140",
+        "why": "NACE Rev.2 section for main job could be collapsed to 4-category industry for 12-month ref."
+      }
+    ],
+    "VAR-ocusec": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi145",
+        "why": "Workplace status Public vs Private; candidate for sector of activity in primary job."
+      }
+    ],
+    "VAR-ocusecyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi145",
+        "why": "Workplace status Public vs Private; candidate for sector of activity in primary job (12-month)."
+      }
+    ],
+    "VAR-socialsec": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi190",
+        "why": "Registration status to social security institutions in the main job; candidate for social security coverage (primary job)."
+      }
+    ],
+    "VAR-socialsecyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi190",
+        "why": "Registration status to social security institutions in the main job; candidate for social security coverage (12-month)."
+      }
+    ],
+    "VAR-whours": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi150",
+        "why": "Total number of hours usually worked in main job; candidate for hours worked last week in primary job."
+      }
+    ],
+    "VAR-whoursyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi150",
+        "why": "Total number of hours usually worked in main job; candidate for hours worked for 12-month ref (may need annualization/assumption)."
+      }
+    ],
+    "VAR-thoursothers": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi160",
+        "why": "Total number of hours usually worked in additional job/jobs; candidate for hours in other jobs (excl. primary/secondary)."
+      }
+    ],
+    "VAR-thoursothersyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi160",
+        "why": "Total number of hours usually worked in additional job/jobs; candidate for other-jobs hours for 12-month ref (may need annualization)."
+      }
+    ],
+    "VAR-wmonths": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi240",
+        "why": "Number of months spent in the main job in 2023; candidate for months worked in last 12 months (primary job)."
+      },
+      {
+        "survey_module": "## Last Job",
+        "column": "silc24_p.fi100",
+        "why": "Number of months spent at last work in 2023; fallback candidate if main job not present / job ended."
+      }
+    ],
+    "VAR-wmonthsyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi240",
+        "why": "Number of months spent in the main job in 2023; candidate for months worked (12-month ref)."
+      },
+      {
+        "survey_module": "## Last Job",
+        "column": "silc24_p.fi100",
+        "why": "Number of months spent at last work in 2023; fallback candidate if using last job for 12-month measures."
+      }
+    ],
+    "VAR-unempldurl": [
+      {
+        "survey_module": "## Working History",
+        "column": "silc24_p.fi280",
+        "why": "Number of months spent in unemployment in 2023; candidate to derive unemployment duration (lower/upper bracket) for 7-day ref."
+      }
+    ],
+    "VAR-unemplduru": [
+      {
+        "survey_module": "## Working History",
+        "column": "silc24_p.fi280",
+        "why": "Number of months spent in unemployment in 2023; candidate to derive unemployment duration (upper bracket) for 7-day ref."
+      }
+    ],
+    "VAR-unempldurlyear": [
+      {
+        "survey_module": "## Working History",
+        "column": "silc24_p.fi280",
+        "why": "Number of months spent in unemployment in 2023; candidate to derive unemployment duration (lower bracket) for 12-month ref."
+      }
+    ],
+    "VAR-unemplduruyear": [
+      {
+        "survey_module": "## Working History",
+        "column": "silc24_p.fi280",
+        "why": "Number of months spent in unemployment in 2023; candidate to derive unemployment duration (upper bracket) for 12-month ref."
+      }
+    ],
+    "VAR-wagetotal": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi250",
+        "why": "Net annual income from main job in 2023; candidate proxy for annualized total wage (primary job)."
+      }
+    ],
+    "VAR-wagetotalyear": [
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi250",
+        "why": "Net annual income from main job in 2023; candidate for annualized total wage (primary job, 12-month ref)."
+      }
+    ],
+    "VAR-lincnc": [
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg010",
+        "why": "Annual net employee cash/near-cash income received in 2023; candidate component for total wage income excl bonuses."
+      },
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg020",
+        "why": "Annual net employee income in 2023 (second employee income item); candidate component for wage income excl bonuses."
+      },
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi250",
+        "why": "Net annual income from main job in 2023; alternative wage-income source."
+      }
+    ],
+    "VAR-laborincome": [
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg010",
+        "why": "Annual net employee cash/near-cash income in 2023; component for total labor income."
+      },
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg020",
+        "why": "Annual net employee income in 2023; component for total labor income."
+      },
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg030",
+        "why": "Annual net self-employment income in cash in 2023; component for total labor income."
+      },
+      {
+        "survey_module": "## 2024 Personal Income",
+        "column": "silc24_p.fg040",
+        "why": "Annual net self-employment income in kind in 2023; component for total labor income."
+      },
+      {
+        "survey_module": "## Main Job",
+        "column": "silc24_p.fi250",
+        "why": "Net annual income from main job in 2023; alternative labor-income source."
+      },
+      {
+        "survey_module": "## Last Job",
+        "column": "silc24_p.fi110",
+        "why": "Net annual income from last job in 2023; possible additional component when main job absent."
+      }
+    ]
+  },
+  "_request_id": "05-locate_sources-MOD-LBR"
+}

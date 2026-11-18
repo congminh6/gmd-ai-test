@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 60.4,
+ "usage": {
+  "input_token_count": 58556,
+  "output_token_count": 887,
+  "total_token_count": 59443,
+  "reasoning_output_token_count": 248
+ },
+ "tool_calls": 3,
+ "submitted": true,
+ "final_text": "```json\n{\n  \"request_id\": \"02-author_bindings-MOD-DEM\",\n  \"delta\": true,\n  \"bindings\": [\n    {\n      \"binding_id\": \"B-literacy\",\n      \"target\": \"VAR-literacy\",\n      \"table\": \"silc24_p\",\n      \"roles\": {\n        \"raw_value\": \"fe030\",\n        \"unit_keys\": [\n          \"hh_id\",\n          \"pers_id\"\n        ]\n      },\n      \"predicate\": \"all\",\n      \"value_map\": {\n        \"0\": 0,\n        \"1\": 1,\n        \"2\": 1,\n        \"3\": 1,\n        \"4\": 1,\n        \"5\": 1,\n        \"6\": 1,\n        \"7\": 1,\n        \"8\": 1,\n        \"9\": 1,\n        \"10\": 1\n      },\n      \"missing_map\": {\n        \"null\": \".c\",\n        \"unmapped\": \".a\"\n      },\n      \"register\": \"assumed\",\n      \"evidence\": \"From silc24_p.fe030, code 0=Illiterate -> literacy=0; all other attainment categories imply literacy=1 (t1)\"\n    }\n  ]\n}\n```",
+ "said": [
+  "```json\n{\n  \"request_id\": \"02-author_bindings-MOD-DEM\",\n  \"delta\": true,\n  \"bindings\": [\n    {\n      \"binding_id\": \"B-literacy\",\n      \"target\": \"VAR-literacy\",\n      \"table\": \"silc24_p\",\n      \"roles\": {\n        \"raw_value\": \"fe030\",\n        \"unit_keys\": [\n          \"hh_id\",\n          \"pers_id\"\n        ]\n      },\n      \"predicate\": \"all\",\n      \"value_map\": {\n        \"0\": 0,\n        \"1\": 1,\n        \"2\": 1,\n        \"3\": 1,\n        \"4\": 1,\n        \"5\": 1,\n        \"6\": 1,\n        \"7\": 1,\n        \"8\": 1,\n        \"9\": 1,\n        \"10\": 1\n      },\n      \"missing_map\": {\n        \"null\": \".c\",\n        \"unmapped\": \".a\"\n      },\n      \"register\": \"assumed\",\n      \"evidence\": \"From silc24_p.fe030, code 0=Illiterate -> literacy=0; all other attainment categories imply literacy=1 (t1)\"\n    }\n  ]\n}\n```"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\02.jsonl"
+}

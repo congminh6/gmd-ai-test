@@ -1,0 +1,257 @@
+{
+ "request_id": "05-author_bindings-MOD-GEO",
+ "preludes": [
+  {
+   "id": "GEO-join_hh_geo_to_person",
+   "reason": "Household geography code hb031 lives in silc24_h keyed by hh_id, while output grain is pers_id; create a person-grain table by merging household hb031 onto each person via hh_id for the geography correspondence resolution (VAR-geocode / GAUL codes).",
+   "produces": [
+    "__derived_hb031__"
+   ],
+   "output_table": "geo_pers",
+   "keys": [
+    "pers_id"
+   ],
+   "invariants": [
+    "geo_pers has one row per pers_id"
+   ],
+   "code_file": "GEO-join_hh_geo_to_person.py"
+  }
+ ],
+ "correspondence": {
+  "geography": {
+   "column": "geo_pers.__derived_hb031__",
+   "links": {
+    "TR10": "TUR-SUBNAT-01",
+    "TR21": "TUR-SUBNAT-02",
+    "TR22": "TUR-SUBNAT-03",
+    "TR31": "TUR-SUBNAT-04",
+    "TR32": "TUR-SUBNAT-05",
+    "TR33": "TUR-SUBNAT-06",
+    "TR41": "TUR-SUBNAT-07",
+    "TR42": "TUR-SUBNAT-08",
+    "TR51": "TUR-SUBNAT-09",
+    "TR52": "TUR-SUBNAT-10",
+    "TR61": "TUR-SUBNAT-11",
+    "TR62": "TUR-SUBNAT-12",
+    "TR63": "TUR-SUBNAT-13",
+    "TR71": "TUR-SUBNAT-14",
+    "TR72": "TUR-SUBNAT-15",
+    "TR81": "TUR-SUBNAT-16",
+    "TR82": "TUR-SUBNAT-17",
+    "TR83": "TUR-SUBNAT-18",
+    "TR90": "TUR-SUBNAT-19",
+    "TRA1": "TUR-SUBNAT-20",
+    "TRA2": "TUR-SUBNAT-21",
+    "TRB1": "TUR-SUBNAT-22",
+    "TRB2": "TUR-SUBNAT-23",
+    "TRC1": "TUR-SUBNAT-24",
+    "TRC2": "TUR-SUBNAT-25",
+    "TRC3": "TUR-SUBNAT-26"
+   },
+   "evidence": "silc24_h.hb031 Statistical Regions Level 2 has 26 NUTS2 codes TR10..TRC3 with labels matching the Turkey national standard list; prelude merges hb031 onto pers_id as geo_pers.__derived_hb031__ for binding (t1)"
+  }
+ },
+ "bindings": [
+  {
+   "binding_id": "B-geocode",
+   "target": "VAR-geocode",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Geocode resolved from hb031 (NUTS2) via geography correspondence (t13, t1)"
+  },
+  {
+   "binding_id": "B-gauladm1code",
+   "target": "VAR-gauladm1code",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography",
+    "waive_dropped": "Turkey national geography standard used here provides NUTS2 geo_code only; it does not determine GAUL admin codes for these linked categories (expected drop)."
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": {
+     "code": ".b",
+     "waive": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b)."
+    }
+   },
+   "register": "resolved",
+   "evidence": "GAUL admin codes are not determined by the TUR NUTS2-based geography correspondence chain (t18 links report, t13)"
+  },
+  {
+   "binding_id": "B-gauladm2code",
+   "target": "VAR-gauladm2code",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography",
+    "waive_dropped": "Turkey national geography standard used here provides NUTS2 geo_code only; it does not determine GAUL admin codes for these linked categories (expected drop)."
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": {
+     "code": ".b",
+     "waive": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b)."
+    }
+   },
+   "register": "resolved",
+   "evidence": "GAUL admin codes are not determined by the TUR NUTS2-based geography correspondence chain (t18 links report, t13)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-subnatid1",
+   "kind": "searched_not_found",
+   "reason": "The survey has hb030 (NUTS1) in silc24_h, but the output grain is pers_id and subnatid1 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run.",
+   "searches": [
+    {
+     "terms": "hb030",
+     "in": "silc24_h column card (t1)"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid2",
+   "kind": "searched_not_found",
+   "reason": "The survey has hb031 (NUTS2) in silc24_h, but the output grain is pers_id and subnatid2 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run.",
+   "searches": [
+    {
+     "terms": "hb031",
+     "in": "silc24_h column card (t1)"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatidsurvey",
+   "kind": "searched_not_found",
+   "reason": "The representative-level subnational id would come from the coded hb031 column (NUTS2) with its value labels, but the output grain is pers_id and this target must bind the coded column directly (not a derived copy). It cannot be bound until the household geography can be structurally carried to the output grain.",
+   "searches": [
+    {
+     "terms": "hb031 representative geography",
+     "in": "silc24_h hb031 column card (t1)"
+    }
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-psu",
+   "kind": "searched_not_found",
+   "reason": "No PSU/cluster/sampling-unit column found in bindable tables after searches for psu/cluster/primary sampling unit.",
+   "searches": [
+    {
+     "terms": "psu",
+     "in": "all tables (search tool, t2)"
+    },
+    {
+     "terms": "cluster|primary sampling",
+     "in": "all tables (search tool, t7)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-strata",
+   "kind": "searched_not_found",
+   "reason": "No strata/stratum/sampling-strata column found in bindable tables after searches for strata/stratum/strat*.",
+   "searches": [
+    {
+     "terms": "strata|stratum",
+     "in": "all tables (search tool, t3)"
+    },
+    {
+     "terms": "strat",
+     "in": "name,label,question (search tool, t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3",
+   "kind": "not_collected_by_design",
+   "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected.",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4",
+   "kind": "not_collected_by_design",
+   "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected.",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-urban",
+   "kind": "searched_not_found",
+   "reason": "No urban/rural or rurality column found in bindable tables after search for urban/rural/rurality/degree of urbanisation.",
+   "searches": [
+    {
+     "terms": "urban|rural",
+     "in": "name,label,question,codes (search tool, t4)"
+    },
+    {
+     "terms": "rurality|degree of urbanisation|degurba",
+     "in": "name,label,question,codes (search tool, t8)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid1prev",
+   "kind": "derivable_not_built",
+   "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid2prev",
+   "kind": "derivable_not_built",
+   "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3prev",
+   "kind": "derivable_not_built",
+   "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4prev",
+   "kind": "derivable_not_built",
+   "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+  "survey_id": "SRB_2021_EU-SILC",
+  "spec_sha256": "def0f7d46a94e0959a0adadffafb2177ca113f053ef13acb9804804746472f3e",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 64,
+  "rows": 15978,
+  "tables": [
+    {
+      "table": "SRB__EU-SILC_v01_M_v03_A_UDB-C_D",
+      "rows": 5158,
+      "used": true
+    },
+    {
+      "table": "SRB__EU-SILC_v01_M_v03_A_UDB-C_H",
+      "rows": 5158,
+      "used": true
+    },
+    {
+      "table": "SRB__EU-SILC_v01_M_v03_A_UDB-C_P",
+      "rows": 13855,
+      "used": true
+    },
+    {
+      "table": "SRB__EU-SILC_v01_M_v03_A_UDB-C_R",
+      "rows": 15978,
+      "used": true
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [
+    {
+      "table": "SRB__EU-SILC_v01_M_v03_A_UDB-C_R",
+      "rows_dropped": 0,
+      "households": 0,
+      "keys": [
+        "rx030"
+      ],
+      "listing": "SRB__EU-SILC_v01_M_v03_A_UDB-C_H",
+      "sample": [],
+      "rows_kept": 15978
+    }
+  ],
+  "merges": {
+    "count": 83,
+    "not_m1": []
+  },
+  "preludes": [
+    {
+      "id": "DEM-agecat",
+      "said": [
+        "prelude — R: whether this delivery carries the year-of-birth class as agecat"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): agecat_applies is the same in every row"
+      ]
+    },
+    {
+      "id": "LBR-labor",
+      "said": [
+        "prelude — P: industrycat4 from PL111A, ISCO major group from PL051A, months worked"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): wmonths <= 12",
+        "declared invariant (checked by the script): isco_major in 0..9",
+        "declared invariant (checked by the script): industrycat4 in 1..4"
+      ]
+    },
+    {
+      "id": "LBR-wage",
+      "said": [
+        "prelude — wage_lcu: PY010G * HX010 and (PY010G + PY050G) * HX010 (annual, national currency)"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): wage_annual = PY010G * HX010",
+        "declared invariant (checked by the script): labor_income = (PY010G + PY050G) * HX010"
+      ]
+    },
+    {
+      "id": "isced_level",
+      "said": [
+        "prelude — P: ISCED level = PE041 // 100"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): isced_level in 0..8 where PE041 is not missing"
+      ]
+    },
+    {
+      "id": "marital_status",
+      "said": [
+        "prelude — P: PB190, and 6 where PB200 is a union without a legal basis"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): marital_status in 1..6",
+        "declared invariant (checked by the script): marital_status = 6 only where PB200 = 2"
+      ]
+    },
+    {
+      "id": "welfare_pc",
+      "said": [
+        "prelude — H (UDB): welfare_pc = HY020 * HX010 / HB120; negative HY020 left missing"
+      ],
+      "invariants": [
+        "declared invariant (checked by the script): welfare_pc = HY020 * HX010 / HB120"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-16T14:30:42+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+b47b1569",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

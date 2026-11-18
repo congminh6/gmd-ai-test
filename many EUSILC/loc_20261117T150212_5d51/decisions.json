@@ -1,0 +1,14 @@
+{
+ "decisions": [
+  {
+   "review": "profile",
+   "act": "approve",
+   "by": "zs",
+   "at": "2026-11-17T15:02:15+00:00",
+   "binds": {
+    "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+   },
+   "note": "end-to-end run asked of Claude Code by the user; profile read by the agent, not in the app"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "job_id": "loc_20261116T222818_79ca",
+ "flow": "intake",
+ "survey_id": "TUR_2024_SILC-C",
+ "spec": {
+  "flow": "intake",
+  "survey_id": "TUR_2024_SILC-C",
+  "country": "TUR",
+  "year": 2024,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc"
+  },
+  "input_job": "",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-16T22:28:18+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T222818_79ca",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "staged_now": true,
+ "updated": "2026-11-16T22:28:42+00:00",
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged": {
+  "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 7,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "ss_export": "surveys/TUR_2024_SILC-C/ss",
+   "svis": "surveys/TUR_2024_SILC-C/svis",
+   "reference": "surveys/TUR_2024_SILC-C/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "I.scan-data": "ok(4 table(s) -> profile\\data_scan.json · data TUR_2024_SILC-C_v01_M)",
+  "I.scan-docs": "ok(3 file(s): image=1, pdf_mixed=1, pdf_text=1 -> profile\\instruments.json)",
+  "I.check": "ok"
+ },
+ "stopped_at": null,
+ "log_tail": [
+  "# intake TUR_2024_SILC-C @ 2026-11-16T22:28:19+00:00",
+  "  data=\\\\wbgfscifs01\\GPWG-GMD\\datalib-ECA\\datalib\\TUR\\TUR_2024_SILC-C\\TUR_2024_SILC-C_v01_M\\Data\\Stata  modules=[]  direct=False",
+  "  identity: survey-harmonization local (testing — no sync stamp); canon none; data TUR_2024_SILC-C_v01_M",
+  "",
+  "== Phase I — intake ==",
+  "  [det] scan-data",
+  "      [1/4] Reading Regional Deflators_NUTS2.dta...",
+  "            profiling 26 rows x 17 columns (0 shared-name key candidates)...",
+  "      [2/4] Reading silc24_h.dta...",
+  "            profiling 25,925 rows x 69 columns (1 shared-name key candidates)...",
+  "      [3/4] Reading silc24_p.dta...",
+  "            profiling 61,846 rows x 65 columns (2 shared-name key candidates)...",
+  "      [4/4] Reading silc24_pr.dta...",
+  "            profiling 80,727 rows x 13 columns (2 shared-name key candidates)...",
+  "      Key graph over 4 table(s)...",
+  "      note: pk_candidates_capped [silc24_h] — PK search considered the first 60 of 63 eligible columns",
+  "  [det] scan-docs",
+  "        probing English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf...",
+  "        probing Turkish/GYKA MVS (Kesit), 2024 kapak.jpg...",
+  "        probing Turkish/GYKA MVS (Kesit), 2024 TR son.pdf...",
+  "  CHECK I: ok — data scanned, documents routed",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-16T22:28:42+00:00"
+}

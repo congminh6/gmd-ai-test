@@ -1,0 +1,438 @@
+{
+ "request_id": "06-author_bindings-MOD-DEM",
+ "correspondence": {
+  "education": {
+   "column": "silc24_p.fe030",
+   "links": {
+    "0": {
+     "kind": "no_fitting_category",
+     "reason": "Survey code 0 is 'Illiterate' (no schooling), not a Turkish education program category in the national standard.",
+     "direct": {
+      "VAR-educat7": 1,
+      "VAR-educat5": 1,
+      "VAR-educat4": 1,
+      "VAR-educy": 0
+     }
+    },
+    "1": {
+     "kind": "no_fitting_category",
+     "reason": "Survey code 1 is 'Literate but not a graduate' (no completed schooling level), not a Turkish education program category in the national standard.",
+     "direct": {
+      "VAR-educat7": 1,
+      "VAR-educat5": 1,
+      "VAR-educat4": 1,
+      "VAR-educy": 0
+     }
+    },
+    "2": "TUR-EDU-03",
+    "3": "TUR-EDU-03",
+    "4": "TUR-EDU-06",
+    "5": "TUR-EDU-11",
+    "6": "TUR-EDU-14",
+    "7": "TUR-EDU-22",
+    "8": "TUR-EDU-23",
+    "9": {
+     "kind": "no_fitting_category",
+     "reason": "Survey code 9 is 'Master'. National education crosswalk list in this brief ends at master's programmes but distinguishes thesis/non-thesis; the survey does not. Place directly at tertiary with 18 years.",
+     "direct": {
+      "VAR-educat7": 7,
+      "VAR-educat5": 5,
+      "VAR-educat4": 4,
+      "VAR-educy": 18
+     }
+    },
+    "10": {
+     "kind": "no_fitting_category",
+     "reason": "Survey code 10 is 'Doctorate'. The national education crosswalk in this brief does not list a doctorate category; place directly as tertiary with 18 years (closest upper bound in the crosswalk shown).",
+     "direct": {
+      "VAR-educat7": 7,
+      "VAR-educat5": 5,
+      "VAR-educat4": 4,
+      "VAR-educy": 18
+     }
+    }
+   },
+   "evidence": "fe030 code labels from t8"
+  }
+ },
+ "parameters": {
+  "PARAM-EDU-MIN-EDUCATION-AGE": {
+   "value": 0,
+   "method": "authored",
+   "evidence": "Education section columns show no questionnaire universe line ('asked of —') and age is in a different table, so data_onset cannot be computed here; set to 0 to avoid excluding any records (t8)."
+  }
+ },
+ "preludes": [
+  {
+   "id": "dem-derive_ages",
+   "reason": "Clean age (-1 used as a placeholder) and derive under-5 child ages in years/months from age-at-2023-12-31 and birth month.",
+   "produces": [
+    "__derived.age__",
+    "__derived.childyr__",
+    "__derived.childmth__"
+   ],
+   "invariants": [
+    "__derived.childmth__ in [0,59] when present",
+    "__derived.childyr__ in [0,4] when present"
+   ],
+   "code_file": "dem-derive_ages.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-age",
+   "target": "VAR-age",
+   "roles": {
+    "raw_value": "__derived.age__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Age in years in silc24_pr.fk070; -1 observed so treated as missing in prelude (t8)."
+  },
+  {
+   "binding_id": "B-childyr",
+   "target": "VAR-childyr",
+   "roles": {
+    "raw_value": "__derived.childyr__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Derived from age (as-of 2023-12-31) for under-5s (t8,t16)."
+  },
+  {
+   "binding_id": "B-childmth",
+   "target": "VAR-childmth",
+   "roles": {
+    "raw_value": "__derived.childmth__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Derived from age-at-2023-12-31 and birth month for under-5s (t8,t16)."
+  },
+  {
+   "binding_id": "B-male",
+   "target": "VAR-male",
+   "roles": {
+    "raw_value": "fk090"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Gender codes 1=Male 2=Female in silc24_pr.fk090 (t8)."
+  },
+  {
+   "binding_id": "B-marital",
+   "target": "VAR-marital",
+   "roles": {
+    "raw_value": "fb100"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 5,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Marital status codes in silc24_p.fb100: 1 Married, 2 Never married, 3 Widowed, 4 Divorced (t8)."
+  },
+  {
+   "binding_id": "B-school",
+   "target": "VAR-school",
+   "roles": {
+    "raw_value": "fe010"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Current education activity in silc24_p.fe010: 1 Yes, 2 No (t8)."
+  },
+  {
+   "binding_id": "B-mineducatage",
+   "target": "VAR-mineducatage",
+   "table": "silc24_pr",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+   },
+   "missing_map": {
+    "null": ".a"
+   },
+   "register": "assumed",
+   "evidence": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE (t13)."
+  },
+  {
+   "binding_id": "B-educat7",
+   "target": "VAR-educat7",
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Education correspondence based on silc24_p.fe030 (t8)."
+  },
+  {
+   "binding_id": "B-educat5",
+   "target": "VAR-educat5",
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Education correspondence based on silc24_p.fe030 (t8)."
+  },
+  {
+   "binding_id": "B-educat4",
+   "target": "VAR-educat4",
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Education correspondence based on silc24_p.fe030 (t8)."
+  },
+  {
+   "binding_id": "B-educy",
+   "target": "VAR-educy",
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "Education correspondence yields years-of-education field from national categories (brief table; linked via t8)."
+  },
+  {
+   "binding_id": "B-primarycomp",
+   "target": "VAR-primarycomp",
+   "roles": {
+    "raw_value": "fe030"
+   },
+   "predicate": "all",
+   "value_map": {
+    "0": 0,
+    "1": 0,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "route_reason": "National education correspondence table provided in this brief does not include a primary completion output, so primary completion is mapped directly from survey highest-education categories.",
+   "evidence": "Mapped from silc24_p.fe030 codes (t8) to primary completion per canon rule (t13)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-agecat",
+   "kind": "not_collected_by_design",
+   "reason": "Continuous age is collected (silc24_pr.fk070); no age-band variable present.",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-communicationdisability",
+   "kind": "searched_not_found",
+   "reason": "No disability/functioning questions found in bindable person tables (searched terms 'disability', 'difficulty', 'see', 'hear', 'walk', 'self care', 'communicat').",
+   "searches": [
+    {
+     "terms": "disability",
+     "in": "silc24_pr (name/label/question)"
+    },
+    {
+     "terms": "disability|difficulty",
+     "in": "all tables (name/label/question)"
+    },
+    {
+     "terms": "see|eye|hear|walk|self care|communicat",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-concentrationdisorder",
+   "kind": "searched_not_found",
+   "reason": "No mental/functional difficulty questions found in bindable person tables.",
+   "searches": [
+    {
+     "terms": "concentrat|remember|difficulty",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-eyedisability",
+   "kind": "searched_not_found",
+   "reason": "No eye/seeing difficulty question found.",
+   "searches": [
+    {
+     "terms": "eye|see|vision|glasses",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-heardisability",
+   "kind": "searched_not_found",
+   "reason": "No hearing difficulty question found.",
+   "searches": [
+    {
+     "terms": "hear|hearing|deaf",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-language",
+   "kind": "searched_not_found",
+   "reason": "No language variable found in bindable tables.",
+   "searches": [
+    {
+     "terms": "language",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-literacy",
+   "kind": "searched_not_found",
+   "reason": "No standalone literacy (read/write) variable found; fe030 includes 'Illiterate' as an education category but no binary literacy question.",
+   "searches": [
+    {
+     "terms": "literacy|read|write",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-everattend",
+   "kind": "searched_not_found",
+   "reason": "No variable asking whether ever attended school found; only current education activity (fe010) and highest education (fe030).",
+   "searches": [
+    {
+     "terms": "ever attend school",
+     "in": "all tables (name/label/question/codes)"
+    },
+    {
+     "terms": "attend|school|ever",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-relationcs",
+   "kind": "searched_not_found",
+   "reason": "No relationship-to-head variable found; only parent/spouse ID linkage variables exist in silc24_pr (fk220/fk230/fk240).",
+   "searches": [
+    {
+     "terms": "relationship head",
+     "in": "all tables (label/question/codes)"
+    },
+    {
+     "terms": "relation|relationship",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-relationharm",
+   "kind": "derivable_not_built",
+   "reason": "Requires VAR-relationcs, which is not present in the survey tables.",
+   "needs": [
+    "VAR-relationcs"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-selfcaredisability",
+   "kind": "searched_not_found",
+   "reason": "No self-care difficulty question found.",
+   "searches": [
+    {
+     "terms": "self care|wash|dress",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-walkdisability",
+   "kind": "searched_not_found",
+   "reason": "No walking/mobility difficulty question found.",
+   "searches": [
+    {
+     "terms": "walk|mobility|climb",
+     "in": "all tables (name/label/question/codes)"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

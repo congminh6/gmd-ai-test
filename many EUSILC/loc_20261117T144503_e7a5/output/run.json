@@ -1,0 +1,88 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "spec_sha256": "190c935d216e53f1c2031ab68db684e059b818b9a32aa1a367c882ee92bfec16",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 21,
+  "rows": 80727,
+  "tables": [
+    {
+      "table": "Regional Deflators_NUTS2",
+      "rows": 26,
+      "used": false
+    },
+    {
+      "table": "silc24_h",
+      "rows": 25925,
+      "used": true
+    },
+    {
+      "table": "silc24_p",
+      "rows": 61846,
+      "used": true
+    },
+    {
+      "table": "silc24_pr",
+      "rows": 80727,
+      "used": true
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 35,
+    "not_m1": [
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-idn_weights: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-geo_pers: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-geo_pers: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-geo_pers: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']",
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:pers_id']"
+    ]
+  },
+  "preludes": [
+    {
+      "id": "GEO-join_hh_geo_to_person",
+      "invariants": [
+        "declared invariant (checked by the script): geo_pers has one row per pers_id"
+      ]
+    },
+    {
+      "id": "MOD-IDN-hh_weight_to_person",
+      "invariants": [
+        "declared invariant (checked by the script): Row count equals silc24_p row count",
+        "declared invariant (checked by the script): No missing derived household weights after merge"
+      ]
+    },
+    {
+      "id": "dem-derive_ages",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.childmth__ in [0,59] when present",
+        "declared invariant (checked by the script): __derived.childyr__ in [0,4] when present"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-17T14:57:42+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+b47b1569",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

@@ -1,0 +1,33 @@
+{
+ "job_id": "loc_20261116T142827_2506",
+ "flow": "intake",
+ "survey_id": "SRB_2022_EU-SILC",
+ "status": "completed",
+ "finished": "2026-11-16T14:28:36+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "c85127c00c871eb77eea35b7733393dea8000d219cf28a4232f70495fc0ef738",
+   "size": 3379
+  },
+  "profile/data_scan.json": {
+   "sha256": "58559b08da6e1538a1350f080f3d16d66176538a5ef08138a4c1f83da49c2983",
+   "size": 992567
+  },
+  "staged.json": {
+   "sha256": "f051191999466fc25504b5108a33f9370b9a9f8c9c89f3ce20bc037790239548",
+   "size": 1241
+  },
+  "trail/intake/identity.json": {
+   "sha256": "3fd2b4501f8a8da179925b82d9e1cb08d7d712515972e671742e23d222a9f43f",
+   "size": 437
+  },
+  "trail/intake/log.txt": {
+   "sha256": "3cf39d70e1c497f0c1268406dd33253c0560be446e7bc3f3a8d4b10109a6ff58",
+   "size": 1527
+  },
+  "trail/intake/state.json": {
+   "sha256": "36c7455cd7e84145b4dec30e06e5fbad027c4b9ac8c854c1b256991da80285ab",
+   "size": 288
+  }
+ }
+}

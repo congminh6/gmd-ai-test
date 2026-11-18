@@ -1,0 +1,128 @@
+# harmonize TUR_2024_SILC-C @ 2026-11-17T14:45:05+00:00
+  data=\\wbgfscifs01\GPWG-GMD\datalib-ECA\datalib\TUR\TUR_2024_SILC-C\TUR_2024_SILC-C_v01_M\Data\Stata  modules=['MOD-IDN', 'MOD-GEO', 'MOD-DEM']  direct=True
+  profile review: approved by zs (profile 61058aa179ff)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+b47b1569; data TUR_2024_SILC-C_v01_M
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a
+    input profile/file_links.json  sha256=7cea02ab8d177dcf5590728abb16f8c0cc38da8926300059ce6dc96eda4c8d48
+    input profile/instruments.json  sha256=a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f
+    input profile/key_checks.json  sha256=bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d
+    input profile/overlay.json  sha256=db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json  sha256=917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json  sha256=a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json  sha256=97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb
+    input profile/standard.json  sha256=e1c155027a04793b7b53c264cf509dfe38afbd38fe12d87d7d0f8d16bd618139
+    profile 61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f — approved by zs at 2026-11-17T14:45:05+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+    prelude marital_status: reads dataset(s) ['P'] not delivered — not installed
+    prelude isced_level: reads dataset(s) ['P'] not delivered — not installed
+    prelude welfare_pc: reads dataset(s) ['H'] not delivered — not installed
+    VAR-countrycode: left to the author — its dataset 'R' is not delivered
+    VAR-year: left to the author — its dataset 'R' is not delivered
+    VAR-intyear: left to the author — HB060 is not a column of this delivery
+    VAR-intmonth: left to the author — HB050 is not a column of this delivery
+    VAR-weight: left to the author — DB090 is not a column of this delivery
+    VAR-urban: left to the author — DB100 is not a column of this delivery
+    VAR-subnatid1: left to the author — DB040 is not a column of this delivery
+    VAR-subnatidsurvey: left to the author — DB040 is not a column of this delivery
+    VAR-psu: left to the author — DB060 is not a column of this delivery
+    VAR-strata: left to the author — DB050 is not a column of this delivery
+    VAR-male: left to the author — RB090 is not a column of this delivery
+    VAR-age: left to the author — RB082 is not a column of this delivery
+    VAR-marital: left to the author — __derived.marital_status__ is produced by a prelude that was not installed
+    VAR-school: left to the author — PE010 is not a column of this delivery
+    VAR-educat7: left to the author — __derived.isced_level__ is produced by a prelude that was not installed
+    VAR-educat5: left to the author — derived from VAR-educat7, which is not bound here
+    VAR-educat4: left to the author — derived from VAR-educat7, which is not bound here
+    VAR-primarycomp: left to the author — derived from VAR-educat7, which is not bound here
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\01.json via submit (1216 bytes)
+    notes: HB010/HB040 are the only clear identity/weight fields in the household file; no explicit interview month variable seen in the index.
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (2697 bytes)
+    notes: No columns found mentioning urban/rural, PSU, strata, or finer subnational levels beyond NUTS1/2 in bindable tables (searches: urban/rural, psu/cluster, strata).
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (2362 bytes)
+    notes: Only age/sex/marital and education activity/attainment are present in the bindable index; no columns found for relationship-to-head, language, literacy/read-write, disability difficulty items, or years of education completed (educy).
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (3264 bytes, + MOD-IDN-hh_weight_to_person.py)
+    reconciled binding_id 'B-intyear' → 'B-int_year' (by target VAR-intyear)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\05_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (8729 bytes, + GEO-join_hh_geo_to_person.py)
+    reconciled binding_id 'B-geocode' → 'B-geo_code' (by target VAR-geocode)
+    reconciled binding_id 'B-gauladm1code' → 'B-gaul_adm1_code' (by target VAR-gauladm1code)
+    reconciled binding_id 'B-gauladm2code' → 'B-gaul_adm2_code' (by target VAR-gauladm2code)
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\06_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (11582 bytes, + dem-derive_ages.py)
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\07_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (923 bytes)
+    notes: Potential improvement (not a blocker): consider adding the same hh_id uniqueness guard (drop_duplicates) in MOD-IDN-hh_weight_to_person as used in GEO-join_hh_geo_to_person, if hh_id is not guaranteed unique in silc24_h.
+    prelude GEO-join_hh_geo_to_person: a concern (advisory: its dry run passed) — Produces column named "__derived_hb031__" (underscore) rather than the standard derived-column naming convention "__derived.<name>__" used elsewhere (e.g., __derived.hh_weight__, __derived.age__). Thi
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-gaul_adm1_code: raw_value 'geo_pers.__derived_hb031__' (from correspondence.geography)
+        resolved: B-gaul_adm2_code: raw_value 'geo_pers.__derived_hb031__' (from correspondence.geography)
+        resolved: B-geo_code: raw_value 'geo_pers.__derived_hb031__' (from correspondence.geography)
+        resolved: B-educat4: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educat5: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educat7: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educy: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-age: table 'silc24_pr' (from column '__derived.age__')
+        resolved: B-childmth: table 'silc24_pr' (from column '__derived.childmth__')
+        resolved: B-childyr: table 'silc24_pr' (from column '__derived.childyr__')
+        resolved: B-male: table 'silc24_pr' (from column 'fk090')
+        resolved: B-marital: table 'silc24_p' (from column 'fb100')
+        resolved: B-primarycomp: table 'silc24_p' (from column 'fe030')
+        resolved: B-school: table 'silc24_p' (from column 'fe010')
+        kind: silc24_p.fe030: numeric
+        kind: silc24_pr.fk090: numeric
+        kind: silc24_p.fb100: numeric
+        kind: silc24_p.fe010: numeric
+        resolved: B-age: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-childmth: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-childyr: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat4: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat5: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat7: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educy: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-male: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-marital: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-primarycomp: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-school: unit_keys ['pers_id'] (from data_scan)
+      VALID: hspec.json stamped (validator v2, 2026-11-17T14:57:42+00:00); coverage bound 21, documented 27
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      PASS — 80727 rows, 21 target(s); contract clean. Outputs in C:\Users\wb249563\.harmon\work\runs\loc_20261117T144503_e7a5\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb249563\.harmon\work\runs\loc_20261117T144503_e7a5\output\quality.json: 21 targets; 4/54 checks flagged; 150684 universe cells; no reference
+  CHECK F: ok — 21 targets; 4/54 checks flagged; 150684 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==

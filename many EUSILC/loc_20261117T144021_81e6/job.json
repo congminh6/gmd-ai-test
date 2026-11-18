@@ -1,0 +1,238 @@
+{
+ "job_id": "loc_20261117T144021_81e6",
+ "flow": "scribe",
+ "survey_id": "TUR_2024_SILC-C",
+ "spec": {
+  "flow": "scribe",
+  "survey_id": "TUR_2024_SILC-C",
+  "country": "TUR",
+  "year": 2024,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc"
+  },
+  "input_job": "loc_20261116T222818_79ca",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-17T14:40:21+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T144021_81e6",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261116T222818_79ca",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "c4f4cba01d0a74629aefc34f63589bc8cf5f7f24da0bb17735ef3f95ff9ccdc8",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-17T14:42:45+00:00",
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged": {
+  "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 7,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "ss_export": "surveys/TUR_2024_SILC-C/ss",
+   "svis": "surveys/TUR_2024_SILC-C/svis",
+   "reference": "surveys/TUR_2024_SILC-C/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf": "ok (codebook, page images): 147 entries in 3 dataset(s) from 7 page(s), 147 with a data table; left out by the check against the data: 0 entries naming no column, 3 code(s) not observed; 6 values cell(s) not parsed; 118s, 42,178 token(s) -> profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json",
+  "Turkish/GYKA MVS (Kesit), 2024 kapak.jpg": "skipped: image: a jpeg image: no reader takes images",
+  "Turkish/GYKA MVS (Kesit), 2024 TR son.pdf": "not read: lower priority: the folder holds an English document of this kind, which is read; this one is in another language (`all_languages: true` reads it too) — Turkish; in English: English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "classify-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son",
+   "task": "classify-document",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2869,
+    "output_token_count": 150,
+    "total_token_count": 3019,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 75,
+    "reasoning_output_token_count": 75
+   }
+  },
+  {
+   "request": "classify-Turkish_GYKA_MVS_Kesit_2024_TR_son",
+   "task": "classify-document",
+   "scope": "Turkish/GYKA MVS (Kesit), 2024 TR son.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 3418,
+    "output_token_count": 102,
+    "total_token_count": 3520,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 36,
+    "reasoning_output_token_count": 36
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p020",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p20",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4377,
+    "output_token_count": 2581,
+    "total_token_count": 6958,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 1331,
+    "reasoning_output_token_count": 1331
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p021",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p21",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4377,
+    "output_token_count": 1495,
+    "total_token_count": 5872,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 158,
+    "reasoning_output_token_count": 158
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p022",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p22",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4377,
+    "output_token_count": 1616,
+    "total_token_count": 5993,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 349,
+    "reasoning_output_token_count": 349
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p023",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p23",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 3253,
+    "output_token_count": 950,
+    "total_token_count": 4203,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 424,
+    "reasoning_output_token_count": 424
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p024",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p24",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 5501,
+    "output_token_count": 1586,
+    "total_token_count": 7087,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 93,
+    "reasoning_output_token_count": 93
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p025",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p25",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4377,
+    "output_token_count": 1370,
+    "total_token_count": 5747,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 266,
+    "reasoning_output_token_count": 266
+   }
+  },
+  {
+   "request": "codebook-page-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son-p026",
+   "task": "read-codebook-page",
+   "scope": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p26",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4377,
+    "output_token_count": 1941,
+    "total_token_count": 6318,
+    "openai.cache_write_tokens": 0,
+    "cache_creation_input_token_count": 0,
+    "openai.cached_input_tokens": 0,
+    "cache_read_input_token_count": 0,
+    "openai.reasoning_tokens": 645,
+    "reasoning_output_token_count": 645
+   }
+  }
+ ],
+ "total_tokens": 48717,
+ "log_tail": [
+  "2026-11-17T14:40:28+00:00 3 document(s) under 'TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc'; model on; deployment gpt-5.2",
+  "2026-11-17T14:40:31+00:00 classifying 2 document(s)",
+  "2026-11-17T14:40:45+00:00 English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf: codebook, with a report part (English) — The sample includes a “Data Guide” and appendix “Structure of … Data Set” pages listing variable names with lengths/labels and code meanings, alongside some methodological/metadata prose.",
+  "2026-11-17T14:40:45+00:00 Turkish/GYKA MVS (Kesit), 2024 TR son.pdf: codebook, with a report part (Turkish) — Sample includes dataset/record structure tables listing variable names with descriptions and coded values, alongside methodological/metadata prose sections.",
+  "2026-11-17T14:40:50+00:00 English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf: reading 7 page image(s) of 7 page(s) with no text layer (26 page(s) in all)",
+  "2026-11-17T14:42:45+00:00 English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf: ok (codebook, page images): 147 entries in 3 dataset(s) from 7 page(s), 147 with a data table; left out by the check against the data: 0 entries naming no column, 3 code(s) not observed; 6 values cell(s) not parsed; 118s, 42,178 token(s) -> profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json",
+  "2026-11-17T14:42:45+00:00 Turkish/GYKA MVS (Kesit), 2024 kapak.jpg: skipped: image: a jpeg image: no reader takes images",
+  "2026-11-17T14:42:45+00:00 Turkish/GYKA MVS (Kesit), 2024 TR son.pdf: not read: lower priority: the folder holds an English document of this kind, which is read; this one is in another language (`all_languages: true` reads it too) — Turkish; in English: English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf",
+  "2026-11-17T14:42:45+00:00 done: 1 of 3 document(s) produced"
+ ],
+ "finished": "2026-11-17T14:42:45+00:00"
+}

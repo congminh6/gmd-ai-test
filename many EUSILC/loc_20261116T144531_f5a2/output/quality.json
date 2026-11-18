@@ -1,0 +1,6075 @@
+{
+  "survey_id": "FRA_2025_EU-SILC",
+  "output_sha256": "982e77bb183017b93bd3cc5eab237cf721d1131c42ff4e11b60695d16b6cbec2",
+  "spec": "hspec.json",
+  "profile": {
+    "rows": 38083,
+    "weight": "weight",
+    "columns": {
+      "countrycode": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2025.0,
+        "p5": 2025.0,
+        "p50": 2025.0,
+        "p95": 2025.0,
+        "min": 2025.0,
+        "max": 2025.0,
+        "mean_w": 2025.0,
+        "p50_w": 2025.0
+      },
+      "int_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2025.0,
+        "p5": 2025.0,
+        "p50": 2025.0,
+        "p95": 2025.0,
+        "min": 2025.0,
+        "max": 2025.0,
+        "mean_w": 2025.0,
+        "p50_w": 2025.0
+      },
+      "weight": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 1749.4142,
+        "p5": 609.282104,
+        "p50": 1542.947021,
+        "p95": 3570.123877,
+        "min": 167.628769,
+        "max": 12822.132812,
+        "mean_w": 2308.267766,
+        "p50_w": 1971.090332
+      },
+      "urban": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.636741,
+            "share_w": 0.677274
+          },
+          "0": {
+            "share": 0.363259,
+            "share_w": 0.322726
+          }
+        }
+      },
+      "subnatid1": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "subnatidsurvey": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "psu": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 414.229998,
+        "p5": 38.0,
+        "p50": 419.0,
+        "p95": 775.0,
+        "min": 1.0,
+        "max": 820.0,
+        "mean_w": 411.374412,
+        "p50_w": 413.0
+      },
+      "strata": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "male": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.519576,
+            "share_w": 0.515528
+          },
+          "1": {
+            "share": 0.480424,
+            "share_w": 0.484472
+          }
+        }
+      },
+      "marital": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.822782,
+        "valued_w": 0.82172,
+        "reasons": {
+          ".b": 2.6e-05,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 3.5e-05,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.450022,
+            "share_w": 0.407684
+          },
+          "2": {
+            "share": 0.321408,
+            "share_w": 0.352503
+          },
+          "3": {
+            "share": 0.096317,
+            "share_w": 0.104797
+          },
+          "4": {
+            "share": 0.072222,
+            "share_w": 0.076123
+          },
+          "5": {
+            "share": 0.060031,
+            "share_w": 0.058893
+          }
+        }
+      },
+      "school": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.822729,
+        "valued_w": 0.82169,
+        "reasons": {
+          ".b": 7.9e-05,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 6.5e-05,
+          ".c": 0.178245
+        },
+        "codes": {
+          "0": {
+            "share": 0.911369,
+            "share_w": 0.91173
+          },
+          "1": {
+            "share": 0.088631,
+            "share_w": 0.08827
+          }
+        }
+      },
+      "educat7": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.813618,
+        "valued_w": 0.813537,
+        "reasons": {
+          ".b": 0.00919,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 0.008218,
+          ".c": 0.178245
+        },
+        "codes": {
+          "5": {
+            "share": 0.412103,
+            "share_w": 0.3921
+          },
+          "7": {
+            "share": 0.342714,
+            "share_w": 0.343176
+          },
+          "4": {
+            "share": 0.149911,
+            "share_w": 0.158099
+          },
+          "3": {
+            "share": 0.074326,
+            "share_w": 0.081522
+          },
+          "1": {
+            "share": 0.019881,
+            "share_w": 0.024126
+          },
+          "6": {
+            "share": 0.001065,
+            "share_w": 0.000977
+          }
+        }
+      },
+      "hsize": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2.904918,
+        "p5": 1.0,
+        "p50": 3.0,
+        "p95": 5.0,
+        "min": 1.0,
+        "max": 12.0,
+        "mean_w": 2.859347,
+        "p50_w": 3.0
+      },
+      "welfaretype": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "welfare": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.998818,
+        "valued_w": 0.998482,
+        "reasons": {
+          ".b": 0.001182
+        },
+        "reasons_w": {
+          ".b": 0.001518
+        },
+        "mean": 21878.93521,
+        "p5": 7132.0,
+        "p50": 18832.5,
+        "p95": 45302.5,
+        "min": 0.0,
+        "max": 733750.0,
+        "mean_w": 21464.74194,
+        "p50_w": 18370.0
+      },
+      "age": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 44.013497,
+        "p5": 6.0,
+        "p50": 47.0,
+        "p95": 80.0,
+        "min": 0.0,
+        "max": 80.0,
+        "mean_w": 42.300755,
+        "p50_w": 43.0
+      },
+      "agecat": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".c": 1.0
+        },
+        "reasons_w": {
+          ".c": 1.0
+        }
+      },
+      "car": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.999947,
+        "valued_w": 0.999964,
+        "reasons": {
+          ".a": 5.3e-05
+        },
+        "reasons_w": {
+          ".a": 3.6e-05
+        },
+        "codes": {
+          "1": {
+            "share": 0.90423,
+            "share_w": 0.871906
+          },
+          "0": {
+            "share": 0.09577,
+            "share_w": 0.128094
+          }
+        }
+      },
+      "childmth": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.040543,
+        "valued_w": 0.047943,
+        "reasons": {
+          ".c": 0.959457
+        },
+        "reasons_w": {
+          ".c": 0.952057
+        },
+        "mean": 2.224741,
+        "p5": 0.0,
+        "p50": 2.0,
+        "p95": 4.0,
+        "min": 0.0,
+        "max": 4.0,
+        "mean_w": 2.183787,
+        "p50_w": 2.0
+      },
+      "childyr": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.040543,
+        "valued_w": 0.047943,
+        "reasons": {
+          ".c": 0.959457
+        },
+        "reasons_w": {
+          ".c": 0.952057
+        },
+        "mean": 2.224741,
+        "p5": 0.0,
+        "p50": 2.0,
+        "p95": 4.0,
+        "min": 0.0,
+        "max": 4.0,
+        "mean_w": 2.183787,
+        "p50_w": 2.0
+      },
+      "comm_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.809443,
+        "valued_w": 0.80885,
+        "reasons": {
+          ".a": 0.013366,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.012905,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.970901,
+            "share_w": 0.967681
+          },
+          "2": {
+            "share": 0.022092,
+            "share_w": 0.025144
+          },
+          "3": {
+            "share": 0.005839,
+            "share_w": 0.006315
+          },
+          "4": {
+            "share": 0.001168,
+            "share_w": 0.00086
+          }
+        }
+      },
+      "computer": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.999632,
+        "valued_w": 0.99962,
+        "reasons": {
+          ".a": 0.000368
+        },
+        "reasons_w": {
+          ".a": 0.00038
+        },
+        "codes": {
+          "1": {
+            "share": 0.902861,
+            "share_w": 0.889011
+          },
+          "0": {
+            "share": 0.097139,
+            "share_w": 0.110989
+          }
+        }
+      },
+      "conc_dsord": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.809101,
+        "valued_w": 0.808577,
+        "reasons": {
+          ".a": 0.013707,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.013178,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.862006,
+            "share_w": 0.861145
+          },
+          "2": {
+            "share": 0.113686,
+            "share_w": 0.113811
+          },
+          "3": {
+            "share": 0.022588,
+            "share_w": 0.023669
+          },
+          "4": {
+            "share": 0.00172,
+            "share_w": 0.001375
+          }
+        }
+      },
+      "contract": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.344589,
+        "valued_w": 0.352255,
+        "reasons": {
+          ".c": 0.655411
+        },
+        "reasons_w": {
+          ".c": 0.647745
+        },
+        "codes": {
+          "1": {
+            "share": 1.0,
+            "share_w": 1.0
+          }
+        }
+      },
+      "contract_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.344589,
+        "valued_w": 0.352255,
+        "reasons": {
+          ".c": 0.655411
+        },
+        "reasons_w": {
+          ".c": 0.647745
+        },
+        "codes": {
+          "1": {
+            "share": 1.0,
+            "share_w": 1.0
+          }
+        }
+      },
+      "dweltyp": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.99761,
+        "valued_w": 0.997168,
+        "reasons": {
+          ".a": 0.00239
+        },
+        "reasons_w": {
+          ".a": 0.002832
+        },
+        "codes": {
+          "1": {
+            "share": 0.513292,
+            "share_w": 0.447796
+          },
+          "3": {
+            "share": 0.293483,
+            "share_w": 0.367558
+          },
+          "2": {
+            "share": 0.193225,
+            "share_w": 0.184646
+          }
+        }
+      },
+      "empstat": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.395084,
+        "valued_w": 0.411954,
+        "reasons": {
+          ".c": 0.604916
+        },
+        "reasons_w": {
+          ".c": 0.588046
+        },
+        "codes": {
+          "1": {
+            "share": 0.872192,
+            "share_w": 0.855083
+          },
+          "3": {
+            "share": 0.114117,
+            "share_w": 0.128547
+          },
+          "4": {
+            "share": 0.012894,
+            "share_w": 0.014894
+          },
+          "2": {
+            "share": 0.000798,
+            "share_w": 0.001476
+          }
+        }
+      },
+      "empstat_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.395084,
+        "valued_w": 0.411954,
+        "reasons": {
+          ".c": 0.604916
+        },
+        "reasons_w": {
+          ".c": 0.588046
+        },
+        "codes": {
+          "1": {
+            "share": 0.872192,
+            "share_w": 0.855083
+          },
+          "3": {
+            "share": 0.114117,
+            "share_w": 0.128547
+          },
+          "4": {
+            "share": 0.012894,
+            "share_w": 0.014894
+          },
+          "2": {
+            "share": 0.000798,
+            "share_w": 0.001476
+          }
+        }
+      },
+      "everattend": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.813618,
+        "valued_w": 0.813537,
+        "reasons": {
+          ".a": 0.00919,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.008218,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.980119,
+            "share_w": 0.975874
+          },
+          "0": {
+            "share": 0.019881,
+            "share_w": 0.024126
+          }
+        }
+      },
+      "eye_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.808996,
+        "valued_w": 0.808448,
+        "reasons": {
+          ".a": 0.013812,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.013307,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.852803,
+            "share_w": 0.851454
+          },
+          "2": {
+            "share": 0.12373,
+            "share_w": 0.12513
+          },
+          "3": {
+            "share": 0.022688,
+            "share_w": 0.022563
+          },
+          "4": {
+            "share": 0.000779,
+            "share_w": 0.000853
+          }
+        }
+      },
+      "hear_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.809364,
+        "valued_w": 0.808786,
+        "reasons": {
+          ".a": 0.013444,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.012969,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.877332,
+            "share_w": 0.884568
+          },
+          "2": {
+            "share": 0.102813,
+            "share_w": 0.096817
+          },
+          "3": {
+            "share": 0.019271,
+            "share_w": 0.017927
+          },
+          "4": {
+            "share": 0.000584,
+            "share_w": 0.000688
+          }
+        }
+      },
+      "industry_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.383925,
+        "valued_w": 0.400618,
+        "reasons": {
+          ".c": 0.616075
+        },
+        "reasons_w": {
+          ".c": 0.599382
+        },
+        "distinct": 13
+      },
+      "industry_orig_year": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.383925,
+        "valued_w": 0.400618,
+        "reasons": {
+          ".c": 0.616075
+        },
+        "reasons_w": {
+          ".c": 0.599382
+        },
+        "distinct": 13
+      },
+      "lstatus": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.822808,
+        "valued_w": 0.821755,
+        "reasons": {
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.483485,
+            "share_w": 0.505599
+          },
+          "3": {
+            "share": 0.463731,
+            "share_w": 0.433038
+          },
+          "2": {
+            "share": 0.052784,
+            "share_w": 0.061363
+          }
+        }
+      },
+      "lstatus_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.822808,
+        "valued_w": 0.821755,
+        "reasons": {
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.483485,
+            "share_w": 0.505599
+          },
+          "3": {
+            "share": 0.463731,
+            "share_w": 0.433038
+          },
+          "2": {
+            "share": 0.052784,
+            "share_w": 0.061363
+          }
+        }
+      },
+      "mineducatage": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 16.0,
+        "p5": 16.0,
+        "p50": 16.0,
+        "p95": 16.0,
+        "min": 16.0,
+        "max": 16.0,
+        "mean_w": 16.0,
+        "p50_w": 16.0
+      },
+      "minlaborage": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.822808,
+        "valued_w": 0.821755,
+        "reasons": {
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".c": 0.178245
+        },
+        "mean": 16.0,
+        "p5": 16.0,
+        "p50": 16.0,
+        "p95": 16.0,
+        "min": 16.0,
+        "max": 16.0,
+        "mean_w": 16.0,
+        "p50_w": 16.0
+      },
+      "minlaborage_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.822808,
+        "valued_w": 0.821755,
+        "reasons": {
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".c": 0.178245
+        },
+        "mean": 16.0,
+        "p5": 16.0,
+        "p50": 16.0,
+        "p95": 16.0,
+        "min": 16.0,
+        "max": 16.0,
+        "mean_w": 16.0,
+        "p50_w": 16.0
+      },
+      "nlfreason": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.381561,
+        "valued_w": 0.355851,
+        "reasons": {
+          ".c": 0.618439
+        },
+        "reasons_w": {
+          ".c": 0.644149
+        },
+        "codes": {
+          "3": {
+            "share": 0.716262,
+            "share_w": 0.679441
+          },
+          "1": {
+            "share": 0.170532,
+            "share_w": 0.176151
+          },
+          "2": {
+            "share": 0.043906,
+            "share_w": 0.053008
+          },
+          "4": {
+            "share": 0.041291,
+            "share_w": 0.055725
+          },
+          "5": {
+            "share": 0.028009,
+            "share_w": 0.035675
+          }
+        }
+      },
+      "occup_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.386445,
+        "valued_w": 0.405978,
+        "reasons": {
+          ".c": 0.613555
+        },
+        "reasons_w": {
+          ".c": 0.594022
+        },
+        "distinct": 41
+      },
+      "occup_orig_year": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 0.386445,
+        "valued_w": 0.405978,
+        "reasons": {
+          ".c": 0.613555
+        },
+        "reasons_w": {
+          ".c": 0.594022
+        },
+        "distinct": 41
+      },
+      "ownhouse": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.699814,
+            "share_w": 0.613558
+          },
+          "2": {
+            "share": 0.285298,
+            "share_w": 0.368123
+          },
+          "3": {
+            "share": 0.014889,
+            "share_w": 0.018318
+          }
+        }
+      },
+      "rooms": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 4.305727,
+        "p5": 2.0,
+        "p50": 4.0,
+        "p95": 6.0,
+        "min": 1.0,
+        "max": 6.0,
+        "mean_w": 4.108746,
+        "p50_w": 4.0
+      },
+      "unempldur_l": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.014153,
+        "valued_w": 0.015429,
+        "reasons": {
+          ".c": 0.985847
+        },
+        "reasons_w": {
+          ".c": 0.984571
+        },
+        "mean": 16.124304,
+        "p5": 0.0,
+        "p50": 9.0,
+        "p95": 60.0,
+        "min": 0.0,
+        "max": 60.0,
+        "mean_w": 15.113125,
+        "p50_w": 8.0
+      },
+      "unempldur_l_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.014153,
+        "valued_w": 0.015429,
+        "reasons": {
+          ".c": 0.985847
+        },
+        "reasons_w": {
+          ".c": 0.984571
+        },
+        "mean": 16.124304,
+        "p5": 0.0,
+        "p50": 9.0,
+        "p95": 60.0,
+        "min": 0.0,
+        "max": 60.0,
+        "mean_w": 15.113125,
+        "p50_w": 8.0
+      },
+      "unempldur_u": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.014153,
+        "valued_w": 0.015429,
+        "reasons": {
+          ".c": 0.985847
+        },
+        "reasons_w": {
+          ".c": 0.984571
+        },
+        "mean": 16.124304,
+        "p5": 0.0,
+        "p50": 9.0,
+        "p95": 60.0,
+        "min": 0.0,
+        "max": 60.0,
+        "mean_w": 15.113125,
+        "p50_w": 8.0
+      },
+      "unempldur_u_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.014153,
+        "valued_w": 0.015429,
+        "reasons": {
+          ".c": 0.985847
+        },
+        "reasons_w": {
+          ".c": 0.984571
+        },
+        "mean": 16.124304,
+        "p5": 0.0,
+        "p50": 9.0,
+        "p95": 60.0,
+        "min": 0.0,
+        "max": 60.0,
+        "mean_w": 15.113125,
+        "p50_w": 8.0
+      },
+      "walk_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.809521,
+        "valued_w": 0.808941,
+        "reasons": {
+          ".a": 0.013287,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".a": 0.012814,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.857115,
+            "share_w": 0.855978
+          },
+          "2": {
+            "share": 0.091375,
+            "share_w": 0.091262
+          },
+          "3": {
+            "share": 0.046904,
+            "share_w": 0.048137
+          },
+          "4": {
+            "share": 0.004606,
+            "share_w": 0.004623
+          }
+        }
+      },
+      "welfshprtype": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "whours": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.386262,
+        "valued_w": 0.402909,
+        "reasons": {
+          ".c": 0.613738
+        },
+        "reasons_w": {
+          ".c": 0.597091
+        },
+        "mean": 38.030523,
+        "p5": 20.0,
+        "p50": 38.0,
+        "p95": 55.0,
+        "min": 1.0,
+        "max": 97.0,
+        "mean_w": 38.007412,
+        "p50_w": 38.0
+      },
+      "whours_2": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.012525,
+        "valued_w": 0.013039,
+        "reasons": {
+          ".c": 0.987475
+        },
+        "reasons_w": {
+          ".c": 0.986961
+        },
+        "mean": 12.171908,
+        "p5": 2.0,
+        "p50": 10.0,
+        "p95": 35.0,
+        "min": 1.0,
+        "max": 50.0,
+        "mean_w": 12.184836,
+        "p50_w": 10.0
+      },
+      "whours_2_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.012525,
+        "valued_w": 0.013039,
+        "reasons": {
+          ".c": 0.987475
+        },
+        "reasons_w": {
+          ".c": 0.986961
+        },
+        "mean": 12.171908,
+        "p5": 2.0,
+        "p50": 10.0,
+        "p95": 35.0,
+        "min": 1.0,
+        "max": 50.0,
+        "mean_w": 12.184836,
+        "p50_w": 10.0
+      },
+      "whours_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.386262,
+        "valued_w": 0.402909,
+        "reasons": {
+          ".c": 0.613738
+        },
+        "reasons_w": {
+          ".c": 0.597091
+        },
+        "mean": 38.030523,
+        "p5": 20.0,
+        "p50": 38.0,
+        "p95": 55.0,
+        "min": 1.0,
+        "max": 97.0,
+        "mean_w": 38.007412,
+        "p50_w": 38.0
+      },
+      "industrycat4": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.383925,
+        "valued_w": 0.400618,
+        "reasons": {
+          ".c": 0.616075
+        },
+        "reasons_w": {
+          ".c": 0.599382
+        },
+        "codes": {
+          "3": {
+            "share": 0.460228,
+            "share_w": 0.472792
+          },
+          "4": {
+            "share": 0.288284,
+            "share_w": 0.274115
+          },
+          "2": {
+            "share": 0.221531,
+            "share_w": 0.223728
+          },
+          "1": {
+            "share": 0.029957,
+            "share_w": 0.029364
+          }
+        }
+      },
+      "occup": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.386445,
+        "valued_w": 0.405978,
+        "reasons": {
+          ".c": 0.613555
+        },
+        "reasons_w": {
+          ".c": 0.594022
+        },
+        "codes": {
+          "2": {
+            "share": 0.250595,
+            "share_w": 0.252222
+          },
+          "3": {
+            "share": 0.190868,
+            "share_w": 0.18357
+          },
+          "5": {
+            "share": 0.127336,
+            "share_w": 0.126777
+          },
+          "7": {
+            "share": 0.091934,
+            "share_w": 0.094823
+          },
+          "4": {
+            "share": 0.086567,
+            "share_w": 0.080167
+          },
+          "9": {
+            "share": 0.081538,
+            "share_w": 0.087162
+          },
+          "1": {
+            "share": 0.07189,
+            "share_w": 0.075133
+          },
+          "8": {
+            "share": 0.066318,
+            "share_w": 0.067301
+          },
+          "6": {
+            "share": 0.02616,
+            "share_w": 0.026457
+          },
+          "10": {
+            "share": 0.006795,
+            "share_w": 0.006386
+          }
+        }
+      },
+      "wage_nc": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.344905,
+        "valued_w": 0.352863,
+        "reasons": {
+          ".c": 0.655095
+        },
+        "reasons_w": {
+          ".c": 0.647137
+        },
+        "mean": 39211.164065,
+        "p5": 6684.0,
+        "p50": 34080.0,
+        "p95": 83293.0,
+        "min": 0.0,
+        "max": 1009960.0,
+        "mean_w": 38660.536327,
+        "p50_w": 33310.0
+      },
+      "unitwage": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.344589,
+        "valued_w": 0.352255,
+        "reasons": {
+          ".c": 0.655411
+        },
+        "reasons_w": {
+          ".c": 0.647745
+        },
+        "codes": {
+          "8": {
+            "share": 1.0,
+            "share_w": 1.0
+          }
+        }
+      },
+      "wage_total": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.344589,
+        "valued_w": 0.352255,
+        "reasons": {
+          ".c": 0.655411
+        },
+        "reasons_w": {
+          ".c": 0.647745
+        },
+        "mean": 39242.263964,
+        "p5": 6782.0,
+        "p50": 34090.0,
+        "p95": 83299.0,
+        "min": 0.0,
+        "max": 1009960.0,
+        "mean_w": 38717.043777,
+        "p50_w": 33330.0
+      },
+      "wmonths": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.397815,
+        "valued_w": 0.415478,
+        "reasons": {
+          ".c": 0.602185
+        },
+        "reasons_w": {
+          ".c": 0.584522
+        },
+        "mean": 11.247525,
+        "p5": 4.0,
+        "p50": 12.0,
+        "p95": 12.0,
+        "min": 0.0,
+        "max": 12.0,
+        "mean_w": 11.160105,
+        "p50_w": 12.0
+      },
+      "wmonths_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.397815,
+        "valued_w": 0.415478,
+        "reasons": {
+          ".c": 0.602185
+        },
+        "reasons_w": {
+          ".c": 0.584522
+        },
+        "mean": 11.247525,
+        "p5": 4.0,
+        "p50": 12.0,
+        "p95": 12.0,
+        "min": 0.0,
+        "max": 12.0,
+        "mean_w": 11.160105,
+        "p50_w": 12.0
+      },
+      "laborincome": {
+        "kind": "numeric",
+        "rows": 38083,
+        "valued": 0.822808,
+        "valued_w": 0.821755,
+        "reasons": {
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".c": 0.178245
+        },
+        "mean": 20129.097176,
+        "p5": 0.0,
+        "p50": 5990.0,
+        "p95": 67623.0,
+        "min": -208340.0,
+        "max": 1011100.0,
+        "mean_w": 20720.623556,
+        "p50_w": 8180.0
+      },
+      "educat5": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.813618,
+        "valued_w": 0.813537,
+        "reasons": {
+          ".b": 0.00919,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 0.008218,
+          ".c": 0.178245
+        },
+        "codes": {
+          "4": {
+            "share": 0.412103,
+            "share_w": 0.3921
+          },
+          "5": {
+            "share": 0.343779,
+            "share_w": 0.344153
+          },
+          "3": {
+            "share": 0.224238,
+            "share_w": 0.23962
+          },
+          "1": {
+            "share": 0.019881,
+            "share_w": 0.024126
+          }
+        }
+      },
+      "educat4": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.813618,
+        "valued_w": 0.813537,
+        "reasons": {
+          ".b": 0.00919,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 0.008218,
+          ".c": 0.178245
+        },
+        "codes": {
+          "3": {
+            "share": 0.562014,
+            "share_w": 0.550199
+          },
+          "4": {
+            "share": 0.343779,
+            "share_w": 0.344153
+          },
+          "2": {
+            "share": 0.074326,
+            "share_w": 0.081522
+          },
+          "1": {
+            "share": 0.019881,
+            "share_w": 0.024126
+          }
+        }
+      },
+      "primarycomp": {
+        "kind": "coded",
+        "rows": 38083,
+        "valued": 0.813618,
+        "valued_w": 0.813537,
+        "reasons": {
+          ".b": 0.00919,
+          ".c": 0.177192
+        },
+        "reasons_w": {
+          ".b": 0.008218,
+          ".c": 0.178245
+        },
+        "codes": {
+          "1": {
+            "share": 0.980119,
+            "share_w": 0.975874
+          },
+          "0": {
+            "share": 0.019881,
+            "share_w": 0.024126
+          }
+        }
+      },
+      "hhid": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 17423
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 17423
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 38083
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 38083
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "age-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "age storage type",
+      "detail": ""
+    },
+    {
+      "id": "age-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "age outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "agecat-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "agecat"
+      ],
+      "n_flagged": null,
+      "base": 38083,
+      "share": null,
+      "description": "agecat storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "car-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "car"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "car storage type",
+      "detail": ""
+    },
+    {
+      "id": "car-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "car"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "car outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "childmth-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childmth"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "childmth storage type",
+      "detail": ""
+    },
+    {
+      "id": "childmth-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childmth"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "childmth outside [0, 59]",
+      "detail": ""
+    },
+    {
+      "id": "childyr-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "childyr storage type",
+      "detail": ""
+    },
+    {
+      "id": "childyr-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "childyr outside [0, 5]",
+      "detail": ""
+    },
+    {
+      "id": "comm_dsablty-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "comm_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "comm_dsablty storage type",
+      "detail": ""
+    },
+    {
+      "id": "comm_dsablty-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "comm_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "comm_dsablty outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "computer-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "computer"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "computer storage type",
+      "detail": ""
+    },
+    {
+      "id": "computer-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "computer"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "computer outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "conc_dsord-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "conc_dsord"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "conc_dsord storage type",
+      "detail": ""
+    },
+    {
+      "id": "conc_dsord-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "conc_dsord"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "conc_dsord outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "contract-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "contract storage type",
+      "detail": ""
+    },
+    {
+      "id": "contract-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "contract outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "contract_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "contract_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "contract_year-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "contract_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "contract_year outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "countrycode-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "countrycode"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "countrycode storage type",
+      "detail": ""
+    },
+    {
+      "id": "dweltyp-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "dweltyp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "dweltyp storage type",
+      "detail": ""
+    },
+    {
+      "id": "dweltyp-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "dweltyp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "dweltyp outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat4-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat4 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat4-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat4 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat5-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat5 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat5-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat5 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "educat7-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat7 storage type",
+      "detail": ""
+    },
+    {
+      "id": "educat7-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat7 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "empstat-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "empstat storage type",
+      "detail": ""
+    },
+    {
+      "id": "empstat-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "empstat outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "empstat_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "empstat_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "empstat_year-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "empstat_year outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "everattend-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "everattend"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "everattend storage type",
+      "detail": ""
+    },
+    {
+      "id": "everattend-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "everattend"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "everattend outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "eye_dsablty-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "eye_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "eye_dsablty storage type",
+      "detail": ""
+    },
+    {
+      "id": "eye_dsablty-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "eye_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "eye_dsablty outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "hear_dsablty-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hear_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hear_dsablty storage type",
+      "detail": ""
+    },
+    {
+      "id": "hear_dsablty-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hear_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hear_dsablty outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "hhid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hhid storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hhid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "hsize-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hsize storage type",
+      "detail": ""
+    },
+    {
+      "id": "hsize-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hsize outside [1, 100]",
+      "detail": ""
+    },
+    {
+      "id": "industrycat4-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat4"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "industrycat4 storage type",
+      "detail": ""
+    },
+    {
+      "id": "industrycat4-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industrycat4"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "industrycat4 outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "industry_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industry_orig"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "industry_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "industry_orig_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "industry_orig_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "industry_orig_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "int_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "int_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "laborincome-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "laborincome"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "laborincome storage type",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "lstatus storage type",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "lstatus outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "lstatus_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "lstatus_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "lstatus_year-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "lstatus_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "lstatus_year outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "male-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "male storage type",
+      "detail": ""
+    },
+    {
+      "id": "male-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "male outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "marital-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "marital storage type",
+      "detail": ""
+    },
+    {
+      "id": "marital-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "marital outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "mineducatage-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "mineducatage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "mineducatage storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "minlaborage storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "minlaborage outside [0, 20]",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "minlaborage_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "minlaborage_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "minlaborage_year outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "nlfreason-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "nlfreason"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "nlfreason storage type",
+      "detail": ""
+    },
+    {
+      "id": "nlfreason-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "nlfreason"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "nlfreason outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "occup-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "occup storage type",
+      "detail": ""
+    },
+    {
+      "id": "occup-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "occup outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "occup_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup_orig"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "occup_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "occup_orig_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "occup_orig_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "occup_orig_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "ownhouse-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ownhouse"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "ownhouse storage type",
+      "detail": ""
+    },
+    {
+      "id": "ownhouse-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "ownhouse"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "ownhouse outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "pid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "pid storage type",
+      "detail": ""
+    },
+    {
+      "id": "pid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "pid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "primarycomp storage type",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "primarycomp outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "psu-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "psu"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "psu storage type",
+      "detail": ""
+    },
+    {
+      "id": "rooms-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "rooms"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "rooms storage type",
+      "detail": ""
+    },
+    {
+      "id": "school-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "school"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "school storage type",
+      "detail": ""
+    },
+    {
+      "id": "school-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "school"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "school outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "strata-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "strata"
+      ],
+      "n_flagged": null,
+      "base": 38083,
+      "share": null,
+      "description": "strata storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "subnatid1-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": null,
+      "base": 38083,
+      "share": null,
+      "description": "subnatid1 storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "subnatidsurvey-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "n_flagged": null,
+      "base": 38083,
+      "share": null,
+      "description": "subnatidsurvey storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "unempldur_l-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_l storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_l-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_l outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_l_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_l_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_l_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_l_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_l_year outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_u storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_u outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_u_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "unempldur_u_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unempldur_u_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unempldur_u_year outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "unitwage-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unitwage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unitwage storage type",
+      "detail": ""
+    },
+    {
+      "id": "unitwage-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "unitwage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "unitwage outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "urban-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "urban"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "urban storage type",
+      "detail": ""
+    },
+    {
+      "id": "urban-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "urban"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "urban outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "wage_nc-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wage_nc"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wage_nc storage type",
+      "detail": ""
+    },
+    {
+      "id": "wage_total-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wage_total"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wage_total storage type",
+      "detail": ""
+    },
+    {
+      "id": "walk_dsablty-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "walk_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "walk_dsablty storage type",
+      "detail": ""
+    },
+    {
+      "id": "walk_dsablty-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "walk_dsablty"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "walk_dsablty outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "weight-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "weight storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfare-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "welfare storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfare-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "welfare outside [0, 1000000000]",
+      "detail": ""
+    },
+    {
+      "id": "welfaretype-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfaretype"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "welfaretype storage type",
+      "detail": ""
+    },
+    {
+      "id": "welfshprtype-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "welfshprtype storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours outside [0, 168]",
+      "detail": ""
+    },
+    {
+      "id": "whours_2-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_2"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_2 storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours_2-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_2"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_2 outside [0, 168]",
+      "detail": ""
+    },
+    {
+      "id": "whours_2_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_2_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_2_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours_2_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_2_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_2_year outside [0, 168]",
+      "detail": ""
+    },
+    {
+      "id": "whours_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "whours_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "whours_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "whours_year outside [0, 168]",
+      "detail": ""
+    },
+    {
+      "id": "wmonths-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wmonths storage type",
+      "detail": ""
+    },
+    {
+      "id": "wmonths-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wmonths outside [0, 12]",
+      "detail": ""
+    },
+    {
+      "id": "wmonths_year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wmonths_year storage type",
+      "detail": ""
+    },
+    {
+      "id": "wmonths_year-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "wmonths_year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "wmonths_year outside [0, 12]",
+      "detail": ""
+    },
+    {
+      "id": "year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "year storage type",
+      "detail": ""
+    },
+    {
+      "id": "weight-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Weight is not constant within household.",
+      "detail": ""
+    },
+    {
+      "id": "welfare-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is not numeric.",
+      "detail": ""
+    },
+    {
+      "id": "welfare-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfare"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "welfare has negative values.",
+      "detail": ""
+    },
+    {
+      "id": "welfaretype-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfaretype"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is different from INC, CONS or EXP.",
+      "detail": ""
+    },
+    {
+      "id": "welfshprtype-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is different from INC, CONS or EXP.",
+      "detail": ""
+    },
+    {
+      "id": "hsize-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "More household members than indicated by household size",
+      "detail": ""
+    },
+    {
+      "id": "hsize-2",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 12,
+      "base": 38083,
+      "share": 0.0003,
+      "description": "Less household members than indicated by household size",
+      "detail": ""
+    },
+    {
+      "id": "hsize-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hsize is equal to zero or negative.",
+      "detail": ""
+    },
+    {
+      "id": "hsize-4",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hsize"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "hsize contain missings.",
+      "detail": ""
+    },
+    {
+      "id": "educat4-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat4",
+        "educat5"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat4 does not match with educat5",
+      "detail": ""
+    },
+    {
+      "id": "educat5-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "educat5 does not match with educat7",
+      "detail": ""
+    },
+    {
+      "id": "educat7-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is not an integer in the range [1,7].",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat5",
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Inconsistent with educat5 level of education",
+      "detail": ""
+    },
+    {
+      "id": "primarycomp-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "educat7",
+        "primarycomp"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Inconsistent with educat7 level of education",
+      "detail": ""
+    },
+    {
+      "id": "year-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Year is not a four digit number.",
+      "detail": ""
+    },
+    {
+      "id": "subnatid1-2",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": 38083,
+      "base": 38083,
+      "share": 1.0,
+      "description": "It is not if the form [0-9]-[a-z]",
+      "detail": "",
+      "samples": [
+        {
+          "value": "<missing>",
+          "rows": 38083
+        }
+      ]
+    },
+    {
+      "id": "strata-1",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "strata"
+      ],
+      "n_flagged": null,
+      "base": 38083,
+      "share": null,
+      "description": "It is not numeric.",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "age-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Variable is neither an integer or zero",
+      "detail": ""
+    },
+    {
+      "id": "marital-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Classified as married for a child younger than 6 years old",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat",
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "lstatus equal to employed without employment type defined in empstat",
+      "detail": ""
+    },
+    {
+      "id": "lstatus-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "lstatus",
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is not missing for individuals less than the required age (MINLABORAGE)",
+      "detail": ""
+    },
+    {
+      "id": "minlaborage-1",
+      "kind": "base",
+      "status": "flagged",
+      "implicates": [
+        "minlaborage"
+      ],
+      "n_flagged": 6748,
+      "base": 38083,
+      "share": 0.1772,
+      "description": "It is not an integer",
+      "detail": "",
+      "samples": [
+        {
+          "value": "<missing>",
+          "rows": 6748
+        }
+      ]
+    },
+    {
+      "id": "empstat-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "empstat",
+        "lstatus"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "Employment type is defined but lstatus is not.",
+      "detail": ""
+    },
+    {
+      "id": "empstat-3",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "empstat",
+        "minlaborage"
+      ],
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "It is not missing for individuals less than the required age (MINLABORAGE)",
+      "detail": ""
+    },
+    {
+      "id": "childmth-universe",
+      "kind": "universe",
+      "implicates": [
+        "childmth"
+      ],
+      "gate": "VAR-age < 5",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 36539,
+        "inside": 1544,
+        "undetermined": 0
+      },
+      "expression": "(age < 5)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "childyr-universe",
+      "kind": "universe",
+      "implicates": [
+        "childyr"
+      ],
+      "gate": "VAR-age < 5",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 36539,
+        "inside": 1544,
+        "undetermined": 0
+      },
+      "expression": "(age < 5)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "contract-universe",
+      "kind": "universe",
+      "implicates": [
+        "contract"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 2027,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 2027
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.133795
+      }
+    },
+    {
+      "id": "contract_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "contract_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 2027,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 2027
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.133795
+      }
+    },
+    {
+      "id": "educat4-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat4"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "educat5-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat5"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "educat7-universe",
+      "kind": "universe",
+      "implicates": [
+        "educat7"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "empstat-universe",
+      "kind": "universe",
+      "implicates": [
+        "empstat"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 104,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 104
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.006865
+      }
+    },
+    {
+      "id": "empstat_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "empstat_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 104,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 104
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.006865
+      }
+    },
+    {
+      "id": "industry_orig-universe",
+      "kind": "universe",
+      "implicates": [
+        "industry_orig"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 529,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 529
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.034917
+      }
+    },
+    {
+      "id": "industry_orig_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "industry_orig_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 529,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 529
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.034917
+      }
+    },
+    {
+      "id": "industrycat4-universe",
+      "kind": "universe",
+      "implicates": [
+        "industrycat4"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 529,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 529
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.034917
+      }
+    },
+    {
+      "id": "lstatus-universe",
+      "kind": "universe",
+      "implicates": [
+        "lstatus"
+      ],
+      "gate": "VAR-age >= PARAM-LBR-MIN-LABOR-AGE",
+      "parameters": {
+        "PARAM-LBR-MIN-LABOR-AGE": {
+          "value": 16,
+          "from": "output column minlaborage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "lstatus_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "lstatus_year"
+      ],
+      "gate": "VAR-age >= PARAM-LBR-MIN-LABOR-AGE-YEAR",
+      "parameters": {
+        "PARAM-LBR-MIN-LABOR-AGE-YEAR": {
+          "value": 16,
+          "from": "output column minlaborage_year"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "nlfreason-universe",
+      "kind": "universe",
+      "implicates": [
+        "nlfreason"
+      ],
+      "gate": "VAR-lstatus == 3",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 16804,
+        "inside": 14531,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 3)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "occup-universe",
+      "kind": "universe",
+      "implicates": [
+        "occup"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 433,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 433
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.028581
+      }
+    },
+    {
+      "id": "occup_orig-universe",
+      "kind": "universe",
+      "implicates": [
+        "occup_orig"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 433,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 433
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.028581
+      }
+    },
+    {
+      "id": "occup_orig_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "occup_orig_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 433,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 433
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.028581
+      }
+    },
+    {
+      "id": "primarycomp-universe",
+      "kind": "universe",
+      "implicates": [
+        "primarycomp"
+      ],
+      "gate": "VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE",
+      "parameters": {
+        "PARAM-EDU-MIN-EDUCATION-AGE": {
+          "value": 16,
+          "from": "output column mineducatage"
+        }
+      },
+      "status": "flagged",
+      "n_flagged": 78,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 78
+      },
+      "bases": {
+        "outside": 6670,
+        "inside": 31413,
+        "undetermined": 0
+      },
+      "expression": "(age >= 16)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.002483
+      }
+    },
+    {
+      "id": "unempldur_l-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_l"
+      ],
+      "gate": "VAR-lstatus == 2",
+      "status": "flagged",
+      "n_flagged": 1115,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 1115
+      },
+      "bases": {
+        "outside": 29681,
+        "inside": 1654,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 2)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.674123
+      }
+    },
+    {
+      "id": "unempldur_l_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_l_year"
+      ],
+      "gate": "VAR-lstatusyear == 2",
+      "status": "flagged",
+      "n_flagged": 1115,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 1115
+      },
+      "bases": {
+        "outside": 29681,
+        "inside": 1654,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 2)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.674123
+      }
+    },
+    {
+      "id": "unempldur_u-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_u"
+      ],
+      "gate": "VAR-lstatus == 2",
+      "status": "flagged",
+      "n_flagged": 1115,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 1115
+      },
+      "bases": {
+        "outside": 29681,
+        "inside": 1654,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 2)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.674123
+      }
+    },
+    {
+      "id": "unempldur_u_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "unempldur_u_year"
+      ],
+      "gate": "VAR-lstatusyear == 2",
+      "status": "flagged",
+      "n_flagged": 1115,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 1115
+      },
+      "bases": {
+        "outside": 29681,
+        "inside": 1654,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 2)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.674123
+      }
+    },
+    {
+      "id": "unitwage-universe",
+      "kind": "universe",
+      "implicates": [
+        "unitwage"
+      ],
+      "gate": "VAR-lstatus == 1 and VAR-empstat == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 1923,
+        "inside": 13123,
+        "undetermined": 23037
+      },
+      "expression": "(lstatus == 1) and (empstat == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "wage_nc-universe",
+      "kind": "universe",
+      "implicates": [
+        "wage_nc"
+      ],
+      "gate": "VAR-lstatus == 1 and VAR-empstat <= 2",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 1911,
+        "inside": 13135,
+        "undetermined": 23037
+      },
+      "expression": "(lstatus == 1) and (empstat <= 2)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "wage_total-universe",
+      "kind": "universe",
+      "implicates": [
+        "wage_total"
+      ],
+      "gate": "VAR-lstatus == 1 and VAR-empstat == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 1923,
+        "inside": 13123,
+        "undetermined": 23037
+      },
+      "expression": "(lstatus == 1) and (empstat == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "whours-universe",
+      "kind": "universe",
+      "implicates": [
+        "whours"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 440,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 440
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.029043
+      }
+    },
+    {
+      "id": "whours_2-universe",
+      "kind": "universe",
+      "implicates": [
+        "whours_2"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "flagged",
+      "n_flagged": 14673,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 14673
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.968515
+      }
+    },
+    {
+      "id": "whours_2_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "whours_2_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 14673,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 14673
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.968515
+      }
+    },
+    {
+      "id": "whours_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "whours_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "flagged",
+      "n_flagged": 440,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 440
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.029043
+      }
+    },
+    {
+      "id": "wmonths-universe",
+      "kind": "universe",
+      "implicates": [
+        "wmonths"
+      ],
+      "gate": "VAR-lstatus == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "wmonths_year-universe",
+      "kind": "universe",
+      "implicates": [
+        "wmonths_year"
+      ],
+      "gate": "VAR-lstatusyear == 1",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 16185,
+        "inside": 15150,
+        "undetermined": 6748
+      },
+      "expression": "(lstatus_year == 1)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "educat4-derivation",
+      "kind": "derivation",
+      "implicates": [
+        "educat4",
+        "educat7"
+      ],
+      "rule": "educat4 = recode(educat7)",
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 30985,
+      "share": 0.0,
+      "child_empty_where_parent_maps": 0
+    },
+    {
+      "id": "educat5-derivation",
+      "kind": "derivation",
+      "implicates": [
+        "educat5",
+        "educat7"
+      ],
+      "rule": "educat5 = recode(educat7)",
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 30985,
+      "share": 0.0,
+      "child_empty_where_parent_maps": 0
+    },
+    {
+      "id": "pid-unique",
+      "kind": "relational",
+      "implicates": [
+        "pid"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 38083,
+      "share": 0.0,
+      "description": "pid repeats across the output's rows"
+    },
+    {
+      "id": "car-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "car"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "car differs within a household"
+    },
+    {
+      "id": "computer-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "computer"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "computer differs within a household"
+    },
+    {
+      "id": "dweltyp-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "dweltyp"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "dweltyp differs within a household"
+    },
+    {
+      "id": "hhid_orig-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "hhid_orig differs within a household"
+    },
+    {
+      "id": "hsize-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hsize"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "hsize differs within a household"
+    },
+    {
+      "id": "int_year-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "int_year"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "int_year differs within a household"
+    },
+    {
+      "id": "ownhouse-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "ownhouse"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "ownhouse differs within a household"
+    },
+    {
+      "id": "psu-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "psu"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "psu differs within a household"
+    },
+    {
+      "id": "rooms-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "rooms"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "rooms differs within a household"
+    },
+    {
+      "id": "strata-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "strata"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "strata differs within a household"
+    },
+    {
+      "id": "subnatid1-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatid1"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "subnatid1 differs within a household"
+    },
+    {
+      "id": "subnatidsurvey-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "subnatidsurvey differs within a household"
+    },
+    {
+      "id": "urban-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "urban"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "urban differs within a household"
+    },
+    {
+      "id": "weight-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "weight"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "weight differs within a household"
+    },
+    {
+      "id": "welfare-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfare"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "welfare differs within a household"
+    },
+    {
+      "id": "welfaretype-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfaretype"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "welfaretype differs within a household"
+    },
+    {
+      "id": "welfshprtype-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "welfshprtype"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 17423,
+      "share": 0.0,
+      "description": "welfshprtype differs within a household"
+    }
+  ],
+  "reference": {
+    "path": "FRA_2025_EU-SILC_v01_M_v01_A_GMD_ALL.dta",
+    "found_by": "given",
+    "sha256": "cc5eebd6367d1eeab4d28dcef1234577a7503d2df52bb9032ae234cd4fa5ead2"
+  },
+  "comparison": {
+    "alignment": {
+      "key": {
+        "ours": [
+          "hhid",
+          "pid"
+        ],
+        "theirs": [
+          "hhid",
+          "pid"
+        ]
+      },
+      "matched": 38083,
+      "ours_rows": 38083,
+      "theirs_rows": 38083,
+      "ours_only": 0,
+      "theirs_only": 0
+    },
+    "weighted": true,
+    "summary": {
+      "shared": 68,
+      "median_agreement": 1.0,
+      "ours_only": 1,
+      "theirs_only": 2,
+      "ranked": [
+        "marital",
+        "countrycode",
+        "year",
+        "int_year",
+        "urban",
+        "subnatid1",
+        "subnatidsurvey",
+        "psu",
+        "strata",
+        "male",
+        "school",
+        "educat7",
+        "hsize",
+        "welfaretype",
+        "welfare",
+        "age",
+        "agecat",
+        "car",
+        "childmth",
+        "childyr",
+        "comm_dsablty",
+        "computer",
+        "conc_dsord",
+        "contract",
+        "contract_year",
+        "dweltyp",
+        "empstat",
+        "empstat_year",
+        "everattend",
+        "eye_dsablty",
+        "hear_dsablty",
+        "industry_orig",
+        "industry_orig_year",
+        "lstatus",
+        "lstatus_year",
+        "mineducatage",
+        "minlaborage",
+        "minlaborage_year",
+        "nlfreason",
+        "occup_orig",
+        "occup_orig_year",
+        "ownhouse",
+        "rooms",
+        "unempldur_l",
+        "unempldur_l_year",
+        "unempldur_u",
+        "unempldur_u_year",
+        "walk_dsablty",
+        "welfshprtype",
+        "whours",
+        "whours_2",
+        "whours_2_year",
+        "whours_year",
+        "industrycat4",
+        "occup",
+        "wage_nc",
+        "unitwage",
+        "wage_total",
+        "wmonths",
+        "wmonths_year",
+        "laborincome",
+        "educat5",
+        "educat4",
+        "primarycomp",
+        "hhid",
+        "hhid_orig",
+        "pid",
+        "pid_orig"
+      ]
+    },
+    "columns": {
+      "countrycode": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "int_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "urban": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "subnatid1": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 0,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 38083
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 1.0
+        },
+        "agreement": null,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".b / .": 38083
+        }
+      },
+      "subnatidsurvey": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 0,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 38083
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 1.0
+        },
+        "agreement": null,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".b / .": 38083
+        }
+      },
+      "psu": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "strata": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 0,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 38083
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 1.0
+        },
+        "agreement": null,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".b / .": 38083
+        }
+      },
+      "male": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "marital": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 42,
+          "differ": 31292,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6749,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.001103,
+          "differ": 0.821679,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177218,
+          "both_empty_other": 0.0
+        },
+        "agreement": 0.00134,
+        "disagreement": 0.821679,
+        "top_pairs": {
+          "1 / 2": 14101,
+          "2 / 1": 10071,
+          "3 / 1": 2966,
+          "4 / 3": 2263,
+          "5 / 4": 1881,
+          "3 / 4": 10
+        },
+        "tvd_w": 0.103563
+      },
+      "school": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 31332,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6751,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822729,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177271,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "educat7": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30985,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7098,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.813618,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.186382,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "hsize": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "welfaretype": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "welfare": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38038,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 45,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.998818,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.001182,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "age": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "agecat": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 0,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 38083
+        },
+        "shares": {
+          "agree": 0.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 1.0
+        },
+        "agreement": null,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 38083
+        }
+      },
+      "car": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 38081,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 2,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.999947,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 5.3e-05,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "childmth": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 1544,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 36539,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.040543,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.959457,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "childyr": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 1544,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 36539,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.040543,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.959457,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "comm_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30826,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7257,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.809443,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.190557,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "computer": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 38069,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 14,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.999632,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.000368,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "conc_dsord": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30813,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7270,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.809101,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.190899,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "contract": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 13123,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 24960,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.344589,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.655411,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "contract_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 13123,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 24960,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.344589,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.655411,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "dweltyp": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 37992,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 91,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.99761,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.00239,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "empstat": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 15046,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23037,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.395084,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.604916,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "empstat_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 15046,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23037,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.395084,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.604916,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "everattend": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30985,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7098,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.813618,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.186382,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "eye_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30809,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7274,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.808996,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.191004,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "hear_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30823,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7260,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.809364,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.190636,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "industry_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 14621,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 23462
+        },
+        "shares": {
+          "agree": 0.383925,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.616075
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 23462
+        }
+      },
+      "industry_orig_year": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 14621,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 23462
+        },
+        "shares": {
+          "agree": 0.383925,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.616075
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 23462
+        }
+      },
+      "lstatus": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 31335,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6748,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822808,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177192,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "lstatus_year": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 31335,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6748,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822808,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177192,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "mineducatage": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "minlaborage": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 31335,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6748,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822808,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177192,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "minlaborage_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 31335,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6748,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822808,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177192,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "nlfreason": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 14531,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23552,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.381561,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.618439,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "occup_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 14717,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 23366
+        },
+        "shares": {
+          "agree": 0.386445,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.613555
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 23366
+        }
+      },
+      "occup_orig_year": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 14717,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 23366
+        },
+        "shares": {
+          "agree": 0.386445,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.613555
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "reason_pairs": {
+          ".c / .": 23366
+        }
+      },
+      "ownhouse": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "rooms": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unempldur_l": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 539,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37544,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.014153,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.985847,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unempldur_l_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 539,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37544,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.014153,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.985847,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unempldur_u": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 539,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37544,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.014153,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.985847,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unempldur_u_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 539,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37544,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.014153,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.985847,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "walk_dsablty": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30829,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7254,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.809521,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.190479,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "welfshprtype": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "whours": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 14710,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23373,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.386262,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.613738,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "whours_2": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 477,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37606,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.012525,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.987475,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "whours_2_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 477,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 37606,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.012525,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.987475,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "whours_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 14710,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23373,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.386262,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.613738,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "industrycat4": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 14621,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23462,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.383925,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.616075,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "occup": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 14717,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 23366,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.386445,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.613555,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "wage_nc": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 13135,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 24948,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.344905,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.655095,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "unitwage": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 13123,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 24960,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.344589,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.655411,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "wage_total": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 13123,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 24960,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.344589,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.655411,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "wmonths": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 15150,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 22933,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.397815,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.602185,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "wmonths_year": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 15150,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 22933,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.397815,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.602185,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "laborincome": {
+        "kind": "numeric",
+        "rows": 38083,
+        "counts": {
+          "agree": 31335,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 6748,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.822808,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.177192,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "educat5": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30985,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7098,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.813618,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.186382,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "educat4": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30985,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7098,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.813618,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.186382,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "primarycomp": {
+        "kind": "coded",
+        "rows": 38083,
+        "counts": {
+          "agree": 30985,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 7098,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 0.813618,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.186382,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0,
+        "tvd_w": 0.0
+      },
+      "hhid": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 38083,
+        "counts": {
+          "agree": 38083,
+          "differ": 0,
+          "ours_value_only": 0,
+          "theirs_value_only": 0,
+          "both_empty_same": 0,
+          "both_empty_other": 0
+        },
+        "shares": {
+          "agree": 1.0,
+          "differ": 0.0,
+          "ours_value_only": 0.0,
+          "theirs_value_only": 0.0,
+          "both_empty_same": 0.0,
+          "both_empty_other": 0.0
+        },
+        "agreement": 1.0,
+        "disagreement": 0.0
+      }
+    },
+    "ours_only": {
+      "weight": 1.0
+    },
+    "theirs_only": {
+      "weight_h": 1.0,
+      "weight_p": 1.0
+    }
+  },
+  "summary": {
+    "rows": 38083,
+    "targets": 69,
+    "weighted": true,
+    "checks_applied": 185,
+    "checks_flagged": 27,
+    "by_kind": {
+      "base": {
+        "applied": 133,
+        "flagged": 3
+      },
+      "universe": {
+        "applied": 32,
+        "flagged": 24
+      },
+      "derivation": {
+        "applied": 2,
+        "flagged": 0
+      },
+      "relational": {
+        "applied": 18,
+        "flagged": 0
+      }
+    },
+    "universe_cells": {
+      "value_outside": 0,
+      "reason_outside_not_c": 0,
+      "c_inside": 42302
+    },
+    "derivation_mismatches": 0,
+    "reference": {
+      "matched": 38083,
+      "ours_rows": 38083,
+      "theirs_rows": 38083,
+      "key": {
+        "ours": [
+          "hhid",
+          "pid"
+        ],
+        "theirs": [
+          "hhid",
+          "pid"
+        ]
+      },
+      "shared": 68,
+      "median_agreement": 1.0
+    },
+    "line": "69 targets; 27/185 checks flagged; 42302 universe cells; median agreement 1.0 on 68 shared"
+  }
+}

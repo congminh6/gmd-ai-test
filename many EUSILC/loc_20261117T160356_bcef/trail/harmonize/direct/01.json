@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 274.9,
+ "usage": {
+  "input_token_count": 431965,
+  "output_token_count": 15831,
+  "total_token_count": 447796,
+  "reasoning_output_token_count": 4971
+ },
+ "tool_calls": 22,
+ "submitted": true,
+ "final_text": "Submitted `author_bindings` for `MOD-DEM` with:\n\n- Updated `PARAM-EDU-MIN-EDUCATION-AGE` to **15** (so education gates include age 15).\n- Added a small prelude to clean invalid age (`-1`) and derive `childyr` / `childmth` from age + birth year/month.\n- Added `missing_map.absent: \".c\"` for person-file (`silc24_p`) variables so roster persons not present in that file don’t produce NaNs.\n- Documented absences for disability, language, literacy, and relationship-to-head variables after searching.",
+ "said": [
+  "Submitted `author_bindings` for `MOD-DEM` with:\n\n- Updated `PARAM-EDU-MIN-EDUCATION-AGE` to **15** (so education gates include age 15).\n- Added a small prelude to clean invalid age (`-1`) and derive `childyr` / `childmth` from age + birth year/month.\n- Added `missing_map.absent: \".c\"` for person-file (`silc24_p`) variables so roster persons not present in that file don’t produce NaNs.\n- Documented absences for disability, language, literacy, and relationship-to-head variables after searching."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\01.jsonl"
+}

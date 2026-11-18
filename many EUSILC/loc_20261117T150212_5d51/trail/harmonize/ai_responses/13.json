@@ -1,0 +1,780 @@
+{
+ "request_id": "13-author_bindings-MOD-UTL",
+ "bindings": [
+  {
+   "binding_id": "B-centralacc",
+   "target": "VAR-centralacc",
+   "roles": {
+    "raw_value": "hh080",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 0,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Heating system categories show joint/central heating as code 2 (Radiator (Joint or central heating)). [t8]"
+  },
+  {
+   "binding_id": "B-piped",
+   "target": "VAR-piped",
+   "roles": {
+    "raw_value": "hh130",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "HH130 PIPED WATER SYSTEM in dwelling (1 Yes, 2 No). [t8]"
+  },
+  {
+   "binding_id": "B-pipedtoprem",
+   "target": "VAR-pipedtoprem",
+   "roles": {
+    "raw_value": "hh130",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Piped water system in dwelling implies on-premises piped water (1 Yes, 2 No). [t8]"
+  },
+  {
+   "binding_id": "B-toiletacc",
+   "target": "VAR-toiletacc",
+   "roles": {
+    "raw_value": "hh110",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "HH110 INDOOR FLUSHING TOILET in dwelling (codes 1/2 yes, 3 no) mapped to flush toilet access in premise vs none. [t8]"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-cellphoneexp",
+   "kind": "not_collected_by_design",
+   "reason": "No expenditure module; only phone possession (HH150/HH160) and arrears (HE020). No variable capturing annual cell phone spending.",
+   "searches": [
+    {
+     "terms": "cellphone exp / mobile phone expenditure",
+     "in": "silc24_h column index and housing conditions (HH150/HH160)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-centralexp",
+   "kind": "not_collected_by_design",
+   "reason": "Housing module has heating system type (HH080) but no monetary consumption for central heating.",
+   "searches": [
+    {
+     "terms": "central heating expenditure",
+     "in": "silc24_h (HH080, HH050)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-coalexp",
+   "kind": "not_collected_by_design",
+   "reason": "Heating system available includes stove that may use coal/gas/etc but no fuel-specific expenditures.",
+   "searches": [
+    {
+     "terms": "coal expenditure / fuel expenses breakdown",
+     "in": "silc24_h (HH080, HH050)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-commexp",
+   "kind": "not_collected_by_design",
+   "reason": "No telecom spending variables; only telephone/mobile/internet possession questions (HH150/HH160/HH190).",
+   "searches": [
+    {
+     "terms": "telecommunication expenditure / utility bills components",
+     "in": "silc24_h (HH150, HH160, HH190, HE020)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-cooksource",
+   "kind": "not_collected_by_design",
+   "reason": "No cooking fuel/source question in silc24_h.",
+   "searches": [
+    {
+     "terms": "cooking fuel / cook source",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dieselexp",
+   "kind": "not_collected_by_design",
+   "reason": "No diesel spending variable in silc24_h.",
+   "searches": [
+    {
+     "terms": "diesel expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dwelmatexp",
+   "kind": "not_collected_by_design",
+   "reason": "No separate materials-for-maintenance expenditure; HH050 is a broad monthly total including repair/tax etc.",
+   "searches": [
+    {
+     "terms": "dwelling maintenance materials expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dwelothsvcexp",
+   "kind": "not_collected_by_design",
+   "reason": "No itemized other dwelling services expenditure; only broad monthly total HH050.",
+   "searches": [
+    {
+     "terms": "other services relating to dwelling expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dwelsvcexp",
+   "kind": "not_collected_by_design",
+   "reason": "No itemized dwelling maintenance services expenditure; only broad monthly total HH050.",
+   "searches": [
+    {
+     "terms": "dwelling maintenance services expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-elecacc",
+   "kind": "not_collected_by_design",
+   "reason": "No electricity access/source question; HH080 stove category mentions electricity in examples but does not measure electricity access.",
+   "searches": [
+    {
+     "terms": "electricity access / connection",
+     "in": "silc24_h (search electric/electricity)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-elechracc",
+   "kind": "not_collected_by_design",
+   "reason": "No hours-per-day electricity availability question in silc24_h.",
+   "searches": [
+    {
+     "terms": "electricity availability hours/day",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-electricity",
+   "kind": "not_collected_by_design",
+   "reason": "No binary electricity-in-dwelling question in silc24_h.",
+   "searches": [
+    {
+     "terms": "electricity in dwelling",
+     "in": "silc24_h column index / search electricity"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-electyp",
+   "kind": "not_collected_by_design",
+   "reason": "No lighting/electricity type variable collected.",
+   "searches": [
+    {
+     "terms": "lighting type / electyp",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-elecxp",
+   "kind": "not_collected_by_design",
+   "reason": "No electricity expenditure; HH050 is broad monthly total and not separable.",
+   "searches": [
+    {
+     "terms": "electricity expenditure / utility bill amount",
+     "in": "silc24_h (HH050, HE020)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-garbageexp",
+   "kind": "not_collected_by_design",
+   "reason": "No garbage collection expenditure in silc24_h.",
+   "searches": [
+    {
+     "terms": "garbage / waste expenditure",
+     "in": "silc24_h column index (search waste/garbage/sewage)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-gas",
+   "kind": "not_collected_by_design",
+   "reason": "No gas connection/usage question; HH080 stove examples mention gas/natural gas but do not identify connection or primary use.",
+   "searches": [
+    {
+     "terms": "gas connection / natural gas",
+     "in": "silc24_h (HH080 codes, search gas)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-gasexp",
+   "kind": "not_collected_by_design",
+   "reason": "No gas expenditure variables; HH050 is broad monthly total.",
+   "searches": [
+    {
+     "terms": "gas expenditure / natural gas bill",
+     "in": "silc24_h (HH050, HH080)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-gasolineexp",
+   "kind": "not_collected_by_design",
+   "reason": "No gasoline expenditure variable in silc24_h.",
+   "searches": [
+    {
+     "terms": "gasoline expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-heatingexp",
+   "kind": "not_collected_by_design",
+   "reason": "No heating expenditure amount; only heating system type (HH080) and warmth adequacy (HE110).",
+   "searches": [
+    {
+     "terms": "heating expenditure / fuel expenses",
+     "in": "silc24_h (HH050, HH080, HE110)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-heatsource",
+   "kind": "not_collected_by_design",
+   "reason": "HH080 records heating system type (stove/radiator/air conditioner/etc.), not main heating fuel source; stove code explicitly mixes coal/gas/natural gas/electricity so cannot map to GMD fuel categories.",
+   "searches": [
+    {
+     "terms": "main heating source / fuel type",
+     "in": "silc24_h.hh080"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-hwaterexp",
+   "kind": "not_collected_by_design",
+   "reason": "HH140 captures presence of hot water system, not expenditure on hot water supply.",
+   "searches": [
+    {
+     "terms": "hot water expenditure",
+     "in": "silc24_h (HH140, HH050)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-impsanrec",
+   "kind": "not_collected_by_design",
+   "reason": "Survey lacks main toilet facility source variable needed to classify improved sanitation; only indoor flushing toilet yes/no (HH110).",
+   "searches": [
+    {
+     "terms": "toilet facility type / sanitation source",
+     "in": "silc24_h (HH110 and full column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-impwatrec",
+   "kind": "not_collected_by_design",
+   "reason": "Survey lacks main drinking water source variable needed for improved water classification; only piped water system yes/no in dwelling (HH130).",
+   "searches": [
+    {
+     "terms": "drinking water source",
+     "in": "silc24_h (HH130 and full column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-internetexp",
+   "kind": "not_collected_by_design",
+   "reason": "No internet expenditure variable; only internet connection possession (HH190).",
+   "searches": [
+    {
+     "terms": "internet expenditure",
+     "in": "silc24_h (HH190 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-kerosenexp",
+   "kind": "not_collected_by_design",
+   "reason": "No kerosene expenditure variable.",
+   "searches": [
+    {
+     "terms": "kerosene expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-landphoneexp",
+   "kind": "not_collected_by_design",
+   "reason": "No landline phone expenditure variable; only telephone line possession (HH150).",
+   "searches": [
+    {
+     "terms": "landline expenditure",
+     "in": "silc24_h (HH150 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-lightsource",
+   "kind": "not_collected_by_design",
+   "reason": "No main source of lighting question in silc24_h.",
+   "searches": [
+    {
+     "terms": "lighting source / candles / kerosene lamp",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-liquidexp",
+   "kind": "not_collected_by_design",
+   "reason": "No fuel expenditure breakdown (gasoline/diesel/kerosene/other liquids).",
+   "searches": [
+    {
+     "terms": "liquid fuel expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-lpgexp",
+   "kind": "not_collected_by_design",
+   "reason": "No liquefied gas expenditure variable.",
+   "searches": [
+    {
+     "terms": "LPG expenditure / bottled gas",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ngasexp",
+   "kind": "not_collected_by_design",
+   "reason": "No network/natural gas expenditure variable.",
+   "searches": [
+    {
+     "terms": "natural gas expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-opendef",
+   "kind": "not_collected_by_design",
+   "reason": "Survey does not ask about any sanitation facility vs none; only whether there is an indoor flushing toilet (HH110), which cannot detect other non-flush facilities.",
+   "searches": [
+    {
+     "terms": "any toilet facility / no facility",
+     "in": "silc24_h.hh110 and column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-othfuelexp",
+   "kind": "not_collected_by_design",
+   "reason": "No other fuels expenditure variable.",
+   "searches": [
+    {
+     "terms": "other fuels expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-othhousingexp",
+   "kind": "not_collected_by_design",
+   "reason": "No separate expenditure for maintenance/repair of dwelling; HH050 is a broad monthly total including multiple components.",
+   "searches": [
+    {
+     "terms": "dwelling maintenance/repair expenditure total",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-othliqexp",
+   "kind": "not_collected_by_design",
+   "reason": "No other liquid fuels expenditure variable.",
+   "searches": [
+    {
+     "terms": "other liquid fuels expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-othsolexp",
+   "kind": "not_collected_by_design",
+   "reason": "No other solid fuels expenditure variable.",
+   "searches": [
+    {
+     "terms": "other solid fuels expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-peatexp",
+   "kind": "not_collected_by_design",
+   "reason": "No peat expenditure variable.",
+   "searches": [
+    {
+     "terms": "peat expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-pwaterexp",
+   "kind": "not_collected_by_design",
+   "reason": "No water supply expenditure variable; HH050 is broad monthly total.",
+   "searches": [
+    {
+     "terms": "water supply expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sanitationoriginal",
+   "kind": "not_collected_by_design",
+   "reason": "No country-specific toilet facility text/label column captured in silc24_h; only HH110 indoor flushing toilet yes/no.",
+   "searches": [
+    {
+     "terms": "toilet facility original / country specific",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sanitationsource",
+   "kind": "not_collected_by_design",
+   "reason": "No main toilet facility question; only indoor flushing toilet indicator (HH110).",
+   "searches": [
+    {
+     "terms": "main toilet facility / sanitation source",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sewageexp",
+   "kind": "not_collected_by_design",
+   "reason": "No sewage collection expenditure variable.",
+   "searches": [
+    {
+     "terms": "sewage expenditure",
+     "in": "silc24_h (search waste/garbage/sewage)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sewer",
+   "kind": "not_collected_by_design",
+   "reason": "No question about connection to sewer; HH110 only indicates indoor flushing toilet presence.",
+   "searches": [
+    {
+     "terms": "sewer connection / sewerage",
+     "in": "silc24_h column index and search sewer"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-solidexp",
+   "kind": "not_collected_by_design",
+   "reason": "No solid fuel expenditure breakdown (coal/wood/peat/other solids).",
+   "searches": [
+    {
+     "terms": "solid fuel expenditure",
+     "in": "silc24_h (HH050 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-telefaxexp",
+   "kind": "not_collected_by_design",
+   "reason": "No telefax expenditure variable collected.",
+   "searches": [
+    {
+     "terms": "telefax expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-telexp",
+   "kind": "not_collected_by_design",
+   "reason": "No phone expenditure variables; only phone possession questions.",
+   "searches": [
+    {
+     "terms": "telephone expenditure total",
+     "in": "silc24_h (HH150/HH160)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-transfuelexp",
+   "kind": "not_collected_by_design",
+   "reason": "No personal transportation fuels expenditure variables in silc24_h.",
+   "searches": [
+    {
+     "terms": "transport fuel expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-tvexp",
+   "kind": "not_collected_by_design",
+   "reason": "No television broadcasting services expenditure variable; only TV possession (HH170).",
+   "searches": [
+    {
+     "terms": "TV broadcasting expenditure",
+     "in": "silc24_h (HH170 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-tvintphexp",
+   "kind": "not_collected_by_design",
+   "reason": "No combined television/internet/telephone services expenditure variables.",
+   "searches": [
+    {
+     "terms": "tv internet telephone expenditure",
+     "in": "silc24_h (HH170/HH190/HH150/HH160 and column index)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-utlexp",
+   "kind": "not_collected_by_design",
+   "reason": "HH050 is an average monthly total including utilities, fuels, housing services, regular repair/maintenance, and dwelling tax; it is not limited to utilities excluding telecom/other housing and not separable into required components.",
+   "searches": [
+    {
+     "terms": "utilities expenditure total (excl telecom/other housing)",
+     "in": "silc24_h.hh050 and column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-w30m",
+   "kind": "not_collected_by_design",
+   "reason": "No time-to-water-source question in silc24_h.",
+   "searches": [
+    {
+     "terms": "time to water source / 30 minutes",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-waste",
+   "kind": "not_collected_by_design",
+   "reason": "No solid waste disposal type question in silc24_h.",
+   "searches": [
+    {
+     "terms": "waste disposal type",
+     "in": "silc24_h column index (search waste/garbage/sewage)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-wasteexp",
+   "kind": "not_collected_by_design",
+   "reason": "No garbage/sewage expenditure variables.",
+   "searches": [
+    {
+     "terms": "waste (garbage+sewage) expenditure",
+     "in": "silc24_h column index (search waste/garbage/sewage)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-waterexp",
+   "kind": "not_collected_by_design",
+   "reason": "No water/hot water expenditure variables; HH140 is only a yes/no for having hot water system.",
+   "searches": [
+    {
+     "terms": "water and hot water expenditure",
+     "in": "silc24_h (HH140, HH050)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-wateroriginal",
+   "kind": "not_collected_by_design",
+   "reason": "No country-specific drinking water source text/label variable collected.",
+   "searches": [
+    {
+     "terms": "water source original / country specific",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-watersource",
+   "kind": "not_collected_by_design",
+   "reason": "No main source of drinking water question; only piped water system yes/no in dwelling (HH130).",
+   "searches": [
+    {
+     "terms": "main drinking water source",
+     "in": "silc24_h column index / water search"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-watertypequest",
+   "kind": "not_collected_by_design",
+   "reason": "No variable indicating type of water questions (drinking/general/both).",
+   "searches": [
+    {
+     "terms": "water question type / drinking vs general",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-wavail",
+   "kind": "not_collected_by_design",
+   "reason": "No question about water availability/reliability.",
+   "searches": [
+    {
+     "terms": "water available when needed / reliability",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-woodexp",
+   "kind": "not_collected_by_design",
+   "reason": "No firewood expenditure variable.",
+   "searches": [
+    {
+     "terms": "firewood expenditure",
+     "in": "silc24_h column index"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

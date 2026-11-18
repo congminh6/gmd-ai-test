@@ -1,0 +1,167 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p20",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 4377,
+  "output_token_count": 2581,
+  "total_token_count": 6958,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 1331,
+  "reasoning_output_token_count": 1331
+ },
+ "images": 3,
+ "answer": {
+  "tables": [
+   {
+    "heading": "1. Household, 2024 (Cross-sectional data)\n(SILC24_H)",
+    "header": [
+     "Name of the variable",
+     "Explanation",
+     "Length",
+     "Labels"
+    ],
+    "rows": [
+     {
+      "cells": [
+       "HH_ID",
+       "Household ID",
+       "5",
+       "1...27401"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HB010",
+       "Year of the survey",
+       "4",
+       "2024"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HB030",
+       "Statistical Regions, Level 1",
+       "3",
+       "Code-Name of the region\nTR1- İstanbul\nTR2- Batı Marmara\nTR3- Ege\nTR4- Doğu Marmara\nTR5- Batı Anadolu\nTR6- Akdeniz\nTR7- Orta Anadolu\nTR8- Batı Karadeniz\nTR9- Doğu Karadeniz\nTRA- Kuzey Doğu Anadolu\nTRB- Orta Doğu Anadolu\nTRC- Güney Doğu Anadolu"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HB031",
+       "Statistical Regions, Level 2",
+       "3",
+       "Code-Name of the region\nTR10- İstanbul\nTR21- Tekirdağ, Edirne, Kırklareli\nTR22- Balıkesir, Çanakkale\nTR31- İzmir\nTR32- Aydın, Denizli, Muğla\nTR33- Manisa, Afyon, Kütahya, Uşak\nTR41- Bursa, Eskişehir, Bilecik\nTR42- Kocaeli, Sakarya, Düzce, Bolu, Yalova\nTR51- Ankara\nTR52- Konya, Karaman\nTR61- Antalya, Isparta, Burdur\nTR62- Adana, Mersin\nTR63- Hatay, Kahramanmaraş, Osmaniye\nTR71- Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir\nTR72- Kayseri, Sivas, Yozgat\nTR81- Zonguldak, Karabük, Bartın\nTR82- Kastamonu, Çankırı, Sinop\nTR83- Samsun, Tokat, Çorum, Amasya\nTR90- Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane\nTRA1- Erzurum, Erzincan, Bayburt\nTRA2- Ağrı, Kars, Iğdır, Ardahan\nTRB1- Malatya, Elazığ, Bingöl, Tunceli\nTRB2- Van, Muş, Bitlis, Hakkari\nTRC1- Gaziantep, Adıyaman, Kilis\nTRC2- Şanlıurfa, Diyarbakır\nTRC3- Mardin, Batman, Şırnak, Siirt"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HB040",
+       "Household weight",
+       "4.7",
+       "Format 4.7"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HB050",
+       "Household type\n* : The code “2” is the sum of the codes “21”, “22” and “23”.",
+       "2",
+       "1- One person household\n2- One-family households (21+22+23)*\n21- Couple without resident children\n22- Couple with at least one resident child\n23- Lone parents with at least one resident child\n3- Extended-family households\n4- Multi-person no-family households\n5- Others (not possible to determine type)"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Dwelling and Housing Conditions",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "HH010",
+       "Dwelling type",
+       "1",
+       "11. Detached house\n121. Two dwellings with separate entrance (Terraced house)\n122. Two dwellings with common entrance\n131. 3-9 dwellings with separate entrance (Terraced house)\n132. Apartment or flat in a building with 3-9 residences with common entrance\n141. 10 or more dwellings with separate entrance (Terraced house)\n142. Apartment or flat in a building with 10 or more dwellings with common entrance\n2. Some other kind of accommodation"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH020",
+       "Tenure status",
+       "1",
+       "1- Owner\n2- Tenant\n3- Lodging\n4- Not owner but accommodation is provided free"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH030",
+       "Year of purchasing or possessing of the house",
+       "4",
+       "1900...2024"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH040",
+       "Monthly rental amount paid for the dwelling (TRY)\n(Dues and fuel expenses and janitor expenses are not included in the rental value.)\n(where HH020 is “2” or “3”)",
+       "6",
+       "0...999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH050",
+       "Average value of monthly expenses (TRY)\n(Utility bills, fuel expenses, housing services, regular repair and maintenance costs, tax for the dwelling etc.)",
+       "6",
+       "0...999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH060",
+       "Number of rooms available to the household  (kitchen, bathroom and toilet are excluded)",
+       "2",
+       "1- 1\n2- 2\n3- 3\n4- 4\n5- 5\n6- 6\n8- 8\n9- 9\n10- 10 or more"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH070",
+       "Size of dwelling in squaremeters (m²)",
+       "3",
+       "25...999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HH080",
+       "Heating system available in the dwelling",
+       "1",
+       "1- Stove (Coal, gas, natural gas, electricity, etc.)\n2- Radiator (Joint or central heating)\n3- Radiator (Heating system for only a flat/combi boiler)\n4- Air conditioner\n5- Other\n6- No heating system"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

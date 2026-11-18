@@ -1,0 +1,2123 @@
+{
+  "spec_sha256": "5f99a5ec0b821df63196c8822125beb37711bb67cc7dab487be486877ed3051f",
+  "validator_version": "2",
+  "validated_at": "2026-11-17T15:33:31+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+      "overlay": "db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269",
+      "key_checks": "bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb"
+    },
+    "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+  },
+  "grounded": true,
+  "content_sha256": "06d365cd92acce028e3db04fd17e2d34d90a5b04f7359fef2abe3ecff491a255",
+  "canon": "0.1.0+b47b1569",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Continuous age is collected (FK070), so survey age categories are not needed/collected (t1)"
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; none correspond to Washington Group functional difficulty questions (t3)"
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; none correspond to concentration difficulty questions (t3)"
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; no seeing difficulty question found (t3)"
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; no hearing difficulty question found (t3)"
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No language/mother-tongue column found in search (t5,t9)"
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No household relationship-to-head column found in searches (t2,t6,t10)"
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Harmonized relationship requires country-specific relationship to head (relationcs) which is not found in this survey (t2,t6,t10)"
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; no self-care difficulty question found (t3)"
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for disability/difficulty items; no walking/climbing difficulty question found (t3)"
+    },
+    {
+      "variable": "VAR-ac",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-acquihouse",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-acquiland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land acquisition question found; only dwelling tenure (hh020) and year of purchasing/possessing house (hh030) present, plus income from rental of lands (hg070)."
+    },
+    {
+      "variable": "VAR-agriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land use/ownership questions in silc24_h; only income-related items mention 'lands'/'agric' (hg070, hg085)."
+    },
+    {
+      "variable": "VAR-agrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land documentation/type questions collected in silc24_h."
+    },
+    {
+      "variable": "VAR-areaagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-areadocuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No documented agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-areaownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land owned area variables collected."
+    },
+    {
+      "variable": "VAR-areainheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No inherited agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-areapurchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No purchased agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-arearentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rented-in agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-arearentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rented-out agricultural land area variables collected."
+    },
+    {
+      "variable": "VAR-areaspace",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-bath",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-bcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No bicycle ownership item in silc24_h; asset list includes only phone/tv/computer/internet/appliances/car/AC."
+    },
+    {
+      "variable": "VAR-boat",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No boat ownership item in silc24_h."
+    },
+    {
+      "variable": "VAR-canoe",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No canoe ownership item in silc24_h."
+    },
+    {
+      "variable": "VAR-car",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-cellphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-computer",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-docuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land documentation question in silc24_h."
+    },
+    {
+      "variable": "VAR-doculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land legal document question in silc24_h."
+    },
+    {
+      "variable": "VAR-dwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No dwelling legal title question in silc24_h beyond tenure status."
+    },
+    {
+      "variable": "VAR-dwelownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No dwelling legal document type question in silc24_h."
+    },
+    {
+      "variable": "VAR-dweltyp",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-etablet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electronic tablet ownership item in silc24_h (some personal-level internet questions mention tablets but not household asset ownership)."
+    },
+    {
+      "variable": "VAR-ewpump",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electric water pump ownership item in silc24_h."
+    },
+    {
+      "variable": "VAR-fan",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electric fan ownership item in silc24_h."
+    },
+    {
+      "variable": "VAR-femagrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gender-disaggregated agricultural land ownership documentation items collected."
+    },
+    {
+      "variable": "VAR-femdoculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gender-disaggregated residential land documentation items collected."
+    },
+    {
+      "variable": "VAR-femdwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gender-disaggregated dwelling legal title items collected."
+    },
+    {
+      "variable": "VAR-floor",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No floor material question in silc24_h."
+    },
+    {
+      "variable": "VAR-floorcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No floor material question in silc24_h, hence no country-specific floor text variable."
+    },
+    {
+      "variable": "VAR-fridge",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-inheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No inherited agricultural land indicator collected."
+    },
+    {
+      "variable": "VAR-internet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-kitchen",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-landownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land ownership document type question collected."
+    },
+    {
+      "variable": "VAR-landphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No motorcycle ownership item collected in silc24_h."
+    },
+    {
+      "variable": "VAR-ownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land ownership indicator collected."
+    },
+    {
+      "variable": "VAR-ownhouse",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-ownland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land ownership indicator collected."
+    },
+    {
+      "variable": "VAR-oxcart",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No oxcart ownership item collected in silc24_h."
+    },
+    {
+      "variable": "VAR-phone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-purchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No purchased agricultural land indicator collected."
+    },
+    {
+      "variable": "VAR-radio",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No radio ownership item collected in silc24_h."
+    },
+    {
+      "variable": "VAR-rentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rent-in agricultural land indicator collected."
+    },
+    {
+      "variable": "VAR-rentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rent-out agricultural land indicator collected."
+    },
+    {
+      "variable": "VAR-ricecook",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rice cooker ownership item collected in silc24_h."
+    },
+    {
+      "variable": "VAR-roof",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No roof material question in silc24_h (only a problem indicator about leaking roof exists)."
+    },
+    {
+      "variable": "VAR-roofcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No roof material question in silc24_h, hence no country-specific roof text variable."
+    },
+    {
+      "variable": "VAR-rooms",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-sellagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on rights to sell agricultural land collected."
+    },
+    {
+      "variable": "VAR-selldwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on right to sell dwelling collected."
+    },
+    {
+      "variable": "VAR-sellland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on right to sell residential land collected."
+    },
+    {
+      "variable": "VAR-sewmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sewing machine ownership item collected in silc24_h."
+    },
+    {
+      "variable": "VAR-stove",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No stove ownership item (only heating system type)."
+    },
+    {
+      "variable": "VAR-transagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on rights to transfer agricultural land collected."
+    },
+    {
+      "variable": "VAR-transdwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on rights to transfer dwelling collected."
+    },
+    {
+      "variable": "VAR-transland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No questions on rights to transfer residential land collected."
+    },
+    {
+      "variable": "VAR-tv",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-tvcable",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No cable TV ownership question collected in silc24_h (only TV possession)."
+    },
+    {
+      "variable": "VAR-typlivqrt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No living quarters typology variable (with/without basic facilities) collected in silc24_h."
+    },
+    {
+      "variable": "VAR-video",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No video player ownership question collected in silc24_h."
+    },
+    {
+      "variable": "VAR-wall",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wall material question in silc24_h (only a problem indicator about damp walls exists)."
+    },
+    {
+      "variable": "VAR-wallcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wall material question in silc24_h, hence no country-specific wall text variable."
+    },
+    {
+      "variable": "VAR-washmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-ybuilt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No year-built variable found; hh030 is year of purchasing/possessing, not construction year."
+    },
+    {
+      "variable": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "gaul_adm1_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module."
+    },
+    {
+      "variable": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "gaul_adm2_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module."
+    },
+    {
+      "variable": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched silc24_h table and whole survey for PSU/cluster/sampling unit variables; none found."
+    },
+    {
+      "variable": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched silc24_h table and whole survey for strata/stratum variables; none found (only unrelated 'registration status' contains 'strat')."
+    },
+    {
+      "variable": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "subnatid1prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here."
+    },
+    {
+      "variable": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "subnatid2prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here."
+    },
+    {
+      "variable": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected."
+    },
+    {
+      "variable": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "subnatid3prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid3 level; not implemented here."
+    },
+    {
+      "variable": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected."
+    },
+    {
+      "variable": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "subnatid4prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid4 level; not implemented here."
+    },
+    {
+      "variable": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched whole survey for urban/rural residence variable; no such column found. 'k\u0131r' match is within place name K\u0131rklareli in hb031 labels, not a rurality indicator."
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No household interview month/date variable found in silc24_h, silc24_p, or silc24_pr; searches for interview/month/date only found Year of the survey (HB010/FB010/FK010) and unrelated 'month' items (e.g., month of birth FK075)."
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-contract",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-contractyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period contract indicator beyond FI210 (main job contract type) was found in silc24_p; search for contract/written/temporary/year did not yield a 12-month measure. Evidence: t1,t9"
+    },
+    {
+      "variable": "VAR-empstat",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-empstat2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job employment-status item exists in silc24_p; only main job (FI120) and last job (FI070) are present. Evidence: t1,t3,t39"
+    },
+    {
+      "variable": "VAR-empstat2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary job employment-status item exists in silc24_p. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-empstatyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period employment status in main job is present; FI120 is current/main job only. Evidence: t1,t3"
+    },
+    {
+      "variable": "VAR-firmsizel",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found in silc24_p. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizel2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for secondary job. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizel2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for secondary job (12-month). Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizelyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for 12-month main job. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizeu",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found in silc24_p. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizeu2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for secondary job. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizeu2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for secondary job (12-month). Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-firmsizeuyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees in workplace item found for 12-month main job. Evidence: t1,t37"
+    },
+    {
+      "variable": "VAR-healthins",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No health insurance coverage variable in labor section was found; Health module has health status items only. Evidence: t1,t41"
+    },
+    {
+      "variable": "VAR-healthinsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month health insurance coverage variable in labor section was found. Evidence: t1,t41"
+    },
+    {
+      "variable": "VAR-industryorig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey provides only NACE section code FI140 (1-18), not detailed original industry code as string. Evidence: t1,t5"
+    },
+    {
+      "variable": "VAR-industryorig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry item collected. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-industryorig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry item collected for 12-month measures. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-industryorigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month original industry code item collected. Evidence: t1,t5"
+    },
+    {
+      "variable": "VAR-industrycat10",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-industrycat102",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry code collected; FI140 is only for main job. Evidence: t1,t5,t39"
+    },
+    {
+      "variable": "VAR-industrycat102year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry code collected for 12-month measures. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-industrycat10year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period main-job industry measure distinct from FI140 was found. Evidence: t1,t5"
+    },
+    {
+      "variable": "VAR-industrycat4",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-industrycat42",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry code collected; FI140 is only for main job. Evidence: t1,t5,t39"
+    },
+    {
+      "variable": "VAR-industrycat42year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job industry code collected for 12-month measures. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-industrycat4year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period main-job industry measure distinct from FI140 was found. Evidence: t1,t5"
+    },
+    {
+      "variable": "VAR-laborincome",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-lincnc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey has annual income components (FG010/FG020 employee income; FI250 main job income) but none explicitly measure total annual wage income excluding bonuses as required for lincnc. Evidence: t1,t27,t29,t28"
+    },
+    {
+      "variable": "VAR-lstatus",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-lstatusyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month labor status variable is present; available items are current activity/economic status (FI010, FK210) and months spent in employment/unemployment/inactivity (FI260-FI310) but not a harmonizable 12-month status. Evidence: t1,t4,t12"
+    },
+    {
+      "variable": "VAR-minlaborage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-minlaborageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-njobs",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable giving total number of jobs was found; FI160 reports hours in additional job(s) but not number of jobs. Evidence: t1,t42"
+    },
+    {
+      "variable": "VAR-nlfreason",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Would be derivable from VAR-lstatus (and FI010) but not built as a separate binding in this module run; lstatus already encodes inactive reasons but GMD requires separate variable nlfreason. Evidence: t4,t25"
+    },
+    {
+      "variable": "VAR-nlfreasonyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month labor status (lstatusyear) is available in this survey to support nlfreasonyear. Evidence: t1"
+    },
+    {
+      "variable": "VAR-occup",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-occup2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job occupation collected; FI130 is main job only. Evidence: t1,t31,t39"
+    },
+    {
+      "variable": "VAR-occup2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job occupation collected for 12-month measures. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-occuporig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey does not provide detailed original occupation code; only ISCO major group (FI130) is available. Evidence: t1,t31"
+    },
+    {
+      "variable": "VAR-occuporig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job occupation collected. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-occuporig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job occupation collected for 12-month measures. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-occuporigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month original occupation code collected. Evidence: t1,t31"
+    },
+    {
+      "variable": "VAR-occupyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period main-job occupation measure distinct from FI130 was found. Evidence: t1,t31"
+    },
+    {
+      "variable": "VAR-ocusec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-ocusec2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job sector-of-activity variable collected; FI145 is main job only. Evidence: t1,t6"
+    },
+    {
+      "variable": "VAR-ocusec2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary job sector-of-activity variable collected for 12-month measures. Evidence: t1"
+    },
+    {
+      "variable": "VAR-ocusecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period main-job sector variable distinct from FI145 was found. Evidence: t1,t6"
+    },
+    {
+      "variable": "VAR-socialsec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-socialsecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period social security coverage variable distinct from FI190 was found. Evidence: t1,t7"
+    },
+    {
+      "variable": "VAR-thoursannual",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Would require annual hours construction from weekly hours and months worked (and potentially other jobs), which is not supported by available survey items (no secondary job hours and no weeks/months for other jobs). Evidence: t8,t10,t11"
+    },
+    {
+      "variable": "VAR-thoursothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable for hours worked in other jobs excluding primary/secondary is present; FI160 is hours usually worked in additional jobs combined, but not last-7-days other-job hours. Evidence: t1,t38"
+    },
+    {
+      "variable": "VAR-thoursothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month other-job hours variable present. Evidence: t1"
+    },
+    {
+      "variable": "VAR-thourstotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Total weekly hours across jobs would require whours, whours2 and other-job hours; survey provides main job and additional-jobs usual hours but no secondary-job split, so not built. Evidence: t8,t1"
+    },
+    {
+      "variable": "VAR-thourstotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month total-hours construction inputs present (no whoursyear/whours2year/thoursothersyear). Evidence: t1"
+    },
+    {
+      "variable": "VAR-twagencothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable for annualized wage in other jobs excluding bonuses is present. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-twagencothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month wage-in-other-jobs measure is present. Evidence: t1"
+    },
+    {
+      "variable": "VAR-twagencotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Annualized wage in all jobs excluding bonuses would require last wage payment amounts and their time units across jobs; survey has only annual net incomes, no wage payment frequency. Evidence: t40,t27"
+    },
+    {
+      "variable": "VAR-twagencototalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month wage payment amount/unit variables exist to build annualized wage totals excluding bonuses. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-twageothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable for annualized wage in other jobs including bonuses is present. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-twageothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month wage-in-other-jobs measure is present. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-twagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage payment amount/unit variables exist to build annualized total wage across jobs; only annual net income is available. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-twagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month wage payment amount/unit variables exist. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-unempldurl",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unempldurlyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month labor status/unemployment duration measure exists beyond FI280 months unemployed in 2023; not treated as 12-month reference-period duration for lstatusyear. Evidence: t1,t11"
+    },
+    {
+      "variable": "VAR-unemplduru",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unemplduruyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month labor status/unemployment duration measure exists beyond FI280 months unemployed in 2023; not treated as 12-month reference-period duration for lstatusyear. Evidence: t1,t11"
+    },
+    {
+      "variable": "VAR-union",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No union membership item found in silc24_p. Evidence: t1,t36"
+    },
+    {
+      "variable": "VAR-unionyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No union membership item found in silc24_p for 12-month measures. Evidence: t1,t36"
+    },
+    {
+      "variable": "VAR-unitwage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No time unit of last wage payment item found in silc24_p. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-unitwage2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary-job time unit of last wage payment item found in silc24_p. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-unitwage2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary-job time unit of last wage payment item found. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-unitwageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month main-job time unit of last wage payment item found. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagenc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No last wage payment amount item (excluding bonuses) found; survey provides annual net incomes only. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagenc2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary-job wage payment amount item found. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagenc2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary-job wage payment amount item found. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagencyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month main-job wage payment amount item found. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage payment amount/unit variables exist to annualize primary-job wages; FI250 is annual net income from main job (not last wage payment). Evidence: t28,t40"
+    },
+    {
+      "variable": "VAR-wagetotal2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary-job wage payment amount/unit variables exist. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagetotal2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary-job wage payment amount/unit variables exist. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-wagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month wage payment amount/unit variables exist. Evidence: t1,t40"
+    },
+    {
+      "variable": "VAR-whours",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-whours2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary-job hours variable collected; FI150 is main job only. Evidence: t1,t8"
+    },
+    {
+      "variable": "VAR-whours2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary-job hours variable collected. Evidence: t1"
+    },
+    {
+      "variable": "VAR-whoursyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period hours variable collected; FI150 is current/usual hours only. Evidence: t1,t8"
+    },
+    {
+      "variable": "VAR-wmonths",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-wmonths2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary-job months-worked variable collected. Evidence: t1,t39"
+    },
+    {
+      "variable": "VAR-wmonths2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month secondary-job months-worked variable collected. Evidence: t1"
+    },
+    {
+      "variable": "VAR-wmonthsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 12-month reference-period months-worked measure distinct from FI240 was found. Evidence: t1,t10"
+    },
+    {
+      "variable": "VAR-lpgexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No liquefied gas expenditure variable."
+    },
+    {
+      "variable": "VAR-cellphoneexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No expenditure module; only phone possession (HH150/HH160) and arrears (HE020). No variable capturing annual cell phone spending."
+    },
+    {
+      "variable": "VAR-centralacc",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-centralexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Housing module has heating system type (HH080) but no monetary consumption for central heating."
+    },
+    {
+      "variable": "VAR-coalexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Heating system available includes stove that may use coal/gas/etc but no fuel-specific expenditures."
+    },
+    {
+      "variable": "VAR-commexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No telecom spending variables; only telephone/mobile/internet possession questions (HH150/HH160/HH190)."
+    },
+    {
+      "variable": "VAR-cooksource",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No cooking fuel/source question in silc24_h."
+    },
+    {
+      "variable": "VAR-dieselexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No diesel spending variable in silc24_h."
+    },
+    {
+      "variable": "VAR-dwelmatexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No separate materials-for-maintenance expenditure; HH050 is a broad monthly total including repair/tax etc."
+    },
+    {
+      "variable": "VAR-dwelothsvcexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No itemized other dwelling services expenditure; only broad monthly total HH050."
+    },
+    {
+      "variable": "VAR-dwelsvcexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No itemized dwelling maintenance services expenditure; only broad monthly total HH050."
+    },
+    {
+      "variable": "VAR-elecacc",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electricity access/source question; HH080 stove category mentions electricity in examples but does not measure electricity access."
+    },
+    {
+      "variable": "VAR-elecxp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electricity expenditure; HH050 is broad monthly total and not separable."
+    },
+    {
+      "variable": "VAR-elechracc",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No hours-per-day electricity availability question in silc24_h."
+    },
+    {
+      "variable": "VAR-electricity",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No binary electricity-in-dwelling question in silc24_h."
+    },
+    {
+      "variable": "VAR-electyp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No lighting/electricity type variable collected."
+    },
+    {
+      "variable": "VAR-garbageexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No garbage collection expenditure in silc24_h."
+    },
+    {
+      "variable": "VAR-gas",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gas connection/usage question; HH080 stove examples mention gas/natural gas but do not identify connection or primary use."
+    },
+    {
+      "variable": "VAR-gasexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gas expenditure variables; HH050 is broad monthly total."
+    },
+    {
+      "variable": "VAR-gasolineexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No gasoline expenditure variable in silc24_h."
+    },
+    {
+      "variable": "VAR-heatingexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No heating expenditure amount; only heating system type (HH080) and warmth adequacy (HE110)."
+    },
+    {
+      "variable": "VAR-heatsource",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "HH080 records heating system type (stove/radiator/air conditioner/etc.), not main heating fuel source; stove code explicitly mixes coal/gas/natural gas/electricity so cannot map to GMD fuel categories."
+    },
+    {
+      "variable": "VAR-hwaterexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "HH140 captures presence of hot water system, not expenditure on hot water supply."
+    },
+    {
+      "variable": "VAR-impsanrec",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey lacks main toilet facility source variable needed to classify improved sanitation; only indoor flushing toilet yes/no (HH110)."
+    },
+    {
+      "variable": "VAR-impwatrec",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey lacks main drinking water source variable needed for improved water classification; only piped water system yes/no in dwelling (HH130)."
+    },
+    {
+      "variable": "VAR-internetexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No internet expenditure variable; only internet connection possession (HH190)."
+    },
+    {
+      "variable": "VAR-kerosenexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No kerosene expenditure variable."
+    },
+    {
+      "variable": "VAR-landphoneexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No landline phone expenditure variable; only telephone line possession (HH150)."
+    },
+    {
+      "variable": "VAR-lightsource",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No main source of lighting question in silc24_h."
+    },
+    {
+      "variable": "VAR-liquidexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No fuel expenditure breakdown (gasoline/diesel/kerosene/other liquids)."
+    },
+    {
+      "variable": "VAR-ngasexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No network/natural gas expenditure variable."
+    },
+    {
+      "variable": "VAR-opendef",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey does not ask about any sanitation facility vs none; only whether there is an indoor flushing toilet (HH110), which cannot detect other non-flush facilities."
+    },
+    {
+      "variable": "VAR-othfuelexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No other fuels expenditure variable."
+    },
+    {
+      "variable": "VAR-othhousingexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No separate expenditure for maintenance/repair of dwelling; HH050 is a broad monthly total including multiple components."
+    },
+    {
+      "variable": "VAR-othliqexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No other liquid fuels expenditure variable."
+    },
+    {
+      "variable": "VAR-othsolexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No other solid fuels expenditure variable."
+    },
+    {
+      "variable": "VAR-peatexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No peat expenditure variable."
+    },
+    {
+      "variable": "VAR-piped",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pipedtoprem",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pwaterexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No water supply expenditure variable; HH050 is broad monthly total."
+    },
+    {
+      "variable": "VAR-sanitationoriginal",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No country-specific toilet facility text/label column captured in silc24_h; only HH110 indoor flushing toilet yes/no."
+    },
+    {
+      "variable": "VAR-sanitationsource",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No main toilet facility question; only indoor flushing toilet indicator (HH110)."
+    },
+    {
+      "variable": "VAR-sewageexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sewage collection expenditure variable."
+    },
+    {
+      "variable": "VAR-sewer",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No question about connection to sewer; HH110 only indicates indoor flushing toilet presence."
+    },
+    {
+      "variable": "VAR-solidexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No solid fuel expenditure breakdown (coal/wood/peat/other solids)."
+    },
+    {
+      "variable": "VAR-telexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No phone expenditure variables; only phone possession questions."
+    },
+    {
+      "variable": "VAR-telefaxexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No telefax expenditure variable collected."
+    },
+    {
+      "variable": "VAR-toiletacc",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-transfuelexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No personal transportation fuels expenditure variables in silc24_h."
+    },
+    {
+      "variable": "VAR-tvexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No television broadcasting services expenditure variable; only TV possession (HH170)."
+    },
+    {
+      "variable": "VAR-tvintphexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No combined television/internet/telephone services expenditure variables."
+    },
+    {
+      "variable": "VAR-utlexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "HH050 is an average monthly total including utilities, fuels, housing services, regular repair/maintenance, and dwelling tax; it is not limited to utilities excluding telecom/other housing and not separable into required components."
+    },
+    {
+      "variable": "VAR-w30m",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No time-to-water-source question in silc24_h."
+    },
+    {
+      "variable": "VAR-wavail",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No question about water availability/reliability."
+    },
+    {
+      "variable": "VAR-waste",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No solid waste disposal type question in silc24_h."
+    },
+    {
+      "variable": "VAR-wasteexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No garbage/sewage expenditure variables."
+    },
+    {
+      "variable": "VAR-waterexp",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No water/hot water expenditure variables; HH140 is only a yes/no for having hot water system."
+    },
+    {
+      "variable": "VAR-wateroriginal",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No country-specific drinking water source text/label variable collected."
+    },
+    {
+      "variable": "VAR-watersource",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No main source of drinking water question; only piped water system yes/no in dwelling (HH130)."
+    },
+    {
+      "variable": "VAR-watertypequest",
+      "module": "MOD-UTL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable indicating type of water questions (drinking/general/both)."
+    },
+    {
+      "variable": "VAR-woodexp",
+      "module": "MOD-UTL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firewood expenditure variable."
+    },
+    {
+      "variable": "VAR-hsize",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfare",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfaredef",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No spatially-deflated/real welfare aggregate column found in silc24_h; region identifier exists (hb031) but no deflator/spatial-price-index variable is present, and the referenced deflators table is not bindable in this survey delivery. (t3, t8, t13)"
+    },
+    {
+      "variable": "VAR-welfarenom",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfareother",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No secondary final welfare aggregate (consumption/expenditure alternative) is present in the household file; only the income aggregate HG110 is apparent. (t3, t12)"
+    },
+    {
+      "variable": "VAR-welfareothertype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Because no secondary welfare aggregate is present (welfareother absent), no corresponding welfareothertype can be sourced. (t12)"
+    },
+    {
+      "variable": "VAR-welfaretype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfshprosperity",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfshprtype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-UTL",
+    "MOD-WLF"
+  ],
+  "coverage_declared": true,
+  "tier_counts": {
+    "1": {
+      "bound": 65,
+      "documented": 125
+    },
+    "2": {
+      "documented": 84,
+      "bound": 3
+    }
+  },
+  "blocked": []
+}

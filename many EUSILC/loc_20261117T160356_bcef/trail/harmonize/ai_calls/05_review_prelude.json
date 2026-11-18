@@ -1,0 +1,77 @@
+{
+  "task_type": "review_prelude",
+  "task": "Read each prelude's CODE — the engine will execute it — and give a verdict: `ok`, or a `concern` with the\nconcrete problem. A concern is anything that makes the code unsafe (file / network / exec, imports outside\nthe allowed ones, tables it does not name) or makes it not do what its `reason` and `produces` claim. Judge\nthe code on its merits even if you authored it. Nothing waits for your verdict: a concern is a finding on the\ntargets that read the prelude's columns — it goes back to the author, unless the author's `check` already ran\nthat exact code on the data without failure, when it is a note for the person reviewing the output.",
+  "scope_id": "survey",
+  "preludes": [
+    {
+      "id": "dem-childmth",
+      "code_ref": "dem-childmth.py",
+      "produces": [
+        "__derived.childmth__"
+      ],
+      "reason": "Child age in months requires arithmetic using age in years (FK070) and month of birth (FK075); not expressible as a single-column recode."
+    },
+    {
+      "id": "MOD-DWL-phone_any",
+      "code_ref": "MOD-DWL-phone_any.py",
+      "produces": [
+        "__derived.phone_any__"
+      ],
+      "reason": "VAR-phone requires combining landline (hh150) and mobile phone (hh160) ownership; no single source column represents any-telephone ownership."
+    },
+    {
+      "id": "MOD-DWL-rooms_num",
+      "code_ref": "MOD-DWL-rooms_num.py",
+      "produces": [
+        "__derived.rooms_num__"
+      ],
+      "reason": "VAR-rooms is numeric but source hh060 is stored as categorical codes; convert to numeric while preserving '10 or more' as 10."
+    },
+    {
+      "id": "dem-age-derived",
+      "code_ref": "dem-age-derived.py",
+      "produces": [
+        "__derived.age__",
+        "__derived.childyr__",
+        "__derived.childmth__"
+      ],
+      "reason": "Clean invalid age (-1) and derive under-5 age measures using year/month of birth; passthrough/value_map cannot do arithmetic."
+    },
+    {
+      "id": "LBR-laborincome_sum",
+      "code_ref": "LBR-laborincome_sum.py",
+      "produces": [
+        "__derived.laborincome__"
+      ],
+      "reason": "Survey provides separate annual net income components (employee cash/near-cash and self-employment cash/in-kind) but no single labor-income total; construct a total as row-wise sum while keeping all-missing as NaN."
+    },
+    {
+      "id": "wlf-hhsize_welfare_pc",
+      "code_ref": "wlf-hhsize_welfare_pc.py",
+      "produces": [
+        "__derived.hsize__",
+        "__derived.welfare_pc__"
+      ],
+      "reason": "Household size is not present as a single household-level column; it must be counted from the full person register (silc24_pr, all ages) and then used to normalize total household disposable income (HG110) to a per-capita welfare aggregate."
+    }
+  ],
+  "scope_ids": [
+    "dem-childmth",
+    "MOD-DWL-phone_any",
+    "MOD-DWL-rooms_num",
+    "dem-age-derived",
+    "LBR-laborincome_sum",
+    "wlf-hhsize_welfare_pc"
+  ],
+  "request_id": "05-review_prelude-survey",
+  "tools": [
+    "canon",
+    "contract",
+    "current",
+    "submit"
+  ],
+  "brief_sha256": "01c4f6996b3f68020ee4c90bac1fc4b4bd13f05db772af80b8ca191f503ee1d0",
+  "transport": "direct",
+  "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

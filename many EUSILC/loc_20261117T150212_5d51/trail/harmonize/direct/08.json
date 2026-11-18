@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 256.9,
+ "usage": {
+  "input_token_count": 542691,
+  "output_token_count": 20432,
+  "total_token_count": 563123,
+  "reasoning_output_token_count": 4383
+ },
+ "tool_calls": 23,
+ "submitted": true,
+ "final_text": "Applied author_bindings for `MOD-DEM` with:\n\n- **Education correspondence** for `silc24_p.fe030` mapping codes `0–10` to TUR national education categories (or `no_fitting_category` direct placements for `0/1/10`).\n- **Parameter authored**: `PARAM-EDU-MIN-EDUCATION-AGE = 16` (method `authored`).\n- **Prelude** `dem-childmth` deriving `__derived.childmth__` from `fk070` (age) and `fk075` (month of birth).\n- **Bindings** for: `age`, `childyr`, `childmth`, `male`, `marital`, `school`, `literacy`, `everattend`, `mineducatage`, `educat7/5/4/educy` (via correspondence), and `primarycomp` (derived from `educat7`).\n- **Absent** determinations for: `agecat`, all disability items, `language`, `relationcs`, `relationharm`.\n\nSubmitted as request `08-author_bindings-MOD-DEM`.",
+ "said": [
+  "Applied author_bindings for `MOD-DEM` with:\n\n- **Education correspondence** for `silc24_p.fe030` mapping codes `0–10` to TUR national education categories (or `no_fitting_category` direct placements for `0/1/10`).\n- **Parameter authored**: `PARAM-EDU-MIN-EDUCATION-AGE = 16` (method `authored`).\n- **Prelude** `dem-childmth` deriving `__derived.childmth__` from `fk070` (age) and `fk075` (month of birth).\n- **Bindings** for: `age`, `childyr`, `childmth`, `male`, `marital`, `school`, `literacy`, `everattend`, `mineducatage`, `educat7/5/4/educy` (via correspondence), and `primarycomp` (derived from `educat7`).\n- **Absent** determinations for: `agecat`, all disability items, `language`, `relationcs`, `relationharm`.\n\nSubmitted as request `08-author_bindings-MOD-DEM`."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\08.jsonl"
+}

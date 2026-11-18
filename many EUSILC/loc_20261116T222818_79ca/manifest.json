@@ -1,0 +1,37 @@
+{
+ "job_id": "loc_20261116T222818_79ca",
+ "flow": "intake",
+ "survey_id": "TUR_2024_SILC-C",
+ "status": "completed",
+ "finished": "2026-11-16T22:28:42+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "af62b4a8900d77904a77130d872743bd872af4f6dba708b61416b36552c9df84",
+   "size": 3061
+  },
+  "profile/data_scan.json": {
+   "sha256": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+   "size": 135008
+  },
+  "profile/instruments.json": {
+   "sha256": "0aa4eceb3b62b19238a2103c631aa99b3f0583ade0f0ff12910516440751be34",
+   "size": 1699
+  },
+  "staged.json": {
+   "sha256": "beec0cb42dcf38087dc2d4912cf76fefe4f37c5cffb95036fb5edd95c0d80c48",
+   "size": 1332
+  },
+  "trail/intake/identity.json": {
+   "sha256": "685fc7ab38f5eda581e239d2c692500f5141e553c9ee45d7dcd9b1b54315c210",
+   "size": 449
+  },
+  "trail/intake/log.txt": {
+   "sha256": "6677d634bc8c196b3a0be7c9127a49846d34600c15d477b2cc675203ad33058c",
+   "size": 1267
+  },
+  "trail/intake/state.json": {
+   "sha256": "590a58afed683218fe9d27c684ec207da1e5861c68a5815918d2b5b335fd8b6a",
+   "size": 323
+  }
+ }
+}

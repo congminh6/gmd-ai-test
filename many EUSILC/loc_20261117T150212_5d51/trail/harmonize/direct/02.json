@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DWL",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 43.5,
+ "usage": {
+  "input_token_count": 150715,
+  "output_token_count": 2159,
+  "total_token_count": 152874,
+  "reasoning_output_token_count": 873
+ },
+ "tool_calls": 13,
+ "submitted": true,
+ "final_text": "Submitted `02-locate_sources-MOD-DWL` routing with candidates primarily in **## Dwelling and Housing Conditions** (notably `hh010`, `hh020`, `hh030`, `hh060`, `hh070`, and `hh100`–`hh240` for assets/amenities).",
+ "said": [
+  "Submitted `02-locate_sources-MOD-DWL` routing with candidates primarily in **## Dwelling and Housing Conditions** (notably `hh010`, `hh020`, `hh030`, `hh060`, `hh070`, and `hh100`–`hh240` for assets/amenities)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\02.jsonl"
+}

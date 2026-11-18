@@ -1,0 +1,70 @@
+{
+ "decisions": [
+  {
+   "review": "profile",
+   "act": "approve",
+   "by": "zs",
+   "at": "2026-11-17T15:02:15+00:00",
+   "binds": {
+    "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+   },
+   "note": "end-to-end run asked of Claude Code by the user; profile read by the agent, not in the app"
+  },
+  {
+   "review": "output",
+   "act": "return",
+   "by": "zs",
+   "at": "2026-11-17T16:03:59+00:00",
+   "binds": {
+    "spec_sha256": "5f99a5ec0b821df63196c8822125beb37711bb67cc7dab487be486877ed3051f"
+   },
+   "note": "output read by Claude Code against the raw data; returned on the user's instruction",
+   "reask": [
+    {
+     "target": "VAR-hsize",
+     "finding": "the household size counts the rows of silc24_p per household, and silc24_p holds only the persons aged 15 and above: 10,379 of the 25,925 households have more members in the register silc24_pr (every member, all ages) than rows in silc24_p. A household's size is the number of its members in the register silc24_pr"
+    },
+    {
+     "target": "VAR-welfare",
+     "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+    },
+    {
+     "target": "VAR-welfarenom",
+     "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+    },
+    {
+     "target": "VAR-welfshprosperity",
+     "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+    },
+    {
+     "target": "VAR-educat7",
+     "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+    },
+    {
+     "target": "VAR-educat5",
+     "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+    },
+    {
+     "target": "VAR-educat4",
+     "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+    },
+    {
+     "target": "VAR-educy",
+     "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+    },
+    {
+     "target": "VAR-primarycomp",
+     "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+    },
+    {
+     "target": "VAR-unempldurl",
+     "finding": "fi280 (months in unemployment in 2023) is passed through for every person of silc24_p, 0 for those never unemployed: 58,752 values belong to persons whose lstatus is employed or out of the labor force; the canon gates this target to the unemployed (VAR-lstatus == 2)"
+    },
+    {
+     "target": "VAR-unemplduru",
+     "finding": "fi280 (months in unemployment in 2023) is passed through for every person of silc24_p, 0 for those never unemployed: 58,752 values belong to persons whose lstatus is employed or out of the labor force; the canon gates this target to the unemployed (VAR-lstatus == 2)"
+    }
+   ]
+  }
+ ]
+}

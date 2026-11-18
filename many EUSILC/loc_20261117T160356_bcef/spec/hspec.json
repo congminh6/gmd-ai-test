@@ -1,0 +1,5528 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk075",
+              "silc24_pr.fk080"
+            ],
+            "call": "01:t13",
+            "result_sha256": "f67798c9da510cbca39a41056d7fb4e54ad8fb9caf15c2d61217757c3d8bf098",
+            "tool": "column"
+          }
+        ],
+        "text": "Age in years from silc24_pr.fk070 (cleaned: -1 -> NA) (01:t2,01:t13)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.age__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-childmth",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk075",
+              "silc24_pr.fk080"
+            ],
+            "call": "01:t13",
+            "result_sha256": "f67798c9da510cbca39a41056d7fb4e54ad8fb9caf15c2d61217757c3d8bf098",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-agecat",
+              "VAR-childyr",
+              "VAR-childmth"
+            ],
+            "call": "01:t12",
+            "result_sha256": "0e000969f3e088130aaa5fa0eb5a87285f3035fdea94e789509ba4d424a2b874",
+            "tool": "canon"
+          }
+        ],
+        "text": "Derived from year/month of birth (fk080,fk075) at 31 Dec 2023 for children under 5 (01:t13,01:t2,01:t12)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ < 5"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childmth__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-childmth"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk075",
+              "silc24_pr.fk080"
+            ],
+            "call": "01:t13",
+            "result_sha256": "f67798c9da510cbca39a41056d7fb4e54ad8fb9caf15c2d61217757c3d8bf098",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-agecat",
+              "VAR-childyr",
+              "VAR-childmth"
+            ],
+            "call": "01:t12",
+            "result_sha256": "0e000969f3e088130aaa5fa0eb5a87285f3035fdea94e789509ba4d424a2b874",
+            "tool": "canon"
+          }
+        ],
+        "text": "Derived from fk070 (age) for children under 5 (01:t2,01:t13,01:t12)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ < 5"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childyr__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-educat4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-educat4",
+              "VAR-educat5"
+            ],
+            "call": "01:t19",
+            "result_sha256": "77e0bafd5815b778be0e335641c0514d5407478dec07ec8bf8dec061e51fe018",
+            "tool": "current"
+          }
+        ],
+        "text": "FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t19)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "age >= 15"
+      },
+      "gate_reads": [
+        "VAR-age"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat4",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat5",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-educat4",
+              "VAR-educat5"
+            ],
+            "call": "01:t19",
+            "result_sha256": "77e0bafd5815b778be0e335641c0514d5407478dec07ec8bf8dec061e51fe018",
+            "tool": "current"
+          }
+        ],
+        "text": "FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t19)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "age >= 15"
+      },
+      "gate_reads": [
+        "VAR-age"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat5",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-educat7",
+              "VAR-educy"
+            ],
+            "call": "01:t18",
+            "result_sha256": "c22ca80f5abdf5eb0fcdaa323aa117a5af5096125770d6902a3eecd2101b33f2",
+            "tool": "current"
+          }
+        ],
+        "text": "Highest education level attained FE030 linked via education correspondence; age gate aligned to mineducatage=15 (01:t2,01:t18)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "age >= 15"
+      },
+      "gate_reads": [
+        "VAR-age"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat7",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-educat7",
+              "VAR-educy"
+            ],
+            "call": "01:t18",
+            "result_sha256": "c22ca80f5abdf5eb0fcdaa323aa117a5af5096125770d6902a3eecd2101b33f2",
+            "tool": "current"
+          }
+        ],
+        "text": "Years of education via education correspondence for FE030; age gate aligned to mineducatage=15 (01:t2,01:t18)"
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "age >= 15"
+      },
+      "gate_reads": [
+        "VAR-age"
+      ],
+      "injected": {
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educy",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          }
+        ],
+        "text": "Gender codes: 1 Male, 2 Female (silc24_pr.fk090) (01:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fk090",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          }
+        ],
+        "text": "Marital status codes: 1 Married, 2 Never married, 3 Widowed, 4 Divorced (01:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fb100",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 5,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-mineducatage",
+      "constant_source": {
+        "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-mineducatage"
+            ],
+            "call": "01:t15",
+            "result_sha256": "13b9f801589e76c66de1c7a15f622595b319c5d8fa0c022fa8c3d72e78ea820b",
+            "tool": "current"
+          }
+        ],
+        "text": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE (01:t15)"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id",
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-mineducatage"
+    },
+    {
+      "binding_id": "B-primarycomp",
+      "derived_from": "VAR-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-educat7",
+              "VAR-educat5",
+              "VAR-educat4",
+              "VAR-primarycomp",
+              "VAR-educy"
+            ],
+            "call": "01:t14",
+            "result_sha256": "165243e5dfd2eb02f6f7b5d37c7979631a45c87cea0237dfa8524188e577355f",
+            "tool": "canon"
+          }
+        ],
+        "text": "Derived from educat7: 1/2=0, 3-7=1 (01:t14)"
+      },
+      "injected": {
+        "unit_keys": "parent"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "educat7",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "target": "VAR-primarycomp",
+      "value_map": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "binding_id": "B-school",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          }
+        ],
+        "text": "Current education activity: 1 Yes, 2 No (01:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe010",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-school",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-literacy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-literacy"
+            ],
+            "call": "02:t1",
+            "result_sha256": "15453f4816423aa0215fc2d20ce855156cb095ed29e5f3a9bab7280aa7d7823a",
+            "tool": "current"
+          }
+        ],
+        "text": "From silc24_p.fe030, code 0=Illiterate -> literacy=0; all other attainment categories imply literacy=1 (02:t1)"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "hh_id",
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-literacy",
+      "value_map": {
+        "0": 0,
+        "1": 1,
+        "10": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "binding_id": "B-everattend",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived from highest education attained: Illiterate -> never attended; all other categories -> attended (01:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-everattend",
+      "value_map": {
+        "0": 0,
+        "1": 1,
+        "10": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "binding_id": "B-ac",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh230 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh230",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-ac",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-acqui_house",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          }
+        ],
+        "text": "Survey collects year of purchasing/possessing (hh030) but not method of acquisition categories needed for VAR-acquihouse (09:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "hh030",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-acquihouse"
+    },
+    {
+      "binding_id": "B-areaspace",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh070 size of dwelling in square meters (09:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh070",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-areaspace"
+    },
+    {
+      "binding_id": "B-bath",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh100 codes: sole use/shared yes ->1, no ->0 (09:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh100",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-bath",
+      "value_map": {
+        "1": 1,
+        "2": 1,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-car",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh240 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh240",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-car",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-cellphone",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh160 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh160",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-cellphone",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-computer",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh180 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh180",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-computer",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-dweltyp",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-dweltyp"
+            ],
+            "call": "09:t4",
+            "result_sha256": "94364251257e7bb6170bdbc1a16a7f078537e6d1200cb137bf3d42b2e3c4cf51",
+            "tool": "canon"
+          }
+        ],
+        "text": "silc24_h.hh010 dwelling type labels mapped to canon categories (09:t2,09:t4)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh010",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-dweltyp",
+      "value_map": {
+        "11": 1,
+        "121": 6,
+        "122": 2,
+        "131": 6,
+        "132": 3,
+        "141": 6,
+        "142": 3,
+        "2": 9
+      }
+    },
+    {
+      "binding_id": "B-fridge",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh210 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh210",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-fridge",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-internet",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-internet"
+            ],
+            "call": "09:t5",
+            "result_sha256": "9ca44347c0b2d12abca6f216385a7ffeb30e8ac6ce87eb3db2f973b4e08c0790",
+            "tool": "canon"
+          }
+        ],
+        "text": "silc24_h.hh190 asks internet connection possession without specifying inside/outside; map yes->3, no->4 (09:t2,09:t5)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh190",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-internet",
+      "value_map": {
+        "1": 3,
+        "2": 4,
+        "3": 4
+      }
+    },
+    {
+      "binding_id": "B-kitchen",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh120 codes: yes=1 no=2 (09:t2)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh120",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-kitchen",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-landphone",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh150 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh150",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-landphone",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-ownhouse",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-ownhouse"
+            ],
+            "call": "09:t6",
+            "result_sha256": "a21e3aa982bce3322836cb62ed1b126d061fd277207d9e033d1e6d1a9fc70fdc",
+            "tool": "canon"
+          }
+        ],
+        "text": "silc24_h.hh020 tenure: owner->1, tenant/lodging->renting, provided free->3 (09:t2,09:t6)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh020",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-ownhouse",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 3
+      }
+    },
+    {
+      "binding_id": "B-phone",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived any-telephone from silc24_h.hh150 (landline) and silc24_h.hh160 (mobile) (09:t3) using prelude MOD-DWL-phone_any"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.phone_any__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-phone"
+    },
+    {
+      "binding_id": "B-rooms",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh100",
+              "silc24_h.hh120",
+              "silc24_h.hh190",
+              "silc24_h.hh010",
+              "silc24_h.hh020",
+              "silc24_h.hh060",
+              "silc24_h.hh070",
+              "silc24_h.hh030"
+            ],
+            "call": "09:t2",
+            "result_sha256": "1fa3901474a440fd3807829c4840b2077e3b111e4a415c36140f4776909c7a7d",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-rooms",
+              "VAR-areaspace",
+              "VAR-ybuilt"
+            ],
+            "call": "09:t7",
+            "result_sha256": "87d0ea2312ee2e3b2626427ee3dadb461398fb03abd5ab9291056df3984a17a2",
+            "tool": "canon"
+          }
+        ],
+        "text": "Converted silc24_h.hh060 number of rooms (excluding kitchen/bath/toilet) to numeric via prelude MOD-DWL-rooms_num (09:t2,09:t7)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.rooms_num__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-rooms"
+    },
+    {
+      "binding_id": "B-tv",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh170 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh170",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-tv",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-washmach",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh230",
+              "silc24_h.hh240",
+              "silc24_h.hh160",
+              "silc24_h.hh180",
+              "silc24_h.hh210",
+              "silc24_h.hh170",
+              "silc24_h.hh200",
+              "silc24_h.hh150"
+            ],
+            "call": "09:t3",
+            "result_sha256": "111b2defcfa3b77f6037f8ad8ae7ad70ef4e90980fa7a2b18f7b257ef75a0939",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hh200 codes 1 Yes, 2/3 No -> binary (09:t3)"
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh200",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-washmach",
+      "value_map": {
+        "1": 1,
+        "2": 0,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-geo_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "10:t2",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "Geography correspondence on hb031 Statistical Regions, Level 2 (10:t2) linked to TUR national subnational categories (brief table)"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb031",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-geocode",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-subnatid1",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "10:t2",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "hb030 Statistical Regions, Level 1 codes TR1–TRC with labels (10:t2)"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb030",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-subnatid1"
+    },
+    {
+      "binding_id": "B-subnatid2",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "10:t2",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "hb031 Statistical Regions, Level 2 codes TR10–TRC3 with labels (10:t2)"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb031",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-subnatid2"
+    },
+    {
+      "binding_id": "B-subnatidsurvey",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "10:t2",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "Survey provides Statistical Regions Level 2 (hb031) as finest geography available; routed as lowest collected geography (10:t2)"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb031",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-subnatidsurvey"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "missing_map",
+              "binding",
+              "passthrough",
+              "constant_source"
+            ],
+            "call": "11:t6",
+            "part": "Constant",
+            "result_sha256": "fe4fc88ec3d53a761f8471d88237059a91cdb28295c5dac676c91acbe951ead0",
+            "tool": "contract"
+          }
+        ],
+        "text": "countrycode sourced from run survey identity (ISO3); broadcast from household file grain (11:t6#Constant)"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_year",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010",
+              "silc24_pr.fk010"
+            ],
+            "call": "11:t2",
+            "result_sha256": "a328d06381b1de1d0a01fca1c46d2bad32d66ed86e2f1baf91206c5055d80a57",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "interview",
+              "month",
+              "date",
+              "survey",
+              "fieldwork",
+              "hb",
+              "fb",
+              "fk",
+              "--in",
+              "name,label,question"
+            ],
+            "call": "11:t5",
+            "result_sha256": "ab8b6821f0e0553a3ecc47b324e0277eae663179caa66fa08f75218691d933c6",
+            "tool": "search"
+          }
+        ],
+        "text": "no interview-date/month fields observed; use Year of the survey (HB010) as proxy for interview year (11:t2, 11:t5)"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "hb010",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-intyear"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010",
+              "silc24_pr.fk010"
+            ],
+            "call": "11:t2",
+            "result_sha256": "a328d06381b1de1d0a01fca1c46d2bad32d66ed86e2f1baf91206c5055d80a57",
+            "tool": "column"
+          }
+        ],
+        "text": "household sampling weight HB040 (Household weight), numeric non-missing (11:t2)"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hb040",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010",
+              "silc24_pr.fk010"
+            ],
+            "call": "11:t2",
+            "result_sha256": "a328d06381b1de1d0a01fca1c46d2bad32d66ed86e2f1baf91206c5055d80a57",
+            "tool": "column"
+          }
+        ],
+        "text": "survey start year sourced from run survey identity; hb010 shows Year of the survey constant 2024 (11:t2)"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-contract",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Contract from FI210 type of contract of employees in main job: codes 11/12/21/23 imply having a contract; 22 occasional work without contract -> no (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi210",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-contract",
+      "value_map": {
+        "11": 1,
+        "12": 1,
+        "21": 1,
+        "22": 0,
+        "23": 1
+      }
+    },
+    {
+      "binding_id": "B-empstat",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Employment status (primary job) from FI120 main job employment status (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi120",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-empstat",
+      "value_map": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 4,
+        "5": 2
+      }
+    },
+    {
+      "binding_id": "B-industrycat10",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Map FI140 NACE section (1-18) to GMD 10-category industry using section groupings (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi140",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-industrycat10",
+      "value_map": {
+        "1": 1,
+        "10": 8,
+        "11": 8,
+        "12": 8,
+        "13": 8,
+        "14": 9,
+        "15": 10,
+        "16": 10,
+        "17": 10,
+        "18": 10,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 10,
+        "9": 7
+      }
+    },
+    {
+      "binding_id": "B-industrycat4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Broad industry (4-cat) collapsed from FI140 NACE sections: 1 agriculture; 2-5 industry; 6-18 services (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi140",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-industrycat4",
+      "value_map": {
+        "1": 1,
+        "10": 3,
+        "11": 3,
+        "12": 3,
+        "13": 3,
+        "14": 3,
+        "15": 3,
+        "16": 3,
+        "17": 3,
+        "18": 3,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3
+      }
+    },
+    {
+      "binding_id": "B-laborincome",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fg010",
+              "silc24_p.fg020",
+              "silc24_p.fg030",
+              "silc24_p.fg040"
+            ],
+            "call": "03:t34",
+            "result_sha256": "8b6c456e96715f4122355d67cda08f3b7e53f3d16aa9891519c81a49791dba72",
+            "tool": "column"
+          }
+        ],
+        "text": "Construct labor income as sum of annual net income components FG010+FG020+FG030+FG040 via prelude (03:t34)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.laborincome__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-laborincome"
+    },
+    {
+      "binding_id": "B-lstatus",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi280",
+              "silc24_p.fi010"
+            ],
+            "call": "03:t2",
+            "result_sha256": "826edeceb91315d38cc802e9d65c81920bdf48e342a3c55ce6963423b45d84f4",
+            "tool": "column"
+          }
+        ],
+        "text": "Labor status from FI010 self-defined current economic status: 1-4 working->employed; 5 looking for a job->unemployed; 6-10 inactive categories->not in labor force (03:t2)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi010",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-lstatus",
+      "value_map": {
+        "1": 1,
+        "10": 3,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 2,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3
+      }
+    },
+    {
+      "binding_id": "B-minlaborage",
+      "constant_source": {
+        "parameter": "PARAM-LBR-MIN-LABOR-AGE"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "binding"
+            ],
+            "call": "03:t9",
+            "result_sha256": "c7277487d20a0bafe59f7b9463f59c5ad90031e6278d78a77dd1e5ad316ead11",
+            "tool": "contract"
+          },
+          {
+            "args": [
+              "silc24_pr"
+            ],
+            "call": "03:t33",
+            "result_sha256": "d7cbaed88fad94db719da9114fb76142e13f96913a5557003498b6ac40d95314",
+            "tool": "columns"
+          }
+        ],
+        "text": "Carrier of PARAM-LBR-MIN-LABOR-AGE per labor module policy (03:t9,03:t33)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id",
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-minlaborage"
+    },
+    {
+      "binding_id": "B-minlaborage_year",
+      "constant_source": {
+        "parameter": "PARAM-LBR-MIN-LABOR-AGE-YEAR"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "binding"
+            ],
+            "call": "03:t9",
+            "result_sha256": "c7277487d20a0bafe59f7b9463f59c5ad90031e6278d78a77dd1e5ad316ead11",
+            "tool": "contract"
+          },
+          {
+            "args": [
+              "silc24_pr"
+            ],
+            "call": "03:t33",
+            "result_sha256": "d7cbaed88fad94db719da9114fb76142e13f96913a5557003498b6ac40d95314",
+            "tool": "columns"
+          }
+        ],
+        "text": "Carrier of PARAM-LBR-MIN-LABOR-AGE-YEAR per labor module policy (03:t9,03:t33)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".c"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id",
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-minlaborageyear"
+    },
+    {
+      "binding_id": "B-occup",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Occupation major group from FI130 ISCO-08 major group 1-9 (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi130",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-occup",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9
+      }
+    },
+    {
+      "binding_id": "B-ocusec",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Sector from FI145 public/private: map public->1, private->2 (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi145",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-ocusec",
+      "value_map": {
+        "1": 1,
+        "2": 2
+      }
+    },
+    {
+      "binding_id": "B-socialsec",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Social security registration from FI190 (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fi190",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-socialsec",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-unempldur_l",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi280",
+              "silc24_p.fi010"
+            ],
+            "call": "03:t2",
+            "result_sha256": "826edeceb91315d38cc802e9d65c81920bdf48e342a3c55ce6963423b45d84f4",
+            "tool": "column"
+          }
+        ],
+        "text": "FI280 months spent in unemployment in 2023; gate to unemployed only using produced lstatus (03:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi280",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-unempldurl"
+    },
+    {
+      "binding_id": "B-unempldur_u",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi280",
+              "silc24_p.fi010"
+            ],
+            "call": "03:t2",
+            "result_sha256": "826edeceb91315d38cc802e9d65c81920bdf48e342a3c55ce6963423b45d84f4",
+            "tool": "column"
+          }
+        ],
+        "text": "FI280 months spent in unemployment in 2023; gate to unemployed only using produced lstatus (03:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "lstatus == 2"
+      },
+      "gate_reads": [
+        "VAR-lstatus"
+      ],
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi280",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-unemplduru"
+    },
+    {
+      "binding_id": "B-whours",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          }
+        ],
+        "text": "Weekly hours proxy from FI150 hours usually worked in main job (03:t3)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi150",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-whours"
+    },
+    {
+      "binding_id": "B-wmonths",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p"
+            ],
+            "call": "03:t24",
+            "result_sha256": "5933b6bec11928fa2b5b6d9eb55ef82c651a18a18ea231bc1d0130118201c7cd",
+            "tool": "columns"
+          }
+        ],
+        "text": "Months worked in last 12 months from FI240 months spent in main job in 2023 (03:t24)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "absent": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "fi240",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-wmonths"
+    },
+    {
+      "binding_id": "B-central_acc",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh080",
+              "silc24_h.hh110",
+              "silc24_h.hh130",
+              "silc24_h.hh140",
+              "silc24_h.hh050",
+              "silc24_h.hh150",
+              "silc24_h.hh160",
+              "silc24_h.hh190",
+              "silc24_h.he020"
+            ],
+            "call": "13:t8",
+            "result_sha256": "1cc80ba1d80d9bf45d306386bcef6144a0ca04f1ac8d2dbfb149e50a4a139aeb",
+            "tool": "column"
+          }
+        ],
+        "text": "Heating system categories show joint/central heating as code 2 (Radiator (Joint or central heating)). [13:t8]"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh080",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-centralacc",
+      "value_map": {
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0
+      }
+    },
+    {
+      "binding_id": "B-piped",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh080",
+              "silc24_h.hh110",
+              "silc24_h.hh130",
+              "silc24_h.hh140",
+              "silc24_h.hh050",
+              "silc24_h.hh150",
+              "silc24_h.hh160",
+              "silc24_h.hh190",
+              "silc24_h.he020"
+            ],
+            "call": "13:t8",
+            "result_sha256": "1cc80ba1d80d9bf45d306386bcef6144a0ca04f1ac8d2dbfb149e50a4a139aeb",
+            "tool": "column"
+          }
+        ],
+        "text": "HH130 PIPED WATER SYSTEM in dwelling (1 Yes, 2 No). [13:t8]"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh130",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-piped",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-piped_to_prem",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh080",
+              "silc24_h.hh110",
+              "silc24_h.hh130",
+              "silc24_h.hh140",
+              "silc24_h.hh050",
+              "silc24_h.hh150",
+              "silc24_h.hh160",
+              "silc24_h.hh190",
+              "silc24_h.he020"
+            ],
+            "call": "13:t8",
+            "result_sha256": "1cc80ba1d80d9bf45d306386bcef6144a0ca04f1ac8d2dbfb149e50a4a139aeb",
+            "tool": "column"
+          }
+        ],
+        "text": "Piped water system in dwelling implies on-premises piped water (1 Yes, 2 No). [13:t8]"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh130",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-pipedtoprem",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-toilet_acc",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hh080",
+              "silc24_h.hh110",
+              "silc24_h.hh130",
+              "silc24_h.hh140",
+              "silc24_h.hh050",
+              "silc24_h.hh150",
+              "silc24_h.hh160",
+              "silc24_h.hh190",
+              "silc24_h.he020"
+            ],
+            "call": "13:t8",
+            "result_sha256": "1cc80ba1d80d9bf45d306386bcef6144a0ca04f1ac8d2dbfb149e50a4a139aeb",
+            "tool": "column"
+          }
+        ],
+        "text": "HH110 INDOOR FLUSHING TOILET in dwelling (codes 1/2 yes, 3 no) mapped to flush toilet access in premise vs none. [13:t8]"
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hh110",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-toiletacc",
+      "value_map": {
+        "1": 1,
+        "2": 1,
+        "3": 0
+      }
+    },
+    {
+      "binding_id": "B-hsize",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "Household size derived by counting silc24_pr.pers_id rows per silc24_pr.hh_id (full person register, all ages). (04:t3)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.hsize__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "wlf_hh",
+      "target": "VAR-hsize"
+    },
+    {
+      "binding_id": "B-welfare",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "Per-capita welfare constructed in prelude as total household disposable income (silc24_h.hg110) divided by household size from silc24_pr. (04:t3)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.welfare_pc__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "wlf_hh",
+      "target": "VAR-welfare"
+    },
+    {
+      "binding_id": "B-welfarenom",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "Nominal welfare set equal to per-capita disposable income constructed from silc24_h.hg110 and silc24_pr-based household size. (04:t3)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.welfare_pc__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "wlf_hh",
+      "target": "VAR-welfarenom"
+    },
+    {
+      "binding_id": "B-welfaretype",
+      "constant": "INC",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hg110 is labelled Total household disposable income, i.e. an income concept. (04:t3)"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-welfaretype"
+    },
+    {
+      "binding_id": "B-welfshprosperity",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "Shared prosperity welfare set to the same per-capita disposable income aggregate as welfare, constructed using silc24_h.hg110 and silc24_pr-based household size. (04:t3)"
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "prelude"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.welfare_pc__",
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "wlf_hh",
+      "target": "VAR-welfshprosperity"
+    },
+    {
+      "binding_id": "B-welfshprtype",
+      "constant": "INC",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hg110",
+              "silc24_pr.hh_id",
+              "silc24_pr.pers_id",
+              "silc24_p.hh_id",
+              "silc24_p.pers_id"
+            ],
+            "call": "04:t3",
+            "result_sha256": "729720b73afe5c32d9ea56516746a2f7f232e936f17430fca1e2b5012cab485a",
+            "tool": "column"
+          }
+        ],
+        "text": "Shared prosperity aggregate uses the same income-based welfare as welfare (hg110 / hsize), so type is income. (04:t3)"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "hh_id"
+        ]
+      },
+      "table": "silc24_h",
+      "target": "VAR-welfshprtype"
+    }
+  ],
+  "correspondence": {
+    "education": {
+      "column": "silc24_p.fe030",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "08:t8",
+            "part": "question",
+            "result_sha256": "6158e925a62b7f7b55c986da10cd5d23fac29df0b7301f4cb55a2c310d9770e4",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "08:t8",
+            "part": "domain",
+            "result_sha256": "6158e925a62b7f7b55c986da10cd5d23fac29df0b7301f4cb55a2c310d9770e4",
+            "tool": "column"
+          }
+        ],
+        "text": "08:t8#question,08:t8#domain"
+      },
+      "links": {
+        "0": {
+          "direct": {
+            "VAR-educat4": 1,
+            "VAR-educat5": 1,
+            "VAR-educat7": 1,
+            "VAR-educy": 0
+          },
+          "kind": "no_fitting_category",
+          "reason": "FE030 codes 0 'Illiterate' and 1 'Literate but not a graduate' are not specific education programmes in the national standard; treat as no schooling"
+        },
+        "1": {
+          "direct": {
+            "VAR-educat4": 1,
+            "VAR-educat5": 1,
+            "VAR-educat7": 1,
+            "VAR-educy": 0
+          },
+          "kind": "no_fitting_category",
+          "reason": "FE030 codes 0 'Illiterate' and 1 'Literate but not a graduate' are not specific education programmes in the national standard; treat as no schooling"
+        },
+        "10": {
+          "direct": {
+            "VAR-educat4": 4,
+            "VAR-educat5": 5,
+            "VAR-educat7": 7,
+            "VAR-educy": 21
+          },
+          "kind": "no_fitting_category",
+          "reason": "FE030 code 10 'Doctorate' has no explicit doctorate category in the provided national standard list; place directly at tertiary level"
+        },
+        "2": "TUR-EDU-03",
+        "3": "TUR-EDU-03",
+        "4": "TUR-EDU-06",
+        "5": "TUR-EDU-11",
+        "6": "TUR-EDU-14",
+        "7": "TUR-EDU-22",
+        "8": "TUR-EDU-23",
+        "9": "TUR-EDU-26"
+      }
+    },
+    "geography": {
+      "column": "silc24_h.hb031",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "10:t2",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "hb031 Statistical Regions, Level 2 codes TR10…TRC3 with region labels (10:t2); national standard table in brief mapping TRxx→TUR-SUBNAT-xx (10:t2)"
+      },
+      "links": {
+        "TR10": "TUR-SUBNAT-01",
+        "TR21": "TUR-SUBNAT-02",
+        "TR22": "TUR-SUBNAT-03",
+        "TR31": "TUR-SUBNAT-04",
+        "TR32": "TUR-SUBNAT-05",
+        "TR33": "TUR-SUBNAT-06",
+        "TR41": "TUR-SUBNAT-07",
+        "TR42": "TUR-SUBNAT-08",
+        "TR51": "TUR-SUBNAT-09",
+        "TR52": "TUR-SUBNAT-10",
+        "TR61": "TUR-SUBNAT-11",
+        "TR62": "TUR-SUBNAT-12",
+        "TR63": "TUR-SUBNAT-13",
+        "TR71": "TUR-SUBNAT-14",
+        "TR72": "TUR-SUBNAT-15",
+        "TR81": "TUR-SUBNAT-16",
+        "TR82": "TUR-SUBNAT-17",
+        "TR83": "TUR-SUBNAT-18",
+        "TR90": "TUR-SUBNAT-19",
+        "TRA1": "TUR-SUBNAT-20",
+        "TRA2": "TUR-SUBNAT-21",
+        "TRB1": "TUR-SUBNAT-22",
+        "TRB2": "TUR-SUBNAT-23",
+        "TRC1": "TUR-SUBNAT-24",
+        "TRC2": "TUR-SUBNAT-25",
+        "TRC3": "TUR-SUBNAT-26"
+      }
+    }
+  },
+  "coverage": [
+    {
+      "kind": "searched_not_found",
+      "reason": "No residential land acquisition question found; only dwelling tenure (hh020) and year of purchasing/possessing house (hh030) present, plus income from rental of lands (hg070).",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "land acquisition / purchase / inherited"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "acquisition of land"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-acquiland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land use/ownership questions in silc24_h; only income-related items mention 'lands'/'agric' (hg070, hg085).",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "agri|land|plot|hectare"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "agriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-agriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land documentation/type questions collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "document|title|deed|lease|certificate"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "agriland ownership document"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-agrilandownti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "area agricultural land"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-areaagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No documented agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "documented|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "areadocuagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-areadocuagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No inherited agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "inherited|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "areainheragriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-areainheragriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land owned area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "own|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "areaownagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-areaownagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No purchased agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "purchase|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "areapurchagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-areapurchagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No rented-in agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "rent|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "arearentinagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-arearentinagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No rented-out agricultural land area variables collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "rent out|hectare|area"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "arearentoutagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-arearentoutagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No bicycle ownership item in silc24_h; asset list includes only phone/tv/computer/internet/appliances/car/AC.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "bicycle"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "assets possession"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-bcycle"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No boat ownership item in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "boat|canoe"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "boat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-boat"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No canoe ownership item in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "canoe|boat"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "canoe"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-canoe"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land documentation question in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "document|certificate|deed"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "docuagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-docuagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No residential land legal document question in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "land|title|deed|document"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "doculand"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-doculand"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No dwelling legal title question in silc24_h beyond tenure status.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "title|deed|legal document"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "dwelown"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-dwelownlti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No dwelling legal document type question in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "deed|leasehold|occupancy certificate|condominium"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "dwelownti"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-dwelownti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No electronic tablet ownership item in silc24_h (some personal-level internet questions mention tablets but not household asset ownership).",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "tablet"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "tablet"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-etablet"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No electric water pump ownership item in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "pump"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "water pump"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ewpump"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No electric fan ownership item in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "fan"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "fan"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-fan"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No gender-disaggregated agricultural land ownership documentation items collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "female land ownership|woman"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "femagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-femagrilandownti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No gender-disaggregated residential land documentation items collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "female land document"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "femdoculand"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-femdoculand"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No gender-disaggregated dwelling legal title items collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "female title deed"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "femdwelown"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-femdwelownlti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No floor material question in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "floor|material"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "floor"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-floor"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No floor material question in silc24_h, hence no country-specific floor text variable.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "floor"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "floorcs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-floorcs"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No inherited agricultural land indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "inherited agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "inheragriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-inheragriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No residential land ownership document type question collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "land ownership document|deed|title"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "landownti"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-landownti"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No motorcycle ownership item collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "motorcycle"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "motorcycle"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-mcycle"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No agricultural land ownership indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "agricultural land own"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "ownagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ownagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No residential land ownership indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "own land|residential land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "ownland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ownland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No oxcart ownership item collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "oxcart"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "oxcart"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-oxcart"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No purchased agricultural land indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "purchase agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "purchagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-purchagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No radio ownership item collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "radio"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "radio"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-radio"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No rent-in agricultural land indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "rent in agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "rentinagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-rentinagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No rent-out agricultural land indicator collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "rent out agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "rentoutagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-rentoutagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No rice cooker ownership item collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "rice cooker"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "ricecook"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ricecook"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No roof material question in silc24_h (only a problem indicator about leaking roof exists).",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "roof material"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "roof"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-roof"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No roof material question in silc24_h, hence no country-specific roof text variable.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "roof"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "roofcs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-roofcs"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on rights to sell agricultural land collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "sell agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "sellagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-sellagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on right to sell dwelling collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "sell dwelling"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "selldwel"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-selldwel"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on right to sell residential land collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "sell land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "sellland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-sellland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No sewing machine ownership item collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "sewing machine"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "sewmach"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-sewmach"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No stove ownership item (only heating system type).",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "stove"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "stove"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-stove"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on rights to transfer agricultural land collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "transfer agricultural land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "transagriland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-transagriland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on rights to transfer dwelling collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "transfer dwelling"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "transdwel"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-transdwel"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No questions on rights to transfer residential land collected.",
+      "searches": [
+        {
+          "in": "search label,question (t9)",
+          "terms": "transfer land"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "transland"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-transland"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No cable TV ownership question collected in silc24_h (only TV possession).",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "cable tv"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "cable"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-tvcable"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No living quarters typology variable (with/without basic facilities) collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "living quarters|basic facilities"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "typlivqrt"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-typlivqrt"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No video player ownership question collected in silc24_h.",
+      "searches": [
+        {
+          "in": "search label,question,codes (t10)",
+          "terms": "video player"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "video"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-video"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No wall material question in silc24_h (only a problem indicator about damp walls exists).",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "wall material"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "wall"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-wall"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No wall material question in silc24_h, hence no country-specific wall text variable.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "wall"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "wallcs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-wallcs"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No year-built variable found; hh030 is year of purchasing/possessing, not construction year.",
+      "searches": [
+        {
+          "in": "search label,question (t8)",
+          "terms": "year built|built"
+        },
+        {
+          "in": "silc24_h columns (t1)",
+          "terms": "ybuilt"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-ybuilt"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched silc24_h table and whole survey for PSU/cluster/sampling unit variables; none found.",
+      "searches": [
+        {
+          "in": "silc24_h (t3) and whole survey labels/questions (t14)",
+          "terms": "psu|cluster"
+        },
+        {
+          "in": "silc24_h module (t6)",
+          "terms": "psu"
+        },
+        {
+          "in": "silc24_h module (t7)",
+          "terms": "cluster"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-psu"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched silc24_h table and whole survey for strata/stratum variables; none found (only unrelated 'registration status' contains 'strat').",
+      "searches": [
+        {
+          "in": "silc24_h (t4) and module (t9)",
+          "terms": "strata|stratum"
+        },
+        {
+          "in": "whole survey (t13)",
+          "terms": "strat (regex)"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-strata"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched whole survey for urban/rural residence variable; no such column found. 'kır' match is within place name Kırklareli in hb031 labels, not a rurality indicator.",
+      "searches": [
+        {
+          "in": "silc24_h (t5) and whole survey (t8)",
+          "terms": "urban|rural"
+        },
+        {
+          "in": "whole survey (t12)",
+          "terms": "kent|kır|koy|urban|rural (regex)"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-urban"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected.",
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected.",
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "gaul_adm1_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module.",
+      "status": "deferred",
+      "variable": "VAR-gauladm1code"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "gaul_adm2_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module.",
+      "status": "deferred",
+      "variable": "VAR-gauladm2code"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid1prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here.",
+      "status": "deferred",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid2prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here.",
+      "status": "deferred",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode",
+        "VAR-subnatid3"
+      ],
+      "reason": "subnatid3prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid3 level; not implemented here.",
+      "status": "deferred",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode",
+        "VAR-subnatid4"
+      ],
+      "reason": "subnatid4prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid4 level; not implemented here.",
+      "status": "deferred",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No household interview month/date variable found in silc24_h, silc24_p, or silc24_pr; searches for interview/month/date only found Year of the survey (HB010/FB010/FK010) and unrelated 'month' items (e.g., month of birth FK075).",
+      "status": "absent",
+      "variable": "VAR-intmonth"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No expenditure module; only phone possession (HH150/HH160) and arrears (HE020). No variable capturing annual cell phone spending.",
+      "status": "absent",
+      "variable": "VAR-cellphoneexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Housing module has heating system type (HH080) but no monetary consumption for central heating.",
+      "status": "absent",
+      "variable": "VAR-centralexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Heating system available includes stove that may use coal/gas/etc but no fuel-specific expenditures.",
+      "status": "absent",
+      "variable": "VAR-coalexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No telecom spending variables; only telephone/mobile/internet possession questions (HH150/HH160/HH190).",
+      "status": "absent",
+      "variable": "VAR-commexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No cooking fuel/source question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-cooksource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No diesel spending variable in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-dieselexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No separate materials-for-maintenance expenditure; HH050 is a broad monthly total including repair/tax etc.",
+      "status": "absent",
+      "variable": "VAR-dwelmatexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No itemized other dwelling services expenditure; only broad monthly total HH050.",
+      "status": "absent",
+      "variable": "VAR-dwelothsvcexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No itemized dwelling maintenance services expenditure; only broad monthly total HH050.",
+      "status": "absent",
+      "variable": "VAR-dwelsvcexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No electricity access/source question; HH080 stove category mentions electricity in examples but does not measure electricity access.",
+      "status": "absent",
+      "variable": "VAR-elecacc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No hours-per-day electricity availability question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-elechracc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No binary electricity-in-dwelling question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-electricity"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No lighting/electricity type variable collected.",
+      "status": "absent",
+      "variable": "VAR-electyp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No electricity expenditure; HH050 is broad monthly total and not separable.",
+      "status": "absent",
+      "variable": "VAR-elecxp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No garbage collection expenditure in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-garbageexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No gas connection/usage question; HH080 stove examples mention gas/natural gas but do not identify connection or primary use.",
+      "status": "absent",
+      "variable": "VAR-gas"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No gas expenditure variables; HH050 is broad monthly total.",
+      "status": "absent",
+      "variable": "VAR-gasexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No gasoline expenditure variable in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-gasolineexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No heating expenditure amount; only heating system type (HH080) and warmth adequacy (HE110).",
+      "status": "absent",
+      "variable": "VAR-heatingexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "HH080 records heating system type (stove/radiator/air conditioner/etc.), not main heating fuel source; stove code explicitly mixes coal/gas/natural gas/electricity so cannot map to GMD fuel categories.",
+      "status": "absent",
+      "variable": "VAR-heatsource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "HH140 captures presence of hot water system, not expenditure on hot water supply.",
+      "status": "absent",
+      "variable": "VAR-hwaterexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey lacks main toilet facility source variable needed to classify improved sanitation; only indoor flushing toilet yes/no (HH110).",
+      "status": "absent",
+      "variable": "VAR-impsanrec"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey lacks main drinking water source variable needed for improved water classification; only piped water system yes/no in dwelling (HH130).",
+      "status": "absent",
+      "variable": "VAR-impwatrec"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No internet expenditure variable; only internet connection possession (HH190).",
+      "status": "absent",
+      "variable": "VAR-internetexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No kerosene expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-kerosenexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No landline phone expenditure variable; only telephone line possession (HH150).",
+      "status": "absent",
+      "variable": "VAR-landphoneexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No main source of lighting question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-lightsource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No fuel expenditure breakdown (gasoline/diesel/kerosene/other liquids).",
+      "status": "absent",
+      "variable": "VAR-liquidexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No liquefied gas expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-lpgexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No network/natural gas expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-ngasexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey does not ask about any sanitation facility vs none; only whether there is an indoor flushing toilet (HH110), which cannot detect other non-flush facilities.",
+      "status": "absent",
+      "variable": "VAR-opendef"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No other fuels expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-othfuelexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No separate expenditure for maintenance/repair of dwelling; HH050 is a broad monthly total including multiple components.",
+      "status": "absent",
+      "variable": "VAR-othhousingexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No other liquid fuels expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-othliqexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No other solid fuels expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-othsolexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No peat expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-peatexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No water supply expenditure variable; HH050 is broad monthly total.",
+      "status": "absent",
+      "variable": "VAR-pwaterexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No country-specific toilet facility text/label column captured in silc24_h; only HH110 indoor flushing toilet yes/no.",
+      "status": "absent",
+      "variable": "VAR-sanitationoriginal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No main toilet facility question; only indoor flushing toilet indicator (HH110).",
+      "status": "absent",
+      "variable": "VAR-sanitationsource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No sewage collection expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-sewageexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No question about connection to sewer; HH110 only indicates indoor flushing toilet presence.",
+      "status": "absent",
+      "variable": "VAR-sewer"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No solid fuel expenditure breakdown (coal/wood/peat/other solids).",
+      "status": "absent",
+      "variable": "VAR-solidexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No telefax expenditure variable collected.",
+      "status": "absent",
+      "variable": "VAR-telefaxexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No phone expenditure variables; only phone possession questions.",
+      "status": "absent",
+      "variable": "VAR-telexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No personal transportation fuels expenditure variables in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-transfuelexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No television broadcasting services expenditure variable; only TV possession (HH170).",
+      "status": "absent",
+      "variable": "VAR-tvexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No combined television/internet/telephone services expenditure variables.",
+      "status": "absent",
+      "variable": "VAR-tvintphexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "HH050 is an average monthly total including utilities, fuels, housing services, regular repair/maintenance, and dwelling tax; it is not limited to utilities excluding telecom/other housing and not separable into required components.",
+      "status": "absent",
+      "variable": "VAR-utlexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No time-to-water-source question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-w30m"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No solid waste disposal type question in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-waste"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No garbage/sewage expenditure variables.",
+      "status": "absent",
+      "variable": "VAR-wasteexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No water/hot water expenditure variables; HH140 is only a yes/no for having hot water system.",
+      "status": "absent",
+      "variable": "VAR-waterexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No country-specific drinking water source text/label variable collected.",
+      "status": "absent",
+      "variable": "VAR-wateroriginal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No main source of drinking water question; only piped water system yes/no in dwelling (HH130).",
+      "status": "absent",
+      "variable": "VAR-watersource"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No variable indicating type of water questions (drinking/general/both).",
+      "status": "absent",
+      "variable": "VAR-watertypequest"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No question about water availability/reliability.",
+      "status": "absent",
+      "variable": "VAR-wavail"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No firewood expenditure variable.",
+      "status": "absent",
+      "variable": "VAR-woodexp"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey provides continuous age (fk070); age categories are not an item (t2,t12)",
+      "status": "absent",
+      "variable": "VAR-agecat"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-communicationdisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-concentrationdisorder"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-eyedisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-heardisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-selfcaredisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No Washington Group / difficulty items found in bindable tables (t4)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "disability difficulty seeing hearing walking self-care communicat concentrat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-walkdisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No language item found in bindable tables (t6)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "language tongue mother"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-language"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No relationship-to-head item found in bindable tables (t3,t7,t9)",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "relationship head relation fb110 rel"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-relationcs"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-relationcs"
+      ],
+      "reason": "Harmonized relation requires country-specific relationcs, which is not collected (t3,t7,t9,t12)",
+      "status": "absent",
+      "variable": "VAR-relationharm"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month contract indicator found: reviewed silc24_p columns (t24) and searched for contract terms; only FI210 (current main job) present (t3).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "contract year 12-month"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-contractyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No secondary job employment-status item found in silc24_p columns (t24); only FI120 main job status present (t3).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "secondary job employment status"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-empstat2"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month secondary job employment-status measure found in survey columns (t24,t33).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job employment status year"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-empstat2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month primary-job employment status measure found; FI120 is current main job only (t3,t24).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "employment status year 12-month"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-empstatyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No firm size/number of employees at workplace item found in survey; search for firm/size and employees/number yields no relevant labor item (t32,t29); silc24_p columns show none (t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "firm size employees number of employees"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No secondary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job firm size"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel2"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month secondary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job firm size year"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizel2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month primary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "firm size year 12-month"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizelyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No firm size/number of employees at workplace item found (t24,t32,t29).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "firm size upper bracket number of employees"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No secondary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job firm size upper"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu2"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month secondary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job firm size upper year"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeu2year"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month primary job firm size item found (t24,t32).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "firm size upper year 12-month"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-firmsizeuyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No health insurance coverage variable found in labor/personal modules; search for health insurance yields no such item (t30); silc24_p columns include only health status items (t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "health insurance coverage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-healthins"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 12-month health insurance coverage variable found (t24,t30).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "health insurance year 12-month"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-healthinsyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job industry collected; FI140 is main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat102"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job industry collected (t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat102year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month primary-job industry collected; only FI140 current main job (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat10year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job industry collected; FI140 main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat42"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job industry collected (t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat42year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month primary-job industry collected; only FI140 current main job (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-industrycat4year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey provides only NACE section code FI140 (1-18), no detailed original industry code as string (t3).",
+      "status": "absent",
+      "variable": "VAR-industryorig"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job industry collected (t24).",
+      "status": "absent",
+      "variable": "VAR-industryorig2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job industry collected (t24).",
+      "status": "absent",
+      "variable": "VAR-industryorig2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month original industry code collected (t24).",
+      "status": "absent",
+      "variable": "VAR-industryorigyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No variable explicitly measuring total annual wage income excluding bonuses found; survey has annual net income components (FG010/FG020) and main job annual income (FI250) but no clear wage-excl-bonus aggregate (t24,t34).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "wage excl bonus gross net employee income total"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-lincnc"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month labor status variable collected; only current status (FI010 in silc24_p; FK210 in silc24_pr) (t2,t25).",
+      "status": "absent",
+      "variable": "VAR-lstatusyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No variable giving total number of jobs found in silc24_p columns; FI160 provides hours in additional job(s) but not number of jobs (t24).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "number of jobs additional jobs count"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-njobs"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-lstatus"
+      ],
+      "reason": "NLF reason could be derived from FI010 categories (already used for VAR-lstatus) but not built as separate variable in this module authoring pass (t2).",
+      "status": "absent",
+      "variable": "VAR-nlfreason"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month labor status (VAR-lstatusyear) available to support nlfreasonyear (t24).",
+      "status": "absent",
+      "variable": "VAR-nlfreasonyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job occupation collected; FI130 is main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-occup2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job occupation collected (t24).",
+      "status": "absent",
+      "variable": "VAR-occup2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No detailed original occupation code collected; FI130 provides ISCO major group only (t3).",
+      "status": "absent",
+      "variable": "VAR-occuporig"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job occupation collected (t24).",
+      "status": "absent",
+      "variable": "VAR-occuporig2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job occupation collected (t24).",
+      "status": "absent",
+      "variable": "VAR-occuporig2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month original occupation code collected (t24).",
+      "status": "absent",
+      "variable": "VAR-occuporigyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month primary-job occupation measure collected; FI130 is current main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-occupyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job sector-of-activity variable collected; FI145 is main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-ocusec2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job sector-of-activity variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-ocusec2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month primary-job sector-of-activity collected; FI145 is current main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-ocusecyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month social security coverage variable collected; FI190 is current main job only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-socialsecyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Inputs insufficient to construct annual hours across all jobs (no secondary-job hours; no other-job hours in last 7 days) (t24).",
+      "status": "absent",
+      "variable": "VAR-thoursannual"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No variable for hours worked in other jobs excluding primary/secondary found; FI160 is usual hours in additional jobs combined, not last-7-days other-job hours (t3,t24).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "hours other jobs excluding main secondary"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-thoursothers"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month other-job hours variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-thoursothersyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Total weekly hours across jobs not constructible with available items (no secondary-job hours split; no other-job last-7-days hours) (t24).",
+      "status": "absent",
+      "variable": "VAR-thourstotal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month total-hours inputs collected (t24).",
+      "status": "absent",
+      "variable": "VAR-thourstotalyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No wage payment amount/unit variables found to annualize wages excluding bonuses; searching for wage/payment only yields arrears/debt items in household table, not labor pay frequency (t28,t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "wage payment frequency unit last wage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-twagencotal"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No annualized wage in other jobs excluding bonuses variable found (t24,t28).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "wage other jobs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-twagencothers"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month wage-in-other-jobs variables collected (t24).",
+      "status": "absent",
+      "variable": "VAR-twagencothersyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month wage payment amount/unit variables collected (t24,t28).",
+      "status": "absent",
+      "variable": "VAR-twagencototalyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No annualized wage in other jobs including bonuses variable found (t24,t28).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "bonus wage other jobs"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-twageothers"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month wage-in-other-jobs variables collected (t24).",
+      "status": "absent",
+      "variable": "VAR-twageothersyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No annualized total wage across jobs constructible (no wage payment amount/unit variables) (t24,t28).",
+      "status": "absent",
+      "variable": "VAR-twagetotal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month wage payment amount/unit variables collected (t24,t28).",
+      "status": "absent",
+      "variable": "VAR-twagetotalyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month unemployment duration measure collected distinct from FI280 months unemployed in 2023; not treated as lstatusyear-based duration (t2,t24).",
+      "status": "absent",
+      "variable": "VAR-unempldurlyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month unemployment duration measure collected distinct from FI280 months unemployed in 2023; not treated as lstatusyear-based duration (t2,t24).",
+      "status": "absent",
+      "variable": "VAR-unemplduruyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No union membership item found; survey-wide search for union returns none (t31) and silc24_p columns show none (t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "union membership trade union"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-union"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No union membership item found for 12-month measures (t31,t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "union membership year"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unionyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No time unit of last wage payment item found; search for wage/payment yields only household arrears questions, not wage frequency (t28,t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "time unit last wage payment"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unitwage"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No secondary job time unit of last wage payment item found (t28,t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job wage payment unit"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-unitwage2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job wage payment unit item found (t24,t28).",
+      "status": "absent",
+      "variable": "VAR-unitwage2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month main job wage payment unit item found (t24,t28).",
+      "status": "absent",
+      "variable": "VAR-unitwageyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No last wage payment amount (excluding bonuses) found; only annual net incomes (FI250, FG010 etc.) (t24,t34).",
+      "searches": [
+        {
+          "in": "silc24_p columns",
+          "terms": "last wage payment amount"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-wagenc"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No secondary job wage payment amount collected (t24).",
+      "searches": [
+        {
+          "in": "survey (all tables)",
+          "terms": "secondary job wage payment amount"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-wagenc2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job wage payment amount collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wagenc2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month primary job wage payment amount collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wagencyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Cannot build annualized wage for primary job without wage payment amount/unit; FI250 is annual net income, not last wage payment (t24).",
+      "status": "absent",
+      "variable": "VAR-wagetotal"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job wage payment amount/unit variables collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wagetotal2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job wage payment amount/unit variables collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wagetotal2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month wage payment amount/unit variables collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wagetotalyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job weekly hours variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-whours2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job hours variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-whours2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month weekly hours variable collected; FI150 is current/usual only (t3,t24).",
+      "status": "absent",
+      "variable": "VAR-whoursyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary job months-worked variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wmonths2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month secondary job months-worked variable collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wmonths2year"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No 12-month reference-period months-worked measure distinct from FI240 collected (t24).",
+      "status": "absent",
+      "variable": "VAR-wmonthsyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No spatially-deflated/real welfare aggregate column is present in silc24_h; while a region identifier exists, the referenced deflators table is not bindable in this delivery.",
+      "status": "absent",
+      "variable": "VAR-welfaredef"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No secondary final welfare aggregate (consumption/expenditure alternative) is present; only the income aggregate HG110 is apparent in silc24_h.",
+      "status": "absent",
+      "variable": "VAR-welfareother"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Because no secondary welfare aggregate is present (welfareother absent), no corresponding welfareothertype can be sourced.",
+      "status": "absent",
+      "variable": "VAR-welfareothertype"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "TUR",
+      "year": 2024
+    },
+    "country_parameters": [
+      "PARAM-DEM-MIN-MARRIAGE-AGE",
+      "PARAM-EDU-LEVEL-CROSSWALK",
+      "PARAM-EDU-MIN-EDUCATION-AGE",
+      "PARAM-GEO-GMD-CROSSWALK",
+      "PARAM-LBR-MIN-LABOR-AGE",
+      "PARAM-LBR-MIN-LABOR-AGE-YEAR",
+      "PARAM-WASH-SANITATION-CROSSWALK",
+      "PARAM-WASH-WATER-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-UTL",
+    "MOD-WLF"
+  ],
+  "output": {
+    "grain": [
+      "hh_id",
+      "pers_id"
+    ],
+    "roster": "silc24_pr",
+    "unit_of_analysis": "individual"
+  },
+  "parameters": {
+    "PARAM-EDU-MIN-EDUCATION-AGE": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100",
+              "silc24_p.fe010",
+              "silc24_p.fe030"
+            ],
+            "call": "01:t2",
+            "result_sha256": "f07bf5f23bc22f791326b1ffe6c3d754e45719258b1011c97b7a5f448b30f58b",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-educat7",
+              "VAR-educy"
+            ],
+            "call": "01:t18",
+            "result_sha256": "c22ca80f5abdf5eb0fcdaa323aa117a5af5096125770d6902a3eecd2101b33f2",
+            "tool": "current"
+          }
+        ],
+        "text": "Education section applies from age 15 (observed education variables in silc24_p; age is fk070 as of Dec 31, 2023) (01:t2,01:t18)"
+      },
+      "method": "authored",
+      "value": 15
+    },
+    "PARAM-LBR-MIN-LABOR-AGE": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fi280",
+              "silc24_p.fi010"
+            ],
+            "call": "03:t2",
+            "result_sha256": "826edeceb91315d38cc802e9d65c81920bdf48e342a3c55ce6963423b45d84f4",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_p.fi120",
+              "silc24_p.fi210",
+              "silc24_p.fi130",
+              "silc24_p.fi140",
+              "silc24_p.fi145",
+              "silc24_p.fi190",
+              "silc24_p.fi150",
+              "silc24_p.fi160"
+            ],
+            "call": "03:t3",
+            "result_sha256": "5e5949df4cc0a079289114ee0632957a740f6b31906949c32b78e3de944489a0",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk210"
+            ],
+            "call": "03:t25",
+            "result_sha256": "32a7fa1613c132995fe2fbaf3a4196d872c3e8c220037673593e31d046800c52",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk070",
+              "silc24_pr.fk210"
+            ],
+            "call": "03:t26",
+            "result_sha256": "34e3098ccc0fa05e25025e23ef8a7df49af3cddecedc3359cc38fdfe5962361b",
+            "tool": "onset"
+          }
+        ],
+        "text": "Minimum age for labour module kept at 15 as in existing spec; no explicit universe statement found in column cards (03:t2,03:t3,03:t25) and onset in silc24_pr shows fk210 filled at all ages including -1 (03:t26)."
+      },
+      "method": "authored",
+      "value": 15
+    },
+    "PARAM-LBR-MIN-LABOR-AGE-YEAR": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p"
+            ],
+            "call": "03:t24",
+            "result_sha256": "5933b6bec11928fa2b5b6d9eb55ef82c651a18a18ea231bc1d0130118201c7cd",
+            "tool": "columns"
+          },
+          {
+            "args": [
+              "silc24_pr"
+            ],
+            "call": "03:t33",
+            "result_sha256": "d7cbaed88fad94db719da9114fb76142e13f96913a5557003498b6ac40d95314",
+            "tool": "columns"
+          }
+        ],
+        "text": "Minimum age for 12-month labour module kept at 15 as in existing spec; no 12-month labour-status section collected (03:t24,03:t33)."
+      },
+      "method": "authored",
+      "value": 15
+    }
+  },
+  "prelude": [
+    {
+      "code_ref": "dem-childmth.py",
+      "id": "dem-childmth",
+      "invariants": [
+        "__derived.childmth__ is null or between 0 and 59"
+      ],
+      "produces": [
+        "__derived.childmth__"
+      ],
+      "reads": [
+        "silc24_pr"
+      ],
+      "reason": "Child age in months requires arithmetic using age in years (FK070) and month of birth (FK075); not expressible as a single-column recode.",
+      "writes": [
+        "silc24_pr"
+      ]
+    },
+    {
+      "code_ref": "MOD-DWL-phone_any.py",
+      "id": "MOD-DWL-phone_any",
+      "invariants": [
+        "__derived.phone_any__ in {0,1} or null"
+      ],
+      "produces": [
+        "__derived.phone_any__"
+      ],
+      "reads": [
+        "silc24_h"
+      ],
+      "reason": "VAR-phone requires combining landline (hh150) and mobile phone (hh160) ownership; no single source column represents any-telephone ownership.",
+      "writes": [
+        "silc24_h"
+      ]
+    },
+    {
+      "code_ref": "MOD-DWL-rooms_num.py",
+      "id": "MOD-DWL-rooms_num",
+      "invariants": [
+        "__derived.rooms_num__ >= 1 or null"
+      ],
+      "produces": [
+        "__derived.rooms_num__"
+      ],
+      "reads": [
+        "silc24_h"
+      ],
+      "reason": "VAR-rooms is numeric but source hh060 is stored as categorical codes; convert to numeric while preserving '10 or more' as 10.",
+      "writes": [
+        "silc24_h"
+      ]
+    },
+    {
+      "code_ref": "dem-age-derived.py",
+      "id": "dem-age-derived",
+      "invariants": [
+        "__derived.age__ in [0,120] or NA",
+        "__derived.childmth__ in [0,59] when age<5"
+      ],
+      "produces": [
+        "__derived.age__",
+        "__derived.childyr__",
+        "__derived.childmth__"
+      ],
+      "reads": [
+        "silc24_pr"
+      ],
+      "reason": "Clean invalid age (-1) and derive under-5 age measures using year/month of birth; passthrough/value_map cannot do arithmetic.",
+      "writes": [
+        "silc24_pr"
+      ]
+    },
+    {
+      "code_ref": "LBR-laborincome_sum.py",
+      "id": "LBR-laborincome_sum",
+      "invariants": [
+        "__derived.laborincome__ is numeric or NaN"
+      ],
+      "produces": [
+        "__derived.laborincome__"
+      ],
+      "reads": [
+        "silc24_p"
+      ],
+      "reason": "Survey provides separate annual net income components (employee cash/near-cash and self-employment cash/in-kind) but no single labor-income total; construct a total as row-wise sum while keeping all-missing as NaN.",
+      "writes": [
+        "silc24_p"
+      ]
+    },
+    {
+      "code_ref": "wlf-hhsize_welfare_pc.py",
+      "id": "wlf-hhsize_welfare_pc",
+      "invariants": [
+        "One row per hh_id present in silc24_h",
+        "__derived.hsize__ >= 1 for all households"
+      ],
+      "keys": [
+        "hh_id"
+      ],
+      "output_table": "wlf_hh",
+      "produces": [
+        "__derived.hsize__",
+        "__derived.welfare_pc__"
+      ],
+      "reads": [
+        "silc24_h",
+        "silc24_pr"
+      ],
+      "reason": "Household size is not present as a single household-level column; it must be counted from the full person register (silc24_pr, all ages) and then used to normalize total household disposable income (HG110) to a per-capita welfare aggregate.",
+      "writes": [
+        "wlf_hh"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "Regional Deflators_NUTS2",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "reference"
+        },
+        "sha256": "5ae1bd6443928fa524069b170fe895eff513e54c95a9b8f75366a35154af0baa",
+        "source_file": "Regional Deflators_NUTS2.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "hb010": "numeric",
+          "hb030": "string",
+          "hb031": "string",
+          "hb040": "numeric",
+          "hh010": "numeric",
+          "hh020": "numeric",
+          "hh030": "numeric",
+          "hh070": "numeric",
+          "hh080": "numeric",
+          "hh100": "numeric",
+          "hh110": "numeric",
+          "hh120": "numeric",
+          "hh130": "numeric",
+          "hh150": "numeric",
+          "hh160": "numeric",
+          "hh170": "numeric",
+          "hh180": "numeric",
+          "hh190": "numeric",
+          "hh200": "numeric",
+          "hh210": "numeric",
+          "hh230": "numeric",
+          "hh240": "numeric"
+        },
+        "name": "silc24_h",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7e3bdfd158265c8ef51b6d4a246e9bf064324472e89cf9c4276b68efea594f12",
+        "source_file": "silc24_h.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "fb100": "numeric",
+          "fe010": "numeric",
+          "fe030": "numeric",
+          "fi010": "numeric",
+          "fi120": "numeric",
+          "fi130": "numeric",
+          "fi140": "numeric",
+          "fi145": "numeric",
+          "fi150": "numeric",
+          "fi190": "numeric",
+          "fi210": "numeric",
+          "fi240": "numeric",
+          "fi280": "numeric"
+        },
+        "name": "silc24_p",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "bb8203f5d582425ccb2f312a1aa93d258ec1a64351c655e89b2ce5554d98fc6a",
+        "source_file": "silc24_p.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "fk070": "numeric",
+          "fk090": "numeric"
+        },
+        "name": "silc24_pr",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "e8a92806d9247b7aecf728f11c0a42c1ec4f78a5d48e1294576bf46bd4ec3b9d",
+        "source_file": "silc24_pr.dta"
+      }
+    ]
+  },
+  "survey_id": "TUR_2024_SILC-C",
+  "targets": [
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-age",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-school",
+    "VAR-literacy",
+    "VAR-everattend",
+    "VAR-ac",
+    "VAR-acquihouse",
+    "VAR-areaspace",
+    "VAR-bath",
+    "VAR-car",
+    "VAR-cellphone",
+    "VAR-computer",
+    "VAR-dweltyp",
+    "VAR-fridge",
+    "VAR-internet",
+    "VAR-kitchen",
+    "VAR-landphone",
+    "VAR-ownhouse",
+    "VAR-phone",
+    "VAR-rooms",
+    "VAR-tv",
+    "VAR-washmach",
+    "VAR-geocode",
+    "VAR-subnatid1",
+    "VAR-subnatid2",
+    "VAR-subnatidsurvey",
+    "VAR-countrycode",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-contract",
+    "VAR-empstat",
+    "VAR-industrycat10",
+    "VAR-industrycat4",
+    "VAR-laborincome",
+    "VAR-lstatus",
+    "VAR-minlaborage",
+    "VAR-minlaborageyear",
+    "VAR-occup",
+    "VAR-ocusec",
+    "VAR-socialsec",
+    "VAR-unempldurl",
+    "VAR-unemplduru",
+    "VAR-whours",
+    "VAR-wmonths",
+    "VAR-centralacc",
+    "VAR-piped",
+    "VAR-pipedtoprem",
+    "VAR-toiletacc",
+    "VAR-hsize",
+    "VAR-welfare",
+    "VAR-welfarenom",
+    "VAR-welfaretype",
+    "VAR-welfshprosperity",
+    "VAR-welfshprtype"
+  ]
+}

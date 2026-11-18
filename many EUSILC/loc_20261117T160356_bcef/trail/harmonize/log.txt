@@ -1,0 +1,143 @@
+# harmonize TUR_2024_SILC-C @ 2026-11-17T16:03:59+00:00
+  data=\\wbgfscifs01\GPWG-GMD\datalib-ECA\datalib\TUR\TUR_2024_SILC-C\TUR_2024_SILC-C_v01_M\Data\Stata  modules=['MOD-DEM', 'MOD-DWL', 'MOD-GEO', 'MOD-IDN', 'MOD-LBR', 'MOD-UTL', 'MOD-WLF']  direct=True
+  output review returned by zs: 11 target(s) to re-ask, 0 blocked
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+b47b1569; data TUR_2024_SILC-C_v01_M
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a
+    input profile/file_links.json  sha256=7cea02ab8d177dcf5590728abb16f8c0cc38da8926300059ce6dc96eda4c8d48
+    input profile/instruments.json  sha256=a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f
+    input profile/key_checks.json  sha256=bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d
+    input profile/overlay.json  sha256=db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json  sha256=917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json  sha256=a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json  sha256=97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb
+    input profile/standard.json  sha256=e1c155027a04793b7b53c264cf509dfe38afbd38fe12d87d7d0f8d16bd618139
+    profile 61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f — approved by zs at 2026-11-17T15:02:15+00:00
+  [skip] scaffold-header — spec\hspec.json exists
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+    prelude marital_status: reads dataset(s) ['P'] not delivered — not installed
+    prelude isced_level: reads dataset(s) ['P'] not delivered — not installed
+    prelude welfare_pc: reads dataset(s) ['H'] not delivered — not installed
+    VAR-intmonth: left to the author — HB050 is not a column of this delivery
+    VAR-urban: left to the author — DB100 is not a column of this delivery
+    VAR-psu: left to the author — DB060 is not a column of this delivery
+    VAR-strata: left to the author — DB050 is not a column of this delivery
+  [det] pin-engine-ids
+  [judge] locate-sources
+    [skip] MOD-DEM — output already present
+    [skip] MOD-DWL — output already present
+    [skip] MOD-GEO — output already present
+    [skip] MOD-IDN — output already present
+    [skip] MOD-LBR — output already present
+    [skip] MOD-UTL — output already present
+    [skip] MOD-WLF — output already present
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\01_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\01.json via submit (10556 bytes, + dem-age-derived.py)
+    fixable (attempt 1/3) — re-asking with 1 finding(s): 1 bound target(s) declared absent without a finding
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\02_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (708 bytes)
+    delta merged onto the previous answer: 14 binding(s), 10 absent, 1 prelude(s)
+    [skip] MOD-DWL — output already present
+    [skip] MOD-GEO — output already present
+    [skip] MOD-IDN — output already present
+    AI CALL [author_bindings / MOD-LBR] → trail\harmonize\ai_calls\03_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-LBR] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (28328 bytes, + LBR-laborincome_sum.py)
+    reconciled binding_id 'B-minlaborageyear' → 'B-minlaborage_year' (by target VAR-minlaborageyear)
+    [skip] MOD-UTL — output already present
+    AI CALL [author_bindings / MOD-WLF] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-WLF] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (4116 bytes, + wlf-hhsize_welfare_pc.py)
+    notes: Updated prelude to count household members from silc24_pr (all ages) instead of silc24_p (15+), fixing hsize and per-capita welfare.
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\05_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (1196 bytes)
+    notes: Evidence basis: prelude safety/placement expectations checked against authoring contract prelude section (t1#3.3).
+    prelude MOD-DWL-phone_any: a concern (advisory: its dry run passed) — Mismatch between comment/reason and implementation: code says it will “preserve missingness if either source is missing”, but it only sets output to NaN when BOTH hh150 and hh160 are missing. If one i
+    prelude LBR-laborincome_sum: a concern (advisory: its dry run passed) — Potential type/coercion issue: fg010/fg020/fg030/fg040 are summed without coercing to numeric. If any are stored as strings/categorical, fillna(0).sum(axis=1) may error or yield incorrect results. Saf
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-age: table 'silc24_pr' (from column '__derived.age__')
+        resolved: B-childmth: table 'silc24_pr' (from column '__derived.childmth__')
+        resolved: B-childyr: table 'silc24_pr' (from column '__derived.childyr__')
+        resolved: B-male: table 'silc24_pr' (from column 'fk090')
+        resolved: B-marital: table 'silc24_p' (from column 'fb100')
+        resolved: B-school: table 'silc24_p' (from column 'fe010')
+        resolved: B-everattend: table 'silc24_p' (from column 'fe030')
+        resolved: B-contract: table 'silc24_p' (from column 'fi210')
+        resolved: B-empstat: table 'silc24_p' (from column 'fi120')
+        resolved: B-industrycat10: table 'silc24_p' (from column 'fi140')
+        resolved: B-industrycat4: table 'silc24_p' (from column 'fi140')
+        resolved: B-laborincome: table 'silc24_p' (from column '__derived.laborincome__')
+        resolved: B-lstatus: table 'silc24_p' (from column 'fi010')
+        resolved: B-occup: table 'silc24_p' (from column 'fi130')
+        resolved: B-ocusec: table 'silc24_p' (from column 'fi145')
+        resolved: B-socialsec: table 'silc24_p' (from column 'fi190')
+        resolved: B-unempldur_l: table 'silc24_p' (from column 'fi280')
+        resolved: B-unempldur_u: table 'silc24_p' (from column 'fi280')
+        resolved: B-whours: table 'silc24_p' (from column 'fi150')
+        resolved: B-wmonths: table 'silc24_p' (from column 'fi240')
+        resolved: B-hsize: table 'wlf_hh' (from column '__derived.hsize__')
+        resolved: B-welfare: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        resolved: B-welfarenom: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        resolved: B-welfshprosperity: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        resolved: B-age: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-childmth: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-childyr: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat4: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat5: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educat7: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-educy: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-male: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-marital: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-primarycomp: unit_keys ['pers_id'] (from parent)
+        resolved: B-school: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-everattend: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-contract: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-empstat: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-industrycat10: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-industrycat4: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-laborincome: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-lstatus: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-occup: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-ocusec: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-socialsec: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-unempldur_l: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-unempldur_u: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-whours: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-wmonths: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-hsize: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfare: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfarenom: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfshprosperity: unit_keys ['hh_id'] (from prelude)
+      VALID: hspec.json stamped (validator v2, 2026-11-17T16:18:04+00:00); coverage bound 68, documented 209
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran; removed output\harmonized.dta
+  [det] hspec-run
+      PASS — 80727 rows, 68 target(s); contract clean. Outputs in C:\Users\wb249563\.harmon\work\runs\loc_20261117T160356_bcef\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb249563\.harmon\work\runs\loc_20261117T160356_bcef\output\quality.json: 68 targets; 14/207 checks flagged; 44031 universe cells; no reference
+  CHECK F: ok — 68 targets; 14/207 checks flagged; 44031 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==
+
+>> 12 target(s) failed in the last run, but their determination has changed since: whether the change fixed them is known after the next run — re-run the same command: VAR-educat4, VAR-educat5, VAR-educat7, VAR-educy, VAR-hsize, VAR-laborincome, VAR-primarycomp, VAR-unempldurl, VAR-unemplduru, VAR-welfare, VAR-welfarenom, VAR-welfshprosperity

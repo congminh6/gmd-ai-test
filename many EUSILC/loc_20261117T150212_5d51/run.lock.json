@@ -1,0 +1,243 @@
+{
+ "coverage": {
+  "absent": 203,
+  "deferred": 6,
+  "produced": 67,
+  "produced_empty": 1
+ },
+ "data": {
+  "Regional Deflators_NUTS2": "5ae1bd6443928fa524069b170fe895eff513e54c95a9b8f75366a35154af0baa",
+  "silc24_h": "7e3bdfd158265c8ef51b6d4a246e9bf064324472e89cf9c4276b68efea594f12",
+  "silc24_p": "bb8203f5d582425ccb2f312a1aa93d258ec1a64351c655e89b2ce5554d98fc6a",
+  "silc24_pr": "e8a92806d9247b7aecf728f11c0a42c1ec4f78a5d48e1294576bf46bd4ec3b9d"
+ },
+ "flow": "harmonize",
+ "identity": {
+  "agent": {
+   "model": "gpt-5.2"
+  },
+  "canon": "0.1.0+b47b1569",
+  "code": [
+   "survey-harmonization local (testing — no sync stamp)"
+  ],
+  "packages": {
+   "gmd": "0.1.0",
+   "harmon": "0.1.0",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "pyarrow": "25.0.1",
+   "pydantic": "2.13.4",
+   "pyreadstat": "1.3.6",
+   "survey-scribe": "0.1.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "output": {
+  "reference_sha256": "211dc59fc108ad093b9ea598cdad8c6d833e248ecb4698677f459fdf2bdc5d0b",
+  "sha256": "2cd35d6d5abc4897df9029c04a33324c086b138b066ebf55751326f7ba81440c"
+ },
+ "preludes": {
+  "LBR-laborincome_sum": {
+   "sha256": "b1ce8a9993a8128c9d5c725c30bfe816b77449b662a74ba087e38f1d2284036d"
+  },
+  "MOD-DWL-phone_any": {
+   "sha256": "c24c7bdb575e060de1c90ff80c001e8ad5f63426c6f9e0741a2ee94852ac6ea9"
+  },
+  "MOD-DWL-rooms_num": {
+   "sha256": "4acaa1529cfbcae647d35f09b912dbda3045823eb5531da88bfc3b1f4334e3e3"
+  },
+  "dem-childmth": {
+   "sha256": "2e492774a366fc31c48d7447f94c97b7eebbc96b1dd404e532422b4f29dc6d81"
+  },
+  "wlf-hhsize_welfare_pc": {
+   "sha256": "1e4e353e24482b84616bc0e3ee1104a2cbd83b774cb936a527a2f5cc8536aacd"
+  }
+ },
+ "profile": {
+  "files": {
+   "profile/data_scan.json": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+   "profile/file_links.json": "7cea02ab8d177dcf5590728abb16f8c0cc38da8926300059ce6dc96eda4c8d48",
+   "profile/instruments.json": "a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f",
+   "profile/key_checks.json": "bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d",
+   "profile/overlay.json": "db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269",
+   "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+   "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+   "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb",
+   "profile/standard.json": "e1c155027a04793b7b53c264cf509dfe38afbd38fe12d87d7d0f8d16bd618139"
+  },
+  "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+ },
+ "requests": [
+  {
+   "brief_sha256": "2f6c9e323615f618ea393cfd670e67e7ec140c54cc0494f9db1ba7ed3737ae3a",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "01",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "c6f6d35b581303b98c00ba1245e2eaa770c690891e55b1adae6ace67cd5b27db",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DWL",
+   "seq": "02",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "89417b1966d6267477f58b999c3964aba630b7d193e400120462ce7a5a0d80d3",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "03",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "b7e989425696e170236c29ae17f7834a9e8e41ed0b224b2491155c819e32b929",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "04",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "3beb29d8c9a3d3ea46521ad2e462a6db1a4b459f3293af13132fc4edbcce5564",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-LBR",
+   "seq": "05",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "f83bd7d315da6e2a9af647127cdb479a8c1f9d314e96d09e1d94b7e497d57eb9",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-UTL",
+   "seq": "06",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "944398a0499a60bc716d39d7bb55c83ffb5e319529dfe0fcef3a1a9a1aeab311",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-WLF",
+   "seq": "07",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "a5ec7d08dc93839bb9e0ebd5ed73f37edb6a687e68cef0e5f4b0164b726a8ae2",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "08",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "b3ce002bfb5c5003afae2b52639389710fe533a8e02a14e26b40a4d38f052da9",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DWL",
+   "seq": "09",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "616162100654173618da9ee8a80d44bebe88e8876758059441c7a3944fceb6dc",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "10",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "20c7936823fca9ea0b65d2dd8e475c0b14fe2c8159b67e414e19a45f4f069342",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "11",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "1e52a4bcbdeffffa60f6b9e1de5be36c65903335782e4b397b3241168c894fba",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-LBR",
+   "seq": "12",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "7537b298e711ed2b72f3f8efeaf6d59a87178cd777f126fc9b4da30f7562395e",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-UTL",
+   "seq": "13",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "4ffef39d7f35a78ab2df93ae22dae22d2b5b2e92dabf63775e3287058bedad24",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-WLF",
+   "seq": "14",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "ef57221ec9861c1674410f37518395dce1fceab4b9a354f1d2789820326ffe53",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "survey",
+   "seq": "15",
+   "task": "review_prelude",
+   "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+   "transport": "direct"
+  }
+ ],
+ "stamp": {
+  "canon": "0.1.0+b47b1569",
+  "certified_against": {
+   "inputs": {
+    "data_scan": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+    "key_checks": "bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d",
+    "overlay": "db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269",
+    "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+    "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+    "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb"
+   },
+   "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+  },
+  "content_sha256": "06d365cd92acce028e3db04fd17e2d34d90a5b04f7359fef2abe3ecff491a255",
+  "grounded": true,
+  "reference": "0.1.0",
+  "spec_sha256": "5f99a5ec0b821df63196c8822125beb37711bb67cc7dab487be486877ed3051f",
+  "validator_version": "2"
+ },
+ "survey_id": "TUR_2024_SILC-C"
+}

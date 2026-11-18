@@ -1,0 +1,95 @@
+{
+ "coverage": {
+  "absent": 137,
+  "documented": 10,
+  "left_out": 1,
+  "produced": 66,
+  "produced_empty": 2
+ },
+ "data": {
+  "IRL__EU-SILC_v01_M_v01_A_UDB-C_D": "327fd3dc264df030e9a55bdc0030de7cc7a87168ab89e5c59f7c07810045305a",
+  "IRL__EU-SILC_v01_M_v01_A_UDB-C_H": "0a0b93cdaded79723014dc9d5ec054f2e435ec7a50e880941faa2c51bbd77046",
+  "IRL__EU-SILC_v01_M_v01_A_UDB-C_P": "2b0025359a1ce8785ae702a1c7e5cfc8176288610a47ae3c0f968c07fceac287",
+  "IRL__EU-SILC_v01_M_v01_A_UDB-C_R": "1218eefdbfc6b64f1caea387010b60bef93d8175beaa46b895be412a81c5efa7"
+ },
+ "flow": "harmonize",
+ "identity": {
+  "agent": {},
+  "canon": "0.1.0+b47b1569",
+  "code": [
+   "survey-harmonization local (testing — no sync stamp)"
+  ],
+  "packages": {
+   "gmd": "0.1.0",
+   "harmon": "0.1.0",
+   "numpy": "2.4.4",
+   "pandas": "2.3.3",
+   "pyarrow": "25.0.1",
+   "pydantic": "2.13.4",
+   "pyreadstat": "1.3.6",
+   "survey-scribe": "0.1.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "output": {
+  "reference_sha256": "eb82d7666b9baefc6381dd364219bfc8fa4d3259d8fb9bfd6cff246d7cb54c50",
+  "sha256": "3894b0b4c3aeab792d67a527226163ff614346c9220045e4a22b34e8af467613"
+ },
+ "preludes": {
+  "DEM-agecat": {
+   "sha256": "d4be0494c205ba5108ccaddcbf4f416afddd1193a9971e9bedbd898623e5ebed"
+  },
+  "LBR-labor": {
+   "sha256": "8f5ca3dad08dc670703b27c7d42655d5f028088b8807c7effd42125d6f251378"
+  },
+  "LBR-wage": {
+   "sha256": "3a6469ed7c3b03b15de9f57e5b8f3d7413fa34afd3a17d531a00f4c7a5418937"
+  },
+  "isced_level": {
+   "sha256": "732b1cc5ef42997b6aa0f6f39622d9825f97b67f34ebe6c11481838b9c8c19f6"
+  },
+  "marital_status": {
+   "sha256": "dfcadb5d660c1fe3c05e485cc7f75dc312718a6a2f87a4122434f807c5efb128"
+  },
+  "welfare_pc": {
+   "sha256": "06e4f81769b40f332c44b29503be2c9fa4ffebe93f9b474728a4d05fe1ec56dd"
+  }
+ },
+ "profile": {
+  "files": {
+   "profile/data_scan.json": "5ad00145cbd0d49cf37521ab1268c4f5cd3b84dd50d1bf1ca9333f23ddf06e88",
+   "profile/file_links.json": "0e3cdfd7ddfcc7cc73d99943b8b2750baf43d4c3851c47cdca85d5a02326620e",
+   "profile/key_checks.json": "89cf4814f66ae7fed2c7a1cb372ebf0dde6af68339fde5eb82f4c22992b9464b",
+   "profile/overlay.json": "6b218c4914cb18e09f89fdd0ac919dbd688fd447bab019ebeace07c2706e7029",
+   "profile/questionnaire/standard__eu-silc-2021__2025__udb__D.svis.json": "1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9",
+   "profile/questionnaire/standard__eu-silc-2021__2025__udb__H.svis.json": "abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368",
+   "profile/questionnaire/standard__eu-silc-2021__2025__udb__P.svis.json": "e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed",
+   "profile/questionnaire/standard__eu-silc-2021__2025__udb__R.svis.json": "e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e",
+   "profile/standard.json": "36c9a6c5abe3374690f31a72bbf26236ed38fa8672e6994ecb5f3fb3b6d43fed"
+  },
+  "profile_sha": "d30a7f859b77811fc3819748d7b607fba67c4e3879b0ba85622557f21fc0f4aa"
+ },
+ "requests": [],
+ "stamp": {
+  "canon": "0.1.0+b47b1569",
+  "certified_against": {
+   "inputs": {
+    "data_scan": "5ad00145cbd0d49cf37521ab1268c4f5cd3b84dd50d1bf1ca9333f23ddf06e88",
+    "key_checks": "89cf4814f66ae7fed2c7a1cb372ebf0dde6af68339fde5eb82f4c22992b9464b",
+    "overlay": "6b218c4914cb18e09f89fdd0ac919dbd688fd447bab019ebeace07c2706e7029",
+    "questionnaire:standard__eu-silc-2021__2025__udb__D.svis.json": "1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9",
+    "questionnaire:standard__eu-silc-2021__2025__udb__H.svis.json": "abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368",
+    "questionnaire:standard__eu-silc-2021__2025__udb__P.svis.json": "e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed",
+    "questionnaire:standard__eu-silc-2021__2025__udb__R.svis.json": "e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e"
+   },
+   "profile_sha": "d30a7f859b77811fc3819748d7b607fba67c4e3879b0ba85622557f21fc0f4aa"
+  },
+  "content_sha256": "fdd9f27584b10dae0fb5183d77107708b26e43e696397556e121a467b1386a38",
+  "grounded": true,
+  "reference": "0.1.0",
+  "spec_sha256": "2f0677721d15d6c5e36d39a4bcc62ae4e0a6cd1214bef7fde6820819d3158d53",
+  "validator_version": "2"
+ },
+ "survey_id": "IRL_2025_EU-SILC"
+}

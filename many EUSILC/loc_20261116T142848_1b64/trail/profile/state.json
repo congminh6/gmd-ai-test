@@ -1,0 +1,17 @@
+{
+  "survey_id": "SRB_2022_EU-SILC",
+  "steps": {
+    "A.from-intake": "ok(profile\\data_scan.json)",
+    "A.questionnaire": "ok(0 questionnaire scan(s); no documents recorded)",
+    "A.conformance": "ok(EU-SILC eu-silc-2021: 4 of 4 datasets, 442 of 450 variables named by the standard; 6 extra column(s); 4 with undeclared codes (by year; 11 file(s) written))",
+    "A.merge": "skipped(done)",
+    "A.prefill-file-links": "ok(4 table(s) associated by structure; 0 left)",
+    "A.associate": "ok(skipped - every data table is associated by structure or determined unassociated)",
+    "A.describe": "ok(skipped - no column without a question is left in a table with candidate questions; 2 table(s) not asked, no candidate questions (SRB__EU-SILC_v01_M_v02_A_UDB-C_H: all_matched, SRB__EU-SILC_v01_M_v02_A_UDB-C_P: all_matched))",
+    "A.author-overlay": "skipped(optional: no_model: not_implemented)",
+    "A.heal": "ok(off (--heal 0))",
+    "A.check-keys": "ok(1 key(s), 1 grain key(s), 4 key correspondence(s) checked -> profile\\key_checks.json)",
+    "A.check": "ok"
+  },
+  "updated": "2026-11-16T14:29:00+00:00"
+}

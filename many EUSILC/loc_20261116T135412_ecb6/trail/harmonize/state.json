@@ -1,0 +1,25 @@
+{
+  "survey_id": "IRL_2025_EU-SILC",
+  "steps": {
+    "B.handoff": "ok(profile d30a7f859b77 approved by zs at 2026-11-16T13:54:15+00:00)",
+    "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+    "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+    "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+    "B.modules": "ok(7 module(s) in the canon)",
+    "B.bind-standard": "ok(EU-SILC eu-silc-2021: 65 binding(s) copied, 5 prelude(s) installed, 196 absence(s), 1 with undeclared codes)",
+    "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+    "B.locate-sources": "ok(standard only: no judgment is asked in this run)",
+    "B.author-bindings": "ok(standard only: no judgment is asked in this run)",
+    "B.review-prelude": "ok(standard only: no judgment is asked in this run)",
+    "B.check": "ok",
+    "E.stamp": "ok(validate clean)",
+    "E.lock": "ok(\u2192 run.lock.json)",
+    "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+    "E.check": "ok",
+    "F.quality": "ok(68 targets; 28/185 checks flagged; 11980 universe cells; median agreement 1.0 on 67 shared)",
+    "F.check": "ok",
+    "G.lock": "ok(\u2192 run.lock.json)",
+    "G.check": "ok"
+  },
+  "updated": "2026-11-16T13:55:01+00:00"
+}

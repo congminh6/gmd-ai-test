@@ -1,0 +1,65 @@
+{
+  "routing": {
+    "VAR-hsize": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "pers_id",
+        "why": "Household size can be derived by counting persons (pers_id rows) per hh_id in the person roster"
+      }
+    ],
+    "VAR-welfare": [
+      {
+        "survey_module": "## Income",
+        "column": "silc24_h.hg110",
+        "why": "Total household disposable income is the closest welfare aggregate candidate (EU-SILC-style income aggregate)"
+      }
+    ],
+    "VAR-welfaredef": [
+      {
+        "survey_module": "## Income",
+        "column": "silc24_h.hg110",
+        "why": "If a spatially deflated welfare aggregate is required, start from total household disposable income and apply regional deflators (region codes in silc24_h.hb031; deflators table noted as reference)"
+      }
+    ],
+    "VAR-welfarenom": [
+      {
+        "survey_module": "## Income",
+        "column": "silc24_h.hg110",
+        "why": "Nominal welfare aggregate candidate: total household disposable income (before any spatial/price adjustment)"
+      }
+    ],
+    "VAR-welfareother": [
+      {
+        "survey_module": "## Income",
+        "column": "silc24_h.hg110",
+        "why": "No separate alternative welfare aggregate column is apparent; check whether an alternative aggregate is constructed externally from the income components"
+      }
+    ],
+    "VAR-welfareothertype": [
+      {
+        "survey_module": "## Income",
+        "why": "Type for any alternative welfare aggregate appears to be metadata (not directly collected); likely authored based on which aggregate is used"
+      }
+    ],
+    "VAR-welfaretype": [
+      {
+        "survey_module": "## Income",
+        "why": "Welfare aggregate type (poverty) appears to be metadata (e.g., disposable income vs consumption); likely tied to hg110 if used as welfare"
+      }
+    ],
+    "VAR-welfshprosperity": [
+      {
+        "survey_module": "## Income",
+        "column": "silc24_h.hg110",
+        "why": "Shared prosperity welfare aggregate candidate: same underlying income aggregate (hg110) before any per-capita/equivalization step"
+      }
+    ],
+    "VAR-welfshprtype": [
+      {
+        "survey_module": "## Income",
+        "why": "Shared prosperity welfare type appears to be metadata (not directly collected); likely authored based on the chosen aggregate (e.g., disposable income)"
+      }
+    ]
+  },
+  "_request_id": "07-locate_sources-MOD-WLF"
+}

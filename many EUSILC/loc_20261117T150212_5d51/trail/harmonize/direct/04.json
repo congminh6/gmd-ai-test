@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 47.6,
+ "usage": {
+  "input_token_count": 81331,
+  "output_token_count": 1633,
+  "total_token_count": 82964,
+  "reasoning_output_token_count": 776
+ },
+ "tool_calls": 15,
+ "submitted": true,
+ "final_text": "Submitted `04-locate_sources-MOD-IDN` routing with candidates for:\n\n- `VAR-weight` → `silc24_h.hb040`\n- `VAR-year` → `silc24_h.hb010` (also `silc24_p.fb010`, `silc24_pr.fk010`)\n- `VAR-intyear` → `hb010` / `fb010` / `fk010` (no separate interview-date fields found)\n- `VAR-intmonth` → no column found (noted as likely metadata-only / not delivered)\n- `VAR-countrycode` → no column found (noted as likely constant from survey identity)",
+ "said": [
+  "Submitted `04-locate_sources-MOD-IDN` routing with candidates for:\n\n- `VAR-weight` → `silc24_h.hb040`\n- `VAR-year` → `silc24_h.hb010` (also `silc24_p.fb010`, `silc24_pr.fk010`)\n- `VAR-intyear` → `hb010` / `fb010` / `fk010` (no separate interview-date fields found)\n- `VAR-intmonth` → no column found (noted as likely metadata-only / not delivered)\n- `VAR-countrycode` → no column found (noted as likely constant from survey identity)"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\04.jsonl"
+}

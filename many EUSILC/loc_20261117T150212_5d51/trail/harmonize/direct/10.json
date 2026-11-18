@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 147.8,
+ "usage": {
+  "input_token_count": 300228,
+  "output_token_count": 8188,
+  "total_token_count": 308416,
+  "reasoning_output_token_count": 2653
+ },
+ "tool_calls": 20,
+ "submitted": true,
+ "final_text": "Submitted bindings + geography correspondence for `MOD-GEO` (`request_id`: `10-author_bindings-MOD-GEO`) via `submit` call `t20`.",
+ "said": [
+  "Submitted bindings + geography correspondence for `MOD-GEO` (`request_id`: `10-author_bindings-MOD-GEO`) via `submit` call `t20`."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\10.jsonl"
+}

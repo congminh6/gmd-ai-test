@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-UTL",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 182.4,
+ "usage": {
+  "input_token_count": 186004,
+  "output_token_count": 13821,
+  "total_token_count": 199825,
+  "reasoning_output_token_count": 1221
+ },
+ "tool_calls": 12,
+ "submitted": true,
+ "final_text": "Submitted bindings for **MOD-UTL** (`request_id`: `13-author_bindings-MOD-UTL`) with:\n\n- **4 bindings**:\n  - `VAR-centralacc` from `hh080`\n  - `VAR-piped` from `hh130`\n  - `VAR-pipedtoprem` from `hh130`\n  - `VAR-toiletacc` from `hh110`\n\n- **57 targets marked absent** (`not_collected_by_design`) with documented searches/evidence.",
+ "said": [
+  "Submitted bindings for **MOD-UTL** (`request_id`: `13-author_bindings-MOD-UTL`) with:\n\n- **4 bindings**:\n  - `VAR-centralacc` from `hh080`\n  - `VAR-piped` from `hh130`\n  - `VAR-pipedtoprem` from `hh130`\n  - `VAR-toiletacc` from `hh110`\n\n- **57 targets marked absent** (`not_collected_by_design`) with documented searches/evidence."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\13.jsonl"
+}

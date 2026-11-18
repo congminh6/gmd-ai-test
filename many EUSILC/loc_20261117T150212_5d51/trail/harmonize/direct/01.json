@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 41.7,
+ "usage": {
+  "input_token_count": 95122,
+  "output_token_count": 1993,
+  "total_token_count": 97115,
+  "reasoning_output_token_count": 734
+ },
+ "tool_calls": 21,
+ "submitted": true,
+ "final_text": "Submitted `01-locate_sources-MOD-DEM` routing with candidates in:\n\n- `silc24_pr`: `fk070` (age → also supports agecat/childyr/childmth derivations), `fk090` (sex)\n- `silc24_p` / `Education`: `fe010` (current schooling), `fe030` (highest education level → supports educat7/5/4, primarycomp, educy, everattend)\n- `silc24_p`: `fb100` (marital status)",
+ "said": [
+  "Submitted `01-locate_sources-MOD-DEM` routing with candidates in:\n\n- `silc24_pr`: `fk070` (age → also supports agecat/childyr/childmth derivations), `fk090` (sex)\n- `silc24_p` / `Education`: `fe010` (current schooling), `fe030` (highest education level → supports educat7/5/4, primarycomp, educy, everattend)\n- `silc24_p`: `fb100` (marital status)"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\01.jsonl"
+}

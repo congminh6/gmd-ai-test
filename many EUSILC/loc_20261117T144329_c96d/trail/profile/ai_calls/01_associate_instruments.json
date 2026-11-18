@@ -1,0 +1,27 @@
+{
+  "task_type": "associate_instruments",
+  "scope_rule": "every table in scope_ids appears in file_links or unassociated; the host re-asks for any left out.",
+  "scope_id": "survey",
+  "rules_ref": "your contract § The rules — the 2 governing + 6 golden rules — and § Your flow (its policies), verbatim and self-contained in your instructions (no external file to open)",
+  "scope_ids": [
+    "Regional Deflators_NUTS2"
+  ],
+  "prior_findings": [],
+  "request_id": "01-associate_instruments-survey",
+  "tools": [
+    "codes",
+    "column",
+    "columns",
+    "inventory",
+    "search",
+    "structure",
+    "submit"
+  ],
+  "brief_sha256": "8396921c113306e633a6b935b52be3e2627380dab56c5ba484662b37c3f81150",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "5592d6d6a95ef7ce98a63f7663f6db15e86eb5b2795633a4c6cc4dac5463a1f8",
+  "contract_sha256": "d566f5b574732ffee4a74d4e82da4933bce978428f62ab40d76ccdd92d396cb7"
+}

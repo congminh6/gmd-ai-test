@@ -1,0 +1,257 @@
+# harmonize TUR_2024_SILC-C @ 2026-11-17T15:02:15+00:00
+  data=\\wbgfscifs01\GPWG-GMD\datalib-ECA\datalib\TUR\TUR_2024_SILC-C\TUR_2024_SILC-C_v01_M\Data\Stata  modules=['MOD-DEM', 'MOD-DWL', 'MOD-GEO', 'MOD-IDN', 'MOD-LBR', 'MOD-UTL', 'MOD-WLF']  direct=True
+  profile review: approved by zs (profile 61058aa179ff)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+b47b1569; data TUR_2024_SILC-C_v01_M
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a
+    input profile/file_links.json  sha256=7cea02ab8d177dcf5590728abb16f8c0cc38da8926300059ce6dc96eda4c8d48
+    input profile/instruments.json  sha256=a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f
+    input profile/key_checks.json  sha256=bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d
+    input profile/overlay.json  sha256=db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json  sha256=917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json  sha256=a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b
+    input profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json  sha256=97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb
+    input profile/standard.json  sha256=e1c155027a04793b7b53c264cf509dfe38afbd38fe12d87d7d0f8d16bd618139
+    profile 61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f — approved by zs at 2026-11-17T15:02:15+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+    prelude marital_status: reads dataset(s) ['P'] not delivered — not installed
+    prelude isced_level: reads dataset(s) ['P'] not delivered — not installed
+    prelude welfare_pc: reads dataset(s) ['H'] not delivered — not installed
+    VAR-countrycode: left to the author — its dataset 'R' is not delivered
+    VAR-year: left to the author — its dataset 'R' is not delivered
+    VAR-intyear: left to the author — HB060 is not a column of this delivery
+    VAR-intmonth: left to the author — HB050 is not a column of this delivery
+    VAR-weight: left to the author — DB090 is not a column of this delivery
+    VAR-urban: left to the author — DB100 is not a column of this delivery
+    VAR-subnatid1: left to the author — DB040 is not a column of this delivery
+    VAR-subnatidsurvey: left to the author — DB040 is not a column of this delivery
+    VAR-psu: left to the author — DB060 is not a column of this delivery
+    VAR-strata: left to the author — DB050 is not a column of this delivery
+    VAR-male: left to the author — RB090 is not a column of this delivery
+    VAR-age: left to the author — RB082 is not a column of this delivery
+    VAR-marital: left to the author — __derived.marital_status__ is produced by a prelude that was not installed
+    VAR-school: left to the author — PE010 is not a column of this delivery
+    VAR-educat7: left to the author — __derived.isced_level__ is produced by a prelude that was not installed
+    VAR-hsize: left to the author — HB120 is not a column of this delivery
+    VAR-welfare: left to the author — __derived.welfare_pc__ is produced by a prelude that was not installed
+    VAR-welfaretype: left to the author — its dataset 'R' is not delivered
+    VAR-educat5: left to the author — derived from VAR-educat7, which is not bound here
+    VAR-educat4: left to the author — derived from VAR-educat7, which is not bound here
+    VAR-primarycomp: left to the author — derived from VAR-educat7, which is not bound here
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\01.json via submit (2532 bytes)
+    AI CALL [locate_sources / MOD-DWL] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DWL] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (4072 bytes)
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (2516 bytes)
+    notes: Only NUTS/Statistical Region codes (hb030/hb031) are visible; no PSU/strata/urban/residence or finer admin levels found in the bindable raw tables.
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\04_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (2045 bytes)
+    notes: Interview month appears not collected in delivered data; only "Year of the survey" is present as hb010/fb010/fk010.
+    AI CALL [locate_sources / MOD-LBR] → trail\harmonize\ai_calls\05_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-LBR] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (9853 bytes)
+    AI CALL [locate_sources / MOD-UTL] → trail\harmonize\ai_calls\06_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-UTL] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (2145 bytes)
+    notes: Survey index shows only housing-conditions access/possession variables (piped water, flush toilet, heating system), not detailed water/sanitation type questions or any utility/fuel/telecom expenditures.
+    AI CALL [locate_sources / MOD-WLF] → trail\harmonize\ai_calls\07_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-WLF] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (2488 bytes)
+    notes: No explicit household-size or equivalised/consumption welfare variables are listed in the index; welfare likely constructed from hg110 and household roster counts.
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\08_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\08.json via submit (13522 bytes, + dem-childmth.py)
+    notes: Gate predicates cannot currently reference PARAM-EDU-MIN-EDUCATION-AGE token directly (validate treats it as a column), so the numeric value 16 is inlined while still authored in parameters block.
+    AI CALL [author_bindings / MOD-DWL] → trail\harmonize\ai_calls\09_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DWL] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\09.json via submit (27241 bytes, + MOD-DWL-phone_any.py, MOD-DWL-rooms_num.py)
+    reconciled binding_id 'B-acquihouse' → 'B-acqui_house' (by target VAR-acquihouse)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\10_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\10.json via submit (6813 bytes)
+    reconciled binding_id 'B-geocode' → 'B-geo_code' (by target VAR-geocode)
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\11_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\11.json via submit (2585 bytes)
+    reconciled binding_id 'B-intyear' → 'B-int_year' (by target VAR-intyear)
+    AI CALL [author_bindings / MOD-LBR] → trail\harmonize\ai_calls\12_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-LBR] — 10 tool(s), budget 80 call(s)
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument 'in'
+    received trail\harmonize\ai_responses\12.json via submit (29511 bytes, + LBR-laborincome_sum.py)
+    reconciled binding_id 'B-minlaborageyear' → 'B-minlaborage_year' (by target VAR-minlaborageyear)
+    reconciled binding_id 'B-unempldurl' → 'B-unempldur_l' (by target VAR-unempldurl)
+    reconciled binding_id 'B-unemplduru' → 'B-unempldur_u' (by target VAR-unemplduru)
+    AI CALL [author_bindings / MOD-UTL] → trail\harmonize\ai_calls\13_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-UTL] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\13.json via submit (20946 bytes)
+    reconciled binding_id 'B-centralacc' → 'B-central_acc' (by target VAR-centralacc)
+    reconciled binding_id 'B-pipedtoprem' → 'B-piped_to_prem' (by target VAR-pipedtoprem)
+    reconciled binding_id 'B-toiletacc' → 'B-toilet_acc' (by target VAR-toiletacc)
+    AI CALL [author_bindings / MOD-WLF] → trail\harmonize\ai_calls\14_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-WLF] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\14.json via submit (4486 bytes, + wlf-hhsize_welfare_pc.py)
+    reconciled binding_id 'B-welfare_pc' → 'B-welfare' (by target VAR-welfare)
+    reconciled binding_id 'B-welfarenom_pc' → 'B-welfarenom' (by target VAR-welfarenom)
+    reconciled binding_id 'B-welfshprosperity_pc' → 'B-welfshprosperity' (by target VAR-welfshprosperity)
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\15_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\15.json via submit (942 bytes)
+    notes: Only identified issue is MOD-DWL-phone_any missingness handling vs comment/intent; others appear safe and consistent with stated produces/placement rules (t2#authored).
+    prelude MOD-DWL-phone_any: a concern (advisory: its dry run passed) — Logic does not match the stated intent to “preserve missingness if either source is missing”: it sets NaN only when BOTH hh150 and hh160 are missing, but returns 0 when one is missing and the other is
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-educat4: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educat5: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educat7: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-educy: raw_value 'silc24_p.fe030' (from correspondence.education)
+        resolved: B-geo_code: raw_value 'silc24_h.hb031' (from correspondence.geography)
+        resolved: B-ac: table 'silc24_h' (from column 'hh230')
+        resolved: B-acqui_house: table 'silc24_h' (from column 'hh030')
+        resolved: B-areaspace: table 'silc24_h' (from column 'hh070')
+        resolved: B-bath: table 'silc24_h' (from column 'hh100')
+        resolved: B-car: table 'silc24_h' (from column 'hh240')
+        resolved: B-cellphone: table 'silc24_h' (from column 'hh160')
+        resolved: B-computer: table 'silc24_h' (from column 'hh180')
+        resolved: B-dweltyp: table 'silc24_h' (from column 'hh010')
+        resolved: B-fridge: table 'silc24_h' (from column 'hh210')
+        resolved: B-internet: table 'silc24_h' (from column 'hh190')
+        resolved: B-kitchen: table 'silc24_h' (from column 'hh120')
+        resolved: B-landphone: table 'silc24_h' (from column 'hh150')
+        resolved: B-ownhouse: table 'silc24_h' (from column 'hh020')
+        resolved: B-phone: table 'silc24_h' (from column '__derived.phone_any__')
+        resolved: B-rooms: table 'silc24_h' (from column '__derived.rooms_num__')
+        resolved: B-tv: table 'silc24_h' (from column 'hh170')
+        resolved: B-washmach: table 'silc24_h' (from column 'hh200')
+        resolved: B-subnatid1: table 'silc24_h' (from column 'hb030')
+        resolved: B-subnatid2: table 'silc24_h' (from column 'hb031')
+        resolved: B-subnatidsurvey: table 'silc24_h' (from column 'hb031')
+        resolved: B-contract: table 'silc24_p' (from column 'fi210')
+        resolved: B-empstat: table 'silc24_p' (from column 'fi120')
+        resolved: B-industrycat10: table 'silc24_p' (from column 'fi140')
+        resolved: B-industrycat4: table 'silc24_p' (from column 'fi140')
+        resolved: B-laborincome: table 'silc24_p' (from column '__derived.laborincome__')
+        resolved: B-lstatus: table 'silc24_p' (from column 'fi010')
+        resolved: B-occup: table 'silc24_p' (from column 'fi130')
+        resolved: B-ocusec: table 'silc24_p' (from column 'fi145')
+        resolved: B-socialsec: table 'silc24_p' (from column 'fi190')
+        resolved: B-unempldur_l: table 'silc24_p' (from column 'fi280')
+        resolved: B-unempldur_u: table 'silc24_p' (from column 'fi280')
+        resolved: B-whours: table 'silc24_p' (from column 'fi150')
+        resolved: B-wmonths: table 'silc24_p' (from column 'fi240')
+        resolved: B-central_acc: table 'silc24_h' (from column 'hh080')
+        resolved: B-piped: table 'silc24_h' (from column 'hh130')
+        resolved: B-piped_to_prem: table 'silc24_h' (from column 'hh130')
+        resolved: B-toilet_acc: table 'silc24_h' (from column 'hh110')
+        resolved: B-hsize: table 'wlf_hh' (from column '__derived.hsize__')
+        resolved: B-welfare: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        resolved: B-welfarenom: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        resolved: B-welfshprosperity: table 'wlf_hh' (from column '__derived.welfare_pc__')
+        kind: silc24_pr.fk070: numeric
+        kind: silc24_p.fe030: numeric
+        kind: silc24_pr.fk090: numeric
+        kind: silc24_p.fb100: numeric
+        kind: silc24_p.fe010: numeric
+        kind: silc24_h.hh230: numeric
+        kind: silc24_h.hh030: numeric
+        kind: silc24_h.hh070: numeric
+        kind: silc24_h.hh100: numeric
+        kind: silc24_h.hh240: numeric
+        kind: silc24_h.hh160: numeric
+        kind: silc24_h.hh180: numeric
+        kind: silc24_h.hh010: numeric
+        kind: silc24_h.hh210: numeric
+        kind: silc24_h.hh190: numeric
+        kind: silc24_h.hh120: numeric
+        kind: silc24_h.hh150: numeric
+        kind: silc24_h.hh020: numeric
+        kind: silc24_h.hh170: numeric
+        kind: silc24_h.hh200: numeric
+        kind: silc24_h.hb031: string
+        kind: silc24_h.hb030: string
+        kind: silc24_h.hb010: numeric
+        kind: silc24_h.hb040: numeric
+        kind: silc24_p.fi210: numeric
+        kind: silc24_p.fi120: numeric
+        kind: silc24_p.fi140: numeric
+        kind: silc24_p.fi010: numeric
+        kind: silc24_p.fi130: numeric
+        kind: silc24_p.fi145: numeric
+        kind: silc24_p.fi190: numeric
+        kind: silc24_p.fi280: numeric
+        kind: silc24_p.fi150: numeric
+        kind: silc24_p.fi240: numeric
+        kind: silc24_h.hh080: numeric
+        kind: silc24_h.hh130: numeric
+        kind: silc24_h.hh110: numeric
+        resolved: B-primarycomp: unit_keys ['hh_id', 'pers_id'] (from parent)
+        resolved: B-ac: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-acqui_house: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-areaspace: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-bath: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-car: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-cellphone: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-computer: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-dweltyp: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-fridge: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-internet: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-kitchen: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-landphone: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-ownhouse: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-phone: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-rooms: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-tv: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-washmach: unit_keys ['hh_id'] (from data_scan)
+        resolved: B-contract: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-empstat: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-industrycat10: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-industrycat4: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-laborincome: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-lstatus: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-occup: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-ocusec: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-socialsec: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-unempldur_l: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-unempldur_u: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-whours: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-wmonths: unit_keys ['pers_id'] (from data_scan)
+        resolved: B-hsize: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfare: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfarenom: unit_keys ['hh_id'] (from prelude)
+        resolved: B-welfshprosperity: unit_keys ['hh_id'] (from prelude)
+      VALID: hspec.json stamped (validator v2, 2026-11-17T15:33:31+00:00); coverage bound 68, documented 209
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      PASS — 80727 rows, 68 target(s); contract clean. Outputs in C:\Users\wb249563\.harmon\work\runs\loc_20261117T150212_5d51\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb249563\.harmon\work\runs\loc_20261117T150212_5d51\output\quality.json: 68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared
+  CHECK F: ok — 68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==
+
+>> 1 target(s) failed in the last run, but their determination has changed since: whether the change fixed them is known after the next run — re-run the same command: VAR-phone

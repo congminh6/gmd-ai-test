@@ -1,0 +1,7 @@
+{
+ "steps": {
+  "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf": "ok (codebook, page images): 147 entries in 3 dataset(s) from 7 page(s), 147 with a data table; left out by the check against the data: 0 entries naming no column, 3 code(s) not observed; 6 values cell(s) not parsed; 118s, 42,178 token(s) -> profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json, profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json",
+  "Turkish/GYKA MVS (Kesit), 2024 kapak.jpg": "skipped: image: a jpeg image: no reader takes images",
+  "Turkish/GYKA MVS (Kesit), 2024 TR son.pdf": "not read: lower priority: the folder holds an English document of this kind, which is read; this one is in another language (`all_languages: true` reads it too) — Turkish; in English: English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf"
+ }
+}

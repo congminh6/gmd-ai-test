@@ -1,0 +1,129 @@
+{
+ "request_id": "04-author_bindings-MOD-WLF",
+ "preludes": [
+  {
+   "id": "wlf-hhsize_welfare_pc",
+   "reason": "Household size is not present as a single household-level column; it must be counted from the full person register (silc24_pr, all ages) and then used to normalize total household disposable income (HG110) to a per-capita welfare aggregate.",
+   "produces": [
+    "__derived.hsize__",
+    "__derived.welfare_pc__"
+   ],
+   "output_table": "wlf_hh",
+   "keys": [
+    "hh_id"
+   ],
+   "invariants": [
+    "One row per hh_id present in silc24_h",
+    "__derived.hsize__ >= 1 for all households"
+   ],
+   "code_file": "wlf-hhsize_welfare_pc.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-hsize",
+   "target": "VAR-hsize",
+   "roles": {
+    "raw_value": "__derived.hsize__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "resolved",
+   "evidence": "Household size derived by counting silc24_pr.pers_id rows per silc24_pr.hh_id (full person register, all ages). (t3)"
+  },
+  {
+   "binding_id": "B-welfare",
+   "target": "VAR-welfare",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "evidence": "Per-capita welfare constructed in prelude as total household disposable income (silc24_h.hg110) divided by household size from silc24_pr. (t3)"
+  },
+  {
+   "binding_id": "B-welfarenom",
+   "target": "VAR-welfarenom",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "evidence": "Nominal welfare set equal to per-capita disposable income constructed from silc24_h.hg110 and silc24_pr-based household size. (t3)"
+  },
+  {
+   "binding_id": "B-welfshprosperity",
+   "target": "VAR-welfshprosperity",
+   "roles": {
+    "raw_value": "__derived.welfare_pc__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "assumed",
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "evidence": "Shared prosperity welfare set to the same per-capita disposable income aggregate as welfare, constructed using silc24_h.hg110 and silc24_pr-based household size. (t3)"
+  },
+  {
+   "binding_id": "B-welfaretype",
+   "target": "VAR-welfaretype",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant": "INC",
+   "register": "resolved",
+   "evidence": "silc24_h.hg110 is labelled Total household disposable income, i.e. an income concept. (t3)"
+  },
+  {
+   "binding_id": "B-welfshprtype",
+   "target": "VAR-welfshprtype",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant": "INC",
+   "register": "resolved",
+   "evidence": "Shared prosperity aggregate uses the same income-based welfare as welfare (hg110 / hsize), so type is income. (t3)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-welfaredef",
+   "kind": "not_collected_by_design",
+   "reason": "No spatially-deflated/real welfare aggregate column is present in silc24_h; while a region identifier exists, the referenced deflators table is not bindable in this delivery.",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-welfareother",
+   "kind": "not_collected_by_design",
+   "reason": "No secondary final welfare aggregate (consumption/expenditure alternative) is present; only the income aggregate HG110 is apparent in silc24_h.",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-welfareothertype",
+   "kind": "not_collected_by_design",
+   "reason": "Because no secondary welfare aggregate is present (welfareother absent), no corresponding welfareothertype can be sourced.",
+   "status": "absent"
+  }
+ ],
+ "notes": "Updated prelude to count household members from silc24_pr (all ages) instead of silc24_p (15+), fixing hsize and per-capita welfare."
+}

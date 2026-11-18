@@ -1,0 +1,93 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "spec_sha256": "649deeba015340e939503c2bbe33ac528cc6e953666692cc33604707cbdbd596",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 68,
+  "rows": 80727,
+  "tables": [
+    {
+      "table": "Regional Deflators_NUTS2",
+      "rows": 26,
+      "used": false
+    },
+    {
+      "table": "silc24_h",
+      "rows": 25925,
+      "used": true
+    },
+    {
+      "table": "silc24_p",
+      "rows": 61846,
+      "used": true
+    },
+    {
+      "table": "silc24_pr",
+      "rows": 80727,
+      "used": true
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 75,
+    "not_m1": [
+      "roster-silc24_pr-silc24_p: 1:1 join on ['key:hh_id', 'key:pers_id']"
+    ]
+  },
+  "preludes": [
+    {
+      "id": "LBR-laborincome_sum",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.laborincome__ is numeric or NaN"
+      ]
+    },
+    {
+      "id": "MOD-DWL-phone_any",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.phone_any__ in {0,1} or null"
+      ]
+    },
+    {
+      "id": "MOD-DWL-rooms_num",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.rooms_num__ >= 1 or null"
+      ]
+    },
+    {
+      "id": "dem-age-derived",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.age__ in [0,120] or NA",
+        "declared invariant (checked by the script): __derived.childmth__ in [0,59] when age<5"
+      ]
+    },
+    {
+      "id": "dem-childmth",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.childmth__ is null or between 0 and 59"
+      ]
+    },
+    {
+      "id": "wlf-hhsize_welfare_pc",
+      "invariants": [
+        "declared invariant (checked by the script): One row per hh_id present in silc24_h",
+        "declared invariant (checked by the script): __derived.hsize__ >= 1 for all households"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-17T16:18:04+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+b47b1569",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

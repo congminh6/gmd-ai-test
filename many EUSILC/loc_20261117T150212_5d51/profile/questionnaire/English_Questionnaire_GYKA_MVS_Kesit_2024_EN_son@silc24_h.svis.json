@@ -1,0 +1,2201 @@
+{
+  "country_code": "TUR",
+  "extraction_date": "2026-11-17",
+  "source_file": "GYKA MVS (Kesit), 2024 EN son.pdf",
+  "source_format": "codebook",
+  "survey_id": "TUR_2024_SILC-C",
+  "survey_name": "TUR_2024_SILC-C",
+  "variables": [
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Household ID",
+      "needs_review": true,
+      "notes": "length/format: 5",
+      "numeric_range": {
+        "max_value": 27401.0,
+        "min_value": 1.0
+      },
+      "raw_name": "HH_ID",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Year of the survey",
+      "needs_review": true,
+      "notes": "length/format: 4; values cell not parsed: 2024",
+      "raw_name": "HB010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "TR1",
+          "is_missing": false,
+          "label": "İstanbul"
+        },
+        {
+          "code": "TR2",
+          "is_missing": false,
+          "label": "Batı Marmara"
+        },
+        {
+          "code": "TR3",
+          "is_missing": false,
+          "label": "Ege"
+        },
+        {
+          "code": "TR4",
+          "is_missing": false,
+          "label": "Doğu Marmara"
+        },
+        {
+          "code": "TR5",
+          "is_missing": false,
+          "label": "Batı Anadolu"
+        },
+        {
+          "code": "TR6",
+          "is_missing": false,
+          "label": "Akdeniz"
+        },
+        {
+          "code": "TR7",
+          "is_missing": false,
+          "label": "Orta Anadolu"
+        },
+        {
+          "code": "TR8",
+          "is_missing": false,
+          "label": "Batı Karadeniz"
+        },
+        {
+          "code": "TR9",
+          "is_missing": false,
+          "label": "Doğu Karadeniz"
+        },
+        {
+          "code": "TRA",
+          "is_missing": false,
+          "label": "Kuzey Doğu Anadolu"
+        },
+        {
+          "code": "TRB",
+          "is_missing": false,
+          "label": "Orta Doğu Anadolu"
+        },
+        {
+          "code": "TRC",
+          "is_missing": false,
+          "label": "Güney Doğu Anadolu"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Statistical Regions, Level 1",
+      "needs_review": true,
+      "notes": "length/format: 3",
+      "raw_name": "HB030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "TR10",
+          "is_missing": false,
+          "label": "İstanbul"
+        },
+        {
+          "code": "TR21",
+          "is_missing": false,
+          "label": "Tekirdağ, Edirne, Kırklareli"
+        },
+        {
+          "code": "TR22",
+          "is_missing": false,
+          "label": "Balıkesir, Çanakkale"
+        },
+        {
+          "code": "TR31",
+          "is_missing": false,
+          "label": "İzmir"
+        },
+        {
+          "code": "TR32",
+          "is_missing": false,
+          "label": "Aydın, Denizli, Muğla"
+        },
+        {
+          "code": "TR33",
+          "is_missing": false,
+          "label": "Manisa, Afyon, Kütahya, Uşak"
+        },
+        {
+          "code": "TR41",
+          "is_missing": false,
+          "label": "Bursa, Eskişehir, Bilecik"
+        },
+        {
+          "code": "TR42",
+          "is_missing": false,
+          "label": "Kocaeli, Sakarya, Düzce, Bolu, Yalova"
+        },
+        {
+          "code": "TR51",
+          "is_missing": false,
+          "label": "Ankara"
+        },
+        {
+          "code": "TR52",
+          "is_missing": false,
+          "label": "Konya, Karaman"
+        },
+        {
+          "code": "TR61",
+          "is_missing": false,
+          "label": "Antalya, Isparta, Burdur"
+        },
+        {
+          "code": "TR62",
+          "is_missing": false,
+          "label": "Adana, Mersin"
+        },
+        {
+          "code": "TR63",
+          "is_missing": false,
+          "label": "Hatay, Kahramanmaraş, Osmaniye"
+        },
+        {
+          "code": "TR71",
+          "is_missing": false,
+          "label": "Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir"
+        },
+        {
+          "code": "TR72",
+          "is_missing": false,
+          "label": "Kayseri, Sivas, Yozgat"
+        },
+        {
+          "code": "TR81",
+          "is_missing": false,
+          "label": "Zonguldak, Karabük, Bartın"
+        },
+        {
+          "code": "TR82",
+          "is_missing": false,
+          "label": "Kastamonu, Çankırı, Sinop"
+        },
+        {
+          "code": "TR83",
+          "is_missing": false,
+          "label": "Samsun, Tokat, Çorum, Amasya"
+        },
+        {
+          "code": "TR90",
+          "is_missing": false,
+          "label": "Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane"
+        },
+        {
+          "code": "TRA1",
+          "is_missing": false,
+          "label": "Erzurum, Erzincan, Bayburt"
+        },
+        {
+          "code": "TRA2",
+          "is_missing": false,
+          "label": "Ağrı, Kars, Iğdır, Ardahan"
+        },
+        {
+          "code": "TRB1",
+          "is_missing": false,
+          "label": "Malatya, Elazığ, Bingöl, Tunceli"
+        },
+        {
+          "code": "TRB2",
+          "is_missing": false,
+          "label": "Van, Muş, Bitlis, Hakkari"
+        },
+        {
+          "code": "TRC1",
+          "is_missing": false,
+          "label": "Gaziantep, Adıyaman, Kilis"
+        },
+        {
+          "code": "TRC2",
+          "is_missing": false,
+          "label": "Şanlıurfa, Diyarbakır"
+        },
+        {
+          "code": "TRC3",
+          "is_missing": false,
+          "label": "Mardin, Batman, Şırnak, Siirt"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Statistical Regions, Level 2",
+      "needs_review": true,
+      "notes": "length/format: 3",
+      "raw_name": "HB031",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Household weight",
+      "needs_review": true,
+      "notes": "Format 4.7; length/format: 4.7",
+      "raw_name": "HB040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "One person household"
+        },
+        {
+          "code": "21",
+          "is_missing": false,
+          "label": "Couple without resident children"
+        },
+        {
+          "code": "22",
+          "is_missing": false,
+          "label": "Couple with at least one resident child"
+        },
+        {
+          "code": "23",
+          "is_missing": false,
+          "label": "Lone parents with at least one resident child"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Extended-family households"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Multi-person no-family households"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Household type\n* : The code “2” is the sum of the codes “21”, “22” and “23”.",
+      "needs_review": true,
+      "notes": "2 is the sum of 21+22+23; length/format: 2; 2 code(s) read from the page image are not observed in the data and were left out: 2, 5",
+      "raw_name": "HB050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "11",
+          "is_missing": false,
+          "label": "Detached house"
+        },
+        {
+          "code": "121",
+          "is_missing": false,
+          "label": "Two dwellings with separate entrance (Terraced house)"
+        },
+        {
+          "code": "122",
+          "is_missing": false,
+          "label": "Two dwellings with common entrance"
+        },
+        {
+          "code": "131",
+          "is_missing": false,
+          "label": "3-9 dwellings with separate entrance (Terraced house)"
+        },
+        {
+          "code": "132",
+          "is_missing": false,
+          "label": "Apartment or flat in a building with 3-9 residences with common entrance"
+        },
+        {
+          "code": "141",
+          "is_missing": false,
+          "label": "10 or more dwellings with separate entrance (Terraced house)"
+        },
+        {
+          "code": "142",
+          "is_missing": false,
+          "label": "Apartment or flat in a building with 10 or more dwellings with common entrance"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Some other kind of accommodation"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Dwelling type",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Owner"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Tenant"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Lodging"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Not owner but accommodation is provided free"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Tenure status",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Year of purchasing or possessing of the house",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 4",
+      "numeric_range": {
+        "max_value": 2024.0,
+        "min_value": 1900.0
+      },
+      "raw_name": "HH030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Monthly rental amount paid for the dwelling (TRY)\n(Dues and fuel expenses and janitor expenses are not included in the rental value.)\n(where HH020 is “2” or “3”)",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 6",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "HH040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Average value of monthly expenses (TRY)\n(Utility bills, fuel expenses, housing services, regular repair and maintenance costs, tax for the dwelling etc.)",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 6",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "HH050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "1"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "2"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "3"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "4"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "5"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "6"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "8"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "9"
+        },
+        {
+          "code": "10",
+          "is_missing": false,
+          "label": "10 or more"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Number of rooms available to the household  (kitchen, bathroom and toilet are excluded)",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "raw_name": "HH060",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Size of dwelling in squaremeters (m²)",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 3",
+      "numeric_range": {
+        "max_value": 999.0,
+        "min_value": 25.0
+      },
+      "raw_name": "HH070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Stove (Coal, gas, natural gas, electricity, etc.)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Radiator (Joint or central heating)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Radiator (Heating system for only a flat/combi boiler)"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Air conditioner"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Other"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "No heating system"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Heating system available in the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes (For sole use of the household)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes (Shared)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "BATHTUB or SHOWER UNIT in the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes (For sole use of the household)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes (Shared)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "INDOOR FLUSHING TOILET in the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "KITCHEN in the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH120",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "PIPED WATER SYSTEM in the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH130",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "HOT WATER SYSTEM in the dwelling (Central hot water,\ngeyser, water heater, solar energy system etc.)",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH140",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Very dissatisfied"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Dissatisfied"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Very satisfied"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Overall satisfaction with the dwelling",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1; 1 code(s) read from the page image are not observed in the data and were left out: 3",
+      "raw_name": "HH145",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "TELEPHONE LINE possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH150",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "MOBILE PHONE possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH160",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "COLOUR TV possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH170",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "COMPUTER possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH180",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "INTERNET connection possession of the household\n[HH180 = “1” ]",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH190",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "WASHING MACHINE possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH200",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "REFRIGERATOR possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH210",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "DISHWASHER possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH220",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "AIR CONDITIONER possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH230",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, cannot afford"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "CAR (for private use only) possession of the household",
+      "module": "Dwelling and Housing Conditions",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HH240",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Leaking roof, damp walls or rot in window frames problems",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Heating problems because of insulation",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Problems such as darkness of rooms or lack of day-light",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Noise from neighbours or from street",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Shortage of space in the dwelling",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Pollution, grime or other environmental problems",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS060",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Crime, violence or vandalism in the area",
+      "module": "Problems with Dwelling and Environment",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HS070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes (Once)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes (Twice or more)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "There is no such kind of payment"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Arrears on MORTGAGE, LOAN REPAYMENTS or RENT\nPAYMENTS in the last 12 months",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes (Once)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes (Twice or more)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "There is no such kind of payment"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Arrears on UTILITY BILLS in the last 12 months\n(Paying through borrowing is considered as paid through own\nsources)",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes (Once)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes (Twice or more)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "There is no such kind of payment"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Arrears on HIRE PURCHASE INSTALMENTS, CREDIT\nCARDS or OTHER LOAN PAYMENTS in the last 12\nmonths",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "With a great difficulty"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "With difficulty"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "With some difficulty"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Fairly easily"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Easily"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Very easily"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Ability to MAKE ENDS MEET with total household income",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Lowest monthly income of household to make ends meet",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 7",
+      "numeric_range": {
+        "max_value": 9999999.0,
+        "min_value": 1.0
+      },
+      "raw_name": "HE050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "A heavy burden"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "A slight burden"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Not burden at all"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Financial burden of the total housing cost\n(Repayment of an interest for a loan or credit on dwelling for owner\noccupiers or rent paid for tenants , utility bills , heating expenses,\npenalties for utility bills, collective expenses of apartment and\nregular repair and maintenance costs are all covered.)",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE060",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "A heavy burden"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "A slight burden"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Not burden at all"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "There is no such kind of repayment"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Financial burden of the repayment of debts from hire\npurchases or loans excluding housing costs",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Can your household afford paying for a week's annual\n(seven days) holiday away from home for all household\nmembers together or separately? (Holiday village, hotel, guest\nhouse, summer house, friend/relative house, governmental camps\nare included.)",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Can your household afford to cost of meal with meat,\nchicken or fish every second day? (Vegetarian equivalent)",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE090",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Can your household afford an unexpected required expense\n(approximately 1.780 Turkish Lira) and pay through its own\nresources?",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Can your household afford to keep its home adequately\nwarm?",
+      "module": "Financial Situation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No- Finanacial difficulty"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No- Other reasons"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Do you renew your worn-out or old furniture (bed, couch,\ndresser, closet) ?\n(Second-hand furniture can be taken into account)\n(: Not in need of, not want to have and other reasons)",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "HE120",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Annual rental value of the dwelling according to current\nmarket prices\n(Tenure status is 'owner' or 'other' i.e. HH020 ='1' or '4' )",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Income received by household members aged under 15\nduring 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Children related allowances in cash received during 2023\n(TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG030N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Value of children related allowances in kind received during\n2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG030A",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Housing allowances received during 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Other social allowances in cash received in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG050N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Value of other social allowances in kind received in 2023\n(TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG050A",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Regular allowances in cash received from other households\nor persons in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG060N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Value of regular allowances in kind received from other\nhouseholds or persons in 2023 (Excluding alimony) (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG060A",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Alimonies received in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG065N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Income received from rental of assets or lands in 2023\n(TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Property income received in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Market value of animal or vegetable products not regarded\nas an agricultural activity, produced just for own\nconsumption of household in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG085",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Regular allowances in cash paid to other households or\npersons in 2023 (Excluding alimony) (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG090N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Value of regular allowances in kind paid to other\nhouseholds or persons in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG090A",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Alimonies paid in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG095N",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Regular taxes paid in 2023 (including tax for the dwelling,\nmotor vehicles tax and regularly paid wealth tax) (TRY)\n(Excluding income tax)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Social insurance contributions paid in 2023 (TRY)",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG103",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Imputed annual income for individuals not responded to the\nquestionnaire",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": -999999.0
+      },
+      "raw_name": "HG105",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total household disposable income ()\n(FG010 + FG020 + FG030 + FG040 + FG070 + FG080 +\nFG085 + FG090 + FG100 + FG110 + FG120 + HG010 +\nHG020 + HG030N + HG030A + HG040 + HG050N +\nHG050A + HG060N + HG060A + HG065N + HG070 +\nHG080 + HG085 + HG105 - HG090N - HG090A - HG095N\n- HG100 - HG103)\n(): For the negative household disposable income, 15% of the\nmedian income is taken.",
+      "module": "Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.99,
+        "min_value": 0.0
+      },
+      "raw_name": "HG110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    }
+  ],
+  "x_harmon": {
+    "instrument_id": "codebook-e25ac8513011",
+    "instrument_name": "GYKA MVS (Kesit), 2024 EN son: silc24_h",
+    "kind": "codebook",
+    "variables": {
+      "HB010": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r3"
+        ]
+      },
+      "HB030": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r4"
+        ]
+      },
+      "HB031": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r5"
+        ]
+      },
+      "HB040": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r6"
+        ]
+      },
+      "HB050": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r7"
+        ]
+      },
+      "HE010": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r27"
+        ]
+      },
+      "HE020": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r28"
+        ]
+      },
+      "HE030": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r29"
+        ]
+      },
+      "HE040": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r30"
+        ]
+      },
+      "HE050": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r31"
+        ]
+      },
+      "HE060": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r32"
+        ]
+      },
+      "HE070": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r33"
+        ]
+      },
+      "HE080": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r2"
+        ]
+      },
+      "HE090": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r3"
+        ]
+      },
+      "HE100": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r4"
+        ]
+      },
+      "HE110": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r5"
+        ]
+      },
+      "HE120": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r7"
+        ]
+      },
+      "HG010": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r9"
+        ]
+      },
+      "HG020": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r10"
+        ]
+      },
+      "HG030A": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r12"
+        ]
+      },
+      "HG030N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r11"
+        ]
+      },
+      "HG040": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r13"
+        ]
+      },
+      "HG050A": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r15"
+        ]
+      },
+      "HG050N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r14"
+        ]
+      },
+      "HG060A": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r17"
+        ]
+      },
+      "HG060N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r16"
+        ]
+      },
+      "HG065N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r18"
+        ]
+      },
+      "HG070": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r19"
+        ]
+      },
+      "HG080": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r20"
+        ]
+      },
+      "HG085": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r21"
+        ]
+      },
+      "HG090A": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r23"
+        ]
+      },
+      "HG090N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r22"
+        ]
+      },
+      "HG095N": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r24"
+        ]
+      },
+      "HG100": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r25"
+        ]
+      },
+      "HG103": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r26"
+        ]
+      },
+      "HG105": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r27"
+        ]
+      },
+      "HG110": {
+        "by": "image",
+        "cites": [
+          "p22-t1#r28"
+        ]
+      },
+      "HH010": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r9"
+        ]
+      },
+      "HH020": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r10"
+        ]
+      },
+      "HH030": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r11"
+        ]
+      },
+      "HH040": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r12"
+        ]
+      },
+      "HH050": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r13"
+        ]
+      },
+      "HH060": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r14"
+        ]
+      },
+      "HH070": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r15"
+        ]
+      },
+      "HH080": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r16"
+        ]
+      },
+      "HH100": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r2"
+        ]
+      },
+      "HH110": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r3"
+        ]
+      },
+      "HH120": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r4"
+        ]
+      },
+      "HH130": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r5"
+        ]
+      },
+      "HH140": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r6"
+        ]
+      },
+      "HH145": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r7"
+        ]
+      },
+      "HH150": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r8"
+        ]
+      },
+      "HH160": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r9"
+        ]
+      },
+      "HH170": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r10"
+        ]
+      },
+      "HH180": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r11"
+        ]
+      },
+      "HH190": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r12"
+        ]
+      },
+      "HH200": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r13"
+        ]
+      },
+      "HH210": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r14"
+        ]
+      },
+      "HH220": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r15"
+        ]
+      },
+      "HH230": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r16"
+        ]
+      },
+      "HH240": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r17"
+        ]
+      },
+      "HH_ID": {
+        "by": "image",
+        "cites": [
+          "p20-t1#r2"
+        ]
+      },
+      "HS010": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r19"
+        ]
+      },
+      "HS020": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r20"
+        ]
+      },
+      "HS030": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r21"
+        ]
+      },
+      "HS040": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r22"
+        ]
+      },
+      "HS050": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r23"
+        ]
+      },
+      "HS060": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r24"
+        ]
+      },
+      "HS070": {
+        "by": "image",
+        "cites": [
+          "p21-t1#r25"
+        ]
+      }
+    }
+  },
+  "year": 2024
+}

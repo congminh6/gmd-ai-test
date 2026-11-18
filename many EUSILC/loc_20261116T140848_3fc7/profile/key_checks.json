@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "POL__EU-SILC_v01_M_v01_A_UDB-C_R": {
+      "duplicates": 0,
+      "keys": [
+        "rx030",
+        "rb030"
+      ],
+      "null_key_rows": 0,
+      "rows": 49276,
+      "source_file": "POL_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta"
+    }
+  },
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "rx030",
+        "rb030"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 49276,
+      "source_file": "POL_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta",
+      "table": "POL__EU-SILC_v01_M_v01_A_UDB-C_R"
+    }
+  ],
+  "key_maps": {
+    "POL__EU-SILC_v01_M_v01_A_UDB-C_D": {
+      "db030": {
+        "distinct": 20767,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "POL__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    },
+    "POL__EU-SILC_v01_M_v01_A_UDB-C_H": {
+      "hb030": {
+        "distinct": 20767,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "POL__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    },
+    "POL__EU-SILC_v01_M_v01_A_UDB-C_P": {
+      "pb030": {
+        "distinct": 41432,
+        "grain_column": "rb030",
+        "grain_share": 0.8408,
+        "grain_table": "POL__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      },
+      "px030": {
+        "distinct": 20767,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "POL__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    }
+  }
+}

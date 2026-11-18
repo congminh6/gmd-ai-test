@@ -1,0 +1,180 @@
+# harmonize MLT_2025_EU-SILC @ 2026-11-16T13:55:59+00:00
+  data=\\wurepliprdfs05\ecafile\eca_databank\datalib_eurostat\MLT\MLT_2025_EU-SILC\MLT_2025_EU-SILC_v01_M_v01_A_UDB-C\Data\Harmonized  modules=['MOD-DEM', 'MOD-DWL', 'MOD-GEO', 'MOD-IDN', 'MOD-LBR', 'MOD-UTL', 'MOD-WLF']  direct=False
+  profile review: approved by zs (profile e4472f1733c5)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+b47b1569; data MLT_2025_EU-SILC_v01_M_v01_A_UDB-C
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=c4240213167075e06d7d9d72a45977b77061a417f6c07bcc3af86ab5ba7e852d
+    input profile/file_links.json  sha256=41bf91dd5255954874f4a3b7f65d13417468088b0fde4d0c2e2564e76499db19
+    input profile/key_checks.json  sha256=4e80808ef2ea3466d3d87084203e3a2c843756fc8d1e39103202ac6c9f696c6f
+    input profile/overlay.json  sha256=bd94630932df00398d19a7562e85aad6aa0f6f319e08c5b292f053bf45a23b13
+    input profile/questionnaire/standard__eu-silc-2021__2025__udb__D.svis.json  sha256=1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9
+    input profile/questionnaire/standard__eu-silc-2021__2025__udb__H.svis.json  sha256=abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368
+    input profile/questionnaire/standard__eu-silc-2021__2025__udb__P.svis.json  sha256=e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed
+    input profile/questionnaire/standard__eu-silc-2021__2025__udb__R.svis.json  sha256=e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e
+    input profile/standard.json  sha256=81ec2b732a0e0d062b44442a00abaf88dcf6259273815ba314191051d7fa3f4e
+    profile e4472f1733c555346330d242fd5115f7eb7cd968ddd46dcc97ac542da3f272cf — approved by zs at 2026-11-16T13:55:59+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+    the fragment composed with fragment.udb.json
+    the fragment composed with 2025/udb/fragment.json
+  [det] pin-engine-ids
+  [judge] locate-sources
+  [judge] author-bindings
+  [judge] review-prelude
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-educat7: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_P' (from column '__derived.isced_level__')
+        resolved: B-welfare: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_H' (from column '__derived.welfare_pc__')
+        resolved: B-industrycat4: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_P' (from column '__derived.industrycat4__')
+        resolved: B-occup: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_P' (from column '__derived.isco_major__')
+        resolved: B-wage_nc: table 'wage_lcu' (from column '__derived.wage_annual__')
+        resolved: B-wage_total: table 'wage_lcu' (from column '__derived.wage_annual__')
+        resolved: B-wmonths: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_P' (from column '__derived.wmonths__')
+        resolved: B-wmonthsyear: table 'MLT__EU-SILC_v01_M_v01_A_UDB-C_P' (from column '__derived.wmonths__')
+        resolved: B-laborincome: table 'wage_lcu' (from column '__derived.labor_income__')
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hb060: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_D.db090: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_D.db100: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_D.db040: string
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_D.db060: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_D.db050: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_R.rb090: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pb190: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pe010: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hb120: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_R.rx010: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_R.rb080: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hs110: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.ph151: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hs090: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.ph131: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl141: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hh010: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl040a: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pe041: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.ph101: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.ph111: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl111a: string
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl032: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl051a: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hh021: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_H.hh030: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl271: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.ph121: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl060: numeric
+        kind: MLT__EU-SILC_v01_M_v01_A_UDB-C_P.pl100: numeric
+        resolved: B-countrycode: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-year: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-intyear: unit_keys ['rx030'] (from data_scan)
+        resolved: B-weight: unit_keys ['rx030'] (from data_scan)
+        resolved: B-urban: unit_keys ['rx030'] (from data_scan)
+        resolved: B-subnatid1: unit_keys ['rx030'] (from data_scan)
+        resolved: B-subnatidsurvey: unit_keys ['rx030'] (from data_scan)
+        resolved: B-psu: unit_keys ['rx030'] (from data_scan)
+        resolved: B-strata: unit_keys ['rx030'] (from data_scan)
+        resolved: B-male: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-marital: unit_keys ['rb030'] (from data_scan)
+        resolved: B-school: unit_keys ['rb030'] (from data_scan)
+        resolved: B-educat7: unit_keys ['rb030'] (from data_scan)
+        resolved: B-hsize: unit_keys ['rx030'] (from data_scan)
+        resolved: B-welfaretype: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-welfare: unit_keys ['rx030'] (from data_scan)
+        resolved: B-age: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-agecat: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-car: unit_keys ['rx030'] (from data_scan)
+        resolved: B-childmth: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-childyr: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-communicationdisability: unit_keys ['rb030'] (from data_scan)
+        resolved: B-computer: unit_keys ['rx030'] (from data_scan)
+        resolved: B-concentrationdisorder: unit_keys ['rb030'] (from data_scan)
+        resolved: B-contract: unit_keys ['rb030'] (from data_scan)
+        resolved: B-contract_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-dweltyp: unit_keys ['rx030'] (from data_scan)
+        resolved: B-empstat: unit_keys ['rb030'] (from data_scan)
+        resolved: B-empstat_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-everattend: unit_keys ['rb030'] (from data_scan)
+        resolved: B-eyedisability: unit_keys ['rb030'] (from data_scan)
+        resolved: B-heardisability: unit_keys ['rb030'] (from data_scan)
+        resolved: B-industry_orig: unit_keys ['rb030'] (from data_scan)
+        resolved: B-industry_orig_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-lstatus: unit_keys ['rb030'] (from data_scan)
+        resolved: B-lstatus_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-mineducatage: unit_keys ['rx030', 'rb030'] (from overlay)
+        resolved: B-minlaborage: unit_keys ['rb030'] (from data_scan)
+        resolved: B-minlaborage_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-nlfreason: unit_keys ['rb030'] (from data_scan)
+        resolved: B-occup_orig: unit_keys ['rb030'] (from data_scan)
+        resolved: B-occup_orig_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-ownhouse: unit_keys ['rx030'] (from data_scan)
+        resolved: B-rooms: unit_keys ['rx030'] (from data_scan)
+        resolved: B-unempldur_l: unit_keys ['rb030'] (from data_scan)
+        resolved: B-unempldur_l_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-unempldur_u: unit_keys ['rb030'] (from data_scan)
+        resolved: B-unempldur_u_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-walkdisability: unit_keys ['rb030'] (from data_scan)
+        resolved: B-welfshprtype: unit_keys ['rx030'] (from data_scan)
+        resolved: B-whours: unit_keys ['rb030'] (from data_scan)
+        resolved: B-whours_2: unit_keys ['rb030'] (from data_scan)
+        resolved: B-whours_2_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-whours_year: unit_keys ['rb030'] (from data_scan)
+        resolved: B-industrycat4: unit_keys ['rb030'] (from data_scan)
+        resolved: B-occup: unit_keys ['rb030'] (from data_scan)
+        resolved: B-wage_nc: unit_keys ['rb030'] (from prelude)
+        resolved: B-unitwage: unit_keys ['rb030'] (from data_scan)
+        resolved: B-wage_total: unit_keys ['rb030'] (from prelude)
+        resolved: B-wmonths: unit_keys ['rb030'] (from data_scan)
+        resolved: B-wmonthsyear: unit_keys ['rb030'] (from data_scan)
+        resolved: B-laborincome: unit_keys ['rb030'] (from prelude)
+        resolved: B-educat5: unit_keys ['rb030'] (from parent)
+        resolved: B-educat4: unit_keys ['rb030'] (from parent)
+        resolved: B-primarycomp: unit_keys ['rb030'] (from parent)
+        key-correspondence: MLT__EU-SILC_v01_M_v01_A_UDB-C_D: {'db030': 'rx030'}
+        key-correspondence: MLT__EU-SILC_v01_M_v01_A_UDB-C_H: {'hb030': 'rx030'}
+        key-correspondence: MLT__EU-SILC_v01_M_v01_A_UDB-C_P: {'pb030': 'rb030', 'px030': 'rx030'}
+        flags: MLT__EU-SILC_v01_M_v01_A_UDB-C_D: 5 column(s) with a companion flag
+        flags: MLT__EU-SILC_v01_M_v01_A_UDB-C_H: 7 column(s) with a companion flag
+        flags: MLT__EU-SILC_v01_M_v01_A_UDB-C_P: 16 column(s) with a companion flag
+        flags: MLT__EU-SILC_v01_M_v01_A_UDB-C_R: 2 column(s) with a companion flag
+      VALID: hspec.json stamped (validator v2, 2026-11-16T13:56:11+00:00); coverage bound 69, documented 137, unaccounted 10
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[v] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[v] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[v] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb249563\projects\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      PASS — 10070 rows, 69 target(s); contract clean. Outputs in C:\Users\wb249563\.harmon\work\runs\loc_20261116T135558_7861\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb249563\.harmon\work\runs\loc_20261116T135558_7861\output\quality.json: 69 targets; 20/184 checks flagged; 11004 universe cells; median agreement 1.0 on 68 shared
+  CHECK F: ok — 69 targets; 20/184 checks flagged; 11004 universe cells; median agreement 1.0 on 68 shared
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==

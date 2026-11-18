@@ -1,0 +1,6077 @@
+{
+  "survey_id": "SRB_2021_EU-SILC",
+  "counts": {
+    "absent": 148,
+    "documented": 4,
+    "produced": 62,
+    "produced_empty": 2
+  },
+  "targets": [
+    {
+      "target": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "age",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "rx010"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 15978,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "agecat",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "rb080"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 15978
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 15978,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 0,
+          "reasons": {
+            ".c": 15978
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childmth",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "rx010"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 15425,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 553,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 553,
+          "reasons": {
+            ".c": 15425
+          },
+          "nonsubstantive_share": 0.96539
+        }
+      },
+      "without_value_share": 0.96539
+    },
+    {
+      "target": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childyr",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "rx010"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 15425,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 553,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 553,
+          "reasons": {
+            ".c": 15425
+          },
+          "nonsubstantive_share": 0.96539
+        }
+      },
+      "without_value_share": 0.96539
+    },
+    {
+      "target": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "bound in [2025] from ['PH151'], not in the 2021/udb reading: the 2021 operation does not carry the variable — taken with the reviewed 2024 / 2025 supplements, 2026-11-12"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "bound in [2025] from ['PH131'], not in the 2021/udb reading: the 2021 operation does not carry the variable — taken with the reviewed 2024 / 2025 supplements, 2026-11-12"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat4",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "educat7",
+        "reason": {
+          "kind": "standard_not_used",
+          "params": {},
+          "text": "derived from educat7 by the canon's own educat7 recode (VAR-educat4 correspondence_output); the national education categories enter once, at educat7's ISCED placement, never here"
+        }
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 277,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 737,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "4",
+                "rows": 2737,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 7637,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 165,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "7",
+                "rows": 2302,
+                "rule": "value_map",
+                "value": 4
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat5",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "educat7",
+        "reason": {
+          "kind": "standard_not_used",
+          "params": {},
+          "text": "derived from educat7 by the canon's own educat7 recode (VAR-educat5 correspondence_output); the national education categories enter once, at educat7's ISCED placement, never here"
+        }
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 277,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 737,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 2737,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 7637,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "6",
+                "rows": 165,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "7",
+                "rows": 2302,
+                "rule": "value_map",
+                "value": 5
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat7",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "isced_level",
+        "column": "__derived.isced_level__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 277,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 737,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "2",
+                "rows": 2737,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "3",
+                "rows": 7637,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "4",
+                "rows": 165,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "5",
+                "rows": 2302,
+                "rule": "value_map",
+                "value": 7
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "documented",
+      "reason": {
+        "kind": null,
+        "params": {},
+        "text": ""
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "everattend",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pe041"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 13855
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 277,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "100",
+                "rows": 737,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "200",
+                "rows": 2737,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "344",
+                "rows": 343,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "353",
+                "rows": 2611,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "354",
+                "rows": 4683,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "450",
+                "rows": 165,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "500",
+                "rows": 2302,
+                "rule": "value_map",
+                "value": 1
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 13855
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "bound in [2025] from ['PH101'], not in the 2021/udb reading: the 2021 operation does not carry the variable — taken with the reviewed 2024 / 2025 supplements, 2026-11-12"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "bound in [2025] from ['PH111'], not in the 2021/udb reading: the 2021 operation does not carry the variable — taken with the reviewed 2024 / 2025 supplements, 2026-11-12"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "no language item in Part II (the person variables cover birth country RB280, citizenship RB290) (DOCSILC065 2021 op. v8: RB280 p.261, RB290 p.265)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "no literacy variable in the standard: Part II has no item on reading or writing ability (the education variables are PE010, PE021, PE041) (DOCSILC065 2021 op. v8: PE010 p.310, PE041 p.315)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "male",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "rb090"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 15978
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 7894,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 8084,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 15978,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 15978
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "marital",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "marital_status",
+        "column": "__derived.marital_status__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 3397,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "2",
+                "rows": 7856,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 44,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "4",
+                "rows": 1775,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "5",
+                "rows": 558,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "6",
+                "rows": 225,
+                "rule": "value_map",
+                "value": 3
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "mineducatage",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "primarycomp",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "educat7"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 277,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "3",
+                "rows": 737,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "4",
+                "rows": 2737,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "5",
+                "rows": 7637,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "6",
+                "rows": 165,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "7",
+                "rows": 2302,
+                "rule": "value_map",
+                "value": 1
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) — reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "school",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pe010"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 13855
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 1062,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 12793,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 13855
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "PH030 'Limitation in activities because of health problems' (GALI) is the standard's only functioning item; there are no Washington Group domain items (seeing, hearing, walking, remembering, self-care, communicating) (DOCSILC065 2021 op. v8: PH030 p.323)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "bound in [2025] from ['PH121'], not in the 2021/udb reading: the 2021 operation does not carry the variable — taken with the reviewed 2024 / 2025 supplements, 2026-11-12"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ac",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "label,question,codes survey-wide",
+              "terms": "air conditioner|ac"
+            },
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_H columns",
+              "terms": "HS* items list"
+            }
+          ]
+        },
+        "text": "No air conditioner item among EU-SILC household durable item variables; searched survey for air conditioner/AC and reviewed household H table HS items list. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-acquihouse",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "EU-SILC H table includes tenure status but no acquisition mode (purchased/inherited/other) for house. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-acquiland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No residential land ownership/acquisition questions in provided EU-SILC tables; search for acquisition/purchased/inherited and land yielded only income/tax mentions. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-agriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "EU-SILC instrument does not include agricultural land use/ownership modules in provided tables. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-agrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No agricultural land ownership document type variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areaagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areadocuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No agricultural land documentation/area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areaownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No owned agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areainheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No inherited agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areapurchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No purchased agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-arearentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rented-in agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-arearentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rented-out agricultural land area variables in survey. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-areaspace",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No dwelling area (square meters) variable found in H table; searched for area/surface/size keywords and none relevant returned. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-bath",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No bathing facility variables found; searched for bath/shower/sanitary/toilet and none returned. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-bcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No bicycle ownership variable found; search bicycle/bike returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-boat",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No boat ownership variable found; search boat returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-canoe",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No canoe ownership variable found; search canoe returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-car",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": "car",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "hs110"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 3377,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 1066,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "3",
+                "rows": 715,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 5158,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5158
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-cellphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No cell/mobile phone ownership variable found in tables; searches for cellphone/mobile/cell/telephone found no ownership item. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-computer",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": "computer",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "hs090"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 3389,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 805,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "3",
+                "rows": 964,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 5158,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5158
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-docuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No documented agricultural land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-doculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No residential land legal document variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-dwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No dwelling legal title variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-dwelownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No dwelling legal document type variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-dweltyp",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": "dweltyp",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "hh010"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-1": 14
+          },
+          "flags_seen": {
+            "-1": 14,
+            "1": 5144
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 3536,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 481,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 216,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 911,
+                "rule": "value_map",
+                "value": 3
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 14,
+          "value_map": 5144,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5144
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15933,
+          "reasons": {
+            ".a": 45
+          },
+          "nonsubstantive_share": 0.002816
+        }
+      },
+      "without_value_share": 0.002816
+    },
+    {
+      "target": "VAR-etablet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No electronic tablet ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ewpump",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No electric water pump ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-fan",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No electric fan ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-femagrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No sex-disaggregated agricultural land ownership variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-femdoculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No sex-disaggregated residential land documentation variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-femdwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No sex-disaggregated dwelling title variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-floor",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No floor material variable found; search floor returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-floorcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No country-specific floor material text variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-fridge",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No refrigerator/fridge ownership variable found; search refrigerator/fridge returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-inheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No inherited agricultural land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-internet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Only personal internet connection at home (pd080) is available and does not distinguish in-house vs outside access per DWL definition; no household internet access variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-kitchen",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No separate-kitchen indicator found; only hh030 definition mentions kitchens as room types. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-landownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No residential land ownership document type variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-landphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No landline phone ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-mcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No motorcycle ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No agricultural land ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ownhouse",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": "ownhouse",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "hh021"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 4677,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 20,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 101,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "4",
+                "rows": 24,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "5",
+                "rows": 336,
+                "rule": "value_map",
+                "value": 3
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 5158,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5158
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-ownland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No residential land ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-oxcart",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No oxcart ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-phone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No telephone ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-purchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No purchased agricultural land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-radio",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No radio ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-rentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rent-in agricultural land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-rentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rent-out agricultural land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ricecook",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rice cooker ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-roof",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No roof material variable found; search roof returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-roofcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No country-specific roof material text variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-rooms",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": "rooms",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "hh030"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-sellagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rights to sell agricultural land variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-selldwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No right to sell dwelling variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-sellland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No right to sell residential land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-sewmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No sewing machine ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-stove",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No stove ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-transagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No rights to transfer agricultural land variables found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-transdwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No right to transfer dwelling variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-transland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No right to transfer residential land variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-tv",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No TV ownership variable found; search tv returned none relevant (only mentioned in pd080 text). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-tvcable",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No cable TV ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-typlivqrt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "HH010 'Dwelling type' says house or flat, not whether the dwelling has the basic facilities the target's categories turn on (three of the four authors who saw the variable documented the target absent) — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-video",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No video player ownership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wall",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No wall material variable found; search wall returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wallcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No country-specific wall material text variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-washmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No washing machine ownership variable found; search washing returned none. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ybuilt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No year dwelling built variable found; search year built/construction returned only weights construction references. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "documented",
+      "reason": {
+        "kind": null,
+        "params": {},
+        "text": ""
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "documented",
+      "reason": {
+        "kind": null,
+        "params": {},
+        "text": ""
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "documented",
+      "reason": {
+        "kind": null,
+        "params": {},
+        "text": ""
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "psu",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "db060"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "strata",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "db050"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-1": 5158
+          },
+          "flags_seen": {
+            "-1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 5158,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 0,
+          "reasons": {
+            ".b": 15978
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatid1",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "db040"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "string",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatidsurvey",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "db040"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "string",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "urban",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "db100",
+        "reason": {
+          "kind": "standard_not_used",
+          "params": {},
+          "text": "DEGURBA is an international classification (Eurostat), not a national one: no country layer applies"
+        }
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 1565,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 1403,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 2190,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 5158,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5158
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "countrycode",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "HB050 'Month of household interview' is grouped into quarters in the UDB (disclosure control rules, 1. General rules: grouping / recoding): a month cannot be stated"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "int_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "hb060"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "weight",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "db090"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-contract",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "contract",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl141"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 799
+          },
+          "flags_seen": {
+            "-2": 9527,
+            "1": 4328
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "11",
+                "rows": 862,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "12",
+                "rows": 101,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "21",
+                "rows": 3293,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "22",
+                "rows": 72,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8728,
+          "null": 799,
+          "value_map": 4328,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 4328
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 4328,
+          "reasons": {
+            ".c": 11650
+          },
+          "nonsubstantive_share": 0.729128
+        }
+      },
+      "without_value_share": 0.729128
+    },
+    {
+      "target": "VAR-contractyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "contract_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl141"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 799
+          },
+          "flags_seen": {
+            "-2": 9527,
+            "1": 4328
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "11",
+                "rows": 862,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "12",
+                "rows": 101,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "21",
+                "rows": 3293,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "22",
+                "rows": 72,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8728,
+          "null": 799,
+          "value_map": 4328,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 4328
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 4328,
+          "reasons": {
+            ".c": 11650
+          },
+          "nonsubstantive_share": 0.729128
+        }
+      },
+      "without_value_share": 0.729128
+    },
+    {
+      "target": "VAR-empstat",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "empstat",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl040a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "1": 5127
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 290,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "2",
+                "rows": 445,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "3",
+                "rows": 4328,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "4",
+                "rows": 64,
+                "rule": "value_map",
+                "value": 2
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 8728,
+          "value_map": 5127,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5127
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-empstat2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-empstat2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-empstatyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "empstat_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl040a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "1": 5127
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 290,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "2",
+                "rows": 445,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "3",
+                "rows": 4328,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "4",
+                "rows": 64,
+                "rule": "value_map",
+                "value": 2
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 8728,
+          "value_map": 5127,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 5127
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-firmsizel",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            },
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t14",
+              "terms": "employees"
+            }
+          ]
+        },
+        "text": "No firm size / number of employees variable found in P table searches. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizel2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (secondary job). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizel2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (12-month ref, secondary). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizelyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (12-month ref). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizeu",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizeu2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (secondary job). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizeu2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (12-month ref, secondary). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-firmsizeuyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t7",
+              "terms": "firm size"
+            }
+          ]
+        },
+        "text": "No firm size variable found (12-month ref). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-healthins",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t5",
+              "terms": "health insurance"
+            }
+          ]
+        },
+        "text": "No health insurance coverage indicator found in P table. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-healthinsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t5",
+              "terms": "health insurance"
+            }
+          ]
+        },
+        "text": "No health insurance coverage indicator found in P table. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industryorig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "industry_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl111a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "string",
+          "sentinels": {
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "1": 5127
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8728,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5127,
+          "sentinel": 0,
+          "flag_carried": 5127,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121,
+          "flags_carried": 5127
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-industryorig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industryorig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industryorigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "industry_orig_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl111a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "string",
+          "sentinels": {
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "1": 5127
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8728,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5127,
+          "sentinel": 0,
+          "flag_carried": 5127,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121,
+          "flags_carried": 5127
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-industrycat10",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat102",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat102year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat10year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat4",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "industrycat4",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-labor",
+        "column": "__derived.industrycat4__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 8728,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5127,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-industrycat42",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat42year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-industrycat4year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey collects NACE sections but not 4-cat industry; mapping not authored. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-laborincome",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "laborincome",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-wage",
+        "column": "__derived.labor_income__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 13855,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-lincnc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard's employee income (PY010G / PY010N) includes bonuses and is not split from them: the wage income excluding bonuses cannot be given (PY010N is the NET amount, another distinction) — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-lstatus",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "lstatus",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl032"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 13855
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 5127,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 2442,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 4319,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 77,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 1030,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 782,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "8",
+                "rows": 78,
+                "rule": "value_map",
+                "value": 3
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 13855
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-lstatusyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "lstatus_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl032"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 13855
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 5127,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 2442,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 4319,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 77,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 1030,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 782,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "8",
+                "rows": 78,
+                "rule": "value_map",
+                "value": 3
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 13855,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 13855
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-minlaborage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "minlaborage",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-minlaborageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "minlaborage_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 13855,
+          "reasons": {
+            ".c": 2123
+          },
+          "nonsubstantive_share": 0.13287
+        }
+      },
+      "without_value_share": 0.13287
+    },
+    {
+      "target": "VAR-njobs",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t8",
+              "terms": "number jobs"
+            }
+          ]
+        },
+        "text": "No number of jobs variable identified in P table searches. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-nlfreason",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "nlfreason",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "pl032"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 13855
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": "1 employed, 2 unemployed and 7 compulsory service are in the labor force: the gate on VAR-lstatus writes .c for them before the map is read",
+          "table": {
+            "codes": [
+              {
+                "code": "3",
+                "rows": 4319,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 77,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "5",
+                "rows": 1030,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "6",
+                "rows": 782,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "8",
+                "rows": 78,
+                "rule": "value_map",
+                "value": 5
+              }
+            ],
+            "more": 0
+          },
+          "gate": 7569,
+          "null": 0,
+          "value_map": 6286,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 6286
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 6286,
+          "reasons": {
+            ".c": 9692
+          },
+          "nonsubstantive_share": 0.606584
+        }
+      },
+      "without_value_share": 0.606584
+    },
+    {
+      "target": "VAR-nlfreasonyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-lstatusyear"
+          ]
+        },
+        "text": "Could be derived from pl032 inactive categories, but not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-occup",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "occup",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-labor",
+        "column": "__derived.isco_major__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 10
+              },
+              {
+                "code": "1",
+                "rows": 243,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 641,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 432,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 448,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "5",
+                "rows": 830,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "6",
+                "rows": 276,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "7",
+                "rows": 962,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "8",
+                "rows": 656,
+                "rule": "value_map",
+                "value": 8
+              },
+              {
+                "code": "9",
+                "rows": 584,
+                "rule": "value_map",
+                "value": 9
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8728,
+          "null": 4,
+          "value_map": 5123,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5123,
+          "reasons": {
+            ".c": 10855
+          },
+          "nonsubstantive_share": 0.679372
+        }
+      },
+      "without_value_share": 0.679372
+    },
+    {
+      "target": "VAR-occup2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-occup2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-occuporig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "occup_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl051a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-1": 4,
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-1": 4,
+            "-2": 8728,
+            "1": 5123
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8732,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5123,
+          "sentinel": 0,
+          "flag_carried": 5123,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5123,
+          "reasons": {
+            ".c": 10855
+          },
+          "nonsubstantive_share": 0.679372,
+          "flags_carried": 5123
+        }
+      },
+      "without_value_share": 0.679372
+    },
+    {
+      "target": "VAR-occuporig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-occuporig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) — reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-occuporigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "occup_orig_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl051a"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-1": 4,
+            "flag:-2": 8728
+          },
+          "flags_seen": {
+            "-1": 4,
+            "-2": 8728,
+            "1": 5123
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8732,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5123,
+          "sentinel": 0,
+          "flag_carried": 5123,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5123,
+          "reasons": {
+            ".c": 10855
+          },
+          "nonsubstantive_share": 0.679372,
+          "flags_carried": 5123
+        }
+      },
+      "without_value_share": 0.679372
+    },
+    {
+      "target": "VAR-occupyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey provides ISCO-08 code (pl051a) but no 1-digit occupation variable; derivation not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ocusec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "public private sector"
+            }
+          ]
+        },
+        "text": "No sector of activity variable found in P table. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ocusec2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "public private sector"
+            }
+          ]
+        },
+        "text": "No sector of activity variable found (secondary). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ocusec2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "public private sector"
+            }
+          ]
+        },
+        "text": "No sector of activity variable found (secondary, year). — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-ocusecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "public private sector"
+            }
+          ]
+        },
+        "text": "No sector of activity variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-socialsec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "social security"
+            }
+          ]
+        },
+        "text": "No personal social security coverage indicator found in P table. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-socialsecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t6",
+              "terms": "social security"
+            }
+          ]
+        },
+        "text": "No personal social security coverage indicator found in P table. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-thoursannual",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Monthly activity calendar variables (pl211*) exist but do not provide hours; derivation not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-thoursothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-thoursothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second — reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-thourstotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-whours",
+            "VAR-thoursothers"
+          ]
+        },
+        "text": "Could be derived by annualizing weekly hours and other-jobs hours, but prelude not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-thourstotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-whoursyear",
+            "VAR-thoursothersyear"
+          ]
+        },
+        "text": "Could be derived by annualizing weekly hours, but prelude not built. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagencothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No wage components for other jobs collected. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagencothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No wage components for other jobs collected. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagencotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-wagenc",
+            "VAR-unitwage",
+            "VAR-wagenc2",
+            "VAR-unitwage2",
+            "VAR-twagencothers"
+          ]
+        },
+        "text": "Requires last wage amount and unit variables which are not collected. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagencototalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-wagencyear",
+            "VAR-unitwageyear",
+            "VAR-wagenc2year",
+            "VAR-unitwage2year",
+            "VAR-twagencothersyear"
+          ]
+        },
+        "text": "Requires last wage amount and unit variables which are not collected. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twageothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-twagencothers"
+          ]
+        },
+        "text": "Depends on twagencothers not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twageothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-twagencothersyear"
+          ]
+        },
+        "text": "Depends on twagencothersyear not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-twagencotal"
+          ]
+        },
+        "text": "Depends on twagencotal not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-twagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-twagencototalyear"
+          ]
+        },
+        "text": "Depends on twagencototalyear not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-unempldurl",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "unempldur_l",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl271"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 1477,
+            "1": 12378
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 11413,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 2442,
+          "sentinel": 0,
+          "flag_carried": 2442,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 2442,
+          "reasons": {
+            ".c": 13536
+          },
+          "nonsubstantive_share": 0.847165,
+          "flags_carried": 2442
+        }
+      },
+      "without_value_share": 0.847165
+    },
+    {
+      "target": "VAR-unempldurlyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "unempldur_l_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl271"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 1477,
+            "1": 12378
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 11413,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 2442,
+          "sentinel": 0,
+          "flag_carried": 2442,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 2442,
+          "reasons": {
+            ".c": 13536
+          },
+          "nonsubstantive_share": 0.847165,
+          "flags_carried": 2442
+        }
+      },
+      "without_value_share": 0.847165
+    },
+    {
+      "target": "VAR-unemplduru",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "unempldur_u",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl271"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 1477,
+            "1": 12378
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 11413,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 2442,
+          "sentinel": 0,
+          "flag_carried": 2442,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 2442,
+          "reasons": {
+            ".c": 13536
+          },
+          "nonsubstantive_share": 0.847165,
+          "flags_carried": 2442
+        }
+      },
+      "without_value_share": 0.847165
+    },
+    {
+      "target": "VAR-unemplduruyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "unempldur_u_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl271"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 1477,
+            "1": 12378
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 11413,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 2442,
+          "sentinel": 0,
+          "flag_carried": 2442,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 2442,
+          "reasons": {
+            ".c": 13536
+          },
+          "nonsubstantive_share": 0.847165,
+          "flags_carried": 2442
+        }
+      },
+      "without_value_share": 0.847165
+    },
+    {
+      "target": "VAR-union",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t4",
+              "terms": "union"
+            }
+          ]
+        },
+        "text": "No trade union membership variable found; only consensual union flag present. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-unionyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t4",
+              "terms": "union"
+            }
+          ]
+        },
+        "text": "No trade union membership variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-unitwage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "unitwage",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 4328,
+          "reasons": {
+            ".c": 11650
+          },
+          "nonsubstantive_share": 0.729128
+        }
+      },
+      "without_value_share": 0.729128
+    },
+    {
+      "target": "VAR-unitwage2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+              "terms": "unit wage"
+            }
+          ]
+        },
+        "text": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-unitwage2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+              "terms": "unit wage"
+            }
+          ]
+        },
+        "text": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-unitwageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "AUT__EU-SILC_v01_M_v01_A_UDB-C_P search t21",
+              "terms": "unit wage"
+            }
+          ]
+        },
+        "text": "No wage payment unit variable found. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagenc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "wage_nc",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-wage",
+        "column": "__derived.wage_annual__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 9463,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 4392,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 4392,
+          "reasons": {
+            ".c": 11586
+          },
+          "nonsubstantive_share": 0.725122
+        }
+      },
+      "without_value_share": 0.725122
+    },
+    {
+      "target": "VAR-wagenc2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagenc2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagencyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No last wage payment amount variable present. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "wage_total",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-wage",
+        "column": "__derived.wage_annual__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 9527,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 4328,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 4328,
+          "reasons": {
+            ".c": 11650
+          },
+          "nonsubstantive_share": 0.729128
+        }
+      },
+      "without_value_share": 0.729128
+    },
+    {
+      "target": "VAR-wagetotal2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-wagenc2",
+            "VAR-unitwage2",
+            "VAR-wmonths2",
+            "VAR-whours2"
+          ]
+        },
+        "text": "Would require wagenc2 + unitwage2 + months/hours; not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagetotal2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-wagenc2year",
+            "VAR-unitwage2year",
+            "VAR-wmonths2year",
+            "VAR-whours2year"
+          ]
+        },
+        "text": "Would require wagenc2year + unitwage2year + months/hours; not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-wagencyear",
+            "VAR-unitwageyear",
+            "VAR-wmonthsyear",
+            "VAR-whoursyear"
+          ]
+        },
+        "text": "Would require wagencyear + unitwageyear + months/hours; not available. — authored on AUT_2024_EU-SILC"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-whours",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "whours",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl060"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 8728,
+            "flag:-6": 4
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "-6": 4,
+            "1": 5123
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8732,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5123,
+          "sentinel": 0,
+          "flag_carried": 5123,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5123,
+          "reasons": {
+            ".c": 10855
+          },
+          "nonsubstantive_share": 0.679372,
+          "flags_carried": 5123
+        }
+      },
+      "without_value_share": 0.679372
+    },
+    {
+      "target": "VAR-whours2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "whours_2",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl100"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 8723,
+            "-4": 5051,
+            "1": 81
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 13774,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 81,
+          "sentinel": 0,
+          "flag_carried": 81,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 81,
+          "reasons": {
+            ".c": 15897
+          },
+          "nonsubstantive_share": 0.994931,
+          "flags_carried": 81
+        }
+      },
+      "without_value_share": 0.994931
+    },
+    {
+      "target": "VAR-whours2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "whours_2_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl100"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "-2": 8723,
+            "-4": 5051,
+            "1": 81
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 13774,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 81,
+          "sentinel": 0,
+          "flag_carried": 81,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 81,
+          "reasons": {
+            ".c": 15897
+          },
+          "nonsubstantive_share": 0.994931,
+          "flags_carried": 81
+        }
+      },
+      "without_value_share": 0.994931
+    },
+    {
+      "target": "VAR-whoursyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "whours_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "pl060"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {
+            "flag:-2": 8728,
+            "flag:-6": 4
+          },
+          "flags_seen": {
+            "-2": 8728,
+            "-6": 4,
+            "1": 5123
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 8732,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5123,
+          "sentinel": 0,
+          "flag_carried": 5123,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5123,
+          "reasons": {
+            ".c": 10855
+          },
+          "nonsubstantive_share": 0.679372,
+          "flags_carried": 5123
+        }
+      },
+      "without_value_share": 0.679372
+    },
+    {
+      "target": "VAR-wmonths",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "wmonths",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-labor",
+        "column": "__derived.wmonths__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 8728,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5127,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-wmonths2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wmonths2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths — reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-wmonthsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "column": "wmonths_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "LBR-labor",
+        "column": "__derived.wmonths__"
+      },
+      "build": {
+        "recode": {
+          "rows": 13855,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 8728,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5127,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 5127,
+          "reasons": {
+            ".c": 10851
+          },
+          "nonsubstantive_share": 0.679121
+        }
+      },
+      "without_value_share": 0.679121
+    },
+    {
+      "target": "VAR-hsize",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": "hsize",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "hb120"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {
+            "1": 5158
+          },
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5158,
+          "sentinel": 0,
+          "flag_carried": 5158,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0,
+          "flags_carried": 15978
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-welfare",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": "welfare",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "welfare_pc",
+        "column": "__derived.welfare_pc__"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 2,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5156,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15972,
+          "reasons": {
+            ".b": 6
+          },
+          "nonsubstantive_share": 0.000376
+        }
+      },
+      "without_value_share": 0.000376
+    },
+    {
+      "target": "VAR-welfaredef",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-welfarenom",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-welfareother",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-welfareothertype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-welfaretype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": "welfaretype",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 15978,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-welfshprosperity",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) — reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-welfshprtype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "column": "welfshprtype",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 5158,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 15978,
+          "values": 15978,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    }
+  ]
+}

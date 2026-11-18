@@ -1,0 +1,14 @@
+{
+ "decisions": [
+  {
+   "review": "profile",
+   "act": "approve",
+   "by": "zs",
+   "at": "2026-11-16T14:05:22+00:00",
+   "binds": {
+    "profile_sha": "d30a7f859b77811fc3819748d7b607fba67c4e3879b0ba85622557f21fc0f4aa"
+   },
+   "note": "the round: standard only"
+  }
+ ]
+}

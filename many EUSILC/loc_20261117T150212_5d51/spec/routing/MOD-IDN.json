@@ -1,0 +1,58 @@
+{
+  "routing": {
+    "VAR-weight": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb040",
+        "why": "Household-level sampling weight variable explicitly labeled Household weight."
+      }
+    ],
+    "VAR-year": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb010",
+        "why": "Household file has Year of the survey (constant 2024), plausible source for survey start year."
+      },
+      {
+        "survey_module": "silc24_p",
+        "column": "fb010",
+        "why": "Person file also carries Year of the survey; may be used if year is sourced from person table."
+      },
+      {
+        "survey_module": "silc24_pr",
+        "column": "fk010",
+        "why": "Register/person roster file also carries Year of the survey; alternative source depending on binding table."
+      }
+    ],
+    "VAR-intyear": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb010",
+        "why": "No separate interview-date fields found; Year of the survey may be used as interview year if fieldwork is within one year."
+      },
+      {
+        "survey_module": "silc24_p",
+        "column": "fb010",
+        "why": "Person file duplicate of Year of the survey; candidate if intyear is read from person table."
+      },
+      {
+        "survey_module": "silc24_pr",
+        "column": "fk010",
+        "why": "Roster file duplicate of Year of the survey; candidate if intyear is read from roster table."
+      }
+    ],
+    "VAR-intmonth": [
+      {
+        "survey_module": "silc24_h",
+        "why": "No obvious interview month / interview date variable in the bindable tables; may be held only in metadata, not delivered as a column."
+      }
+    ],
+    "VAR-countrycode": [
+      {
+        "survey_module": "silc24_h",
+        "why": "No country/ISO code column found in the delivered tables; countrycode likely needs to be authored as a constant from survey identity (Turkey/ISO3) rather than extracted from data."
+      }
+    ]
+  },
+  "_request_id": "04-locate_sources-MOD-IDN"
+}

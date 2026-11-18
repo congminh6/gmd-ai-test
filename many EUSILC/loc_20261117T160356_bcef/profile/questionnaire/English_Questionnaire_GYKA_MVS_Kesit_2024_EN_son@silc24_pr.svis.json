@@ -1,0 +1,333 @@
+{
+  "country_code": "TUR",
+  "extraction_date": "2026-11-17",
+  "source_file": "GYKA MVS (Kesit), 2024 EN son.pdf",
+  "source_format": "codebook",
+  "survey_id": "TUR_2024_SILC-C",
+  "survey_name": "TUR_2024_SILC-C",
+  "variables": [
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Household ID",
+      "needs_review": true,
+      "notes": "length/format: 5",
+      "numeric_range": {
+        "max_value": 27401.0,
+        "min_value": 1.0
+      },
+      "raw_name": "HH_ID",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Personal ID (Household ID + Personal number/line\nnumber)",
+      "needs_review": true,
+      "notes": "length/format: 7",
+      "raw_name": "PERS_ID",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Year of the survey",
+      "needs_review": true,
+      "notes": "length/format: 4; values cell not parsed: 2024",
+      "raw_name": "FK010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Personal weight",
+      "needs_review": true,
+      "notes": "Format 4.7; length/format: 4.7",
+      "raw_name": "FK050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Age (on December 31, 2023)",
+      "needs_review": true,
+      "notes": "length/format: 3",
+      "numeric_range": {
+        "max_value": 114.0,
+        "min_value": -1.0
+      },
+      "raw_name": "FK070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Month of birth",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FK075",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Year of birth",
+      "needs_review": true,
+      "notes": "length/format: 4",
+      "numeric_range": {
+        "max_value": 2024.0,
+        "min_value": 1900.0
+      },
+      "raw_name": "FK080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Male"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Female"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Gender",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FK090",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Household respondent"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Spouse"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Son/Daughter"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Father/Mother"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Sibling"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Father-in-law/Mother-in-law"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Son-in-law/Daughter-in-law"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Grandson/Granddaughter"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "Grandfather / Grandmother"
+        },
+        {
+          "code": "10",
+          "is_missing": false,
+          "label": "Other relatives"
+        },
+        {
+          "code": "11",
+          "is_missing": false,
+          "label": "Non-relative"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Household respondent",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "raw_name": "FK095",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "At work"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Looking for a job"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Retired or has given up business due to reasons related to age,"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Other inactive person"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Self-defined current activity status",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FK210",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Father ID (if his/her father is a household member)",
+      "needs_review": true,
+      "notes": "length/format: 7; values cell not parsed: Personal ID (PERS_ID) of the person who is his/her father",
+      "raw_name": "FK220",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Mother ID (if his/her mother is a household member)",
+      "needs_review": true,
+      "notes": "length/format: 7; values cell not parsed: Personal ID (PERS_ID) of the person who is his/her mother",
+      "raw_name": "FK230",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Spouse ID (if his/her spouse is a household member)",
+      "needs_review": true,
+      "notes": "length/format: 7; values cell not parsed: Personal ID (PERS_ID) of the person who is his/her spouse",
+      "raw_name": "FK240",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    }
+  ],
+  "x_harmon": {
+    "instrument_id": "codebook-0fb0ab1b94cf",
+    "instrument_name": "GYKA MVS (Kesit), 2024 EN son: silc24_pr",
+    "kind": "codebook",
+    "variables": {
+      "FK010": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r4"
+        ]
+      },
+      "FK050": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r5"
+        ]
+      },
+      "FK070": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r6"
+        ]
+      },
+      "FK075": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r7"
+        ]
+      },
+      "FK080": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r8"
+        ]
+      },
+      "FK090": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r9"
+        ]
+      },
+      "FK095": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r10"
+        ]
+      },
+      "FK210": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r11"
+        ]
+      },
+      "FK220": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r12"
+        ]
+      },
+      "FK230": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r13"
+        ]
+      },
+      "FK240": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r14"
+        ]
+      },
+      "HH_ID": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r2"
+        ]
+      },
+      "PERS_ID": {
+        "by": "image",
+        "cites": [
+          "p23-t1#r3"
+        ]
+      }
+    }
+  },
+  "year": 2024
+}

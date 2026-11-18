@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "ESP__EU-SILC_v01_M_v01_A_UDB-C_R": {
+      "duplicates": 0,
+      "keys": [
+        "rx030",
+        "rb030"
+      ],
+      "null_key_rows": 0,
+      "rows": 71398,
+      "source_file": "ESP_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta"
+    }
+  },
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "rx030",
+        "rb030"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 71398,
+      "source_file": "ESP_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta",
+      "table": "ESP__EU-SILC_v01_M_v01_A_UDB-C_R"
+    }
+  ],
+  "key_maps": {
+    "ESP__EU-SILC_v01_M_v01_A_UDB-C_D": {
+      "db030": {
+        "distinct": 29369,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "ESP__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    },
+    "ESP__EU-SILC_v01_M_v01_A_UDB-C_H": {
+      "hb030": {
+        "distinct": 29369,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "ESP__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    },
+    "ESP__EU-SILC_v01_M_v01_A_UDB-C_P": {
+      "pb030": {
+        "distinct": 60825,
+        "grain_column": "rb030",
+        "grain_share": 0.8519,
+        "grain_table": "ESP__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      },
+      "px030": {
+        "distinct": 29369,
+        "grain_column": "rx030",
+        "grain_share": 1.0,
+        "grain_table": "ESP__EU-SILC_v01_M_v01_A_UDB-C_R",
+        "matched_share": 1.0
+      }
+    }
+  }
+}

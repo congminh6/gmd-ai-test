@@ -1,0 +1,268 @@
+{
+ "job_id": "loc_20261117T160356_bcef",
+ "flow": "harmonize",
+ "survey_id": "TUR_2024_SILC-C",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "TUR_2024_SILC-C",
+  "country": "TUR",
+  "year": 2024,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "reference": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03/Data/Harmonized/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03_GMD.dta"
+  },
+  "input_job": "loc_20261117T150212_5d51",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "output",
+    "act": "return",
+    "by": "zs",
+    "at": "2026-11-17T16:03:56+00:00",
+    "note": "output read by Claude Code against the raw data; returned on the user's instruction",
+    "binds": {
+     "manifest_sha256": "2533a10eab7c666298b7e65e233d664664cf46f4344b3a55633027cbd125ccc4",
+     "spec_sha256": "5f99a5ec0b821df63196c8822125beb37711bb67cc7dab487be486877ed3051f"
+    },
+    "reask": [
+     {
+      "target": "VAR-hsize",
+      "finding": "the household size counts the rows of silc24_p per household, and silc24_p holds only the persons aged 15 and above: 10,379 of the 25,925 households have more members in the register silc24_pr (every member, all ages) than rows in silc24_p. A household's size is the number of its members in the register silc24_pr"
+     },
+     {
+      "target": "VAR-welfare",
+      "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+     },
+     {
+      "target": "VAR-welfarenom",
+      "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+     },
+     {
+      "target": "VAR-welfshprosperity",
+      "finding": "the per-capita value divides the household's disposable income hg110 by a household size that counts only the persons aged 15 and above (the rows of silc24_p); the divisor is the number of the household's members in the register silc24_pr (all ages), so every household with a child is too high"
+     },
+     {
+      "target": "VAR-educat7",
+      "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+     },
+     {
+      "target": "VAR-educat5",
+      "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+     },
+     {
+      "target": "VAR-educat4",
+      "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+     },
+     {
+      "target": "VAR-educy",
+      "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+     },
+     {
+      "target": "VAR-primarycomp",
+      "finding": "the gate age >= 16 (PARAM-EDU-MIN-EDUCATION-AGE authored as 16) leaves out 1,384 persons aged 15 who have a recorded fe030 in silc24_p; the codebook heads that file 'Persons aged 15 and above', and fk070 is the age at 31 December 2023: the education questions are asked from age 15"
+     },
+     {
+      "target": "VAR-unempldurl",
+      "finding": "fi280 (months in unemployment in 2023) is passed through for every person of silc24_p, 0 for those never unemployed: 58,752 values belong to persons whose lstatus is employed or out of the labor force; the canon gates this target to the unemployed (VAR-lstatus == 2)"
+     },
+     {
+      "target": "VAR-unemplduru",
+      "finding": "fi280 (months in unemployment in 2023) is passed through for every person of silc24_p, 0 for those never unemployed: 58,752 values belong to persons whose lstatus is employed or out of the labor force; the canon gates this target to the unemployed (VAR-lstatus == 2)"
+     }
+    ],
+    "blocked": []
+   }
+  ],
+  "extra": {
+   "modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-UTL",
+    "MOD-WLF"
+   ]
+  }
+ },
+ "status": "completed",
+ "started": "2026-11-17T16:03:56+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T160356_bcef",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261117T150212_5d51",
+  "flow": "harmonize",
+  "status": "completed",
+  "manifest_sha256": "2533a10eab7c666298b7e65e233d664664cf46f4344b3a55633027cbd125ccc4",
+  "files": 32,
+  "partial": false
+ },
+ "updated": "2026-11-17T16:18:48+00:00",
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged": {
+  "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 8,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "ss_export": "surveys/TUR_2024_SILC-C/ss",
+   "svis": "surveys/TUR_2024_SILC-C/svis",
+   "reference": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03/Data/Harmonized/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03_GMD.dta"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile 61058aa179ff approved by zs at 2026-11-17T15:02:15+00:00)",
+  "B.scaffold-header": "skipped(done)",
+  "B.pin-source-inventory": "ok(source_inventory unchanged)",
+  "B.pin-grain": "ok(output unchanged)",
+  "B.modules": "ok(7 module(s) in the canon)",
+  "B.bind-standard": "ok(EU-SILC eu-silc-2021: 0 binding(s) copied, 9 absence(s), 4 left to the author, 19 authored binding(s) kept)",
+  "B.pin-engine-ids": "ok(unchanged (4 id target(s)))",
+  "B.locate-sources": "ok(all modules)",
+  "B.author-bindings": "ok(all modules)",
+  "B.review-prelude": "ok(6 prelude(s) read, 2 concern(s), 2 advisory)",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(68 targets; 14/207 checks flagged; 44031 universe cells; no reference)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 22,
+   "usage": {
+    "input_token_count": 431965,
+    "output_token_count": 15831,
+    "total_token_count": 447796,
+    "reasoning_output_token_count": 4971
+   },
+   "reasoning_effort": "low",
+   "seconds": 274.9
+  },
+  {
+   "request": "02",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 3,
+   "usage": {
+    "input_token_count": 58556,
+    "output_token_count": 887,
+    "total_token_count": 59443,
+    "reasoning_output_token_count": 248
+   },
+   "reasoning_effort": "low",
+   "seconds": 60.4
+  },
+  {
+   "request": "03",
+   "task": "author_bindings",
+   "scope": "MOD-LBR",
+   "submitted": true,
+   "tool_calls": 38,
+   "usage": {
+    "input_token_count": 1479127,
+    "output_token_count": 29818,
+    "total_token_count": 1508945,
+    "reasoning_output_token_count": 3964
+   },
+   "reasoning_effort": "low",
+   "seconds": 369.7
+  },
+  {
+   "request": "04",
+   "task": "author_bindings",
+   "scope": "MOD-WLF",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 141895,
+    "output_token_count": 5630,
+    "total_token_count": 147525,
+    "reasoning_output_token_count": 668
+   },
+   "reasoning_effort": "low",
+   "seconds": 96.7
+  },
+  {
+   "request": "05",
+   "task": "review_prelude",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 2,
+   "usage": {
+    "input_token_count": 27885,
+    "output_token_count": 1132,
+    "total_token_count": 29017,
+    "reasoning_output_token_count": 683
+   },
+   "reasoning_effort": "low",
+   "seconds": 21.2
+  }
+ ],
+ "total_tokens": 2192726,
+ "log_tail": [
+  "        resolved: B-primarycomp: unit_keys ['pers_id'] (from parent)",
+  "        resolved: B-school: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-everattend: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-contract: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-empstat: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-industrycat10: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-industrycat4: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-laborincome: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-lstatus: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-occup: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-ocusec: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-socialsec: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-unempldur_l: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-unempldur_u: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-whours: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-wmonths: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-hsize: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfare: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfarenom: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfshprosperity: unit_keys ['hh_id'] (from prelude)",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-17T16:18:04+00:00); coverage bound 68, documented 209",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran; removed output\\harmonized.dta",
+  "  [det] hspec-run",
+  "      PASS — 80727 rows, 68 target(s); contract clean. Outputs in C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T160356_bcef\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T160356_bcef\\output\\quality.json: 68 targets; 14/207 checks flagged; 44031 universe cells; no reference",
+  "  CHECK F: ok — 68 targets; 14/207 checks flagged; 44031 universe cells; no reference",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete ==",
+  "",
+  ">> 12 target(s) failed in the last run, but their determination has changed since: whether the change fixed them is known after the next run — re-run the same command: VAR-educat4, VAR-educat5, VAR-educat7, VAR-educy, VAR-hsize, VAR-laborincome, VAR-primarycomp, VAR-unempldurl, VAR-unemplduru, VAR-welfare, VAR-welfarenom, VAR-welfshprosperity"
+ ],
+ "finished": "2026-11-17T16:18:48+00:00"
+}

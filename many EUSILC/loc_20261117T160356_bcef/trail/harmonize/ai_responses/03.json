@@ -1,0 +1,1030 @@
+{
+ "request_id": "03-author_bindings-MOD-LBR",
+ "parameters": {
+  "PARAM-LBR-MIN-LABOR-AGE": {
+   "value": 15,
+   "method": "authored",
+   "evidence": "Minimum age for labour module kept at 15 as in existing spec; no explicit universe statement found in column cards (t2,t3,t25) and onset in silc24_pr shows fk210 filled at all ages including -1 (t26)."
+  },
+  "PARAM-LBR-MIN-LABOR-AGE-YEAR": {
+   "value": 15,
+   "method": "authored",
+   "evidence": "Minimum age for 12-month labour module kept at 15 as in existing spec; no 12-month labour-status section collected (t24,t33)."
+  }
+ },
+ "preludes": [
+  {
+   "id": "LBR-laborincome_sum",
+   "reason": "Survey provides separate annual net income components (employee cash/near-cash and self-employment cash/in-kind) but no single labor-income total; construct a total as row-wise sum while keeping all-missing as NaN.",
+   "produces": [
+    "__derived.laborincome__"
+   ],
+   "invariants": [
+    "__derived.laborincome__ is numeric or NaN"
+   ],
+   "code_file": "LBR-laborincome_sum.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-contract",
+   "target": "VAR-contract",
+   "roles": {
+    "raw_value": "fi210"
+   },
+   "predicate": "all",
+   "value_map": {
+    "11": 1,
+    "12": 1,
+    "21": 1,
+    "22": 0,
+    "23": 1
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Contract from FI210 type of contract of employees in main job: codes 11/12/21/23 imply having a contract; 22 occasional work without contract -> no (t3)."
+  },
+  {
+   "binding_id": "B-empstat",
+   "target": "VAR-empstat",
+   "roles": {
+    "raw_value": "fi120"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 1,
+    "3": 3,
+    "4": 4,
+    "5": 2
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Employment status (primary job) from FI120 main job employment status (t3)."
+  },
+  {
+   "binding_id": "B-industrycat10",
+   "target": "VAR-industrycat10",
+   "roles": {
+    "raw_value": "fi140"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 10,
+    "9": 7,
+    "10": 8,
+    "11": 8,
+    "12": 8,
+    "13": 8,
+    "14": 9,
+    "15": 10,
+    "16": 10,
+    "17": 10,
+    "18": 10
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "Map FI140 NACE section (1-18) to GMD 10-category industry using section groupings (t3)."
+  },
+  {
+   "binding_id": "B-industrycat4",
+   "target": "VAR-industrycat4",
+   "roles": {
+    "raw_value": "fi140"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3,
+    "11": 3,
+    "12": 3,
+    "13": 3,
+    "14": 3,
+    "15": 3,
+    "16": 3,
+    "17": 3,
+    "18": 3
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Broad industry (4-cat) collapsed from FI140 NACE sections: 1 agriculture; 2-5 industry; 6-18 services (t3)."
+  },
+  {
+   "binding_id": "B-lstatus",
+   "target": "VAR-lstatus",
+   "roles": {
+    "raw_value": "fi010"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 2,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Labor status from FI010 self-defined current economic status: 1-4 working->employed; 5 looking for a job->unemployed; 6-10 inactive categories->not in labor force (t2)."
+  },
+  {
+   "binding_id": "B-occup",
+   "target": "VAR-occup",
+   "roles": {
+    "raw_value": "fi130"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Occupation major group from FI130 ISCO-08 major group 1-9 (t3)."
+  },
+  {
+   "binding_id": "B-ocusec",
+   "target": "VAR-ocusec",
+   "roles": {
+    "raw_value": "fi145"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "Sector from FI145 public/private: map public->1, private->2 (t3)."
+  },
+  {
+   "binding_id": "B-socialsec",
+   "target": "VAR-socialsec",
+   "roles": {
+    "raw_value": "fi190"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Social security registration from FI190 (t3)."
+  },
+  {
+   "binding_id": "B-whours",
+   "target": "VAR-whours",
+   "roles": {
+    "raw_value": "fi150"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "Weekly hours proxy from FI150 hours usually worked in main job (t3)."
+  },
+  {
+   "binding_id": "B-wmonths",
+   "target": "VAR-wmonths",
+   "roles": {
+    "raw_value": "fi240"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "Months worked in last 12 months from FI240 months spent in main job in 2023 (t24)."
+  },
+  {
+   "binding_id": "B-laborincome",
+   "target": "VAR-laborincome",
+   "roles": {
+    "raw_value": "__derived.laborincome__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "Construct labor income as sum of annual net income components FG010+FG020+FG030+FG040 via prelude (t34)."
+  },
+  {
+   "binding_id": "B-minlaborage",
+   "target": "VAR-minlaborage",
+   "table": "silc24_pr",
+   "roles": {
+    "unit_keys": [
+     "hh_id",
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "parameter": "PARAM-LBR-MIN-LABOR-AGE"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".c"
+   },
+   "register": "resolved",
+   "evidence": "Carrier of PARAM-LBR-MIN-LABOR-AGE per labor module policy (t9,t33)."
+  },
+  {
+   "binding_id": "B-minlaborageyear",
+   "target": "VAR-minlaborageyear",
+   "table": "silc24_pr",
+   "roles": {
+    "unit_keys": [
+     "hh_id",
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "parameter": "PARAM-LBR-MIN-LABOR-AGE-YEAR"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".c"
+   },
+   "register": "resolved",
+   "evidence": "Carrier of PARAM-LBR-MIN-LABOR-AGE-YEAR per labor module policy (t9,t33)."
+  },
+  {
+   "binding_id": "B-unempldur_l",
+   "target": "VAR-unempldurl",
+   "roles": {
+    "raw_value": "fi280"
+   },
+   "predicate": "all",
+   "gate_reads": [
+    "VAR-lstatus"
+   ],
+   "gate": {
+    "predicate": "lstatus == 2",
+    "else_code": ".c"
+   },
+   "passthrough": true,
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "FI280 months spent in unemployment in 2023; gate to unemployed only using produced lstatus (t2)."
+  },
+  {
+   "binding_id": "B-unempldur_u",
+   "target": "VAR-unemplduru",
+   "roles": {
+    "raw_value": "fi280"
+   },
+   "predicate": "all",
+   "gate_reads": [
+    "VAR-lstatus"
+   ],
+   "gate": {
+    "predicate": "lstatus == 2",
+    "else_code": ".c"
+   },
+   "passthrough": true,
+   "missing_map": {
+    "absent": ".c",
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "FI280 months spent in unemployment in 2023; gate to unemployed only using produced lstatus (t2)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-contractyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month contract indicator found: reviewed silc24_p columns (t24) and searched for contract terms; only FI210 (current main job) present (t3).",
+   "searches": [
+    {
+     "terms": "contract year 12-month",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-empstat2",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No secondary job employment-status item found in silc24_p columns (t24); only FI120 main job status present (t3).",
+   "searches": [
+    {
+     "terms": "secondary job employment status",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-empstat2year",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month secondary job employment-status measure found in survey columns (t24,t33).",
+   "searches": [
+    {
+     "terms": "secondary job employment status year",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-empstatyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month primary-job employment status measure found; FI120 is current main job only (t3,t24).",
+   "searches": [
+    {
+     "terms": "employment status year 12-month",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizel",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No firm size/number of employees at workplace item found in survey; search for firm/size and employees/number yields no relevant labor item (t32,t29); silc24_p columns show none (t24).",
+   "searches": [
+    {
+     "terms": "firm size employees number of employees",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizel2",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No secondary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "secondary job firm size",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizel2year",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month secondary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "secondary job firm size year",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizelyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month primary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "firm size year 12-month",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizeu",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No firm size/number of employees at workplace item found (t24,t32,t29).",
+   "searches": [
+    {
+     "terms": "firm size upper bracket number of employees",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizeu2",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No secondary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "secondary job firm size upper",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizeu2year",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month secondary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "secondary job firm size upper year",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-firmsizeuyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month primary job firm size item found (t24,t32).",
+   "searches": [
+    {
+     "terms": "firm size upper year 12-month",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-healthins",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No health insurance coverage variable found in labor/personal modules; search for health insurance yields no such item (t30); silc24_p columns include only health status items (t24).",
+   "searches": [
+    {
+     "terms": "health insurance coverage",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-healthinsyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No 12-month health insurance coverage variable found (t24,t30).",
+   "searches": [
+    {
+     "terms": "health insurance year 12-month",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-industrycat102",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job industry collected; FI140 is main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industrycat102year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job industry collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industrycat10year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month primary-job industry collected; only FI140 current main job (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industrycat42",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job industry collected; FI140 main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industrycat42year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job industry collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industrycat4year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month primary-job industry collected; only FI140 current main job (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industryorig",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "Survey provides only NACE section code FI140 (1-18), no detailed original industry code as string (t3).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industryorig2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job industry collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industryorig2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job industry collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-industryorigyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month original industry code collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-lincnc",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No variable explicitly measuring total annual wage income excluding bonuses found; survey has annual net income components (FG010/FG020) and main job annual income (FI250) but no clear wage-excl-bonus aggregate (t24,t34).",
+   "searches": [
+    {
+     "terms": "wage excl bonus gross net employee income total",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-lstatusyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month labor status variable collected; only current status (FI010 in silc24_p; FK210 in silc24_pr) (t2,t25).",
+   "searches": []
+  },
+  {
+   "target": "VAR-njobs",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No variable giving total number of jobs found in silc24_p columns; FI160 provides hours in additional job(s) but not number of jobs (t24).",
+   "searches": [
+    {
+     "terms": "number of jobs additional jobs count",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-nlfreason",
+   "kind": "derivable_not_built",
+   "status": "absent",
+   "reason": "NLF reason could be derived from FI010 categories (already used for VAR-lstatus) but not built as separate variable in this module authoring pass (t2).",
+   "needs": [
+    "VAR-lstatus"
+   ]
+  },
+  {
+   "target": "VAR-nlfreasonyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month labor status (VAR-lstatusyear) available to support nlfreasonyear (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occup2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job occupation collected; FI130 is main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occup2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job occupation collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occuporig",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No detailed original occupation code collected; FI130 provides ISCO major group only (t3).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occuporig2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job occupation collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occuporig2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job occupation collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occuporigyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month original occupation code collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-occupyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month primary-job occupation measure collected; FI130 is current main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-ocusec2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job sector-of-activity variable collected; FI145 is main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-ocusec2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job sector-of-activity variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-ocusecyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month primary-job sector-of-activity collected; FI145 is current main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-socialsecyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month social security coverage variable collected; FI190 is current main job only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-thoursannual",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "Inputs insufficient to construct annual hours across all jobs (no secondary-job hours; no other-job hours in last 7 days) (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-thoursothers",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No variable for hours worked in other jobs excluding primary/secondary found; FI160 is usual hours in additional jobs combined, not last-7-days other-job hours (t3,t24).",
+   "searches": [
+    {
+     "terms": "hours other jobs excluding main secondary",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-thoursothersyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month other-job hours variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-thourstotal",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "Total weekly hours across jobs not constructible with available items (no secondary-job hours split; no other-job last-7-days hours) (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-thourstotalyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month total-hours inputs collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-twagencotal",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No wage payment amount/unit variables found to annualize wages excluding bonuses; searching for wage/payment only yields arrears/debt items in household table, not labor pay frequency (t28,t24).",
+   "searches": [
+    {
+     "terms": "wage payment frequency unit last wage",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-twagencothers",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No annualized wage in other jobs excluding bonuses variable found (t24,t28).",
+   "searches": [
+    {
+     "terms": "wage other jobs",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-twagencothersyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month wage-in-other-jobs variables collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-twagencototalyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month wage payment amount/unit variables collected (t24,t28).",
+   "searches": []
+  },
+  {
+   "target": "VAR-twageothers",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No annualized wage in other jobs including bonuses variable found (t24,t28).",
+   "searches": [
+    {
+     "terms": "bonus wage other jobs",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-twageothersyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month wage-in-other-jobs variables collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-twagetotal",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No annualized total wage across jobs constructible (no wage payment amount/unit variables) (t24,t28).",
+   "searches": []
+  },
+  {
+   "target": "VAR-twagetotalyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month wage payment amount/unit variables collected (t24,t28).",
+   "searches": []
+  },
+  {
+   "target": "VAR-unempldurlyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month unemployment duration measure collected distinct from FI280 months unemployed in 2023; not treated as lstatusyear-based duration (t2,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-unemplduruyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month unemployment duration measure collected distinct from FI280 months unemployed in 2023; not treated as lstatusyear-based duration (t2,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-union",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No union membership item found; survey-wide search for union returns none (t31) and silc24_p columns show none (t24).",
+   "searches": [
+    {
+     "terms": "union membership trade union",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-unionyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No union membership item found for 12-month measures (t31,t24).",
+   "searches": [
+    {
+     "terms": "union membership year",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-unitwage",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No time unit of last wage payment item found; search for wage/payment yields only household arrears questions, not wage frequency (t28,t24).",
+   "searches": [
+    {
+     "terms": "time unit last wage payment",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-unitwage2",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No secondary job time unit of last wage payment item found (t28,t24).",
+   "searches": [
+    {
+     "terms": "secondary job wage payment unit",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-unitwage2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job wage payment unit item found (t24,t28).",
+   "searches": []
+  },
+  {
+   "target": "VAR-unitwageyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month main job wage payment unit item found (t24,t28).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagenc",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No last wage payment amount (excluding bonuses) found; only annual net incomes (FI250, FG010 etc.) (t24,t34).",
+   "searches": [
+    {
+     "terms": "last wage payment amount",
+     "in": "silc24_p columns"
+    }
+   ]
+  },
+  {
+   "target": "VAR-wagenc2",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "No secondary job wage payment amount collected (t24).",
+   "searches": [
+    {
+     "terms": "secondary job wage payment amount",
+     "in": "survey (all tables)"
+    }
+   ]
+  },
+  {
+   "target": "VAR-wagenc2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job wage payment amount collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagencyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month primary job wage payment amount collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagetotal",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "Cannot build annualized wage for primary job without wage payment amount/unit; FI250 is annual net income, not last wage payment (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagetotal2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job wage payment amount/unit variables collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagetotal2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job wage payment amount/unit variables collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wagetotalyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month wage payment amount/unit variables collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-whours2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job weekly hours variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-whours2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job hours variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-whoursyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month weekly hours variable collected; FI150 is current/usual only (t3,t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wmonths2",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No secondary job months-worked variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wmonths2year",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month secondary job months-worked variable collected (t24).",
+   "searches": []
+  },
+  {
+   "target": "VAR-wmonthsyear",
+   "kind": "not_collected_by_design",
+   "status": "absent",
+   "reason": "No 12-month reference-period months-worked measure distinct from FI240 collected (t24).",
+   "searches": []
+  }
+ ]
+}

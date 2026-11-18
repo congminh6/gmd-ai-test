@@ -1,0 +1,146 @@
+{
+ "job_id": "loc_20261116T140518_fd01",
+ "flow": "harmonize",
+ "survey_id": "IRL_2025_EU-SILC",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "IRL_2025_EU-SILC",
+  "country": "IRL",
+  "year": 2025,
+  "model": false,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized",
+   "docs": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_UDB-C/Doc",
+   "reference": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_GMD/Data/Harmonized"
+  },
+  "input_job": "loc_20261113T165144_0b42",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "profile",
+    "act": "approve",
+    "by": "zs",
+    "at": "2026-11-16T14:05:18+00:00",
+    "note": "the round: standard only",
+    "binds": {
+     "manifest_sha256": "3f0d28af453371adf0a6e6a05b6b9fbd1b81d96660adac61f4081be71000e4d6",
+     "profile_sha": "d30a7f859b77811fc3819748d7b607fba67c4e3879b0ba85622557f21fc0f4aa"
+    }
+   }
+  ],
+  "extra": {
+   "modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-UTL",
+    "MOD-WLF"
+   ],
+   "fragment": "5cc2d51f63f5",
+   "standard_only": true
+  }
+ },
+ "status": "completed",
+ "started": "2026-11-16T14:05:18+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T140518_fd01",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261113T165144_0b42",
+  "flow": "profile",
+  "status": "completed",
+  "manifest_sha256": "3f0d28af453371adf0a6e6a05b6b9fbd1b81d96660adac61f4081be71000e4d6",
+  "files": 10,
+  "partial": false
+ },
+ "updated": "2026-11-16T14:06:31+00:00",
+ "staged_now": true,
+ "data_version": "IRL_2025_EU-SILC_v01_M_v01_A_UDB-C",
+ "staged": {
+  "source": "local:N:\\datalib_eurostat | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 5,
+  "paths": {
+   "data": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized",
+   "docs": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_UDB-C/Doc",
+   "ss_export": "surveys/IRL_2025_EU-SILC/ss",
+   "svis": "surveys/IRL_2025_EU-SILC/svis",
+   "reference": "IRL/IRL_2025_EU-SILC/IRL_2025_EU-SILC_v01_M_v01_A_GMD/Data/Harmonized"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile d30a7f859b77 approved by zs at 2026-11-16T14:05:22+00:00)",
+  "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+  "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+  "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+  "B.modules": "ok(7 module(s) in the canon)",
+  "B.bind-standard": "ok(EU-SILC eu-silc-2021: 65 binding(s) copied, 6 prelude(s) installed, 196 absence(s), 1 with undeclared codes)",
+  "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+  "B.locate-sources": "ok(standard only: no judgment is asked in this run)",
+  "B.author-bindings": "ok(standard only: no judgment is asked in this run)",
+  "B.review-prelude": "ok(standard only: no judgment is asked in this run)",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(68 targets; 28/185 checks flagged; 11980 universe cells; median agreement 1.0 on 67 shared)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "log_tail": [
+  "        flags: IRL__EU-SILC_v01_M_v01_A_UDB-C_D: 5 column(s) with a companion flag",
+  "        flags: IRL__EU-SILC_v01_M_v01_A_UDB-C_H: 7 column(s) with a companion flag",
+  "        flags: IRL__EU-SILC_v01_M_v01_A_UDB-C_P: 15 column(s) with a companion flag",
+  "        flags: IRL__EU-SILC_v01_M_v01_A_UDB-C_R: 2 column(s) with a companion flag",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-16T14:05:38+00:00); coverage blocked 1, bound 68, documented 137, unaccounted 10",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran",
+  "  [det] hspec-run",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[v] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[v] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:195: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[v] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb249563\\projects\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      PASS — 11617 rows, 68 target(s), 1 blocked; contract clean. Outputs in C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T140518_fd01\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T140518_fd01\\output\\quality.json: 68 targets; 28/185 checks flagged; 11980 universe cells; median agreement 1.0 on 67 shared",
+  "  CHECK F: ok — 68 targets; 28/185 checks flagged; 11980 universe cells; median agreement 1.0 on 67 shared",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-16T14:06:31+00:00"
+}

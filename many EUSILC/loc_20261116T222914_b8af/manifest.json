@@ -1,0 +1,45 @@
+{
+ "job_id": "loc_20261116T222914_b8af",
+ "flow": "scribe",
+ "survey_id": "TUR_2024_SILC-C",
+ "status": "completed",
+ "finished": "2026-11-16T22:29:48+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "47ac3db91ebbcd26c81a56d824b68d71594bae06a05ed9bff752cc2af4c195f9",
+   "size": 4461
+  },
+  "profile/data_scan.json": {
+   "sha256": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+   "size": 135008
+  },
+  "profile/instruments.json": {
+   "sha256": "eeafca853f14cb3256b0fe82a6ff6c45218b4ee3cb9d4e31eacd4ebe51a7f255",
+   "size": 3076
+  },
+  "staged.json": {
+   "sha256": "beec0cb42dcf38087dc2d4912cf76fefe4f37c5cffb95036fb5edd95c0d80c48",
+   "size": 1332
+  },
+  "trail/scribe/direct/classify-English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son.json": {
+   "sha256": "5b657a39966511993a665eb1c12ea5e446fe252ce55adac0f840ad25183134a5",
+   "size": 7077
+  },
+  "trail/scribe/direct/classify-Turkish_GYKA_MVS_Kesit_2024_TR_son.json": {
+   "sha256": "d45d08dcb03c6fd247f391ed3ff7bae6c54d6ac668b8f6c7e17a77f6c68d5387",
+   "size": 6463
+  },
+  "trail/scribe/identity.json": {
+   "sha256": "685fc7ab38f5eda581e239d2c692500f5141e553c9ee45d7dcd9b1b54315c210",
+   "size": 449
+  },
+  "trail/scribe/log.txt": {
+   "sha256": "8ebeb4401d14b4a15fa90c503608f0493d2f44a67ba96c3dfec6f0e974511008",
+   "size": 1230
+  },
+  "trail/scribe/state.json": {
+   "sha256": "8ce22ee596cd41359907a92f917d7b38bc36ed2ff48febc226faf0cf7c047eb4",
+   "size": 321
+  }
+ }
+}

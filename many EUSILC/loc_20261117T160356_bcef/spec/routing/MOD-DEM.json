@@ -1,0 +1,96 @@
+{
+  "routing": {
+    "VAR-age": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Personal register has numeric age (Age on Dec 31, 2023)"
+      }
+    ],
+    "VAR-agecat": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Age categories can be derived from continuous age"
+      }
+    ],
+    "VAR-childmth": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Child age in months (<5) can be derived from age in years"
+      }
+    ],
+    "VAR-childyr": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Child age in years (<5) can be derived from age"
+      }
+    ],
+    "VAR-male": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk090",
+        "why": "Gender column with Male/Female codes (1/2)"
+      }
+    ],
+    "VAR-marital": [
+      {
+        "survey_module": "## silc24_p",
+        "column": "fb100",
+        "why": "Marital status categorical (Married/Never married/Widowed/Divorced)"
+      }
+    ],
+    "VAR-school": [
+      {
+        "survey_module": "## Education",
+        "column": "fe010",
+        "why": "Current education activity Yes/No indicates current enrollment"
+      }
+    ],
+    "VAR-educat7": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Highest education level attained (diploma/certificate) with multiple ordered categories"
+      }
+    ],
+    "VAR-educat5": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "5-category education level can be derived by collapsing detailed highest education level attained"
+      }
+    ],
+    "VAR-educat4": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "4-category education level can be derived by collapsing detailed highest education level attained"
+      }
+    ],
+    "VAR-primarycomp": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Primary completion can be derived from highest education level attained"
+      }
+    ],
+    "VAR-educy": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Years of education may be approximated/derived from highest education level attained if no direct years-schooled item exists"
+      }
+    ],
+    "VAR-everattend": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Ever attended school can be derived from highest education level attained (and possibly FE010 for current attendance)"
+      }
+    ]
+  },
+  "_request_id": "01-locate_sources-MOD-DEM"
+}

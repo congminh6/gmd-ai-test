@@ -1,0 +1,124 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "preludes": [
+  {
+   "id": "MOD-IDN-hh_weight_to_person",
+   "reason": "Household weight (silc24_h.hb040) is stored at household level (hh_id), but output grain is person (pers_id); need a join from silc24_h to person records via hh_id.",
+   "produces": [
+    "__derived.hh_weight__"
+   ],
+   "output_table": "idn_weights",
+   "keys": [
+    "pers_id"
+   ],
+   "invariants": [
+    "Row count equals silc24_p row count",
+    "No missing derived household weights after merge"
+   ],
+   "code_file": "MOD-IDN-hh_weight_to_person.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "silc24_p",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Use run identity ISO3 for countrycode; provide person-grain table anchor silc24_p (t5) for scalar binding."
+  },
+  {
+   "binding_id": "B-intyear",
+   "target": "VAR-intyear",
+   "table": "silc24_p",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "No interview date/month/year columns found in bindable tables (t6, t8, t3); survey year columns (HB010/FB010) are constant 2024 (t9), so use run survey identity year as interview year."
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "idn_weights",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ],
+    "raw_value": "__derived.hh_weight__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Household weight is silc24_h.hb040 (t9); prelude MOD-IDN-hh_weight_to_person joins it to persons via hh_id to produce __derived.hh_weight__ in idn_weights."
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "silc24_p",
+   "roles": {
+    "unit_keys": [
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Survey year columns HB010/FB010 have range 2024–2024 (t9); bind year as run survey identity year, anchored to person-grain table silc24_p (t5)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-intmonth",
+   "kind": "searched_not_found",
+   "reason": "Searched survey tables for interview month/date variables; only found unrelated 'months spent' and 'month of birth' variables; no interview month collected.",
+   "searches": [
+    {
+     "terms": "month interview",
+     "in": "whole survey (search tool, t3)"
+    },
+    {
+     "terms": "date",
+     "in": "whole survey (search tool, t6)"
+    },
+    {
+     "terms": "interview date",
+     "in": "whole survey (search tool, t8)"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

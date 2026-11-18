@@ -1,0 +1,1174 @@
+{
+ "request_id": "09-author_bindings-MOD-DWL",
+ "preludes": [
+  {
+   "id": "MOD-DWL-phone_any",
+   "reason": "VAR-phone requires combining landline (hh150) and mobile phone (hh160) ownership; no single source column represents any-telephone ownership.",
+   "produces": [
+    "__derived.phone_any__"
+   ],
+   "invariants": [
+    "__derived.phone_any__ in {0,1} or null"
+   ],
+   "code_file": "MOD-DWL-phone_any.py"
+  },
+  {
+   "id": "MOD-DWL-rooms_num",
+   "reason": "VAR-rooms is numeric but source hh060 is stored as categorical codes; convert to numeric while preserving '10 or more' as 10.",
+   "produces": [
+    "__derived.rooms_num__"
+   ],
+   "invariants": [
+    "__derived.rooms_num__ >= 1 or null"
+   ],
+   "code_file": "MOD-DWL-rooms_num.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-ac",
+   "target": "VAR-ac",
+   "roles": {
+    "raw_value": "hh230"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh230 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-car",
+   "target": "VAR-car",
+   "roles": {
+    "raw_value": "hh240"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh240 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-cellphone",
+   "target": "VAR-cellphone",
+   "roles": {
+    "raw_value": "hh160"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh160 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-computer",
+   "target": "VAR-computer",
+   "roles": {
+    "raw_value": "hh180"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh180 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-fridge",
+   "target": "VAR-fridge",
+   "roles": {
+    "raw_value": "hh210"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh210 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-tv",
+   "target": "VAR-tv",
+   "roles": {
+    "raw_value": "hh170"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh170 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-washmach",
+   "target": "VAR-washmach",
+   "roles": {
+    "raw_value": "hh200"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh200 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-landphone",
+   "target": "VAR-landphone",
+   "roles": {
+    "raw_value": "hh150"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh150 codes 1 Yes, 2/3 No -> binary (t3)"
+  },
+  {
+   "binding_id": "B-phone",
+   "target": "VAR-phone",
+   "roles": {
+    "raw_value": "__derived.phone_any__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Derived any-telephone from silc24_h.hh150 (landline) and silc24_h.hh160 (mobile) (t3) using prelude MOD-DWL-phone_any"
+  },
+  {
+   "binding_id": "B-bath",
+   "target": "VAR-bath",
+   "roles": {
+    "raw_value": "hh100"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 1,
+    "3": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh100 codes: sole use/shared yes ->1, no ->0 (t2)"
+  },
+  {
+   "binding_id": "B-kitchen",
+   "target": "VAR-kitchen",
+   "roles": {
+    "raw_value": "hh120"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh120 codes: yes=1 no=2 (t2)"
+  },
+  {
+   "binding_id": "B-internet",
+   "target": "VAR-internet",
+   "roles": {
+    "raw_value": "hh190"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 3,
+    "2": 4,
+    "3": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh190 asks internet connection possession without specifying inside/outside; map yes->3, no->4 (t2,t5)"
+  },
+  {
+   "binding_id": "B-areaspace",
+   "target": "VAR-areaspace",
+   "roles": {
+    "raw_value": "hh070"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh070 size of dwelling in square meters (t2)"
+  },
+  {
+   "binding_id": "B-rooms",
+   "target": "VAR-rooms",
+   "roles": {
+    "raw_value": "__derived.rooms_num__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Converted silc24_h.hh060 number of rooms (excluding kitchen/bath/toilet) to numeric via prelude MOD-DWL-rooms_num (t2,t7)"
+  },
+  {
+   "binding_id": "B-ownhouse",
+   "target": "VAR-ownhouse",
+   "roles": {
+    "raw_value": "hh020"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 2,
+    "4": 3
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh020 tenure: owner->1, tenant/lodging->renting, provided free->3 (t2,t6)"
+  },
+  {
+   "binding_id": "B-dweltyp",
+   "target": "VAR-dweltyp",
+   "roles": {
+    "raw_value": "hh010"
+   },
+   "predicate": "all",
+   "value_map": {
+    "11": 1,
+    "121": 6,
+    "122": 2,
+    "131": 6,
+    "132": 3,
+    "141": 6,
+    "142": 3,
+    "2": 9
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "silc24_h.hh010 dwelling type labels mapped to canon categories (t2,t4)"
+  },
+  {
+   "binding_id": "B-acquihouse",
+   "target": "VAR-acquihouse",
+   "roles": {
+    "raw_value": "hh030"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "Survey collects year of purchasing/possessing (hh030) but not method of acquisition categories needed for VAR-acquihouse (t2)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-acquiland",
+   "kind": "searched_not_found",
+   "reason": "No residential land acquisition question found; only dwelling tenure (hh020) and year of purchasing/possessing house (hh030) present, plus income from rental of lands (hg070).",
+   "searches": [
+    {
+     "terms": "land acquisition / purchase / inherited",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "acquisition of land",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-agriland",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land use/ownership questions in silc24_h; only income-related items mention 'lands'/'agric' (hg070, hg085).",
+   "searches": [
+    {
+     "terms": "agri|land|plot|hectare",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "agriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-agrilandownti",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land documentation/type questions collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "document|title|deed|lease|certificate",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "agriland ownership document",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-areaagriland",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "area agricultural land",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-areadocuagriland",
+   "kind": "searched_not_found",
+   "reason": "No documented agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "documented|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "areadocuagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-areainheragriland",
+   "kind": "searched_not_found",
+   "reason": "No inherited agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "inherited|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "areainheragriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-areaownagriland",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land owned area variables collected.",
+   "searches": [
+    {
+     "terms": "own|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "areaownagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-areapurchagriland",
+   "kind": "searched_not_found",
+   "reason": "No purchased agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "purchase|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "areapurchagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-arearentinagriland",
+   "kind": "searched_not_found",
+   "reason": "No rented-in agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "rent|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "arearentinagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-arearentoutagriland",
+   "kind": "searched_not_found",
+   "reason": "No rented-out agricultural land area variables collected.",
+   "searches": [
+    {
+     "terms": "rent out|hectare|area",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "arearentoutagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-bcycle",
+   "kind": "searched_not_found",
+   "reason": "No bicycle ownership item in silc24_h; asset list includes only phone/tv/computer/internet/appliances/car/AC.",
+   "searches": [
+    {
+     "terms": "bicycle",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "assets possession",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-boat",
+   "kind": "searched_not_found",
+   "reason": "No boat ownership item in silc24_h.",
+   "searches": [
+    {
+     "terms": "boat|canoe",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "boat",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-canoe",
+   "kind": "searched_not_found",
+   "reason": "No canoe ownership item in silc24_h.",
+   "searches": [
+    {
+     "terms": "canoe|boat",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "canoe",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-docuagriland",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land documentation question in silc24_h.",
+   "searches": [
+    {
+     "terms": "document|certificate|deed",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "docuagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-doculand",
+   "kind": "searched_not_found",
+   "reason": "No residential land legal document question in silc24_h.",
+   "searches": [
+    {
+     "terms": "land|title|deed|document",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "doculand",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dwelownlti",
+   "kind": "searched_not_found",
+   "reason": "No dwelling legal title question in silc24_h beyond tenure status.",
+   "searches": [
+    {
+     "terms": "title|deed|legal document",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "dwelown",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-dwelownti",
+   "kind": "searched_not_found",
+   "reason": "No dwelling legal document type question in silc24_h.",
+   "searches": [
+    {
+     "terms": "deed|leasehold|occupancy certificate|condominium",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "dwelownti",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-etablet",
+   "kind": "searched_not_found",
+   "reason": "No electronic tablet ownership item in silc24_h (some personal-level internet questions mention tablets but not household asset ownership).",
+   "searches": [
+    {
+     "terms": "tablet",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "tablet",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ewpump",
+   "kind": "searched_not_found",
+   "reason": "No electric water pump ownership item in silc24_h.",
+   "searches": [
+    {
+     "terms": "pump",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "water pump",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-fan",
+   "kind": "searched_not_found",
+   "reason": "No electric fan ownership item in silc24_h.",
+   "searches": [
+    {
+     "terms": "fan",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "fan",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-femagrilandownti",
+   "kind": "searched_not_found",
+   "reason": "No gender-disaggregated agricultural land ownership documentation items collected.",
+   "searches": [
+    {
+     "terms": "female land ownership|woman",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "femagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-femdoculand",
+   "kind": "searched_not_found",
+   "reason": "No gender-disaggregated residential land documentation items collected.",
+   "searches": [
+    {
+     "terms": "female land document",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "femdoculand",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-femdwelownlti",
+   "kind": "searched_not_found",
+   "reason": "No gender-disaggregated dwelling legal title items collected.",
+   "searches": [
+    {
+     "terms": "female title deed",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "femdwelown",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-floor",
+   "kind": "searched_not_found",
+   "reason": "No floor material question in silc24_h.",
+   "searches": [
+    {
+     "terms": "floor|material",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "floor",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-floorcs",
+   "kind": "searched_not_found",
+   "reason": "No floor material question in silc24_h, hence no country-specific floor text variable.",
+   "searches": [
+    {
+     "terms": "floor",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "floorcs",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-inheragriland",
+   "kind": "searched_not_found",
+   "reason": "No inherited agricultural land indicator collected.",
+   "searches": [
+    {
+     "terms": "inherited agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "inheragriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-landownti",
+   "kind": "searched_not_found",
+   "reason": "No residential land ownership document type question collected.",
+   "searches": [
+    {
+     "terms": "land ownership document|deed|title",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "landownti",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-mcycle",
+   "kind": "searched_not_found",
+   "reason": "No motorcycle ownership item collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "motorcycle",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "motorcycle",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ownagriland",
+   "kind": "searched_not_found",
+   "reason": "No agricultural land ownership indicator collected.",
+   "searches": [
+    {
+     "terms": "agricultural land own",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "ownagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ownland",
+   "kind": "searched_not_found",
+   "reason": "No residential land ownership indicator collected.",
+   "searches": [
+    {
+     "terms": "own land|residential land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "ownland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-oxcart",
+   "kind": "searched_not_found",
+   "reason": "No oxcart ownership item collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "oxcart",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "oxcart",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-purchagriland",
+   "kind": "searched_not_found",
+   "reason": "No purchased agricultural land indicator collected.",
+   "searches": [
+    {
+     "terms": "purchase agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "purchagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-radio",
+   "kind": "searched_not_found",
+   "reason": "No radio ownership item collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "radio",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "radio",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-rentinagriland",
+   "kind": "searched_not_found",
+   "reason": "No rent-in agricultural land indicator collected.",
+   "searches": [
+    {
+     "terms": "rent in agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "rentinagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-rentoutagriland",
+   "kind": "searched_not_found",
+   "reason": "No rent-out agricultural land indicator collected.",
+   "searches": [
+    {
+     "terms": "rent out agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "rentoutagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ricecook",
+   "kind": "searched_not_found",
+   "reason": "No rice cooker ownership item collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "rice cooker",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "ricecook",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-roof",
+   "kind": "searched_not_found",
+   "reason": "No roof material question in silc24_h (only a problem indicator about leaking roof exists).",
+   "searches": [
+    {
+     "terms": "roof material",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "roof",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-roofcs",
+   "kind": "searched_not_found",
+   "reason": "No roof material question in silc24_h, hence no country-specific roof text variable.",
+   "searches": [
+    {
+     "terms": "roof",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "roofcs",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sellagriland",
+   "kind": "searched_not_found",
+   "reason": "No questions on rights to sell agricultural land collected.",
+   "searches": [
+    {
+     "terms": "sell agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "sellagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-selldwel",
+   "kind": "searched_not_found",
+   "reason": "No questions on right to sell dwelling collected.",
+   "searches": [
+    {
+     "terms": "sell dwelling",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "selldwel",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sellland",
+   "kind": "searched_not_found",
+   "reason": "No questions on right to sell residential land collected.",
+   "searches": [
+    {
+     "terms": "sell land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "sellland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-sewmach",
+   "kind": "searched_not_found",
+   "reason": "No sewing machine ownership item collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "sewing machine",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "sewmach",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-stove",
+   "kind": "searched_not_found",
+   "reason": "No stove ownership item (only heating system type).",
+   "searches": [
+    {
+     "terms": "stove",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "stove",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-transagriland",
+   "kind": "searched_not_found",
+   "reason": "No questions on rights to transfer agricultural land collected.",
+   "searches": [
+    {
+     "terms": "transfer agricultural land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "transagriland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-transdwel",
+   "kind": "searched_not_found",
+   "reason": "No questions on rights to transfer dwelling collected.",
+   "searches": [
+    {
+     "terms": "transfer dwelling",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "transdwel",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-transland",
+   "kind": "searched_not_found",
+   "reason": "No questions on rights to transfer residential land collected.",
+   "searches": [
+    {
+     "terms": "transfer land",
+     "in": "search label,question (t9)"
+    },
+    {
+     "terms": "transland",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-tvcable",
+   "kind": "searched_not_found",
+   "reason": "No cable TV ownership question collected in silc24_h (only TV possession).",
+   "searches": [
+    {
+     "terms": "cable tv",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "cable",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-typlivqrt",
+   "kind": "searched_not_found",
+   "reason": "No living quarters typology variable (with/without basic facilities) collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "living quarters|basic facilities",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "typlivqrt",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-video",
+   "kind": "searched_not_found",
+   "reason": "No video player ownership question collected in silc24_h.",
+   "searches": [
+    {
+     "terms": "video player",
+     "in": "search label,question,codes (t10)"
+    },
+    {
+     "terms": "video",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-wall",
+   "kind": "searched_not_found",
+   "reason": "No wall material question in silc24_h (only a problem indicator about damp walls exists).",
+   "searches": [
+    {
+     "terms": "wall material",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "wall",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-wallcs",
+   "kind": "searched_not_found",
+   "reason": "No wall material question in silc24_h, hence no country-specific wall text variable.",
+   "searches": [
+    {
+     "terms": "wall",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "wallcs",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-ybuilt",
+   "kind": "searched_not_found",
+   "reason": "No year-built variable found; hh030 is year of purchasing/possessing, not construction year.",
+   "searches": [
+    {
+     "terms": "year built|built",
+     "in": "search label,question (t8)"
+    },
+    {
+     "terms": "ybuilt",
+     "in": "silc24_h columns (t1)"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

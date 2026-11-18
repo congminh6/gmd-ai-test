@@ -1,0 +1,288 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p26",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 4377,
+  "output_token_count": 1941,
+  "total_token_count": 6318,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 645,
+  "reasoning_output_token_count": 645
+ },
+ "images": 3,
+ "answer": {
+  "tables": [
+   {
+    "heading": "",
+    "header": [],
+    "rows": [
+     {
+      "cells": [
+       "FI150",
+       "Total number of hours usually worked in main job (The\nregularly paid extra working hours of employees are included.)\n[FI010<=\"3\" veya FI020 = \"1\" olanlar]",
+       "2",
+       "1..99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI160",
+       "Total number of hours usually worked in additional job/jobs\n[FI010<\"5\" or FI020=\"1\" and the ones who have additional\njob/jobs]",
+       "2",
+       "1..99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI190",
+       "Registration status to social security institutions in the\nmain job\n[FI010<\"5\" or FI020=\"1\"]",
+       "1",
+       "1- Registered\n2- Not registered"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI210",
+       "Type of contract of employees in the main job\n[FI010<\"5\" or FI020=\"1\" and (FI120=\"1\" or FI120=\"2\")]",
+       "1",
+       "11- Permanent job/work with written contract of unlimited duration\n12- Permanent job/work with verbal contract\n21- Temporary job/work with written contract of limited duration\n22- Work occasionally without contract\n23- Temporary work held by students, pupils, etc. in the vacation time"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI220",
+       "Managerial position of employee in the main job\n[FI010<\"5\" or FI020=\"1\" and\n(FI120=\"1\" or FI120=\"2\")]",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI225",
+       "The person's opinion and feelings about the degree of\nsatisfaction with their job about the tasks performed,\nworkplace atmosphere, pay and working hours, etc.\n0: Very dissatisfied, 10: Very satisfied",
+       "2",
+       "0..10"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI240",
+       "Number of months spent in the main job in 2023\n[FI010<\"5\" or FI020=\"1\" and the ones who started to work\nbefore \"2020\"]",
+       "2",
+       "1..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI250",
+       "Net annual income in cash or in kind received from main\njob in 2023 (TRY)\n[FI010<\"5\" or FI020=\"1\" and the ones who started to work\nbefore \"2023\"]",
+       "6",
+       "-999999..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Working History",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FI260",
+       "Number of months spent at full-time work in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI270",
+       "Number of months spent at part-time work in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI280",
+       "Number of months spent in unemployment in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI290",
+       "Number of months spent as retired / has given up business\ndue to reasons related to age in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI300",
+       "Number of months spent by continuing their education /\ntraining in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI310",
+       "Number of months spent as other inactively (such as\ndomestic tasks, care responsibilities, old/disabled/unfit to\nwork, compulsory military service etc.) in 2023",
+       "2",
+       "0..12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI330",
+       "Number of years spent in paid work (YEAR)\n[(FI010<\"5\" or FI020=\"1\" or FI030=\"1\") and FI210<>\"4\"]",
+       "2",
+       "0..99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "2024 Personal Income",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FG010",
+       "Total ANNUAL net employee cash or near cash income\nreceived in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG020",
+       "Total ANNUAL net employee cash or near cash income\nreceived in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG030",
+       "Total ANNUAL net self-employment income in cash\nreceived in 2023 (TRY)",
+       "9.2",
+       "-999999..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG040",
+       "Total ANNUAL net self-employment income in kind\nreceived in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG070",
+       "Unemployment benefits received in 2023 (TRY)\n(Including severances)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG080",
+       "Old-age benefits received in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG085",
+       "Retirement grants received in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG090",
+       "Survivors' benefits received in 2023 (TRY)\n(Including death grants)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG100",
+       "Sickness benefits received in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG110",
+       "Disability benefits (including ghazi and honor pensions)\nreceived in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG120",
+       "Education-related allowances received in 2023 (TRY)",
+       "9.2",
+       "0..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FG140",
+       "Total value of the incomes received in 2023 (TRY)\n(FG010 + FG020 + FG030 + FG040 + FG070 + FG080 +\nFG085 + FG090 + FG100 + FG110 + FG120)",
+       "9.2",
+       "-999999..999999"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

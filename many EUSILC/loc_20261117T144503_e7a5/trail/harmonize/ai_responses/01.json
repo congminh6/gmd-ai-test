@@ -1,0 +1,39 @@
+{
+ "request_id": "01-locate_sources-MOD-IDN",
+ "routing": {
+  "VAR-countrycode": [
+   {
+    "survey_module": "silc24_h",
+    "why": "No country/ISO3 column found; likely constant from survey identity (Turkey) rather than stored in data columns"
+   }
+  ],
+  "VAR-intmonth": [
+   {
+    "survey_module": "silc24_h",
+    "why": "No interview-month field apparent in index; only unrelated month variables (e.g., month of birth) suggest interview month may be absent or metadata-only"
+   }
+  ],
+  "VAR-intyear": [
+   {
+    "survey_module": "silc24_h",
+    "column": "hb010",
+    "why": "HB010 is 'Year of the survey' and is a plausible source for interview year (constant 2024)"
+   }
+  ],
+  "VAR-weight": [
+   {
+    "survey_module": "silc24_h",
+    "column": "hb040",
+    "why": "HB040 is explicitly labelled 'Household weight'"
+   }
+  ],
+  "VAR-year": [
+   {
+    "survey_module": "silc24_h",
+    "column": "hb010",
+    "why": "HB010 is 'Year of the survey' and is a plausible source for survey start year (constant 2024)"
+   }
+  ]
+ },
+ "notes": "HB010/HB040 are the only clear identity/weight fields in the household file; no explicit interview month variable seen in the index."
+}

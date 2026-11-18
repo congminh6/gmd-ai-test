@@ -1,0 +1,29 @@
+{
+ "findings": [
+  {
+   "id": "prelude.concern:VAR-phone",
+   "kind": "prelude.concern",
+   "area": "spec",
+   "nature": "note",
+   "severity": "low",
+   "subject": "VAR-phone",
+   "title": "`VAR-phone` reads prelude `MOD-DWL-phone_any`: Logic does not match the stated intent to “preserve missingness if either source is missing”: it sets NaN only when BOTH hh150 and hh160 are missing, but returns 0 when one is missing and the other is not yes. Also uses .astype('float') which can raise if the column contains non-numeric sentinels/strings; pd.to_numeric(errors='coerce') would be safer.",
+   "consequence": "",
+   "fix": "",
+   "by": "review_prelude",
+   "detail": "",
+   "evidence": [],
+   "group": "",
+   "source": "review",
+   "message": "$.prelude MOD-DWL-phone_any target=VAR-phone: the prelude review: Logic does not match the stated intent to “preserve missingness if either source is missing”: it sets NaN only when BOTH hh150 and hh160 are missing, but returns 0 when one is missing and the other is not yes. Also uses .astype('float') which can raise if the column contains non-numeric sentinels/strings; pd.to_numeric(errors='coerce') would be safer.",
+   "target": "VAR-phone",
+   "binding_id": null,
+   "prelude_id": "MOD-DWL-phone_any",
+   "path": null,
+   "index": null,
+   "spec_sha256": "96e336a826faa13bcf7ced91c8a8db2c178444faf1c4c788bf8f3c8787322f4e",
+   "target_sha256": "388208c9ef6469513052babcab762b5011236ae624e140dcf58c929d4a918441",
+   "reason": null
+  }
+ ]
+}

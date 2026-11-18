@@ -1,0 +1,69 @@
+{
+ "request_id": "06-locate_sources-MOD-UTL",
+ "routing": {
+  "VAR-centralacc": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh080",
+    "why": "Heating system categories include Radiator (Joint or central heating), which can indicate access to central heating.",
+    "evidence": [
+     "t3#codes"
+    ]
+   }
+  ],
+  "VAR-heatsource": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh080",
+    "why": "Heating system available (stove/radiator/air conditioner/none) could serve as closest available proxy for main heating source/type.",
+    "evidence": [
+     "t3#question",
+     "t3#codes"
+    ]
+   }
+  ],
+  "VAR-toiletacc": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh110",
+    "why": "Indoor flushing toilet in dwelling provides direct evidence for access to a flush toilet.",
+    "evidence": [
+     "t3#question",
+     "t3#codes"
+    ]
+   }
+  ],
+  "VAR-opendef": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh110",
+    "why": "Presence/absence of an indoor flushing toilet is the only sanitation-access indicator in the housing module; may help classify any toilet facility vs none.",
+    "evidence": [
+     "t3#codes"
+    ]
+   }
+  ],
+  "VAR-piped": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh130",
+    "why": "Piped water system in the dwelling provides direct evidence for piped water access.",
+    "evidence": [
+     "t3#question",
+     "t3#codes"
+    ]
+   }
+  ],
+  "VAR-pipedtoprem": [
+   {
+    "survey_module": "Dwelling and Housing Conditions",
+    "column": "silc24_h.hh130",
+    "why": "Piped water system in the dwelling implies piped water on premises (at least in dwelling).",
+    "evidence": [
+     "t3#codes"
+    ]
+   }
+  ]
+ },
+ "notes": "Survey index shows only housing-conditions access/possession variables (piped water, flush toilet, heating system), not detailed water/sanitation type questions or any utility/fuel/telecom expenditures."
+}

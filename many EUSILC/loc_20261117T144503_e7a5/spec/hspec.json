@@ -1,0 +1,1499 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p"
+            ],
+            "call": "04:t5",
+            "result_sha256": "5933b6bec11928fa2b5b6d9eb55ef82c651a18a18ea231bc1d0130118201c7cd",
+            "tool": "columns"
+          }
+        ],
+        "text": "Use run identity ISO3 for countrycode; provide person-grain table anchor silc24_p (04:t5) for scalar binding."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "date"
+            ],
+            "call": "04:t6",
+            "result_sha256": "87d8d8af286ad0dfe53314007936ed141d0f7c054168f1fb59fe7043703c4981",
+            "tool": "search"
+          },
+          {
+            "args": [
+              "interview",
+              "date"
+            ],
+            "call": "04:t8",
+            "result_sha256": "ea72cc908d0d1d077f7bfd7d02f2da69bd2af7c256cdee1794f8b7608d62c2cb",
+            "tool": "search"
+          },
+          {
+            "args": [
+              "month",
+              "interview"
+            ],
+            "call": "04:t3",
+            "result_sha256": "0b90efbf8bf8c700a9bc96f74a9f1de16ca9447727284f23b0dce0cea0713bac",
+            "tool": "search"
+          },
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010"
+            ],
+            "call": "04:t9",
+            "result_sha256": "096b28efb026e0155d01c6752f275b1bfec88a305dd722126d265d72a5165276",
+            "tool": "column"
+          }
+        ],
+        "text": "No interview date/month/year columns found in bindable tables (04:t6, 04:t8, 04:t3); survey year columns (HB010/FB010) are constant 2024 (04:t9), so use run survey identity year as interview year."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-intyear"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010"
+            ],
+            "call": "04:t9",
+            "result_sha256": "096b28efb026e0155d01c6752f275b1bfec88a305dd722126d265d72a5165276",
+            "tool": "column"
+          }
+        ],
+        "text": "Household weight is silc24_h.hb040 (04:t9); prelude MOD-IDN-hh_weight_to_person joins it to persons via hh_id to produce __derived.hh_weight__ in idn_weights."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.hh_weight__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "idn_weights",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb010",
+              "silc24_h.hb040",
+              "silc24_p.fb010"
+            ],
+            "call": "04:t9",
+            "result_sha256": "096b28efb026e0155d01c6752f275b1bfec88a305dd722126d265d72a5165276",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_p"
+            ],
+            "call": "04:t5",
+            "result_sha256": "5933b6bec11928fa2b5b6d9eb55ef82c651a18a18ea231bc1d0130118201c7cd",
+            "tool": "columns"
+          }
+        ],
+        "text": "Survey year columns HB010/FB010 have range 2024–2024 (04:t9); bind year as run survey identity year, anchored to person-grain table silc24_p (04:t5)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-gaul_adm1_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [],
+            "call": "05:t18",
+            "result_sha256": "511f5754d38906a3829ee681a130221f9ed06de53268f6630e8f96b0074c21cf",
+            "tool": "check"
+          },
+          {
+            "args": [
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-subnatidsurvey",
+              "VAR-urban"
+            ],
+            "call": "05:t13",
+            "result_sha256": "1372e6ce7abebc03254dc589fdb25c935a0339ce48ea937350e51f64f4803e1d",
+            "tool": "canon"
+          }
+        ],
+        "text": "GAUL admin codes are not determined by the TUR NUTS2-based geography correspondence chain (05:t18 links report, 05:t13)"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": {
+          "code": ".b",
+          "waive": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b)."
+        }
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived_hb031__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "geo_pers",
+      "target": "VAR-gauladm1code",
+      "value_map_source": {
+        "correspondence": "geography",
+        "waive_dropped": "Turkey national geography standard used here provides NUTS2 geo_code only; it does not determine GAUL admin codes for these linked categories (expected drop)."
+      }
+    },
+    {
+      "binding_id": "B-gaul_adm2_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [],
+            "call": "05:t18",
+            "result_sha256": "511f5754d38906a3829ee681a130221f9ed06de53268f6630e8f96b0074c21cf",
+            "tool": "check"
+          },
+          {
+            "args": [
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-subnatidsurvey",
+              "VAR-urban"
+            ],
+            "call": "05:t13",
+            "result_sha256": "1372e6ce7abebc03254dc589fdb25c935a0339ce48ea937350e51f64f4803e1d",
+            "tool": "canon"
+          }
+        ],
+        "text": "GAUL admin codes are not determined by the TUR NUTS2-based geography correspondence chain (05:t18 links report, 05:t13)"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": {
+          "code": ".b",
+          "waive": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b)."
+        }
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived_hb031__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "geo_pers",
+      "target": "VAR-gauladm2code",
+      "value_map_source": {
+        "correspondence": "geography",
+        "waive_dropped": "Turkey national geography standard used here provides NUTS2 geo_code only; it does not determine GAUL admin codes for these linked categories (expected drop)."
+      }
+    },
+    {
+      "binding_id": "B-geo_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-subnatidsurvey",
+              "VAR-urban"
+            ],
+            "call": "05:t13",
+            "result_sha256": "1372e6ce7abebc03254dc589fdb25c935a0339ce48ea937350e51f64f4803e1d",
+            "tool": "canon"
+          },
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "05:t1",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "Geocode resolved from hb031 (NUTS2) via geography correspondence (05:t13, 05:t1)"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived_hb031__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "geo_pers",
+      "target": "VAR-geocode",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Age in years in silc24_pr.fk070; -1 observed so treated as missing in prelude (06:t8)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.age__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-childmth",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk075"
+            ],
+            "call": "06:t16",
+            "result_sha256": "be9de1bc6de3c4fcb4b2fdebbf9159120a69d9d0ee9c80955a66a3081ef67b9f",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived from age-at-2023-12-31 and birth month for under-5s (06:t8,06:t16)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childmth__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-childmth"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "silc24_pr.fk075"
+            ],
+            "call": "06:t16",
+            "result_sha256": "be9de1bc6de3c4fcb4b2fdebbf9159120a69d9d0ee9c80955a66a3081ef67b9f",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived from age (as-of 2023-12-31) for under-5s (06:t8,06:t16)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childyr__",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-educat4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Education correspondence based on silc24_p.fe030 (06:t8)."
+      },
+      "injected": {
+        "raw_value": "correspondence.education",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat4",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat5",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Education correspondence based on silc24_p.fe030 (06:t8)."
+      },
+      "injected": {
+        "raw_value": "correspondence.education",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat5",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Education correspondence based on silc24_p.fe030 (06:t8)."
+      },
+      "injected": {
+        "raw_value": "correspondence.education",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educat7",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Education correspondence yields years-of-education field from national categories (brief table; linked via 06:t8)."
+      },
+      "injected": {
+        "raw_value": "correspondence.education",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-educy",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Gender codes 1=Male 2=Female in silc24_pr.fk090 (06:t8)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fk090",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Marital status codes in silc24_p.fb100: 1 Married, 2 Never married, 3 Widowed, 4 Divorced (06:t8)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fb100",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 5,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-mineducatage",
+      "constant_source": {
+        "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-primarycomp",
+              "VAR-educat4",
+              "VAR-educat5",
+              "VAR-educy",
+              "VAR-school",
+              "VAR-mineducatage"
+            ],
+            "call": "06:t13",
+            "result_sha256": "63b4a63a4d44886a3126b5b74cd4f87c1374c7dcebee2fb00a44c815da873ee0",
+            "tool": "canon"
+          }
+        ],
+        "text": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE (06:t13)."
+      },
+      "missing_map": {
+        "null": ".a"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_pr",
+      "target": "VAR-mineducatage"
+    },
+    {
+      "binding_id": "B-primarycomp",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-primarycomp",
+              "VAR-educat4",
+              "VAR-educat5",
+              "VAR-educy",
+              "VAR-school",
+              "VAR-mineducatage"
+            ],
+            "call": "06:t13",
+            "result_sha256": "63b4a63a4d44886a3126b5b74cd4f87c1374c7dcebee2fb00a44c815da873ee0",
+            "tool": "canon"
+          }
+        ],
+        "text": "Mapped from silc24_p.fe030 codes (06:t8) to primary completion per canon rule (06:t13)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe030",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "route_reason": "National education correspondence table provided in this brief does not include a primary completion output, so primary completion is mapped directly from survey highest-education categories.",
+      "table": "silc24_p",
+      "target": "VAR-primarycomp",
+      "value_map": {
+        "0": 0,
+        "1": 0,
+        "10": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "binding_id": "B-school",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Current education activity in silc24_p.fe010: 1 Yes, 2 No (06:t8)."
+      },
+      "injected": {
+        "table": "data_scan",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "fe010",
+        "unit_keys": [
+          "pers_id"
+        ]
+      },
+      "table": "silc24_p",
+      "target": "VAR-school",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    }
+  ],
+  "correspondence": {
+    "education": {
+      "column": "silc24_p.fe030",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "fe030 code labels from 06:t8"
+      },
+      "links": {
+        "0": {
+          "direct": {
+            "VAR-educat4": 1,
+            "VAR-educat5": 1,
+            "VAR-educat7": 1,
+            "VAR-educy": 0
+          },
+          "kind": "no_fitting_category",
+          "reason": "Survey code 0 is 'Illiterate' (no schooling), not a Turkish education program category in the national standard."
+        },
+        "1": {
+          "direct": {
+            "VAR-educat4": 1,
+            "VAR-educat5": 1,
+            "VAR-educat7": 1,
+            "VAR-educy": 0
+          },
+          "kind": "no_fitting_category",
+          "reason": "Survey code 1 is 'Literate but not a graduate' (no completed schooling level), not a Turkish education program category in the national standard."
+        },
+        "10": {
+          "direct": {
+            "VAR-educat4": 4,
+            "VAR-educat5": 5,
+            "VAR-educat7": 7,
+            "VAR-educy": 18
+          },
+          "kind": "no_fitting_category",
+          "reason": "Survey code 10 is 'Doctorate'. The national education crosswalk in this brief does not list a doctorate category; place directly as tertiary with 18 years (closest upper bound in the crosswalk shown)."
+        },
+        "2": "TUR-EDU-03",
+        "3": "TUR-EDU-03",
+        "4": "TUR-EDU-06",
+        "5": "TUR-EDU-11",
+        "6": "TUR-EDU-14",
+        "7": "TUR-EDU-22",
+        "8": "TUR-EDU-23",
+        "9": {
+          "direct": {
+            "VAR-educat4": 4,
+            "VAR-educat5": 5,
+            "VAR-educat7": 7,
+            "VAR-educy": 18
+          },
+          "kind": "no_fitting_category",
+          "reason": "Survey code 9 is 'Master'. National education crosswalk list in this brief ends at master's programmes but distinguishes thesis/non-thesis; the survey does not. Place directly at tertiary with 18 years."
+        }
+      }
+    },
+    "geography": {
+      "column": "geo_pers.__derived_hb031__",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_h.hb030",
+              "silc24_h.hb031"
+            ],
+            "call": "05:t1",
+            "result_sha256": "c9d092da1c30d2ec4bcd9a93765127a07b7e72bbd69c998e1a3999ce330e7d35",
+            "tool": "column"
+          }
+        ],
+        "text": "silc24_h.hb031 Statistical Regions Level 2 has 26 NUTS2 codes TR10..TRC3 with labels matching the Turkey national standard list; prelude merges hb031 onto pers_id as geo_pers.__derived_hb031__ for binding (05:t1)"
+      },
+      "links": {
+        "TR10": "TUR-SUBNAT-01",
+        "TR21": "TUR-SUBNAT-02",
+        "TR22": "TUR-SUBNAT-03",
+        "TR31": "TUR-SUBNAT-04",
+        "TR32": "TUR-SUBNAT-05",
+        "TR33": "TUR-SUBNAT-06",
+        "TR41": "TUR-SUBNAT-07",
+        "TR42": "TUR-SUBNAT-08",
+        "TR51": "TUR-SUBNAT-09",
+        "TR52": "TUR-SUBNAT-10",
+        "TR61": "TUR-SUBNAT-11",
+        "TR62": "TUR-SUBNAT-12",
+        "TR63": "TUR-SUBNAT-13",
+        "TR71": "TUR-SUBNAT-14",
+        "TR72": "TUR-SUBNAT-15",
+        "TR81": "TUR-SUBNAT-16",
+        "TR82": "TUR-SUBNAT-17",
+        "TR83": "TUR-SUBNAT-18",
+        "TR90": "TUR-SUBNAT-19",
+        "TRA1": "TUR-SUBNAT-20",
+        "TRA2": "TUR-SUBNAT-21",
+        "TRB1": "TUR-SUBNAT-22",
+        "TRB2": "TUR-SUBNAT-23",
+        "TRC1": "TUR-SUBNAT-24",
+        "TRC2": "TUR-SUBNAT-25",
+        "TRC3": "TUR-SUBNAT-26"
+      }
+    }
+  },
+  "coverage": [
+    {
+      "by": "engine",
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhid from the grain's household keys",
+      "status": "absent",
+      "variable": "VAR-hhid"
+    },
+    {
+      "by": "engine",
+      "kind": "not_collected_by_design",
+      "lineage": "absent",
+      "reason": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhidorig from the grain's household keys",
+      "status": "absent",
+      "variable": "VAR-hhidorig"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched survey tables for interview month/date variables; only found unrelated 'months spent' and 'month of birth' variables; no interview month collected.",
+      "searches": [
+        {
+          "in": "whole survey (search tool, t3)",
+          "terms": "month interview"
+        },
+        {
+          "in": "whole survey (search tool, t6)",
+          "terms": "date"
+        },
+        {
+          "in": "whole survey (search tool, t8)",
+          "terms": "interview date"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-intmonth"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "The survey has hb030 (NUTS1) in silc24_h, but the output grain is pers_id and subnatid1 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run.",
+      "searches": [
+        {
+          "in": "silc24_h column card (t1)",
+          "terms": "hb030"
+        }
+      ],
+      "status": "deferred",
+      "variable": "VAR-subnatid1"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "The survey has hb031 (NUTS2) in silc24_h, but the output grain is pers_id and subnatid2 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run.",
+      "searches": [
+        {
+          "in": "silc24_h column card (t1)",
+          "terms": "hb031"
+        }
+      ],
+      "status": "deferred",
+      "variable": "VAR-subnatid2"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "The representative-level subnational id would come from the coded hb031 column (NUTS2) with its value labels, but the output grain is pers_id and this target must bind the coded column directly (not a derived copy). It cannot be bound until the household geography can be structurally carried to the output grain.",
+      "searches": [
+        {
+          "in": "silc24_h hb031 column card (t1)",
+          "terms": "hb031 representative geography"
+        }
+      ],
+      "status": "deferred",
+      "variable": "VAR-subnatidsurvey"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No PSU/cluster/sampling-unit column found in bindable tables after searches for psu/cluster/primary sampling unit.",
+      "searches": [
+        {
+          "in": "all tables (search tool, t2)",
+          "terms": "psu"
+        },
+        {
+          "in": "all tables (search tool, t7)",
+          "terms": "cluster|primary sampling"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-psu"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No strata/stratum/sampling-strata column found in bindable tables after searches for strata/stratum/strat*.",
+      "searches": [
+        {
+          "in": "all tables (search tool, t3)",
+          "terms": "strata|stratum"
+        },
+        {
+          "in": "name,label,question (search tool, t6)",
+          "terms": "strat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-strata"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected.",
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected.",
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No urban/rural or rurality column found in bindable tables after search for urban/rural/rurality/degree of urbanisation.",
+      "searches": [
+        {
+          "in": "name,label,question,codes (search tool, t4)",
+          "terms": "urban|rural"
+        },
+        {
+          "in": "name,label,question,codes (search tool, t8)",
+          "terms": "rurality|degree of urbanisation|degurba"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-urban"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+      "status": "absent",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+      "status": "absent",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+      "status": "absent",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk.",
+      "status": "absent",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Continuous age is collected (silc24_pr.fk070); no age-band variable present.",
+      "status": "absent",
+      "variable": "VAR-agecat"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability/functioning questions found in bindable person tables (searched terms 'disability', 'difficulty', 'see', 'hear', 'walk', 'self care', 'communicat').",
+      "searches": [
+        {
+          "in": "silc24_pr (name/label/question)",
+          "terms": "disability"
+        },
+        {
+          "in": "all tables (name/label/question)",
+          "terms": "disability|difficulty"
+        },
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "see|eye|hear|walk|self care|communicat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-communicationdisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No mental/functional difficulty questions found in bindable person tables.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "concentrat|remember|difficulty"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-concentrationdisorder"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No eye/seeing difficulty question found.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "eye|see|vision|glasses"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-eyedisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No hearing difficulty question found.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "hear|hearing|deaf"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-heardisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No language variable found in bindable tables.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "language"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-language"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No standalone literacy (read/write) variable found; fe030 includes 'Illiterate' as an education category but no binary literacy question.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "literacy|read|write"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-literacy"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No variable asking whether ever attended school found; only current education activity (fe010) and highest education (fe030).",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "ever attend school"
+        },
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "attend|school|ever"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-everattend"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No relationship-to-head variable found; only parent/spouse ID linkage variables exist in silc24_pr (fk220/fk230/fk240).",
+      "searches": [
+        {
+          "in": "all tables (label/question/codes)",
+          "terms": "relationship head"
+        },
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "relation|relationship"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-relationcs"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-relationcs"
+      ],
+      "reason": "Requires VAR-relationcs, which is not present in the survey tables.",
+      "status": "absent",
+      "variable": "VAR-relationharm"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No self-care difficulty question found.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "self care|wash|dress"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-selfcaredisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No walking/mobility difficulty question found.",
+      "searches": [
+        {
+          "in": "all tables (name/label/question/codes)",
+          "terms": "walk|mobility|climb"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-walkdisability"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "TUR",
+      "year": 2024
+    },
+    "country_parameters": [
+      "PARAM-DEM-MIN-MARRIAGE-AGE",
+      "PARAM-EDU-LEVEL-CROSSWALK",
+      "PARAM-EDU-MIN-EDUCATION-AGE",
+      "PARAM-GEO-GMD-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "output": {
+    "grain": [
+      "pers_id"
+    ],
+    "roster": "silc24_pr",
+    "unit_of_analysis": "individual"
+  },
+  "parameters": {
+    "PARAM-EDU-MIN-EDUCATION-AGE": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "silc24_p.fe030",
+              "silc24_p.fe010",
+              "silc24_pr.fk070",
+              "silc24_pr.fk090",
+              "silc24_p.fb100"
+            ],
+            "call": "06:t8",
+            "result_sha256": "c99a679ec8dae2f40cca38e41d1053e9a02c9c9c89c6a0c3e06231c69daeddb8",
+            "tool": "column"
+          }
+        ],
+        "text": "Education section columns show no questionnaire universe line ('asked of —') and age is in a different table, so data_onset cannot be computed here; set to 0 to avoid excluding any records (06:t8)."
+      },
+      "method": "authored",
+      "value": 0
+    }
+  },
+  "prelude": [
+    {
+      "code_ref": "MOD-IDN-hh_weight_to_person.py",
+      "id": "MOD-IDN-hh_weight_to_person",
+      "invariants": [
+        "Row count equals silc24_p row count",
+        "No missing derived household weights after merge"
+      ],
+      "keys": [
+        "pers_id"
+      ],
+      "output_table": "idn_weights",
+      "produces": [
+        "__derived.hh_weight__"
+      ],
+      "reads": [
+        "silc24_h",
+        "silc24_p"
+      ],
+      "reason": "Household weight (silc24_h.hb040) is stored at household level (hh_id), but output grain is person (pers_id); need a join from silc24_h to person records via hh_id.",
+      "writes": [
+        "idn_weights"
+      ]
+    },
+    {
+      "code_ref": "GEO-join_hh_geo_to_person.py",
+      "id": "GEO-join_hh_geo_to_person",
+      "invariants": [
+        "geo_pers has one row per pers_id"
+      ],
+      "keys": [
+        "pers_id"
+      ],
+      "output_table": "geo_pers",
+      "produces": [
+        "__derived_hb031__"
+      ],
+      "reads": [
+        "silc24_h",
+        "silc24_p"
+      ],
+      "reason": "Household geography code hb031 lives in silc24_h keyed by hh_id, while output grain is pers_id; create a person-grain table by merging household hb031 onto each person via hh_id for the geography correspondence resolution (VAR-geocode / GAUL codes).",
+      "writes": [
+        "geo_pers"
+      ]
+    },
+    {
+      "code_ref": "dem-derive_ages.py",
+      "id": "dem-derive_ages",
+      "invariants": [
+        "__derived.childmth__ in [0,59] when present",
+        "__derived.childyr__ in [0,4] when present"
+      ],
+      "produces": [
+        "__derived.age__",
+        "__derived.childyr__",
+        "__derived.childmth__"
+      ],
+      "reads": [
+        "silc24_pr"
+      ],
+      "reason": "Clean age (-1 used as a placeholder) and derive under-5 child ages in years/months from age-at-2023-12-31 and birth month.",
+      "writes": [
+        "silc24_pr"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "Regional Deflators_NUTS2",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "reference"
+        },
+        "sha256": "5ae1bd6443928fa524069b170fe895eff513e54c95a9b8f75366a35154af0baa",
+        "source_file": "Regional Deflators_NUTS2.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "silc24_h",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7e3bdfd158265c8ef51b6d4a246e9bf064324472e89cf9c4276b68efea594f12",
+        "source_file": "silc24_h.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "fb100": "numeric",
+          "fe010": "numeric",
+          "fe030": "numeric"
+        },
+        "name": "silc24_p",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "bb8203f5d582425ccb2f312a1aa93d258ec1a64351c655e89b2ce5554d98fc6a",
+        "source_file": "silc24_p.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "fk090": "numeric"
+        },
+        "name": "silc24_pr",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "e8a92806d9247b7aecf728f11c0a42c1ec4f78a5d48e1294576bf46bd4ec3b9d",
+        "source_file": "silc24_pr.dta"
+      }
+    ]
+  },
+  "survey_id": "TUR_2024_SILC-C",
+  "targets": [
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-countrycode",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-age",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-school"
+  ]
+}

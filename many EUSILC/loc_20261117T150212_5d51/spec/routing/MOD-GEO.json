@@ -1,0 +1,75 @@
+{
+  "routing": {
+    "VAR-subnatid1": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb030",
+        "why": "Household-level NUTS/Statistical Region code (Level 1) that can serve as highest subnational id"
+      }
+    ],
+    "VAR-subnatid2": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Household-level NUTS/Statistical Region code (Level 2) that can serve as second subnational id / lowest collected geography"
+      }
+    ],
+    "VAR-subnatidsurvey": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Lowest subnational id observed in the raw household file (Statistical Regions, Level 2)"
+      }
+    ],
+    "VAR-geocode": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Geocode is derived from the survey's lowest subnational id; hb031 appears to be the finest available geography code"
+      }
+    ],
+    "VAR-gauladm1code": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "GAUL admin codes are derived from VAR-geocode; hb031 is the likely input geography code for the crosswalk"
+      }
+    ],
+    "VAR-gauladm2code": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "GAUL admin codes are derived from VAR-geocode; hb031 is the likely input geography code for the crosswalk"
+      }
+    ],
+    "VAR-subnatid1prev": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Previous-period subnational id is derived from VAR-geocode; hb031 is the only plausible input geography code in this delivery"
+      }
+    ],
+    "VAR-subnatid2prev": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Previous-period subnational id is derived from VAR-geocode; hb031 is the only plausible input geography code in this delivery"
+      }
+    ],
+    "VAR-subnatid3prev": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Previous-period subnational id is derived from VAR-geocode; hb031 is the only plausible input geography code in this delivery"
+      }
+    ],
+    "VAR-subnatid4prev": [
+      {
+        "survey_module": "silc24_h",
+        "column": "hb031",
+        "why": "Previous-period subnational id is derived from VAR-geocode; hb031 is the only plausible input geography code in this delivery"
+      }
+    ]
+  },
+  "_request_id": "03-locate_sources-MOD-GEO"
+}

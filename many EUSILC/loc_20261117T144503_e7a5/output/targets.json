@@ -1,0 +1,2396 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "counts": {
+    "absent": 24,
+    "deferred": 3,
+    "produced": 19,
+    "produced_empty": 2
+  },
+  "targets": [
+    {
+      "target": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "age",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "dem-derive_ages",
+        "column": "__derived.age__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 203,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 80524,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80524,
+          "reasons": {
+            ".a": 203
+          },
+          "nonsubstantive_share": 0.002515
+        }
+      },
+      "without_value_share": 0.002515
+    },
+    {
+      "target": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Continuous age is collected (silc24_pr.fk070); no age-band variable present."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childmth",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "dem-derive_ages",
+        "column": "__derived.childmth__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 75545,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5182,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 5182,
+          "reasons": {
+            ".a": 75545
+          },
+          "nonsubstantive_share": 0.935808
+        }
+      },
+      "without_value_share": 0.935808
+    },
+    {
+      "target": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childyr",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "dem-derive_ages",
+        "column": "__derived.childyr__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 75545,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 5182,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 5182,
+          "reasons": {
+            ".a": 75545
+          },
+          "nonsubstantive_share": 0.935808
+        }
+      },
+      "without_value_share": 0.935808
+    },
+    {
+      "target": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "silc24_pr (name/label/question)",
+              "terms": "disability"
+            },
+            {
+              "in": "all tables (name/label/question)",
+              "terms": "disability|difficulty"
+            },
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "see|eye|hear|walk|self care|communicat"
+            }
+          ]
+        },
+        "text": "No disability/functioning questions found in bindable person tables (searched terms 'disability', 'difficulty', 'see', 'hear', 'walk', 'self care', 'communicat')."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "concentrat|remember|difficulty"
+            }
+          ]
+        },
+        "text": "No mental/functional difficulty questions found in bindable person tables."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat4",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe030"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 5094,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 3272,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 16854,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 2540,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "4",
+                "rows": 8964,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 8449,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 4671,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "7",
+                "rows": 3818,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "8",
+                "rows": 7224,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "9",
+                "rows": 767,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "10",
+                "rows": 193,
+                "rule": "value_map",
+                "value": 4
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat5",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe030"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 5094,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 3272,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 16854,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "3",
+                "rows": 2540,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 8964,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 8449,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "6",
+                "rows": 4671,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "7",
+                "rows": 3818,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "8",
+                "rows": 7224,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "9",
+                "rows": 767,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "10",
+                "rows": 193,
+                "rule": "value_map",
+                "value": 5
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat7",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe030"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 5094,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 3272,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 16854,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "3",
+                "rows": 2540,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 8964,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "5",
+                "rows": 8449,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "6",
+                "rows": 4671,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "7",
+                "rows": 3818,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "8",
+                "rows": 7224,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "9",
+                "rows": 767,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "10",
+                "rows": 193,
+                "rule": "value_map",
+                "value": 7
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educy",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe030"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 5094,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "1",
+                "rows": 3272,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "2",
+                "rows": 16854,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "3",
+                "rows": 2540,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "4",
+                "rows": 8964,
+                "rule": "value_map",
+                "value": 8
+              },
+              {
+                "code": "5",
+                "rows": 8449,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "6",
+                "rows": 4671,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "7",
+                "rows": 3818,
+                "rule": "value_map",
+                "value": 14
+              },
+              {
+                "code": "8",
+                "rows": 7224,
+                "rule": "value_map",
+                "value": 16
+              },
+              {
+                "code": "9",
+                "rows": 767,
+                "rule": "value_map",
+                "value": 18
+              },
+              {
+                "code": "10",
+                "rows": 193,
+                "rule": "value_map",
+                "value": 18
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "ever attend school"
+            },
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "attend|school|ever"
+            }
+          ]
+        },
+        "text": "No variable asking whether ever attended school found; only current education activity (fe010) and highest education (fe030)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "eye|see|vision|glasses"
+            }
+          ]
+        },
+        "text": "No eye/seeing difficulty question found."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "hear|hearing|deaf"
+            }
+          ]
+        },
+        "text": "No hearing difficulty question found."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "language"
+            }
+          ]
+        },
+        "text": "No language variable found in bindable tables."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "literacy|read|write"
+            }
+          ]
+        },
+        "text": "No standalone literacy (read/write) variable found; fe030 includes 'Illiterate' as an education category but no binary literacy question."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "male",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fk090"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 39553,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 41174,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 80727,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "marital",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fb100"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 40823,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 14927,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 3893,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "4",
+                "rows": 2203,
+                "rule": "value_map",
+                "value": 4
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "mineducatage",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "primarycomp",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe030",
+        "reason": {
+          "kind": "standard_not_used",
+          "params": {},
+          "text": "National education correspondence table provided in this brief does not include a primary completion output, so primary completion is mapped directly from survey highest-education categories."
+        }
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 5094,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "1",
+                "rows": 3272,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "2",
+                "rows": 16854,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "3",
+                "rows": 2540,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "4",
+                "rows": 8964,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "5",
+                "rows": 8449,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "6",
+                "rows": 4671,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "7",
+                "rows": 3818,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "8",
+                "rows": 7224,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "9",
+                "rows": 767,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "10",
+                "rows": 193,
+                "rule": "value_map",
+                "value": 1
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (label/question/codes)",
+              "terms": "relationship head"
+            },
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "relation|relationship"
+            }
+          ]
+        },
+        "text": "No relationship-to-head variable found; only parent/spouse ID linkage variables exist in silc24_pr (fk220/fk230/fk240)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-relationcs"
+          ]
+        },
+        "text": "Requires VAR-relationcs, which is not present in the survey tables."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "school",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "fe010"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 6877,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 54969,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "self care|wash|dress"
+            }
+          ]
+        },
+        "text": "No self-care difficulty question found."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (name/label/question/codes)",
+              "terms": "walk|mobility|climb"
+            }
+          ]
+        },
+        "text": "No walking/mobility difficulty question found."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm1_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "__derived_hb031__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "string",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {
+            "TR10": 5548,
+            "TR51": 3305,
+            "TRC3": 2946,
+            "TR31": 2906,
+            "TR41": 2799,
+            "TRB2": 2733,
+            "TRC2": 2598,
+            "TR42": 2518,
+            "TR62": 2507,
+            "TR33": 2462,
+            "TR83": 2436,
+            "TRA2": 2277,
+            "TR32": 2256,
+            "TRA1": 2168,
+            "TR61": 2137,
+            "TR90": 2091,
+            "TR72": 2058,
+            "TR52": 1985,
+            "TRC1": 1883,
+            "TRB1": 1793
+          },
+          "unmapped_share": 0.766113,
+          "unwaived": 0,
+          "waiver": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b).",
+          "table": {
+            "codes": [
+              {
+                "code": "TR10",
+                "rows": 5548,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR21",
+                "rows": 1737,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR22",
+                "rows": 1759,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR31",
+                "rows": 2906,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR32",
+                "rows": 2256,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR33",
+                "rows": 2462,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR41",
+                "rows": 2799,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR42",
+                "rows": 2518,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR51",
+                "rows": 3305,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR52",
+                "rows": 1985,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR61",
+                "rows": 2137,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR62",
+                "rows": 2507,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR63",
+                "rows": 1648,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR71",
+                "rows": 1784,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR72",
+                "rows": 2058,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR81",
+                "rows": 1767,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR82",
+                "rows": 1745,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR83",
+                "rows": 2436,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR90",
+                "rows": 2091,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRA1",
+                "rows": 2168,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRA2",
+                "rows": 2277,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRB1",
+                "rows": 1793,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRB2",
+                "rows": 2733,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC1",
+                "rows": 1883,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC2",
+                "rows": 2598,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC3",
+                "rows": 2946,
+                "rule": "unmapped",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 61846,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 0,
+          "reasons": {
+            ".b": 80727
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm2_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "__derived_hb031__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "string",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {
+            "TR10": 5548,
+            "TR51": 3305,
+            "TRC3": 2946,
+            "TR31": 2906,
+            "TR41": 2799,
+            "TRB2": 2733,
+            "TRC2": 2598,
+            "TR42": 2518,
+            "TR62": 2507,
+            "TR33": 2462,
+            "TR83": 2436,
+            "TRA2": 2277,
+            "TR32": 2256,
+            "TRA1": 2168,
+            "TR61": 2137,
+            "TR90": 2091,
+            "TR72": 2058,
+            "TR52": 1985,
+            "TRC1": 1883,
+            "TRB1": 1793
+          },
+          "unmapped_share": 0.766113,
+          "unwaived": 0,
+          "waiver": "Turkey geography correspondence chain does not determine GAUL codes (all categories drop); keep missing as cannot_harmonize (.b).",
+          "table": {
+            "codes": [
+              {
+                "code": "TR10",
+                "rows": 5548,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR21",
+                "rows": 1737,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR22",
+                "rows": 1759,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR31",
+                "rows": 2906,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR32",
+                "rows": 2256,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR33",
+                "rows": 2462,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR41",
+                "rows": 2799,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR42",
+                "rows": 2518,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR51",
+                "rows": 3305,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR52",
+                "rows": 1985,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR61",
+                "rows": 2137,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR62",
+                "rows": 2507,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR63",
+                "rows": 1648,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR71",
+                "rows": 1784,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR72",
+                "rows": 2058,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR81",
+                "rows": 1767,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR82",
+                "rows": 1745,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR83",
+                "rows": 2436,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TR90",
+                "rows": 2091,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRA1",
+                "rows": 2168,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRA2",
+                "rows": 2277,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRB1",
+                "rows": 1793,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRB2",
+                "rows": 2733,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC1",
+                "rows": 1883,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC2",
+                "rows": 2598,
+                "rule": "unmapped",
+                "reason": ".b"
+              },
+              {
+                "code": "TRC3",
+                "rows": 2946,
+                "rule": "unmapped",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 61846,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 0,
+          "reasons": {
+            ".b": 80727
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "geo_code",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "__derived_hb031__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "string",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "TR10",
+                "rows": 5548,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR10"
+              },
+              {
+                "code": "TR21",
+                "rows": 1737,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR21"
+              },
+              {
+                "code": "TR22",
+                "rows": 1759,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR22"
+              },
+              {
+                "code": "TR31",
+                "rows": 2906,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR31"
+              },
+              {
+                "code": "TR32",
+                "rows": 2256,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR32"
+              },
+              {
+                "code": "TR33",
+                "rows": 2462,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR33"
+              },
+              {
+                "code": "TR41",
+                "rows": 2799,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR41"
+              },
+              {
+                "code": "TR42",
+                "rows": 2518,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR42"
+              },
+              {
+                "code": "TR51",
+                "rows": 3305,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR51"
+              },
+              {
+                "code": "TR52",
+                "rows": 1985,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR52"
+              },
+              {
+                "code": "TR61",
+                "rows": 2137,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR61"
+              },
+              {
+                "code": "TR62",
+                "rows": 2507,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR62"
+              },
+              {
+                "code": "TR63",
+                "rows": 1648,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR63"
+              },
+              {
+                "code": "TR71",
+                "rows": 1784,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR71"
+              },
+              {
+                "code": "TR72",
+                "rows": 2058,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR72"
+              },
+              {
+                "code": "TR81",
+                "rows": 1767,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR81"
+              },
+              {
+                "code": "TR82",
+                "rows": 1745,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR82"
+              },
+              {
+                "code": "TR83",
+                "rows": 2436,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR83"
+              },
+              {
+                "code": "TR90",
+                "rows": 2091,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TR90"
+              },
+              {
+                "code": "TRA1",
+                "rows": 2168,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRA1"
+              },
+              {
+                "code": "TRA2",
+                "rows": 2277,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRA2"
+              },
+              {
+                "code": "TRB1",
+                "rows": 1793,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRB1"
+              },
+              {
+                "code": "TRB2",
+                "rows": 2733,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRB2"
+              },
+              {
+                "code": "TRC1",
+                "rows": 1883,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRC1"
+              },
+              {
+                "code": "TRC2",
+                "rows": 2598,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRC2"
+              },
+              {
+                "code": "TRC3",
+                "rows": 2946,
+                "rule": "value_map",
+                "value": "TUR_2021_NUTS2_TRC3"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 18881,
+          "value_map": 61846,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".c": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search tool, t2)",
+              "terms": "psu"
+            },
+            {
+              "in": "all tables (search tool, t7)",
+              "terms": "cluster|primary sampling"
+            }
+          ]
+        },
+        "text": "No PSU/cluster/sampling-unit column found in bindable tables after searches for psu/cluster/primary sampling unit."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search tool, t3)",
+              "terms": "strata|stratum"
+            },
+            {
+              "in": "name,label,question (search tool, t6)",
+              "terms": "strat"
+            }
+          ]
+        },
+        "text": "No strata/stratum/sampling-strata column found in bindable tables after searches for strata/stratum/strat*."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "deferred",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "silc24_h column card (t1)",
+              "terms": "hb030"
+            }
+          ]
+        },
+        "text": "The survey has hb030 (NUTS1) in silc24_h, but the output grain is pers_id and subnatid1 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "deferred",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "silc24_h column card (t1)",
+              "terms": "hb031"
+            }
+          ]
+        },
+        "text": "The survey has hb031 (NUTS2) in silc24_h, but the output grain is pers_id and subnatid2 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "deferred",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "silc24_h hb031 column card (t1)",
+              "terms": "hb031 representative geography"
+            }
+          ]
+        },
+        "text": "The representative-level subnational id would come from the coded hb031 column (NUTS2) with its value labels, but the output grain is pers_id and this target must bind the coded column directly (not a derived copy). It cannot be bound until the household geography can be structurally carried to the output grain."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "name,label,question,codes (search tool, t4)",
+              "terms": "urban|rural"
+            },
+            {
+              "in": "name,label,question,codes (search tool, t8)",
+              "terms": "rurality|degree of urbanisation|degurba"
+            }
+          ]
+        },
+        "text": "No urban/rural or rurality column found in bindable tables after search for urban/rural/rurality/degree of urbanisation."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "countrycode",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhid from the grain's household keys"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhidorig from the grain's household keys"
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "whole survey (search tool, t3)",
+              "terms": "month interview"
+            },
+            {
+              "in": "whole survey (search tool, t6)",
+              "terms": "date"
+            },
+            {
+              "in": "whole survey (search tool, t8)",
+              "terms": "interview date"
+            }
+          ]
+        },
+        "text": "Searched survey tables for interview month/date variables; only found unrelated 'months spent' and 'month of birth' variables; no interview month collected."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "int_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "weight",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "MOD-IDN-hh_weight_to_person",
+        "column": "__derived.hh_weight__"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 18881,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 61846,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 61846,
+          "reasons": {
+            ".a": 18881
+          },
+          "nonsubstantive_share": 0.233887
+        }
+      },
+      "without_value_share": 0.233887
+    },
+    {
+      "target": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 80727,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 80727,
+          "values": 80727,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    }
+  ]
+}

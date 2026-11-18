@@ -1,0 +1,32 @@
+{
+  "notes": [
+    {
+      "kind": "describe.skipped_no_candidates",
+      "table": "SRB__EU-SILC_v01_M_v02_A_UDB-C_H",
+      "columns": 10,
+      "state": "all_matched",
+      "instruments": [
+        {
+          "instrument": "eu-silc-2021/2022/udb/H",
+          "state": "all_matched",
+          "questions": 237
+        }
+      ],
+      "text": "`SRB__EU-SILC_v01_M_v02_A_UDB-C_H`: 10 column(s) not described — every question of its instrument(s) is matched to a column already"
+    },
+    {
+      "kind": "describe.skipped_no_candidates",
+      "table": "SRB__EU-SILC_v01_M_v02_A_UDB-C_P",
+      "columns": 8,
+      "state": "all_matched",
+      "instruments": [
+        {
+          "instrument": "eu-silc-2021/2022/udb/P",
+          "state": "all_matched",
+          "questions": 382
+        }
+      ],
+      "text": "`SRB__EU-SILC_v01_M_v02_A_UDB-C_P`: 8 column(s) not described — every question of its instrument(s) is matched to a column already"
+    }
+  ]
+}

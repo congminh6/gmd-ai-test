@@ -1,0 +1,42 @@
+{
+  "grain": {
+    "household_key": "rx030",
+    "households": "SRB__EU-SILC_v01_M_v02_A_UDB-C_H",
+    "person_key": [
+      "rx030",
+      "rb030"
+    ],
+    "roster": "SRB__EU-SILC_v01_M_v02_A_UDB-C_R"
+  },
+  "links": [],
+  "overlay_version": "0.1",
+  "survey": "",
+  "tables": {
+    "SRB__EU-SILC_v01_M_v02_A_UDB-C_D": {
+      "fields": {},
+      "key_map": {
+        "db030": "rx030"
+      }
+    },
+    "SRB__EU-SILC_v01_M_v02_A_UDB-C_H": {
+      "fields": {},
+      "key_map": {
+        "hb030": "rx030"
+      }
+    },
+    "SRB__EU-SILC_v01_M_v02_A_UDB-C_P": {
+      "fields": {},
+      "key_map": {
+        "pb030": "rb030",
+        "px030": "rx030"
+      }
+    },
+    "SRB__EU-SILC_v01_M_v02_A_UDB-C_R": {
+      "fields": {},
+      "keys": [
+        "rx030",
+        "rb030"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-LBR",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 369.7,
+ "usage": {
+  "input_token_count": 1479127,
+  "output_token_count": 29818,
+  "total_token_count": 1508945,
+  "reasoning_output_token_count": 3964
+ },
+ "tool_calls": 38,
+ "submitted": true,
+ "final_text": "Submitted `03-author_bindings-MOD-LBR` with:\n\n- Fix: `VAR-unempldurl` and `VAR-unemplduru` now gated to unemployed only via `gate_reads: [\"VAR-lstatus\"]` + `gate: {predicate: \"lstatus == 2\", else_code: \".c\"}`.\n- Added `missing_map.absent: \".c\"` to person-file (`silc24_p`) bindings to prevent NaNs when broadcasting onto the roster.\n- Included `parameters` for `PARAM-LBR-MIN-LABOR-AGE` and `PARAM-LBR-MIN-LABOR-AGE-YEAR` (both = 15, authored).\n- Included one prelude `LBR-laborincome_sum` to construct `VAR-laborincome` from `fg010+fg020+fg030+fg040`.\n- Covered all 90 scope targets with 15 bindings + 75 absences.",
+ "said": [
+  "Submitted `03-author_bindings-MOD-LBR` with:\n\n- Fix: `VAR-unempldurl` and `VAR-unemplduru` now gated to unemployed only via `gate_reads: [\"VAR-lstatus\"]` + `gate: {predicate: \"lstatus == 2\", else_code: \".c\"}`.\n- Added `missing_map.absent: \".c\"` to person-file (`silc24_p`) bindings to prevent NaNs when broadcasting onto the roster.\n- Included `parameters` for `PARAM-LBR-MIN-LABOR-AGE` and `PARAM-LBR-MIN-LABOR-AGE-YEAR` (both = 15, authored).\n- Included one prelude `LBR-laborincome_sum` to construct `VAR-laborincome` from `fg010+fg020+fg030+fg040`.\n- Covered all 90 scope targets with 15 bindings + 75 absences."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

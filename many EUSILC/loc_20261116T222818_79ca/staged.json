@@ -1,0 +1,28 @@
+{
+ "survey_id": "TUR_2024_SILC-C",
+ "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+ "paths": {
+  "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+  "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+  "ss_export": "surveys/TUR_2024_SILC-C/ss",
+  "svis": "surveys/TUR_2024_SILC-C/svis",
+  "reference": "surveys/TUR_2024_SILC-C/Reference"
+ },
+ "kind": "survey",
+ "copied": false,
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged_at": "2026-11-16T22:28:19+00:00",
+ "data": "M:/datalib/TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+ "docs": "M:/datalib/TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+ "ss_export": null,
+ "svis": [],
+ "files": [
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata/Regional Deflators_NUTS2.dta",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata/silc24_h.dta",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata/silc24_p.dta",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata/silc24_pr.dta",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc/English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc/Turkish/GYKA MVS (Kesit), 2024 kapak.jpg",
+  "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc/Turkish/GYKA MVS (Kesit), 2024 TR son.pdf"
+ ]
+}

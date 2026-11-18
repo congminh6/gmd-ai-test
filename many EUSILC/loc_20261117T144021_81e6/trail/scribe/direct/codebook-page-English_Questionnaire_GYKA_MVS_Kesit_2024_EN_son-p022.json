@@ -1,0 +1,270 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p22",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 4377,
+  "output_token_count": 1616,
+  "total_token_count": 5993,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 349,
+  "reasoning_output_token_count": 349
+ },
+ "images": 3,
+ "answer": {
+  "tables": [
+   {
+    "heading": "",
+    "header": [],
+    "rows": [
+     {
+      "cells": [
+       "HE080",
+       "Can your household afford paying for a week's annual\n(seven days) holiday away from home for all household\nmembers together or separately? (Holiday village, hotel, guest\nhouse, summer house, friend/relative house, governmental camps\nare included.)",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE090",
+       "Can your household afford to cost of meal with meat,\nchicken or fish every second day? (Vegetarian equivalent)",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE100",
+       "Can your household afford an unexpected required expense\n(approximately 1.780 Turkish Lira) and pay through its own\nresources?",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HE110",
+       "Can your household afford to keep its home adequately\nwarm?",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Material Deprivation",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "HE120",
+       "Do you renew your worn-out or old furniture (bed, couch,\ndresser, closet) ?\n(Second-hand furniture can be taken into account)\n(*: Not in need of, not want to have and other reasons)",
+       "1",
+       "1- Yes\n2- No- Finanacial difficulty\n3- No- Other reasons*"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Income",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "HG010",
+       "Annual rental value of the dwelling according to current\nmarket prices\n(Tenure status is 'owner' or 'other' i.e. HH020 ='1' or '4' )",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG020",
+       "Income received by household members aged under 15\nduring 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG030N",
+       "Children related allowances in cash received during 2023\n(TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG030A",
+       "Value of children related allowances in kind received during\n2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG040",
+       "Housing allowances received during 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG050N",
+       "Other social allowances in cash received in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG050A",
+       "Value of other social allowances in kind received in 2023\n(TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG060N",
+       "Regular allowances in cash received from other households\nor persons in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG060A",
+       "Value of regular allowances in kind received from other\nhouseholds or persons in 2023 (Excluding alimony) (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG065N",
+       "Alimonies received in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG070",
+       "Income received from rental of assets or lands in 2023\n(TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG080",
+       "Property income received in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG085",
+       "Market value of animal or vegetable products not regarded\nas an agricultural activity, produced just for own\nconsumption of household in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG090N",
+       "Regular allowances in cash paid to other households or\npersons in 2023 (Excluding alimony) (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG090A",
+       "Value of regular allowances in kind paid to other\nhouseholds or persons in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG095N",
+       "Alimonies paid in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG100",
+       "Regular taxes paid in 2023 (including tax for the dwelling,\nmotor vehicles tax and regularly paid wealth tax) (TRY)\n(Excluding income tax)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG103",
+       "Social insurance contributions paid in 2023 (TRY)",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG105",
+       "Imputed annual income for individuals not responded to the\nquestionnaire",
+       "9.2",
+       "-999999..999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "HG110",
+       "Total household disposable income (*)\n(FG010 + FG020 + FG030 + FG040 + FG070 + FG080 +\nFG085 + FG090 + FG100 + FG110 + FG120 + HG010 +\nHG020 + HG030N + HG030A + HG040 + HG050N +\nHG050A + HG060N + HG060A + HG065N + HG070 +\nHG080 + HG085 + HG105 - HG090N - HG090A - HG095N\n- HG100 - HG103)\n(*): For the negative household disposable income, 15% of the\nmedian income is taken.",
+       "9.2",
+       "0..999999.99"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

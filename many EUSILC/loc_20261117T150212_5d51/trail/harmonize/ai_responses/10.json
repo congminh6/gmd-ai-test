@@ -1,0 +1,236 @@
+{
+ "request_id": "10-author_bindings-MOD-GEO",
+ "correspondence": {
+  "geography": {
+   "column": "silc24_h.hb031",
+   "links": {
+    "TR10": "TUR-SUBNAT-01",
+    "TR21": "TUR-SUBNAT-02",
+    "TR22": "TUR-SUBNAT-03",
+    "TR31": "TUR-SUBNAT-04",
+    "TR32": "TUR-SUBNAT-05",
+    "TR33": "TUR-SUBNAT-06",
+    "TR41": "TUR-SUBNAT-07",
+    "TR42": "TUR-SUBNAT-08",
+    "TR51": "TUR-SUBNAT-09",
+    "TR52": "TUR-SUBNAT-10",
+    "TR61": "TUR-SUBNAT-11",
+    "TR62": "TUR-SUBNAT-12",
+    "TR63": "TUR-SUBNAT-13",
+    "TR71": "TUR-SUBNAT-14",
+    "TR72": "TUR-SUBNAT-15",
+    "TR81": "TUR-SUBNAT-16",
+    "TR82": "TUR-SUBNAT-17",
+    "TR83": "TUR-SUBNAT-18",
+    "TR90": "TUR-SUBNAT-19",
+    "TRA1": "TUR-SUBNAT-20",
+    "TRA2": "TUR-SUBNAT-21",
+    "TRB1": "TUR-SUBNAT-22",
+    "TRB2": "TUR-SUBNAT-23",
+    "TRC1": "TUR-SUBNAT-24",
+    "TRC2": "TUR-SUBNAT-25",
+    "TRC3": "TUR-SUBNAT-26"
+   },
+   "evidence": "hb031 Statistical Regions, Level 2 codes TR10…TRC3 with region labels (t2); national standard table in brief mapping TRxx→TUR-SUBNAT-xx (t2)"
+  }
+ },
+ "bindings": [
+  {
+   "binding_id": "B-subnatid1",
+   "target": "VAR-subnatid1",
+   "roles": {
+    "raw_value": "hb030",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "hb030 Statistical Regions, Level 1 codes TR1–TRC with labels (t2)"
+  },
+  {
+   "binding_id": "B-subnatid2",
+   "target": "VAR-subnatid2",
+   "roles": {
+    "raw_value": "hb031",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "hb031 Statistical Regions, Level 2 codes TR10–TRC3 with labels (t2)"
+  },
+  {
+   "binding_id": "B-subnatidsurvey",
+   "target": "VAR-subnatidsurvey",
+   "roles": {
+    "raw_value": "hb031",
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Survey provides Statistical Regions Level 2 (hb031) as finest geography available; routed as lowest collected geography (t2)"
+  },
+  {
+   "binding_id": "B-geocode",
+   "target": "VAR-geocode",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Geography correspondence on hb031 Statistical Regions, Level 2 (t2) linked to TUR national subnational categories (brief table)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-psu",
+   "kind": "searched_not_found",
+   "reason": "Searched silc24_h table and whole survey for PSU/cluster/sampling unit variables; none found.",
+   "searches": [
+    {
+     "terms": "psu|cluster",
+     "in": "silc24_h (t3) and whole survey labels/questions (t14)"
+    },
+    {
+     "terms": "psu",
+     "in": "silc24_h module (t6)"
+    },
+    {
+     "terms": "cluster",
+     "in": "silc24_h module (t7)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-strata",
+   "kind": "searched_not_found",
+   "reason": "Searched silc24_h table and whole survey for strata/stratum variables; none found (only unrelated 'registration status' contains 'strat').",
+   "searches": [
+    {
+     "terms": "strata|stratum",
+     "in": "silc24_h (t4) and module (t9)"
+    },
+    {
+     "terms": "strat (regex)",
+     "in": "whole survey (t13)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-urban",
+   "kind": "searched_not_found",
+   "reason": "Searched whole survey for urban/rural residence variable; no such column found. 'kır' match is within place name Kırklareli in hb031 labels, not a rurality indicator.",
+   "searches": [
+    {
+     "terms": "urban|rural",
+     "in": "silc24_h (t5) and whole survey (t8)"
+    },
+    {
+     "terms": "kent|kır|koy|urban|rural (regex)",
+     "in": "whole survey (t12)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3",
+   "kind": "not_collected_by_design",
+   "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected.",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4",
+   "kind": "not_collected_by_design",
+   "reason": "Survey household file provides Statistical Regions levels 1 and 2 only (hb030, hb031); no finer administrative levels are collected.",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-gauladm1code",
+   "kind": "derivable_not_built",
+   "reason": "gaul_adm1_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-gauladm2code",
+   "kind": "derivable_not_built",
+   "reason": "gaul_adm2_code requires resolving GAUL codes from VAR-geocode via GAUL geo_source in the crosswalk or an external GAUL database match; this derivation is not implemented in bindings for this survey module.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid1prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid1prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid2prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid2prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic (current vs prior period) based on VAR-geocode; not implemented here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid3prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid3prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid3 level; not implemented here.",
+   "needs": [
+    "VAR-geocode",
+    "VAR-subnatid3"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid4prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid4prev requires effective-dated PARAM-GEO-GMD-CROSSWALK logic and a collected subnatid4 level; not implemented here.",
+   "needs": [
+    "VAR-geocode",
+    "VAR-subnatid4"
+   ],
+   "status": "deferred"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "survey_id": "SRB_2025_EU-SILC",
+ "source": "local:N:\\datalib_eurostat | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+ "paths": {
+  "data": "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized",
+  "docs": "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Doc",
+  "ss_export": "surveys/SRB_2025_EU-SILC/ss",
+  "svis": "surveys/SRB_2025_EU-SILC/svis",
+  "reference": "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_GMD/Data/Harmonized"
+ },
+ "kind": "survey",
+ "copied": false,
+ "data_version": "SRB_2025_EU-SILC_v01_M_v01_A_UDB-C",
+ "staged_at": "2026-11-16T14:14:36+00:00",
+ "data": "N:/datalib_eurostat/SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized",
+ "docs": null,
+ "ss_export": null,
+ "svis": [],
+ "files": [
+  "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C_D.dta",
+  "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C_H.dta",
+  "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C_P.dta",
+  "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C/Data/Harmonized/SRB_2025_EU-SILC_v01_M_v01_A_UDB-C_R.dta",
+  "SRB/SRB_2025_EU-SILC/SRB_2025_EU-SILC_v01_M_v01_A_GMD/Data/Harmonized/SRB_2025_EU-SILC_v01_M_v01_A_GMD_ALL.dta"
+ ]
+}

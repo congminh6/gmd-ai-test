@@ -1,0 +1,372 @@
+{
+ "job_id": "loc_20261117T150212_5d51",
+ "flow": "harmonize",
+ "survey_id": "TUR_2024_SILC-C",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "TUR_2024_SILC-C",
+  "country": "TUR",
+  "year": 2024,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "reference": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03/Data/Harmonized/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03_GMD.dta"
+  },
+  "input_job": "loc_20261117T144329_c96d",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "profile",
+    "act": "approve",
+    "by": "zs",
+    "at": "2026-11-17T15:02:12+00:00",
+    "note": "end-to-end run asked of Claude Code by the user; profile read by the agent, not in the app",
+    "binds": {
+     "manifest_sha256": "344afc85137c242bf05d7ba460a4930b50a4bb99f38339e7e375307874987647",
+     "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+    }
+   }
+  ],
+  "extra": {
+   "modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-UTL",
+    "MOD-WLF"
+   ]
+  }
+ },
+ "status": "completed",
+ "started": "2026-11-17T15:02:12+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T150212_5d51",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261117T144329_c96d",
+  "flow": "profile",
+  "status": "completed",
+  "manifest_sha256": "344afc85137c242bf05d7ba460a4930b50a4bb99f38339e7e375307874987647",
+  "files": 10,
+  "partial": false
+ },
+ "updated": "2026-11-17T15:34:56+00:00",
+ "staged_now": true,
+ "data_version": "TUR_2024_SILC-C_v01_M",
+ "staged": {
+  "source": "local:M:\\datalib | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 8,
+  "paths": {
+   "data": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Data/Stata",
+   "docs": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc",
+   "ss_export": "surveys/TUR_2024_SILC-C/ss",
+   "svis": "surveys/TUR_2024_SILC-C/svis",
+   "reference": "TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03/Data/Harmonized/TUR_2024_SILC-C_v01_M_v01_A_ECAPOV-03_GMD.dta"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile 61058aa179ff approved by zs at 2026-11-17T15:02:15+00:00)",
+  "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+  "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+  "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+  "B.modules": "ok(7 module(s) in the canon)",
+  "B.bind-standard": "ok(EU-SILC eu-silc-2021: 0 binding(s) copied, 11 absence(s), 21 left to the author)",
+  "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+  "B.locate-sources": "ok(all 7 modules)",
+  "B.author-bindings": "ok(all modules)",
+  "B.review-prelude": "ok(5 prelude(s) read, 1 concern(s), 1 advisory)",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "locate_sources",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 21,
+   "usage": {
+    "input_token_count": 95122,
+    "output_token_count": 1993,
+    "total_token_count": 97115,
+    "reasoning_output_token_count": 734
+   },
+   "reasoning_effort": "low",
+   "seconds": 41.7
+  },
+  {
+   "request": "02",
+   "task": "locate_sources",
+   "scope": "MOD-DWL",
+   "submitted": true,
+   "tool_calls": 13,
+   "usage": {
+    "input_token_count": 150715,
+    "output_token_count": 2159,
+    "total_token_count": 152874,
+    "reasoning_output_token_count": 873
+   },
+   "reasoning_effort": "low",
+   "seconds": 43.5
+  },
+  {
+   "request": "03",
+   "task": "locate_sources",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 59819,
+    "output_token_count": 1190,
+    "total_token_count": 61009,
+    "reasoning_output_token_count": 410
+   },
+   "reasoning_effort": "low",
+   "seconds": 25.6
+  },
+  {
+   "request": "04",
+   "task": "locate_sources",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 15,
+   "usage": {
+    "input_token_count": 81331,
+    "output_token_count": 1633,
+    "total_token_count": 82964,
+    "reasoning_output_token_count": 776
+   },
+   "reasoning_effort": "low",
+   "seconds": 47.6
+  },
+  {
+   "request": "05",
+   "task": "locate_sources",
+   "scope": "MOD-LBR",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 216704,
+    "output_token_count": 4101,
+    "total_token_count": 220805,
+    "reasoning_output_token_count": 1724
+   },
+   "reasoning_effort": "low",
+   "seconds": 82.2
+  },
+  {
+   "request": "06",
+   "task": "locate_sources",
+   "scope": "MOD-UTL",
+   "submitted": true,
+   "tool_calls": 5,
+   "usage": {
+    "input_token_count": 120591,
+    "output_token_count": 1891,
+    "total_token_count": 122482,
+    "reasoning_output_token_count": 1107
+   },
+   "reasoning_effort": "low",
+   "seconds": 48.3
+  },
+  {
+   "request": "07",
+   "task": "locate_sources",
+   "scope": "MOD-WLF",
+   "submitted": true,
+   "tool_calls": 6,
+   "usage": {
+    "input_token_count": 111059,
+    "output_token_count": 1979,
+    "total_token_count": 113038,
+    "reasoning_output_token_count": 1178
+   },
+   "reasoning_effort": "low",
+   "seconds": 49.2
+  },
+  {
+   "request": "08",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 23,
+   "usage": {
+    "input_token_count": 542691,
+    "output_token_count": 20432,
+    "total_token_count": 563123,
+    "reasoning_output_token_count": 4383
+   },
+   "reasoning_effort": "low",
+   "seconds": 256.9
+  },
+  {
+   "request": "09",
+   "task": "author_bindings",
+   "scope": "MOD-DWL",
+   "submitted": true,
+   "tool_calls": 12,
+   "usage": {
+    "input_token_count": 230728,
+    "output_token_count": 13939,
+    "total_token_count": 244667,
+    "reasoning_output_token_count": 1667
+   },
+   "reasoning_effort": "low",
+   "seconds": 177.8
+  },
+  {
+   "request": "10",
+   "task": "author_bindings",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 20,
+   "usage": {
+    "input_token_count": 300228,
+    "output_token_count": 8188,
+    "total_token_count": 308416,
+    "reasoning_output_token_count": 2653
+   },
+   "reasoning_effort": "low",
+   "seconds": 147.8
+  },
+  {
+   "request": "11",
+   "task": "author_bindings",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 9,
+   "usage": {
+    "input_token_count": 137568,
+    "output_token_count": 3300,
+    "total_token_count": 140868,
+    "reasoning_output_token_count": 1229
+   },
+   "reasoning_effort": "low",
+   "seconds": 87.9
+  },
+  {
+   "request": "12",
+   "task": "author_bindings",
+   "scope": "MOD-LBR",
+   "submitted": true,
+   "tool_calls": 49,
+   "usage": {
+    "input_token_count": 744354,
+    "output_token_count": 37839,
+    "total_token_count": 782193,
+    "reasoning_output_token_count": 4640
+   },
+   "reasoning_effort": "low",
+   "seconds": 450.9
+  },
+  {
+   "request": "13",
+   "task": "author_bindings",
+   "scope": "MOD-UTL",
+   "submitted": true,
+   "tool_calls": 12,
+   "usage": {
+    "input_token_count": 186004,
+    "output_token_count": 13821,
+    "total_token_count": 199825,
+    "reasoning_output_token_count": 1221
+   },
+   "reasoning_effort": "low",
+   "seconds": 182.4
+  },
+  {
+   "request": "14",
+   "task": "author_bindings",
+   "scope": "MOD-WLF",
+   "submitted": true,
+   "tool_calls": 16,
+   "usage": {
+    "input_token_count": 169294,
+    "output_token_count": 5992,
+    "total_token_count": 175286,
+    "reasoning_output_token_count": 1838
+   },
+   "reasoning_effort": "low",
+   "seconds": 140.6
+  },
+  {
+   "request": "15",
+   "task": "review_prelude",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 5,
+   "usage": {
+    "input_token_count": 35867,
+    "output_token_count": 1279,
+    "total_token_count": 37146,
+    "reasoning_output_token_count": 758
+   },
+   "reasoning_effort": "low",
+   "seconds": 31.4
+  }
+ ],
+ "total_tokens": 3301811,
+ "log_tail": [
+  "        resolved: B-rooms: unit_keys ['hh_id'] (from data_scan)",
+  "        resolved: B-tv: unit_keys ['hh_id'] (from data_scan)",
+  "        resolved: B-washmach: unit_keys ['hh_id'] (from data_scan)",
+  "        resolved: B-contract: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-empstat: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-industrycat10: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-industrycat4: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-laborincome: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-lstatus: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-occup: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-ocusec: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-socialsec: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-unempldur_l: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-unempldur_u: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-whours: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-wmonths: unit_keys ['pers_id'] (from data_scan)",
+  "        resolved: B-hsize: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfare: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfarenom: unit_keys ['hh_id'] (from prelude)",
+  "        resolved: B-welfshprosperity: unit_keys ['hh_id'] (from prelude)",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-17T15:33:31+00:00); coverage bound 68, documented 209",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran",
+  "  [det] hspec-run",
+  "      PASS — 80727 rows, 68 target(s); contract clean. Outputs in C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T150212_5d51\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261117T150212_5d51\\output\\quality.json: 68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared",
+  "  CHECK F: ok — 68 targets; 17/207 checks flagged; 161520 universe cells; median agreement 1.0 on 35 shared",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete ==",
+  "",
+  ">> 1 target(s) failed in the last run, but their determination has changed since: whether the change fixed them is known after the next run — re-run the same command: VAR-phone"
+ ],
+ "finished": "2026-11-17T15:34:56+00:00"
+}

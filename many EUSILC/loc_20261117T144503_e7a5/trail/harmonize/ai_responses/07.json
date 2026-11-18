@@ -1,0 +1,21 @@
+{
+ "request_id": "07-review_prelude-survey",
+ "reviews": [
+  {
+   "id": "MOD-IDN-hh_weight_to_person",
+   "verdict": "ok",
+   "reason": ""
+  },
+  {
+   "id": "GEO-join_hh_geo_to_person",
+   "verdict": "concern",
+   "reason": "Produces column named \"__derived_hb031__\" (underscore) rather than the standard derived-column naming convention \"__derived.<name>__\" used elsewhere (e.g., __derived.hh_weight__, __derived.age__). This mismatch is likely to break bindings expecting a dot-namespaced derived column (e.g., __derived.hb031__) or to create inconsistent downstream references."
+  },
+  {
+   "id": "dem-derive_ages",
+   "verdict": "ok",
+   "reason": ""
+  }
+ ],
+ "notes": "Potential improvement (not a blocker): consider adding the same hh_id uniqueness guard (drop_duplicates) in MOD-IDN-hh_weight_to_person as used in GEO-join_hh_geo_to_person, if hh_id is not guaranteed unique in silc24_h."
+}

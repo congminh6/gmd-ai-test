@@ -1,0 +1,27 @@
+{
+ "request_id": "15-review_prelude-survey",
+ "reviews": [
+  {
+   "id": "dem-childmth",
+   "verdict": "ok"
+  },
+  {
+   "id": "MOD-DWL-phone_any",
+   "verdict": "concern",
+   "reason": "Logic does not match the stated intent to “preserve missingness if either source is missing”: it sets NaN only when BOTH hh150 and hh160 are missing, but returns 0 when one is missing and the other is not yes. Also uses .astype('float') which can raise if the column contains non-numeric sentinels/strings; pd.to_numeric(errors='coerce') would be safer."
+  },
+  {
+   "id": "MOD-DWL-rooms_num",
+   "verdict": "ok"
+  },
+  {
+   "id": "LBR-laborincome_sum",
+   "verdict": "ok"
+  },
+  {
+   "id": "wlf-hhsize_welfare_pc",
+   "verdict": "ok"
+  }
+ ],
+ "notes": "Only identified issue is MOD-DWL-phone_any missingness handling vs comment/intent; others appear safe and consistent with stated produces/placement rules (t2#authored)."
+}

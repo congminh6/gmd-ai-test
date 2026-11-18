@@ -1,0 +1,284 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p24",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 5501,
+  "output_token_count": 1586,
+  "total_token_count": 7087,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 93,
+  "reasoning_output_token_count": 93
+ },
+ "images": 4,
+ "answer": {
+  "tables": [
+   {
+    "heading": "3. Structure of Data Set, Personal, 2024 (Cross-sectional data)\n(Persons aged 15 and above)\n(SILC24_P)",
+    "header": [
+     "Name of the variable",
+     "Explanation",
+     "Length",
+     "Labels"
+    ],
+    "rows": [
+     {
+      "cells": [
+       "HH_ID",
+       "Household ID",
+       "5",
+       "1...27401"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "PERS_ID",
+       "Personal ID (Household ID + Personal number/line number)",
+       "7",
+       ""
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FB010",
+       "Year of the survey",
+       "4",
+       "2024"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FB030",
+       "Personal weight",
+       "4",
+       "Format 4.7"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FB100",
+       "Marital status",
+       "1",
+       "1- Married\n2- Never married\n3- Widowed\n4- Divorced"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FB110",
+       "Legal marriage status\n[FB100=”1”, “5”]",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Education",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FE010",
+       "Current education activity",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FE020",
+       "Education level currently attended\n[FE010=”1”]",
+       "1",
+       "1- Primary school\n2- Secondary and vocational secondary school\n3- High school\n4- Vocational or technical high school\n5- 2 or 3 year higher education\n6- Faculty\n7- Master\n8- Doctorate"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FE025",
+       "Whether this school/education level attended by the\nhousehold member is open education",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FE030",
+       "Highest education level attained  (Highest level successfully\ncompleted with a diploma or certificate)",
+       "1",
+       "0- Illiterate\n1- Literate but not a graduate\n2- Primary school\n3- Primary education\n4- Secondary and vocational secondary school\n5- High school\n6- Vocational or technical high school\n7- 2 or 3 year higher education\n8- Faculty\n9- Master\n10- Doctorate"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FE040",
+       "Year when highest level of education attained\n[FE030 =”2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “10”]",
+       "4",
+       "1900..2024"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FE045",
+       "Whether this school/education level completed by the\nhousehold member is open education",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Health",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FS010",
+       "General health status",
+       "1",
+       "1- Very good\n2- Good\n3- Fair\n4- Bad\n5- Very bad"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS020",
+       "Suffer from any a chronic (long-standing) illness or\ncondition  (Diabetes, hypertension, asthma, renal failure, rheumatic\ndiseases, etc.)",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS030",
+       "Limitation in daily activities because of any physical or\npsychological health problems ongoing for at least 6\nmonths",
+       "1",
+       "1- Yes, strongly limited\n2- Yes, limited\n3- No, not limited"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS050",
+       "Unmet need for medical examination or treatment during\nthe last 12 months",
+       "1",
+       "1- Yes, there was at least one occasion when the person really needed examination or treatment\nbut did not receive it\n2- No, the person applied whenever needed\n3- No, the person didn't need it"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS060",
+       "Main reason for unmet need for medical examination or\ntreatment\n[FS050=”1”]",
+       "1",
+       "1- Financial difficulty / Could not afford to (too expensive or not covered by insurance fund)\n2- Could not take time because of work, care for children or for others\n3- Too far to travel to healthcare organization/no means of transportation\n4- Fear of surgical operation / treatment\n5- Giving too late time for appointment\n6- Wanted to wait and see if problem got better on its own\n7- Didn't know any good doctor or specialist\n8- Other"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS070",
+       "Unmet need for dental examination or treatment during the\nlast 12 months",
+       "1",
+       "1- Yes, at least one occasion\n2- No, not at all\n3- No, not needed"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FS080",
+       "Main reason for unmet need for dental examination or\ntreatment\n[FS070=”1”]",
+       "1",
+       "1- Financial difficulty / Could not afford to (too expensive or not covered by insurance fund)\n2- Could not take time because of work, care for children or for others\n3- Too far to travel to healthcare organization/no means of transportation\n4- Fear of surgical operation / treatment\n5- Giving too late time for appointment\n6- Wanted to wait and see if problem got better on its own\n7- Didn't know any good doctor or specialist\n8- Other"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Material Deprivation",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FY020",
+       "Can you replace worn-out clothes by some new (not second-\nhand) ones?",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FY030",
+       "Do you have two pairs of shoes in a good condition that are\nsuitable for daily activites?",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FY050",
+       "Get-together with friends/family (relatives) for a drink/meal\nat least once a month",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FY060",
+       "Do you regularly participate in a leisure activity (that costs\nmoney) such as sports, cinema, concerts?",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FY070",
+       "Do you spend a small amount of money most weeks on\nyourself, for your own pleasure (buying/doing something for\nyourself)?",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FY080",
+       "Internet connection for personal use at home  (The internet\naccess can be via smartphone (e.g. BlackBerry/iPhone), other\nwireless handheld device (tablet, etc …), video games console,\nlaptop, desktop computer, TV etc.",
+       "1",
+       "1- Yes\n2- No - cannot afford it\n3- No - other reason"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

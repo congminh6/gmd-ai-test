@@ -1,0 +1,77 @@
+{
+ "job_id": "loc_20261116T142848_1b64",
+ "flow": "profile",
+ "survey_id": "SRB_2022_EU-SILC",
+ "status": "completed",
+ "finished": "2026-11-16T14:29:00+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "f0aa304bfc4e4b077791dde6136e2c8584d80423e08ba3db9c7041cdff020435",
+   "size": 6004
+  },
+  "profile/data_scan.json": {
+   "sha256": "58559b08da6e1538a1350f080f3d16d66176538a5ef08138a4c1f83da49c2983",
+   "size": 992567
+  },
+  "profile/file_links.json": {
+   "sha256": "91de33e42de7c6f2e1c59a66ccaed3c3efa61d4d859b45fde1751be66ec855dc",
+   "size": 388
+  },
+  "profile/key_checks.json": {
+   "sha256": "8b39595eac0d6efc08436c157b1710ee822859256a3c51ae1e07a308ad7a6b89",
+   "size": 1596
+  },
+  "profile/overlay.json": {
+   "sha256": "e40712a720f5cf6f738c9e8a75dae8aafa99d4b1715bc9980df1fa9e0f433c9f",
+   "size": 844
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2022__udb__D.svis.json": {
+   "sha256": "358dc7ddc030349365eb1e244f4b5d9334f3fc18b7f0ba1fa9d44a638180f62e",
+   "size": 28756
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2022__udb__H.svis.json": {
+   "sha256": "41bf69999ed45be76cfc95bb57cf63adbc1907bde1daa618732c1eec9daba6aa",
+   "size": 332046
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2022__udb__P.svis.json": {
+   "sha256": "b52be2f0679e803554e66b4b0a8ef11dbaf1fff6f45077995f2d1a1ccf978a75",
+   "size": 619969
+  },
+  "profile/questionnaire/standard__eu-silc-2021__2022__udb__R.svis.json": {
+   "sha256": "8c2ccba46f3aefbd3b6e1d019410b46421ca8be5e525ff34ff97d4e4ed69118e",
+   "size": 266463
+  },
+  "profile/standard.json": {
+   "sha256": "a829bf31cecb86ba939e3d2c3104d36a006d49bcf5fd87806f982e0d3e668e33",
+   "size": 88580
+  },
+  "staged.json": {
+   "sha256": "f051191999466fc25504b5108a33f9370b9a9f8c9c89f3ce20bc037790239548",
+   "size": 1241
+  },
+  "trail/profile/ai_calls/01_author_overlay.brief.md": {
+   "sha256": "5bc099662241e720876374504d53fa926cb7f6a34d1eb6e4b8918d9a77c40750",
+   "size": 15192
+  },
+  "trail/profile/ai_calls/01_author_overlay.json": {
+   "sha256": "8e674ba5970fea41b826878d1ab6caac7a774b86ad8e48b1f416dc534574b42e",
+   "size": 621
+  },
+  "trail/profile/describe_skipped.json": {
+   "sha256": "ef05e7aa688ea30975845e45c34abcc735804f200e614d4fd8b10ddaf3fb57e3",
+   "size": 1004
+  },
+  "trail/profile/identity.json": {
+   "sha256": "3fd2b4501f8a8da179925b82d9e1cb08d7d712515972e671742e23d222a9f43f",
+   "size": 437
+  },
+  "trail/profile/log.txt": {
+   "sha256": "025978a82a1633176fa34e247792e6a3ef8ef3a97efe6153421d7b7395efbef0",
+   "size": 2868
+  },
+  "trail/profile/state.json": {
+   "sha256": "793c29390ff9fbeedbae7f11632189e7ace7885f6c145068d814c6786ef24642",
+   "size": 1135
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-LBR",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 450.9,
+ "usage": {
+  "input_token_count": 744354,
+  "output_token_count": 37839,
+  "total_token_count": 782193,
+  "reasoning_output_token_count": 4640
+ },
+ "tool_calls": 49,
+ "submitted": true,
+ "final_text": "Submitted `12-author_bindings-MOD-LBR` with:\n\n- Parameters authored:\n  - `PARAM-LBR-MIN-LABOR-AGE = 15`\n  - `PARAM-LBR-MIN-LABOR-AGE-YEAR = 15`\n- 1 prelude (`LBR-laborincome_sum`) producing `__derived.laborincome__`\n- 15 bindings (including `lstatus`, `empstat`, `occup`, `industrycat10/4`, `ocusec`, `socialsec`, `contract`, `whours`, `wmonths`, `unempldur_l/u`, `laborincome`, and the two `minlaborage*` carriers)\n- 75 documented absences\n- Added `missing_map.absent` where needed so person-roster rows missing from `silc24_p` map to `.c`",
+ "said": [
+  "Submitted `12-author_bindings-MOD-LBR` with:\n\n- Parameters authored:\n  - `PARAM-LBR-MIN-LABOR-AGE = 15`\n  - `PARAM-LBR-MIN-LABOR-AGE-YEAR = 15`\n- 1 prelude (`LBR-laborincome_sum`) producing `__derived.laborincome__`\n- 15 bindings (including `lstatus`, `empstat`, `occup`, `industrycat10/4`, `ocusec`, `socialsec`, `contract`, `whours`, `wmonths`, `unempldur_l/u`, `laborincome`, and the two `minlaborage*` carriers)\n- 75 documented absences\n- Added `missing_map.absent` where needed so person-roster rows missing from `silc24_p` map to `.c`"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\12.jsonl"
+}

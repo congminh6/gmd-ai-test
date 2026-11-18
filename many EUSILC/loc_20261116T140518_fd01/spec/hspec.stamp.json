@@ -1,0 +1,1618 @@
+{
+  "spec_sha256": "2f0677721d15d6c5e36d39a4bcc62ae4e0a6cd1214bef7fde6820819d3158d53",
+  "validator_version": "2",
+  "validated_at": "2026-11-16T14:05:38+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "5ad00145cbd0d49cf37521ab1268c4f5cd3b84dd50d1bf1ca9333f23ddf06e88",
+      "overlay": "6b218c4914cb18e09f89fdd0ac919dbd688fd447bab019ebeace07c2706e7029",
+      "key_checks": "89cf4814f66ae7fed2c7a1cb372ebf0dde6af68339fde5eb82f4c22992b9464b",
+      "questionnaire:standard__eu-silc-2021__2025__udb__D.svis.json": "1cbe4cc0ab5a6c7e7c1789736462e9d9d93c210c3297ae3881782f0ef158aae9",
+      "questionnaire:standard__eu-silc-2021__2025__udb__H.svis.json": "abf868ca6a5f5690faf7b0a2da81c1ac2915e063f59c9468d316d381c7dd5368",
+      "questionnaire:standard__eu-silc-2021__2025__udb__P.svis.json": "e54bc2ae8d3ff09c62eb17200c9b53ea778db675f4daf3db2dc4e40fe6f77eed",
+      "questionnaire:standard__eu-silc-2021__2025__udb__R.svis.json": "e52aba0611f1375a0b4b1e9c5ed928727d4142d27c8d281597a9bbc7834fea6e"
+    },
+    "profile_sha": "d30a7f859b77811fc3819748d7b607fba67c4e3879b0ba85622557f21fc0f4aa"
+  },
+  "grounded": true,
+  "content_sha256": "fdd9f27584b10dae0fb5183d77107708b26e43e696397556e121a467b1386a38",
+  "canon": "0.1.0+b47b1569",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "blocked",
+      "status": "blocked",
+      "reason": "left out by the flow (not_reasked): $.bindings[29] (B-everattend) target=VAR-everattend col=pe041: code(s) [1, 2, 3, 4, 5, 6, 7, 8] are declared or observed but not handled \u2014 map them, route them in missing_map, or waive them (missing_map.unmapped: {code, waive: <why>})"
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "no language item in Part II (the person variables cover birth country RB280, citizenship RB290) (DOCSILC065 2021 op. v8: RB280 p.261, RB290 p.265)"
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "no literacy variable in the standard: Part II has no item on reading or writing ability (the education variables are PE010, PE021, PE041) (DOCSILC065 2021 op. v8: PE010 p.310, PE041 p.315)"
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) \u2014 reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)"
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no relationship-to-head item: the household grid RG_1 gives each member's relation to the FIRST person of the grid, who is not declared the head (the quality check finds no household head in any household, and a value in a tenth of the rows) \u2014 reviewed by hand 2026-11-11 after the 2025 round (27 deliveries)"
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "PH030 'Limitation in activities because of health problems' (GALI) is the standard's only functioning item; there are no Washington Group domain items (seeing, hearing, walking, remembering, self-care, communicating) (DOCSILC065 2021 op. v8: PH030 p.323)"
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-ac",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No air conditioner item among EU-SILC household durable item variables; searched survey for air conditioner/AC and reviewed household H table HS items list. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-acquihouse",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "EU-SILC H table includes tenure status but no acquisition mode (purchased/inherited/other) for house. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-acquiland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land ownership/acquisition questions in provided EU-SILC tables; search for acquisition/purchased/inherited and land yielded only income/tax mentions. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-agriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "EU-SILC instrument does not include agricultural land use/ownership modules in provided tables. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-agrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land ownership document type variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areaagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areadocuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land documentation/area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areaownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No owned agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areainheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No inherited agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areapurchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No purchased agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-arearentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rented-in agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-arearentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rented-out agricultural land area variables in survey. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-areaspace",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-bath",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-bcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No bicycle ownership variable found; search bicycle/bike returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-boat",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No boat ownership variable found; search boat returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-canoe",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No canoe ownership variable found; search canoe returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-car",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-cellphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No cell/mobile phone ownership variable found in tables; searches for cellphone/mobile/cell/telephone found no ownership item. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-computer",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-docuagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No documented agricultural land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-doculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land legal document variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-dwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No dwelling legal title variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-dwelownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No dwelling legal document type variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-dweltyp",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-etablet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electronic tablet ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ewpump",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electric water pump ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-fan",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No electric fan ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-femagrilandownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sex-disaggregated agricultural land ownership variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-femdoculand",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sex-disaggregated residential land documentation variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-femdwelownlti",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sex-disaggregated dwelling title variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-floor",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No floor material variable found; search floor returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-floorcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No country-specific floor material text variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-fridge",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No refrigerator/fridge ownership variable found; search refrigerator/fridge returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-inheragriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No inherited agricultural land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-internet",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Only personal internet connection at home (pd080) is available and does not distinguish in-house vs outside access per DWL definition; no household internet access variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-kitchen",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No separate-kitchen indicator found; only hh030 definition mentions kitchens as room types. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-landownti",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land ownership document type variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-landphone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No landline phone ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-mcycle",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No motorcycle ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ownagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No agricultural land ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ownhouse",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-ownland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No residential land ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-oxcart",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No oxcart ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-phone",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No telephone ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-purchagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No purchased agricultural land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-radio",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No radio ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-rentinagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rent-in agricultural land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-rentoutagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rent-out agricultural land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ricecook",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rice cooker ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-roof",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No roof material variable found; search roof returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-roofcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No country-specific roof material text variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-rooms",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-sellagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rights to sell agricultural land variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-selldwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No right to sell dwelling variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-sellland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No right to sell residential land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-sewmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sewing machine ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-stove",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No stove ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-transagriland",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No rights to transfer agricultural land variables found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-transdwel",
+      "module": "MOD-DWL",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No right to transfer dwelling variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-transland",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No right to transfer residential land variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-tv",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No TV ownership variable found; search tv returned none relevant (only mentioned in pd080 text). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-tvcable",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No cable TV ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-typlivqrt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No type of living quarters variable beyond dwelling type (hh010) found that matches GMD typlivqrt 3-category. \u2014 authored on POL_2023_EU-SILC"
+    },
+    {
+      "variable": "VAR-video",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No video player ownership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wall",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wall material variable found; search wall returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wallcs",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No country-specific wall material text variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-washmach",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No washing machine ownership variable found; search washing returned none. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ybuilt",
+      "module": "MOD-DWL",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No year dwelling built variable found; search year built/construction returned only weights construction references. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "DB040 'Region of residence' is the standard's one region variable and it is bound to VAR-subnatid1 (the UDB releases it at NUTS 1 or 2): no second level and no previous-classification code is delivered \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "HB050 'Month of household interview' is grouped into quarters in the UDB (disclosure control rules, 1. General rules: grouping / recoding): a month cannot be stated"
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-contract",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-contractyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-empstat",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-empstat2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-empstat2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL040B 'Status in employment (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-empstatyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-firmsizel",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size / number of employees variable found in P table searches. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizel2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (secondary job). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizel2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (12-month ref, secondary). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizelyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (12-month ref). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizeu",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizeu2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (secondary job). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizeu2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (12-month ref, secondary). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-firmsizeuyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No firm size variable found (12-month ref). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-healthins",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No health insurance coverage indicator found in P table. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-healthinsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No health insurance coverage indicator found in P table. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industryorig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-industryorig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-industryorig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL111B 'Economic activity of the local unit (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-industryorigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-industrycat10",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat102",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat102year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections (pl111b) but not GMD industrycat10; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat10year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections (pl111a) but not GMD industrycat10; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat4",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-industrycat42",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat42year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-industrycat4year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey collects NACE sections but not 4-cat industry; mapping not authored. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-laborincome",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-lincnc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard's employee income (PY010G / PY010N) includes bonuses and is not split from them: the wage income excluding bonuses cannot be given (PY010N is the NET amount, another distinction) \u2014 reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+    },
+    {
+      "variable": "VAR-lstatus",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-lstatusyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-minlaborage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-minlaborageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-njobs",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No number of jobs variable identified in P table searches. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-nlfreason",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-nlfreasonyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Could be derived from pl032 inactive categories, but not built. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-occup",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-occup2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-occup2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051b) but no 1-digit occupation variable; derivation not built. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-occuporig",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-occuporig2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-occuporig2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no secondary-job item for it: PL051B 'Occupation (last job)' describes the LAST job of a person with previous work experience, not a second job held now (the quality check found its values outside the canon's universe in most rows) \u2014 reviewed by hand 2026-11-11 (the author's re-ask did not fix it)"
+    },
+    {
+      "variable": "VAR-occuporigyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-occupyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey provides ISCO-08 code (pl051a) but no 1-digit occupation variable; derivation not built. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ocusec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-ocusec2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sector of activity variable found (secondary). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ocusec2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No sector of activity variable found (secondary, year). \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-ocusecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-socialsec",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No personal social security coverage indicator found in P table. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-socialsecyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No personal social security coverage indicator found in P table. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-thoursannual",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Monthly activity calendar variables (pl211*) exist but do not provide hours; derivation not built. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-thoursothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second \u2014 reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+    },
+    {
+      "variable": "VAR-thoursothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "PL100 is the hours usually worked in the second and further jobs together and is bound to VAR-whours2; the standard has no separate hours for jobs beyond the second \u2014 reviewed by hand 2026-11-12, each binding read against its variable's label and the canon's definition"
+    },
+    {
+      "variable": "VAR-thourstotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-thourstotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "unaccounted"
+    },
+    {
+      "variable": "VAR-twagencothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage components for other jobs collected. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twagencothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage components for other jobs collected. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twagencotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Requires last wage amount and unit variables which are not collected. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twagencototalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Requires last wage amount and unit variables which are not collected. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twageothers",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Depends on twagencothers not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twageothersyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Depends on twagencothersyear not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Depends on twagencotal not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-twagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Depends on twagencototalyear not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-unempldurl",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unempldurlyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unemplduru",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unemplduruyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-union",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No trade union membership variable found; only consensual union flag present. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-unionyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No trade union membership variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-unitwage",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-unitwage2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage payment unit variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-unitwage2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage payment unit variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-unitwageyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No wage payment unit variable found. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagenc",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-wagenc2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No last wage payment amount variable present. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagenc2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No last wage payment amount variable present. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagencyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No last wage payment amount variable present. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagetotal",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-wagetotal2",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Would require wagenc2 + unitwage2 + months/hours; not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagetotal2year",
+      "module": "MOD-LBR",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Would require wagenc2year + unitwage2year + months/hours; not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-wagetotalyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Would require wagencyear + unitwageyear + months/hours; not available. \u2014 authored on AUT_2024_EU-SILC"
+    },
+    {
+      "variable": "VAR-whours",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-whours2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-whours2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-whoursyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-wmonths",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-wmonths2",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths \u2014 reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs"
+    },
+    {
+      "variable": "VAR-wmonths2year",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard has no months worked in a second job: PL074 is the months of PART-TIME work as an employee, one of the four calendar columns now summed into VAR-wmonths \u2014 reviewed by hand 2026-11-12, after the earlier harmonization's script was read against the 2024 outputs"
+    },
+    {
+      "variable": "VAR-wmonthsyear",
+      "module": "MOD-LBR",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hsize",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfare",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfaredef",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) \u2014 reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+    },
+    {
+      "variable": "VAR-welfarenom",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) \u2014 reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+    },
+    {
+      "variable": "VAR-welfareother",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) \u2014 reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+    },
+    {
+      "variable": "VAR-welfareothertype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) \u2014 reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+    },
+    {
+      "variable": "VAR-welfaretype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-welfshprosperity",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the standard carries one disposable household income (HY020), bound per capita to VAR-welfare; the author read this target from the household total or the equivalised income (HY020, HY022, HX090), which is another concept (the round finds the deflated and the nominal aggregate identical) \u2014 reviewed by hand 2026-11-11 after the 2024 and 2025 rounds"
+    },
+    {
+      "variable": "VAR-welfshprtype",
+      "module": "MOD-WLF",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-DWL",
+    "MOD-GEO",
+    "MOD-IDN",
+    "MOD-LBR",
+    "MOD-WLF"
+  ],
+  "coverage_declared": false,
+  "tier_counts": {
+    "1": {
+      "bound": 68,
+      "unaccounted": 10,
+      "blocked": 1,
+      "documented": 79
+    },
+    "2": {
+      "documented": 58
+    }
+  },
+  "blocked": [
+    "VAR-everattend"
+  ]
+}

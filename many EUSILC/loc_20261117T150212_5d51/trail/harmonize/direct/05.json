@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-LBR",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 82.2,
+ "usage": {
+  "input_token_count": 216704,
+  "output_token_count": 4101,
+  "total_token_count": 220805,
+  "reasoning_output_token_count": 1724
+ },
+ "tool_calls": 7,
+ "submitted": true,
+ "final_text": "Submitted `05-locate_sources-MOD-LBR` routing under `routing:` with candidate survey modules/columns for labor status, NLF reason, main-job employment status/contract/occupation/industry/sector/social security, hours, months, unemployment duration, and annual income components.",
+ "said": [
+  "Submitted `05-locate_sources-MOD-LBR` routing under `routing:` with candidate survey modules/columns for labor status, NLF reason, main-job employment status/contract/occupation/industry/sector/social security, hours, months, unemployment duration, and annual income components."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\05.jsonl"
+}

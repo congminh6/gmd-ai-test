@@ -1,0 +1,17 @@
+{
+  "file_links": {
+    "CZE__EU-SILC_v01_M_v01_A_UDB-C_D": [
+      "eu-silc-2021/2025/udb/D"
+    ],
+    "CZE__EU-SILC_v01_M_v01_A_UDB-C_H": [
+      "eu-silc-2021/2025/udb/H"
+    ],
+    "CZE__EU-SILC_v01_M_v01_A_UDB-C_P": [
+      "eu-silc-2021/2025/udb/P"
+    ],
+    "CZE__EU-SILC_v01_M_v01_A_UDB-C_R": [
+      "eu-silc-2021/2025/udb/R"
+    ]
+  },
+  "unassociated": {}
+}

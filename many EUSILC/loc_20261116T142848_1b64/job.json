@@ -1,0 +1,115 @@
+{
+ "job_id": "loc_20261116T142848_1b64",
+ "flow": "profile",
+ "survey_id": "SRB_2022_EU-SILC",
+ "spec": {
+  "flow": "profile",
+  "survey_id": "SRB_2022_EU-SILC",
+  "country": "SRB",
+  "year": 2022,
+  "model": false,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "SRB/SRB_2022_EU-SILC/SRB_2022_EU-SILC_v01_M_v02_A_UDB-C/Data/Harmonized",
+   "docs": "SRB/SRB_2022_EU-SILC/SRB_2022_EU-SILC_v01_M_v02_A_UDB-C/Doc"
+  },
+  "input_job": "loc_20261116T142827_2506",
+  "partial": false,
+  "signoff": [],
+  "extra": {
+   "standard": "eu_silc@udb"
+  }
+ },
+ "status": "completed",
+ "started": "2026-11-16T14:28:48+00:00",
+ "run_dir": "C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T142848_1b64",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+b47b1569"
+ ],
+ "input": {
+  "job_id": "loc_20261116T142827_2506",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "95cae35de9e4e6ef69bd3f8303e3219e3ef5772ede0d34a0b783999e07d3fc6c",
+  "files": 2,
+  "partial": false
+ },
+ "updated": "2026-11-16T14:29:00+00:00",
+ "data_version": "SRB_2022_EU-SILC_v01_M_v02_A_UDB-C",
+ "staged": {
+  "source": "local:N:\\datalib_eurostat | jobs local:C:\\Users\\wb249563\\.harmon\\library",
+  "files": 4,
+  "paths": {
+   "data": "SRB/SRB_2022_EU-SILC/SRB_2022_EU-SILC_v01_M_v02_A_UDB-C/Data/Harmonized",
+   "docs": "SRB/SRB_2022_EU-SILC/SRB_2022_EU-SILC_v01_M_v02_A_UDB-C/Doc",
+   "ss_export": "surveys/SRB_2022_EU-SILC/ss",
+   "svis": "surveys/SRB_2022_EU-SILC/svis",
+   "reference": "surveys/SRB_2022_EU-SILC/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "A.from-intake": "ok(profile\\data_scan.json)",
+  "A.questionnaire": "ok(0 questionnaire scan(s); no documents recorded)",
+  "A.conformance": "ok(EU-SILC eu-silc-2021: 4 of 4 datasets, 442 of 450 variables named by the standard; 6 extra column(s); 4 with undeclared codes (by year; 11 file(s) written))",
+  "A.merge": "skipped(done)",
+  "A.prefill-file-links": "ok(4 table(s) associated by structure; 0 left)",
+  "A.associate": "ok(skipped - every data table is associated by structure or determined unassociated)",
+  "A.describe": "ok(skipped - no column without a question is left in a table with candidate questions; 2 table(s) not asked, no candidate questions (SRB__EU-SILC_v01_M_v02_A_UDB-C_H: all_matched, SRB__EU-SILC_v01_M_v02_A_UDB-C_P: all_matched))",
+  "A.author-overlay": "skipped(optional: no_model: not_implemented)",
+  "A.heal": "ok(off (--heal 0))",
+  "A.check-keys": "ok(1 key(s), 1 grain key(s), 4 key correspondence(s) checked -> profile\\key_checks.json)",
+  "A.check": "ok"
+ },
+ "stopped_at": null,
+ "unanswered": [
+  {
+   "step": "A.author-overlay",
+   "why": "no_model: not_implemented"
+  }
+ ],
+ "log_tail": [
+  "# profile SRB_2022_EU-SILC @ 2026-11-16T14:28:48+00:00",
+  "  data=\\\\wurepliprdfs05\\ecafile\\eca_databank\\datalib_eurostat\\SRB\\SRB_2022_EU-SILC\\SRB_2022_EU-SILC_v01_M_v02_A_UDB-C\\Data\\Harmonized  modules=[]  direct=False",
+  "  identity: survey-harmonization local (testing — no sync stamp); canon none; data SRB_2022_EU-SILC_v01_M_v02_A_UDB-C",
+  "",
+  "== Phase A — profile ==",
+  "  [det] from-intake",
+  "  [det] questionnaire",
+  "  [det] conformance",
+  "      D: SRB__EU-SILC_v01_M_v02_A_UDB-C_D — 12 of 12 variables (100%), 0 extra column(s)",
+  "      H: SRB__EU-SILC_v01_M_v02_A_UDB-C_H — 152 of 152 variables (100%), 4 extra column(s)",
+  "      R: SRB__EU-SILC_v01_M_v02_A_UDB-C_R — 56 of 64 variables (88%), 0 extra column(s)",
+  "      P: SRB__EU-SILC_v01_M_v02_A_UDB-C_P — 222 of 222 variables (100%), 2 extra column(s)",
+  "      undeclared codes in 4 variable(s): PH080, PH090, PH100, PS050",
+  "  [skip] merge — profile\\overlay.json exists",
+  "  [det] prefill-file-links",
+  "    4 table(s) associated by structure; 0 left for judgment",
+  "  [judge] associate",
+  "  [judge] describe",
+  "    describe: skipped [describe.skipped_no_candidates] `SRB__EU-SILC_v01_M_v02_A_UDB-C_H`: 10 column(s) not described — every question of its instrument(s) is matched to a column already",
+  "    describe: skipped [describe.skipped_no_candidates] `SRB__EU-SILC_v01_M_v02_A_UDB-C_P`: 8 column(s) not described — every question of its instrument(s) is matched to a column already",
+  "  [judge] author-overlay",
+  "    AI CALL [author_overlay / survey] → trail\\profile\\ai_calls\\01_author_overlay.brief.md",
+  "    (optional judgment skipped: not_implemented)",
+  "  [judge] heal",
+  "  [det] check-keys",
+  "      SRB__EU-SILC_v01_M_v02_A_UDB-C_R: rx030, rb030 -> unique over 15398 rows",
+  "      grain (person) SRB__EU-SILC_v01_M_v02_A_UDB-C_R: rx030, rb030 -> unique over 15398 rows",
+  "      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_D.db030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)",
+  "      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_H.hb030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)",
+  "      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_P.pb030 -> rb030: 100% of 13423 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)",
+  "      key_map SRB__EU-SILC_v01_M_v02_A_UDB-C_P.px030 -> rx030: 100% of 5037 value(s) found in SRB__EU-SILC_v01_M_v02_A_UDB-C_R (holds)",
+  "  CHECK A: ok — profile recorded (profile d71984d42419) — review it and approve (the review app's profile review, or `harmon signoff C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T142848_1b64`)",
+  "",
+  "== all phases complete ==",
+  "  profile complete (profile d71984d42419). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\\Users\\wb249563\\.harmon\\work\\runs\\loc_20261116T142848_1b64` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop."
+ ],
+ "finished": "2026-11-16T14:29:00+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "steps": {
+    "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+    "A.questionnaire": "ok(3 questionnaire scan(s) -> profile\\questionnaire)",
+    "A.conformance": "ok(EU-SILC eu-silc-2021: 0 of 4 datasets, 0 of 338 variables named by the standard; 0 extra column(s) (by year; 1 file(s) written))",
+    "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 4 still-missing (grain=4); orphan questions: 0; code conflicts: 3)",
+    "A.prefill-file-links": "ok(3 table(s) associated by structure; 1 left)",
+    "A.associate": "ok(0 table(s) associated by judgment, 1 unassociated, 3 associated in all -> profile\\file_links.json)",
+    "A.describe": "ok(skipped - no column without a question is left in a table with candidate questions; 1 table(s) not asked, no candidate questions (Regional Deflators_NUTS2: no_instrument))",
+    "A.author-overlay": "ok(author_overlay: 4 tables, grain; re-merged)",
+    "A.heal": "ok(off (--heal 0))",
+    "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+    "A.check": "ok"
+  },
+  "updated": "2026-11-17T14:44:22+00:00"
+}

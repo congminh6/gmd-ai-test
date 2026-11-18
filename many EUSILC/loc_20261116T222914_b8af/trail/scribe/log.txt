@@ -1,0 +1,8 @@
+2026-11-16T22:29:25+00:00 3 document(s) under 'TUR/TUR_2024_SILC-C/TUR_2024_SILC-C_v01_M/Doc'; model on; deployment gpt-5.2
+2026-11-16T22:29:30+00:00 classifying 2 document(s)
+2026-11-16T22:29:48+00:00 English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf: report (English) — The sample contains publication front matter, a table of contents, and methodological/definition prose (e.g., equivalence scale, income distribution concepts) rather than interview questions or variable-by-variable listings.
+2026-11-16T22:29:48+00:00 Turkish/GYKA MVS (Kesit), 2024 TR son.pdf: report (Turkish) — The sample is mainly a microdata publication/user guide with sections like metadata (purpose, scope, method) and conceptual definitions, not a variable-by-variable listing of the data file or a questionnaire form.
+2026-11-16T22:29:48+00:00 English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf: not read: a report, not a questionnaire
+2026-11-16T22:29:48+00:00 Turkish/GYKA MVS (Kesit), 2024 kapak.jpg: skipped: image: a jpeg image: no reader takes images
+2026-11-16T22:29:48+00:00 Turkish/GYKA MVS (Kesit), 2024 TR son.pdf: not read: a report, not a questionnaire
+2026-11-16T22:29:48+00:00 done: 0 of 3 document(s) produced

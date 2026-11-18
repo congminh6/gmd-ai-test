@@ -1,0 +1,76 @@
+{
+ "request_id": "02-locate_sources-MOD-GEO",
+ "routing": {
+  "VAR-subnatid1": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb030",
+    "why": "Household-level NUTS statistical region Level 1 code (TR1..TRC), plausible highest available subnational id."
+   }
+  ],
+  "VAR-subnatid2": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Household-level NUTS statistical region Level 2 code (TR10..TRC3), plausible second-level subnational id."
+   }
+  ],
+  "VAR-subnatidsurvey": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Lowest geographic identifier observed in the household file is NUTS Level 2 (26 categories)."
+   }
+  ],
+  "VAR-geocode": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Geocode is derived from the survey's lowest subnational identifier; hb031 (NUTS2) is the lowest geographic code present."
+   }
+  ],
+  "VAR-gauladm1code": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "GAUL admin codes are derived from resolved geocode; closest geography source is hb031 (NUTS2), which would feed the crosswalk."
+   }
+  ],
+  "VAR-gauladm2code": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "GAUL admin codes are derived from resolved geocode; closest geography source is hb031 (NUTS2), which would feed the crosswalk."
+   }
+  ],
+  "VAR-subnatid1prev": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Previous subnational IDs are derived from geocode; any derivation would start from the survey geography source hb031 (NUTS2)."
+   }
+  ],
+  "VAR-subnatid2prev": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Previous subnational IDs are derived from geocode; any derivation would start from the survey geography source hb031 (NUTS2)."
+   }
+  ],
+  "VAR-subnatid3prev": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Previous subnational IDs are derived from geocode; any derivation would start from the survey geography source hb031 (NUTS2)."
+   }
+  ],
+  "VAR-subnatid4prev": [
+   {
+    "survey_module": "## silc24_h",
+    "column": "silc24_h.hb031",
+    "why": "Previous subnational IDs are derived from geocode; any derivation would start from the survey geography source hb031 (NUTS2)."
+   }
+  ]
+ },
+ "notes": "No columns found mentioning urban/rural, PSU, strata, or finer subnational levels beyond NUTS1/2 in bindable tables (searches: urban/rural, psu/cluster, strata)."
+}

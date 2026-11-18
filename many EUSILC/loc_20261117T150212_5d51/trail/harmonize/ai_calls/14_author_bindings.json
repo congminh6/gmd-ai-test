@@ -1,0 +1,37 @@
+{
+  "task_type": "author_bindings",
+  "scope_id": "MOD-WLF",
+  "scope_ids": [
+    "VAR-hsize",
+    "VAR-welfare",
+    "VAR-welfaredef",
+    "VAR-welfarenom",
+    "VAR-welfareother",
+    "VAR-welfareothertype",
+    "VAR-welfaretype",
+    "VAR-welfshprosperity",
+    "VAR-welfshprtype"
+  ],
+  "data": "\\\\wbgfscifs01\\GPWG-GMD\\datalib-ECA\\datalib\\TUR\\TUR_2024_SILC-C\\TUR_2024_SILC-C_v01_M\\Data\\Stata",
+  "prior_findings": [],
+  "request_id": "14-author_bindings-MOD-WLF",
+  "tools": [
+    "canon",
+    "check",
+    "codes",
+    "column",
+    "columns",
+    "contract",
+    "current",
+    "onset",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "4ffef39d7f35a78ab2df93ae22dae22d2b5b2e92dabf63775e3287058bedad24",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

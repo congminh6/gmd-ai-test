@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-WLF",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 96.7,
+ "usage": {
+  "input_token_count": 141895,
+  "output_token_count": 5630,
+  "total_token_count": 147525,
+  "reasoning_output_token_count": 668
+ },
+ "tool_calls": 8,
+ "submitted": true,
+ "final_text": "Done — submitted `04-author_bindings-MOD-WLF` with the fix.\n\n- Updated prelude `wlf-hhsize_welfare_pc` to count `hsize` from `silc24_pr` (full person register, all ages) instead of `silc24_p` (15+).\n- `welfare`, `welfarenom`, and `welfshprosperity` now use the corrected per-capita denominator.\n- Kept `welfaredef`, `welfareother`, `welfareothertype` as `absent` (not collected / not bindable).",
+ "said": [
+  "Done — submitted `04-author_bindings-MOD-WLF` with the fix.\n\n- Updated prelude `wlf-hhsize_welfare_pc` to count `hsize` from `silc24_pr` (full person register, all ages) instead of `silc24_p` (15+).\n- `welfare`, `welfarenom`, and `welfshprosperity` now use the corrected per-capita denominator.\n- Kept `welfaredef`, `welfareother`, `welfareothertype` as `absent` (not collected / not bindable)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\04.jsonl"
+}

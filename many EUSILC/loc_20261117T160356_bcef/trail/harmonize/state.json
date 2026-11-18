@@ -1,0 +1,25 @@
+{
+  "survey_id": "TUR_2024_SILC-C",
+  "steps": {
+    "B.handoff": "ok(profile 61058aa179ff approved by zs at 2026-11-17T15:02:15+00:00)",
+    "B.scaffold-header": "skipped(done)",
+    "B.pin-source-inventory": "ok(source_inventory unchanged)",
+    "B.pin-grain": "ok(output unchanged)",
+    "B.modules": "ok(7 module(s) in the canon)",
+    "B.bind-standard": "ok(EU-SILC eu-silc-2021: 0 binding(s) copied, 9 absence(s), 4 left to the author, 19 authored binding(s) kept)",
+    "B.pin-engine-ids": "ok(unchanged (4 id target(s)))",
+    "B.locate-sources": "ok(all modules)",
+    "B.author-bindings": "ok(all modules)",
+    "B.review-prelude": "ok(6 prelude(s) read, 2 concern(s), 2 advisory)",
+    "B.check": "ok",
+    "E.stamp": "ok(validate clean)",
+    "E.lock": "ok(\u2192 run.lock.json)",
+    "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+    "E.check": "ok",
+    "F.quality": "ok(68 targets; 14/207 checks flagged; 44031 universe cells; no reference)",
+    "F.check": "ok",
+    "G.lock": "ok(\u2192 run.lock.json)",
+    "G.check": "ok"
+  },
+  "updated": "2026-11-17T16:18:48+00:00"
+}

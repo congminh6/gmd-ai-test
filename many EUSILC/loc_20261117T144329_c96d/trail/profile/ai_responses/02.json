@@ -1,0 +1,50 @@
+{
+ "request_id": "02-author_overlay-survey",
+ "grain": {
+  "household_key": "hh_id",
+  "person_key": [
+   "pers_id"
+  ],
+  "roster": "silc24_pr",
+  "weight": "silc24_h.hb040"
+ },
+ "tables": [
+  {
+   "table": "silc24_h",
+   "verdict": "raw",
+   "evidence": [
+    "t4#placement",
+    "t1"
+   ]
+  },
+  {
+   "table": "silc24_p",
+   "verdict": "raw",
+   "evidence": [
+    "t4#placement",
+    "t1"
+   ]
+  },
+  {
+   "table": "silc24_pr",
+   "verdict": "raw",
+   "evidence": [
+    "t4#placement",
+    "t1"
+   ]
+  },
+  {
+   "table": "Regional Deflators_NUTS2",
+   "verdict": "reference",
+   "key_map": {
+    "NUTS2": "hb031"
+   },
+   "evidence": [
+    "t1",
+    "t4#placement",
+    "t5#placement"
+   ]
+  }
+ ],
+ "notes": "Grain keys set so hh_id/pers_id now align with silc24_h/silc24_pr scan PKs; Regional deflators keyed by NUTS2 mapped to household HB031 (NUTS2 level 2)."
+}

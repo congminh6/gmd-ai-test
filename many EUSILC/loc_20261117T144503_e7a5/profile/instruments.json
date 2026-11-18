@@ -1,0 +1,248 @@
+{
+  "by_route": {
+    "image": 1,
+    "pdf_mixed": 1,
+    "pdf_text": 1
+  },
+  "files": [
+    {
+      "classification": {
+        "also": "report",
+        "by": "model gpt-5.2",
+        "evidence": "Appendix\n1. Structure of Household Data Set",
+        "kind": "codebook",
+        "language": "English",
+        "reason": "The sample includes a “Data Guide” and appendix “Structure of … Data Set” pages listing variable names with lengths/labels and code meanings, alongside some methodological/metadata prose.",
+        "sample": "pages 1, 2, 3, 14, 20 of 26: 6000 characters, image(s) of page 20"
+      },
+      "detail": "14 text / 1 ocr / 0 empty of 15 sampled page(s); 2353 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "extraction": {
+        "by": "codebook/image",
+        "coverage": {
+          "check": [
+            {
+              "code_lists_unchecked": 0,
+              "codes_not_observed": {
+                "HB050": [
+                  "2",
+                  "5"
+                ],
+                "HH145": [
+                  "3"
+                ]
+              },
+              "columns_without_entry": [],
+              "entries": 69,
+              "entries_without_column": [],
+              "heading": "(SILC24_H)",
+              "table": "silc24_h"
+            },
+            {
+              "code_lists_unchecked": 0,
+              "codes_not_observed": {},
+              "columns_without_entry": [],
+              "entries": 13,
+              "entries_without_column": [],
+              "heading": "(SILC24_PR)",
+              "table": "silc24_pr"
+            },
+            {
+              "code_lists_unchecked": 0,
+              "codes_not_observed": {},
+              "columns_without_entry": [],
+              "entries": 65,
+              "entries_without_column": [],
+              "heading": "(SILC24_P)",
+              "table": "silc24_p"
+            }
+          ],
+          "datasets": [
+            {
+              "entries": 69,
+              "heading": "(SILC24_H)",
+              "how": "heading",
+              "table": "silc24_h",
+              "unparsed": [
+                "HB010"
+              ]
+            },
+            {
+              "entries": 13,
+              "heading": "(SILC24_PR)",
+              "how": "heading",
+              "table": "silc24_pr",
+              "unparsed": [
+                "FK010",
+                "FK220",
+                "FK230",
+                "FK240"
+              ]
+            },
+            {
+              "entries": 65,
+              "heading": "(SILC24_P)",
+              "how": "heading",
+              "table": "silc24_p",
+              "unparsed": [
+                "FB010"
+              ]
+            }
+          ],
+          "entries": 147,
+          "in_a_dataset": 147,
+          "pages": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "pages_with_a_table": [
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "scans": [
+            "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json",
+            "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json",
+            "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json"
+          ],
+          "tables": [
+            {
+              "accepted": true,
+              "block": "p20-t1",
+              "entries": 14,
+              "heading": "(SILC24_H)",
+              "share": 1.0,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p21-t1",
+              "entries": 30,
+              "heading": "(SILC24_H)",
+              "share": 1.0,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p22-t1",
+              "entries": 25,
+              "heading": "(SILC24_H)",
+              "share": 0.962,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p23-t1",
+              "entries": 13,
+              "heading": "(SILC24_PR)",
+              "share": 1.0,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p24-t1",
+              "entries": 25,
+              "heading": "(SILC24_P)",
+              "share": 0.926,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p25-t1",
+              "entries": 13,
+              "heading": "(SILC24_P)",
+              "share": 0.929,
+              "why": "header row"
+            },
+            {
+              "accepted": true,
+              "block": "p26-t1",
+              "entries": 27,
+              "heading": "(SILC24_P)",
+              "share": 1.0,
+              "why": "header row"
+            }
+          ],
+          "unparsed": 6
+        },
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "svis": "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json",
+        "total_units": 7,
+        "unit": "page"
+      },
+      "format": "pdf",
+      "n_pages": 26,
+      "ocr_page_index": [
+        2
+      ],
+      "ocr_pages": 1,
+      "pages_sampled": 15,
+      "path": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 3550504,
+      "text_chars_per_page": 2353,
+      "text_pages": 14,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "detail": "a jpeg image: no reader takes images",
+      "ext": "jpg",
+      "extractable": false,
+      "format": "jpeg",
+      "ocr_page_index": [],
+      "path": "Turkish/GYKA MVS (Kesit), 2024 kapak.jpg",
+      "route": "image",
+      "size_bytes": 396616
+    },
+    {
+      "classification": {
+        "also": "report",
+        "by": "model gpt-5.2",
+        "evidence": "\"Ek 1. Hane Veri Seti Yapısı\"",
+        "kind": "codebook",
+        "language": "Turkish",
+        "reason": "Sample includes dataset/record structure tables listing variable names with descriptions and coded values, alongside methodological/metadata prose sections.",
+        "sample": "pages 1, 2, 3, 14, 20 of 26: 4837 characters, image(s) of page 20"
+      },
+      "detail": "15 text / 0 ocr / 0 empty of 15 sampled page(s); 2268 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "lower priority: the folder holds an English document of this kind, which is read; this one is in another language (`all_languages: true` reads it too)"
+      },
+      "format": "pdf",
+      "n_pages": 26,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "Turkish/GYKA MVS (Kesit), 2024 TR son.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 3643622,
+      "text_chars_per_page": 2268,
+      "text_pages": 15,
+      "tool": "pymupdf"
+    }
+  ],
+  "n_files": 3,
+  "root": "M:\\datalib\\TUR\\TUR_2024_SILC-C\\TUR_2024_SILC-C_v01_M\\Doc",
+  "skipped_extensions": {}
+}

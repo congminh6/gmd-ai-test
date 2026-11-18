@@ -1,0 +1,9 @@
+{
+  "survey_id": "SRB_2022_EU-SILC",
+  "steps": {
+    "I.scan-data": "ok(4 table(s) -> profile\\data_scan.json \u00b7 data SRB_2022_EU-SILC_v01_M_v02_A_UDB-C)",
+    "I.scan-docs": "ok(skipped (no doc folder))",
+    "I.check": "ok"
+  },
+  "updated": "2026-11-16T14:28:36+00:00"
+}

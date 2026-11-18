@@ -1,0 +1,82 @@
+{
+  "routing": {
+    "VAR-age": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Direct age in years (Age on December 31, 2023) at person roster level"
+      }
+    ],
+    "VAR-agecat": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Continuous age available; can be categorized into age groups for agecat"
+      }
+    ],
+    "VAR-childmth": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Child age in months can be derived for under-5s from continuous age in years"
+      }
+    ],
+    "VAR-childyr": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk070",
+        "why": "Child age in years for under-5s can be derived from continuous age"
+      }
+    ],
+    "VAR-male": [
+      {
+        "survey_module": "## silc24_pr",
+        "column": "fk090",
+        "why": "Gender with Male/Female codes at person roster level"
+      }
+    ],
+    "VAR-marital": [
+      {
+        "survey_module": "## silc24_p",
+        "column": "fb100",
+        "why": "Marital status coded categorical for persons"
+      }
+    ],
+    "VAR-school": [
+      {
+        "survey_module": "## Education",
+        "column": "fe010",
+        "why": "Current education activity Yes/No indicates current enrolment"
+      }
+    ],
+    "VAR-educat4": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Highest education level attained (diploma/certificate) with detailed categories"
+      }
+    ],
+    "VAR-educat5": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Highest education level attained provides the basis for collapsing to 5-category scheme"
+      }
+    ],
+    "VAR-educat7": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Highest education level attained provides the basis for collapsing to 7-category scheme"
+      }
+    ],
+    "VAR-primarycomp": [
+      {
+        "survey_module": "## Education",
+        "column": "fe030",
+        "why": "Highest level attained includes primary-school categories, usable to infer primary completion"
+      }
+    ]
+  },
+  "_request_id": "03-locate_sources-MOD-DEM"
+}

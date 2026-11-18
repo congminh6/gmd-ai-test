@@ -1,0 +1,380 @@
+{
+  "spec_sha256": "190c935d216e53f1c2031ab68db684e059b818b9a32aa1a367c882ee92bfec16",
+  "validator_version": "2",
+  "validated_at": "2026-11-17T14:57:42+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+      "overlay": "db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269",
+      "key_checks": "bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+      "questionnaire:English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb"
+    },
+    "profile_sha": "61058aa179ffe80105746100ae83d7f35f49bb37613f046f3bbb1194606c674f"
+  },
+  "grounded": true,
+  "content_sha256": "87fcabef553123233e8b3c3352722132d01249f52fd61d8b30923c6b289f3ef4",
+  "canon": "0.1.0+b47b1569",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Continuous age is collected (silc24_pr.fk070); no age-band variable present."
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability/functioning questions found in bindable person tables (searched terms 'disability', 'difficulty', 'see', 'hear', 'walk', 'self care', 'communicat')."
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No mental/functional difficulty questions found in bindable person tables."
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable asking whether ever attended school found; only current education activity (fe010) and highest education (fe030)."
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No eye/seeing difficulty question found."
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No hearing difficulty question found."
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No language variable found in bindable tables."
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No standalone literacy (read/write) variable found; fe030 includes 'Illiterate' as an education category but no binary literacy question."
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No relationship-to-head variable found; only parent/spouse ID linkage variables exist in silc24_pr (fk220/fk230/fk240)."
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Requires VAR-relationcs, which is not present in the survey tables."
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No self-care difficulty question found."
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No walking/mobility difficulty question found."
+    },
+    {
+      "variable": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No PSU/cluster/sampling-unit column found in bindable tables after searches for psu/cluster/primary sampling unit."
+    },
+    {
+      "variable": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No strata/stratum/sampling-strata column found in bindable tables after searches for strata/stratum/strat*."
+    },
+    {
+      "variable": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "The survey has hb030 (NUTS1) in silc24_h, but the output grain is pers_id and subnatid1 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run."
+    },
+    {
+      "variable": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+    },
+    {
+      "variable": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "The survey has hb031 (NUTS2) in silc24_h, but the output grain is pers_id and subnatid2 must bind a coded column with value labels (engine writes '<code> - <label>'); without Phase-A structural support to broadcast household geography to person output, this target cannot be bound in this run."
+    },
+    {
+      "variable": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+    },
+    {
+      "variable": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected."
+    },
+    {
+      "variable": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+    },
+    {
+      "variable": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Only NUTS Level 1 (hb030) and Level 2 (hb031) geography identifiers appear in the household file; no finer subnational level is collected."
+    },
+    {
+      "variable": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Previous-boundary subnatid variables are defined as derived from the resolved geocode, but this module does not yet implement prior-boundary resolution from the geography crosswalk."
+    },
+    {
+      "variable": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "The representative-level subnational id would come from the coded hb031 column (NUTS2) with its value labels, but the output grain is pers_id and this target must bind the coded column directly (not a derived copy). It cannot be bound until the household geography can be structurally carried to the output grain."
+    },
+    {
+      "variable": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No urban/rural or rurality column found in bindable tables after search for urban/rural/rurality/degree of urbanisation."
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhid from the grain's household keys"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "the output grain ['pers_id'] (individual) names no household: the engine builds VAR-hhidorig from the grain's household keys"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched survey tables for interview month/date variables; only found unrelated 'months spent' and 'month of birth' variables; no interview month collected."
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "coverage_declared": true,
+  "tier_counts": {
+    "1": {
+      "bound": 21,
+      "documented": 20
+    },
+    "2": {
+      "documented": 7
+    }
+  },
+  "blocked": []
+}

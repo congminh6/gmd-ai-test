@@ -1,0 +1,101 @@
+{
+ "request_id": "11-author_bindings-MOD-IDN",
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "countrycode sourced from run survey identity (ISO3); broadcast from household file grain (t6#Constant)"
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "survey start year sourced from run survey identity; hb010 shows Year of the survey constant 2024 (t2)"
+  },
+  {
+   "binding_id": "B-intyear",
+   "target": "VAR-intyear",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ],
+    "raw_value": "hb010"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "no interview-date/month fields observed; use Year of the survey (HB010) as proxy for interview year (t2, t5)"
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "silc24_h",
+   "roles": {
+    "unit_keys": [
+     "hh_id"
+    ],
+    "raw_value": "hb040"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "household sampling weight HB040 (Household weight), numeric non-missing (t2)"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-intmonth",
+   "kind": "not_collected_by_design",
+   "reason": "No household interview month/date variable found in silc24_h, silc24_p, or silc24_pr; searches for interview/month/date only found Year of the survey (HB010/FB010/FK010) and unrelated 'month' items (e.g., month of birth FK075).",
+   "searches": [
+    {
+     "terms": "month interview date fieldwork",
+     "in": "all tables (name/label/question) (t5)"
+    },
+    {
+     "terms": "month interview date int fieldwork hb011 hb012 hb013 hb014 hb015 hb016 hb017 hb020 hb030 hb070 hb080 hb090",
+     "in": "table silc24_h (name/label/question) (t3)"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

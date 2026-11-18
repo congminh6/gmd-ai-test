@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 25.6,
+ "usage": {
+  "input_token_count": 59819,
+  "output_token_count": 1190,
+  "total_token_count": 61009,
+  "reasoning_output_token_count": 410
+ },
+ "tool_calls": 8,
+ "submitted": true,
+ "final_text": "Submitted `03-locate_sources-MOD-GEO` routing under `routing:` (candidates mainly `silc24_h.hb030` / `silc24_h.hb031`; no visible PSU/strata/urban or finer admin levels).",
+ "said": [
+  "Submitted `03-locate_sources-MOD-GEO` routing under `routing:` (candidates mainly `silc24_h.hb030` / `silc24_h.hb031`; no visible PSU/strata/urban or finer admin levels)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

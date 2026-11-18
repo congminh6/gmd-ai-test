@@ -1,0 +1,171 @@
+{
+ "task_type": "read-codebook-page",
+ "scope_id": "English/Questionnaire/GYKA MVS (Kesit), 2024 EN son.pdf#p25",
+ "submitted": true,
+ "usage": {
+  "input_token_count": 4377,
+  "output_token_count": 1370,
+  "total_token_count": 5747,
+  "openai.cache_write_tokens": 0,
+  "cache_creation_input_token_count": 0,
+  "openai.cached_input_tokens": 0,
+  "cache_read_input_token_count": 0,
+  "openai.reasoning_tokens": 266,
+  "reasoning_output_token_count": 266
+ },
+ "images": 3,
+ "answer": {
+  "tables": [
+   {
+    "heading": "",
+    "header": [],
+    "rows": [
+     {
+      "cells": [
+       "Labour",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FI010",
+       "Self-defined current economic status\n\n(*) Unpaid family workers are included.",
+       "1",
+       "1- Employee (working full-time)\n2- Employee (working part-time)\n3- Self-employed (*) (working full-time)\n4- Self-employed (*) (working part-time)\n5- Looking for a job\n6- Those who have been continuing their education/training\n7- Retired or has given up business due to reasons related to age\n8- Disabled and/or unable to work due to permanent health problems\n9- Fulfilling domestic tasks and care responsibilities\n10- Other inactive person"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI030",
+       "Has ever worked in a job or business to receive income in cash or in kind (for the ones who are not currently working)\n[FI010>\"4\" and FI020=\"2\"]",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI040",
+       "Actively looking for a job in last 4 weeks\n[FI010>\"2\" and FI020 =\"2\"]",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI050",
+       "Available for work (able to start working) within 2 weeks in case of a job opportunity\n[FI010>\"4\" and FI020=\"2\"]",
+       "1",
+       "1- Yes\n2- No"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Last Job",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FI070",
+       "Employment status in the last job\n(Actually working members of corporations or co-operatives are considered as \"employee\")\n[FI010>\"4\" and FI020=\"2\" and FI030=\"1\"]",
+       "1",
+       "1- Regular employee\n2- Casual employee\n3- Employer\n4- Self-employed\n5-Unpaid family worker"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI080",
+       "Occupation code of the last job (ISCO-08)\n[FI010>\"4\" and FI020 =\"2\" and FI030 =\"1\"]",
+       "1",
+       "1- Managers\n2- Professionals\n3- Technicians and Associate Professionals\n4- Clerical Support Workers\n5- Service and Sales Workers\n6- Skilled Agricultural, Forestry and Fishery Workers\n7- Craft and Related Trades Workers\n8- Plant and Machine Operators and Assemblers\n9- Elementary Occupations"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI090",
+       "Year when the last job was left\n[FI010>\"4\" and FI020=\"2\" and FI030=\"1\"]",
+       "4",
+       "1900...2024"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI100",
+       "Number of months spent at last work in 2023\n[FI010>\"2\" and FI020=\"2\" and FI030=\"1\" and FI090>=2020]",
+       "2",
+       "0...12"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI110",
+       "Net annual income in cash or in kind received from last job in 2023 (TRY)\n[FI010>\"4\" and FI020 =\"2\" and FI030 =\"1\" and FI100>\"0\"]",
+       "6",
+       "-999999...999999"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "Main Job",
+       "",
+       "",
+       ""
+      ],
+      "band": true
+     },
+     {
+      "cells": [
+       "FI120",
+       "Employment status in the main job\n(Actually working members of corporations or co-operatives are considered as \"employee\")\n[FI010<\"5\" or FI020=\"1\"]",
+       "1",
+       "1- Regular employee\n2- Casual employee\n3- Employer\n4- Self-employed\n5-Unpaid family worker"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI130",
+       "Occupation code of the main job (ISCO-08)\n[FI010<\"5\" or FI020=\"1\"]",
+       "1",
+       "1- Managers\n2- Professionals\n3- Technicians and Associate Professionals\n4- Clerical Support Workers\n5- Service and Sales Workers\n6- Skilled Agricultural and Fishery Workers\n7- Crafts and Related Trades Workers\n8- Plant and Machine Operators and Assemblers\n9- Elementary Occupations"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI140",
+       "The economic activity code of the local unit of the main job (NACE REV 2)\n[FI010<\"5\" or FI020=1]",
+       "2",
+       "01- Agriculture, Forestry and Fishing\n02- Mining and Quarrying\n03- Manufacturing\n04- Electricity, Gas, Steam, Water Supply, Sewerage etc.\n05- Construction\n06- Whole-sale and Retail Trade\n07- Transportation and Storage\n08- Accommodation and Food Service Activities\n09- Information and Communication\n10- Financial and Insurance Activities\n11- Real Estate Activities\n12- Professional, Scientific and Technical Activities\n13- Administrative and Support Service Activities\n14- Public Administration and Defence\n15- Education\n16- Human Health and Social Work Activities\n17- Arts, Entertainment and Recreation\n18- Other Activities"
+      ],
+      "band": false
+     },
+     {
+      "cells": [
+       "FI145",
+       "The status of household member's workplace / organization / bussiness?",
+       "1",
+       "1- Public\n2- Private"
+      ],
+      "band": false
+     }
+    ]
+   }
+  ]
+ }
+}

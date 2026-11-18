@@ -1,0 +1,109 @@
+{
+ "job_id": "loc_20261117T144329_c96d",
+ "flow": "profile",
+ "survey_id": "TUR_2024_SILC-C",
+ "status": "completed",
+ "finished": "2026-11-17T14:44:22+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "fb6056004aa8e28da801d97fd6a7f4bd1418fc3c741007faebb35e8536af2c22",
+   "size": 6380
+  },
+  "profile/data_scan.json": {
+   "sha256": "9b8e807744d80eb90db50362b446621b083d699c099f0a4bf515703662e2581a",
+   "size": 135008
+  },
+  "profile/file_links.json": {
+   "sha256": "7cea02ab8d177dcf5590728abb16f8c0cc38da8926300059ce6dc96eda4c8d48",
+   "size": 376
+  },
+  "profile/instruments.json": {
+   "sha256": "a81358af565bc49c4a521b5cc25db674972207fe576c7ea09906d660aa37888f",
+   "size": 7719
+  },
+  "profile/key_checks.json": {
+   "sha256": "bf4346884908c40dba90e5bbedc96081507a8118a9f0a30ddab95ce6f73d037d",
+   "size": 287
+  },
+  "profile/overlay.json": {
+   "sha256": "db27cf6dbf302f8f4978468b5c02b5660ae48c50fba676af26a5c8d60c2b1269",
+   "size": 854
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_h.svis.json": {
+   "sha256": "917582b12a599d750192979fbf5bff759a5f067227646ee29952d78026a3f4af",
+   "size": 57871
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_p.svis.json": {
+   "sha256": "a61cd589ec674cac20c307c482aa9c7feb9640a392ffbcd1f91d68d05857211b",
+   "size": 55651
+  },
+  "profile/questionnaire/English_Questionnaire_GYKA_MVS_Kesit_2024_EN_son@silc24_pr.svis.json": {
+   "sha256": "97353712c589d7cc46e7348c0ad66e17d949b9c376eae155ed171badff6cb1eb",
+   "size": 8434
+  },
+  "profile/standard.json": {
+   "sha256": "e1c155027a04793b7b53c264cf509dfe38afbd38fe12d87d7d0f8d16bd618139",
+   "size": 7314
+  },
+  "staged.json": {
+   "sha256": "beec0cb42dcf38087dc2d4912cf76fefe4f37c5cffb95036fb5edd95c0d80c48",
+   "size": 1332
+  },
+  "trail/profile/ai_calls/01_associate_instruments.brief.md": {
+   "sha256": "b24e8a2f4e3fb0c2659918c89734ccd2662069e18883e69c5f2fe34c9f981297",
+   "size": 27173
+  },
+  "trail/profile/ai_calls/01_associate_instruments.json": {
+   "sha256": "4d568ca28f1228b41d9b9da3dcb4b8bd33d9f3cb7d25ec39cc1108920e1676f1",
+   "size": 988
+  },
+  "trail/profile/ai_calls/02_author_overlay.brief.md": {
+   "sha256": "d7f7f8649f783cf5fe0ebb4fc6bd5022ea81a1e95a92aead400d92690cbc6fed",
+   "size": 14242
+  },
+  "trail/profile/ai_calls/02_author_overlay.json": {
+   "sha256": "49c631043284afa91ae8379541ff6dac2185808058428166f3f1fe2a47fcd790",
+   "size": 616
+  },
+  "trail/profile/ai_responses/01.json": {
+   "sha256": "e5082ae716df216e0307fe95d18f7805d0e741f9f530913218929820f773f556",
+   "size": 373
+  },
+  "trail/profile/ai_responses/02.json": {
+   "sha256": "27f3730e6de4576d38a6198e31dcc240e3b371793a9f9df2059b24fa3602a6d5",
+   "size": 918
+  },
+  "trail/profile/describe_skipped.json": {
+   "sha256": "d6f76c0ed7a1404e0d1391b309a08eaac54b9c31dd9a30f5fc7124b70a41b2dd",
+   "size": 331
+  },
+  "trail/profile/direct/01.json": {
+   "sha256": "c8242aba5deafed91f1fa8c8c9d66999931ae355b2e5b50fb7ab41c804ed94c9",
+   "size": 1356
+  },
+  "trail/profile/direct/02.json": {
+   "sha256": "ba8b8899ad933e712357cb03e378917ad3160854a2bcaa6efc76fd8eaa1b2e0e",
+   "size": 1415
+  },
+  "trail/profile/identity.json": {
+   "sha256": "685fc7ab38f5eda581e239d2c692500f5141e553c9ee45d7dcd9b1b54315c210",
+   "size": 449
+  },
+  "trail/profile/log.txt": {
+   "sha256": "ef2a6a96e9bc07da59dd9c801d66009183d1421a0d2da4c0cd6680a7040b1809",
+   "size": 2656
+  },
+  "trail/profile/state.json": {
+   "sha256": "da83d13187e1afcf42b0e9e3b202847686307143b0ee6f5f78a52818ddc9aeff",
+   "size": 1189
+  },
+  "trail/profile/tool_log/01.jsonl": {
+   "sha256": "ed0ade46bb05ae07c09a8d82b96078f4254353d4963172fe0a8ee4c83fd485c2",
+   "size": 596
+  },
+  "trail/profile/tool_log/02.jsonl": {
+   "sha256": "afacf5f6cdde7e242737fc35805e91e3b9c523d207c85dffa0f3562b13f83a03",
+   "size": 31255
+  }
+ }
+}

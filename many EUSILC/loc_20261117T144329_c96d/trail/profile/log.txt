@@ -1,0 +1,39 @@
+# profile TUR_2024_SILC-C @ 2026-11-17T14:43:30+00:00
+  data=\\wbgfscifs01\GPWG-GMD\datalib-ECA\datalib\TUR\TUR_2024_SILC-C\TUR_2024_SILC-C_v01_M\Data\Stata  modules=[]  direct=True
+  identity: survey-harmonization local (testing — no sync stamp); canon none; data TUR_2024_SILC-C_v01_M
+
+== Phase A — profile ==
+  [det] from-intake
+  [det] questionnaire
+  [det] conformance
+      D: not delivered in the standard's shape
+      H: not delivered in the standard's shape (best: 12 name(s))
+      R: not delivered in the standard's shape
+      P: not delivered in the standard's shape
+  [det] merge
+      residual (advisory): 4 still-missing (grain=4); orphan questions: 0; code conflicts: 3
+        - grain.household_key: TODO: root household identifier column
+        - grain.person_key: ['TODO: person unit keys']
+        - grain.roster: TODO: table (or wide-melt) enumerating persons
+        - grain.weight: TODO: design weight column
+  [det] prefill-file-links
+    3 table(s) associated by structure; 1 left for judgment
+  [judge] associate
+    AI CALL [associate_instruments / survey] → trail\profile\ai_calls\01_associate_instruments.brief.md
+    DIRECT [associate_instruments / survey] — 7 tool(s), budget 80 call(s)
+    received trail\profile\ai_responses\01.json via submit (373 bytes)
+  [judge] describe
+    describe: skipped [describe.skipped_no_candidates] `Regional Deflators_NUTS2`: 16 column(s) not described — no instrument is associated to this table
+  [judge] author-overlay
+    AI CALL [author_overlay / survey] → trail\profile\ai_calls\02_author_overlay.brief.md
+    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)
+    received trail\profile\ai_responses\02.json via submit (918 bytes)
+    notes: Grain keys set so hh_id/pers_id now align with silc24_h/silc24_pr scan PKs; Regional deflators keyed by NUTS2 mapped to household HB031 (NUTS2 level 2).
+      residual (advisory): 0 still-missing — nothing left to author; orphan questions: 0; code conflicts: 3
+  [judge] heal
+  [det] check-keys
+      grain (person) silc24_pr: pers_id -> unique over 80727 rows
+  CHECK A: ok — profile recorded (profile 61058aa179ff) — review it and approve (the review app's profile review, or `harmon signoff C:\Users\wb249563\.harmon\work\runs\loc_20261117T144329_c96d`)
+
+== all phases complete ==
+  profile complete (profile 61058aa179ff). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\Users\wb249563\.harmon\work\runs\loc_20261117T144329_c96d` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop.

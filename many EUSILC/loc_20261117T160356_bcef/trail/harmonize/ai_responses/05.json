@@ -1,0 +1,32 @@
+{
+ "request_id": "05-review_prelude-survey",
+ "reviews": [
+  {
+   "id": "dem-childmth",
+   "verdict": "ok"
+  },
+  {
+   "id": "MOD-DWL-phone_any",
+   "verdict": "concern",
+   "reason": "Mismatch between comment/reason and implementation: code says it will “preserve missingness if either source is missing”, but it only sets output to NaN when BOTH hh150 and hh160 are missing. If one is missing and the other is 2/3, output becomes 0 (not missing), which may not match the intended behavior/policy."
+  },
+  {
+   "id": "MOD-DWL-rooms_num",
+   "verdict": "ok"
+  },
+  {
+   "id": "dem-age-derived",
+   "verdict": "ok"
+  },
+  {
+   "id": "LBR-laborincome_sum",
+   "verdict": "concern",
+   "reason": "Potential type/coercion issue: fg010/fg020/fg030/fg040 are summed without coercing to numeric. If any are stored as strings/categorical, fillna(0).sum(axis=1) may error or yield incorrect results. Safer to apply pd.to_numeric(..., errors=\"coerce\") before summing."
+  },
+  {
+   "id": "wlf-hhsize_welfare_pc",
+   "verdict": "ok"
+  }
+ ],
+ "notes": "Evidence basis: prelude safety/placement expectations checked against authoring contract prelude section (t1#3.3)."
+}

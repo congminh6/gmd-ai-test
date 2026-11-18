@@ -1,0 +1,38 @@
+{
+ "request_id": "02-author_bindings-MOD-DEM",
+ "delta": true,
+ "bindings": [
+  {
+   "binding_id": "B-literacy",
+   "target": "VAR-literacy",
+   "table": "silc24_p",
+   "roles": {
+    "raw_value": "fe030",
+    "unit_keys": [
+     "hh_id",
+     "pers_id"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "0": 0,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".a"
+   },
+   "register": "assumed",
+   "evidence": "From silc24_p.fe030, code 0=Illiterate -> literacy=0; all other attainment categories imply literacy=1 (t1)"
+  }
+ ]
+}

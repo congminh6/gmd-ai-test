@@ -1,0 +1,2069 @@
+{
+  "country_code": "TUR",
+  "extraction_date": "2026-11-17",
+  "source_file": "GYKA MVS (Kesit), 2024 EN son.pdf",
+  "source_format": "codebook",
+  "survey_id": "TUR_2024_SILC-C",
+  "survey_name": "TUR_2024_SILC-C",
+  "variables": [
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Household ID",
+      "needs_review": true,
+      "notes": "length/format: 5",
+      "numeric_range": {
+        "max_value": 27401.0,
+        "min_value": 1.0
+      },
+      "raw_name": "HH_ID",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Personal ID (Household ID + Personal number/line number)",
+      "needs_review": true,
+      "notes": "length/format: 7",
+      "raw_name": "PERS_ID",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Year of the survey",
+      "needs_review": true,
+      "notes": "length/format: 4; values cell not parsed: 2024",
+      "raw_name": "FB010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Personal weight",
+      "needs_review": true,
+      "notes": "Format 4.7; length/format: 4",
+      "raw_name": "FB030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Married"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Never married"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Widowed"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Divorced"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Marital status",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FB100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Legal marriage status\n[FB100=”1”, “5”]",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FB110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Current education activity",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FE010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Primary school"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Secondary and vocational secondary school"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "High school"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Vocational or technical high school"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "2 or 3 year higher education"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Faculty"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Master"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Doctorate"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Education level currently attended\n[FE010=”1”]",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FE020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Whether this school/education level attended by the\nhousehold member is open education",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FE025",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "0",
+          "is_missing": false,
+          "label": "Illiterate"
+        },
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Literate but not a graduate"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Primary school"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Primary education"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Secondary and vocational secondary school"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "High school"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Vocational or technical high school"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "2 or 3 year higher education"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Faculty"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "Master"
+        },
+        {
+          "code": "10",
+          "is_missing": false,
+          "label": "Doctorate"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Highest education level attained  (Highest level successfully\ncompleted with a diploma or certificate)",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FE030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Year when highest level of education attained\n[FE030 =”2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “10”]",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 4",
+      "numeric_range": {
+        "max_value": 2024.0,
+        "min_value": 1900.0
+      },
+      "raw_name": "FE040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Whether this school/education level completed by the\nhousehold member is open education",
+      "module": "Education",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FE045",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Very good"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Good"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Fair"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Bad"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Very bad"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "General health status",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Suffer from any a chronic (long-standing) illness or\ncondition  (Diabetes, hypertension, asthma, renal failure, rheumatic\ndiseases, etc.)",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes, strongly limited"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Yes, limited"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, not limited"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Limitation in daily activities because of any physical or\npsychological health problems ongoing for at least 6\nmonths",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes, there was at least one occasion when the person really needed examination or treatment"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, the person applied whenever needed"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, the person didn't need it"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Unmet need for medical examination or treatment during\nthe last 12 months",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Financial difficulty / Could not afford to (too expensive or not covered by insurance fund)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Could not take time because of work, care for children or for others"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Too far to travel to healthcare organization/no means of transportation"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Fear of surgical operation / treatment"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Giving too late time for appointment"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Wanted to wait and see if problem got better on its own"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Didn't know any good doctor or specialist"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Other"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Main reason for unmet need for medical examination or\ntreatment\n[FS050=”1”]",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS060",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes, at least one occasion"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No, not at all"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No, not needed"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Unmet need for dental examination or treatment during the\nlast 12 months",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Financial difficulty / Could not afford to (too expensive or not covered by insurance fund)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Could not take time because of work, care for children or for others"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Too far to travel to healthcare organization/no means of transportation"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Fear of surgical operation / treatment"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Giving too late time for appointment"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Wanted to wait and see if problem got better on its own"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Didn't know any good doctor or specialist"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Other"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Main reason for unmet need for dental examination or\ntreatment\n[FS070=”1”]",
+      "module": "Health",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FS080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Can you replace worn-out clothes by some new (not second-\nhand) ones?",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Do you have two pairs of shoes in a good condition that are\nsuitable for daily activites?",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Get-together with friends/family (relatives) for a drink/meal\nat least once a month",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Do you regularly participate in a leisure activity (that costs\nmoney) such as sports, cinema, concerts?",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY060",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Do you spend a small amount of money most weeks on\nyourself, for your own pleasure (buying/doing something for\nyourself)?",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No - cannot afford it"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "No - other reason"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Internet connection for personal use at home  (The internet\naccess can be via smartphone (e.g. BlackBerry/iPhone), other\nwireless handheld device (tablet, etc …), video games console,\nlaptop, desktop computer, TV etc.",
+      "module": "Material Deprivation",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FY080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Employee (working full-time)"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Employee (working part-time)"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Self-employed () (working full-time)"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Self-employed () (working part-time)"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Looking for a job"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Those who have been continuing their education/training"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Retired or has given up business due to reasons related to age"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Disabled and/or unable to work due to permanent health problems"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "Fulfilling domestic tasks and care responsibilities"
+        },
+        {
+          "code": "10",
+          "is_missing": false,
+          "label": "Other inactive person"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Self-defined current economic status\n\n() Unpaid family workers are included.",
+      "module": "Labour",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Has ever worked in a job or business to receive income in cash or in kind (for the ones who are not currently working)\n[FI010>\"4\" and FI020=\"2\"]",
+      "module": "Labour",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Actively looking for a job in last 4 weeks\n[FI010>\"2\" and FI020 =\"2\"]",
+      "module": "Labour",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Available for work (able to start working) within 2 weeks in case of a job opportunity\n[FI010>\"4\" and FI020=\"2\"]",
+      "module": "Labour",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI050",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Regular employee"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Casual employee"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Employer"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Self-employed"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Unpaid family worker"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Employment status in the last job\n(Actually working members of corporations or co-operatives are considered as \"employee\")\n[FI010>\"4\" and FI020=\"2\" and FI030=\"1\"]",
+      "module": "Last Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Managers"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Professionals"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Technicians and Associate Professionals"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Clerical Support Workers"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Service and Sales Workers"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Skilled Agricultural, Forestry and Fishery Workers"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Craft and Related Trades Workers"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Plant and Machine Operators and Assemblers"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "Elementary Occupations"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Occupation code of the last job (ISCO-08)\n[FI010>\"4\" and FI020 =\"2\" and FI030 =\"1\"]",
+      "module": "Last Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Year when the last job was left\n[FI010>\"4\" and FI020=\"2\" and FI030=\"1\"]",
+      "module": "Last Job",
+      "needs_review": true,
+      "notes": "length/format: 4",
+      "numeric_range": {
+        "max_value": 2024.0,
+        "min_value": 1900.0
+      },
+      "raw_name": "FI090",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent at last work in 2023\n[FI010>\"2\" and FI020=\"2\" and FI030=\"1\" and FI090>=2020]",
+      "module": "Last Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Net annual income in cash or in kind received from last job in 2023 (TRY)\n[FI010>\"4\" and FI020 =\"2\" and FI030 =\"1\" and FI100>\"0\"]",
+      "module": "Last Job",
+      "needs_review": true,
+      "notes": "length/format: 6",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": -999999.0
+      },
+      "raw_name": "FI110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Regular employee"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Casual employee"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Employer"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Self-employed"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Unpaid family worker"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Employment status in the main job\n(Actually working members of corporations or co-operatives are considered as \"employee\")\n[FI010<\"5\" or FI020=\"1\"]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI120",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Managers"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Professionals"
+        },
+        {
+          "code": "3",
+          "is_missing": false,
+          "label": "Technicians and Associate Professionals"
+        },
+        {
+          "code": "4",
+          "is_missing": false,
+          "label": "Clerical Support Workers"
+        },
+        {
+          "code": "5",
+          "is_missing": false,
+          "label": "Service and Sales Workers"
+        },
+        {
+          "code": "6",
+          "is_missing": false,
+          "label": "Skilled Agricultural and Fishery Workers"
+        },
+        {
+          "code": "7",
+          "is_missing": false,
+          "label": "Crafts and Related Trades Workers"
+        },
+        {
+          "code": "8",
+          "is_missing": false,
+          "label": "Plant and Machine Operators and Assemblers"
+        },
+        {
+          "code": "9",
+          "is_missing": false,
+          "label": "Elementary Occupations"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Occupation code of the main job (ISCO-08)\n[FI010<\"5\" or FI020=\"1\"]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI130",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "01",
+          "is_missing": false,
+          "label": "Agriculture, Forestry and Fishing"
+        },
+        {
+          "code": "02",
+          "is_missing": false,
+          "label": "Mining and Quarrying"
+        },
+        {
+          "code": "03",
+          "is_missing": false,
+          "label": "Manufacturing"
+        },
+        {
+          "code": "04",
+          "is_missing": false,
+          "label": "Electricity, Gas, Steam, Water Supply, Sewerage etc."
+        },
+        {
+          "code": "05",
+          "is_missing": false,
+          "label": "Construction"
+        },
+        {
+          "code": "06",
+          "is_missing": false,
+          "label": "Whole-sale and Retail Trade"
+        },
+        {
+          "code": "07",
+          "is_missing": false,
+          "label": "Transportation and Storage"
+        },
+        {
+          "code": "08",
+          "is_missing": false,
+          "label": "Accommodation and Food Service Activities"
+        },
+        {
+          "code": "09",
+          "is_missing": false,
+          "label": "Information and Communication"
+        },
+        {
+          "code": "10",
+          "is_missing": false,
+          "label": "Financial and Insurance Activities"
+        },
+        {
+          "code": "11",
+          "is_missing": false,
+          "label": "Real Estate Activities"
+        },
+        {
+          "code": "12",
+          "is_missing": false,
+          "label": "Professional, Scientific and Technical Activities"
+        },
+        {
+          "code": "13",
+          "is_missing": false,
+          "label": "Administrative and Support Service Activities"
+        },
+        {
+          "code": "14",
+          "is_missing": false,
+          "label": "Public Administration and Defence"
+        },
+        {
+          "code": "15",
+          "is_missing": false,
+          "label": "Education"
+        },
+        {
+          "code": "16",
+          "is_missing": false,
+          "label": "Human Health and Social Work Activities"
+        },
+        {
+          "code": "17",
+          "is_missing": false,
+          "label": "Arts, Entertainment and Recreation"
+        },
+        {
+          "code": "18",
+          "is_missing": false,
+          "label": "Other Activities"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "The economic activity code of the local unit of the main job (NACE REV 2)\n[FI010<\"5\" or FI020=1]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "raw_name": "FI140",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Public"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Private"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "The status of household member's workplace / organization / bussiness?",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI145",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total number of hours usually worked in main job (The\nregularly paid extra working hours of employees are included.)\n[FI010<=\"3\" veya FI020 = \"1\" olanlar]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 99.0,
+        "min_value": 1.0
+      },
+      "raw_name": "FI150",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total number of hours usually worked in additional job/jobs\n[FI010<\"5\" or FI020=\"1\" and the ones who have additional\njob/jobs]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 99.0,
+        "min_value": 1.0
+      },
+      "raw_name": "FI160",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Registered"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "Not registered"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Registration status to social security institutions in the\nmain job\n[FI010<\"5\" or FI020=\"1\"]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI190",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "11",
+          "is_missing": false,
+          "label": "Permanent job/work with written contract of unlimited duration"
+        },
+        {
+          "code": "12",
+          "is_missing": false,
+          "label": "Permanent job/work with verbal contract"
+        },
+        {
+          "code": "21",
+          "is_missing": false,
+          "label": "Temporary job/work with written contract of limited duration"
+        },
+        {
+          "code": "22",
+          "is_missing": false,
+          "label": "Work occasionally without contract"
+        },
+        {
+          "code": "23",
+          "is_missing": false,
+          "label": "Temporary work held by students, pupils, etc. in the vacation time"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Type of contract of employees in the main job\n[FI010<\"5\" or FI020=\"1\" and (FI120=\"1\" or FI120=\"2\")]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI210",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "categories": [
+        {
+          "code": "1",
+          "is_missing": false,
+          "label": "Yes"
+        },
+        {
+          "code": "2",
+          "is_missing": false,
+          "label": "No"
+        }
+      ],
+      "data_type": "categorical_single",
+      "extraction_confidence": 0.8,
+      "label": "Managerial position of employee in the main job\n[FI010<\"5\" or FI020=\"1\" and\n(FI120=\"1\" or FI120=\"2\")]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 1",
+      "raw_name": "FI220",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "The person's opinion and feelings about the degree of\nsatisfaction with their job about the tasks performed,\nworkplace atmosphere, pay and working hours, etc.\n0: Very dissatisfied, 10: Very satisfied",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 10.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI225",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent in the main job in 2023\n[FI010<\"5\" or FI020=\"1\" and the ones who started to work\nbefore \"2020\"]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 1.0
+      },
+      "raw_name": "FI240",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Net annual income in cash or in kind received from main\njob in 2023 (TRY)\n[FI010<\"5\" or FI020=\"1\" and the ones who started to work\nbefore \"2023\"]",
+      "module": "Main Job",
+      "needs_review": true,
+      "notes": "length/format: 6",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": -999999.0
+      },
+      "raw_name": "FI250",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent at full-time work in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI260",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent at part-time work in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI270",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent in unemployment in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI280",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent as retired / has given up business\ndue to reasons related to age in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI290",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent by continuing their education /\ntraining in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI300",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of months spent as other inactively (such as\ndomestic tasks, care responsibilities, old/disabled/unfit to\nwork, compulsory military service etc.) in 2023",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 12.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI310",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Number of years spent in paid work (YEAR)\n[(FI010<\"5\" or FI020=\"1\" or FI030=\"1\") and FI210<>\"4\"]",
+      "module": "Working History",
+      "needs_review": true,
+      "notes": "length/format: 2",
+      "numeric_range": {
+        "max_value": 99.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FI330",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total ANNUAL net employee cash or near cash income\nreceived in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG010",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total ANNUAL net employee cash or near cash income\nreceived in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG020",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total ANNUAL net self-employment income in cash\nreceived in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": -999999.0
+      },
+      "raw_name": "FG030",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total ANNUAL net self-employment income in kind\nreceived in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG040",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Unemployment benefits received in 2023 (TRY)\n(Including severances)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG070",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Old-age benefits received in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG080",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Retirement grants received in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG085",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Survivors' benefits received in 2023 (TRY)\n(Including death grants)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG090",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Sickness benefits received in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG100",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Disability benefits (including ghazi and honor pensions)\nreceived in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG110",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Education-related allowances received in 2023 (TRY)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": 0.0
+      },
+      "raw_name": "FG120",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    },
+    {
+      "data_type": "numeric",
+      "extraction_confidence": 0.8,
+      "label": "Total value of the incomes received in 2023 (TRY)\n(FG010 + FG020 + FG030 + FG040 + FG070 + FG080 +\nFG085 + FG090 + FG100 + FG110 + FG120)",
+      "module": "2024 Personal Income",
+      "needs_review": true,
+      "notes": "length/format: 9.2",
+      "numeric_range": {
+        "max_value": 999999.0,
+        "min_value": -999999.0
+      },
+      "raw_name": "FG140",
+      "review_reasons": [],
+      "unit_of_analysis": "other"
+    }
+  ],
+  "x_harmon": {
+    "instrument_id": "codebook-3e7ab6e6173e",
+    "instrument_name": "GYKA MVS (Kesit), 2024 EN son: silc24_p",
+    "kind": "codebook",
+    "variables": {
+      "FB010": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r4"
+        ]
+      },
+      "FB030": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r5"
+        ]
+      },
+      "FB100": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r6"
+        ]
+      },
+      "FB110": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r7"
+        ]
+      },
+      "FE010": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r9"
+        ]
+      },
+      "FE020": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r10"
+        ]
+      },
+      "FE025": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r11"
+        ]
+      },
+      "FE030": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r12"
+        ]
+      },
+      "FE040": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r13"
+        ]
+      },
+      "FE045": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r14"
+        ]
+      },
+      "FG010": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r19"
+        ]
+      },
+      "FG020": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r20"
+        ]
+      },
+      "FG030": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r21"
+        ]
+      },
+      "FG040": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r22"
+        ]
+      },
+      "FG070": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r23"
+        ]
+      },
+      "FG080": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r24"
+        ]
+      },
+      "FG085": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r25"
+        ]
+      },
+      "FG090": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r26"
+        ]
+      },
+      "FG100": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r27"
+        ]
+      },
+      "FG110": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r28"
+        ]
+      },
+      "FG120": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r29"
+        ]
+      },
+      "FG140": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r30"
+        ]
+      },
+      "FI010": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r3"
+        ]
+      },
+      "FI030": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r4"
+        ]
+      },
+      "FI040": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r5"
+        ]
+      },
+      "FI050": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r6"
+        ]
+      },
+      "FI070": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r8"
+        ]
+      },
+      "FI080": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r9"
+        ]
+      },
+      "FI090": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r10"
+        ]
+      },
+      "FI100": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r11"
+        ]
+      },
+      "FI110": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r12"
+        ]
+      },
+      "FI120": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r14"
+        ]
+      },
+      "FI130": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r15"
+        ]
+      },
+      "FI140": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r16"
+        ]
+      },
+      "FI145": {
+        "by": "image",
+        "cites": [
+          "p25-t1#r17"
+        ]
+      },
+      "FI150": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r2"
+        ]
+      },
+      "FI160": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r3"
+        ]
+      },
+      "FI190": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r4"
+        ]
+      },
+      "FI210": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r5"
+        ]
+      },
+      "FI220": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r6"
+        ]
+      },
+      "FI225": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r7"
+        ]
+      },
+      "FI240": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r8"
+        ]
+      },
+      "FI250": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r9"
+        ]
+      },
+      "FI260": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r11"
+        ]
+      },
+      "FI270": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r12"
+        ]
+      },
+      "FI280": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r13"
+        ]
+      },
+      "FI290": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r14"
+        ]
+      },
+      "FI300": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r15"
+        ]
+      },
+      "FI310": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r16"
+        ]
+      },
+      "FI330": {
+        "by": "image",
+        "cites": [
+          "p26-t1#r17"
+        ]
+      },
+      "FS010": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r16"
+        ]
+      },
+      "FS020": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r17"
+        ]
+      },
+      "FS030": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r18"
+        ]
+      },
+      "FS050": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r19"
+        ]
+      },
+      "FS060": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r20"
+        ]
+      },
+      "FS070": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r21"
+        ]
+      },
+      "FS080": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r22"
+        ]
+      },
+      "FY020": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r24"
+        ]
+      },
+      "FY030": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r25"
+        ]
+      },
+      "FY050": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r26"
+        ]
+      },
+      "FY060": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r27"
+        ]
+      },
+      "FY070": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r28"
+        ]
+      },
+      "FY080": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r29"
+        ]
+      },
+      "HH_ID": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r2"
+        ]
+      },
+      "PERS_ID": {
+        "by": "image",
+        "cites": [
+          "p24-t1#r3"
+        ]
+      }
+    }
+  },
+  "year": 2024
+}

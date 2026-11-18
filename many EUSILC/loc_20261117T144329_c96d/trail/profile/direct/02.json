@@ -1,0 +1,22 @@
+{
+ "task_type": "author_overlay",
+ "scope_id": "survey",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 31.8,
+ "usage": {
+  "input_token_count": 61179,
+  "output_token_count": 1361,
+  "total_token_count": 62540,
+  "reasoning_output_token_count": 741
+ },
+ "tool_calls": 6,
+ "submitted": true,
+ "final_text": "Submitted `02-author_overlay-survey` overlay updates:\n\n- Set **grain**:\n  - `household_key = hh_id`\n  - `person_key = [\"pers_id\"]`\n  - `roster = \"silc24_pr\"`\n  - `weight = \"silc24_h.hb040\"`\n\n- Authored **table provenance verdicts**:\n  - `silc24_h`: `raw`\n  - `silc24_p`: `raw`\n  - `silc24_pr`: `raw`\n  - `Regional Deflators_NUTS2`: `reference`\n\n- Added **key_map** for lookup join:\n  - `Regional Deflators_NUTS2.key_map = {\"NUTS2\": \"hb031\"}`",
+ "said": [
+  "Submitted `02-author_overlay-survey` overlay updates:\n\n- Set **grain**:\n  - `household_key = hh_id`\n  - `person_key = [\"pers_id\"]`\n  - `roster = \"silc24_pr\"`\n  - `weight = \"silc24_h.hb040\"`\n\n- Authored **table provenance verdicts**:\n  - `silc24_h`: `raw`\n  - `silc24_p`: `raw`\n  - `silc24_pr`: `raw`\n  - `Regional Deflators_NUTS2`: `reference`\n\n- Added **key_map** for lookup join:\n  - `Regional Deflators_NUTS2.key_map = {\"NUTS2\": \"hb031\"}`"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\02.jsonl"
+}

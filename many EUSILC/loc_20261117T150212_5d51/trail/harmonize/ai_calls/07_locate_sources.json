@@ -1,0 +1,28 @@
+{
+  "task_type": "locate_sources",
+  "scope_id": "MOD-WLF",
+  "scope_ids": [
+    "VAR-hsize",
+    "VAR-welfare",
+    "VAR-welfaredef",
+    "VAR-welfarenom",
+    "VAR-welfareother",
+    "VAR-welfareothertype",
+    "VAR-welfaretype",
+    "VAR-welfshprosperity",
+    "VAR-welfshprtype"
+  ],
+  "request_id": "07-locate_sources-MOD-WLF",
+  "tools": [
+    "canon",
+    "codes",
+    "column",
+    "columns",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "944398a0499a60bc716d39d7bb55c83ffb5e319529dfe0fcef3a1a9a1aeab311",
+  "transport": "direct",
+  "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}
