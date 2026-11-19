@@ -1,0 +1,51 @@
+{
+  "task_type": "describe_columns",
+  "scope_rule": "every table.col in scope_ids appears in links[].column, fields (table+field), or unresolved[].column; the host re-asks for any left out.",
+  "scope_id": "rt003",
+  "rules_ref": "your contract § The rules — the 2 governing + 6 golden rules — and § Your flow (its policies), verbatim and self-contained in your instructions (no external file to open)",
+  "scope_ids": [
+    "rt003.idcode",
+    "rt003.idcode2",
+    "rt003.s04a_q01",
+    "rt003.s04a_q02",
+    "rt003.s04a_q03",
+    "rt003.s04a_q04",
+    "rt003.s04a_q05",
+    "rt003.s04a_q06",
+    "rt003.s04a_q07",
+    "rt003.s04a_q08",
+    "rt003.s04a_q_1",
+    "rt003.s04a_q_2",
+    "rt003.s04a_q_3",
+    "rt003.s04b_q01",
+    "rt003.s04b_q02",
+    "rt003.s04b_q03",
+    "rt003.s04b_q04",
+    "rt003.s04b_q05",
+    "rt003.s04b_q06",
+    "rt003.s04b_q07",
+    "rt003.s04b_q08",
+    "rt003.s04b_q09",
+    "rt003.s04b_q_1",
+    "rt003.s04b_q_2",
+    "rt003.s04b_q_3"
+  ],
+  "prior_findings": [],
+  "request_id": "08-describe_columns-rt003",
+  "tools": [
+    "codes",
+    "column",
+    "columns",
+    "inventory",
+    "search",
+    "structure",
+    "submit"
+  ],
+  "brief_sha256": "fdd7e35d34cfcac4e2a0c261c9465590f0ff502e5ccba3db2d834f9ec7b8dbca",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "7f7cce9ca18edde26a1af132c36d3196895db7fb4717441bc2a96e1ecf178f7c",
+  "contract_sha256": "d566f5b574732ffee4a74d4e82da4933bce978428f62ab40d76ccdd92d396cb7"
+}

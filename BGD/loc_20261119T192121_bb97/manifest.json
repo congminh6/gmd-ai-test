@@ -1,0 +1,37 @@
+{
+ "job_id": "loc_20261119T192121_bb97",
+ "flow": "intake",
+ "survey_id": "BGD_2010_HIES",
+ "status": "completed",
+ "finished": "2026-11-19T19:21:55+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "9f8d4b37c6351d8a36388b43c9d096d6ceb2a8b89a2e87b9a00d7d7916a3d6c7",
+   "size": 5157
+  },
+  "profile/data_scan.json": {
+   "sha256": "c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3",
+   "size": 617654
+  },
+  "profile/instruments.json": {
+   "sha256": "1dca0368b47f08b2157dde2de2ee3e63ad379bc7879933ecf5f79f85ef0f5e72",
+   "size": 480
+  },
+  "staged.json": {
+   "sha256": "f1d3d88c6136a332891574edfca4be6644528ab19ad5089008207af9cdec6984",
+   "size": 1454
+  },
+  "trail/intake/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/intake/log.txt": {
+   "sha256": "fd676779ccbfb23758acc58b27702918aa2242634b5b50026d475699447af3ae",
+   "size": 5031
+  },
+  "trail/intake/state.json": {
+   "sha256": "96a4eeef77f55481cb7a2bc4f4d10b445d0f28b8ac78bcd8d1e032d2bd4f4381",
+   "size": 286
+  }
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "request_id": "18-describe_columns-rt013",
+ "links": [
+  {
+   "question": "sec8c_roster_name",
+   "column": "rt013.s08c_q03",
+   "evidence": [
+    "t4#identity",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_relationship_to_head",
+   "column": "rt013.s08c_q04",
+   "evidence": [
+    "t4#identity",
+    "t7#question",
+    "t7#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_where_working",
+   "column": "rt013.s08c_q06",
+   "evidence": [
+    "t4#identity",
+    "t7#question",
+    "t7#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_zila_code",
+   "column": "rt013.s08c_q07",
+   "evidence": [
+    "t4#identity",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_country_code",
+   "column": "rt013.s08c_q08",
+   "evidence": [
+    "t4#identity",
+    "t7#question",
+    "t7#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_age",
+   "column": "rt013.s08c_q09",
+   "evidence": [
+    "t4#identity",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_sex",
+   "column": "rt013.s08c_q10",
+   "evidence": [
+    "t4#identity",
+    "t7#question",
+    "t7#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_education_level_code",
+   "column": "rt013.s08c_q11",
+   "evidence": [
+    "t5#identity",
+    "t7#question",
+    "t7#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_occupation_code",
+   "column": "rt013.s08c_q12",
+   "evidence": [
+    "t5#identity",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_total_money_sent_12m_taka",
+   "column": "rt013.s08c_q14",
+   "evidence": [
+    "t5#identity",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_send_method_code",
+   "column": "rt013.s08c_q15",
+   "evidence": [
+    "t5#identity",
+    "t8#question",
+    "t8#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_goods_sent_item_codes",
+   "column": "rt013.s08c_q16",
+   "evidence": [
+    "t5#identity",
+    "t8#question",
+    "t8#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_total_value_goods_sent_12m_taka",
+   "column": "rt013.s08c_q17",
+   "evidence": [
+    "t5#identity",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "sec8c_roster_goods_sent_item_codes",
+   "column": "rt013.s08c_q_2",
+   "evidence": [
+    "t5#identity",
+    "t8#question",
+    "t8#domain"
+   ]
+  },
+  {
+   "question": "sec8c_roster_goods_sent_item_codes",
+   "column": "rt013.s08c_q_3",
+   "evidence": [
+    "t6#identity",
+    "t8#question",
+    "t8#domain"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt013.s08c_q05",
+   "reason": "Column label indicates a derived duration since migration in months (range 0–14), but the only migration timing questions in module 8C are calendar month/year of migration; no candidate question matches this duration-style field.",
+   "evidence": [
+    "t4#identity",
+    "t2"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  },
+  {
+   "column": "rt013.s08c_q_1",
+   "reason": "Column label indicates a derived duration since migration in years (range 0–98). Module 8C candidate questions only include calendar month/year of migration, not a 'how long ago' (years) item; cannot match to a specific questionnaire question.",
+   "evidence": [
+    "t5#identity",
+    "t2"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  },
+  {
+   "column": "rt013.s0bc_q13",
+   "reason": "Column label suggests a numeric count of times money was sent (values observed 0–17), but the closest candidate question (sec8c_roster_send_money_frequency_code) is categorical with 6 categories (once, twice, …, never) and does not fit this value range.",
+   "evidence": [
+    "t6#identity",
+    "t8#domain",
+    "t3"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  }
+ ],
+ "notes": "Most rt013 columns align to the 8C migration/remittance roster; three fields look like derived numeric counts/durations not represented as questions in the instrument metadata."
+}

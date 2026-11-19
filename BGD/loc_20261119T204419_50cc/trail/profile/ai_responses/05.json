@@ -1,0 +1,408 @@
+{
+ "request_id": "05-describe_columns-rt002#1",
+ "links": [
+  {
+   "question": "sec1a_respondent_id_code",
+   "column": "rt002.resid1a",
+   "evidence": [
+    "rt002.resid1a#label",
+    "scribe-aa2f36b63da4:sec1a_respondent_id_code#question"
+   ]
+  },
+  {
+   "question": "sec1c_respondent_id",
+   "column": "rt002.resid1c",
+   "evidence": [
+    "rt002.resid1c#label",
+    "scribe-aa2f36b63da4:sec1c_respondent_id#question"
+   ]
+  },
+  {
+   "question": "sec1a_id_code_roster",
+   "column": "rt002.s01a_q01",
+   "evidence": [
+    "rt002.s01a_q01#label",
+    "scribe-aa2f36b63da4:sec1a_id_code_roster#question"
+   ]
+  },
+  {
+   "question": "sec1a_sex",
+   "column": "rt002.s01a_q02",
+   "evidence": [
+    "rt002.s01a_q02#domain",
+    "scribe-aa2f36b63da4:sec1a_sex#codes"
+   ]
+  },
+  {
+   "question": "sec1a_relationship_head",
+   "column": "rt002.s01a_q03",
+   "evidence": [
+    "rt002.s01a_q03#domain",
+    "scribe-aa2f36b63da4:sec1a_relationship_head#codes"
+   ]
+  },
+  {
+   "question": "sec1a_age_years",
+   "column": "rt002.s01a_q04",
+   "evidence": [
+    "rt002.s01a_q04#label",
+    "scribe-aa2f36b63da4:sec1a_age_years#question"
+   ]
+  },
+  {
+   "question": "sec1a_religion",
+   "column": "rt002.s01a_q05",
+   "evidence": [
+    "rt002.s01a_q05#domain",
+    "scribe-aa2f36b63da4:sec1a_religion#codes"
+   ]
+  },
+  {
+   "question": "sec1a_marital_status",
+   "column": "rt002.s01a_q06",
+   "evidence": [
+    "rt002.s01a_q06#domain",
+    "scribe-aa2f36b63da4:sec1a_marital_status#codes"
+   ]
+  },
+  {
+   "question": "sec1a_earner",
+   "column": "rt002.s01a_q07",
+   "evidence": [
+    "rt002.s01a_q07#label",
+    "scribe-aa2f36b63da4:sec1a_earner#question"
+   ]
+  },
+  {
+   "question": "sec1a_spouse_id_code",
+   "column": "rt002.s01a_q08",
+   "evidence": [
+    "rt002.s01a_q08#label",
+    "scribe-aa2f36b63da4:sec1a_spouse_id_code#question"
+   ]
+  },
+  {
+   "question": "sec1a_father_id_code",
+   "column": "rt002.s01a_q09",
+   "evidence": [
+    "rt002.s01a_q09#label",
+    "scribe-aa2f36b63da4:sec1a_father_id_code#question"
+   ]
+  },
+  {
+   "question": "sec1a_mother_id_code",
+   "column": "rt002.s01a_q10",
+   "evidence": [
+    "rt002.s01a_q10#label",
+    "scribe-aa2f36b63da4:sec1a_mother_id_code#question"
+   ]
+  },
+  {
+   "question": "sec1a_abroad_6mo_last5y",
+   "column": "rt002.s01a_q11",
+   "evidence": [
+    "rt002.s01a_q11#domain",
+    "scribe-aa2f36b63da4:sec1a_abroad_6mo_last5y#codes"
+   ]
+  },
+  {
+   "question": "sec1a_return_reason_abroad",
+   "column": "rt002.s01a_q12",
+   "evidence": [
+    "rt002.s01a_q12#domain",
+    "scribe-aa2f36b63da4:sec1a_return_reason_abroad#codes"
+   ]
+  },
+  {
+   "question": "sec1b_work_past7days",
+   "column": "rt002.s01b_q01",
+   "evidence": [
+    "rt002.s01b_q01#label",
+    "scribe-aa2f36b63da4:sec1b_work_past7days#question"
+   ]
+  },
+  {
+   "question": "sec1b_available_work_past7days",
+   "column": "rt002.s01b_q02",
+   "evidence": [
+    "rt002.s01b_q02#label",
+    "scribe-aa2f36b63da4:sec1b_available_work_past7days#question"
+   ]
+  },
+  {
+   "question": "sec1b_looking_for_work_past7days",
+   "column": "rt002.s01b_q03",
+   "evidence": [
+    "rt002.s01b_q03#label",
+    "scribe-aa2f36b63da4:sec1b_looking_for_work_past7days#question"
+   ]
+  },
+  {
+   "question": "sec1b_reason_not_available_or_not_looking",
+   "column": "rt002.s01b_q04",
+   "evidence": [
+    "rt002.s01b_q04#domain",
+    "scribe-aa2f36b63da4:sec1b_reason_not_available_or_not_looking#codes"
+   ]
+  },
+  {
+   "question": "sec1c_included_ssn_last12mo",
+   "column": "rt002.s01c_q01",
+   "evidence": [
+    "rt002.s01c_q01#domain",
+    "scribe-aa2f36b63da4:sec1c_included_ssn_last12mo#codes"
+   ]
+  },
+  {
+   "question": "sec1c_main_program_code",
+   "column": "rt002.s01c_q02",
+   "evidence": [
+    "rt002.s01c_q02#domain",
+    "scribe-aa2f36b63da4:sec1c_main_program_code#codes"
+   ]
+  },
+  {
+   "question": "sec1c_enlist_month",
+   "column": "rt002.s01c_q03",
+   "evidence": [
+    "rt002.s01c_q03#label",
+    "scribe-aa2f36b63da4:sec1c_enlist_month#question"
+   ]
+  },
+  {
+   "question": "sec1c_entitled_taka",
+   "column": "rt002.s01c_q04",
+   "evidence": [
+    "rt002.s01c_q04#label",
+    "scribe-aa2f36b63da4:sec1c_entitled_taka#question"
+   ]
+  },
+  {
+   "question": "sec1c_received_taka",
+   "column": "rt002.s01c_q05",
+   "evidence": [
+    "rt002.s01c_q05#label",
+    "scribe-aa2f36b63da4:sec1c_received_taka#question"
+   ]
+  },
+  {
+   "question": "sec1c_spend_to_be_included_taka",
+   "column": "rt002.s01c_q06",
+   "evidence": [
+    "rt002.s01c_q06#label",
+    "scribe-aa2f36b63da4:sec1c_spend_to_be_included_taka#question"
+   ]
+  },
+  {
+   "question": "sec1c_cause_not_included_q7",
+   "column": "rt002.s01c_q07",
+   "evidence": [
+    "rt002.s01c_q07#domain",
+    "scribe-aa2f36b63da4:sec1c_cause_not_included_q7#codes"
+   ]
+  },
+  {
+   "question": "sec1c_enlist_year",
+   "column": "rt002.s01c_q_1",
+   "evidence": [
+    "rt002.s01c_q_1#label",
+    "scribe-aa2f36b63da4:sec1c_enlist_year#question"
+   ]
+  },
+  {
+   "question": "sec1c_entitled_goods_code",
+   "column": "rt002.s01c_q_2",
+   "evidence": [
+    "rt002.s01c_q_2#label",
+    "scribe-aa2f36b63da4:sec1c_entitled_goods_code#codes"
+   ]
+  },
+  {
+   "question": "sec1c_entitled_kg",
+   "column": "rt002.s01c_q_3",
+   "evidence": [
+    "rt002.s01c_q_3#label",
+    "scribe-aa2f36b63da4:sec1c_entitled_kg#question"
+   ]
+  },
+  {
+   "question": "sec1c_received_goods_code",
+   "column": "rt002.s01c_q_4",
+   "evidence": [
+    "rt002.s01c_q_4#label",
+    "scribe-aa2f36b63da4:sec1c_received_goods_code#codes"
+   ]
+  },
+  {
+   "question": "sec1c_received_kg",
+   "column": "rt002.s01c_q_5",
+   "evidence": [
+    "rt002.s01c_q_5#label",
+    "scribe-aa2f36b63da4:sec1c_received_kg#question"
+   ]
+  },
+  {
+   "question": "sec2a_q3_can_read_letter",
+   "column": "rt002.s02a_q03",
+   "evidence": [
+    "rt002.s02a_q03#label",
+    "scribe-aa2f36b63da4:sec2a_q3_can_read_letter#question"
+   ]
+  },
+  {
+   "question": "sec2a_q4_can_write_letter",
+   "column": "rt002.s02a_q04",
+   "evidence": [
+    "rt002.s02a_q04#label",
+    "scribe-aa2f36b63da4:sec2a_q4_can_write_letter#question"
+   ]
+  },
+  {
+   "question": "sec2a_q5_highest_class_completed",
+   "column": "rt002.s02a_q05",
+   "evidence": [
+    "rt002.s02a_q05#label",
+    "scribe-aa2f36b63da4:sec2a_q5_highest_class_completed#question"
+   ]
+  },
+  {
+   "question": "sec2a_q6_where_last_or_current_study",
+   "column": "rt002.s02a_q06",
+   "evidence": [
+    "rt002.s02a_q06#label",
+    "scribe-aa2f36b63da4:sec2a_q6_where_last_or_current_study#question"
+   ]
+  },
+  {
+   "question": "sec2a_q7_type_school_institution",
+   "column": "rt002.s02a_q07",
+   "evidence": [
+    "rt002.s02a_q07#label",
+    "scribe-aa2f36b63da4:sec2a_q7_type_school_institution#question"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_transport_cost",
+   "column": "rt002.s02b__10",
+   "evidence": [
+    "rt002.s02b__10#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_tiffin_cost",
+   "column": "rt002.s02b__11",
+   "evidence": [
+    "rt002.s02b__11#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_internet_email_edu",
+   "column": "rt002.s02b__12",
+   "evidence": [
+    "rt002.s02b__12#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_donation_edu",
+   "column": "rt002.s02b__13",
+   "evidence": [
+    "rt002.s02b__13#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_other_amt",
+   "column": "rt002.s02b__14",
+   "evidence": [
+    "rt002.s02b__14#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_exp_12m_total",
+   "column": "rt002.s02b__15",
+   "evidence": [
+    "rt002.s02b__15#label",
+    "t1"
+   ]
+  },
+  {
+   "question": "edu_cur_attend",
+   "column": "rt002.s02b_q01",
+   "evidence": [
+    "rt002.s02b_q01#label",
+    "scribe-aa2f36b63da4:edu_cur_attend#question"
+   ]
+  },
+  {
+   "question": "edu_class_attend",
+   "column": "rt002.s02b_q02",
+   "evidence": [
+    "rt002.s02b_q02#label",
+    "scribe-aa2f36b63da4:edu_class_attend#question"
+   ]
+  },
+  {
+   "question": "edu_stipend_primary",
+   "column": "rt002.s02b_q03",
+   "evidence": [
+    "rt002.s02b_q03#label",
+    "scribe-aa2f36b63da4:edu_stipend_primary#question"
+   ]
+  },
+  {
+   "question": "edu_stipend_primary_amt_12m",
+   "column": "rt002.s02b_q04",
+   "evidence": [
+    "rt002.s02b_q04#label",
+    "scribe-aa2f36b63da4:edu_stipend_primary_amt_12m#question"
+   ]
+  },
+  {
+   "question": "edu_stipend_secondary",
+   "column": "rt002.s02b_q05",
+   "evidence": [
+    "rt002.s02b_q05#label",
+    "scribe-aa2f36b63da4:edu_stipend_secondary#question"
+   ]
+  },
+  {
+   "question": "edu_stipend_secondary_amt_12m",
+   "column": "rt002.s02b_q06",
+   "evidence": [
+    "rt002.s02b_q06#label",
+    "scribe-aa2f36b63da4:edu_stipend_secondary_amt_12m#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt002.resid2a",
+   "reason": "Column label indicates a 'respondent identification code - section 2.a', but no corresponding 'respondent ID' or 'ID code of respondent' question is present among the associated instrument's Section 2A questions (only literacy/education questions) or in a search for sec2a/id/code within the instrument; likely a data-entry helper variable rather than a questionnaire item.",
+   "evidence": [
+    "rt002.resid2a#label",
+    "t1"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt002.resid2b",
+   "reason": "Column label indicates a 'respondent identification code - section 2.b', but the associated instrument's Section 2B questions listed do not include a respondent-ID item; search for sec2a/id/code did not surface any Section 2B respondent-id question, suggesting this is a data-entry helper variable rather than a questionnaire question.",
+   "evidence": [
+    "rt002.resid2b#label",
+    "t1"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ],
+ "notes": "Linked all roster/section columns in scope; left resid2a/resid2b unresolved as no matching instrument respondent-id item for sections 2A/2B was found."
+}

@@ -1,0 +1,290 @@
+{
+ "request_id": "09-describe_columns-rt004",
+ "links": [
+  {
+   "question": "sec5_enterprise_kind",
+   "column": "rt004.s05a_q01",
+   "evidence": [
+    "rt004.s05a_q01#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_kind#question",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_workers_roster_ids",
+   "column": "rt004.s05a_q02",
+   "evidence": [
+    "rt004.s05a_q02#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_workers_roster_ids#question"
+   ]
+  },
+  {
+   "question": "sec5_operating_duration_years",
+   "column": "rt004.s05a_q03",
+   "evidence": [
+    "rt004.s05a_q03#label",
+    "scribe-aa2f36b63da4:sec5_operating_duration_years#question"
+   ]
+  },
+  {
+   "question": "sec5_operating_location",
+   "column": "rt004.s05a_q04",
+   "evidence": [
+    "rt004.s05a_q04#label",
+    "rt004.s05a_q04#domain",
+    "scribe-aa2f36b63da4:sec5_operating_location#question",
+    "scribe-aa2f36b63da4:sec5_operating_location#codes"
+   ]
+  },
+  {
+   "question": "sec5_months_operated_past12m",
+   "column": "rt004.s05a_q05",
+   "evidence": [
+    "rt004.s05a_q05#label",
+    "rt004.s05a_q05#domain",
+    "scribe-aa2f36b63da4:sec5_months_operated_past12m#question"
+   ]
+  },
+  {
+   "question": "sec5_household_share_percent",
+   "column": "rt004.s05a_q06",
+   "evidence": [
+    "rt004.s05a_q06#label",
+    "rt004.s05a_q06#domain",
+    "scribe-aa2f36b63da4:sec5_household_share_percent#question"
+   ]
+  },
+  {
+   "question": "sec5_profit_share_owned_percent",
+   "column": "rt004.s05a_q07",
+   "evidence": [
+    "rt004.s05a_q07#label",
+    "rt004.s05a_q07#domain",
+    "scribe-aa2f36b63da4:sec5_profit_share_owned_percent#question"
+   ]
+  },
+  {
+   "question": "sec5_customers_1st",
+   "column": "rt004.s05a_q08",
+   "evidence": [
+    "rt004.s05a_q08#label",
+    "rt004.s05a_q08#domain",
+    "scribe-aa2f36b63da4:sec5_customers_1st#question",
+    "scribe-aa2f36b63da4:sec5_customers_1st#codes"
+   ]
+  },
+  {
+   "question": "sec5_registered_govt",
+   "column": "rt004.s05a_q09",
+   "evidence": [
+    "rt004.s05a_q09#label",
+    "rt004.s05a_q09#domain",
+    "scribe-aa2f36b63da4:sec5_registered_govt#question",
+    "scribe-aa2f36b63da4:sec5_registered_govt#codes"
+   ]
+  },
+  {
+   "question": "sec5_finance_source_1st",
+   "column": "rt004.s05a_q10",
+   "evidence": [
+    "rt004.s05a_q10#label",
+    "rt004.s05a_q10#domain",
+    "scribe-aa2f36b63da4:sec5_finance_source_1st#question",
+    "scribe-aa2f36b63da4:sec5_finance_source_1st#codes"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_workers_roster_ids",
+   "column": "rt004.s05a_q_2",
+   "evidence": [
+    "rt004.s05a_q_2#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_workers_roster_ids#question"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_workers_roster_ids",
+   "column": "rt004.s05a_q_3",
+   "evidence": [
+    "rt004.s05a_q_3#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_workers_roster_ids#question"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_workers_roster_ids",
+   "column": "rt004.s05a_q_4",
+   "evidence": [
+    "rt004.s05a_q_4#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_workers_roster_ids#question"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_workers_roster_ids",
+   "column": "rt004.s05a_q_5",
+   "evidence": [
+    "rt004.s05a_q_5#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_workers_roster_ids#question"
+   ]
+  },
+  {
+   "question": "sec5_operating_duration_months",
+   "column": "rt004.s05a_q_6",
+   "evidence": [
+    "rt004.s05a_q_6#label",
+    "rt004.s05a_q_6#domain",
+    "scribe-aa2f36b63da4:sec5_operating_duration_months#question"
+   ]
+  },
+  {
+   "question": "sec5_customers_2nd",
+   "column": "rt004.s05a_q_7",
+   "evidence": [
+    "rt004.s05a_q_7#label",
+    "rt004.s05a_q_7#domain",
+    "scribe-aa2f36b63da4:sec5_customers_2nd#question",
+    "scribe-aa2f36b63da4:sec5_customers_2nd#codes"
+   ]
+  },
+  {
+   "question": "sec5_finance_source_2nd",
+   "column": "rt004.s05a_q_8",
+   "evidence": [
+    "rt004.s05a_q_8#label",
+    "rt004.s05a_q_8#domain",
+    "scribe-aa2f36b63da4:sec5_finance_source_2nd#question",
+    "scribe-aa2f36b63da4:sec5_finance_source_2nd#codes"
+   ]
+  },
+  {
+   "question": "sec5_emp_count_12mo",
+   "column": "rt004.s05b_q11",
+   "evidence": [
+    "rt004.s05b_q11#label",
+    "rt004.s05b_q11#domain",
+    "scribe-aa2f36b63da4:sec5_emp_count_12mo#question"
+   ]
+  },
+  {
+   "question": "sec5_problem_business_12mo",
+   "column": "rt004.s05b_q12",
+   "evidence": [
+    "rt004.s05b_q12#label",
+    "rt004.s05b_q12#domain",
+    "scribe-aa2f36b63da4:sec5_problem_business_12mo#question",
+    "scribe-aa2f36b63da4:sec5_problem_business_12mo#codes"
+   ]
+  },
+  {
+   "question": "sec5_gross_revenues_12mo_taka",
+   "column": "rt004.s05b_q13",
+   "evidence": [
+    "rt004.s05b_q13#label",
+    "scribe-aa2f36b63da4:sec5_gross_revenues_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_wage_expenditures_12mo_taka",
+   "column": "rt004.s05b_q14",
+   "evidence": [
+    "rt004.s05b_q14#label",
+    "scribe-aa2f36b63da4:sec5_wage_expenditures_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_rent_expenditure_12mo_taka",
+   "column": "rt004.s05b_q15",
+   "evidence": [
+    "rt004.s05b_q15#label",
+    "scribe-aa2f36b63da4:sec5_rent_expenditure_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_raw_materials_expenditure_12mo_taka",
+   "column": "rt004.s05b_q16",
+   "evidence": [
+    "rt004.s05b_q16#label",
+    "scribe-aa2f36b63da4:sec5_raw_materials_expenditure_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_fuel_energy_expenditure_12mo_taka",
+   "column": "rt004.s05b_q17",
+   "evidence": [
+    "rt004.s05b_q17#label",
+    "scribe-aa2f36b63da4:sec5_fuel_energy_expenditure_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_finished_goods_resale_expenditure_12mo_taka",
+   "column": "rt004.s05b_q18",
+   "evidence": [
+    "rt004.s05b_q18#label",
+    "scribe-aa2f36b63da4:sec5_finished_goods_resale_expenditure_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_other_operating_expenses_12mo_taka",
+   "column": "rt004.s05b_q19",
+   "evidence": [
+    "rt004.s05b_q19#label",
+    "scribe-aa2f36b63da4:sec5_other_operating_expenses_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_net_revenues_taka",
+   "column": "rt004.s05b_q20",
+   "evidence": [
+    "rt004.s05b_q20#label",
+    "scribe-aa2f36b63da4:sec5_net_revenues_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_capital_goods_expenditure_12mo_taka",
+   "column": "rt004.s05b_q21",
+   "evidence": [
+    "rt004.s05b_q21#label",
+    "scribe-aa2f36b63da4:sec5_capital_goods_expenditure_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_sales_assets_12mo_taka",
+   "column": "rt004.s05b_q22",
+   "evidence": [
+    "rt004.s05b_q22#label",
+    "scribe-aa2f36b63da4:sec5_sales_assets_12mo_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_enterprise_sale_value_today_taka",
+   "column": "rt004.s05b_q23",
+   "evidence": [
+    "rt004.s05b_q23#label",
+    "scribe-aa2f36b63da4:sec5_enterprise_sale_value_today_taka#question"
+   ]
+  },
+  {
+   "question": "sec5_problem_business_12mo",
+   "column": "rt004.s05b_q_1",
+   "evidence": [
+    "rt004.s05b_q_1#label",
+    "rt004.s05b_q_1#domain",
+    "scribe-aa2f36b63da4:sec5_problem_business_12mo#question",
+    "scribe-aa2f36b63da4:sec5_problem_business_12mo#codes"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt004.s05a_q_1",
+   "reason": "Column label indicates an 'industry' code for enterprise kind, but the associated instrument only has an open-text enterprise kind question and no separate industry classification question; likely post-coded/derived.",
+   "evidence": [
+    "rt004.s05a_q_1#label",
+    "t2",
+    "t3",
+    "t1#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,530 @@
+{
+ "request_id": "20-describe_columns-rt015",
+ "links": [
+  {
+   "question": "s9a_item_code_printed",
+   "column": "rt015.item",
+   "evidence": [
+    "rt015.item#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d01",
+   "evidence": [
+    "rt015.s09a1d01#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d02",
+   "evidence": [
+    "rt015.s09a1d02#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d03",
+   "evidence": [
+    "rt015.s09a1d03#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d04",
+   "evidence": [
+    "rt015.s09a1d04#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d05",
+   "evidence": [
+    "rt015.s09a1d05#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d06",
+   "evidence": [
+    "rt015.s09a1d06#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d07",
+   "evidence": [
+    "rt015.s09a1d07#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d08",
+   "evidence": [
+    "rt015.s09a1d08#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d09",
+   "evidence": [
+    "rt015.s09a1d09#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d10",
+   "evidence": [
+    "rt015.s09a1d10#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d11",
+   "evidence": [
+    "rt015.s09a1d11#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d12",
+   "evidence": [
+    "rt015.s09a1d12#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d13",
+   "evidence": [
+    "rt015.s09a1d13#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_quantity",
+   "column": "rt015.s09a1d14",
+   "evidence": [
+    "rt015.s09a1d14#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1d_2",
+   "evidence": [
+    "rt015.s09a1d_2#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1d_5",
+   "evidence": [
+    "rt015.s09a1d_5#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1d_8",
+   "evidence": [
+    "rt015.s09a1d_8#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_11",
+   "evidence": [
+    "rt015.s09a1_11#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_14",
+   "evidence": [
+    "rt015.s09a1_14#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_17",
+   "evidence": [
+    "rt015.s09a1_17#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_20",
+   "evidence": [
+    "rt015.s09a1_20#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_23",
+   "evidence": [
+    "rt015.s09a1_23#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_26",
+   "evidence": [
+    "rt015.s09a1_26#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_29",
+   "evidence": [
+    "rt015.s09a1_29#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_32",
+   "evidence": [
+    "rt015.s09a1_32#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_35",
+   "evidence": [
+    "rt015.s09a1_35#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_38",
+   "evidence": [
+    "rt015.s09a1_38#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_value_taka",
+   "column": "rt015.s09a1_41",
+   "evidence": [
+    "rt015.s09a1_41#label",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1d_3",
+   "evidence": [
+    "rt015.s09a1d_3#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1d_6",
+   "evidence": [
+    "rt015.s09a1d_6#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1d_9",
+   "evidence": [
+    "rt015.s09a1d_9#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_12",
+   "evidence": [
+    "rt015.s09a1_12#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_15",
+   "evidence": [
+    "rt015.s09a1_15#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_18",
+   "evidence": [
+    "rt015.s09a1_18#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_21",
+   "evidence": [
+    "rt015.s09a1_21#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_24",
+   "evidence": [
+    "rt015.s09a1_24#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_27",
+   "evidence": [
+    "rt015.s09a1_27#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_30",
+   "evidence": [
+    "rt015.s09a1_30#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_33",
+   "evidence": [
+    "rt015.s09a1_33#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_36",
+   "evidence": [
+    "rt015.s09a1_36#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_39",
+   "evidence": [
+    "rt015.s09a1_39#codes",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s9a_day1_major_source",
+   "column": "rt015.s09a1_42",
+   "evidence": [
+    "rt015.s09a1_42#codes",
+    "t5#domain"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt015.kcal",
+   "reason": "No candidate question in instrument 9A1-1 corresponds to kcal per 100 gm/ml; appears to be a derived nutrient lookup value rather than survey response.",
+   "evidence": [
+    "rt015.kcal#label",
+    "t5#placement"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  },
+  {
+   "column": "rt015.s09a1d_1",
+   "reason": "Column is a unit field for day 1 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1d_1#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1d_4",
+   "reason": "Column is a unit field for day 2 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1d_4#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1d_7",
+   "reason": "Column is a unit field for day 3 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1d_7#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_10",
+   "reason": "Column is a unit field for day 4 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_10#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_13",
+   "reason": "Column is a unit field for day 5 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_13#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_16",
+   "reason": "Column is a unit field for day 6 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_16#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_19",
+   "reason": "Column is a unit field for day 7 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_19#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_22",
+   "reason": "Column is a unit field for day 8 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_22#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_25",
+   "reason": "Column is a unit field for day 9 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_25#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_28",
+   "reason": "Column is a unit field for day 10 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_28#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_31",
+   "reason": "Column is a unit field for day 11 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_31#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_34",
+   "reason": "Column is a unit field for day 12 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_34#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_37",
+   "reason": "Column is a unit field for day 13 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_37#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.s09a1_40",
+   "reason": "Column is a unit field for day 14 quantity; instrument candidate questions include quantity/value/major source but no unit variable.",
+   "evidence": [
+    "rt015.s09a1_40#label",
+    "t5#question"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt015.t",
+   "reason": "Auxiliary total indicator variable (0/1) does not correspond to any questionnaire item in instrument module 9A1-1; likely derived during data processing.",
+   "evidence": [
+    "rt015.t#label",
+    "rt015.t#codes"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  }
+ ],
+ "notes": "Linked day-specific quantity/value/source columns to the generic 9A1-1 items; unit columns appear present in data but missing from extracted questionnaire variables."
+}

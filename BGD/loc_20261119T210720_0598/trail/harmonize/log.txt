@@ -1,0 +1,136 @@
+# harmonize BGD_2010_HIES @ 2026-11-19T21:07:26+00:00
+  data=C:\temp\test\surveys\BGD_2010_HIES\Data  modules=['MOD-IDN', 'MOD-GEO', 'MOD-DEM']  direct=True
+  profile review: approved by zs (profile ba1f2f15b4ba)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+eaa25bb9; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'BGD_2010_HIES/Data': the data is unversioned
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3
+    input profile/file_links.json  sha256=6388381f4e39b309e972c93f0b36db83a259191a9a59f818db0e2718acb1644e
+    input profile/instruments.json  sha256=f72ee7f1073d4c470a1804e3e9ada47716bd72eca2f7670d6d462f24a5cecea5
+    input profile/key_checks.json  sha256=b1f5da74a394190ef3b4f970fe0e0cf68feceab3176cd7f9317f257178156d1d
+    input profile/overlay.json  sha256=883e655037cf1ebd821e7fefd08413b305dbc51ad3b088e326faec46bd590fa3
+    input profile/questionnaire/HIES_English_Questionnaire_2010.svis.json  sha256=f1cc00dc90a6f9b58a655ec0e2508a2a180358287b11301e39118591f021947b
+    profile ba1f2f15b4baf72238d427604aa0a7cbf01585da1ac41225c6c6cd5ef21ad59f — approved by zs at 2026-11-19T21:07:27+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument 'args_note'
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument '--in'
+    received trail\harmonize\ai_responses\01.json via submit (2174 bytes)
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (4196 bytes)
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (5390 bytes)
+    notes: Targets not routed here (e.g., agecat, language, everattend, mineducatage) did not appear in the survey index/search results and can be handled as absent/derived at authoring.
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument '--in'
+    received trail\harmonize\ai_responses\04.json via submit (2778 bytes, + MOD-IDN-intdate_parse.py)
+    reconciled binding_id 'B-intmonth' → 'B-int_month' (by target VAR-intmonth)
+    reconciled binding_id 'B-intyear' → 'B-int_year' (by target VAR-intyear)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\05_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (8807 bytes, + GEO-psu_int.py)
+    reconciled binding_id 'B-geocode' → 'B-geo_code' (by target VAR-geocode)
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\06_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (17205 bytes, + MOD-DEM-dem_derivations.py)
+    reconciled binding_id 'B-eyedisability' → 'B-eye_dsablty' (by target VAR-eyedisability)
+    reconciled binding_id 'B-heardisability' → 'B-hear_dsablty' (by target VAR-heardisability)
+    reconciled binding_id 'B-walkdisability' → 'B-walk_dsablty' (by target VAR-walkdisability)
+    reconciled binding_id 'B-concentrationdisorder' → 'B-conc_dsord' (by target VAR-concentrationdisorder)
+    reconciled binding_id 'B-selfcaredisability' → 'B-slfcre_dsablty' (by target VAR-selfcaredisability)
+    reconciled binding_id 'B-communicationdisability' → 'B-comm_dsablty' (by target VAR-communicationdisability)
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\07_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (1118 bytes)
+    notes: Contract reminder: preludes should treat sentinel missings as NaN before arithmetic/logic (see t1#3.3).
+    prelude GEO-psu_int: a concern (advisory: its dry run passed) — Derivation claims “without renumbering”, but the code rounds numeric values (psu_num.round()) before casting to Int64, which can change non-integer PSU codes (e.g., '1.6' -> 2). It also assumes column
+    prelude MOD-DEM-dem_derivations: a concern (advisory: its dry run passed) — Does not sanitize Survey Solutions sentinel missings (e.g., -999999999 / similar) before logic. For literacy/everattend, unexpected large/sentinel numeric codes would be treated as valid values (e.g.,
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-geo_code: raw_value 'rt001.region' (from correspondence.geography)
+        resolved: B-educat4: raw_value 'rt002.s02a_q05' (from correspondence.education)
+        resolved: B-educat5: raw_value 'rt002.s02a_q05' (from correspondence.education)
+        resolved: B-educat7: raw_value 'rt002.s02a_q05' (from correspondence.education)
+        resolved: B-educy: raw_value 'rt002.s02a_q05' (from correspondence.education)
+        resolved: B-int_month: table 'rt001' (from column '__derived.intmonth__')
+        resolved: B-int_year: table 'rt001' (from column '__derived.intyear__')
+        resolved: B-psu: table 'rt001' (from column '__derived.psu_int__')
+        resolved: B-subnatid1: table 'rt001' (from column 'region')
+        resolved: B-subnatid2: table 'rt001' (from column 'district')
+        resolved: B-subnatid3: table 'rt001' (from column 'thana')
+        resolved: B-subnatid4: table 'rt001' (from column 'union')
+        resolved: B-subnatidsurvey: table 'rt001' (from column 'region')
+        resolved: B-urban: table 'rt001' (from column 'spc')
+        resolved: B-age: table 'rt002' (from column '__derived.age__')
+        resolved: B-childmth: table 'rt002' (from column '__derived.childmth__')
+        resolved: B-childyr: table 'rt002' (from column '__derived.age__')
+        resolved: B-comm_dsablty: table 'rt002' (from column 's03d_q17')
+        resolved: B-conc_dsord: table 'rt002' (from column 's03d_q11')
+        resolved: B-everattend: table 'rt002' (from column '__derived.everattend__')
+        resolved: B-eye_dsablty: table 'rt002' (from column 's03d_q02')
+        resolved: B-hear_dsablty: table 'rt002' (from column 's03d_q05')
+        resolved: B-literacy: table 'rt002' (from column '__derived.literacy__')
+        resolved: B-male: table 'rt002' (from column 's01a_q02')
+        resolved: B-marital: table 'rt002' (from column 's01a_q06')
+        resolved: B-relationcs: table 'rt002' (from column 's01a_q03')
+        resolved: B-relationharm: table 'rt002' (from column 's01a_q03')
+        resolved: B-school: table 'rt002' (from column 's02b_q01')
+        resolved: B-slfcre_dsablty: table 'rt002' (from column 's03d_q14')
+        resolved: B-walk_dsablty: table 'rt002' (from column 's03d_q08')
+        kind: rt001.wgt: numeric
+        kind: rt001.region: numeric
+        kind: rt001.stratum: string
+        kind: rt001.district: numeric
+        kind: rt001.thana: numeric
+        kind: rt001.union: numeric
+        kind: rt001.spc: string
+        kind: rt002.s03d_q17: numeric
+        kind: rt002.s03d_q11: numeric
+        kind: rt002.s02a_q05: numeric
+        kind: rt002.s03d_q02: numeric
+        kind: rt002.s03d_q05: numeric
+        kind: rt002.s01a_q02: numeric
+        kind: rt002.s01a_q06: numeric
+        kind: rt002.s01a_q03: numeric
+        kind: rt002.s02b_q01: numeric
+        kind: rt002.s03d_q14: numeric
+        kind: rt002.s03d_q08: numeric
+        resolved: B-int_month: unit_keys ['psu', 'hhold'] (from data_scan)
+        resolved: B-int_year: unit_keys ['psu', 'hhold'] (from data_scan)
+        resolved: B-geo_code: unit_keys ['psu', 'hhold'] (from data_scan)
+      VALID: hspec.json stamped (validator v2, 2026-11-19T21:20:46+00:00); coverage bound 40, documented 8
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      PASS — 55580 rows, 40 target(s); contract clean. Outputs in C:\Users\wb327173\.harmon\work\runs\loc_20261119T210720_0598\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb327173\.harmon\work\runs\loc_20261119T210720_0598\output\quality.json: 40 targets; 6/107 checks flagged; 35 universe cells; no reference
+  CHECK F: ok — 40 targets; 6/107 checks flagged; 35 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==
+
+>> 6 target(s) failed in the last run, but their determination has changed since: whether the change fixed them is known after the next run — re-run the same command: VAR-age, VAR-childmth, VAR-childyr, VAR-everattend, VAR-literacy, VAR-psu

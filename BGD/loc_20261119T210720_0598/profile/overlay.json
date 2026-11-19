@@ -1,0 +1,1739 @@
+{
+  "grain": {
+    "household_key": [
+      "psu",
+      "hhold"
+    ],
+    "person_key": [
+      "psu",
+      "hhold",
+      "idcode"
+    ],
+    "roster": "rt002",
+    "weight": "wgt"
+  },
+  "links": [
+    {
+      "column": "rt001.district",
+      "question": "geo_district_code"
+    },
+    {
+      "column": "rt001.mouza",
+      "question": "geo_mouza_mohalla_code"
+    },
+    {
+      "column": "rt001.region",
+      "question": "geo_region_code"
+    },
+    {
+      "column": "rt001.s06a_q01",
+      "question": "sec6_q1_respondent_id"
+    },
+    {
+      "column": "rt001.s06a_q02",
+      "question": "sec6_q2_rooms_occupied"
+    },
+    {
+      "column": "rt001.s06a_q03",
+      "question": "sec6_q3_separate_dining"
+    },
+    {
+      "column": "rt001.s06a_q04",
+      "question": "sec6_q4_separate_kitchen"
+    },
+    {
+      "column": "rt001.s06a_q05",
+      "question": "sec6_q5_wall_material"
+    },
+    {
+      "column": "rt001.s06a_q06",
+      "question": "sec6_q6_roof_material"
+    },
+    {
+      "column": "rt001.s06a_q07",
+      "question": "sec6_q7_covered_area_sqft"
+    },
+    {
+      "column": "rt001.s06a_q08",
+      "question": "sec6_q8_latrine_type"
+    },
+    {
+      "column": "rt001.s06a_q09",
+      "question": "sec6_q9_drinking_water_main"
+    },
+    {
+      "column": "rt001.s06a_q10",
+      "question": "sec6_q10_tubewell_tested_arsenic"
+    },
+    {
+      "column": "rt001.s06a_q11",
+      "question": "sec6_q11_arsenic_found"
+    },
+    {
+      "column": "rt001.s06a_q12",
+      "question": "sec6_q12_drinking_water_alternative"
+    },
+    {
+      "column": "rt001.s06a_q13",
+      "question": "sec6_q13_water_other_use_main"
+    },
+    {
+      "column": "rt001.s06a_q14",
+      "question": "sec6_q14_electricity_connection"
+    },
+    {
+      "column": "rt001.s06a_q15",
+      "question": "sec6_q15_electricity_hours_per_day"
+    },
+    {
+      "column": "rt001.s06a_q16",
+      "question": "sec6_q16_own_mobile_phone"
+    },
+    {
+      "column": "rt001.s06a_q17",
+      "question": "sec6_q17_landline_connection"
+    },
+    {
+      "column": "rt001.s06a_q18",
+      "question": "sec6_q18_own_computer"
+    },
+    {
+      "column": "rt001.s06a_q19",
+      "question": "sec6_q19_access_internet_email"
+    },
+    {
+      "column": "rt001.s06a_q20",
+      "question": "sec6_q20_internet_access_mode"
+    },
+    {
+      "column": "rt001.s06a_q21",
+      "question": "sec6_q21_occupancy_status"
+    },
+    {
+      "column": "rt001.s06a_q22",
+      "question": "sec6_q22_dwelling_value_today_taka"
+    },
+    {
+      "column": "rt001.s07a_q01",
+      "question": "sec7a_q1_land_owned_cultivable_decimal"
+    },
+    {
+      "column": "rt001.s07a_q02",
+      "question": "sec7a_q2_land_owned_homestead_decimal"
+    },
+    {
+      "column": "rt001.s07a_q03",
+      "question": "sec7a_q3_land_noncultivated_decimal"
+    },
+    {
+      "column": "rt001.s07a_q04",
+      "question": "sec7a_q4_land_in_decimal"
+    },
+    {
+      "column": "rt001.s07a_q05",
+      "question": "sec7a_q5_land_out_decimal"
+    },
+    {
+      "column": "rt001.s07a_q06",
+      "question": "sec7a_q6_operating_land_decimal"
+    },
+    {
+      "column": "rt001.s07b_q01",
+      "question": "sec7b_crop01_aus_cultivated"
+    },
+    {
+      "column": "rt001.s07c_q01",
+      "question": "s7c_q1_raise_livestock_poultry"
+    },
+    {
+      "column": "rt001.s07c_q09",
+      "question": "s7c_q9_fishing_fishfarming_12m"
+    },
+    {
+      "column": "rt001.s07c_q13",
+      "question": "s7c_q13_farm_forestry_12m"
+    },
+    {
+      "column": "rt001.s08a_q01",
+      "question": "sec8a_q1_land_property_owned_not_operate"
+    },
+    {
+      "column": "rt001.s08a_q02",
+      "question": "sec8a_q2_cost_to_buy_land_property_owned_taka"
+    },
+    {
+      "column": "rt001.s08a_q03",
+      "question": "sec8a_q3_purchased_land_property_12m"
+    },
+    {
+      "column": "rt001.s08a_q04",
+      "question": "sec8a_q4_spent_purchase_land_property_taka"
+    },
+    {
+      "column": "rt001.s08a_q05",
+      "question": "sec8a_q5_purchased_house_flat_12m"
+    },
+    {
+      "column": "rt001.s08a_q06",
+      "question": "sec8a_q6_spent_purchase_house_flat_taka"
+    },
+    {
+      "column": "rt001.s08a_q07",
+      "question": "sec8a_q7_own_other_assets_not_reported"
+    },
+    {
+      "column": "rt001.s08a_q08",
+      "question": "sec8a_q8_total_worth_other_assets_taka"
+    },
+    {
+      "column": "rt001.s08a_q09",
+      "question": "sec8a_q9_purchased_assets_other_than_land_12m"
+    },
+    {
+      "column": "rt001.s08a_q10",
+      "question": "sec8a_q10_spent_purchase_assets_other_than_land_taka"
+    },
+    {
+      "column": "rt001.s08a_q11",
+      "question": "sec8a_q11_sold_assets_12m"
+    },
+    {
+      "column": "rt001.s08a_q12",
+      "question": "sec8a_q12_amount_from_selling_assets_taka"
+    },
+    {
+      "column": "rt001.s08a_q_1",
+      "question": "sec8a_decimals"
+    },
+    {
+      "column": "rt001.s08b_q01",
+      "question": "sec8b_q1_income_rent_land_12m_taka"
+    },
+    {
+      "column": "rt001.s08b_q02",
+      "question": "sec8b_q2_income_rent_other_property_12m_taka"
+    },
+    {
+      "column": "rt001.s09a1_40",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1_41",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1_42",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1_43",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1_44",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1_45",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1_46",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1_47",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1_48",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1_49",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1_50",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1_51",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1_52",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1_53",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1_54",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1_55",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1_56",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1d01",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d02",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d03",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d04",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d05",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d06",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d07",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d08",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d09",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d10",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d11",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d12",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d13",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d14",
+      "question": "s9a_num_boys_lt10"
+    },
+    {
+      "column": "rt001.s09a1d_1",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1d_2",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1d_3",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1d_4",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1d_5",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09a1d_6",
+      "question": "s9a_num_men_ge10"
+    },
+    {
+      "column": "rt001.s09a1d_7",
+      "question": "s9a_num_women_ge10"
+    },
+    {
+      "column": "rt001.s09a1d_8",
+      "question": "s9a_date"
+    },
+    {
+      "column": "rt001.s09a1d_9",
+      "question": "s9a_num_girls_lt10"
+    },
+    {
+      "column": "rt001.s09b1w1_",
+      "question": "sec9b_day1_7_date"
+    },
+    {
+      "column": "rt001.s09b1w2_",
+      "question": "sec9b_day8_14_date"
+    },
+    {
+      "column": "rt001.spc",
+      "question": "geo_rural_psa_sma_code"
+    },
+    {
+      "column": "rt001.team",
+      "question": "team_number"
+    },
+    {
+      "column": "rt001.thana",
+      "question": "geo_thana_upazilla_code"
+    },
+    {
+      "column": "rt001.union",
+      "question": "geo_union_ward_code"
+    },
+    {
+      "column": "rt002.resid1a",
+      "question": "sec1a_respondent_id_code"
+    },
+    {
+      "column": "rt002.resid1c",
+      "question": "sec1c_respondent_id"
+    },
+    {
+      "column": "rt002.s01a_q01",
+      "question": "sec1a_id_code_roster"
+    },
+    {
+      "column": "rt002.s01a_q02",
+      "question": "sec1a_sex"
+    },
+    {
+      "column": "rt002.s01a_q03",
+      "question": "sec1a_relationship_head"
+    },
+    {
+      "column": "rt002.s01a_q04",
+      "question": "sec1a_age_years"
+    },
+    {
+      "column": "rt002.s01a_q05",
+      "question": "sec1a_religion"
+    },
+    {
+      "column": "rt002.s01a_q06",
+      "question": "sec1a_marital_status"
+    },
+    {
+      "column": "rt002.s01a_q07",
+      "question": "sec1a_earner"
+    },
+    {
+      "column": "rt002.s01a_q08",
+      "question": "sec1a_spouse_id_code"
+    },
+    {
+      "column": "rt002.s01a_q09",
+      "question": "sec1a_father_id_code"
+    },
+    {
+      "column": "rt002.s01a_q10",
+      "question": "sec1a_mother_id_code"
+    },
+    {
+      "column": "rt002.s01a_q11",
+      "question": "sec1a_abroad_6mo_last5y"
+    },
+    {
+      "column": "rt002.s01a_q12",
+      "question": "sec1a_return_reason_abroad"
+    },
+    {
+      "column": "rt002.s01b_q01",
+      "question": "sec1b_work_past7days"
+    },
+    {
+      "column": "rt002.s01b_q02",
+      "question": "sec1b_available_work_past7days"
+    },
+    {
+      "column": "rt002.s01b_q03",
+      "question": "sec1b_looking_for_work_past7days"
+    },
+    {
+      "column": "rt002.s01b_q04",
+      "question": "sec1b_reason_not_available_or_not_looking"
+    },
+    {
+      "column": "rt002.s01c_q01",
+      "question": "sec1c_included_ssn_last12mo"
+    },
+    {
+      "column": "rt002.s01c_q02",
+      "question": "sec1c_main_program_code"
+    },
+    {
+      "column": "rt002.s01c_q03",
+      "question": "sec1c_enlist_month"
+    },
+    {
+      "column": "rt002.s01c_q04",
+      "question": "sec1c_entitled_taka"
+    },
+    {
+      "column": "rt002.s01c_q05",
+      "question": "sec1c_received_taka"
+    },
+    {
+      "column": "rt002.s01c_q06",
+      "question": "sec1c_spend_to_be_included_taka"
+    },
+    {
+      "column": "rt002.s01c_q07",
+      "question": "sec1c_cause_not_included_q7"
+    },
+    {
+      "column": "rt002.s01c_q_1",
+      "question": "sec1c_enlist_year"
+    },
+    {
+      "column": "rt002.s01c_q_2",
+      "question": "sec1c_entitled_goods_code"
+    },
+    {
+      "column": "rt002.s01c_q_3",
+      "question": "sec1c_entitled_kg"
+    },
+    {
+      "column": "rt002.s01c_q_4",
+      "question": "sec1c_received_goods_code"
+    },
+    {
+      "column": "rt002.s01c_q_5",
+      "question": "sec1c_received_kg"
+    },
+    {
+      "column": "rt002.s02a_q03",
+      "question": "sec2a_q3_can_read_letter"
+    },
+    {
+      "column": "rt002.s02a_q04",
+      "question": "sec2a_q4_can_write_letter"
+    },
+    {
+      "column": "rt002.s02a_q05",
+      "question": "sec2a_q5_highest_class_completed"
+    },
+    {
+      "column": "rt002.s02a_q06",
+      "question": "sec2a_q6_where_last_or_current_study"
+    },
+    {
+      "column": "rt002.s02a_q07",
+      "question": "sec2a_q7_type_school_institution"
+    },
+    {
+      "column": "rt002.s02b__10",
+      "question": "edu_exp_12m_transport_cost"
+    },
+    {
+      "column": "rt002.s02b__11",
+      "question": "edu_exp_12m_tiffin_cost"
+    },
+    {
+      "column": "rt002.s02b__12",
+      "question": "edu_exp_12m_internet_email_edu"
+    },
+    {
+      "column": "rt002.s02b__13",
+      "question": "edu_exp_12m_donation_edu"
+    },
+    {
+      "column": "rt002.s02b__14",
+      "question": "edu_exp_12m_other_amt"
+    },
+    {
+      "column": "rt002.s02b__15",
+      "question": "edu_exp_12m_total"
+    },
+    {
+      "column": "rt002.s02b_q01",
+      "question": "edu_cur_attend"
+    },
+    {
+      "column": "rt002.s02b_q02",
+      "question": "edu_class_attend"
+    },
+    {
+      "column": "rt002.s02b_q03",
+      "question": "edu_stipend_primary"
+    },
+    {
+      "column": "rt002.s02b_q04",
+      "question": "edu_stipend_primary_amt_12m"
+    },
+    {
+      "column": "rt002.s02b_q05",
+      "question": "edu_stipend_secondary"
+    },
+    {
+      "column": "rt002.s02b_q06",
+      "question": "edu_stipend_secondary_amt_12m"
+    },
+    {
+      "column": "rt002.s03b_q01",
+      "question": "ch_birth_month"
+    },
+    {
+      "column": "rt002.s03b_q02",
+      "question": "ch_age_months"
+    },
+    {
+      "column": "rt002.s03b_q03",
+      "question": "ch_ever_immunized"
+    },
+    {
+      "column": "rt002.s03b_q04",
+      "question": "ch_immunization_card_available"
+    },
+    {
+      "column": "rt002.s03b_q05",
+      "question": "ch_bcg_received"
+    },
+    {
+      "column": "rt002.s03b_q08",
+      "question": "ch_vitamin_a_12mo"
+    },
+    {
+      "column": "rt002.s03b_q_1",
+      "question": "ch_birth_year"
+    },
+    {
+      "column": "rt002.s03b_q_2",
+      "question": "ch_dpt1_received"
+    },
+    {
+      "column": "rt002.s03b_q_3",
+      "question": "ch_dpt2_received"
+    },
+    {
+      "column": "rt002.s03b_q_4",
+      "question": "ch_dpt3_received"
+    },
+    {
+      "column": "rt002.s03b_q_5",
+      "question": "ch_polio1_received"
+    },
+    {
+      "column": "rt002.s03b_q_6",
+      "question": "ch_polio2_received"
+    },
+    {
+      "column": "rt002.s03b_q_7",
+      "question": "ch_polio3_received"
+    },
+    {
+      "column": "rt002.s03b_q_8",
+      "question": "ch_measles_received"
+    },
+    {
+      "column": "rt002.s03b_q_9",
+      "question": "ch_hepatitis_received"
+    },
+    {
+      "column": "rt002.s03c_q01",
+      "question": "1"
+    },
+    {
+      "column": "rt002.s03c_q02",
+      "question": "2"
+    },
+    {
+      "column": "rt002.s03c_q03",
+      "question": "3"
+    },
+    {
+      "column": "rt002.s03c_q05",
+      "question": "5"
+    },
+    {
+      "column": "rt002.s03c_q06",
+      "question": "6"
+    },
+    {
+      "column": "rt002.s03c_q09",
+      "question": "9"
+    },
+    {
+      "column": "rt002.s03d_q02",
+      "question": "sec3_partd_col2_seeing_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q03",
+      "question": "sec3_partd_col3_seeing_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q04",
+      "question": "sec3_partd_col4_seeing_cause"
+    },
+    {
+      "column": "rt002.s03d_q05",
+      "question": "sec3_partd_col5_hearing_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q06",
+      "question": "sec3_partd_col6_hearing_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q07",
+      "question": "sec3_partd_col7_hearing_cause"
+    },
+    {
+      "column": "rt002.s03d_q08",
+      "question": "sec3_partd_col8_walking_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q09",
+      "question": "sec3_partd_col9_walking_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q10",
+      "question": "sec3_partd_col10_walking_cause"
+    },
+    {
+      "column": "rt002.s03d_q11",
+      "question": "sec3_partd_col11_remembering_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q12",
+      "question": "sec3_partd_col12_remembering_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q13",
+      "question": "sec3_partd_col13_remembering_cause"
+    },
+    {
+      "column": "rt002.s03d_q14",
+      "question": "sec3_partd_col14_selfcare_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q15",
+      "question": "sec3_partd_col15_selfcare_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q16",
+      "question": "sec3_partd_col16_selfcare_cause"
+    },
+    {
+      "column": "rt002.s03d_q17",
+      "question": "sec3_partd_col17_communicating_difficulty"
+    },
+    {
+      "column": "rt002.s03d_q18",
+      "question": "sec3_partd_col18_communicating_age_onset"
+    },
+    {
+      "column": "rt002.s03d_q19",
+      "question": "sec3_partd_col19_communicating_cause"
+    },
+    {
+      "column": "rt002.s03d_q20",
+      "question": "sec3_partd_col20_reduce_work"
+    },
+    {
+      "column": "rt002.s03d_q_1",
+      "question": "sec3_partd_col20_reduce_work"
+    },
+    {
+      "column": "rt002.s03d_q_2",
+      "question": "sec3_partd_col20_reduce_work"
+    },
+    {
+      "column": "rt003.idcode",
+      "question": "sec4_parta_id_code_roster"
+    },
+    {
+      "column": "rt003.idcode2",
+      "question": "sec4b_roster_id"
+    },
+    {
+      "column": "rt003.s04a_q01",
+      "question": "sec4_parta_activity_description"
+    },
+    {
+      "column": "rt003.s04a_q02",
+      "question": "sec4_parta_months_activity_12m"
+    },
+    {
+      "column": "rt003.s04a_q03",
+      "question": "sec4_parta_days_per_month"
+    },
+    {
+      "column": "rt003.s04a_q04",
+      "question": "sec4_parta_hours_per_day"
+    },
+    {
+      "column": "rt003.s04a_q05",
+      "question": "sec4_parta_rural_urban"
+    },
+    {
+      "column": "rt003.s04a_q06",
+      "question": "sec4_parta_major_field"
+    },
+    {
+      "column": "rt003.s04a_q07",
+      "question": "sec4_parta_agri_employment_status"
+    },
+    {
+      "column": "rt003.s04a_q08",
+      "question": "sec4_parta_nonagri_work_status"
+    },
+    {
+      "column": "rt003.s04a_q_1",
+      "question": "sec4_parta_occupation_code"
+    },
+    {
+      "column": "rt003.s04a_q_2",
+      "question": "sec4_parta_industry_code"
+    },
+    {
+      "column": "rt003.s04a_q_3",
+      "question": "sec4_parta_district_code"
+    },
+    {
+      "column": "rt003.s04b_q01",
+      "question": "sec4b_paid_daily"
+    },
+    {
+      "column": "rt003.s04b_q02",
+      "question": "sec4b_daily_wage_cash_highest"
+    },
+    {
+      "column": "rt003.s04b_q03",
+      "question": "sec4b_received_inkind"
+    },
+    {
+      "column": "rt003.s04b_q04",
+      "question": "sec4b_inkind_type"
+    },
+    {
+      "column": "rt003.s04b_q05",
+      "question": "sec4b_inkind_qty_kg"
+    },
+    {
+      "column": "rt003.s04b_q06",
+      "question": "sec4b_org_type"
+    },
+    {
+      "column": "rt003.s04b_q07",
+      "question": "sec4b_gross_monthly_remuneration_taka"
+    },
+    {
+      "column": "rt003.s04b_q08",
+      "question": "sec4b_net_takehome_monthly_taka"
+    },
+    {
+      "column": "rt003.s04b_q09",
+      "question": "sec4b_inkind_other_benefits_12m_taka"
+    },
+    {
+      "column": "rt003.s04b_q_1",
+      "question": "sec4b_daily_wage_cash_lowest"
+    },
+    {
+      "column": "rt003.s04b_q_2",
+      "question": "sec4b_daily_wage_cash_average"
+    },
+    {
+      "column": "rt003.s04b_q_3",
+      "question": "sec4b_inkind_value_taka"
+    },
+    {
+      "column": "rt004.s05a_q01",
+      "question": "sec5_enterprise_kind"
+    },
+    {
+      "column": "rt004.s05a_q02",
+      "question": "sec5_enterprise_workers_roster_ids"
+    },
+    {
+      "column": "rt004.s05a_q03",
+      "question": "sec5_operating_duration_years"
+    },
+    {
+      "column": "rt004.s05a_q04",
+      "question": "sec5_operating_location"
+    },
+    {
+      "column": "rt004.s05a_q05",
+      "question": "sec5_months_operated_past12m"
+    },
+    {
+      "column": "rt004.s05a_q06",
+      "question": "sec5_household_share_percent"
+    },
+    {
+      "column": "rt004.s05a_q07",
+      "question": "sec5_profit_share_owned_percent"
+    },
+    {
+      "column": "rt004.s05a_q08",
+      "question": "sec5_customers_1st"
+    },
+    {
+      "column": "rt004.s05a_q09",
+      "question": "sec5_registered_govt"
+    },
+    {
+      "column": "rt004.s05a_q10",
+      "question": "sec5_finance_source_1st"
+    },
+    {
+      "column": "rt004.s05a_q_2",
+      "question": "sec5_enterprise_workers_roster_ids"
+    },
+    {
+      "column": "rt004.s05a_q_3",
+      "question": "sec5_enterprise_workers_roster_ids"
+    },
+    {
+      "column": "rt004.s05a_q_4",
+      "question": "sec5_enterprise_workers_roster_ids"
+    },
+    {
+      "column": "rt004.s05a_q_5",
+      "question": "sec5_enterprise_workers_roster_ids"
+    },
+    {
+      "column": "rt004.s05a_q_6",
+      "question": "sec5_operating_duration_months"
+    },
+    {
+      "column": "rt004.s05a_q_7",
+      "question": "sec5_customers_2nd"
+    },
+    {
+      "column": "rt004.s05a_q_8",
+      "question": "sec5_finance_source_2nd"
+    },
+    {
+      "column": "rt004.s05b_q11",
+      "question": "sec5_emp_count_12mo"
+    },
+    {
+      "column": "rt004.s05b_q12",
+      "question": "sec5_problem_business_12mo"
+    },
+    {
+      "column": "rt004.s05b_q13",
+      "question": "sec5_gross_revenues_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q14",
+      "question": "sec5_wage_expenditures_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q15",
+      "question": "sec5_rent_expenditure_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q16",
+      "question": "sec5_raw_materials_expenditure_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q17",
+      "question": "sec5_fuel_energy_expenditure_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q18",
+      "question": "sec5_finished_goods_resale_expenditure_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q19",
+      "question": "sec5_other_operating_expenses_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q20",
+      "question": "sec5_net_revenues_taka"
+    },
+    {
+      "column": "rt004.s05b_q21",
+      "question": "sec5_capital_goods_expenditure_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q22",
+      "question": "sec5_sales_assets_12mo_taka"
+    },
+    {
+      "column": "rt004.s05b_q23",
+      "question": "sec5_enterprise_sale_value_today_taka"
+    },
+    {
+      "column": "rt004.s05b_q_1",
+      "question": "sec5_problem_business_12mo"
+    },
+    {
+      "column": "rt005.s06b_q02",
+      "question": "sec6_shock101_experienced"
+    },
+    {
+      "column": "rt005.s06b_q03",
+      "question": "sec6_shock101_start_date"
+    },
+    {
+      "column": "rt005.s06b_q04",
+      "question": "sec6_shock101_duration_days"
+    },
+    {
+      "column": "rt005.s06b_q05",
+      "question": "sec6_shock101_decline_income"
+    },
+    {
+      "column": "rt005.s06b_q06",
+      "question": "sec6_shock101_coping_1st"
+    },
+    {
+      "column": "rt005.s06b_q_1",
+      "question": "sec6_shock101_decline_assets"
+    },
+    {
+      "column": "rt005.s06b_q_2",
+      "question": "sec6_shock101_decline_food_production"
+    },
+    {
+      "column": "rt005.s06b_q_3",
+      "question": "sec6_shock101_decline_food_purchased"
+    },
+    {
+      "column": "rt005.s06b_q_4",
+      "question": "sec6_shock101_coping_2nd"
+    },
+    {
+      "column": "rt005.s06b_q_5",
+      "question": "sec6_shock101_coping_3rd"
+    },
+    {
+      "column": "rt006.s07b_q02",
+      "question": "sec7b_othercrop15_potato_cultivated"
+    },
+    {
+      "column": "rt006.s07b_q03",
+      "question": "sec7b_othercrop15_potato_land_decimal"
+    },
+    {
+      "column": "rt006.s07b_q04",
+      "question": "sec7b_othercrop15_potato_produced_kg"
+    },
+    {
+      "column": "rt006.s07b_q05",
+      "question": "sec7b_othercrop15_potato_consumed_kg"
+    },
+    {
+      "column": "rt006.s07b_q06",
+      "question": "sec7b_othercrop15_potato_sold_kg"
+    },
+    {
+      "column": "rt006.s07b_q07",
+      "question": "sec7b_othercrop15_potato_stock_kg"
+    },
+    {
+      "column": "rt006.s07b_q08",
+      "question": "sec7b_crop01_aus_used_given_to_landlord_kg"
+    },
+    {
+      "column": "rt006.s07b_q_1",
+      "question": "sec7b_othercrop15_potato_unitprice_taka_per_kg"
+    },
+    {
+      "column": "rt006.s07b_q_2",
+      "question": "sec7b_crop01_aus_used_given_for_wages_kg"
+    },
+    {
+      "column": "rt006.s07b_q_3",
+      "question": "sec7b_crop01_aus_used_as_seed_kg"
+    },
+    {
+      "column": "rt006.s07b_q_4",
+      "question": "sec7b_crop01_aus_used_feed_for_animals_kg"
+    },
+    {
+      "column": "rt006.s07b_q_5",
+      "question": "sec7b_crop01_aus_used_waste_kg"
+    },
+    {
+      "column": "rt006.s07b_q_6",
+      "question": "sec7b_crop01_aus_used_other_kg"
+    },
+    {
+      "column": "rt006.s07b_q_7",
+      "question": "sec7b_crop01_aus_used_total_kg"
+    },
+    {
+      "column": "rt007.s07c_q02",
+      "question": "s7c_lvstk_201_own_number"
+    },
+    {
+      "column": "rt007.s07c_q03",
+      "question": "s7c_lvstk_201_born_purch_number_12m"
+    },
+    {
+      "column": "rt007.s07c_q04",
+      "question": "s7c_lvstk_201_died_sold_number_12m"
+    },
+    {
+      "column": "rt007.s07c_q05",
+      "question": "s7c_lvstk_201_consumed_number_12m"
+    },
+    {
+      "column": "rt007.s07c_q_1",
+      "question": "s7c_lvstk_201_own_value_taka"
+    },
+    {
+      "column": "rt007.s07c_q_2",
+      "question": "s7c_lvstk_201_born_purch_value_taka_12m"
+    },
+    {
+      "column": "rt007.s07c_q_3",
+      "question": "s7c_lvstk_201_died_sold_value_taka_12m"
+    },
+    {
+      "column": "rt007.s07c_q_4",
+      "question": "s7c_lvstk_201_consumed_value_taka_12m"
+    },
+    {
+      "column": "rt008.s07c_q06",
+      "question": "s7c_lvprod_211_produce_qty_12m"
+    },
+    {
+      "column": "rt008.s07c_q07",
+      "question": "s7c_lvprod_211_sold_qty_12m"
+    },
+    {
+      "column": "rt008.s07c_q08",
+      "question": "s7c_lvprod_211_consumed_qty_12m"
+    },
+    {
+      "column": "rt008.s07c_q_1",
+      "question": "s7c_lvprod_211_produce_value_taka_12m"
+    },
+    {
+      "column": "rt008.s07c_q_2",
+      "question": "s7c_lvprod_211_sold_value_taka_12m"
+    },
+    {
+      "column": "rt008.s07c_q_3",
+      "question": "s7c_lvprod_211_consumed_value_taka_12m"
+    },
+    {
+      "column": "rt009.s07c_q10",
+      "question": "s7c_fish_221_produce_qty_kg_12m"
+    },
+    {
+      "column": "rt009.s07c_q11",
+      "question": "s7c_fish_221_sold_qty_kg_12m"
+    },
+    {
+      "column": "rt009.s07c_q12",
+      "question": "s7c_fish_221_consumed_qty_kg_12m"
+    },
+    {
+      "column": "rt009.s07c_q_1",
+      "question": "s7c_fish_221_produce_value_taka_12m"
+    },
+    {
+      "column": "rt009.s07c_q_2",
+      "question": "s7c_fish_221_sold_value_taka_12m"
+    },
+    {
+      "column": "rt009.s07c_q_3",
+      "question": "s7c_fish_221_consumed_value_taka_12m"
+    },
+    {
+      "column": "rt010.s07c_q14",
+      "question": "s7c_ff_231_owned_trees_no"
+    },
+    {
+      "column": "rt010.s07c_q15",
+      "question": "s7c_ff_231_sold_value_taka_12m"
+    },
+    {
+      "column": "rt010.s07c_q16",
+      "question": "s7c_ff_231_consumed_value_taka_12m"
+    },
+    {
+      "column": "rt010.s07c_q_1",
+      "question": "s7c_ff_231_owned_value_taka"
+    },
+    {
+      "column": "rt011.s07d_q01",
+      "question": "s7d_exp_301_spent_any"
+    },
+    {
+      "column": "rt011.s07d_q02",
+      "question": "s7d_exp_301_qty_kg_12m"
+    },
+    {
+      "column": "rt011.s07d_q_1",
+      "question": "s7d_exp_301_spend_taka_12m"
+    },
+    {
+      "column": "rt012.s07e_q01",
+      "question": "s7e_asset_401_own_number"
+    },
+    {
+      "column": "rt012.s07e_q02",
+      "question": "s7e_asset_401_bought_number_12m"
+    },
+    {
+      "column": "rt012.s07e_q03",
+      "question": "s7e_asset_401_sold_number_12m"
+    },
+    {
+      "column": "rt012.s07e_q04",
+      "question": "s7e_asset_401_rental_earn_taka_12m"
+    },
+    {
+      "column": "rt012.s07e_q_1",
+      "question": "s7e_asset_401_own_value_taka"
+    },
+    {
+      "column": "rt012.s07e_q_2",
+      "question": "s7e_asset_401_bought_value_taka_12m"
+    },
+    {
+      "column": "rt012.s07e_q_3",
+      "question": "s7e_asset_401_sold_value_taka_12m"
+    },
+    {
+      "column": "rt013.s08c_q03",
+      "question": "sec8c_roster_name"
+    },
+    {
+      "column": "rt013.s08c_q04",
+      "question": "sec8c_roster_relationship_to_head"
+    },
+    {
+      "column": "rt013.s08c_q06",
+      "question": "sec8c_roster_where_working"
+    },
+    {
+      "column": "rt013.s08c_q07",
+      "question": "sec8c_roster_zila_code"
+    },
+    {
+      "column": "rt013.s08c_q08",
+      "question": "sec8c_roster_country_code"
+    },
+    {
+      "column": "rt013.s08c_q09",
+      "question": "sec8c_roster_age"
+    },
+    {
+      "column": "rt013.s08c_q10",
+      "question": "sec8c_roster_sex"
+    },
+    {
+      "column": "rt013.s08c_q11",
+      "question": "sec8c_roster_education_level_code"
+    },
+    {
+      "column": "rt013.s08c_q12",
+      "question": "sec8c_roster_occupation_code"
+    },
+    {
+      "column": "rt013.s08c_q14",
+      "question": "sec8c_roster_total_money_sent_12m_taka"
+    },
+    {
+      "column": "rt013.s08c_q15",
+      "question": "sec8c_roster_send_method_code"
+    },
+    {
+      "column": "rt013.s08c_q16",
+      "question": "sec8c_roster_goods_sent_item_codes"
+    },
+    {
+      "column": "rt013.s08c_q17",
+      "question": "sec8c_roster_total_value_goods_sent_12m_taka"
+    },
+    {
+      "column": "rt013.s08c_q_2",
+      "question": "sec8c_roster_goods_sent_item_codes"
+    },
+    {
+      "column": "rt013.s08c_q_3",
+      "question": "sec8c_roster_goods_sent_item_codes"
+    },
+    {
+      "column": "rt014.idcode",
+      "question": "s8d_loan_idcode_roster"
+    },
+    {
+      "column": "rt014.s08d_q05",
+      "question": "s8d_q5_loan_source_code"
+    },
+    {
+      "column": "rt014.s08d_q06",
+      "question": "s8d_q6_amount_borrowed_taka"
+    },
+    {
+      "column": "rt014.s08d_q07",
+      "question": "s8d_q7_repayment_period_months"
+    },
+    {
+      "column": "rt014.s08d_q08",
+      "question": "s8d_q8_interest_rate_percent"
+    },
+    {
+      "column": "rt014.s08d_q_1",
+      "question": "s8d_q8_interest_rate_percent"
+    },
+    {
+      "column": "rt014.s08d_q09",
+      "question": "s8d_q9_payment_frequency_code"
+    },
+    {
+      "column": "rt014.s08d_q_2",
+      "question": "s8d_q10_payment_amount_taka"
+    },
+    {
+      "column": "rt014.s08d_q10",
+      "question": "s8d_q11_completed_repayment"
+    },
+    {
+      "column": "rt014.s08d_q11",
+      "question": "s8d_unpaid_loan_amount_taka"
+    },
+    {
+      "column": "rt014.s08d_q12",
+      "question": "s8d_q12_loan_purpose_code"
+    },
+    {
+      "column": "rt014.s08d_q13",
+      "question": "s8d_q13_would_like_more_same_rate"
+    },
+    {
+      "column": "rt014.s08d_q14",
+      "question": "s8d_q14_willing_take_more_amount_taka"
+    },
+    {
+      "column": "rt015.item",
+      "question": "s9a_item_code_printed"
+    },
+    {
+      "column": "rt015.s09a1d01",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d02",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d03",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d04",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d05",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d06",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d07",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d08",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d09",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d10",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d11",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d12",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d13",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d14",
+      "question": "s9a_day1_quantity"
+    },
+    {
+      "column": "rt015.s09a1d_2",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1d_5",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1d_8",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_11",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_14",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_17",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_20",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_23",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_26",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_29",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_32",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_35",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_38",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1_41",
+      "question": "s9a_day1_value_taka"
+    },
+    {
+      "column": "rt015.s09a1d_3",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1d_6",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1d_9",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_12",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_15",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_18",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_21",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_24",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_27",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_30",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_33",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_36",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_39",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt015.s09a1_42",
+      "question": "s9a_day1_major_source"
+    },
+    {
+      "column": "rt016.s09b1w1_",
+      "question": "sec9b_day1_7_quantity"
+    },
+    {
+      "column": "rt016.s09b1w2_",
+      "question": "sec9b_day8_14_quantity"
+    },
+    {
+      "column": "rt016.s09b1w_2",
+      "question": "sec9b_day1_7_value_taka"
+    },
+    {
+      "column": "rt016.s09b1w_5",
+      "question": "sec9b_day8_14_value_taka"
+    },
+    {
+      "column": "rt017.s09c1_q0",
+      "question": "sec9c_col1_value_bought"
+    },
+    {
+      "column": "rt017.s09c1__1",
+      "question": "sec9c_col2_value_produced_received"
+    },
+    {
+      "column": "rt017.s09c1__2",
+      "question": "sec9c_col3_sum_col1_col2"
+    },
+    {
+      "column": "rt018.s09d1_q0",
+      "question": "301_1"
+    },
+    {
+      "column": "rt018.s09d1__1",
+      "question": "301_2"
+    },
+    {
+      "column": "rt001.psu",
+      "question": "psu_serial_number"
+    },
+    {
+      "column": "rt001.hhold",
+      "question": "household_number"
+    },
+    {
+      "column": "rt002.s01a_q01",
+      "question": "sec1b_id_code_roster"
+    },
+    {
+      "column": "rt002.s01a_q01",
+      "question": "sec1c_id_code_roster"
+    }
+  ],
+  "overlay_version": "0.1",
+  "survey": "BGD_2010_HIES",
+  "tables": {
+    "consumption_00_05_10": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "external_input"
+      }
+    },
+    "rt001": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt002": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt003": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt004": {
+      "fields": {},
+      "no_key": "The scan reports key collisions on (psu,hhold,enumber) and the inventory shows no additional explicit identifier columns for the enterprise roster beyond this enterprise number; treat this as an entry table where (psu,hhold,enumber) may repeat.",
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt005": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt006": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt007": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt008": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt009": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt010": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt011": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt012": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt013": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt014": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt015": {
+      "fields": {},
+      "no_key": "The scan's best candidate key (psu,hhold,ln,item) is not unique and has nulls in key columns; this appears to be an entries/diary-style table where multiple records can share the same identifiers, so it should not be treated as uniquely keyed at the row level.",
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt016": {
+      "fields": {
+        "s09b1w_3": {
+          "label": "Major source (days 1–7)",
+          "source": "author",
+          "status": "assumed",
+          "value_codes": {
+            "0": "Not applicable / none",
+            "1": "Purchase",
+            "2": "Wage in-kind",
+            "3": "Self-produced",
+            "4": "Gift"
+          }
+        },
+        "s09b1w_6": {
+          "label": "Major source (days 8–14)",
+          "source": "author",
+          "status": "assumed",
+          "value_codes": {
+            "0": "Not applicable / none",
+            "1": "Purchase",
+            "2": "Wage in-kind",
+            "3": "Self-produced",
+            "4": "Gift"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt017": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt018": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt019": {
+      "fields": {
+        "item": {
+          "label": "non-food item code",
+          "source": "author",
+          "status": "resolved"
+        },
+        "s09d2_q0": {
+          "label": "s09d2_q01: what is the value?",
+          "source": "author",
+          "status": "resolved"
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "rt020": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    }
+  },
+  "year": 2010
+}

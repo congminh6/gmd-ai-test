@@ -1,0 +1,103 @@
+{
+ "request_id": "10-describe_columns-rt005",
+ "links": [
+  {
+   "question": "sec6_shock101_experienced",
+   "column": "rt005.s06b_q02",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "sec6_shock101_start_date",
+   "column": "rt005.s06b_q03",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "sec6_shock101_duration_days",
+   "column": "rt005.s06b_q04",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "sec6_shock101_decline_income",
+   "column": "rt005.s06b_q05",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question",
+    "t3#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_coping_1st",
+   "column": "rt005.s06b_q06",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question",
+    "t3#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_decline_assets",
+   "column": "rt005.s06b_q_1",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question",
+    "t3#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_decline_food_production",
+   "column": "rt005.s06b_q_2",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question",
+    "t3#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_decline_food_purchased",
+   "column": "rt005.s06b_q_3",
+   "evidence": [
+    "t5#question",
+    "t5#domain",
+    "t3#question",
+    "t3#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_coping_2nd",
+   "column": "rt005.s06b_q_4",
+   "evidence": [
+    "t6#question",
+    "t6#domain",
+    "t4#question",
+    "t4#domain"
+   ]
+  },
+  {
+   "question": "sec6_shock101_coping_3rd",
+   "column": "rt005.s06b_q_5",
+   "evidence": [
+    "t6#question",
+    "t6#domain",
+    "t4#question",
+    "t4#domain"
+   ]
+  }
+ ],
+ "unresolved": []
+}

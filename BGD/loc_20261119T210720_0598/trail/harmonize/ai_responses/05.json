@@ -1,0 +1,279 @@
+{
+ "request_id": "05-author_bindings-MOD-GEO",
+ "correspondence": {
+  "geography": {
+   "column": "rt001.region",
+   "links": {
+    "10": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "20": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "30": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "40": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "50": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "55": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    },
+    "60": {
+     "kind": "no_fitting_category",
+     "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+    }
+   },
+   "evidence": "rt001.region question + observed domain; national standard note that no categories exist for BGD geography domain (t10; brief geography section)."
+  }
+ },
+ "preludes": [
+  {
+   "id": "GEO-psu_int",
+   "reason": "VAR-psu is canon integer but rt001.psu is stored as string; derive a numeric PSU column without renumbering.",
+   "produces": [
+    "__derived.psu_int__"
+   ],
+   "code_file": "GEO-psu_int.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-psu",
+   "target": "VAR-psu",
+   "roles": {
+    "raw_value": "__derived.psu_int__",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "rt001.psu stored as string (t10) so prelude GEO-psu_int coerces to numeric (t10)."
+  },
+  {
+   "binding_id": "B-strata",
+   "target": "VAR-strata",
+   "table": "rt001",
+   "roles": {
+    "raw_value": "stratum",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".a"
+   },
+   "register": "resolved",
+   "evidence": "rt001.stratum is a 16-category stratum identifier (t10)."
+  },
+  {
+   "binding_id": "B-subnatid1",
+   "target": "VAR-subnatid1",
+   "roles": {
+    "raw_value": "region",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "rt001.region Geographic code: Region (t10); treated as highest admin level code column per canon construction notes (t17)."
+  },
+  {
+   "binding_id": "B-subnatid2",
+   "target": "VAR-subnatid2",
+   "roles": {
+    "raw_value": "district",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "rt001.district Geographic code: District (t10)."
+  },
+  {
+   "binding_id": "B-subnatid3",
+   "target": "VAR-subnatid3",
+   "roles": {
+    "raw_value": "thana",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "rt001.thana Geographic code: Thana/Upazilla (t10)."
+  },
+  {
+   "binding_id": "B-subnatid4",
+   "target": "VAR-subnatid4",
+   "roles": {
+    "raw_value": "union",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "rt001.union Geographic code: Union/Ward (t10)."
+  },
+  {
+   "binding_id": "B-subnatidsurvey",
+   "target": "VAR-subnatidsurvey",
+   "roles": {
+    "raw_value": "region",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "To keep geography correspondence enumerable, use rt001.region (7 codes) as the survey’s lowest representative subnational id; rt001.region codes observed (t10); canon requires it be drawn from subnatid1-4 (t17)."
+  },
+  {
+   "binding_id": "B-geocode",
+   "target": "VAR-geocode",
+   "roles": {},
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "BGD 2010 geography domain has no national categories; correspondence links are all exceptions with no direct geocode placement, yielding missing for all codes (t19; t17)."
+  },
+  {
+   "binding_id": "B-urban",
+   "target": "VAR-urban",
+   "roles": {
+    "raw_value": "spc",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "Rural": 0,
+    "Municipality": 1,
+    "SMA": 1
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "rt001.spc is labeled 'Geographic code: Rural/ PSA/ SMA' (t14); observed categories include Rural, Municipality, SMA (validate finding t20)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-gauladm1code",
+   "kind": "derivable_not_built",
+   "reason": "gauladm1code requires resolving GAUL code from VAR-geocode via PARAM-GEO-GMD-CROSSWALK; no national-standard geography categories exist in this domain and no crosswalk codes are available in this task context (brief geography section; t17).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-gauladm2code",
+   "kind": "derivable_not_built",
+   "reason": "gauladm2code requires resolving GAUL code from VAR-geocode via PARAM-GEO-GMD-CROSSWALK; no national-standard geography categories exist in this domain and no crosswalk codes are available in this task context (brief geography section; t17).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid1prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid1prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t17).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid2prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid2prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid3prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid3prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-subnatid4prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid4prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "deferred"
+  }
+ ]
+}

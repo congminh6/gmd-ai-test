@@ -1,0 +1,27 @@
+{
+ "request_id": "24-describe_columns-rt019",
+ "links": [],
+ "fields": [
+  {
+   "table": "rt019",
+   "field": "item",
+   "label": "non-food item code",
+   "status": "resolved",
+   "evidence": [
+    "t6#identity"
+   ]
+  },
+  {
+   "table": "rt019",
+   "field": "s09d2_q0",
+   "label": "s09d2_q01: what is the value?",
+   "status": "resolved",
+   "evidence": [
+    "t6#identity",
+    "t3#question"
+   ]
+  }
+ ],
+ "unresolved": [],
+ "notes": "No explicit questionnaire item-list question found for the long-form 9D2 roster; left as scan-resolved fields."
+}

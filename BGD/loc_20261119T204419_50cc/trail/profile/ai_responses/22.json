@@ -1,0 +1,47 @@
+{
+ "request_id": "22-describe_columns-rt017",
+ "links": [
+  {
+   "question": "sec9c_col1_value_bought",
+   "column": "rt017.s09c1_q0",
+   "evidence": [
+    "t7#identity",
+    "t7#neighbours",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "sec9c_col2_value_produced_received",
+   "column": "rt017.s09c1__1",
+   "evidence": [
+    "t7#identity",
+    "t7#neighbours",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "sec9c_col3_sum_col1_col2",
+   "column": "rt017.s09c1__2",
+   "evidence": [
+    "t7#identity",
+    "t7#neighbours",
+    "t2#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt017.item",
+   "reason": "No questionnaire item-code question found in the associated instrument: search for sec9c/item and non-food only returns the three value questions plus this data column; the instrument appears to provide the value columns (sec9c_col1/2/3) but not an explicit item-code question/item list to link to.",
+   "evidence": [
+    "t2#identity",
+    "t1#identity",
+    "t5#identity"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "task_type": "locate_sources",
+  "scope_id": "MOD-DEM",
+  "scope_ids": [
+    "VAR-age",
+    "VAR-agecat",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-communicationdisability",
+    "VAR-concentrationdisorder",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-everattend",
+    "VAR-eyedisability",
+    "VAR-heardisability",
+    "VAR-language",
+    "VAR-literacy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-relationcs",
+    "VAR-relationharm",
+    "VAR-school",
+    "VAR-selfcaredisability",
+    "VAR-walkdisability"
+  ],
+  "request_id": "03-locate_sources-MOD-DEM",
+  "tools": [
+    "canon",
+    "codes",
+    "column",
+    "columns",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "8bcbf2a5a9ab63d3c2c55acf27b2cd431c4801f4967b4bc041020511ccb02e14",
+  "transport": "direct",
+  "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

@@ -1,0 +1,42 @@
+{
+  "engine_built": {
+    "targets": [
+      "VAR-hhid",
+      "VAR-hhidorig",
+      "VAR-pid",
+      "VAR-pidorig"
+    ],
+    "note": "built by the engine from output.grain (the household / person keys combined): they are not in scope_ids — do not author them"
+  },
+  "task_type": "author_bindings",
+  "scope_id": "MOD-IDN",
+  "scope_ids": [
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year"
+  ],
+  "data": "C:\\temp\\test\\surveys\\BGD_2010_HIES\\Data",
+  "prior_findings": [],
+  "request_id": "04-author_bindings-MOD-IDN",
+  "tools": [
+    "canon",
+    "check",
+    "codes",
+    "column",
+    "columns",
+    "contract",
+    "current",
+    "onset",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "a29b5d11ce8feda2bc8ab5d131f5426f7fa5cac2ac0a2e82798cf2595dbdb2ae",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

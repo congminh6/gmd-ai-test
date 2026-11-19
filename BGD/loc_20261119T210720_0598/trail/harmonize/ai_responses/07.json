@@ -1,0 +1,21 @@
+{
+ "request_id": "07-review_prelude-survey",
+ "reviews": [
+  {
+   "id": "MOD-IDN-intdate_parse",
+   "verdict": "ok",
+   "reason": ""
+  },
+  {
+   "id": "GEO-psu_int",
+   "verdict": "concern",
+   "reason": "Derivation claims “without renumbering”, but the code rounds numeric values (psu_num.round()) before casting to Int64, which can change non-integer PSU codes (e.g., '1.6' -> 2). It also assumes column df['psu'] exists (KeyError if absent) and provides no warning/reporting on non-integer parses."
+  },
+  {
+   "id": "MOD-DEM-dem_derivations",
+   "verdict": "concern",
+   "reason": "Does not sanitize Survey Solutions sentinel missings (e.g., -999999999 / similar) before logic. For literacy/everattend, unexpected large/sentinel numeric codes would be treated as valid values (e.g., everattend: where_study>0 becomes True) instead of missing. Also assumes all referenced columns exist and are numeric; if stored as strings, comparisons like (age>=0) will error."
+  }
+ ],
+ "notes": "Contract reminder: preludes should treat sentinel missings as NaN before arithmetic/logic (see t1#3.3)."
+}

@@ -1,0 +1,33 @@
+{
+ "request_id": "04-describe_columns-rt001#3",
+ "unresolved": [
+  {
+   "column": "consumption_00_05_10.pc2005",
+   "reason": "No matching questionnaire item: searched for `pc2005` across question/label/codes and only found this data column; values are a small numeric factor (range ~1.16–1.30) in a derived consumption table, suggesting an administrative/derived field rather than an asked question.",
+   "evidence": [
+    "t10#domain",
+    "t10#neighbours",
+    "t11#identity"
+   ],
+   "missing": [
+    "candidates",
+    "instrument_section",
+    "question_text"
+   ]
+  },
+  {
+   "column": "consumption_00_05_10.pc2010",
+   "reason": "No matching questionnaire item: searched for `pc2010` across question/label/codes and only found this data column; values are a small numeric factor (range ~1.53–1.66) in a derived consumption table, suggesting an administrative/derived field rather than an asked question.",
+   "evidence": [
+    "t9#domain",
+    "t9#neighbours",
+    "t12#identity"
+   ],
+   "missing": [
+    "candidates",
+    "instrument_section",
+    "question_text"
+   ]
+  }
+ ]
+}

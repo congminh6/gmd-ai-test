@@ -1,0 +1,43 @@
+{
+ "survey_id": "BGD_2010_HIES",
+ "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+ "paths": {
+  "data": "BGD_2010_HIES/Data",
+  "docs": "BGD_2010_HIES/Doc",
+  "ss_export": "surveys/BGD_2010_HIES/ss",
+  "svis": "surveys/BGD_2010_HIES/svis",
+  "reference": "surveys/BGD_2010_HIES/Reference"
+ },
+ "kind": "survey",
+ "copied": false,
+ "data_version": null,
+ "staged_at": "2026-11-19T19:21:22+00:00",
+ "data": "../../../../../../temp/test/surveys/BGD_2010_HIES/Data",
+ "docs": "../../../../../../temp/test/surveys/BGD_2010_HIES/Doc",
+ "ss_export": null,
+ "svis": [],
+ "files": [
+  "BGD_2010_HIES/Data/consumption_00_05_10.dta",
+  "BGD_2010_HIES/Data/rt001.dta",
+  "BGD_2010_HIES/Data/rt002.dta",
+  "BGD_2010_HIES/Data/rt003.dta",
+  "BGD_2010_HIES/Data/rt004.dta",
+  "BGD_2010_HIES/Data/rt005.dta",
+  "BGD_2010_HIES/Data/rt006.dta",
+  "BGD_2010_HIES/Data/rt007.dta",
+  "BGD_2010_HIES/Data/rt008.dta",
+  "BGD_2010_HIES/Data/rt009.dta",
+  "BGD_2010_HIES/Data/rt010.dta",
+  "BGD_2010_HIES/Data/rt011.dta",
+  "BGD_2010_HIES/Data/rt012.dta",
+  "BGD_2010_HIES/Data/rt013.dta",
+  "BGD_2010_HIES/Data/rt014.dta",
+  "BGD_2010_HIES/Data/rt015.dta",
+  "BGD_2010_HIES/Data/rt016.dta",
+  "BGD_2010_HIES/Data/rt017.dta",
+  "BGD_2010_HIES/Data/rt018.dta",
+  "BGD_2010_HIES/Data/rt019.dta",
+  "BGD_2010_HIES/Data/rt020.dta",
+  "BGD_2010_HIES/Doc/HIES English Questionnaire 2010.xlsx"
+ ]
+}

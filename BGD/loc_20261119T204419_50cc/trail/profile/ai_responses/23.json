@@ -1,0 +1,36 @@
+{
+ "request_id": "23-describe_columns-rt018",
+ "links": [
+  {
+   "question": "301_1",
+   "column": "rt018.s09d1_q0",
+   "evidence": [
+    "t3#question",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "301_2",
+   "column": "rt018.s09d1__1",
+   "evidence": [
+    "t3#question",
+    "t8#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt018.item",
+   "reason": "`rt018` is a LONG-stored grid keyed by `item` (non-food item code). The questionnaire module 9D1 has one numeric cell per item (e.g. `301_1`, `301_2`) rather than a separate question that explicitly asks for/encodes the item list as its own raw_name; so there is no single instrument question to link to `rt018.item`.",
+   "evidence": [
+    "t3#question",
+    "t4#identity"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ],
+ "notes": "Linked the value/quantity columns to representative 9D1 grid cells (301_1/301_2); item is the long-grid row identifier with no standalone questionnaire question."
+}

@@ -1,0 +1,152 @@
+{
+  "survey_id": "BGD_2010_HIES",
+  "spec_sha256": "efdc6411f29ec621d43f24649a939a71ef4f1c35eeb22aefd0306ad4a95aad96",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 40,
+  "rows": 55580,
+  "tables": [
+    {
+      "table": "consumption_00_05_10",
+      "rows": 29760,
+      "used": false
+    },
+    {
+      "table": "rt001",
+      "rows": 12240,
+      "used": true
+    },
+    {
+      "table": "rt002",
+      "rows": 55580,
+      "used": true
+    },
+    {
+      "table": "rt003",
+      "rows": 18067,
+      "used": false
+    },
+    {
+      "table": "rt004",
+      "rows": 3497,
+      "used": false
+    },
+    {
+      "table": "rt005",
+      "rows": 220012,
+      "used": false
+    },
+    {
+      "table": "rt006",
+      "rows": 186980,
+      "used": false
+    },
+    {
+      "table": "rt007",
+      "rows": 80424,
+      "used": false
+    },
+    {
+      "table": "rt008",
+      "rows": 72327,
+      "used": false
+    },
+    {
+      "table": "rt009",
+      "rows": 25241,
+      "used": false
+    },
+    {
+      "table": "rt010",
+      "rows": 45643,
+      "used": false
+    },
+    {
+      "table": "rt011",
+      "rows": 247753,
+      "used": false
+    },
+    {
+      "table": "rt012",
+      "rows": 228631,
+      "used": false
+    },
+    {
+      "table": "rt013",
+      "rows": 2100,
+      "used": false
+    },
+    {
+      "table": "rt014",
+      "rows": 5137,
+      "used": false
+    },
+    {
+      "table": "rt015",
+      "rows": 438559,
+      "used": false
+    },
+    {
+      "table": "rt016",
+      "rows": 200008,
+      "used": false
+    },
+    {
+      "table": "rt017",
+      "rows": 362670,
+      "used": false
+    },
+    {
+      "table": "rt018",
+      "rows": 285162,
+      "used": false
+    },
+    {
+      "table": "rt019",
+      "rows": 830454,
+      "used": false
+    },
+    {
+      "table": "rt020",
+      "rows": 341813,
+      "used": false
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 41,
+    "not_m1": []
+  },
+  "preludes": [
+    {
+      "id": "MOD-DEM-dem_derivations",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.literacy__ in {0,1} or missing",
+        "declared invariant (checked by the script): __derived.everattend__ in {0,1} or missing"
+      ]
+    },
+    {
+      "id": "MOD-IDN-intdate_parse",
+      "invariants": [
+        "declared invariant (checked by the script): Derived month in 1..12 when non-null",
+        "declared invariant (checked by the script): Derived year is a 4-digit integer when non-null"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-19T21:20:46+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+eaa25bb9",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

@@ -1,0 +1,77 @@
+{
+ "request_id": "12-describe_columns-rt007",
+ "links": [
+  {
+   "question": "s7c_lvstk_201_own_number",
+   "column": "rt007.s07c_q02",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_born_purch_number_12m",
+   "column": "rt007.s07c_q03",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_died_sold_number_12m",
+   "column": "rt007.s07c_q04",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_consumed_number_12m",
+   "column": "rt007.s07c_q05",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_own_value_taka",
+   "column": "rt007.s07c_q_1",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_born_purch_value_taka_12m",
+   "column": "rt007.s07c_q_2",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_died_sold_value_taka_12m",
+   "column": "rt007.s07c_q_3",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s7c_lvstk_201_consumed_value_taka_12m",
+   "column": "rt007.s07c_q_4",
+   "evidence": [
+    "t5#label",
+    "t5#placement",
+    "t4#question"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "preludes": [
+  {
+   "id": "MOD-IDN-intdate_parse",
+   "reason": "Interview month/year are not stored as separate numeric variables; derive them by parsing the household-level date string fields into month and year.",
+   "produces": [
+    "__derived.intmonth__",
+    "__derived.intyear__"
+   ],
+   "invariants": [
+    "Derived month in 1..12 when non-null",
+    "Derived year is a 4-digit integer when non-null"
+   ],
+   "code_file": "MOD-IDN-intdate_parse.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "rt001",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "ISO3 is taken from survey identity per policy (no source column)."
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "rt001",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Survey start year is taken from survey identity per policy; consumption_00_05_10.year is a wave indicator (1=2000, 2=2005, other) not a 4-digit start year (t2)."
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "rt001",
+   "roles": {
+    "raw_value": "wgt",
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Household sampling weight variable rt001.wgt is numeric and complete (t2)."
+  },
+  {
+   "binding_id": "B-intmonth",
+   "target": "VAR-intmonth",
+   "roles": {
+    "raw_value": "__derived.intmonth__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Derived by parsing household-level date strings (rt001.s09a1_40 / s09b1w1_ / s09b1w2_) into month (t2)."
+  },
+  {
+   "binding_id": "B-intyear",
+   "target": "VAR-intyear",
+   "roles": {
+    "raw_value": "__derived.intyear__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Derived by parsing household-level date strings (rt001.s09a1_40 / s09b1w1_ / s09b1w2_) into year (t2)."
+  }
+ ],
+ "absent": []
+}

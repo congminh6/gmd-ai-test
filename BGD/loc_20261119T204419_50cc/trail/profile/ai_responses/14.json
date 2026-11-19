@@ -1,0 +1,54 @@
+{
+ "request_id": "14-describe_columns-rt009",
+ "links": [
+  {
+   "question": "s7c_fish_221_produce_qty_kg_12m",
+   "column": "rt009.s07c_q10",
+   "evidence": [
+    "t9#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "s7c_fish_221_sold_qty_kg_12m",
+   "column": "rt009.s07c_q11",
+   "evidence": [
+    "t9#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "s7c_fish_221_consumed_qty_kg_12m",
+   "column": "rt009.s07c_q12",
+   "evidence": [
+    "t9#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "s7c_fish_221_produce_value_taka_12m",
+   "column": "rt009.s07c_q_1",
+   "evidence": [
+    "t7#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "s7c_fish_221_sold_value_taka_12m",
+   "column": "rt009.s07c_q_2",
+   "evidence": [
+    "t7#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "s7c_fish_221_consumed_value_taka_12m",
+   "column": "rt009.s07c_q_3",
+   "evidence": [
+    "t7#label",
+    "t8#question"
+   ]
+  }
+ ],
+ "notes": "Linked rt009 long fish grid numeric columns to representative 7C2 fish(221) cell questions; fish_act key indicates which fish item per row."
+}

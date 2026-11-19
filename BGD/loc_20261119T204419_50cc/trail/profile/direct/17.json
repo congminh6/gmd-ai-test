@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt012",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 48.8,
+ "usage": {
+  "input_token_count": 339204,
+  "output_token_count": 2209,
+  "total_token_count": 341413,
+  "reasoning_output_token_count": 1282
+ },
+ "tool_calls": 8,
+ "submitted": true,
+ "final_text": "Submitted `describe_columns` answer for request `17-describe_columns-rt012` via `submit` (links for 7 columns; `rt012.agric_as` left unresolved as an item code / grid row identifier).",
+ "said": [
+  "Submitted `describe_columns` answer for request `17-describe_columns-rt012` via `submit` (links for 7 columns; `rt012.agric_as` left unresolved as an item code / grid row identifier)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\17.jsonl"
+}

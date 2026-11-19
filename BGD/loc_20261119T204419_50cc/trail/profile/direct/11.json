@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt006",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 59.1,
+ "usage": {
+  "input_token_count": 344132,
+  "output_token_count": 3272,
+  "total_token_count": 347404,
+  "reasoning_output_token_count": 1854
+ },
+ "tool_calls": 7,
+ "submitted": true,
+ "final_text": "Submitted `describe_columns` links for `rt006` (request_id `11-describe_columns-rt006`).",
+ "said": [
+  "Submitted `describe_columns` links for `rt006` (request_id `11-describe_columns-rt006`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\11.jsonl"
+}

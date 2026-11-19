@@ -1,0 +1,22 @@
+{
+ "task_type": "author_overlay",
+ "scope_id": "survey",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 124.0,
+ "usage": {
+  "input_token_count": 1120586,
+  "output_token_count": 6632,
+  "total_token_count": 1127218,
+  "reasoning_output_token_count": 3159
+ },
+ "tool_calls": 20,
+ "submitted": true,
+ "final_text": "Submitted `author_overlay` for request `26-author_overlay-survey` with:\n\n- **Grain**: `household_key = (rt001.psu, rt001.hhold)`, **roster** = `rt002`, **weight** = `rt001.wgt`.\n- **Table provenance verdicts**: all `rt00x/rt01x/rt02x` tables marked **raw**; `consumption_00_05_10` marked **external_input**.\n- **Authored keys**:\n  - `rt004`: declared **no_key** (key collisions on `psu,hhold,enumber` with no further explicit identifiers).\n  - `rt015`: declared **no_key** (best candidate keys not unique + nulls in key columns).\n- **Key maps**: for person-indexed tables using `ln`, mapped `ln -> idcode` to align to roster key naming.\n- **Links (de-orphan)**: linked four orphan questionnaire items by raw_name to existing data columns.",
+ "said": [
+  "Submitted `author_overlay` for request `26-author_overlay-survey` with:\n\n- **Grain**: `household_key = (rt001.psu, rt001.hhold)`, **roster** = `rt002`, **weight** = `rt001.wgt`.\n- **Table provenance verdicts**: all `rt00x/rt01x/rt02x` tables marked **raw**; `consumption_00_05_10` marked **external_input**.\n- **Authored keys**:\n  - `rt004`: declared **no_key** (key collisions on `psu,hhold,enumber` with no further explicit identifiers).\n  - `rt015`: declared **no_key** (best candidate keys not unique + nulls in key columns).\n- **Key maps**: for person-indexed tables using `ln`, mapped `ln -> idcode` to align to roster key naming.\n- **Links (de-orphan)**: linked four orphan questionnaire items by raw_name to existing data columns."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\26.jsonl"
+}

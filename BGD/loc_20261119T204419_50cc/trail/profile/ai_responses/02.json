@@ -1,0 +1,406 @@
+{
+ "request_id": "02-describe_columns-rt001#1",
+ "links": [
+  {
+   "question": "geo_district_code",
+   "column": "rt001.district",
+   "evidence": [
+    "rt001.district#label",
+    "scribe-aa2f36b63da4:geo_district_code#question"
+   ]
+  },
+  {
+   "question": "geo_mouza_mohalla_code",
+   "column": "rt001.mouza",
+   "evidence": [
+    "rt001.mouza#label",
+    "scribe-aa2f36b63da4:geo_mouza_mohalla_code#question"
+   ]
+  },
+  {
+   "question": "geo_region_code",
+   "column": "rt001.region",
+   "evidence": [
+    "rt001.region#codes",
+    "scribe-aa2f36b63da4:geo_region_code#question"
+   ]
+  },
+  {
+   "question": "sec6_q1_respondent_id",
+   "column": "rt001.s06a_q01",
+   "evidence": [
+    "rt001.s06a_q01#label",
+    "scribe-aa2f36b63da4:sec6_q1_respondent_id#question"
+   ]
+  },
+  {
+   "question": "sec6_q2_rooms_occupied",
+   "column": "rt001.s06a_q02",
+   "evidence": [
+    "rt001.s06a_q02#label",
+    "scribe-aa2f36b63da4:sec6_q2_rooms_occupied#question"
+   ]
+  },
+  {
+   "question": "sec6_q3_separate_dining",
+   "column": "rt001.s06a_q03",
+   "evidence": [
+    "rt001.s06a_q03#codes",
+    "scribe-aa2f36b63da4:sec6_q3_separate_dining#question"
+   ]
+  },
+  {
+   "question": "sec6_q4_separate_kitchen",
+   "column": "rt001.s06a_q04",
+   "evidence": [
+    "rt001.s06a_q04#codes",
+    "scribe-aa2f36b63da4:sec6_q4_separate_kitchen#question"
+   ]
+  },
+  {
+   "question": "sec6_q5_wall_material",
+   "column": "rt001.s06a_q05",
+   "evidence": [
+    "rt001.s06a_q05#codes",
+    "scribe-aa2f36b63da4:sec6_q5_wall_material#question"
+   ]
+  },
+  {
+   "question": "sec6_q6_roof_material",
+   "column": "rt001.s06a_q06",
+   "evidence": [
+    "rt001.s06a_q06#codes",
+    "scribe-aa2f36b63da4:sec6_q6_roof_material#question"
+   ]
+  },
+  {
+   "question": "sec6_q7_covered_area_sqft",
+   "column": "rt001.s06a_q07",
+   "evidence": [
+    "rt001.s06a_q07#label",
+    "scribe-aa2f36b63da4:sec6_q7_covered_area_sqft#question"
+   ]
+  },
+  {
+   "question": "sec6_q8_latrine_type",
+   "column": "rt001.s06a_q08",
+   "evidence": [
+    "rt001.s06a_q08#codes",
+    "scribe-aa2f36b63da4:sec6_q8_latrine_type#question"
+   ]
+  },
+  {
+   "question": "sec6_q9_drinking_water_main",
+   "column": "rt001.s06a_q09",
+   "evidence": [
+    "rt001.s06a_q09#codes",
+    "scribe-aa2f36b63da4:sec6_q9_drinking_water_main#question"
+   ]
+  },
+  {
+   "question": "sec6_q10_tubewell_tested_arsenic",
+   "column": "rt001.s06a_q10",
+   "evidence": [
+    "rt001.s06a_q10#codes",
+    "scribe-aa2f36b63da4:sec6_q10_tubewell_tested_arsenic#question"
+   ]
+  },
+  {
+   "question": "sec6_q11_arsenic_found",
+   "column": "rt001.s06a_q11",
+   "evidence": [
+    "rt001.s06a_q11#codes",
+    "scribe-aa2f36b63da4:sec6_q11_arsenic_found#question"
+   ]
+  },
+  {
+   "question": "sec6_q12_drinking_water_alternative",
+   "column": "rt001.s06a_q12",
+   "evidence": [
+    "rt001.s06a_q12#codes",
+    "scribe-aa2f36b63da4:sec6_q12_drinking_water_alternative#question"
+   ]
+  },
+  {
+   "question": "sec6_q13_water_other_use_main",
+   "column": "rt001.s06a_q13",
+   "evidence": [
+    "rt001.s06a_q13#codes",
+    "scribe-aa2f36b63da4:sec6_q13_water_other_use_main#question"
+   ]
+  },
+  {
+   "question": "sec6_q14_electricity_connection",
+   "column": "rt001.s06a_q14",
+   "evidence": [
+    "rt001.s06a_q14#codes",
+    "scribe-aa2f36b63da4:sec6_q14_electricity_connection#question"
+   ]
+  },
+  {
+   "question": "sec6_q15_electricity_hours_per_day",
+   "column": "rt001.s06a_q15",
+   "evidence": [
+    "rt001.s06a_q15#label",
+    "scribe-aa2f36b63da4:sec6_q15_electricity_hours_per_day#question"
+   ]
+  },
+  {
+   "question": "sec6_q16_own_mobile_phone",
+   "column": "rt001.s06a_q16",
+   "evidence": [
+    "rt001.s06a_q16#codes",
+    "scribe-aa2f36b63da4:sec6_q16_own_mobile_phone#question"
+   ]
+  },
+  {
+   "question": "sec6_q17_landline_connection",
+   "column": "rt001.s06a_q17",
+   "evidence": [
+    "rt001.s06a_q17#codes",
+    "scribe-aa2f36b63da4:sec6_q17_landline_connection#question"
+   ]
+  },
+  {
+   "question": "sec6_q18_own_computer",
+   "column": "rt001.s06a_q18",
+   "evidence": [
+    "rt001.s06a_q18#codes",
+    "scribe-aa2f36b63da4:sec6_q18_own_computer#question"
+   ]
+  },
+  {
+   "question": "sec6_q19_access_internet_email",
+   "column": "rt001.s06a_q19",
+   "evidence": [
+    "rt001.s06a_q19#codes",
+    "scribe-aa2f36b63da4:sec6_q19_access_internet_email#question"
+   ]
+  },
+  {
+   "question": "sec6_q20_internet_access_mode",
+   "column": "rt001.s06a_q20",
+   "evidence": [
+    "rt001.s06a_q20#codes",
+    "scribe-aa2f36b63da4:sec6_q20_internet_access_mode#question"
+   ]
+  },
+  {
+   "question": "sec6_q21_occupancy_status",
+   "column": "rt001.s06a_q21",
+   "evidence": [
+    "rt001.s06a_q21#codes",
+    "scribe-aa2f36b63da4:sec6_q21_occupancy_status#question"
+   ]
+  },
+  {
+   "question": "sec6_q22_dwelling_value_today_taka",
+   "column": "rt001.s06a_q22",
+   "evidence": [
+    "rt001.s06a_q22#label",
+    "scribe-aa2f36b63da4:sec6_q22_dwelling_value_today_taka#question"
+   ]
+  },
+  {
+   "question": "sec7a_q1_land_owned_cultivable_decimal",
+   "column": "rt001.s07a_q01",
+   "evidence": [
+    "rt001.s07a_q01#label",
+    "scribe-aa2f36b63da4:sec7a_q1_land_owned_cultivable_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7a_q2_land_owned_homestead_decimal",
+   "column": "rt001.s07a_q02",
+   "evidence": [
+    "rt001.s07a_q02#label",
+    "scribe-aa2f36b63da4:sec7a_q2_land_owned_homestead_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7a_q3_land_noncultivated_decimal",
+   "column": "rt001.s07a_q03",
+   "evidence": [
+    "rt001.s07a_q03#label",
+    "scribe-aa2f36b63da4:sec7a_q3_land_noncultivated_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7a_q4_land_in_decimal",
+   "column": "rt001.s07a_q04",
+   "evidence": [
+    "rt001.s07a_q04#label",
+    "scribe-aa2f36b63da4:sec7a_q4_land_in_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7a_q5_land_out_decimal",
+   "column": "rt001.s07a_q05",
+   "evidence": [
+    "rt001.s07a_q05#label",
+    "scribe-aa2f36b63da4:sec7a_q5_land_out_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7a_q6_operating_land_decimal",
+   "column": "rt001.s07a_q06",
+   "evidence": [
+    "rt001.s07a_q06#label",
+    "scribe-aa2f36b63da4:sec7a_q6_operating_land_decimal#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_cultivated",
+   "column": "rt001.s07b_q01",
+   "evidence": [
+    "rt001.s07b_q01#codes",
+    "scribe-aa2f36b63da4:sec7b_crop01_aus_cultivated#question"
+   ]
+  },
+  {
+   "question": "s7c_q1_raise_livestock_poultry",
+   "column": "rt001.s07c_q01",
+   "evidence": [
+    "rt001.s07c_q01#codes",
+    "scribe-aa2f36b63da4:s7c_q1_raise_livestock_poultry#question"
+   ]
+  },
+  {
+   "question": "s7c_q9_fishing_fishfarming_12m",
+   "column": "rt001.s07c_q09",
+   "evidence": [
+    "rt001.s07c_q09#codes",
+    "scribe-aa2f36b63da4:s7c_q9_fishing_fishfarming_12m#question"
+   ]
+  },
+  {
+   "question": "s7c_q13_farm_forestry_12m",
+   "column": "rt001.s07c_q13",
+   "evidence": [
+    "rt001.s07c_q13#codes",
+    "scribe-aa2f36b63da4:s7c_q13_farm_forestry_12m#question"
+   ]
+  },
+  {
+   "question": "sec8a_q1_land_property_owned_not_operate",
+   "column": "rt001.s08a_q01",
+   "evidence": [
+    "rt001.s08a_q01#codes",
+    "scribe-aa2f36b63da4:sec8a_q1_land_property_owned_not_operate#question"
+   ]
+  },
+  {
+   "question": "sec8a_q2_cost_to_buy_land_property_owned_taka",
+   "column": "rt001.s08a_q02",
+   "evidence": [
+    "rt001.s08a_q02#label",
+    "scribe-aa2f36b63da4:sec8a_q2_cost_to_buy_land_property_owned_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_q3_purchased_land_property_12m",
+   "column": "rt001.s08a_q03",
+   "evidence": [
+    "rt001.s08a_q03#codes",
+    "scribe-aa2f36b63da4:sec8a_q3_purchased_land_property_12m#question"
+   ]
+  },
+  {
+   "question": "sec8a_q4_spent_purchase_land_property_taka",
+   "column": "rt001.s08a_q04",
+   "evidence": [
+    "rt001.s08a_q04#label",
+    "scribe-aa2f36b63da4:sec8a_q4_spent_purchase_land_property_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_q5_purchased_house_flat_12m",
+   "column": "rt001.s08a_q05",
+   "evidence": [
+    "rt001.s08a_q05#codes",
+    "scribe-aa2f36b63da4:sec8a_q5_purchased_house_flat_12m#question"
+   ]
+  },
+  {
+   "question": "sec8a_q6_spent_purchase_house_flat_taka",
+   "column": "rt001.s08a_q06",
+   "evidence": [
+    "rt001.s08a_q06#codes",
+    "scribe-aa2f36b63da4:sec8a_q6_spent_purchase_house_flat_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_q7_own_other_assets_not_reported",
+   "column": "rt001.s08a_q07",
+   "evidence": [
+    "rt001.s08a_q07#codes",
+    "scribe-aa2f36b63da4:sec8a_q7_own_other_assets_not_reported#question"
+   ]
+  },
+  {
+   "question": "sec8a_q8_total_worth_other_assets_taka",
+   "column": "rt001.s08a_q08",
+   "evidence": [
+    "rt001.s08a_q08#label",
+    "scribe-aa2f36b63da4:sec8a_q8_total_worth_other_assets_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_q9_purchased_assets_other_than_land_12m",
+   "column": "rt001.s08a_q09",
+   "evidence": [
+    "rt001.s08a_q09#codes",
+    "scribe-aa2f36b63da4:sec8a_q9_purchased_assets_other_than_land_12m#question"
+   ]
+  },
+  {
+   "question": "sec8a_q10_spent_purchase_assets_other_than_land_taka",
+   "column": "rt001.s08a_q10",
+   "evidence": [
+    "rt001.s08a_q10#label",
+    "scribe-aa2f36b63da4:sec8a_q10_spent_purchase_assets_other_than_land_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_q11_sold_assets_12m",
+   "column": "rt001.s08a_q11",
+   "evidence": [
+    "rt001.s08a_q11#codes",
+    "scribe-aa2f36b63da4:sec8a_q11_sold_assets_12m#question"
+   ]
+  },
+  {
+   "question": "sec8a_q12_amount_from_selling_assets_taka",
+   "column": "rt001.s08a_q12",
+   "evidence": [
+    "rt001.s08a_q12#label",
+    "scribe-aa2f36b63da4:sec8a_q12_amount_from_selling_assets_taka#question"
+   ]
+  },
+  {
+   "question": "sec8a_decimals",
+   "column": "rt001.s08a_q_1",
+   "evidence": [
+    "rt001.s08a_q_1#label",
+    "scribe-aa2f36b63da4:sec8a_decimals#question"
+   ]
+  },
+  {
+   "question": "sec8b_q1_income_rent_land_12m_taka",
+   "column": "rt001.s08b_q01",
+   "evidence": [
+    "rt001.s08b_q01#label",
+    "scribe-aa2f36b63da4:sec8b_q1_income_rent_land_12m_taka#question"
+   ]
+  },
+  {
+   "question": "sec8b_q2_income_rent_other_property_12m_taka",
+   "column": "rt001.s08b_q02",
+   "evidence": [
+    "rt001.s08b_q02#label",
+    "scribe-aa2f36b63da4:sec8b_q2_income_rent_other_property_12m_taka#question"
+   ]
+  }
+ ],
+ "notes": "All 50 scoped columns match numbered questionnaire items (cover geo + sections 6A/7A/7B1/7C/8A/8B); no unresolved in this chunk."
+}

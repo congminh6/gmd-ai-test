@@ -1,0 +1,12 @@
+{
+  "notes": [
+    {
+      "kind": "describe.skipped_no_candidates",
+      "table": "consumption_00_05_10",
+      "columns": 98,
+      "state": "no_instrument",
+      "instruments": [],
+      "text": "`consumption_00_05_10`: 98 column(s) not described — no instrument is associated to this table"
+    }
+  ]
+}

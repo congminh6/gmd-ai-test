@@ -1,0 +1,24 @@
+{
+  "task_type": "locate_sources",
+  "scope_id": "MOD-IDN",
+  "scope_ids": [
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year"
+  ],
+  "request_id": "01-locate_sources-MOD-IDN",
+  "tools": [
+    "canon",
+    "codes",
+    "column",
+    "columns",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "19211a722852fb42a7834efccd17a138474407ffb82c93b94394fefcb5b96ecb",
+  "transport": "direct",
+  "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

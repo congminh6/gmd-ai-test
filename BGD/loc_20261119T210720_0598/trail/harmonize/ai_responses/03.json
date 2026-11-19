@@ -1,0 +1,181 @@
+{
+ "request_id": "03-locate_sources-MOD-DEM",
+ "routing": {
+  "VAR-age": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q04",
+    "why": "Household member roster includes Age (sec1a_age_years)."
+   }
+  ],
+  "VAR-childmth": [
+   {
+    "survey_module": "## 3B",
+    "column": "rt002.s03b_q02",
+    "why": "Child module records present age of the children in months (ch_age_months)."
+   }
+  ],
+  "VAR-childyr": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q04",
+    "why": "Roster age in years can support under-5 child age in years if needed/derivable."
+   }
+  ],
+  "VAR-male": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q02",
+    "why": "Household member roster includes Sex (sec1a_sex)."
+   },
+   {
+    "survey_module": "## 8C",
+    "column": "rt013.s08c_q10",
+    "why": "Migrant/remittance roster also records Sex."
+   }
+  ],
+  "VAR-marital": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q06",
+    "why": "Household member roster includes Marital status (sec1a_marital_status)."
+   }
+  ],
+  "VAR-relationcs": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q03",
+    "why": "Household member roster includes relationship to household head (sec1a_relationship_head)."
+   },
+   {
+    "survey_module": "## 8C",
+    "column": "rt013.s08c_q04",
+    "why": "Migrant/remittance roster also includes relationship to head of household."
+   }
+  ],
+  "VAR-relationharm": [
+   {
+    "survey_module": "## 1A",
+    "column": "rt002.s01a_q03",
+    "why": "Harmonized relationship can be derived from the country-specific relationship-to-head roster variable."
+   },
+   {
+    "survey_module": "## 8C",
+    "column": "rt013.s08c_q04",
+    "why": "Alternate relationship-to-head variable appears in the migrant/remittance roster."
+   }
+  ],
+  "VAR-literacy": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q03",
+    "why": "Education section asks reading ability (can read a letter)."
+   },
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q04",
+    "why": "Education section asks writing ability (can write a letter)."
+   }
+  ],
+  "VAR-school": [
+   {
+    "survey_module": "## 2B1",
+    "column": "rt002.s02b_q01",
+    "why": "Education section asks whether currently attending school/educational institution (edu_cur_attend)."
+   }
+  ],
+  "VAR-educy": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q05",
+    "why": "Highest class completed can support derived years of education."
+   },
+   {
+    "survey_module": "## 2B1",
+    "column": "rt002.s02b_q02",
+    "why": "Current class attending may help derive years of education for those enrolled."
+   }
+  ],
+  "VAR-educat7": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q05",
+    "why": "Highest class completed is the main source to map to highest education level completed."
+   },
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q07",
+    "why": "Type of school/institution attended may help distinguish level categories when mapping."
+   }
+  ],
+  "VAR-educat5": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q05",
+    "why": "Highest class completed can be mapped into the 5-category highest education completed target."
+   },
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q07",
+    "why": "Type of school/institution attended may help resolve post-secondary vs tertiary."
+   }
+  ],
+  "VAR-educat4": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q05",
+    "why": "Highest class completed can be aggregated into 4-category highest education completed."
+   }
+  ],
+  "VAR-primarycomp": [
+   {
+    "survey_module": "## 2A",
+    "column": "rt002.s02a_q05",
+    "why": "Highest class completed can indicate completion of primary schooling when mapped."
+   }
+  ],
+  "VAR-eyedisability": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q02",
+    "why": "Disability section asks difficulty seeing (Washington Group style severity responses)."
+   }
+  ],
+  "VAR-heardisability": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q05",
+    "why": "Disability section asks difficulty hearing (severity responses)."
+   }
+  ],
+  "VAR-walkdisability": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q08",
+    "why": "Disability section asks difficulty walking or climbing steps (severity responses)."
+   }
+  ],
+  "VAR-concentrationdisorder": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q11",
+    "why": "Disability section asks difficulty remembering/concentrating (severity responses)."
+   }
+  ],
+  "VAR-selfcaredisability": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q14",
+    "why": "Disability section asks difficulty with self care (washing/dressing) (severity responses)."
+   }
+  ],
+  "VAR-communicationdisability": [
+   {
+    "survey_module": "## 3D",
+    "column": "rt002.s03d_q17",
+    "why": "Disability section asks difficulty communicating/understanding (severity responses)."
+   }
+  ]
+ },
+ "notes": "Targets not routed here (e.g., agecat, language, everattend, mineducatage) did not appear in the survey index/search results and can be handled as absent/derived at authoring."
+}

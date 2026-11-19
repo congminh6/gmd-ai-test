@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt014",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 32.3,
+ "usage": {
+  "input_token_count": 168154,
+  "output_token_count": 2132,
+  "total_token_count": 170286,
+  "reasoning_output_token_count": 987
+ },
+ "tool_calls": 14,
+ "submitted": true,
+ "final_text": "Submitted `describe_columns` links for all 13 scoped columns in `rt014` (request_id `19-describe_columns-rt014`).",
+ "said": [
+  "Submitted `describe_columns` links for all 13 scoped columns in `rt014` (request_id `19-describe_columns-rt014`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\19.jsonl"
+}

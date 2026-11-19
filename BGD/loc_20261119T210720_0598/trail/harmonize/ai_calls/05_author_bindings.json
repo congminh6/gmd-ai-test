@@ -1,0 +1,43 @@
+{
+  "task_type": "author_bindings",
+  "scope_id": "MOD-GEO",
+  "scope_ids": [
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-psu",
+    "VAR-strata",
+    "VAR-subnatid1",
+    "VAR-subnatid1prev",
+    "VAR-subnatid2",
+    "VAR-subnatid2prev",
+    "VAR-subnatid3",
+    "VAR-subnatid3prev",
+    "VAR-subnatid4",
+    "VAR-subnatid4prev",
+    "VAR-subnatidsurvey",
+    "VAR-urban"
+  ],
+  "data": "C:\\temp\\test\\surveys\\BGD_2010_HIES\\Data",
+  "prior_findings": [],
+  "request_id": "05-author_bindings-MOD-GEO",
+  "tools": [
+    "canon",
+    "check",
+    "codes",
+    "column",
+    "columns",
+    "contract",
+    "current",
+    "onset",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "521c4be4bf772d59c0637d3fd5de750865e9690bdebc1be5f393e219bba84876",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

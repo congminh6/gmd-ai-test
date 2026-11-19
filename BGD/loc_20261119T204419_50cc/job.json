@@ -1,0 +1,505 @@
+{
+ "job_id": "loc_20261119T204419_50cc",
+ "flow": "profile",
+ "survey_id": "BGD_2010_HIES",
+ "spec": {
+  "flow": "profile",
+  "survey_id": "BGD_2010_HIES",
+  "country": "BGD",
+  "year": 2010,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc"
+  },
+  "input_job": "loc_20261119T203308_6e70",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-19T20:44:19+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T204419_50cc",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261119T203308_6e70",
+  "flow": "scribe",
+  "status": "completed",
+  "manifest_sha256": "01d50e3ce2affd9e644247e9464cc216d7082425c1af0baf7114d8f6ab34ecd4",
+  "files": 4,
+  "partial": false
+ },
+ "updated": "2026-11-19T21:05:31+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 22,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc",
+   "ss_export": "surveys/BGD_2010_HIES/ss",
+   "svis": "surveys/BGD_2010_HIES/svis",
+   "reference": "surveys/BGD_2010_HIES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+  "A.questionnaire": "ok(1 questionnaire scan(s) -> profile\\questionnaire)",
+  "A.conformance": "ok(no source standard applies)",
+  "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 363 still-missing (codes_missing=294, grain=4, label_empty=65); orphan questions: 1001; code conflicts: 1)",
+  "A.prefill-file-links": "ok(0 table(s) associated by structure; 21 left)",
+  "A.associate": "ok(20 table(s) associated by judgment, 1 unassociated, 20 associated in all -> profile\\file_links.json)",
+  "A.describe": "ok(all 24 request(s); 1 table(s) not asked, no candidate questions (consumption_00_05_10: no_instrument))",
+  "A.author-overlay": "ok(author_overlay: 21 tables, 4 links, grain; re-merged)",
+  "A.heal": "ok(off (--heal 0))",
+  "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+  "A.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "associate_instruments",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 1,
+   "usage": {
+    "input_token_count": 70709,
+    "output_token_count": 1244,
+    "total_token_count": 71953,
+    "reasoning_output_token_count": 494
+   },
+   "reasoning_effort": "low",
+   "seconds": 17.5
+  },
+  {
+   "request": "02",
+   "task": "describe_columns",
+   "scope": "rt001#1",
+   "submitted": true,
+   "tool_calls": 1,
+   "usage": {
+    "input_token_count": 76559,
+    "output_token_count": 3661,
+    "total_token_count": 80220,
+    "reasoning_output_token_count": 549
+   },
+   "reasoning_effort": "low",
+   "seconds": 26.4
+  },
+  {
+   "request": "03",
+   "task": "describe_columns",
+   "scope": "rt001#2",
+   "submitted": true,
+   "tool_calls": 12,
+   "usage": {
+    "input_token_count": 112995,
+    "output_token_count": 4384,
+    "total_token_count": 117379,
+    "reasoning_output_token_count": 1496
+   },
+   "reasoning_effort": "low",
+   "seconds": 41.5
+  },
+  {
+   "request": "04",
+   "task": "describe_columns",
+   "scope": "rt001#3",
+   "submitted": true,
+   "tool_calls": 13,
+   "usage": {
+    "input_token_count": 297831,
+    "output_token_count": 2146,
+    "total_token_count": 299977,
+    "reasoning_output_token_count": 1311
+   },
+   "reasoning_effort": "low",
+   "seconds": 47.4
+  },
+  {
+   "request": "05",
+   "task": "describe_columns",
+   "scope": "rt002#1",
+   "submitted": true,
+   "tool_calls": 2,
+   "usage": {
+    "input_token_count": 169885,
+    "output_token_count": 4313,
+    "total_token_count": 174198,
+    "reasoning_output_token_count": 1443
+   },
+   "reasoning_effort": "low",
+   "seconds": 48.7
+  },
+  {
+   "request": "06",
+   "task": "describe_columns",
+   "scope": "rt002#2",
+   "submitted": true,
+   "tool_calls": 31,
+   "usage": {
+    "input_token_count": 752951,
+    "output_token_count": 11073,
+    "total_token_count": 764024,
+    "reasoning_output_token_count": 2928
+   },
+   "reasoning_effort": "low",
+   "seconds": 114.3
+  },
+  {
+   "request": "07",
+   "task": "describe_columns",
+   "scope": "rt002#3",
+   "submitted": true,
+   "tool_calls": 5,
+   "usage": {
+    "input_token_count": 101684,
+    "output_token_count": 798,
+    "total_token_count": 102482,
+    "reasoning_output_token_count": 480
+   },
+   "reasoning_effort": "low",
+   "seconds": 17.5
+  },
+  {
+   "request": "08",
+   "task": "describe_columns",
+   "scope": "rt003",
+   "submitted": true,
+   "tool_calls": 1,
+   "usage": {
+    "input_token_count": 51441,
+    "output_token_count": 2431,
+    "total_token_count": 53872,
+    "reasoning_output_token_count": 677
+   },
+   "reasoning_effort": "low",
+   "seconds": 23.4
+  },
+  {
+   "request": "09",
+   "task": "describe_columns",
+   "scope": "rt004",
+   "submitted": true,
+   "tool_calls": 4,
+   "usage": {
+    "input_token_count": 107326,
+    "output_token_count": 3713,
+    "total_token_count": 111039,
+    "reasoning_output_token_count": 1334
+   },
+   "reasoning_effort": "low",
+   "seconds": 41.8
+  },
+  {
+   "request": "10",
+   "task": "describe_columns",
+   "scope": "rt005",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 208943,
+    "output_token_count": 1905,
+    "total_token_count": 210848,
+    "reasoning_output_token_count": 879
+   },
+   "reasoning_effort": "low",
+   "seconds": 38.1
+  },
+  {
+   "request": "11",
+   "task": "describe_columns",
+   "scope": "rt006",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 344132,
+    "output_token_count": 3272,
+    "total_token_count": 347404,
+    "reasoning_output_token_count": 1854
+   },
+   "reasoning_effort": "low",
+   "seconds": 59.1
+  },
+  {
+   "request": "12",
+   "task": "describe_columns",
+   "scope": "rt007",
+   "submitted": true,
+   "tool_calls": 6,
+   "usage": {
+    "input_token_count": 167561,
+    "output_token_count": 1802,
+    "total_token_count": 169363,
+    "reasoning_output_token_count": 929
+   },
+   "reasoning_effort": "low",
+   "seconds": 30.8
+  },
+  {
+   "request": "13",
+   "task": "describe_columns",
+   "scope": "rt008",
+   "submitted": true,
+   "tool_calls": 17,
+   "usage": {
+    "input_token_count": 182819,
+    "output_token_count": 1942,
+    "total_token_count": 184761,
+    "reasoning_output_token_count": 896
+   },
+   "reasoning_effort": "low",
+   "seconds": 35.9
+  },
+  {
+   "request": "14",
+   "task": "describe_columns",
+   "scope": "rt009",
+   "submitted": true,
+   "tool_calls": 10,
+   "usage": {
+    "input_token_count": 355196,
+    "output_token_count": 2081,
+    "total_token_count": 357277,
+    "reasoning_output_token_count": 1225
+   },
+   "reasoning_effort": "low",
+   "seconds": 46.0
+  },
+  {
+   "request": "15",
+   "task": "describe_columns",
+   "scope": "rt010",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 197698,
+    "output_token_count": 1488,
+    "total_token_count": 199186,
+    "reasoning_output_token_count": 884
+   },
+   "reasoning_effort": "low",
+   "seconds": 31.6
+  },
+  {
+   "request": "16",
+   "task": "describe_columns",
+   "scope": "rt011",
+   "submitted": true,
+   "tool_calls": 6,
+   "usage": {
+    "input_token_count": 293232,
+    "output_token_count": 2362,
+    "total_token_count": 295594,
+    "reasoning_output_token_count": 1687
+   },
+   "reasoning_effort": "low",
+   "seconds": 47.2
+  },
+  {
+   "request": "17",
+   "task": "describe_columns",
+   "scope": "rt012",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 339204,
+    "output_token_count": 2209,
+    "total_token_count": 341413,
+    "reasoning_output_token_count": 1282
+   },
+   "reasoning_effort": "low",
+   "seconds": 48.8
+  },
+  {
+   "request": "18",
+   "task": "describe_columns",
+   "scope": "rt013",
+   "submitted": true,
+   "tool_calls": 9,
+   "usage": {
+    "input_token_count": 259250,
+    "output_token_count": 3114,
+    "total_token_count": 262364,
+    "reasoning_output_token_count": 1534
+   },
+   "reasoning_effort": "low",
+   "seconds": 55.9
+  },
+  {
+   "request": "19",
+   "task": "describe_columns",
+   "scope": "rt014",
+   "submitted": true,
+   "tool_calls": 14,
+   "usage": {
+    "input_token_count": 168154,
+    "output_token_count": 2132,
+    "total_token_count": 170286,
+    "reasoning_output_token_count": 987
+   },
+   "reasoning_effort": "low",
+   "seconds": 32.3
+  },
+  {
+   "request": "20",
+   "task": "describe_columns",
+   "scope": "rt015",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 225409,
+    "output_token_count": 4381,
+    "total_token_count": 229790,
+    "reasoning_output_token_count": 1239
+   },
+   "reasoning_effort": "low",
+   "seconds": 53.6
+  },
+  {
+   "request": "21",
+   "task": "describe_columns",
+   "scope": "rt016",
+   "submitted": true,
+   "tool_calls": 10,
+   "usage": {
+    "input_token_count": 294151,
+    "output_token_count": 2841,
+    "total_token_count": 296992,
+    "reasoning_output_token_count": 1677
+   },
+   "reasoning_effort": "low",
+   "seconds": 59.9
+  },
+  {
+   "request": "22",
+   "task": "describe_columns",
+   "scope": "rt017",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 233051,
+    "output_token_count": 1854,
+    "total_token_count": 234905,
+    "reasoning_output_token_count": 1204
+   },
+   "reasoning_effort": "low",
+   "seconds": 43.4
+  },
+  {
+   "request": "23",
+   "task": "describe_columns",
+   "scope": "rt018",
+   "submitted": true,
+   "tool_calls": 9,
+   "usage": {
+    "input_token_count": 229025,
+    "output_token_count": 2015,
+    "total_token_count": 231040,
+    "reasoning_output_token_count": 1385
+   },
+   "reasoning_effort": "low",
+   "seconds": 44.9
+  },
+  {
+   "request": "24",
+   "task": "describe_columns",
+   "scope": "rt019",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 379997,
+    "output_token_count": 1841,
+    "total_token_count": 381838,
+    "reasoning_output_token_count": 1440
+   },
+   "reasoning_effort": "low",
+   "seconds": 56.3
+  },
+  {
+   "request": "25",
+   "task": "describe_columns",
+   "scope": "rt020",
+   "submitted": true,
+   "tool_calls": 15,
+   "usage": {
+    "input_token_count": 851628,
+    "output_token_count": 1891,
+    "total_token_count": 853519,
+    "reasoning_output_token_count": 953
+   },
+   "reasoning_effort": "low",
+   "seconds": 54.0
+  },
+  {
+   "request": "26",
+   "task": "author_overlay",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 20,
+   "usage": {
+    "input_token_count": 1120586,
+    "output_token_count": 6632,
+    "total_token_count": 1127218,
+    "reasoning_output_token_count": 3159
+   },
+   "reasoning_effort": "low",
+   "seconds": 124.0
+  }
+ ],
+ "total_tokens": 7668942,
+ "log_tail": [
+  "        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.exc1: unresolved label_empty (has data)",
+  "        ... and 140 more",
+  "    AI CALL [describe_columns / rt020] → trail\\profile\\ai_calls\\25_describe_columns.brief.md",
+  "    DIRECT [describe_columns / rt020] — 7 tool(s), budget 80 call(s)",
+  "    received trail\\profile\\ai_responses\\25.json via submit (2493 bytes)",
+  "    notes: Could not link rt020 columns because the associated instrument extract appears to lack the Section 9E durable-goods module/questions.",
+  "  [judge] author-overlay",
+  "    AI CALL [author_overlay / survey] → trail\\profile\\ai_calls\\26_author_overlay.brief.md",
+  "    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)",
+  "    received trail\\profile\\ai_responses\\26.json via submit (4207 bytes)",
+  "      residual (advisory): 156 still-missing (codes_missing=92, label_empty=64); orphan questions: 702; code conflicts: 121",
+  "        - consumption_00_05_10.PLI_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLI_base00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLI_base00nf: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLIstr_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLIstr_base00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.WPLI_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._05NFUPL: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._znf05: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._znf10: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00nf: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.decileL00: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileL05: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileU00: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileU05: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.div: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.drdpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.exc1: unresolved label_empty (has data)",
+  "        ... and 136 more",
+  "  [judge] heal",
+  "  [det] check-keys",
+  "      grain (person) rt002: psu, hhold, idcode -> unique over 55580 rows",
+  "  CHECK A: ok — profile recorded (profile ba1f2f15b4ba) — review it and approve (the review app's profile review, or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T204419_50cc`)",
+  "",
+  "== all phases complete ==",
+  "  profile complete (profile ba1f2f15b4ba). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T204419_50cc` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop."
+ ],
+ "finished": "2026-11-19T21:05:31+00:00"
+}

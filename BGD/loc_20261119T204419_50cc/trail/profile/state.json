@@ -1,0 +1,17 @@
+{
+  "survey_id": "BGD_2010_HIES",
+  "steps": {
+    "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+    "A.questionnaire": "ok(1 questionnaire scan(s) -> profile\\questionnaire)",
+    "A.conformance": "ok(no source standard applies)",
+    "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 363 still-missing (codes_missing=294, grain=4, label_empty=65); orphan questions: 1001; code conflicts: 1)",
+    "A.prefill-file-links": "ok(0 table(s) associated by structure; 21 left)",
+    "A.associate": "ok(20 table(s) associated by judgment, 1 unassociated, 20 associated in all -> profile\\file_links.json)",
+    "A.describe": "ok(all 24 request(s); 1 table(s) not asked, no candidate questions (consumption_00_05_10: no_instrument))",
+    "A.author-overlay": "ok(author_overlay: 21 tables, 4 links, grain; re-merged)",
+    "A.heal": "ok(off (--heal 0))",
+    "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+    "A.check": "ok"
+  },
+  "updated": "2026-11-19T21:05:30+00:00"
+}

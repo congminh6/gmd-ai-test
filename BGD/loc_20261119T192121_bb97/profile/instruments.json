@@ -1,0 +1,22 @@
+{
+  "by_route": {
+    "xlsx": 1
+  },
+  "files": [
+    {
+      "detail": "",
+      "ext": "xlsx",
+      "extractable": false,
+      "format": "xlsx",
+      "ocr_page_index": [],
+      "path": "HIES English Questionnaire 2010.xlsx",
+      "reader": "survey-scribe",
+      "route": "xlsx",
+      "size_bytes": 368508,
+      "tool": "survey-scribe"
+    }
+  ],
+  "n_files": 1,
+  "root": "C:\\temp\\test\\surveys\\BGD_2010_HIES\\Doc",
+  "skipped_extensions": {}
+}

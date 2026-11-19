@@ -1,0 +1,442 @@
+{
+ "request_id": "03-describe_columns-rt001#2",
+ "links": [
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1_40",
+   "evidence": [
+    "rt001.s09a1_40#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1_41",
+   "evidence": [
+    "rt001.s09a1_41#label",
+    "rt001.s09a1_41#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1_42",
+   "evidence": [
+    "rt001.s09a1_42#label",
+    "rt001.s09a1_42#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1_43",
+   "evidence": [
+    "rt001.s09a1_43#label",
+    "rt001.s09a1_43#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1_44",
+   "evidence": [
+    "rt001.s09a1_44#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1_45",
+   "evidence": [
+    "rt001.s09a1_45#label",
+    "rt001.s09a1_45#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1_46",
+   "evidence": [
+    "rt001.s09a1_46#label",
+    "rt001.s09a1_46#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1_47",
+   "evidence": [
+    "rt001.s09a1_47#label",
+    "rt001.s09a1_47#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1_48",
+   "evidence": [
+    "rt001.s09a1_48#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1_49",
+   "evidence": [
+    "rt001.s09a1_49#label",
+    "rt001.s09a1_49#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1_50",
+   "evidence": [
+    "rt001.s09a1_50#label",
+    "rt001.s09a1_50#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1_51",
+   "evidence": [
+    "rt001.s09a1_51#label",
+    "rt001.s09a1_51#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1_52",
+   "evidence": [
+    "rt001.s09a1_52#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1_53",
+   "evidence": [
+    "rt001.s09a1_53#label",
+    "rt001.s09a1_53#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1_54",
+   "evidence": [
+    "rt001.s09a1_54#label",
+    "rt001.s09a1_54#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1_55",
+   "evidence": [
+    "rt001.s09a1_55#label",
+    "rt001.s09a1_55#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1_56",
+   "evidence": [
+    "rt001.s09a1_56#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d01",
+   "evidence": [
+    "rt001.s09a1d01#label",
+    "rt001.s09a1d01#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d02",
+   "evidence": [
+    "rt001.s09a1d02#label",
+    "rt001.s09a1d02#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d03",
+   "evidence": [
+    "rt001.s09a1d03#label",
+    "rt001.s09a1d03#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d04",
+   "evidence": [
+    "rt001.s09a1d04#label",
+    "rt001.s09a1d04#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d05",
+   "evidence": [
+    "rt001.s09a1d05#label",
+    "rt001.s09a1d05#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d06",
+   "evidence": [
+    "rt001.s09a1d06#label",
+    "rt001.s09a1d06#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d07",
+   "evidence": [
+    "rt001.s09a1d07#label",
+    "rt001.s09a1d07#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d08",
+   "evidence": [
+    "rt001.s09a1d08#label",
+    "rt001.s09a1d08#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d09",
+   "evidence": [
+    "rt001.s09a1d09#label",
+    "rt001.s09a1d09#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d10",
+   "evidence": [
+    "rt001.s09a1d10#label",
+    "rt001.s09a1d10#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d11",
+   "evidence": [
+    "rt001.s09a1d11#label",
+    "rt001.s09a1d11#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d12",
+   "evidence": [
+    "rt001.s09a1d12#label",
+    "rt001.s09a1d12#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d13",
+   "evidence": [
+    "rt001.s09a1d13#label",
+    "rt001.s09a1d13#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_boys_lt10",
+   "column": "rt001.s09a1d14",
+   "evidence": [
+    "rt001.s09a1d14#label",
+    "rt001.s09a1d14#codes",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1d_1",
+   "evidence": [
+    "rt001.s09a1d_1#label",
+    "rt001.s09a1d_1#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1d_2",
+   "evidence": [
+    "rt001.s09a1d_2#label",
+    "rt001.s09a1d_2#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1d_3",
+   "evidence": [
+    "rt001.s09a1d_3#label",
+    "rt001.s09a1d_3#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1d_4",
+   "evidence": [
+    "rt001.s09a1d_4#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1d_5",
+   "evidence": [
+    "rt001.s09a1d_5#label",
+    "rt001.s09a1d_5#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "s9a_num_men_ge10",
+   "column": "rt001.s09a1d_6",
+   "evidence": [
+    "rt001.s09a1d_6#label",
+    "rt001.s09a1d_6#codes",
+    "t4#question"
+   ]
+  },
+  {
+   "question": "s9a_num_women_ge10",
+   "column": "rt001.s09a1d_7",
+   "evidence": [
+    "rt001.s09a1d_7#label",
+    "rt001.s09a1d_7#codes",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "s9a_date",
+   "column": "rt001.s09a1d_8",
+   "evidence": [
+    "rt001.s09a1d_8#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s9a_num_girls_lt10",
+   "column": "rt001.s09a1d_9",
+   "evidence": [
+    "rt001.s09a1d_9#label",
+    "rt001.s09a1d_9#codes",
+    "t3#question"
+   ]
+  },
+  {
+   "question": "sec9b_day1_7_date",
+   "column": "rt001.s09b1w1_",
+   "evidence": [
+    "rt001.s09b1w1_#label",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec9b_day8_14_date",
+   "column": "rt001.s09b1w2_",
+   "evidence": [
+    "rt001.s09b1w2_#label",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "geo_rural_psa_sma_code",
+   "column": "rt001.spc",
+   "evidence": [
+    "rt001.spc#label",
+    "t10#question"
+   ]
+  },
+  {
+   "question": "team_number",
+   "column": "rt001.team",
+   "evidence": [
+    "rt001.team#codes",
+    "t11#question"
+   ]
+  },
+  {
+   "question": "geo_thana_upazilla_code",
+   "column": "rt001.thana",
+   "evidence": [
+    "rt001.thana#label",
+    "t8#question"
+   ]
+  },
+  {
+   "question": "geo_union_ward_code",
+   "column": "rt001.union",
+   "evidence": [
+    "rt001.union#label",
+    "t9#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt001.stratum",
+   "reason": "Looks like sampling stratum identifier (numeric codes), not a questionnaire item.",
+   "evidence": [
+    "rt001.stratum#codes"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt001.urbanrur",
+   "reason": "Appears to be a derived sampling/geography classification (urban/rural categories) with no matching cover question distinct from spc; label is empty so cannot match confidently.",
+   "evidence": [
+    "rt001.urbanrur#codes",
+    "rt001.spc#label"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt001.wgt",
+   "reason": "Survey weight variable; administrative/derived and not directly asked in questionnaire.",
+   "evidence": [
+    "rt001.wgt#label"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ]
+}

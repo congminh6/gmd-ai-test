@@ -1,0 +1,90 @@
+{
+ "job_id": "loc_20261119T203308_6e70",
+ "flow": "scribe",
+ "survey_id": "BGD_2010_HIES",
+ "spec": {
+  "flow": "scribe",
+  "survey_id": "BGD_2010_HIES",
+  "country": "BGD",
+  "year": 2010,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc"
+  },
+  "input_job": "loc_20261119T192121_bb97",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-19T20:33:08+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T203308_6e70",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261119T192121_bb97",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "57b4c111c1e2c08dd859e9fecf56298f5e6e81c5ba65a908ab4f7a5d22bae2fa",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-19T20:41:12+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 22,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc",
+   "ss_export": "surveys/BGD_2010_HIES/ss",
+   "svis": "surveys/BGD_2010_HIES/svis",
+   "reference": "surveys/BGD_2010_HIES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "HIES English Questionnaire 2010.xlsx": "ok (partial): 1002 variable(s) -> profile/questionnaire/HIES_English_Questionnaire_2010.svis.json"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "classify-HIES_English_Questionnaire_2010",
+   "task": "classify-document",
+   "scope": "HIES English Questionnaire 2010.xlsx",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 4373,
+    "total_token_count": 4477,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 104,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 18,
+    "openai.reasoning_tokens": 18
+   }
+  }
+ ],
+ "total_tokens": 4477,
+ "log_tail": [
+  "2026-11-19T20:33:09+00:00 1 document(s) under 'BGD_2010_HIES/Doc'; model on; deployment gpt-5.2",
+  "2026-11-19T20:33:11+00:00 HIES English Questionnaire 2010.xlsx: 43 block(s), 43 table(s), 1.5s",
+  "2026-11-19T20:33:11+00:00 classifying 1 document(s)",
+  "2026-11-19T20:33:18+00:00 HIES English Questionnaire 2010.xlsx: questionnaire (English) — The sample shows a survey interview form with instructions and fields to be filled in (e.g., PSU serial number, team number, household number) rather than a list of dataset variables and codes.",
+  "2026-11-19T20:41:12+00:00 HIES English Questionnaire 2010.xlsx: partial, 1883 diagnostic(s), 5 failed block(s), 473.5s; 56 model call(s) used 254,545 input and 213,903 output token(s), the largest answer 65,325 (chunk-000020)",
+  "2026-11-19T20:41:12+00:00 HIES English Questionnaire 2010.xlsx: ok (partial): 1002 variable(s) -> profile/questionnaire/HIES_English_Questionnaire_2010.svis.json",
+  "2026-11-19T20:41:12+00:00 done: 1 of 1 document(s) produced"
+ ],
+ "finished": "2026-11-19T20:41:12+00:00"
+}

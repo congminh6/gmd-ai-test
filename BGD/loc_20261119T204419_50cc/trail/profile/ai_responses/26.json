@@ -1,0 +1,239 @@
+{
+ "request_id": "26-author_overlay-survey",
+ "grain": {
+  "household_key": [
+   "rt001.psu",
+   "rt001.hhold"
+  ],
+  "roster": "rt002",
+  "weight": "rt001.wgt"
+ },
+ "tables": [
+  {
+   "table": "rt001",
+   "verdict": "raw",
+   "evidence": [
+    "t2#structure",
+    "t5#identity"
+   ]
+  },
+  {
+   "table": "rt002",
+   "verdict": "raw",
+   "evidence": [
+    "t1#structure",
+    "t5#identity"
+   ]
+  },
+  {
+   "table": "rt003",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt004",
+   "verdict": "raw",
+   "no_key": "The scan reports key collisions on (psu,hhold,enumber) and the inventory shows no additional explicit identifier columns for the enterprise roster beyond this enterprise number; treat this as an entry table where (psu,hhold,enumber) may repeat.",
+   "evidence": [
+    "t9#structure",
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt005",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt006",
+   "verdict": "raw",
+   "evidence": [
+    "t12#structure",
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt007",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt008",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt009",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt010",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt011",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t12#structure",
+    "t17#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt012",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t17#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt013",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt014",
+   "verdict": "raw",
+   "evidence": [
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt015",
+   "verdict": "raw",
+   "no_key": "The scan's best candidate key (psu,hhold,ln,item) is not unique and has nulls in key columns; this appears to be an entries/diary-style table where multiple records can share the same identifiers, so it should not be treated as uniquely keyed at the row level.",
+   "evidence": [
+    "t9#structure",
+    "t17#identity"
+   ]
+  },
+  {
+   "table": "rt016",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t13#structure",
+    "t17#identity",
+    "t14#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt017",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t13#structure",
+    "t17#identity",
+    "t14#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt018",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t17#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt019",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t13#structure",
+    "t17#identity",
+    "t14#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "rt020",
+   "verdict": "raw",
+   "key_map": {
+    "ln": "idcode"
+   },
+   "evidence": [
+    "t13#structure",
+    "t17#identity",
+    "t14#identity",
+    "t11#identity"
+   ]
+  },
+  {
+   "table": "consumption_00_05_10",
+   "verdict": "external_input",
+   "evidence": [
+    "t3#structure",
+    "t5#identity"
+   ]
+  }
+ ],
+ "links": [
+  {
+   "question": "psu_serial_number",
+   "column": "rt001.psu",
+   "evidence": [
+    "t15#question",
+    "t16#identity"
+   ]
+  },
+  {
+   "question": "household_number",
+   "column": "rt001.hhold",
+   "evidence": [
+    "t15#question",
+    "t16#identity"
+   ]
+  },
+  {
+   "question": "sec1b_id_code_roster",
+   "column": "rt002.s01a_q01",
+   "evidence": [
+    "t15#question",
+    "t16#identity"
+   ]
+  },
+  {
+   "question": "sec1c_id_code_roster",
+   "column": "rt002.s01a_q01",
+   "evidence": [
+    "t15#question",
+    "t16#identity"
+   ]
+  }
+ ]
+}

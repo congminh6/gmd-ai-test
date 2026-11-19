@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 317.4,
+ "usage": {
+  "input_token_count": 422493,
+  "output_token_count": 23591,
+  "total_token_count": 446084,
+  "reasoning_output_token_count": 6341
+ },
+ "tool_calls": 13,
+ "submitted": true,
+ "final_text": "Submitted bindings for `06-author_bindings-MOD-DEM` (incl. education correspondence + `PARAM-EDU-MIN-EDUCATION-AGE=5`, one prelude for derived/cleaned columns, 22 bindings, and 2 absent determinations).",
+ "said": [
+  "Submitted bindings for `06-author_bindings-MOD-DEM` (incl. education correspondence + `PARAM-EDU-MIN-EDUCATION-AGE=5`, one prelude for derived/cleaned columns, 22 bindings, and 2 absent determinations)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\06.jsonl"
+}

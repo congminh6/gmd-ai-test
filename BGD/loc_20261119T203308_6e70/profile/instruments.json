@@ -1,0 +1,87 @@
+{
+  "by_route": {
+    "xlsx": 1
+  },
+  "files": [
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "PSU serial number  |  |  | Team number  |  | Term |  | Household number",
+        "kind": "questionnaire",
+        "language": "English",
+        "reason": "The sample shows a survey interview form with instructions and fields to be filled in (e.g., PSU serial number, team number, household number) rather than a list of dataset variables and codes.",
+        "sample": "6000 characters of 43 block(s)"
+      },
+      "detail": "",
+      "ext": "xlsx",
+      "extractable": false,
+      "extraction": {
+        "by": "survey-scribe/partial",
+        "coverage": {
+          "blocks": 43,
+          "failed": 5
+        },
+        "diagnostics": {
+          "METADATA_INCOMPLETE": 1,
+          "QUALITY_LOW_CONFIDENCE": 32,
+          "QUALITY_MISSING_CATEGORIES": 6,
+          "QUALITY_MODULE_RECONCILED": 1002,
+          "QUALITY_POSSIBLE_DUPLICATE": 834,
+          "SOURCE_TABLE_SPLIT": 3,
+          "VALIDATION_FAILED": 5
+        },
+        "excluded": [
+          {
+            "chunk": "chunk-000004",
+            "code": "VALIDATION_FAILED",
+            "message": "The source chunk remained invalid after bounded validation retries.",
+            "raw_names": [],
+            "reason": "CHUNK_ID_MISMATCH"
+          },
+          {
+            "chunk": "chunk-000009",
+            "code": "VALIDATION_FAILED",
+            "message": "The source chunk remained invalid after bounded validation retries.",
+            "raw_names": [],
+            "reason": "CHUNK_ID_MISMATCH"
+          },
+          {
+            "chunk": "chunk-000011",
+            "code": "VALIDATION_FAILED",
+            "message": "The source chunk remained invalid after bounded validation retries.",
+            "raw_names": [],
+            "reason": "CHUNK_ID_MISMATCH"
+          },
+          {
+            "chunk": "chunk-000026",
+            "code": "VALIDATION_FAILED",
+            "message": "The source chunk remained invalid after bounded validation retries.",
+            "raw_names": [],
+            "reason": "CHUNK_ID_MISMATCH"
+          },
+          {
+            "chunk": "chunk-000028",
+            "code": "VALIDATION_FAILED",
+            "message": "The source chunk remained invalid after bounded validation retries.",
+            "raw_names": [],
+            "reason": "CHUNK_ID_MISMATCH"
+          }
+        ],
+        "failed_units": [],
+        "svis": "profile/questionnaire/HIES_English_Questionnaire_2010.svis.json",
+        "total_units": 1,
+        "unit": "document"
+      },
+      "format": "xlsx",
+      "ocr_page_index": [],
+      "path": "HIES English Questionnaire 2010.xlsx",
+      "reader": "survey-scribe",
+      "route": "xlsx",
+      "size_bytes": 368508,
+      "tool": "survey-scribe"
+    }
+  ],
+  "n_files": 1,
+  "root": "C:\\temp\\test\\surveys\\BGD_2010_HIES\\Doc",
+  "skipped_extensions": {}
+}

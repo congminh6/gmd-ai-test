@@ -1,9 +1,0 @@
-{
-  "survey_id": "BGD_2010_HIES",
-  "steps": {
-    "I.scan-data": "ok(21 table(s) -> profile\\data_scan.json \u00b7 data unversioned)",
-    "I.scan-docs": "ok(2 file(s): pdf_text=1, xlsx=1 -> profile\\instruments.json)",
-    "I.check": "ok"
-  },
-  "updated": "2026-11-19T18:42:53+00:00"
-}

@@ -1,0 +1,76 @@
+{
+ "request_id": "17-describe_columns-rt012",
+ "links": [
+  {
+   "question": "s7e_asset_401_own_number",
+   "column": "rt012.s07e_q01",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_bought_number_12m",
+   "column": "rt012.s07e_q02",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_sold_number_12m",
+   "column": "rt012.s07e_q03",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_rental_earn_taka_12m",
+   "column": "rt012.s07e_q04",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_own_value_taka",
+   "column": "rt012.s07e_q_1",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_bought_value_taka_12m",
+   "column": "rt012.s07e_q_2",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  },
+  {
+   "question": "s7e_asset_401_sold_value_taka_12m",
+   "column": "rt012.s07e_q_3",
+   "evidence": [
+    "t6#question",
+    "t7#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt012.agric_as",
+   "reason": "Column appears to be an internal item identifier for section 7E asset grid rows (values are asset codes 401–420) rather than a directly asked question; no single questionnaire item corresponds to this code column (the questionnaire has one variable per asset code, e.g. s7e_asset_401_*), so do not link.",
+   "evidence": [
+    "t6#domain",
+    "t1#identity",
+    "t7#question"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ]
+}

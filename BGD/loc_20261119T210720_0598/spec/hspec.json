@@ -1,0 +1,2435 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [],
+        "text": "ISO3 is taken from survey identity per policy (no source column)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_month",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.s09a1_40",
+              "rt001.s09b1w1_",
+              "rt001.s09b1w2_",
+              "rt001.wgt",
+              "consumption_00_05_10.wgt",
+              "consumption_00_05_10.year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e603d74766ea6a48b18593b241ff755ad9b30df4dd6f78e3a73d658ce1de8f0d",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived by parsing household-level date strings (rt001.s09a1_40 / s09b1w1_ / s09b1w2_) into month (04:t2)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.intmonth__",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-intmonth"
+    },
+    {
+      "binding_id": "B-int_year",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.s09a1_40",
+              "rt001.s09b1w1_",
+              "rt001.s09b1w2_",
+              "rt001.wgt",
+              "consumption_00_05_10.wgt",
+              "consumption_00_05_10.year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e603d74766ea6a48b18593b241ff755ad9b30df4dd6f78e3a73d658ce1de8f0d",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived by parsing household-level date strings (rt001.s09a1_40 / s09b1w1_ / s09b1w2_) into year (04:t2)."
+      },
+      "injected": {
+        "table": "prelude",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.intyear__",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-intyear"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.s09a1_40",
+              "rt001.s09b1w1_",
+              "rt001.s09b1w2_",
+              "rt001.wgt",
+              "consumption_00_05_10.wgt",
+              "consumption_00_05_10.year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e603d74766ea6a48b18593b241ff755ad9b30df4dd6f78e3a73d658ce1de8f0d",
+            "tool": "column"
+          }
+        ],
+        "text": "Household sampling weight variable rt001.wgt is numeric and complete (04:t2)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "wgt",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.s09a1_40",
+              "rt001.s09b1w1_",
+              "rt001.s09b1w2_",
+              "rt001.wgt",
+              "consumption_00_05_10.wgt",
+              "consumption_00_05_10.year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e603d74766ea6a48b18593b241ff755ad9b30df4dd6f78e3a73d658ce1de8f0d",
+            "tool": "column"
+          }
+        ],
+        "text": "Survey start year is taken from survey identity per policy; consumption_00_05_10.year is a wave indicator (1=2000, 2=2005, other) not a 4-digit start year (04:t2)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-geo_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [],
+            "call": "05:t19",
+            "result_sha256": "191b37c4e4914d23e2ab1c3f030d015e66dc1572086989ab73432bd486fd9923",
+            "tool": "check"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-gauladm2code",
+              "VAR-subnatid1prev",
+              "VAR-subnatid2prev",
+              "VAR-subnatid3prev",
+              "VAR-subnatid4prev"
+            ],
+            "call": "05:t17",
+            "result_sha256": "6c2185987af3f53485f62af5562eb475d9f833bd9d4ca71513b226f44c47055b",
+            "tool": "canon"
+          }
+        ],
+        "text": "BGD 2010 geography domain has no national categories; correspondence links are all exceptions with no direct geocode placement, yielding missing for all codes (05:t19; 05:t17)."
+      },
+      "injected": {
+        "raw_value": "correspondence.geography",
+        "unit_keys": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-geocode",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-psu",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.psu stored as string (05:t10) so prelude GEO-psu_int coerces to numeric (05:t10)."
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.psu_int__",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-psu"
+    },
+    {
+      "binding_id": "B-strata",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.stratum is a 16-category stratum identifier (05:t10)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "stratum",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-strata"
+    },
+    {
+      "binding_id": "B-subnatid1",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-gauladm2code",
+              "VAR-subnatid1prev",
+              "VAR-subnatid2prev",
+              "VAR-subnatid3prev",
+              "VAR-subnatid4prev"
+            ],
+            "call": "05:t17",
+            "result_sha256": "6c2185987af3f53485f62af5562eb475d9f833bd9d4ca71513b226f44c47055b",
+            "tool": "canon"
+          }
+        ],
+        "text": "rt001.region Geographic code: Region (05:t10); treated as highest admin level code column per canon construction notes (05:t17)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-subnatid1"
+    },
+    {
+      "binding_id": "B-subnatid2",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.district Geographic code: District (05:t10)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "district",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-subnatid2"
+    },
+    {
+      "binding_id": "B-subnatid3",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.thana Geographic code: Thana/Upazilla (05:t10)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "thana",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-subnatid3"
+    },
+    {
+      "binding_id": "B-subnatid4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.union Geographic code: Union/Ward (05:t10)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "union",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-subnatid4"
+    },
+    {
+      "binding_id": "B-subnatidsurvey",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "VAR-gauladm1code",
+              "VAR-gauladm2code",
+              "VAR-subnatid1prev",
+              "VAR-subnatid2prev",
+              "VAR-subnatid3prev",
+              "VAR-subnatid4prev"
+            ],
+            "call": "05:t17",
+            "result_sha256": "6c2185987af3f53485f62af5562eb475d9f833bd9d4ca71513b226f44c47055b",
+            "tool": "canon"
+          }
+        ],
+        "text": "To keep geography correspondence enumerable, use rt001.region (7 codes) as the survey’s lowest representative subnational id; rt001.region codes observed (05:t10); canon requires it be drawn from subnatid1-4 (05:t17)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-subnatidsurvey"
+    },
+    {
+      "binding_id": "B-urban",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.spc",
+              "rt003.s04a_q05",
+              "rt001.urbanrur"
+            ],
+            "call": "05:t14",
+            "result_sha256": "e4bbba7ba3ee94c2878c5ba58c5f85d33e2c6a453d51f01591c8682d2d654175",
+            "tool": "column"
+          },
+          {
+            "args": [],
+            "call": "05:t20",
+            "result_sha256": "0a97dde8309878d67864e319d7317d2b9ddf203b4741612d83fd7d9ded8c30cb",
+            "tool": "check"
+          }
+        ],
+        "text": "rt001.spc is labeled 'Geographic code: Rural/ PSA/ SMA' (05:t14); observed categories include Rural, Municipality, SMA (validate finding 05:t20)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "spc",
+        "unit_keys": [
+          "psu",
+          "hhold"
+        ]
+      },
+      "table": "rt001",
+      "target": "VAR-urban",
+      "value_map": {
+        "Municipality": 1,
+        "Rural": 0,
+        "SMA": 1
+      }
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Age in years is collected for all household members as rt002.s01a_q04; ages >120 are cleaned to missing in prelude (06:t2)."
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.age__",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-childmth",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Child age in months is collected for children 5 and under as rt002.s03b_q02; values outside 0-59 cleaned to missing in prelude; gated to age<5 (06:t3,06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ < 5"
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childmth__",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-childmth"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Use roster age in years (rt002.s01a_q04) for under-5 children only (gate age<5) (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ < 5"
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.age__",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-comm_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Communication difficulty rt002.s03d_q17 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q17",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-communicationdisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-conc_dsord",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Remembering/concentrating difficulty rt002.s03d_q11 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q11",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-concentrationdisorder",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-educat4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "educat4 via education correspondence on rt002.s02a_q05 for age>=5 (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ >= 5"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s02a_q05",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-educat4",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat5",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "educat5 via education correspondence on rt002.s02a_q05 for age>=5 (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ >= 5"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s02a_q05",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-educat5",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-agecat",
+              "VAR-relationharm",
+              "VAR-literacy",
+              "VAR-everattend",
+              "VAR-primarycomp",
+              "VAR-mineducatage"
+            ],
+            "call": "06:t1",
+            "result_sha256": "f6a4620d865b3339d96f22221c76ee89f879f779bf9278dc03dd874525913a91",
+            "tool": "canon"
+          }
+        ],
+        "text": "Highest class completed rt002.s02a_q05 (education correspondence) applied for age>=5 (06:t2,06:t1)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ >= 5"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s02a_q05",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-educat7",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "educy via education correspondence on rt002.s02a_q05 for age>=5; grades 1-7/9 use direct educy in correspondence exceptions (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "__derived.age__ >= 5"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s02a_q05",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-educy",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-everattend",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02a_q01",
+              "rt002.s02a_q02",
+              "rt002.s02a_q06"
+            ],
+            "call": "06:t7",
+            "result_sha256": "7fe0e285e794a9bacbdb79e8f810732d341624dcf7498be513b94840c5495bff",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "No direct ever-attended question found; infer from non-zero response in where-last-study (rt002.s02a_q06) or highest-class-completed (rt002.s02a_q05); both 0 -> never attended (06:t7,06:t2)."
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "__derived.everattend__",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-everattend"
+    },
+    {
+      "binding_id": "B-eye_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Seeing difficulty question rt002.s03d_q02 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q02",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-eyedisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-hear_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Hearing difficulty question rt002.s03d_q05 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q05",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-heardisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-literacy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Derived literacy from read-letter (rt002.s02a_q03) and write-letter (rt002.s02a_q04): literate only if both Yes; 0/4 treated as missing (06:t2)."
+      },
+      "injected": {
+        "table": "prelude"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.literacy__",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-literacy"
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Sex rt002.s01a_q02 codes 1 Male, 2 Female (06:t2)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s01a_q02",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Marital status rt002.s01a_q06 codes: 1 Currently Married, 2 Never Married, 3 Widowed, 4 Divorced, 5 Separated (06:t2)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": 5
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s01a_q06",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 2,
+        "2": 1,
+        "3": 4,
+        "4": 3,
+        "5": 3
+      }
+    },
+    {
+      "binding_id": "B-mineducatage",
+      "constant_source": {
+        "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "mineducatage is the survey parameter PARAM-EDU-MIN-EDUCATION-AGE (value 5 from questionnaire universe) (06:t2)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-mineducatage"
+    },
+    {
+      "binding_id": "B-primarycomp",
+      "derived_from": "VAR-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-agecat",
+              "VAR-relationharm",
+              "VAR-literacy",
+              "VAR-everattend",
+              "VAR-primarycomp",
+              "VAR-mineducatage"
+            ],
+            "call": "06:t1",
+            "result_sha256": "f6a4620d865b3339d96f22221c76ee89f879f779bf9278dc03dd874525913a91",
+            "tool": "canon"
+          }
+        ],
+        "text": "Primary completion derived from educat7 (1/2->0, 3-7->1) per canon guidance; gate uses produced age (VAR-age) to apply age>=5 (06:t1)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "age >= 5"
+      },
+      "gate_reads": [
+        "VAR-age"
+      ],
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "educat7",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "target": "VAR-primarycomp",
+      "value_map": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1
+      }
+    },
+    {
+      "binding_id": "B-relationcs",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Relationship-to-head country-specific codes in rt002.s01a_q03; bind coded column passthrough so engine writes '<code> - <label>' (06:t2)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s01a_q03",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-relationcs"
+    },
+    {
+      "binding_id": "B-relationharm",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Map rt002.s01a_q03 relationship codes to harmonized: head(1), spouse(2), child(3), parents(6), relatives (4,5,7-11), non-relatives (12 servant,13 employee), other(14) -> .o (06:t2)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "14": ".o",
+        "null": ".b",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s01a_q03",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-relationharm",
+      "value_map": {
+        "1": 1,
+        "10": 5,
+        "11": 5,
+        "12": 6,
+        "13": 6,
+        "2": 2,
+        "3": 3,
+        "4": 5,
+        "5": 5,
+        "6": 4,
+        "7": 5,
+        "8": 5,
+        "9": 5
+      }
+    },
+    {
+      "binding_id": "B-school",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Currently attending school rt002.s02b_q01 codes 1 Yes, 2 No; 0 appears as not-applicable (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".c",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s02b_q01",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-school",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-slfcre_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Self care difficulty rt002.s03d_q14 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q14",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-selfcaredisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "binding_id": "B-walk_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s02b_q01",
+              "rt002.s03b_q02",
+              "rt002.s03d_q02",
+              "rt002.s03d_q05",
+              "rt002.s03d_q08",
+              "rt002.s03d_q11",
+              "rt002.s03d_q14",
+              "rt002.s03d_q17"
+            ],
+            "call": "06:t3",
+            "result_sha256": "ce2b6ef745e5d843ea69aa86666943bd04d7fdfb68fc11b9cee47c19dba8cff2",
+            "tool": "column"
+          }
+        ],
+        "text": "Walking difficulty question rt002.s03d_q08 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (06:t3)."
+      },
+      "injected": {
+        "table": "data_scan"
+      },
+      "missing_map": {
+        "0": ".b",
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "s03d_q08",
+        "unit_keys": [
+          "psu",
+          "hhold",
+          "idcode"
+        ]
+      },
+      "table": "rt002",
+      "target": "VAR-walkdisability",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    }
+  ],
+  "correspondence": {
+    "education": {
+      "column": "rt002.s02a_q05",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Education correspondence based on highest class completed (rt002.s02a_q05) with degree-like labels for codes 10+ and grade numbers for 1-9; see code labels and universe 5+ (06:t2)."
+      },
+      "links": {
+        "0": "BGD-EDU-01",
+        "1": {
+          "direct": {
+            "VAR-educat7": 2,
+            "VAR-educy": 1
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 1 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (1 year completed)."
+        },
+        "10": "BGD-EDU-06",
+        "11": "BGD-EDU-08",
+        "12": "BGD-EDU-22",
+        "13": "BGD-EDU-30",
+        "14": "BGD-EDU-29",
+        "15": "BGD-EDU-23",
+        "16": "BGD-EDU-10",
+        "17": "BGD-EDU-19",
+        "18": {
+          "candidates": [
+            "BGD-EDU-18",
+            "BGD-EDU-20"
+          ],
+          "kind": "ambiguous",
+          "reason": "Nursing could be diploma-level (post-secondary non-tertiary) or degree-level; questionnaire label does not specify."
+        },
+        "19": {
+          "kind": "residual",
+          "reason": "Other (Specify)"
+        },
+        "2": {
+          "direct": {
+            "VAR-educat7": 2,
+            "VAR-educy": 2
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 2 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (2 years completed)."
+        },
+        "3": {
+          "direct": {
+            "VAR-educat7": 2,
+            "VAR-educy": 3
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 3 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (3 years completed)."
+        },
+        "4": {
+          "direct": {
+            "VAR-educat7": 2,
+            "VAR-educy": 4
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 4 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (4 years completed)."
+        },
+        "5": {
+          "direct": {
+            "VAR-educat7": 3,
+            "VAR-educy": 5
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 5 completed indicates primary completion (end of ISCED1); grade-specific value not represented as a national programme category in the standard table."
+        },
+        "50": {
+          "kind": "residual",
+          "reason": "Undeclared code 50 in data; meaning not documented in value labels."
+        },
+        "6": {
+          "direct": {
+            "VAR-educat7": 4,
+            "VAR-educy": 6
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 6 completed indicates lower secondary but not completion; grade-specific value not represented as a national programme category in the standard table."
+        },
+        "7": {
+          "direct": {
+            "VAR-educat7": 4,
+            "VAR-educy": 7
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 7 completed indicates lower secondary but not completion; grade-specific value not represented as a national programme category in the standard table."
+        },
+        "8": "BGD-EDU-04",
+        "9": {
+          "direct": {
+            "VAR-educat7": 4,
+            "VAR-educy": 9
+          },
+          "kind": "no_fitting_category",
+          "reason": "Class 9 completed indicates upper-secondary not completed; grade-specific value not represented as a national programme category in the standard table."
+        }
+      }
+    },
+    "geography": {
+      "column": "rt001.region",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt001.region",
+              "rt001.district",
+              "rt001.thana",
+              "rt001.union",
+              "rt001.mouza",
+              "rt001.urbanrur",
+              "rt001.stratum",
+              "rt001.psu"
+            ],
+            "call": "05:t10",
+            "result_sha256": "b6600da3360102b00127839e44d709e4cdfacfb54679416a2e3a3ba62e05517a",
+            "tool": "column"
+          }
+        ],
+        "text": "rt001.region question + observed domain; national standard note that no categories exist for BGD geography domain (05:t10; brief geography section)."
+      },
+      "links": {
+        "10": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "20": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "30": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "40": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "50": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "55": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        },
+        "60": {
+          "kind": "no_fitting_category",
+          "reason": "BGD 2010 geography correspondence has no national-standard categories in this domain; cannot link region codes to a national category or place a direct GMD geocode without the PARAM-GEO-GMD-CROSSWALK entries."
+        }
+      }
+    }
+  },
+  "coverage": [
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "gauladm1code requires resolving GAUL code from VAR-geocode via PARAM-GEO-GMD-CROSSWALK; no national-standard geography categories exist in this domain and no crosswalk codes are available in this task context (brief geography section; t17).",
+      "status": "deferred",
+      "variable": "VAR-gauladm1code"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "gauladm2code requires resolving GAUL code from VAR-geocode via PARAM-GEO-GMD-CROSSWALK; no national-standard geography categories exist in this domain and no crosswalk codes are available in this task context (brief geography section; t17).",
+      "status": "deferred",
+      "variable": "VAR-gauladm2code"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid1prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t17).",
+      "status": "deferred",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid2prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+      "status": "deferred",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid3prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+      "status": "deferred",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid4prev is derived from VAR-geocode via effective-dated PARAM-GEO-GMD-CROSSWALK; crosswalk/correspondence is not available to compute prior-boundary ids here (t18).",
+      "status": "deferred",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey collects continuous age in years (rt002.s01a_q04) for all roster members; no separate age-band variable is needed/collected (t2).",
+      "status": "absent",
+      "variable": "VAR-agecat"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No language variable located by searching survey columns for 'language' (t4).",
+      "searches": [
+        {
+          "in": "name,label,question,codes",
+          "terms": "language"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-language"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "BGD",
+      "year": 2010
+    },
+    "country_parameters": [
+      "PARAM-DEM-MIN-MARRIAGE-AGE",
+      "PARAM-EDU-LEVEL-CROSSWALK",
+      "PARAM-EDU-MIN-EDUCATION-AGE",
+      "PARAM-GEO-GMD-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "output": {
+    "grain": [
+      "psu",
+      "hhold",
+      "idcode"
+    ],
+    "roster": "rt002",
+    "unit_of_analysis": "individual"
+  },
+  "parameters": {
+    "PARAM-EDU-MIN-EDUCATION-AGE": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "rt002.s01a_q02",
+              "rt002.s01a_q03",
+              "rt002.s01a_q04",
+              "rt002.s01a_q06",
+              "rt002.s02a_q03",
+              "rt002.s02a_q04",
+              "rt002.s02a_q05",
+              "rt002.s02a_q07"
+            ],
+            "call": "06:t2",
+            "result_sha256": "1a00e6ddeb7758b95f9986cff830eef7c5bee3fe44e63efcb3116a9fc5864e89",
+            "tool": "column"
+          }
+        ],
+        "text": "Education section universe is ALL PERSONS 5 YEARS AND OLDER on education questions (e.g., rt002.s02a_q03 / rt002.s02a_q04 / rt002.s02a_q05) (06:t2)."
+      },
+      "method": "questionnaire_universe",
+      "value": 5
+    }
+  },
+  "prelude": [
+    {
+      "code_ref": "MOD-IDN-intdate_parse.py",
+      "id": "MOD-IDN-intdate_parse",
+      "invariants": [
+        "Derived month in 1..12 when non-null",
+        "Derived year is a 4-digit integer when non-null"
+      ],
+      "produces": [
+        "__derived.intmonth__",
+        "__derived.intyear__"
+      ],
+      "reads": [
+        "rt001"
+      ],
+      "reason": "Interview month/year are not stored as separate numeric variables; derive them by parsing the household-level date string fields into month and year.",
+      "writes": [
+        "rt001"
+      ]
+    },
+    {
+      "code_ref": "GEO-psu_int.py",
+      "id": "GEO-psu_int",
+      "invariants": [],
+      "produces": [
+        "__derived.psu_int__"
+      ],
+      "reads": [
+        "rt001"
+      ],
+      "reason": "VAR-psu is canon integer but rt001.psu is stored as string; derive a numeric PSU column without renumbering.",
+      "writes": [
+        "rt001"
+      ]
+    },
+    {
+      "code_ref": "MOD-DEM-dem_derivations.py",
+      "id": "MOD-DEM-dem_derivations",
+      "invariants": [
+        "__derived.literacy__ in {0,1} or missing",
+        "__derived.everattend__ in {0,1} or missing"
+      ],
+      "produces": [
+        "__derived.age__",
+        "__derived.childmth__",
+        "__derived.literacy__",
+        "__derived.everattend__"
+      ],
+      "reads": [
+        "rt002"
+      ],
+      "reason": "Clean continuous age/months to canon ranges and derive literacy and everattend from multiple education items; requires multi-column logic and range checks not expressible in a single-column recode.",
+      "writes": [
+        "rt002"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "consumption_00_05_10",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "external_input"
+        },
+        "sha256": "557b334fa34f6a9cf09ee086ca0aa5ec21e569e152125ce80ffd29c61e1f52fc",
+        "source_file": "consumption_00_05_10.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "district": "numeric",
+          "region": "numeric",
+          "spc": "string",
+          "stratum": "string",
+          "thana": "numeric",
+          "union": "numeric",
+          "wgt": "numeric"
+        },
+        "name": "rt001",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "44c3657020b57565eafcb2f94bfdc6cf6292a297376361bf10209969ee4be235",
+        "source_file": "rt001.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "s01a_q02": "numeric",
+          "s01a_q03": "numeric",
+          "s01a_q06": "numeric",
+          "s02a_q05": "numeric",
+          "s02b_q01": "numeric",
+          "s03d_q02": "numeric",
+          "s03d_q05": "numeric",
+          "s03d_q08": "numeric",
+          "s03d_q11": "numeric",
+          "s03d_q14": "numeric",
+          "s03d_q17": "numeric"
+        },
+        "name": "rt002",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "962f6653d8ac6a9fda8558d9d5df3738a789c6f4f797b810594f0339acb7bd19",
+        "source_file": "rt002.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt003",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7a21876f43d7770d6eaef8fe24c76f141d51efab00224c5f754242579a48ebc2",
+        "source_file": "rt003.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt004",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "bd8f1122d410bd8b946a59672e5dc313021105b0a3b76439927718bdaa48f1a1",
+        "source_file": "rt004.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt005",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "48584456ad0d927e69a7c3a2b220dc57a1af05b84ea5272367e4c007327c3007",
+        "source_file": "rt005.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt006",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "27aa3ff9f7ed933e58b60652950de446fbfa9686f085d2233a68dbe01341cc25",
+        "source_file": "rt006.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt007",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7bb79673450e41e52cbb098b07701c46bf3b1455528b745ac09efea7fddfd3eb",
+        "source_file": "rt007.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt008",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "a27f6af7fb717464f843dcd75671d1e240b2773ba72a49ed16b0b09cdd0665ce",
+        "source_file": "rt008.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt009",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "98362e3e2a804b460df3ca3d8d7b1436095a538a6c773e6acfdc3e86fd871f20",
+        "source_file": "rt009.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt010",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "fcebe28b394184248e1d557bc6c7669a9f6d331385400212afe4026ff365a547",
+        "source_file": "rt010.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt011",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "93debb6e8ca9652f82f15905555aa7bc0e181ec1e4d100a24004577be0c106ae",
+        "source_file": "rt011.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt012",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "ca1e9eaea1025771849318ab2bea3fd7e00aa4f862d983b5415a318a3b5496a3",
+        "source_file": "rt012.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt013",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "9bfaed2464a13fd0087cbf76c08ed07ad18f551304932f6c48b11d3bd5dba5ad",
+        "source_file": "rt013.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt014",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "c5adbd1f2f62f893e20e4322719ba39c43cfffd30aa090c626f4875e4b06195e",
+        "source_file": "rt014.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt015",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "59497e7cfca01fcf8cb3a1bad8946e3c7a1c23735d68d815908246ba31a459d3",
+        "source_file": "rt015.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt016",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "306c2a0c6cc3209bad1177e72300164b8b83470b86d197e4b15a6d8dae0fba90",
+        "source_file": "rt016.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt017",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7656031ac4b590b0e54b5c355cc297a3655d9cd6fb140f23e7d279d1bfa067ae",
+        "source_file": "rt017.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt018",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "905279ff9ddbe045e96ee6e340235472eb26171db04d6354a2b8e91901b1c5bc",
+        "source_file": "rt018.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt019",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "299e86d86a99b1a428e253beab677772bae6796c9ffbb81af9ce2ea10ee8e8b5",
+        "source_file": "rt019.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "rt020",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "5c95f6b937eae451706f5bd5afe25e7be4be127cbf610ac775fd6c204233f1ff",
+        "source_file": "rt020.dta"
+      }
+    ]
+  },
+  "survey_id": "BGD_2010_HIES",
+  "targets": [
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-geocode",
+    "VAR-psu",
+    "VAR-strata",
+    "VAR-subnatid1",
+    "VAR-subnatid2",
+    "VAR-subnatid3",
+    "VAR-subnatid4",
+    "VAR-subnatidsurvey",
+    "VAR-urban",
+    "VAR-age",
+    "VAR-childmth",
+    "VAR-childyr",
+    "VAR-communicationdisability",
+    "VAR-concentrationdisorder",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-everattend",
+    "VAR-eyedisability",
+    "VAR-heardisability",
+    "VAR-literacy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-relationcs",
+    "VAR-relationharm",
+    "VAR-school",
+    "VAR-selfcaredisability",
+    "VAR-walkdisability"
+  ]
+}

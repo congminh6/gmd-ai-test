@@ -1,0 +1,143 @@
+{
+ "request_id": "11-describe_columns-rt006",
+ "links": [
+  {
+   "question": "sec7b_othercrop15_potato_cultivated",
+   "column": "rt006.s07b_q02",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_land_decimal",
+   "column": "rt006.s07b_q03",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_produced_kg",
+   "column": "rt006.s07b_q04",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_consumed_kg",
+   "column": "rt006.s07b_q05",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_sold_kg",
+   "column": "rt006.s07b_q06",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_stock_kg",
+   "column": "rt006.s07b_q07",
+   "evidence": [
+    "t3#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_given_to_landlord_kg",
+   "column": "rt006.s07b_q08",
+   "evidence": [
+    "t4#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_othercrop15_potato_unitprice_taka_per_kg",
+   "column": "rt006.s07b_q_1",
+   "evidence": [
+    "t4#identity",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_given_for_wages_kg",
+   "column": "rt006.s07b_q_2",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_as_seed_kg",
+   "column": "rt006.s07b_q_3",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_feed_for_animals_kg",
+   "column": "rt006.s07b_q_4",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_waste_kg",
+   "column": "rt006.s07b_q_5",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_other_kg",
+   "column": "rt006.s07b_q_6",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "sec7b_crop01_aus_used_total_kg",
+   "column": "rt006.s07b_q_7",
+   "evidence": [
+    "t4#identity",
+    "t6#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt006.ln",
+   "reason": "Column appears to be an internal roster line number (range 1–39) with no questionnaire item attached on the column card; no obvious candidate question for a line/serial number in the provided instrument candidates for section 7B crops.",
+   "evidence": [
+    "t3#identity"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  },
+  {
+   "column": "rt006.price",
+   "reason": "Unlabelled numeric column with 94.9% null and only 11 discrete values (0–50). No questionnaire item in the provided crop section candidates clearly corresponds to this standalone 'price' field (the questionnaire price per kg appears to correspond to rt006.s07b_q_1 instead).",
+   "evidence": [
+    "t3#identity",
+    "t4#identity"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ],
+ "notes": "Mapped crop production/uses block columns to Section 7B crop questions; left ln and an extra sparse 'price' column unresolved as likely administrative/derived."
+}

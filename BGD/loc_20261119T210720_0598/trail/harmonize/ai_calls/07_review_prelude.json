@@ -1,0 +1,51 @@
+{
+  "task_type": "review_prelude",
+  "task": "Read each prelude's CODE — the engine will execute it — and give a verdict: `ok`, or a `concern` with the\nconcrete problem. A concern is anything that makes the code unsafe (file / network / exec, imports outside\nthe allowed ones, tables it does not name) or makes it not do what its `reason` and `produces` claim. Judge\nthe code on its merits even if you authored it. Nothing waits for your verdict: a concern is a finding on the\ntargets that read the prelude's columns — it goes back to the author, unless the author's `check` already ran\nthat exact code on the data without failure, when it is a note for the person reviewing the output.",
+  "scope_id": "survey",
+  "preludes": [
+    {
+      "id": "MOD-IDN-intdate_parse",
+      "code_ref": "MOD-IDN-intdate_parse.py",
+      "produces": [
+        "__derived.intmonth__",
+        "__derived.intyear__"
+      ],
+      "reason": "Interview month/year are not stored as separate numeric variables; derive them by parsing the household-level date string fields into month and year."
+    },
+    {
+      "id": "GEO-psu_int",
+      "code_ref": "GEO-psu_int.py",
+      "produces": [
+        "__derived.psu_int__"
+      ],
+      "reason": "VAR-psu is canon integer but rt001.psu is stored as string; derive a numeric PSU column without renumbering."
+    },
+    {
+      "id": "MOD-DEM-dem_derivations",
+      "code_ref": "MOD-DEM-dem_derivations.py",
+      "produces": [
+        "__derived.age__",
+        "__derived.childmth__",
+        "__derived.literacy__",
+        "__derived.everattend__"
+      ],
+      "reason": "Clean continuous age/months to canon ranges and derive literacy and everattend from multiple education items; requires multi-column logic and range checks not expressible in a single-column recode."
+    }
+  ],
+  "scope_ids": [
+    "MOD-IDN-intdate_parse",
+    "GEO-psu_int",
+    "MOD-DEM-dem_derivations"
+  ],
+  "request_id": "07-review_prelude-survey",
+  "tools": [
+    "canon",
+    "contract",
+    "current",
+    "submit"
+  ],
+  "brief_sha256": "92980b965c05c75b2b2aad1b76190c9fad38649cc85de67a004b0e1a3e9d7675",
+  "transport": "direct",
+  "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

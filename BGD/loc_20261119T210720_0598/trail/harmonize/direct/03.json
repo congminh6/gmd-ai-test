@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 31.5,
+ "usage": {
+  "input_token_count": 138114,
+  "output_token_count": 1938,
+  "total_token_count": 140052,
+  "reasoning_output_token_count": 688
+ },
+ "tool_calls": 4,
+ "submitted": true,
+ "final_text": "Done — submitted routing for `03-locate_sources-MOD-DEM` (see tool call `t4`).",
+ "said": [
+  "Done — submitted routing for `03-locate_sources-MOD-DEM` (see tool call `t4`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

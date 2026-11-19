@@ -1,0 +1,77 @@
+{
+ "request_id": "25-describe_columns-rt020",
+ "links": [],
+ "unresolved": [
+  {
+   "column": "rt020.dg_code",
+   "reason": "No matching questionnaire item found in associated instrument (scribe-aa2f36b63da4): search for \"dg_code\"/\"durable good\" and durable-good codes (e.g., 561) returned only the data column, no questionnaire question or item list to link.",
+   "evidence": [
+    "t12#question",
+    "t2",
+    "t14"
+   ],
+   "missing": [
+    "candidates",
+    "question_text",
+    "codes"
+   ]
+  },
+  {
+   "column": "rt020.s09e_q01",
+   "reason": "Associated instrument (scribe-aa2f36b63da4) contains no question text/raw_name for section 9E durable-goods ownership; search for \"s9e\" and related wording (owns item) returned only the data column, so there is no questionnaire question to link.",
+   "evidence": [
+    "t12#question",
+    "t5",
+    "t7"
+   ],
+   "missing": [
+    "candidates",
+    "question_text",
+    "instrument_section",
+    "codes"
+   ]
+  },
+  {
+   "column": "rt020.s09e_q02",
+   "reason": "No corresponding questionnaire question found in associated instrument for \"how many do you own\" in section 9E durable goods; searches returned only the data column, so cannot link to a specific instrument raw_name.",
+   "evidence": [
+    "t12#question",
+    "t5",
+    "t10"
+   ],
+   "missing": [
+    "candidates",
+    "question_text",
+    "instrument_section"
+   ]
+  },
+  {
+   "column": "rt020.s09e_q03",
+   "reason": "No corresponding questionnaire question found in associated instrument for expected resale value; searches for \"Expected value\"/\"want to sell\" returned only the data column, so cannot link to a specific instrument raw_name.",
+   "evidence": [
+    "t12#question",
+    "t13",
+    "t9"
+   ],
+   "missing": [
+    "candidates",
+    "question_text",
+    "instrument_section"
+   ]
+  },
+  {
+   "column": "rt020.s09e_q04",
+   "reason": "No corresponding questionnaire question found in associated instrument for purchase cost of the durable good (if bought past 12 months); searches for relevant wording returned only the data column, so cannot link to a specific instrument raw_name.",
+   "evidence": [
+    "t12#question",
+    "t8"
+   ],
+   "missing": [
+    "candidates",
+    "question_text",
+    "instrument_section"
+   ]
+  }
+ ],
+ "notes": "Could not link rt020 columns because the associated instrument extract appears to lack the Section 9E durable-goods module/questions."
+}

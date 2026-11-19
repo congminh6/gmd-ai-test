@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt003",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 23.4,
+ "usage": {
+  "input_token_count": 51441,
+  "output_token_count": 2431,
+  "total_token_count": 53872,
+  "reasoning_output_token_count": 677
+ },
+ "tool_calls": 1,
+ "submitted": true,
+ "final_text": "Submitted `08-describe_columns-rt003` with links matching all 25 scoped `rt003.*` columns to Section 4A/4B candidate questions (no unresolved columns).",
+ "said": [
+  "Submitted `08-describe_columns-rt003` with links matching all 25 scoped `rt003.*` columns to Section 4A/4B candidate questions (no unresolved columns)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\08.jsonl"
+}

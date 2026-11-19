@@ -1,0 +1,7 @@
+2026-11-19T20:33:09+00:00 1 document(s) under 'BGD_2010_HIES/Doc'; model on; deployment gpt-5.2
+2026-11-19T20:33:11+00:00 HIES English Questionnaire 2010.xlsx: 43 block(s), 43 table(s), 1.5s
+2026-11-19T20:33:11+00:00 classifying 1 document(s)
+2026-11-19T20:33:18+00:00 HIES English Questionnaire 2010.xlsx: questionnaire (English) — The sample shows a survey interview form with instructions and fields to be filled in (e.g., PSU serial number, team number, household number) rather than a list of dataset variables and codes.
+2026-11-19T20:41:12+00:00 HIES English Questionnaire 2010.xlsx: partial, 1883 diagnostic(s), 5 failed block(s), 473.5s; 56 model call(s) used 254,545 input and 213,903 output token(s), the largest answer 65,325 (chunk-000020)
+2026-11-19T20:41:12+00:00 HIES English Questionnaire 2010.xlsx: ok (partial): 1002 variable(s) -> profile/questionnaire/HIES_English_Questionnaire_2010.svis.json
+2026-11-19T20:41:12+00:00 done: 1 of 1 document(s) produced

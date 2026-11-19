@@ -1,0 +1,701 @@
+{
+ "request_id": "06-author_bindings-MOD-DEM",
+ "correspondence": {
+  "education": {
+   "column": "rt002.s02a_q05",
+   "links": {
+    "0": "BGD-EDU-01",
+    "1": {
+     "kind": "no_fitting_category",
+     "reason": "Class 1 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (1 year completed).",
+     "direct": {
+      "VAR-educat7": 2,
+      "VAR-educy": 1
+     }
+    },
+    "2": {
+     "kind": "no_fitting_category",
+     "reason": "Class 2 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (2 years completed).",
+     "direct": {
+      "VAR-educat7": 2,
+      "VAR-educy": 2
+     }
+    },
+    "3": {
+     "kind": "no_fitting_category",
+     "reason": "Class 3 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (3 years completed).",
+     "direct": {
+      "VAR-educat7": 2,
+      "VAR-educy": 3
+     }
+    },
+    "4": {
+     "kind": "no_fitting_category",
+     "reason": "Class 4 (grade) does not correspond to a single education programme level category in the national standard; treated as incomplete primary (4 years completed).",
+     "direct": {
+      "VAR-educat7": 2,
+      "VAR-educy": 4
+     }
+    },
+    "5": {
+     "kind": "no_fitting_category",
+     "reason": "Class 5 completed indicates primary completion (end of ISCED1); grade-specific value not represented as a national programme category in the standard table.",
+     "direct": {
+      "VAR-educat7": 3,
+      "VAR-educy": 5
+     }
+    },
+    "6": {
+     "kind": "no_fitting_category",
+     "reason": "Class 6 completed indicates lower secondary but not completion; grade-specific value not represented as a national programme category in the standard table.",
+     "direct": {
+      "VAR-educat7": 4,
+      "VAR-educy": 6
+     }
+    },
+    "7": {
+     "kind": "no_fitting_category",
+     "reason": "Class 7 completed indicates lower secondary but not completion; grade-specific value not represented as a national programme category in the standard table.",
+     "direct": {
+      "VAR-educat7": 4,
+      "VAR-educy": 7
+     }
+    },
+    "8": "BGD-EDU-04",
+    "9": {
+     "kind": "no_fitting_category",
+     "reason": "Class 9 completed indicates upper-secondary not completed; grade-specific value not represented as a national programme category in the standard table.",
+     "direct": {
+      "VAR-educat7": 4,
+      "VAR-educy": 9
+     }
+    },
+    "10": "BGD-EDU-06",
+    "11": "BGD-EDU-08",
+    "12": "BGD-EDU-22",
+    "13": "BGD-EDU-30",
+    "14": "BGD-EDU-29",
+    "15": "BGD-EDU-23",
+    "16": "BGD-EDU-10",
+    "17": "BGD-EDU-19",
+    "18": {
+     "kind": "ambiguous",
+     "reason": "Nursing could be diploma-level (post-secondary non-tertiary) or degree-level; questionnaire label does not specify.",
+     "candidates": [
+      "BGD-EDU-18",
+      "BGD-EDU-20"
+     ]
+    },
+    "19": {
+     "kind": "residual",
+     "reason": "Other (Specify)"
+    },
+    "50": {
+     "kind": "residual",
+     "reason": "Undeclared code 50 in data; meaning not documented in value labels."
+    }
+   },
+   "evidence": "Education correspondence based on highest class completed (rt002.s02a_q05) with degree-like labels for codes 10+ and grade numbers for 1-9; see code labels and universe 5+ (t2)."
+  }
+ },
+ "parameters": {
+  "PARAM-EDU-MIN-EDUCATION-AGE": {
+   "value": 5,
+   "method": "questionnaire_universe",
+   "evidence": "Education section universe is ALL PERSONS 5 YEARS AND OLDER on education questions (e.g., rt002.s02a_q03 / rt002.s02a_q04 / rt002.s02a_q05) (t2)."
+  }
+ },
+ "preludes": [
+  {
+   "id": "MOD-DEM-dem_derivations",
+   "reason": "Clean continuous age/months to canon ranges and derive literacy and everattend from multiple education items; requires multi-column logic and range checks not expressible in a single-column recode.",
+   "produces": [
+    "__derived.age__",
+    "__derived.childmth__",
+    "__derived.literacy__",
+    "__derived.everattend__"
+   ],
+   "invariants": [
+    "__derived.literacy__ in {0,1} or missing",
+    "__derived.everattend__ in {0,1} or missing"
+   ],
+   "code_file": "MOD-DEM-dem_derivations.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-age",
+   "target": "VAR-age",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "__derived.age__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Age in years is collected for all household members as rt002.s01a_q04; ages >120 are cleaned to missing in prelude (t2)."
+  },
+  {
+   "binding_id": "B-childmth",
+   "target": "VAR-childmth",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "__derived.childmth__"
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ < 5",
+    "else_code": ".c"
+   },
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Child age in months is collected for children 5 and under as rt002.s03b_q02; values outside 0-59 cleaned to missing in prelude; gated to age<5 (t3,t2)."
+  },
+  {
+   "binding_id": "B-childyr",
+   "target": "VAR-childyr",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "__derived.age__"
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ < 5",
+    "else_code": ".c"
+   },
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Use roster age in years (rt002.s01a_q04) for under-5 children only (gate age<5) (t2)."
+  },
+  {
+   "binding_id": "B-eyedisability",
+   "target": "VAR-eyedisability",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q02"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Seeing difficulty question rt002.s03d_q02 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-heardisability",
+   "target": "VAR-heardisability",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q05"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Hearing difficulty question rt002.s03d_q05 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-walkdisability",
+   "target": "VAR-walkdisability",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q08"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Walking difficulty question rt002.s03d_q08 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-concentrationdisorder",
+   "target": "VAR-concentrationdisorder",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q11"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Remembering/concentrating difficulty rt002.s03d_q11 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-selfcaredisability",
+   "target": "VAR-selfcaredisability",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q14"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Self care difficulty rt002.s03d_q14 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-communicationdisability",
+   "target": "VAR-communicationdisability",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s03d_q17"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Communication difficulty rt002.s03d_q17 codes 1 No difficulty, 2 Some, 3 Severe, 4 Can't at all (t3)."
+  },
+  {
+   "binding_id": "B-male",
+   "target": "VAR-male",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s01a_q02"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".o"
+   },
+   "register": "resolved",
+   "evidence": "Sex rt002.s01a_q02 codes 1 Male, 2 Female (t2)."
+  },
+  {
+   "binding_id": "B-marital",
+   "target": "VAR-marital",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s01a_q06"
+   },
+   "predicate": "all",
+   "value_map": {
+    "2": 1,
+    "1": 2,
+    "4": 3,
+    "5": 3,
+    "3": 4
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": 5
+   },
+   "register": "resolved",
+   "evidence": "Marital status rt002.s01a_q06 codes: 1 Currently Married, 2 Never Married, 3 Widowed, 4 Divorced, 5 Separated (t2)."
+  },
+  {
+   "binding_id": "B-relationcs",
+   "target": "VAR-relationcs",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s01a_q03"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Relationship-to-head country-specific codes in rt002.s01a_q03; bind coded column passthrough so engine writes '<code> - <label>' (t2)."
+  },
+  {
+   "binding_id": "B-relationharm",
+   "target": "VAR-relationharm",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s01a_q03"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "5": 5,
+    "6": 4,
+    "7": 5,
+    "8": 5,
+    "9": 5,
+    "10": 5,
+    "11": 5,
+    "12": 6,
+    "13": 6
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".o",
+    "14": ".o"
+   },
+   "register": "resolved",
+   "evidence": "Map rt002.s01a_q03 relationship codes to harmonized: head(1), spouse(2), child(3), parents(6), relatives (4,5,7-11), non-relatives (12 servant,13 employee), other(14) -> .o (t2)."
+  },
+  {
+   "binding_id": "B-school",
+   "target": "VAR-school",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "s02b_q01"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "0": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Currently attending school rt002.s02b_q01 codes 1 Yes, 2 No; 0 appears as not-applicable (t3)."
+  },
+  {
+   "binding_id": "B-literacy",
+   "target": "VAR-literacy",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "__derived.literacy__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Derived literacy from read-letter (rt002.s02a_q03) and write-letter (rt002.s02a_q04): literate only if both Yes; 0/4 treated as missing (t2)."
+  },
+  {
+   "binding_id": "B-everattend",
+   "target": "VAR-everattend",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "__derived.everattend__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "No direct ever-attended question found; infer from non-zero response in where-last-study (rt002.s02a_q06) or highest-class-completed (rt002.s02a_q05); both 0 -> never attended (t7,t2)."
+  },
+  {
+   "binding_id": "B-mineducatage",
+   "target": "VAR-mineducatage",
+   "table": "rt002",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "mineducatage is the survey parameter PARAM-EDU-MIN-EDUCATION-AGE (value 5 from questionnaire universe) (t2)."
+  },
+  {
+   "binding_id": "B-educat7",
+   "target": "VAR-educat7",
+   "table": "rt002",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ >= 5",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Highest class completed rt002.s02a_q05 (education correspondence) applied for age>=5 (t2,t1)."
+  },
+  {
+   "binding_id": "B-educat5",
+   "target": "VAR-educat5",
+   "table": "rt002",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ >= 5",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "educat5 via education correspondence on rt002.s02a_q05 for age>=5 (t2)."
+  },
+  {
+   "binding_id": "B-educat4",
+   "target": "VAR-educat4",
+   "table": "rt002",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ >= 5",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "educat4 via education correspondence on rt002.s02a_q05 for age>=5 (t2)."
+  },
+  {
+   "binding_id": "B-educy",
+   "target": "VAR-educy",
+   "table": "rt002",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "__derived.age__ >= 5",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "educy via education correspondence on rt002.s02a_q05 for age>=5; grades 1-7/9 use direct educy in correspondence exceptions (t2)."
+  },
+  {
+   "binding_id": "B-primarycomp",
+   "target": "VAR-primarycomp",
+   "derived_from": "VAR-educat7",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold",
+     "idcode"
+    ],
+    "raw_value": "educat7"
+   },
+   "predicate": "all",
+   "gate_reads": [
+    "VAR-age"
+   ],
+   "gate": {
+    "predicate": "age >= 5",
+    "else_code": ".c"
+   },
+   "value_map": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Primary completion derived from educat7 (1/2->0, 3-7->1) per canon guidance; gate uses produced age (VAR-age) to apply age>=5 (t1)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-agecat",
+   "kind": "not_collected_by_design",
+   "reason": "Survey collects continuous age in years (rt002.s01a_q04) for all roster members; no separate age-band variable is needed/collected (t2).",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-language",
+   "kind": "searched_not_found",
+   "reason": "No language variable located by searching survey columns for 'language' (t4).",
+   "searches": [
+    {
+     "terms": "language",
+     "in": "name,label,question,codes"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

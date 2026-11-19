@@ -1,0 +1,141 @@
+{
+ "request_id": "02-locate_sources-MOD-GEO",
+ "routing": {
+  "VAR-psu": [
+   {
+    "survey_module": "## rt001",
+    "column": "psu",
+    "why": "Key column labelled Primary Sampling Unit in main household table."
+   },
+   {
+    "survey_module": "## consumption_00_05_10",
+    "column": "psu",
+    "why": "Key column psu in external consumption table (also PSU identifier)."
+   }
+  ],
+  "VAR-strata": [
+   {
+    "survey_module": "## rt001",
+    "column": "stratum",
+    "why": "Household table includes a stratum field (complete 16)."
+   },
+   {
+    "survey_module": "## consumption_00_05_10",
+    "column": "stratum",
+    "why": "External consumption table includes stratum (complete 16); also has strat00/05/10 variants."
+   }
+  ],
+  "VAR-urban": [
+   {
+    "survey_module": "## rt001",
+    "column": "urbanrur",
+    "why": "Household table has urban/rural indicator (complete 4)."
+   },
+   {
+    "survey_module": "## consumption_00_05_10",
+    "column": "urbrural",
+    "why": "External consumption table has urban/rural variable (1 rural, 2 urban)."
+   }
+  ],
+  "VAR-subnatid1": [
+   {
+    "survey_module": "## cover",
+    "column": "region",
+    "why": "Geographic code: Region (likely highest admin grouping)."
+   },
+   {
+    "survey_module": "## consumption_00_05_10",
+    "column": "div",
+    "why": "Administrative division code (candidate for highest-level subnational ID)."
+   }
+  ],
+  "VAR-subnatid2": [
+   {
+    "survey_module": "## cover",
+    "column": "district",
+    "why": "Geographic code: District (candidate for 2nd-level subnational ID)."
+   },
+   {
+    "survey_module": "## rt003",
+    "column": "s04a_q_3",
+    "why": "District code appears in work activity section (may be an alternative district code variable)."
+   }
+  ],
+  "VAR-subnatid3": [
+   {
+    "survey_module": "## cover",
+    "column": "thana",
+    "why": "Geographic code: Thana/Upazilla (candidate for 3rd-level subnational ID)."
+   }
+  ],
+  "VAR-subnatid4": [
+   {
+    "survey_module": "## cover",
+    "column": "union",
+    "why": "Geographic code: Union/Ward (candidate for 4th-level subnational ID)."
+   }
+  ],
+  "VAR-subnatidsurvey": [
+   {
+    "survey_module": "## cover",
+    "column": "mouza",
+    "why": "Geographic code: Mouza/Mohalla (most granular location code available)."
+   },
+   {
+    "survey_module": "## cover",
+    "column": "union",
+    "why": "If mouza is not consistently present/usable, Union/Ward may be the lowest stable location code."
+   }
+  ],
+  "VAR-geocode": [
+   {
+    "survey_module": "## cover",
+    "column": "mouza",
+    "why": "Geocode is derived from lowest-level survey subnational ID; mouza/mohalla is the best candidate input."
+   }
+  ],
+  "VAR-gauladm1code": [
+   {
+    "survey_module": "## cover",
+    "column": "region",
+    "why": "GAUL admin1 is derived via geocode; region/division-level code is the likely upstream input."
+   },
+   {
+    "survey_module": "## consumption_00_05_10",
+    "column": "div",
+    "why": "Administrative division code could be the upstream admin1 input for GAUL via geocode crosswalk."
+   }
+  ],
+  "VAR-gauladm2code": [
+   {
+    "survey_module": "## cover",
+    "column": "district",
+    "why": "GAUL admin2 is derived via geocode; district-level code is the likely upstream input."
+   }
+  ],
+  "VAR-subnatid1prev": [
+   {
+    "survey_module": "## cover",
+    "why": "Previous-admin IDs are derived from geocode crosswalk, not directly collected; inspect geography crosswalk step."
+   }
+  ],
+  "VAR-subnatid2prev": [
+   {
+    "survey_module": "## cover",
+    "why": "Previous-admin IDs are derived from geocode crosswalk, not directly collected; inspect geography crosswalk step."
+   }
+  ],
+  "VAR-subnatid3prev": [
+   {
+    "survey_module": "## cover",
+    "why": "Previous-admin IDs are derived from geocode crosswalk, not directly collected; inspect geography crosswalk step."
+   }
+  ],
+  "VAR-subnatid4prev": [
+   {
+    "survey_module": "## cover",
+    "why": "Previous-admin IDs are derived from geocode crosswalk, not directly collected; inspect geography crosswalk step."
+   }
+  ]
+ }
+}

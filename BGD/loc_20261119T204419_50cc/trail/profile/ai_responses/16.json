@@ -1,0 +1,44 @@
+{
+ "request_id": "16-describe_columns-rt011",
+ "links": [
+  {
+   "question": "s7d_exp_301_spent_any",
+   "column": "rt011.s07d_q01",
+   "evidence": [
+    "t5#domain",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s7d_exp_301_qty_kg_12m",
+   "column": "rt011.s07d_q02",
+   "evidence": [
+    "t5#identity",
+    "t2#question"
+   ]
+  },
+  {
+   "question": "s7d_exp_301_spend_taka_12m",
+   "column": "rt011.s07d_q_1",
+   "evidence": [
+    "t5#identity",
+    "t2#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt011.exp_agri",
+   "reason": "`exp_agri` is an item/sector code (values 301–330) that appears to index the Section 7D expenditure items rather than being a response to a questionnaire question; searching the instrument shows many item-specific 7D questions (e.g. `s7d_exp_301_*`) but no single question whose response is the item code itself.",
+   "evidence": [
+    "t5#domain",
+    "t4#matches"
+   ],
+   "missing": [
+    "question_text",
+    "candidates"
+   ]
+  }
+ ],
+ "notes": "Linked the three spend variables to the Section 7D item-301 questions (same text repeated per item); exp_agri looks like the item-code dimension for that grid, not a question response."
+}

@@ -1,0 +1,47 @@
+{
+  "task_type": "associate_instruments",
+  "scope_rule": "every table in scope_ids appears in file_links or unassociated; the host re-asks for any left out.",
+  "scope_id": "survey",
+  "rules_ref": "your contract § The rules — the 2 governing + 6 golden rules — and § Your flow (its policies), verbatim and self-contained in your instructions (no external file to open)",
+  "scope_ids": [
+    "consumption_00_05_10",
+    "rt001",
+    "rt002",
+    "rt003",
+    "rt004",
+    "rt005",
+    "rt006",
+    "rt007",
+    "rt008",
+    "rt009",
+    "rt010",
+    "rt011",
+    "rt012",
+    "rt013",
+    "rt014",
+    "rt015",
+    "rt016",
+    "rt017",
+    "rt018",
+    "rt019",
+    "rt020"
+  ],
+  "prior_findings": [],
+  "request_id": "01-associate_instruments-survey",
+  "tools": [
+    "codes",
+    "column",
+    "columns",
+    "inventory",
+    "search",
+    "structure",
+    "submit"
+  ],
+  "brief_sha256": "e4926a6c9f113207f20a3bb790aa8b3ae14091afe3fddc7795a63e037bc19b95",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "5592d6d6a95ef7ce98a63f7663f6db15e86eb5b2795633a4c6cc4dac5463a1f8",
+  "contract_sha256": "d566f5b574732ffee4a74d4e82da4933bce978428f62ab40d76ccdd92d396cb7"
+}

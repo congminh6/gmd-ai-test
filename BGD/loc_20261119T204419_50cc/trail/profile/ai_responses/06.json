@@ -1,0 +1,479 @@
+{
+ "request_id": "06-describe_columns-rt002#2",
+ "links": [
+  {
+   "question": "ch_birth_month",
+   "column": "rt002.s03b_q01",
+   "evidence": [
+    "rt002.s03b_q01#label",
+    "scribe-aa2f36b63da4:ch_birth_month#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_age_months",
+   "column": "rt002.s03b_q02",
+   "evidence": [
+    "rt002.s03b_q02#label",
+    "scribe-aa2f36b63da4:ch_age_months#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_ever_immunized",
+   "column": "rt002.s03b_q03",
+   "evidence": [
+    "rt002.s03b_q03#label",
+    "scribe-aa2f36b63da4:ch_ever_immunized#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_immunization_card_available",
+   "column": "rt002.s03b_q04",
+   "evidence": [
+    "rt002.s03b_q04#label",
+    "scribe-aa2f36b63da4:ch_immunization_card_available#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_bcg_received",
+   "column": "rt002.s03b_q05",
+   "evidence": [
+    "rt002.s03b_q05#label",
+    "scribe-aa2f36b63da4:ch_bcg_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_vitamin_a_12mo",
+   "column": "rt002.s03b_q08",
+   "evidence": [
+    "rt002.s03b_q08#label",
+    "scribe-aa2f36b63da4:ch_vitamin_a_12mo#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_birth_year",
+   "column": "rt002.s03b_q_1",
+   "evidence": [
+    "rt002.s03b_q_1#label",
+    "scribe-aa2f36b63da4:ch_birth_year#question",
+    "t25#question"
+   ]
+  },
+  {
+   "question": "ch_dpt1_received",
+   "column": "rt002.s03b_q_2",
+   "evidence": [
+    "rt002.s03b_q_2#label",
+    "scribe-aa2f36b63da4:ch_dpt1_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_dpt2_received",
+   "column": "rt002.s03b_q_3",
+   "evidence": [
+    "rt002.s03b_q_3#label",
+    "scribe-aa2f36b63da4:ch_dpt2_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_dpt3_received",
+   "column": "rt002.s03b_q_4",
+   "evidence": [
+    "rt002.s03b_q_4#label",
+    "scribe-aa2f36b63da4:ch_dpt3_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_polio1_received",
+   "column": "rt002.s03b_q_5",
+   "evidence": [
+    "rt002.s03b_q_5#label",
+    "scribe-aa2f36b63da4:ch_polio1_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_polio2_received",
+   "column": "rt002.s03b_q_6",
+   "evidence": [
+    "rt002.s03b_q_6#label",
+    "scribe-aa2f36b63da4:ch_polio2_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_polio3_received",
+   "column": "rt002.s03b_q_7",
+   "evidence": [
+    "rt002.s03b_q_7#label",
+    "scribe-aa2f36b63da4:ch_polio3_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_measles_received",
+   "column": "rt002.s03b_q_8",
+   "evidence": [
+    "rt002.s03b_q_8#label",
+    "scribe-aa2f36b63da4:ch_measles_received#question",
+    "t28#question"
+   ]
+  },
+  {
+   "question": "ch_hepatitis_received",
+   "column": "rt002.s03b_q_9",
+   "evidence": [
+    "rt002.s03b_q_9#label",
+    "scribe-aa2f36b63da4:ch_hepatitis_received#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "1",
+   "column": "rt002.s03c_q01",
+   "evidence": [
+    "rt002.s03c_q01#label",
+    "scribe-aa2f36b63da4:1#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "2",
+   "column": "rt002.s03c_q02",
+   "evidence": [
+    "rt002.s03c_q02#label",
+    "scribe-aa2f36b63da4:2#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "3",
+   "column": "rt002.s03c_q03",
+   "evidence": [
+    "rt002.s03c_q03#label",
+    "scribe-aa2f36b63da4:3#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "5",
+   "column": "rt002.s03c_q05",
+   "evidence": [
+    "rt002.s03c_q05#label",
+    "scribe-aa2f36b63da4:5#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "6",
+   "column": "rt002.s03c_q06",
+   "evidence": [
+    "rt002.s03c_q06#label",
+    "scribe-aa2f36b63da4:6#question",
+    "t24#question"
+   ]
+  },
+  {
+   "question": "9",
+   "column": "rt002.s03c_q09",
+   "evidence": [
+    "rt002.s03c_q09#label",
+    "scribe-aa2f36b63da4:9#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col2_seeing_difficulty",
+   "column": "rt002.s03d_q02",
+   "evidence": [
+    "rt002.s03d_q02#label",
+    "scribe-aa2f36b63da4:sec3_partd_col2_seeing_difficulty#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col3_seeing_age_onset",
+   "column": "rt002.s03d_q03",
+   "evidence": [
+    "rt002.s03d_q03#label",
+    "scribe-aa2f36b63da4:sec3_partd_col3_seeing_age_onset#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col4_seeing_cause",
+   "column": "rt002.s03d_q04",
+   "evidence": [
+    "rt002.s03d_q04#label",
+    "scribe-aa2f36b63da4:sec3_partd_col4_seeing_cause#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col5_hearing_difficulty",
+   "column": "rt002.s03d_q05",
+   "evidence": [
+    "rt002.s03d_q05#label",
+    "scribe-aa2f36b63da4:sec3_partd_col5_hearing_difficulty#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col6_hearing_age_onset",
+   "column": "rt002.s03d_q06",
+   "evidence": [
+    "rt002.s03d_q06#label",
+    "scribe-aa2f36b63da4:sec3_partd_col6_hearing_age_onset#question",
+    "t26#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col7_hearing_cause",
+   "column": "rt002.s03d_q07",
+   "evidence": [
+    "rt002.s03d_q07#label",
+    "scribe-aa2f36b63da4:sec3_partd_col7_hearing_cause#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col8_walking_difficulty",
+   "column": "rt002.s03d_q08",
+   "evidence": [
+    "rt002.s03d_q08#label",
+    "scribe-aa2f36b63da4:sec3_partd_col8_walking_difficulty#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col9_walking_age_onset",
+   "column": "rt002.s03d_q09",
+   "evidence": [
+    "rt002.s03d_q09#label",
+    "scribe-aa2f36b63da4:sec3_partd_col9_walking_age_onset#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col10_walking_cause",
+   "column": "rt002.s03d_q10",
+   "evidence": [
+    "rt002.s03d_q10#label",
+    "scribe-aa2f36b63da4:sec3_partd_col10_walking_cause#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col11_remembering_difficulty",
+   "column": "rt002.s03d_q11",
+   "evidence": [
+    "rt002.s03d_q11#label",
+    "scribe-aa2f36b63da4:sec3_partd_col11_remembering_difficulty#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col12_remembering_age_onset",
+   "column": "rt002.s03d_q12",
+   "evidence": [
+    "rt002.s03d_q12#label",
+    "scribe-aa2f36b63da4:sec3_partd_col12_remembering_age_onset#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col13_remembering_cause",
+   "column": "rt002.s03d_q13",
+   "evidence": [
+    "rt002.s03d_q13#label",
+    "scribe-aa2f36b63da4:sec3_partd_col13_remembering_cause#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col14_selfcare_difficulty",
+   "column": "rt002.s03d_q14",
+   "evidence": [
+    "rt002.s03d_q14#label",
+    "scribe-aa2f36b63da4:sec3_partd_col14_selfcare_difficulty#question",
+    "t27#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col15_selfcare_age_onset",
+   "column": "rt002.s03d_q15",
+   "evidence": [
+    "rt002.s03d_q15#label",
+    "scribe-aa2f36b63da4:sec3_partd_col15_selfcare_age_onset#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col16_selfcare_cause",
+   "column": "rt002.s03d_q16",
+   "evidence": [
+    "rt002.s03d_q16#label",
+    "scribe-aa2f36b63da4:sec3_partd_col16_selfcare_cause#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col17_communicating_difficulty",
+   "column": "rt002.s03d_q17",
+   "evidence": [
+    "rt002.s03d_q17#label",
+    "scribe-aa2f36b63da4:sec3_partd_col17_communicating_difficulty#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col18_communicating_age_onset",
+   "column": "rt002.s03d_q18",
+   "evidence": [
+    "rt002.s03d_q18#label",
+    "scribe-aa2f36b63da4:sec3_partd_col18_communicating_age_onset#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col19_communicating_cause",
+   "column": "rt002.s03d_q19",
+   "evidence": [
+    "rt002.s03d_q19#label",
+    "scribe-aa2f36b63da4:sec3_partd_col19_communicating_cause#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col20_reduce_work",
+   "column": "rt002.s03d_q20",
+   "evidence": [
+    "rt002.s03d_q20#label",
+    "t5#domain",
+    "scribe-aa2f36b63da4:sec3_partd_col20_reduce_work#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col20_reduce_work",
+   "column": "rt002.s03d_q_1",
+   "evidence": [
+    "rt002.s03d_q_1#label",
+    "t5#domain",
+    "scribe-aa2f36b63da4:sec3_partd_col20_reduce_work#question",
+    "t23#question"
+   ]
+  },
+  {
+   "question": "sec3_partd_col20_reduce_work",
+   "column": "rt002.s03d_q_2",
+   "evidence": [
+    "rt002.s03d_q_2#label",
+    "t5#domain",
+    "scribe-aa2f36b63da4:sec3_partd_col20_reduce_work#question",
+    "t23#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt002.s03b_q06",
+   "reason": "Likely 'Where was the most recent immunization given?' but questionnaire codes are zero-padded (01–11) while column observed values are integers including 0 and 1–9; editor requires exact overlap, so cannot safely attach without clarification/recoding rule for leading zeros.",
+   "evidence": [
+    "rt002.s03b_q06#codes",
+    "scribe-aa2f36b63da4:ch_recent_immunization_place#codes",
+    "t25#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03b_q07",
+   "reason": "Likely 'Who influenced you to immunize your children?' but questionnaire codes are zero-padded (01–08) while column observed values are integers including 0 and values like 10/11/30; domain does not match any single candidate without additional documentation.",
+   "evidence": [
+    "rt002.s03b_q07#codes",
+    "scribe-aa2f36b63da4:ch_immunize_influence#codes",
+    "t25#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03c_q04",
+   "reason": "Likely 'Where did you first receive this care?' but questionnaire codes are zero-padded (01–08) while column observed values are integers including 0 and 1–8; exact code overlap is missing so cannot attach under strict matching.",
+   "evidence": [
+    "rt002.s03c_q04#codes",
+    "scribe-aa2f36b63da4:4#codes",
+    "t24#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03c_q07",
+   "reason": "Likely 'Who assisted you with this birth?' but questionnaire codes are zero-padded (01–07) while column observed values include 0 and 1–7; exact overlap is missing so cannot attach under strict matching.",
+   "evidence": [
+    "rt002.s03c_q07#codes",
+    "scribe-aa2f36b63da4:7#codes",
+    "t24#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03c_q08",
+   "reason": "Likely 'Where did you give birth?' but questionnaire codes are zero-padded (01–09) while column observed values include 0 and 1–9; exact overlap is missing so cannot attach under strict matching.",
+   "evidence": [
+    "rt002.s03c_q08#codes",
+    "scribe-aa2f36b63da4:8#codes",
+    "t26#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03c_q10",
+   "reason": "Likely 'Where did you go for this checkup?' but questionnaire codes are zero-padded (01–09) while column observed values include 0 and 1–9; exact overlap is missing so cannot attach under strict matching.",
+   "evidence": [
+    "rt002.s03c_q10#codes",
+    "scribe-aa2f36b63da4:10#codes",
+    "t26#codes"
+   ],
+   "missing": [
+    "code_counts"
+   ]
+  },
+  {
+   "column": "rt002.s03d_q21",
+   "reason": "Column label only says 'what measures taken to improve' and could correspond to any of the three questionnaire items for measures taken to improve performance of activities (at home / at school / at work); data has single column with values 0–10, while each candidate question has codes 01–10 and no '0' code, so cannot uniquely attach without more context (e.g., additional sibling columns or questionnaire routing).",
+   "evidence": [
+    "t5#identity",
+    "scribe-aa2f36b63da4:sec3_partd_q21_rehab_at_home#question",
+    "t23#question",
+    "scribe-aa2f36b63da4:sec3_partd_q21_rehab_at_school#question",
+    "t23#question",
+    "scribe-aa2f36b63da4:sec3_partd_q21_rehab_at_work#question",
+    "t29#question"
+   ],
+   "missing": [
+    "neighbours",
+    "candidates",
+    "question_text",
+    "codes"
+   ]
+  }
+ ]
+}

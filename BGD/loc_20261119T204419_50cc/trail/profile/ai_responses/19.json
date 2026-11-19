@@ -1,0 +1,114 @@
+{
+ "request_id": "19-describe_columns-rt014",
+ "links": [
+  {
+   "question": "s8d_loan_idcode_roster",
+   "column": "rt014.idcode",
+   "evidence": [
+    "t7#label",
+    "t9#question"
+   ]
+  },
+  {
+   "question": "s8d_q5_loan_source_code",
+   "column": "rt014.s08d_q05",
+   "evidence": [
+    "t6#label",
+    "t5#question",
+    "t5#domain"
+   ]
+  },
+  {
+   "question": "s8d_q6_amount_borrowed_taka",
+   "column": "rt014.s08d_q06",
+   "evidence": [
+    "t11#label",
+    "t13#question"
+   ]
+  },
+  {
+   "question": "s8d_q7_repayment_period_months",
+   "column": "rt014.s08d_q07",
+   "evidence": [
+    "t11#label",
+    "t13#question"
+   ]
+  },
+  {
+   "question": "s8d_q8_interest_rate_percent",
+   "column": "rt014.s08d_q08",
+   "evidence": [
+    "t11#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s8d_q8_interest_rate_percent",
+   "column": "rt014.s08d_q_1",
+   "evidence": [
+    "t12#label",
+    "t1#question"
+   ]
+  },
+  {
+   "question": "s8d_q9_payment_frequency_code",
+   "column": "rt014.s08d_q09",
+   "evidence": [
+    "t10#label",
+    "t4#question",
+    "t4#domain"
+   ]
+  },
+  {
+   "question": "s8d_q10_payment_amount_taka",
+   "column": "rt014.s08d_q_2",
+   "evidence": [
+    "t8#label",
+    "t13#question"
+   ]
+  },
+  {
+   "question": "s8d_q11_completed_repayment",
+   "column": "rt014.s08d_q10",
+   "evidence": [
+    "t11#label",
+    "t13#question",
+    "t13#domain"
+   ]
+  },
+  {
+   "question": "s8d_unpaid_loan_amount_taka",
+   "column": "rt014.s08d_q11",
+   "evidence": [
+    "t11#label",
+    "t13#question"
+   ]
+  },
+  {
+   "question": "s8d_q12_loan_purpose_code",
+   "column": "rt014.s08d_q12",
+   "evidence": [
+    "t11#label",
+    "t13#question",
+    "t13#domain"
+   ]
+  },
+  {
+   "question": "s8d_q13_would_like_more_same_rate",
+   "column": "rt014.s08d_q13",
+   "evidence": [
+    "t11#label",
+    "t13#question",
+    "t13#domain"
+   ]
+  },
+  {
+   "question": "s8d_q14_willing_take_more_amount_taka",
+   "column": "rt014.s08d_q14",
+   "evidence": [
+    "t11#label",
+    "t13#question"
+   ]
+  }
+ ]
+}

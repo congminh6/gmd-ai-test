@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt019",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 56.3,
+ "usage": {
+  "input_token_count": 379997,
+  "output_token_count": 1841,
+  "total_token_count": 381838,
+  "reasoning_output_token_count": 1440
+ },
+ "tool_calls": 8,
+ "submitted": true,
+ "final_text": "Submitted `describe_columns` answer for request `24-describe_columns-rt019` via `submit` (tool call `t8`).",
+ "said": [
+  "Submitted `describe_columns` answer for request `24-describe_columns-rt019` via `submit` (tool call `t8`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\24.jsonl"
+}

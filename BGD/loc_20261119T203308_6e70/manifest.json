@@ -1,0 +1,53 @@
+{
+ "job_id": "loc_20261119T203308_6e70",
+ "flow": "scribe",
+ "survey_id": "BGD_2010_HIES",
+ "status": "completed",
+ "finished": "2026-11-19T20:41:12+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "ae3bfefa06a3e28563b807b58a50b0851dc7a53cbab8a30edd167a3e420308c6",
+   "size": 3316
+  },
+  "profile/data_scan.json": {
+   "sha256": "c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3",
+   "size": 617654
+  },
+  "profile/instruments.json": {
+   "sha256": "f72ee7f1073d4c470a1804e3e9ada47716bd72eca2f7670d6d462f24a5cecea5",
+   "size": 3034
+  },
+  "profile/questionnaire/HIES_English_Questionnaire_2010.svis.json": {
+   "sha256": "f1cc00dc90a6f9b58a655ec0e2508a2a180358287b11301e39118591f021947b",
+   "size": 630990
+  },
+  "staged.json": {
+   "sha256": "f1d3d88c6136a332891574edfca4be6644528ab19ad5089008207af9cdec6984",
+   "size": 1454
+  },
+  "trail/scribe/direct/classify-HIES_English_Questionnaire_2010.json": {
+   "sha256": "b2cb4205db392d38d879b08116bc02ca359c16ba80e6af7d6cbf4c637b2c6a69",
+   "size": 6905
+  },
+  "trail/scribe/HIES_English_Questionnaire_2010/result.json": {
+   "sha256": "8eb55606a01e797b115831e3ca3fd92877b83b0f558a6740ffd3299094328f8e",
+   "size": 453133
+  },
+  "trail/scribe/HIES_English_Questionnaire_2010/source.json": {
+   "sha256": "a6722514b05b93c736c509e3978bf8670a6e0146a40ffc64f46b06aa212279af",
+   "size": 1332978
+  },
+  "trail/scribe/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/scribe/log.txt": {
+   "sha256": "74e4b107f21a2fff597e6a2a32a009adedf89b6228c4cce964f734f2ab8b1820",
+   "size": 984
+  },
+  "trail/scribe/state.json": {
+   "sha256": "402d5954bd29598e99d9393dc5dccc9716a83810cda86fe88cc8ab832c3abca9",
+   "size": 166
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+  "task_type": "describe_columns",
+  "scope_rule": "every table.col in scope_ids appears in links[].column, fields (table+field), or unresolved[].column; the host re-asks for any left out.",
+  "scope_id": "rt009",
+  "rules_ref": "your contract § The rules — the 2 governing + 6 golden rules — and § Your flow (its policies), verbatim and self-contained in your instructions (no external file to open)",
+  "scope_ids": [
+    "rt009.s07c_q10",
+    "rt009.s07c_q11",
+    "rt009.s07c_q12",
+    "rt009.s07c_q_1",
+    "rt009.s07c_q_2",
+    "rt009.s07c_q_3"
+  ],
+  "prior_findings": [],
+  "request_id": "14-describe_columns-rt009",
+  "tools": [
+    "codes",
+    "column",
+    "columns",
+    "inventory",
+    "search",
+    "structure",
+    "submit"
+  ],
+  "brief_sha256": "6489f3400d5ccae9c21ad5e8d212d3ba9687c27a02d5d37f649680930797409b",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "7f7cce9ca18edde26a1af132c36d3196895db7fb4717441bc2a96e1ecf178f7c",
+  "contract_sha256": "d566f5b574732ffee4a74d4e82da4933bce978428f62ab40d76ccdd92d396cb7"
+}

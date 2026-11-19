@@ -1,0 +1,126 @@
+{
+ "request_id": "21-describe_columns-rt016",
+ "links": [
+  {
+   "question": "sec9b_day1_7_quantity",
+   "column": "rt016.s09b1w1_",
+   "evidence": [
+    "t4#domain",
+    "t4#neighbours",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec9b_day8_14_quantity",
+   "column": "rt016.s09b1w2_",
+   "evidence": [
+    "t4#domain",
+    "t4#neighbours",
+    "t5#question"
+   ]
+  },
+  {
+   "question": "sec9b_day1_7_value_taka",
+   "column": "rt016.s09b1w_2",
+   "evidence": [
+    "t7#domain",
+    "t7#neighbours",
+    "t9#question"
+   ]
+  },
+  {
+   "question": "sec9b_day8_14_value_taka",
+   "column": "rt016.s09b1w_5",
+   "evidence": [
+    "t7#domain",
+    "t7#neighbours",
+    "t9#question"
+   ]
+  }
+ ],
+ "fields": [
+  {
+   "table": "rt016",
+   "field": "s09b1w_3",
+   "label": "Major source (days 1–7)",
+   "value_codes": {
+    "0": "Not applicable / none",
+    "1": "Purchase",
+    "2": "Wage in-kind",
+    "3": "Self-produced",
+    "4": "Gift"
+   },
+   "status": "assumed",
+   "evidence": [
+    "t4#domain",
+    "t5#question"
+   ]
+  },
+  {
+   "table": "rt016",
+   "field": "s09b1w_6",
+   "label": "Major source (days 8–14)",
+   "value_codes": {
+    "0": "Not applicable / none",
+    "1": "Purchase",
+    "2": "Wage in-kind",
+    "3": "Self-produced",
+    "4": "Gift"
+   },
+   "status": "assumed",
+   "evidence": [
+    "t7#domain",
+    "t5#question"
+   ]
+  }
+ ],
+ "unresolved": [
+  {
+   "column": "rt016.kcal",
+   "reason": "No matching questionnaire item: search in instrument for “kcal” only returns data columns (rt015/rt016.kcal), suggesting a derived food-composition lookup rather than an asked question.",
+   "evidence": [
+    "t4#question",
+    "t1#matches"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt016.ln",
+   "reason": "“line number” appears only as a data label across multiple rt tables; no specific questionnaire question corresponds to this per instrument search results, suggesting an internal sequencing/index field.",
+   "evidence": [
+    "t4#question",
+    "t2#matches"
+   ],
+   "missing": [
+    "candidates"
+   ]
+  },
+  {
+   "column": "rt016.s09b1w_1",
+   "reason": "Column is a 2-category string “unit” field; no corresponding questionnaire question about gm/ml units is found in the instrument (search for gm/ml matches only data labels).",
+   "evidence": [
+    "t7#domain",
+    "t8#matches"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  },
+  {
+   "column": "rt016.s09b1w_4",
+   "reason": "Column is a 2-category string “unit” field; no corresponding questionnaire question about gm/ml units is found in the instrument (search for gm/ml matches only data labels).",
+   "evidence": [
+    "t7#domain",
+    "t8#matches"
+   ],
+   "missing": [
+    "candidates",
+    "question_text"
+   ]
+  }
+ ],
+ "notes": "Major source columns include an extra observed code 0 not declared in the questionnaire (1–4); documented via fields rather than linking to avoid code-domain mismatch."
+}

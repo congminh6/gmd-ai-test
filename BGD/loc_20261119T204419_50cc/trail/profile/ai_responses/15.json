@@ -1,0 +1,37 @@
+{
+ "request_id": "15-describe_columns-rt010",
+ "links": [
+  {
+   "question": "s7c_ff_231_owned_trees_no",
+   "column": "rt010.s07c_q14",
+   "evidence": [
+    "t5#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "s7c_ff_231_sold_value_taka_12m",
+   "column": "rt010.s07c_q15",
+   "evidence": [
+    "t5#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "s7c_ff_231_consumed_value_taka_12m",
+   "column": "rt010.s07c_q16",
+   "evidence": [
+    "t5#identity",
+    "t6#question"
+   ]
+  },
+  {
+   "question": "s7c_ff_231_owned_value_taka",
+   "column": "rt010.s07c_q_1",
+   "evidence": [
+    "t5#identity",
+    "t6#question"
+   ]
+  }
+ ]
+}

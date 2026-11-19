@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 227.2,
+ "usage": {
+  "input_token_count": 460871,
+  "output_token_count": 16402,
+  "total_token_count": 477273,
+  "reasoning_output_token_count": 3779
+ },
+ "tool_calls": 25,
+ "submitted": true,
+ "final_text": "Submitted `response.json` for request `05-author_bindings-MOD-GEO` (MOD-GEO), including:\n\n- `correspondence.geography` for `rt001.region` (all codes as `no_fitting_category`)\n- 1 prelude `GEO-psu_int` producing `__derived.psu_int__`\n- 9 bindings (psu, strata, subnatid1–4, subnatidsurvey, geocode via correspondence, urban from `rt001.spc`)\n- 6 `absent` entries (`gauladm1code`, `gauladm2code`, `subnatid{1–4}prev` as `derivable_not_built`)",
+ "said": [
+  "Submitted `response.json` for request `05-author_bindings-MOD-GEO` (MOD-GEO), including:\n\n- `correspondence.geography` for `rt001.region` (all codes as `no_fitting_category`)\n- 1 prelude `GEO-psu_int` producing `__derived.psu_int__`\n- 9 bindings (psu, strata, subnatid1–4, subnatidsurvey, geocode via correspondence, urban from `rt001.spc`)\n- 6 `absent` entries (`gauladm1code`, `gauladm2code`, `subnatid{1–4}prev` as `derivable_not_built`)"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\05.jsonl"
+}

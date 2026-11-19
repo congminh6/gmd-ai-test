@@ -1,0 +1,22 @@
+{
+ "task_type": "describe_columns",
+ "scope_id": "rt020",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 54.0,
+ "usage": {
+  "input_token_count": 851628,
+  "output_token_count": 1891,
+  "total_token_count": 853519,
+  "reasoning_output_token_count": 953
+ },
+ "tool_calls": 15,
+ "submitted": true,
+ "final_text": "Submitted `describe_columns` answer for request `25-describe_columns-rt020` (all 5 scoped columns marked `unresolved` due to no matching questionnaire questions present in the associated instrument extract).",
+ "said": [
+  "Submitted `describe_columns` answer for request `25-describe_columns-rt020` (all 5 scoped columns marked `unresolved` due to no matching questionnaire questions present in the associated instrument extract)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\25.jsonl"
+}
