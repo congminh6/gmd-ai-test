@@ -1,0 +1,70 @@
+# profile BGD_2010_HIES @ 2026-11-19T18:47:11+00:00
+  data=C:\temp\test\surveys\BGD_2010_HIES\Data  modules=[]  direct=True
+  identity: survey-harmonization local (testing — no sync stamp); canon none; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'BGD_2010_HIES/Data': the data is unversioned
+
+== Phase A — profile ==
+  [det] from-intake
+  [det] questionnaire
+    HIES English Questionnaire 2010.pdf: read by the documents job, and no scan of it is in this run
+    HIES English Questionnaire 2010.xlsx: read by the documents job, and no scan of it is in this run
+  [det] conformance
+  [det] merge
+      residual (advisory): 364 still-missing (codes_missing=294, grain=4, label_empty=66); orphan questions: 0; code conflicts: 1
+        - consumption_00_05_10.PLI_base00: unresolved label_empty (has data)
+        - consumption_00_05_10.PLI_base00f: unresolved label_empty (has data)
+        - consumption_00_05_10.PLI_base00nf: unresolved label_empty (has data)
+        - consumption_00_05_10.PLIstr_base00: unresolved label_empty (has data)
+        - consumption_00_05_10.PLIstr_base00f: unresolved label_empty (has data)
+        - consumption_00_05_10.WPLI_base00: unresolved label_empty (has data)
+        - consumption_00_05_10._05NFUPL: unresolved label_empty (has data)
+        - consumption_00_05_10._znf05: unresolved label_empty (has data)
+        - consumption_00_05_10._znf10: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00f: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00nf: unresolved label_empty (has data)
+        - consumption_00_05_10.decileL00: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileL05: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileU00: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileU05: unresolved codes_missing (has data)
+        - consumption_00_05_10.div: unresolved codes_missing (has data)
+        - consumption_00_05_10.drdpl: unresolved label_empty (has data)
+        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)
+        - consumption_00_05_10.exc1: unresolved label_empty (has data)
+        ... and 344 more
+  [det] prefill-file-links
+  [judge] associate
+  [judge] describe
+  [judge] author-overlay
+    AI CALL [author_overlay / survey] → trail\profile\ai_calls\01_author_overlay.brief.md
+    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)
+    received trail\profile\ai_responses\01.json via submit (3466 bytes)
+      residual (advisory): 359 still-missing (codes_missing=293, label_empty=66); orphan questions: 0; code conflicts: 2
+        - consumption_00_05_10.PLI_base00: unresolved label_empty (has data)
+        - consumption_00_05_10.PLI_base00f: unresolved label_empty (has data)
+        - consumption_00_05_10.PLI_base00nf: unresolved label_empty (has data)
+        - consumption_00_05_10.PLIstr_base00: unresolved label_empty (has data)
+        - consumption_00_05_10.PLIstr_base00f: unresolved label_empty (has data)
+        - consumption_00_05_10.WPLI_base00: unresolved label_empty (has data)
+        - consumption_00_05_10._05NFUPL: unresolved label_empty (has data)
+        - consumption_00_05_10._znf05: unresolved label_empty (has data)
+        - consumption_00_05_10._znf10: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00f: unresolved label_empty (has data)
+        - consumption_00_05_10.cpi00nf: unresolved label_empty (has data)
+        - consumption_00_05_10.decileL00: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileL05: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileU00: unresolved codes_missing (has data)
+        - consumption_00_05_10.decileU05: unresolved codes_missing (has data)
+        - consumption_00_05_10.div: unresolved codes_missing (has data)
+        - consumption_00_05_10.drdpl: unresolved label_empty (has data)
+        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)
+        - consumption_00_05_10.exc1: unresolved label_empty (has data)
+        ... and 339 more
+  [judge] heal
+  [det] check-keys
+      grain (person) rt002: psu, hhold, idcode -> unique over 55580 rows
+  CHECK A: ok — profile recorded (profile 1162bcf732e7) — review it and approve (the review app's profile review, or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261119T184710_a685`)
+
+== all phases complete ==
+  profile complete (profile 1162bcf732e7). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261119T184710_a685` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop.

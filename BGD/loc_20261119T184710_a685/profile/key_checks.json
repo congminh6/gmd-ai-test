@@ -1,0 +1,19 @@
+{
+  "checks": {},
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "psu",
+        "hhold",
+        "idcode"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 55580,
+      "source_file": "rt002.dta",
+      "table": "rt002"
+    }
+  ],
+  "key_maps": {}
+}

@@ -1,0 +1,130 @@
+{
+ "job_id": "loc_20261119T184710_a685",
+ "flow": "profile",
+ "survey_id": "BGD_2010_HIES",
+ "spec": {
+  "flow": "profile",
+  "survey_id": "BGD_2010_HIES",
+  "country": "BGD",
+  "year": 2010,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc"
+  },
+  "input_job": "loc_20261119T184229_6961",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-19T18:47:10+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T184710_a685",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261119T184229_6961",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "f746a537fdf9d7620cd98cc5cf5aa42cc21b633fe7049ae983a35bce503ba7ca",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-19T18:49:19+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 23,
+  "paths": {
+   "data": "BGD_2010_HIES/Data",
+   "docs": "BGD_2010_HIES/Doc",
+   "ss_export": "surveys/BGD_2010_HIES/ss",
+   "svis": "surveys/BGD_2010_HIES/svis",
+   "reference": "surveys/BGD_2010_HIES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+  "A.questionnaire": "ok(0 questionnaire scan(s) -> profile\\questionnaire; 2 not read (HIES English Questionnaire 2010.pdf, HIES English Questionnaire 2010.xlsx))",
+  "A.conformance": "ok(no source standard applies)",
+  "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 364 still-missing (codes_missing=294, grain=4, label_empty=66); orphan questions: 0; code conflicts: 1)",
+  "A.prefill-file-links": "ok(no questionnaire - no association needed)",
+  "A.associate": "ok(no questionnaire - skipped)",
+  "A.describe": "ok(no questionnaire - skipped)",
+  "A.author-overlay": "ok(author_overlay: 21 tables, 2 fields, grain; re-merged)",
+  "A.heal": "ok(off (--heal 0))",
+  "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+  "A.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "author_overlay",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 12,
+   "usage": {
+    "input_token_count": 467406,
+    "output_token_count": 6129,
+    "total_token_count": 473535,
+    "reasoning_output_token_count": 3648
+   },
+   "reasoning_effort": "low",
+   "seconds": 123.8
+  }
+ ],
+ "total_tokens": 473535,
+ "log_tail": [
+  "        - consumption_00_05_10.drdpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.exc1: unresolved label_empty (has data)",
+  "        ... and 344 more",
+  "  [det] prefill-file-links",
+  "  [judge] associate",
+  "  [judge] describe",
+  "  [judge] author-overlay",
+  "    AI CALL [author_overlay / survey] → trail\\profile\\ai_calls\\01_author_overlay.brief.md",
+  "    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)",
+  "    received trail\\profile\\ai_responses\\01.json via submit (3466 bytes)",
+  "      residual (advisory): 359 still-missing (codes_missing=293, label_empty=66); orphan questions: 0; code conflicts: 2",
+  "        - consumption_00_05_10.PLI_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLI_base00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLI_base00nf: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLIstr_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.PLIstr_base00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.WPLI_base00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._05NFUPL: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._znf05: unresolved label_empty (has data)",
+  "        - consumption_00_05_10._znf10: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00f: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.cpi00nf: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.decileL00: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileL05: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileU00: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.decileU05: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.div: unresolved codes_missing (has data)",
+  "        - consumption_00_05_10.drdpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.dwgtpl: unresolved label_empty (has data)",
+  "        - consumption_00_05_10.exc1: unresolved label_empty (has data)",
+  "        ... and 339 more",
+  "  [judge] heal",
+  "  [det] check-keys",
+  "      grain (person) rt002: psu, hhold, idcode -> unique over 55580 rows",
+  "  CHECK A: ok — profile recorded (profile 1162bcf732e7) — review it and approve (the review app's profile review, or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T184710_a685`)",
+  "",
+  "== all phases complete ==",
+  "  profile complete (profile 1162bcf732e7). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261119T184710_a685` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop."
+ ],
+ "finished": "2026-11-19T18:49:19+00:00"
+}

@@ -1,0 +1,10 @@
+{
+ "declined": {
+  "reason": "Cannot author MOD-GEO geography correspondence: survey subnational id columns (mouza/union/etc.) have no value labels and the available tools do not expose the full set of observed codes, but correspondence.links must enumerate every code.",
+  "needs": [
+   "A tool/view that lists all distinct observed values for numeric/categorical columns without value labels (e.g., distinct values for rt001.mouza/union/region/district/thana), or access to those columns' value lists / frequency tables",
+   "Alternatively, confirmation of an existing survey column that already contains the representative geography as a labeled categorical/string domain suitable for correspondence linking"
+  ]
+ },
+ "request_id": "05-author_bindings-MOD-GEO"
+}

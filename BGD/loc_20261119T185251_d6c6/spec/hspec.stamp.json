@@ -1,0 +1,236 @@
+{
+  "spec_sha256": "7a86479793afca596ad19ebcafeb305add746ec6d03f061adddb94918f33586a",
+  "validator_version": "2",
+  "validated_at": "2026-11-19T19:02:09+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3",
+      "overlay": "8295da02972108cb97e0341733b1ab04a366b192805f4e9eaa51488b35faff42",
+      "key_checks": "b1f5da74a394190ef3b4f970fe0e0cf68feceab3176cd7f9317f257178156d1d"
+    },
+    "profile_sha": "1162bcf732e7f9da9bca18cc9cf2fde5305d58e7021496fe8585666259609d8a"
+  },
+  "grounded": true,
+  "content_sha256": "b7276a9913732f16e533556f275c387694590c55c251bd2e0558a34a56b29dc5",
+  "canon": "0.1.0+eaa25bb9",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Household roster records age in completed years (s01a_q04) but there is no separate age-category variable in the survey tables (t1)."
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for a language variable by name/label/question; no matching column found in the survey tables (t6)."
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-IDN"
+  ],
+  "coverage_declared": true,
+  "tier_counts": {
+    "1": {
+      "bound": 31,
+      "documented": 1
+    },
+    "2": {
+      "documented": 1
+    }
+  },
+  "blocked": []
+}

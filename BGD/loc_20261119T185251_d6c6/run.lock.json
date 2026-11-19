@@ -1,0 +1,162 @@
+{
+ "coverage": {
+  "absent": 2,
+  "produced": 14,
+  "produced_empty": 17
+ },
+ "data": {
+  "consumption_00_05_10": "557b334fa34f6a9cf09ee086ca0aa5ec21e569e152125ce80ffd29c61e1f52fc",
+  "rt001": "44c3657020b57565eafcb2f94bfdc6cf6292a297376361bf10209969ee4be235",
+  "rt002": "962f6653d8ac6a9fda8558d9d5df3738a789c6f4f797b810594f0339acb7bd19",
+  "rt003": "7a21876f43d7770d6eaef8fe24c76f141d51efab00224c5f754242579a48ebc2",
+  "rt004": "bd8f1122d410bd8b946a59672e5dc313021105b0a3b76439927718bdaa48f1a1",
+  "rt005": "48584456ad0d927e69a7c3a2b220dc57a1af05b84ea5272367e4c007327c3007",
+  "rt006": "27aa3ff9f7ed933e58b60652950de446fbfa9686f085d2233a68dbe01341cc25",
+  "rt007": "7bb79673450e41e52cbb098b07701c46bf3b1455528b745ac09efea7fddfd3eb",
+  "rt008": "a27f6af7fb717464f843dcd75671d1e240b2773ba72a49ed16b0b09cdd0665ce",
+  "rt009": "98362e3e2a804b460df3ca3d8d7b1436095a538a6c773e6acfdc3e86fd871f20",
+  "rt010": "fcebe28b394184248e1d557bc6c7669a9f6d331385400212afe4026ff365a547",
+  "rt011": "93debb6e8ca9652f82f15905555aa7bc0e181ec1e4d100a24004577be0c106ae",
+  "rt012": "ca1e9eaea1025771849318ab2bea3fd7e00aa4f862d983b5415a318a3b5496a3",
+  "rt013": "9bfaed2464a13fd0087cbf76c08ed07ad18f551304932f6c48b11d3bd5dba5ad",
+  "rt014": "c5adbd1f2f62f893e20e4322719ba39c43cfffd30aa090c626f4875e4b06195e",
+  "rt015": "59497e7cfca01fcf8cb3a1bad8946e3c7a1c23735d68d815908246ba31a459d3",
+  "rt016": "306c2a0c6cc3209bad1177e72300164b8b83470b86d197e4b15a6d8dae0fba90",
+  "rt017": "7656031ac4b590b0e54b5c355cc297a3655d9cd6fb140f23e7d279d1bfa067ae",
+  "rt018": "905279ff9ddbe045e96ee6e340235472eb26171db04d6354a2b8e91901b1c5bc",
+  "rt019": "299e86d86a99b1a428e253beab677772bae6796c9ffbb81af9ce2ea10ee8e8b5",
+  "rt020": "5c95f6b937eae451706f5bd5afe25e7be4be127cbf610ac775fd6c204233f1ff"
+ },
+ "flow": "harmonize",
+ "identity": {
+  "agent": {
+   "model": "gpt-5.2"
+  },
+  "canon": "0.1.0+eaa25bb9",
+  "code": [
+   "survey-harmonization local (testing — no sync stamp)"
+  ],
+  "packages": {
+   "gmd": "0.1.0",
+   "harmon": "0.1.0",
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "pyarrow": "26.0.0",
+   "pydantic": "2.12.5",
+   "pyreadstat": "1.3.7",
+   "survey-scribe": "0.1.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "output": {
+  "reference_sha256": null,
+  "sha256": "0cb1a741441faeec738086022e722893c37a3fdf86f1bcbc480a317417119cc8"
+ },
+ "preludes": {
+  "MOD-DEM-childmth_clean": {
+   "sha256": "cd194968f18f32d4cd5eacea4be5580f00811db7b253b86ef3dc55ee75b9444a"
+  },
+  "MOD-IDN-parse_interview_date": {
+   "sha256": "2a8440f0b8499a65621f06300c6aa0360d9d499409e50c9ae7ad752fdb183e68"
+  }
+ },
+ "profile": {
+  "files": {
+   "profile/data_scan.json": "c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3",
+   "profile/instruments.json": "14536903590c57a48d96aa3384bdb16dc6aeb2a421d702fb77e04261ef7b0209",
+   "profile/key_checks.json": "b1f5da74a394190ef3b4f970fe0e0cf68feceab3176cd7f9317f257178156d1d",
+   "profile/overlay.json": "8295da02972108cb97e0341733b1ab04a366b192805f4e9eaa51488b35faff42"
+  },
+  "profile_sha": "1162bcf732e7f9da9bca18cc9cf2fde5305d58e7021496fe8585666259609d8a"
+ },
+ "requests": [
+  {
+   "brief_sha256": "dfa62aa8269a2c2782b88b68b5985215f7e4a3b80493df995f58fb4bede18f1a",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "01",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "df54d017fff42e5c5a4b1a075b1cd7050ecb7808fc5624a7c4c0b9d5135b5997",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "02",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "0e1d0fbabfd811707f6cc58c53bb6c31044a5c4fe6ca39a940be4552abd5334d",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "03",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "753052bd1cb6653c1a8999ead844d7b29e922cc96bdb6f25b951fcad3b97deb2",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "04",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "0877147755bb6ae91d6705b98e8fe0c64b48b07eb9380fd04968c2ed4f92d4d2",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "05",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "fc9e3d60b41908e2a818740625a9fd95e5358eeee029200d984f2731b0fe1a96",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "06",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "ee9e27c8ef0ea7692c94bb04dbd9a9b97d4b08b1724d87b608466047bff30eb0",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "survey",
+   "seq": "07",
+   "task": "review_prelude",
+   "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+   "transport": "direct"
+  }
+ ],
+ "stamp": {
+  "canon": "0.1.0+eaa25bb9",
+  "certified_against": {
+   "inputs": {
+    "data_scan": "c5d09ae4df24190af88f47f8baa9248282b336ae9f631cc893a56700727349e3",
+    "key_checks": "b1f5da74a394190ef3b4f970fe0e0cf68feceab3176cd7f9317f257178156d1d",
+    "overlay": "8295da02972108cb97e0341733b1ab04a366b192805f4e9eaa51488b35faff42"
+   },
+   "profile_sha": "1162bcf732e7f9da9bca18cc9cf2fde5305d58e7021496fe8585666259609d8a"
+  },
+  "content_sha256": "b7276a9913732f16e533556f275c387694590c55c251bd2e0558a34a56b29dc5",
+  "grounded": true,
+  "reference": "0.1.0",
+  "spec_sha256": "7a86479793afca596ad19ebcafeb305add746ec6d03f061adddb94918f33586a",
+  "validator_version": "2"
+ },
+ "survey_id": "BGD_2010_HIES"
+}

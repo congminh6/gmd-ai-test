@@ -1,0 +1,17 @@
+{
+  "survey_id": "BGD_2010_HIES",
+  "steps": {
+    "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+    "A.questionnaire": "ok(0 questionnaire scan(s) -> profile\\questionnaire; 2 not read (HIES English Questionnaire 2010.pdf, HIES English Questionnaire 2010.xlsx))",
+    "A.conformance": "ok(no source standard applies)",
+    "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 364 still-missing (codes_missing=294, grain=4, label_empty=66); orphan questions: 0; code conflicts: 1)",
+    "A.prefill-file-links": "ok(no questionnaire - no association needed)",
+    "A.associate": "ok(no questionnaire - skipped)",
+    "A.describe": "ok(no questionnaire - skipped)",
+    "A.author-overlay": "ok(author_overlay: 21 tables, 2 fields, grain; re-merged)",
+    "A.heal": "ok(off (--heal 0))",
+    "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+    "A.check": "ok"
+  },
+  "updated": "2026-11-19T18:49:19+00:00"
+}

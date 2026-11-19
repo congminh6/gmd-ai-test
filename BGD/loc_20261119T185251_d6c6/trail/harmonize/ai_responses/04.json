@@ -1,0 +1,100 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "preludes": [
+  {
+   "id": "MOD-IDN-parse_interview_date",
+   "reason": "Interview month/year must be derived by parsing a household-level date string (s09b1w1_); requires string-to-date parsing logic rather than a single-column recode.",
+   "produces": [
+    "__derived.intyear__",
+    "__derived.intmonth__"
+   ],
+   "invariants": [
+    "__derived.intyear__ within plausible range (1900-2100) when parse succeeds",
+    "__derived.intmonth__ in 1-12 when parse succeeds"
+   ],
+   "code_file": "MOD-IDN-parse_interview_date.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "rt001",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "register": "resolved",
+   "evidence": "t13#construction notes (countrycode from ISO3) + attached to rt001 grain for output emission."
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "rt001",
+   "roles": {
+    "unit_keys": [
+     "psu",
+     "hhold"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "register": "resolved",
+   "evidence": "t14#construction notes (year from survey metadata) + attached to rt001 grain for output emission."
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "roles": {
+    "raw_value": "wgt"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t6#identity (rt001.wgt labeled 'Weight', numeric, non-null)."
+  },
+  {
+   "binding_id": "B-intyear",
+   "target": "VAR-intyear",
+   "roles": {
+    "raw_value": "__derived.intyear__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t5#identity (rt001.s09b1w1_ is household-level Date string) + prelude MOD-IDN-parse_interview_date + t11#construction notes (derive from interview date)."
+  },
+  {
+   "binding_id": "B-intmonth",
+   "target": "VAR-intmonth",
+   "roles": {
+    "raw_value": "__derived.intmonth__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t5#identity (rt001.s09b1w1_ is household-level Date string) + prelude MOD-IDN-parse_interview_date + t10#codes (month 1-12)."
+  }
+ ],
+ "absent": []
+}

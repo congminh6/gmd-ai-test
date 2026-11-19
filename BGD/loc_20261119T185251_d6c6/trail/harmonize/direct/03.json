@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 35.1,
+ "usage": {
+  "input_token_count": 145965,
+  "output_token_count": 1951,
+  "total_token_count": 147916,
+  "reasoning_output_token_count": 641
+ },
+ "tool_calls": 20,
+ "submitted": true,
+ "final_text": "Submitted `03-locate_sources-MOD-DEM` routing map (candidates mostly in `rt002` roster/education/disability sections; no plausible `VAR-language` column found).",
+ "said": [
+  "Submitted `03-locate_sources-MOD-DEM` routing map (candidates mostly in `rt002` roster/education/disability sections; no plausible `VAR-language` column found)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

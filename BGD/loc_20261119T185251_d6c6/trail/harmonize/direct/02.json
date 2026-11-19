@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 47.6,
+ "usage": {
+  "input_token_count": 219898,
+  "output_token_count": 2296,
+  "total_token_count": 222194,
+  "reasoning_output_token_count": 1138
+ },
+ "tool_calls": 7,
+ "submitted": true,
+ "final_text": "Submitted routing JSON for request `02-locate_sources-MOD-GEO`.",
+ "said": [
+  "Submitted routing JSON for request `02-locate_sources-MOD-GEO`."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\02.jsonl"
+}

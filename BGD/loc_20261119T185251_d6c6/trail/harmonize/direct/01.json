@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 33.6,
+ "usage": {
+  "input_token_count": 166962,
+  "output_token_count": 1503,
+  "total_token_count": 168465,
+  "reasoning_output_token_count": 836
+ },
+ "tool_calls": 14,
+ "submitted": true,
+ "final_text": "Done (submitted `routing` for `01-locate_sources-MOD-IDN`).",
+ "said": [
+  "Done (submitted `routing` for `01-locate_sources-MOD-IDN`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\01.jsonl"
+}

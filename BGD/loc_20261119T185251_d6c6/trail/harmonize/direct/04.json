@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 103.8,
+ "usage": {
+  "input_token_count": 229178,
+  "output_token_count": 6020,
+  "total_token_count": 235198,
+  "reasoning_output_token_count": 1517
+ },
+ "tool_calls": 18,
+ "submitted": true,
+ "final_text": "Submitted bindings for **MOD-IDN** with:\n\n- `VAR-weight` ← `rt001.wgt` (passthrough)\n- `VAR-intyear`, `VAR-intmonth` derived via a prelude parsing `rt001.s09b1w1_` into `__derived.intyear__` / `__derived.intmonth__` (passthrough)\n- `VAR-countrycode` and `VAR-year` sourced from `survey_identity` (iso3/year) and attached to `rt001` with `unit_keys: [\"psu\",\"hhold\"]`",
+ "said": [
+  "Submitted bindings for **MOD-IDN** with:\n\n- `VAR-weight` ← `rt001.wgt` (passthrough)\n- `VAR-intyear`, `VAR-intmonth` derived via a prelude parsing `rt001.s09b1w1_` into `__derived.intyear__` / `__derived.intmonth__` (passthrough)\n- `VAR-countrycode` and `VAR-year` sourced from `survey_identity` (iso3/year) and attached to `rt001` with `unit_keys: [\"psu\",\"hhold\"]`"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\04.jsonl"
+}

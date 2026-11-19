@@ -1,0 +1,29 @@
+{
+ "findings": [
+  {
+   "id": "prelude.concern:VAR-childmth",
+   "kind": "prelude.concern",
+   "area": "spec",
+   "nature": "note",
+   "severity": "low",
+   "subject": "VAR-childmth",
+   "title": "`VAR-childmth` reads prelude `MOD-DEM-childmth_clean`: Preludes should not invent sentinel values unless the downstream binding explicitly maps them. This code encodes mth>59 as -1.0 (comment: 'sentinel for invalid values within universe') but the prelude itself provides no report/additional flag and nothing here guarantees the binding will treat -1 as missing reason .b rather than as a real month value. Prefer emitting NaN plus a separate derived flag, or ensure the binding/missing_map routes -1 -> .b. Also, it relies on age>=5 producing NaN to be routed to .c, which only holds if the binding’s missing_map is configured that way.",
+   "consequence": "",
+   "fix": "",
+   "by": "review_prelude",
+   "detail": "",
+   "evidence": [],
+   "group": "",
+   "source": "review",
+   "message": "$.prelude MOD-DEM-childmth_clean target=VAR-childmth: the prelude review: Preludes should not invent sentinel values unless the downstream binding explicitly maps them. This code encodes mth>59 as -1.0 (comment: 'sentinel for invalid values within universe') but the prelude itself provides no report/additional flag and nothing here guarantees the binding will treat -1 as missing reason .b rather than as a real month value. Prefer emitting NaN plus a separate derived flag, or ensure the binding/missing_map routes -1 -> .b. Also, it relies on age>=5 producing NaN to be routed to .c, which only holds if the binding’s missing_map is configured that way.",
+   "target": "VAR-childmth",
+   "binding_id": null,
+   "prelude_id": "MOD-DEM-childmth_clean",
+   "path": null,
+   "index": null,
+   "spec_sha256": "4a9a9e1732f9309e718dd55decc661a61c2a50bfda5cac1e1fcba5d853e9c3e3",
+   "target_sha256": "d146e456336b7616ed114935671a467559311e17a5fd842746fe7d5c4ba82a90",
+   "reason": null
+  }
+ ]
+}

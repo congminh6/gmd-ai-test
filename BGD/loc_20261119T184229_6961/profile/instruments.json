@@ -1,0 +1,41 @@
+{
+  "by_route": {
+    "pdf_text": 1,
+    "xlsx": 1
+  },
+  "files": [
+    {
+      "detail": "15 text / 0 ocr / 0 empty of 15 sampled page(s); 1392 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "format": "pdf",
+      "n_pages": 43,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "HIES English Questionnaire 2010.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 719598,
+      "text_chars_per_page": 1392,
+      "text_pages": 15,
+      "tool": "pymupdf"
+    },
+    {
+      "detail": "",
+      "ext": "xlsx",
+      "extractable": false,
+      "format": "xlsx",
+      "ocr_page_index": [],
+      "path": "HIES English Questionnaire 2010.xlsx",
+      "reader": "survey-scribe",
+      "route": "xlsx",
+      "size_bytes": 368508,
+      "tool": "survey-scribe"
+    }
+  ],
+  "n_files": 2,
+  "root": "C:\\temp\\test\\surveys\\BGD_2010_HIES\\Doc",
+  "skipped_extensions": {}
+}

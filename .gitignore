@@ -1,2 +1,7 @@
 # Survey microdata and derived binary extracts are excluded from this repository.
 *.dta
+
+# Local run caches and Python bytecode are not repository artifacts.
+.work/
+__pycache__/
+*.py[cod]
