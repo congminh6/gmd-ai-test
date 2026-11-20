@@ -1,0 +1,69 @@
+# profile THA_2011_HSES @ 2026-11-20T05:12:49+00:00
+  data=C:\temp\test\surveys\THA_2011_HSES\Data  modules=[]  direct=True
+  identity: survey-harmonization local (testing — no sync stamp); canon none; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'THA_2011_HSES/Data': the data is unversioned
+
+== Phase A — profile ==
+  [det] from-intake
+  [det] questionnaire
+  [det] conformance
+  [det] merge
+      residual (advisory): 215 still-missing (codes_missing=14, grain=4, label_empty=197); orphan questions: 0; code conflicts: 0
+        - ses54_user_rec01.A01: unresolved label_empty (has data)
+        - ses54_user_rec01.A02: unresolved label_empty (has data)
+        - ses54_user_rec01.A02_1: unresolved label_empty (has data)
+        - ses54_user_rec01.A03: unresolved label_empty (has data)
+        - ses54_user_rec01.A04: unresolved label_empty (has data)
+        - ses54_user_rec01.A04_1: unresolved label_empty (has data)
+        - ses54_user_rec01.A05: unresolved label_empty (has data)
+        - ses54_user_rec01.A06: unresolved label_empty (has data)
+        - ses54_user_rec01.A07: unresolved label_empty (has data)
+        - ses54_user_rec01.A08: unresolved label_empty (has data)
+        - ses54_user_rec01.A09: unresolved label_empty (has data)
+        - ses54_user_rec01.A10: unresolved label_empty (has data)
+        - ses54_user_rec01.A11: unresolved label_empty (has data)
+        - ses54_user_rec01.A12: unresolved label_empty (has data)
+        - ses54_user_rec01.A13: unresolved label_empty (has data)
+        - ses54_user_rec01.A14: unresolved label_empty (has data)
+        - ses54_user_rec01.A15: unresolved label_empty (has data)
+        - ses54_user_rec01.A16: unresolved label_empty (has data)
+        - ses54_user_rec01.A17: unresolved label_empty (has data)
+        - ses54_user_rec01.A18: unresolved label_empty (has data)
+        ... and 195 more
+  [det] prefill-file-links
+  [judge] associate
+  [judge] describe
+  [judge] author-overlay
+    AI CALL [author_overlay / survey] → trail\profile\ai_calls\01_author_overlay.brief.md
+    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)
+    received trail\profile\ai_responses\01.json via submit (1060 bytes)
+    notes: Authored grain from scan keys: household=NEW_HH_N; roster=rec02 (hh-member rows); weight=A52 in rec03. Unlabelled content fields left untouched due to missing questionnaire/question text.
+      residual (advisory): 211 still-missing (codes_missing=14, label_empty=197); orphan questions: 0; code conflicts: 0
+        - ses54_user_rec01.A01: unresolved label_empty (has data)
+        - ses54_user_rec01.A02: unresolved label_empty (has data)
+        - ses54_user_rec01.A02_1: unresolved label_empty (has data)
+        - ses54_user_rec01.A03: unresolved label_empty (has data)
+        - ses54_user_rec01.A04: unresolved label_empty (has data)
+        - ses54_user_rec01.A04_1: unresolved label_empty (has data)
+        - ses54_user_rec01.A05: unresolved label_empty (has data)
+        - ses54_user_rec01.A06: unresolved label_empty (has data)
+        - ses54_user_rec01.A07: unresolved label_empty (has data)
+        - ses54_user_rec01.A08: unresolved label_empty (has data)
+        - ses54_user_rec01.A09: unresolved label_empty (has data)
+        - ses54_user_rec01.A10: unresolved label_empty (has data)
+        - ses54_user_rec01.A11: unresolved label_empty (has data)
+        - ses54_user_rec01.A12: unresolved label_empty (has data)
+        - ses54_user_rec01.A13: unresolved label_empty (has data)
+        - ses54_user_rec01.A14: unresolved label_empty (has data)
+        - ses54_user_rec01.A15: unresolved label_empty (has data)
+        - ses54_user_rec01.A16: unresolved label_empty (has data)
+        - ses54_user_rec01.A17: unresolved label_empty (has data)
+        - ses54_user_rec01.A18: unresolved label_empty (has data)
+        ... and 191 more
+  [judge] heal
+  [det] check-keys
+      grain (person) ses54_user_rec02: NEW_HH_N, HM01 -> unique over 128071 rows
+  CHECK A: ok — profile recorded (profile 0d641efc323d) — review it and approve (the review app's profile review, or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261120T051249_d942`)
+
+== all phases complete ==
+  profile complete (profile 0d641efc323d). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261120T051249_d942` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop.

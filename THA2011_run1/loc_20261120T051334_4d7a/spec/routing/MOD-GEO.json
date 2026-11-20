@@ -1,0 +1,67 @@
+{
+  "routing": {
+    "VAR-subnatid1": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "Province code (Changwat) coded 10-96 with province names; likely highest available subnational ID in data (admin1).",
+        "evidence": [
+          "t7#codes"
+        ]
+      },
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "reg",
+        "why": "Region (5 categories) could be treated as higher-level geography if needed.",
+        "evidence": [
+          "t7#codes"
+        ]
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "cwt",
+        "why": "Also present in household-level file; rec02 has clearer value labels.",
+        "evidence": [
+          "t5#identity"
+        ]
+      }
+    ],
+    "VAR-subnatidsurvey": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "Most detailed geography visible: Changwat (province) code with full value labels.",
+        "evidence": [
+          "t7#codes"
+        ]
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "cwt",
+        "why": "Province code also present at household level in rec01.",
+        "evidence": [
+          "t5#identity"
+        ]
+      }
+    ],
+    "VAR-urban": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "area",
+        "why": "AREA value set has Municipal vs Non-municipal, plausible urban/rural proxy.",
+        "evidence": [
+          "t7#codes"
+        ]
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "area",
+        "why": "Administrative Area binary; likely same as Municipal/Non-municipal in rec02.",
+        "evidence": [
+          "t5#identity"
+        ]
+      }
+    ]
+  },
+  "_request_id": "02-locate_sources-MOD-GEO"
+}

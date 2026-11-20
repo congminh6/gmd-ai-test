@@ -1,0 +1,37 @@
+{
+ "job_id": "loc_20261120T133426_63e0",
+ "flow": "docling",
+ "survey_id": "THA_2011_HSES",
+ "status": "failed",
+ "finished": "2026-11-20T13:34:26+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "5fcbbde9aafe38771881b6dddc210b0e469c256e8f8a1c275f993a7d02e4d863",
+   "size": 2129
+  },
+  "profile/data_scan.json": {
+   "sha256": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+   "size": 257398
+  },
+  "profile/instruments.json": {
+   "sha256": "43466537d9b30766cec681be38b9babc457b749aa9e8e24746c9ea7d1a348806",
+   "size": 7999
+  },
+  "staged.json": {
+   "sha256": "cfb606b1d942537a376f5fa8b50c7ffead522159b60e357f939b41221102d56f",
+   "size": 1235
+  },
+  "trail/docling/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/docling/log.txt": {
+   "sha256": "d2ca998ba861fe1cd30a3bb576eb652991e05cfdbffffe0438f181fa6d7fc1c7",
+   "size": 326
+  },
+  "trail/docling/state.json": {
+   "sha256": "2deb902db5c6343cf87a36e6778fb97fa56ee10dbb76bebe0c68b4fc508d37ef",
+   "size": 211
+  }
+ }
+}

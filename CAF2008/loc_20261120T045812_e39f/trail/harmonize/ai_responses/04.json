@@ -1,0 +1,118 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "preludes": [
+  {
+   "id": "MOD-IDN-parse_intdate",
+   "reason": "hhdata.a4 stores interview date as an integer but not in a ready month/year form; parse it (treating it as ddmmyy with possible missing leading zero) and guard against invalid months/years to produce intmonth/intyear.",
+   "produces": [
+    "__derived.intmonth__",
+    "__derived.intyear__"
+   ],
+   "invariants": [
+    "__derived.intmonth__ in 1..12 when parse succeeds",
+    "__derived.intyear__ is a plausible 4-digit year when parse succeeds"
+   ],
+   "code_file": "MOD-IDN-parse_intdate.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "hhdata",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "register": "resolved",
+   "evidence": "Country is fixed for the survey; bind from survey identity iso3 (no survey column needed) [t1]",
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   }
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "hhdata",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "register": "resolved",
+   "evidence": "Survey reference year taken from survey identity metadata (fieldwork start year) [t1]",
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   }
+  },
+  {
+   "binding_id": "B-intmonth",
+   "target": "VAR-intmonth",
+   "table": "hhdata",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ],
+    "raw_value": "__derived.intmonth__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "resolved",
+   "evidence": "Interview date stored in hhdata.a4 (date de l'interview); prelude parses ddmmyy into month 1..12 [t2,t1]",
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   }
+  },
+  {
+   "binding_id": "B-intyear",
+   "target": "VAR-intyear",
+   "table": "hhdata",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ],
+    "raw_value": "__derived.intyear__"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "resolved",
+   "evidence": "Interview date stored in hhdata.a4; prelude parses ddmmyy into 4-digit year [t2,t1]",
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   }
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "hhdata",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ],
+    "raw_value": "hhweight"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "register": "resolved",
+   "evidence": "Household final weight in hhdata.hhweight (Pondération définitive) [t2]",
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   }
+  }
+ ],
+ "absent": []
+}

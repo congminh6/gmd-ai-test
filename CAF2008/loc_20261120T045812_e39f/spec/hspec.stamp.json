@@ -1,0 +1,345 @@
+{
+  "spec_sha256": "353eccd1138c0a6feea2bc7751a639e23e7a9871ce0a1f7aedde504ce900dfe6",
+  "validator_version": "2",
+  "validated_at": "2026-11-20T05:05:43+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00",
+      "overlay": "8a745c4d1fe6757b992dad42c85fb87995fb797089405e4d07e2294a5277fc60",
+      "key_checks": "d7dcca231b1cebd7112106186d4139971a14c7288ca67a98a6e7dd5cc7464e66"
+    },
+    "profile_sha": "627ccd377ef80c591df2a283efe4690e78a3d61a33f629fa4243a459d709bcb4"
+  },
+  "grounded": true,
+  "content_sha256": "24acc3e2be612b37808e9eb9481ef5774489e8010c3610dcd4cd268249800382",
+  "canon": "0.1.0+eaa25bb9",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey records age as continuous years (indata.b4); no age-band variable is present/needed (t2)."
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "deferred",
+      "reason": "Only age in completed years (indata.b4) is available; age-in-months for under-5 cannot be derived without date of birth or months data (t2)."
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No language variable found in indata; search for langue/language matched only literacy item wording (t3)."
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Searched for strata/strate/stratum wording; only candidate is indata.deflator labelled 'Strate deflator' but it is a continuous deflator factor (not a stratum identifier). No categorical stratum-id column found."
+    },
+    {
+      "variable": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "subnatid1prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+    },
+    {
+      "variable": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No second-level admin identifier collected (only region present)."
+    },
+    {
+      "variable": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "subnatid2prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+    },
+    {
+      "variable": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No third-level admin identifier collected (only region present)."
+    },
+    {
+      "variable": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "subnatid3prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+    },
+    {
+      "variable": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No fourth-level admin identifier collected (only region present)."
+    },
+    {
+      "variable": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "subnatid4prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+    },
+    {
+      "variable": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "coverage_declared": true,
+  "tier_counts": {
+    "1": {
+      "bound": 37,
+      "documented": 4
+    },
+    "2": {
+      "documented": 7
+    }
+  },
+  "blocked": []
+}

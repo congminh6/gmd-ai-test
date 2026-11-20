@@ -1,0 +1,379 @@
+{
+  "spec_sha256": "4dc969822136e731039edc181483b900c7d439149b14b05ea5e324a676e80501",
+  "validator_version": "2",
+  "validated_at": "2026-11-20T08:42:18+00:00",
+  "certified_against": {
+    "inputs": {
+      "data_scan": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+      "overlay": "b027db2710dcb1af7d945ba9b341411fc72c06533556884a64aa914d2e862ecd",
+      "key_checks": "a7cc7c22ebe3f627f3caf0fae28676e50e1c05e8f512f207b5df6f0741ff2b1b"
+    },
+    "profile_sha": "0d641efc323db75e76e1d14bd6ba40765501d106989fe58ab477f7f9cb5230bc"
+  },
+  "grounded": true,
+  "content_sha256": "15fdedf54228a9d639bffdf53fe04ba20cf86694c7e5298293b001ade3e07b8e",
+  "canon": "0.1.0+eaa25bb9",
+  "reference": "0.1.0",
+  "coverage": [
+    {
+      "variable": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "t1 shows continuous age in years (HM04) and no survey-defined age-band variable; per VAR-agecat canon, it is only used when continuous age is unavailable."
+    },
+    {
+      "variable": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No child age-in-months / DOB-based month-age variable found; only HM04 age in years is present."
+    },
+    {
+      "variable": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+    },
+    {
+      "variable": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+    },
+    {
+      "variable": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+    },
+    {
+      "variable": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No years-of-education variable located in any table (no identifiable education section variables found)."
+    },
+    {
+      "variable": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No 'ever attended school' variable located in any table (no identifiable education section variables found)."
+    },
+    {
+      "variable": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No household member language variable located (search returned none)."
+    },
+    {
+      "variable": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No literacy variable (read/write) located (search returned none)."
+    },
+    {
+      "variable": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "Survey materials in this run do not provide the questionnaire universe for the education section, and no identifiable education section variables were found to infer onset."
+    },
+    {
+      "variable": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No variable indicating primary completion located (no identifiable education section variables found)."
+    },
+    {
+      "variable": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No current school enrollment variable located (search returned none)."
+    },
+    {
+      "variable": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No disability functioning questions/variables located in any table (search returned none)."
+    },
+    {
+      "variable": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No PSU/cluster identifier column found in survey tables after searching for psu/cluster/enumeration area terms; rec01 geography fields are cwt/reg/area only (t18)."
+    },
+    {
+      "variable": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No strata/stratum variable found in survey tables after searching for strata/stratum/sample design terms; only geography fields present are cwt/reg/area (t18,t25)."
+    },
+    {
+      "variable": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "VAR-subnatid1prev is derived from VAR-geocode via the country crosswalk (canon t31). This survey/canon has no national-standard geography categories for correspondence linking, so VAR-geocode cannot be resolved to a crosswalk code; therefore prior-boundary subnatid*_prev cannot be produced in this spec."
+    },
+    {
+      "variable": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No second-level admin identifier (e.g., district/amphoe/tambon) column found; only Changwat (province) and Region present (t25,t11)."
+    },
+    {
+      "variable": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "VAR-subnatid2prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+    },
+    {
+      "variable": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No third-level admin identifier column found beyond Changwat (province) and Region (t25,t11)."
+    },
+    {
+      "variable": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "VAR-subnatid3prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+    },
+    {
+      "variable": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No fourth-level/lowest admin identifier column found beyond Changwat (province) and Region (t25,t11)."
+    },
+    {
+      "variable": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "state": "documented",
+      "status": "absent",
+      "reason": "VAR-subnatid4prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+    },
+    {
+      "variable": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "documented",
+      "status": "absent",
+      "reason": "No interview/enumeration year variable found: search in column names/labels/questions/codes for year/interview/enumeration/date and reviewed ses54_user_rec02 column list; only enumeration month (A01) and weight (A52) present among matches [t3,t5]."
+    },
+    {
+      "variable": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    },
+    {
+      "variable": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "state": "bound"
+    }
+  ],
+  "coverage_modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "coverage_declared": true,
+  "tier_counts": {
+    "1": {
+      "bound": 20,
+      "documented": 21
+    },
+    "2": {
+      "documented": 7
+    }
+  },
+  "blocked": []
+}

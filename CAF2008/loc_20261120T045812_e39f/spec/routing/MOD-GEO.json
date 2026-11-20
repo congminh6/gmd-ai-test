@@ -1,0 +1,192 @@
+{
+  "routing": {
+    "VAR-gauladm1code": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No GAUL/admin-code fields found; GAUL ADM1 is derived from VAR-geocode which in turn likely crosswalks the collected region identifier",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-gauladm2code": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No GAUL/admin-code fields found; GAUL ADM2 is derived from VAR-geocode which in turn likely crosswalks the collected region identifier",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-geocode": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No explicit geocode/GAUL variable found; best candidate for subnational crosswalk seed is the region code/label",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-psu": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.a1",
+        "why": "a1 labeled numero de grappe (cluster), typical PSU identifier",
+        "evidence": [
+          "t5",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-strata": [
+      {
+        "survey_module": "indata",
+        "column": "indata.deflator",
+        "why": "Only variable with strate/stratum wording; may represent survey stratum (used for deflator)",
+        "evidence": [
+          "t4",
+          "t16"
+        ]
+      }
+    ],
+    "VAR-subnatid1": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "Only explicit administrative identifier found is region; likely highest-level subnational id in this survey",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-subnatid1prev": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No explicit previous-admin variable found; if present, it would be derived from geocode built from region identifier",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-subnatid2": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No lower-level (dept/district/commune/etc.) id found; only region appears collected, so subnatid2 likely not available beyond region",
+        "evidence": [
+          "t6",
+          "t13",
+          "t9",
+          "t7",
+          "t8"
+        ]
+      }
+    ],
+    "VAR-subnatid2prev": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No explicit previous lower-level admin variable found; if any, it would be derived from geocode built from region identifier",
+        "evidence": [
+          "t6",
+          "t13",
+          "t9",
+          "t7",
+          "t8"
+        ]
+      }
+    ],
+    "VAR-subnatid3": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No third-level admin id found in column index/searches; only region appears collected",
+        "evidence": [
+          "t6",
+          "t13",
+          "t12",
+          "t11",
+          "t10"
+        ]
+      }
+    ],
+    "VAR-subnatid3prev": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No explicit previous third-level admin variable found; if any, it would be derived from geocode built from region identifier",
+        "evidence": [
+          "t6",
+          "t13",
+          "t12",
+          "t11",
+          "t10"
+        ]
+      }
+    ],
+    "VAR-subnatid4": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No fourth-level/lowest admin id found; only region appears collected",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-subnatid4prev": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "No explicit previous lowest-admin variable found; if any, it would be derived from geocode built from region identifier",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-subnatidsurvey": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.region",
+        "why": "Lowest collected subnational identifier appears to be region (no smaller admin levels found)",
+        "evidence": [
+          "t6",
+          "t13"
+        ]
+      }
+    ],
+    "VAR-urban": [
+      {
+        "survey_module": "hhdata",
+        "column": "hhdata.urru",
+        "why": "Milieu de residence with urban/rural codes",
+        "evidence": [
+          "t1",
+          "t2",
+          "t13"
+        ]
+      },
+      {
+        "survey_module": "indata",
+        "column": "indata.urru",
+        "why": "Same urban/rural residence variable repeated on individual table",
+        "evidence": [
+          "t14",
+          "t1"
+        ]
+      }
+    ]
+  },
+  "_request_id": "02-locate_sources-MOD-GEO"
+}

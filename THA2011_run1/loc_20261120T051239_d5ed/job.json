@@ -1,0 +1,66 @@
+{
+ "job_id": "loc_20261120T051239_d5ed",
+ "flow": "docling",
+ "survey_id": "THA_2011_HSES",
+ "spec": {
+  "flow": "docling",
+  "survey_id": "THA_2011_HSES",
+  "country": "THA",
+  "year": 2011,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc"
+  },
+  "input_job": "loc_20261120T051212_b73d",
+  "partial": false,
+  "signoff": [],
+  "extra": {
+   "ocr": "never"
+  }
+ },
+ "status": "failed",
+ "started": "2026-11-20T05:12:39+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051239_d5ed",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T051212_b73d",
+  "flow": "scribe",
+  "status": "completed",
+  "manifest_sha256": "d9199a2c2f9a13975b5d734a8f343536f1cddee7ecad51d7f9fc3e12df31b955",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-20T05:12:39+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 10,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc",
+   "ss_export": "surveys/THA_2011_HSES/ss",
+   "svis": "surveys/THA_2011_HSES/svis",
+   "reference": "surveys/THA_2011_HSES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 1,
+ "outcome": "a deterministic step or gate failed",
+ "steps": {
+  "start": "failed: docling's models are not at C:\\Users\\wb327173\\.harmon\\docling-models: docling-tools models download layout tableformer -o <dir>, and DOCLING_ARTIFACTS_PATH=<dir>"
+ },
+ "stopped_at": null,
+ "log_tail": [
+  "2026-11-20T05:12:39+00:00 4 PDF(s) and 0 .doc / .xls to parse; ocr never; 20 page(s) per call, deadline 30 min, partial at the deadline",
+  "2026-11-20T05:12:39+00:00 docling's models are not at C:\\Users\\wb327173\\.harmon\\docling-models: docling-tools models download layout tableformer -o <dir>, and DOCLING_ARTIFACTS_PATH=<dir>"
+ ],
+ "finished": "2026-11-20T05:12:39+00:00"
+}

@@ -1,0 +1,138 @@
+{
+ "coverage": {
+  "absent": 15,
+  "produced": 9
+ },
+ "data": {
+  "ses54_user_rec01": "3b41cc1c1132eb1463484ce156e62f04f480598abe0c4a8fe3d9b34c090a148c",
+  "ses54_user_rec02": "2fb88ce0d2a7f0e9bac8967384a87ccac6ee5e9ae9bac2fcd5622569f1325be4",
+  "ses54_user_rec03": "5277e812e3a97fd293ffe9535c852ab84dda23383650d8c5d8915a4c23c757e9",
+  "ses54_user_rec13": "db64c73dc0c2e5a917c9ca47292a4afef0baac77614227a9f44bf4023cc74353",
+  "ses54_user_rec16": "fcb590a169216faa6e14c33ba996a092b6061130baf65c3ff951fcbd9df6d734"
+ },
+ "flow": "harmonize",
+ "identity": {
+  "agent": {
+   "model": "gpt-5.2"
+  },
+  "canon": "0.1.0+eaa25bb9",
+  "code": [
+   "survey-harmonization local (testing — no sync stamp)"
+  ],
+  "packages": {
+   "gmd": "0.1.0",
+   "harmon": "0.1.0",
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "pyarrow": "26.0.0",
+   "pydantic": "2.12.5",
+   "pyreadstat": "1.3.7",
+   "survey-scribe": "0.1.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "output": {
+  "reference_sha256": null,
+  "sha256": "2bee102981364a8fd69a72943c419261087063653cbcec0540002ce8e2c935bd"
+ },
+ "preludes": {},
+ "profile": {
+  "files": {
+   "profile/data_scan.json": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+   "profile/instruments.json": "43466537d9b30766cec681be38b9babc457b749aa9e8e24746c9ea7d1a348806",
+   "profile/key_checks.json": "a7cc7c22ebe3f627f3caf0fae28676e50e1c05e8f512f207b5df6f0741ff2b1b",
+   "profile/overlay.json": "833d2d5146fd05c917adb11d6e1b1ce396e3051ecf66b77f06bf99e1c6053323"
+  },
+  "profile_sha": "d9d616807acda67bae3f58e0febd8bb5e23dfed0d49a66444c4f24efb076fa77"
+ },
+ "requests": [
+  {
+   "brief_sha256": "fe18d074fc189c87df1fec1e20fc6f4d85616ca40b1cad10fa674223bb05425a",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "01",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "69cba24f98e4871884e610e237c6311a54ed785a18b6a7d57943f2ebef3769ab",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "02",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "7ee8fc515e903866286350cb066a7c709d72d26099e2e94a85a19f28973ae061",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "03",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "d738d99779c70e6fa5dbe5ec6a59d6f9e8d1409c88b5cbced0982a3f36f9d995",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "04",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "f7439e71c2fb784c5b7c0abed81452a7cf1a17c42d19d133932b37ca9d3cc65c",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "05",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "9ef319ef6bf90dc78ce6ef90c1821c4f97213a238cd018f30d6c9530cfdb75a4",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "06",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "7c152a4425974a9cf3dc9199ca617659c14a4511fc63c3e283439068e6041321",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "07",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  }
+ ],
+ "stamp": {
+  "canon": "0.1.0+eaa25bb9",
+  "certified_against": {
+   "inputs": {
+    "data_scan": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+    "key_checks": "a7cc7c22ebe3f627f3caf0fae28676e50e1c05e8f512f207b5df6f0741ff2b1b",
+    "overlay": "833d2d5146fd05c917adb11d6e1b1ce396e3051ecf66b77f06bf99e1c6053323"
+   },
+   "profile_sha": "d9d616807acda67bae3f58e0febd8bb5e23dfed0d49a66444c4f24efb076fa77"
+  },
+  "content_sha256": "a14bd452fd689adf11cdf4cdf145c085ab90ffa016fd8548be5688ec0767eb1a",
+  "grounded": true,
+  "reference": "0.1.0",
+  "spec_sha256": "b9e609623047ff5e94a758917c0768ac36d2a4b18c575108cae1681e0056edfe",
+  "validator_version": "2"
+ },
+ "survey_id": "THA_2011_HSES"
+}

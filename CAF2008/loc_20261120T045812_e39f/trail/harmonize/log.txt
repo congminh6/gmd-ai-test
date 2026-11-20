@@ -1,0 +1,106 @@
+# harmonize CAF_2008_ECASEB @ 2026-11-20T04:58:18+00:00
+  data=C:\temp\test\surveys\CAF_2008_ECASEB\Data  modules=['MOD-IDN', 'MOD-GEO', 'MOD-DEM']  direct=True
+  profile review: approved by zs (profile 627ccd377ef8)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+eaa25bb9; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'CAF_2008_ECASEB/Data': the data is unversioned
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00
+    input profile/instruments.json  sha256=1396517fdaf8b3e772aa5d1f386128800bbfd5787ea2b3507d2602473cbefad4
+    input profile/key_checks.json  sha256=d7dcca231b1cebd7112106186d4139971a14c7288ca67a98a6e7dd5cc7464e66
+    input profile/overlay.json  sha256=8a745c4d1fe6757b992dad42c85fb87995fb797089405e4d07e2294a5277fc60
+    profile 627ccd377ef80c591df2a283efe4690e78a3d61a33f629fa4243a459d709bcb4 — approved by zs at 2026-11-20T04:58:18+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\01.json via submit (1158 bytes)
+    notes: hhweight appears in multiple tables (hhdata/hhevdata/hhstdata/indata); hhdata.hhweight seems the natural household-level source.
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (4534 bytes)
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (5072 bytes)
+    notes: Most DEM targets appear in indata roster (b* demographics, c* education, d3 disability); no dedicated Washington Group functional difficulty battery visible in the column index.
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (2913 bytes, + MOD-IDN-parse_intdate.py)
+    reconciled binding_id 'B-intmonth' → 'B-int_month' (by target VAR-intmonth)
+    reconciled binding_id 'B-intyear' → 'B-int_year' (by target VAR-intyear)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\05_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (7004 bytes)
+    reconciled binding_id 'B-geocode' → 'B-geo_code' (by target VAR-geocode)
+    reconciled binding_id 'B-gauladm1code' → 'B-gaul_adm1_code' (by target VAR-gauladm1code)
+    reconciled binding_id 'B-gauladm2code' → 'B-gaul_adm2_code' (by target VAR-gauladm2code)
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\06_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (13821 bytes)
+    reconciled binding_id 'B-eyedisability' → 'B-eye_dsablty' (by target VAR-eyedisability)
+    reconciled binding_id 'B-heardisability' → 'B-hear_dsablty' (by target VAR-heardisability)
+    reconciled binding_id 'B-walkdisability' → 'B-walk_dsablty' (by target VAR-walkdisability)
+    reconciled binding_id 'B-selfcaredisability' → 'B-slfcre_dsablty' (by target VAR-selfcaredisability)
+    reconciled binding_id 'B-communicationdisability' → 'B-comm_dsablty' (by target VAR-communicationdisability)
+    reconciled binding_id 'B-concentrationdisorder' → 'B-conc_dsord' (by target VAR-concentrationdisorder)
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\07_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (197 bytes)
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-gaul_adm1_code: raw_value 'hhdata.region' (from correspondence.geography)
+        resolved: B-gaul_adm2_code: raw_value 'hhdata.region' (from correspondence.geography)
+        resolved: B-geo_code: raw_value 'hhdata.region' (from correspondence.geography)
+        resolved: B-educat4: raw_value 'indata.c3' (from correspondence.education)
+        resolved: B-educat5: raw_value 'indata.c3' (from correspondence.education)
+        resolved: B-educat7: raw_value 'indata.c3' (from correspondence.education)
+        resolved: B-educy: raw_value 'indata.c3' (from correspondence.education)
+        kind: hhdata.hhweight: numeric
+        kind: hhdata.region: numeric
+        kind: hhdata.a1: numeric
+        kind: hhdata.urru: numeric
+        kind: indata.b4: numeric
+        kind: indata.d3: numeric
+        kind: indata.c3: numeric
+        kind: indata.c2: numeric
+        kind: indata.c1: numeric
+        kind: indata.b1: numeric
+        kind: indata.b5: numeric
+        kind: indata.b3: numeric
+        kind: indata.c5: numeric
+      VALID: hspec.json stamped (validator v2, 2026-11-20T05:05:43+00:00); coverage bound 37, documented 11
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      C:\Users\wb327173\OneDrive - WBG\Downloads\ECA\repo\survey_harmonization\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb327173\OneDrive - WBG\Downloads\ECA\repo\survey_harmonization\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb327173\OneDrive - WBG\Downloads\ECA\repo\survey_harmonization\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      C:\Users\wb327173\OneDrive - WBG\Downloads\ECA\repo\survey_harmonization\survey-harmonization\harmonization\packages\harmon\harmon\hspec\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+        df[keyname[k]] = df[k]
+      PASS — 31966 rows, 37 target(s); contract clean. Outputs in C:\Users\wb327173\.harmon\work\runs\loc_20261120T045812_e39f\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb327173\.harmon\work\runs\loc_20261120T045812_e39f\output\quality.json: 37 targets; 3/89 checks flagged; 0 universe cells; no reference
+  CHECK F: ok — 37 targets; 3/89 checks flagged; 0 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==

@@ -1,0 +1,14 @@
+2026-11-20T05:12:12+00:00 5 document(s) under 'THA_2011_HSES/Doc'; model on; deployment gpt-5.2
+2026-11-20T05:12:12+00:00 Accompanying note SES2011 Data structure.xlsx: 2 block(s), 2 table(s), 0.1s
+2026-11-20T05:12:12+00:00 classifying 5 document(s)
+2026-11-20T05:12:18+00:00 Accompanying note SES2011 Data structure.xlsx: codebook (Thai) — The sample is a data-file structure/record layout listing record types and the fieldnames/variables included in each record (SPSS format) with observation counts.
+2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Expenditure.pdf: codebook (English) — The sample mainly lists survey items as variables/fieldnames (e.g., A01, A02) in a table mapping questionnaire parts to data fields, which is characteristic of a data file layout/codebook rather than the full interview instrument.
+2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Income.pdf: questionnaire (English) — The sample shows a survey instrument with numbered questions, answer categories, skip instructions, and spaces/tables for recording responses (with field codes like IW06, IA11 alongside the questions).
+2026-11-20T05:12:18+00:00 แบบ สศส.2 (พิเศษ).pdf: codebook (Thai) — The sample is a structured list of data items with record/section references and item codes (e.g., A01, A02_1), describing variables/derived fields rather than presenting interview questions.
+2026-11-20T05:12:18+00:00 แบบ สศส.3.pdf: questionnaire (Thai) — The sample contains survey form sections with numbered questions, response categories, and spaces/tables to record household and income/employment details, indicating it is the interview instrument.
+2026-11-20T05:12:18+00:00 Accompanying note SES2011 Data structure.xlsx: not read: a codebook, and no table of it could be read: no header naming the variable / label / values roles, and no column of names that are the data's columns (the model codebook reader is not built yet)
+2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Expenditure.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Income.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T05:12:18+00:00 แบบ สศส.2 (พิเศษ).pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T05:12:18+00:00 แบบ สศส.3.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T05:12:18+00:00 done: 0 of 5 document(s) produced

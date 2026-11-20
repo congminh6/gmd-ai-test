@@ -1,0 +1,130 @@
+{
+ "job_id": "loc_20261120T045642_70c2",
+ "flow": "profile",
+ "survey_id": "CAF_2008_ECASEB",
+ "spec": {
+  "flow": "profile",
+  "survey_id": "CAF_2008_ECASEB",
+  "country": "CAF",
+  "year": 2008,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc"
+  },
+  "input_job": "loc_20261120T045608_e4e6",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T04:56:42+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045642_70c2",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T045608_e4e6",
+  "flow": "scribe",
+  "status": "completed",
+  "manifest_sha256": "cfa8dcf5466cf6bc1b27b6efd6ecea3e43279fb2653687ab71448f27266db845",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-20T04:57:40+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 17,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc",
+   "ss_export": "surveys/CAF_2008_ECASEB/ss",
+   "svis": "surveys/CAF_2008_ECASEB/svis",
+   "reference": "surveys/CAF_2008_ECASEB/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+  "A.questionnaire": "ok(0 questionnaire scan(s) -> profile\\questionnaire)",
+  "A.conformance": "ok(no source standard applies)",
+  "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 104 still-missing (codes_missing=96, grain=4, label_empty=4); orphan questions: 0; code conflicts: 30)",
+  "A.prefill-file-links": "ok(no questionnaire - no association needed)",
+  "A.associate": "ok(no questionnaire - skipped)",
+  "A.describe": "ok(no questionnaire - skipped)",
+  "A.author-overlay": "ok(author_overlay: 14 tables, 9 fields, grain; re-merged)",
+  "A.heal": "ok(off (--heal 0))",
+  "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+  "A.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "author_overlay",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 9,
+   "usage": {
+    "input_token_count": 251117,
+    "output_token_count": 3376,
+    "total_token_count": 254493,
+    "reasoning_output_token_count": 1930
+   },
+   "reasoning_effort": "low",
+   "seconds": 57.1
+  }
+ ],
+ "total_tokens": 254493,
+ "log_tail": [
+  "        - hhevdata.hhweight: unresolved label_empty (has data)",
+  "        - hhevdata.urru: unresolved codes_missing (has data)",
+  "        - hhstdata.a2: unresolved codes_missing (has data)",
+  "        ... and 84 more",
+  "  [det] prefill-file-links",
+  "  [judge] associate",
+  "  [judge] describe",
+  "  [judge] author-overlay",
+  "    AI CALL [author_overlay / survey] → trail\\profile\\ai_calls\\01_author_overlay.brief.md",
+  "    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)",
+  "    received trail\\profile\\ai_responses\\01.json via submit (4597 bytes)",
+  "      residual (advisory): 91 still-missing (codes_missing=91); orphan questions: 0; code conflicts: 36",
+  "        - carquibbconso.a2: unresolved codes_missing (has data)",
+  "        - carquibwelfare.a2: unresolved codes_missing (has data)",
+  "        - carquibwelfare.hhsize: unresolved codes_missing (has data)",
+  "        - carquibwelfare.npcexp: unresolved codes_missing (has data)",
+  "        - hhdata.a2: unresolved codes_missing (has data)",
+  "        - hhdata.a6: unresolved codes_missing (has data)",
+  "        - hhdata.f10: unresolved codes_missing (has data)",
+  "        - hhdata.f16: unresolved codes_missing (has data)",
+  "        - hhdata.f2: unresolved codes_missing (has data)",
+  "        - hhdata.g14a2: unresolved codes_missing (has data)",
+  "        - hhdata.g6: unresolved codes_missing (has data)",
+  "        - hhdata.hhsize: unresolved codes_missing (has data)",
+  "        - hhevdata.a2: unresolved codes_missing (has data)",
+  "        - hhstdata.a2: unresolved codes_missing (has data)",
+  "        - hhstdata.s13g2: unresolved codes_missing (has data)",
+  "        - hhstdata.s13o2: unresolved codes_missing (has data)",
+  "        - hhstdata.s13p2: unresolved codes_missing (has data)",
+  "        - hhstdata.s8a3: unresolved codes_missing (has data)",
+  "        - hhstdata.s8b3: unresolved codes_missing (has data)",
+  "        - hhstdata.s8c1: unresolved codes_missing (has data)",
+  "        ... and 71 more",
+  "  [judge] heal",
+  "  [det] check-keys",
+  "      grain (person) indata: idmen, memberno -> unique over 31966 rows",
+  "  CHECK A: ok — profile recorded (profile 627ccd377ef8) — review it and approve (the review app's profile review, or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045642_70c2`)",
+  "",
+  "== all phases complete ==",
+  "  profile complete (profile 627ccd377ef8). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045642_70c2` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop."
+ ],
+ "finished": "2026-11-20T04:57:40+00:00"
+}

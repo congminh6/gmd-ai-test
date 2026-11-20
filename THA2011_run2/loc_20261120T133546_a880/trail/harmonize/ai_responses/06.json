@@ -1,0 +1,25 @@
+{
+ "delta": true,
+ "bindings": [
+  {
+   "binding_id": "B-gaul_adm1_code",
+   "target": "VAR-gauladm1code",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "constant": 1,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "t26#binding shows prior gauladm1code binding has constant=1 and lacks table/unit_keys; this update adds table=ses54_user_rec02 and roles.unit_keys=[NEW_HH_N, HM01] as required by validate when no raw_value is present."
+  }
+ ],
+ "request_id": "06-author_bindings-MOD-GEO"
+}

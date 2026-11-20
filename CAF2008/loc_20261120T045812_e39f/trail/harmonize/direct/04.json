@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 89.8,
+ "usage": {
+  "input_token_count": 89931,
+  "output_token_count": 6149,
+  "total_token_count": 96080,
+  "reasoning_output_token_count": 1869
+ },
+ "tool_calls": 7,
+ "submitted": true,
+ "final_text": "Submitted `04-author_bindings-MOD-IDN` with:\n\n- 1 prelude `MOD-IDN-parse_intdate` to parse `hhdata.a4` (numeric ddmmyy with possible missing leading zero) into:\n  - `__derived.intmonth__`\n  - `__derived.intyear__`\n  with guards for invalid months and implausible years.\n\n- 5 bindings (all on table `hhdata`, `unit_keys: [\"idmen\"]`):\n  - `VAR-countrycode` via `constant_source: {survey_identity: iso3}`\n  - `VAR-year` via `constant_source: {survey_identity: year}`\n  - `VAR-intmonth` passthrough from `__derived.intmonth__`\n  - `VAR-intyear` passthrough from `__derived.intyear__`\n  - `VAR-weight` passthrough from `hhweight`\n\nNo `absent` targets.",
+ "said": [
+  "Submitted `04-author_bindings-MOD-IDN` with:\n\n- 1 prelude `MOD-IDN-parse_intdate` to parse `hhdata.a4` (numeric ddmmyy with possible missing leading zero) into:\n  - `__derived.intmonth__`\n  - `__derived.intyear__`\n  with guards for invalid months and implausible years.\n\n- 5 bindings (all on table `hhdata`, `unit_keys: [\"idmen\"]`):\n  - `VAR-countrycode` via `constant_source: {survey_identity: iso3}`\n  - `VAR-year` via `constant_source: {survey_identity: year}`\n  - `VAR-intmonth` passthrough from `__derived.intmonth__`\n  - `VAR-intyear` passthrough from `__derived.intyear__`\n  - `VAR-weight` passthrough from `hhweight`\n\nNo `absent` targets."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\04.jsonl"
+}

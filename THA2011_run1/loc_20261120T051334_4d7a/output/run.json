@@ -1,0 +1,64 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "spec_sha256": "4dc969822136e731039edc181483b900c7d439149b14b05ea5e324a676e80501",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 20,
+  "rows": 128071,
+  "tables": [
+    {
+      "table": "ses54_user_rec01",
+      "rows": 42083,
+      "used": false
+    },
+    {
+      "table": "ses54_user_rec02",
+      "rows": 128071,
+      "used": true
+    },
+    {
+      "table": "ses54_user_rec03",
+      "rows": 42083,
+      "used": true
+    },
+    {
+      "table": "ses54_user_rec13",
+      "rows": 34845,
+      "used": false
+    },
+    {
+      "table": "ses54_user_rec16",
+      "rows": 42083,
+      "used": false
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 20,
+    "not_m1": []
+  },
+  "preludes": [
+    {
+      "id": "MOD-DEM-childyr_mask",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.childyr__ is HM04 where HM04<5, else missing"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-20T08:42:18+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+eaa25bb9",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

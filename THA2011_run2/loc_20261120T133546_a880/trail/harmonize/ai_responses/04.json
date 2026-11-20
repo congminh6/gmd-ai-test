@@ -1,0 +1,104 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "countrycode is survey scalar from run identity (ISO3), per contract. Put on person roster table to cover full output grain. Evidence: canon VAR-countrycode [t2]"
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "year is survey scalar from run identity (survey start year), per contract. Put on person roster table to cover full output grain. Evidence: canon VAR-year [t2]"
+  },
+  {
+   "binding_id": "B-intmonth",
+   "target": "VAR-intmonth",
+   "table": "ses54_user_rec01",
+   "roles": {
+    "raw_value": "A01",
+    "unit_keys": [
+     "NEW_HH_N"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "ses54_user_rec01.A01 label 'Enumeration Month', numeric 1-12 complete; matches VAR-intmonth codes 1=Jan..12=Dec. Evidence: A01 card [t1], table columns showing neighbours [t3], canon VAR-intmonth [t2]"
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "ses54_user_rec01",
+   "roles": {
+    "raw_value": "A52",
+    "unit_keys": [
+     "NEW_HH_N"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "ses54_user_rec01.A52 labeled 'Household weight', continuous positive numeric. Evidence: A52 card [t1], canon VAR-weight [t2]"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-intyear",
+   "kind": "searched_not_found",
+   "status": "absent",
+   "reason": "Searched survey for interview/enumeration year/date variables; only 'Enumeration Month' (A01) found and no interview-year/date field present in table indexes.",
+   "searches": [
+    {
+     "terms": "year enumeration interview date intyear A02",
+     "in": "survey (search name/label/question)"
+    },
+    {
+     "terms": "2018|2019|2020|2021|2022|2023|2024",
+     "in": "survey (regex search in codes/labels/names/questions)"
+    }
+   ]
+  }
+ ],
+ "notes": "Explicit tables+unit_keys added per validate; intyear not found in any table."
+}

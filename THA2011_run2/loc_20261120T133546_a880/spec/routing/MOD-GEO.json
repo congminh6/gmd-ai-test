@@ -1,0 +1,74 @@
+{
+  "routing": {
+    "VAR-subnatid1": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "reg",
+        "why": "Region code (1-5 Bangkok/Central/North/Northeast/South) appears to be highest-level admin division in this survey (see reg)."
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "reg",
+        "why": "Region also present on household-level table; may be same admin level as reg in rec02."
+      }
+    ],
+    "VAR-subnatid2": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "Changwat (province) numeric code with 76 categories; likely 2nd-level subnational ID below region."
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "cwt",
+        "why": "Changwat also present on household-level table; may carry same province code."
+      }
+    ],
+    "VAR-subnatidsurvey": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "Most granular explicit geographic identifier seen is Changwat (province) code; plausible 'lowest level of Subnational ID' collected."
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "cwt",
+        "why": "Province code repeated on rec01; may also serve as the survey's lowest collected subnational ID."
+      }
+    ],
+    "VAR-urban": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "area",
+        "why": "Administrative Area coded Municipal vs Non-municipal; could be used as an urbanicity proxy if no explicit urban/rural variable exists."
+      },
+      {
+        "survey_module": "ses54_user_rec01",
+        "column": "area",
+        "why": "Same Municipal vs Non-municipal area indicator on rec01; possible urban/rural proxy."
+      }
+    ],
+    "VAR-geocode": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "Geocode is derived from the survey's lowest collected subnational ID; cwt (province) is the likely input to a geography crosswalk."
+      }
+    ],
+    "VAR-gauladm1code": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "GAUL admin codes are derived from VAR-geocode; cwt (province) is the likely source ID used for crosswalking."
+      }
+    ],
+    "VAR-gauladm2code": [
+      {
+        "survey_module": "ses54_user_rec02",
+        "column": "cwt",
+        "why": "GAUL admin codes are derived from VAR-geocode; cwt (province) is the likely source ID used for crosswalking."
+      }
+    ]
+  },
+  "_request_id": "02-locate_sources-MOD-GEO"
+}

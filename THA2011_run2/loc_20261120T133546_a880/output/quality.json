@@ -1,0 +1,442 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "output_sha256": "2bee102981364a8fd69a72943c419261087063653cbcec0540002ce8e2c935bd",
+  "spec": "hspec.json",
+  "profile": {
+    "rows": 128071,
+    "weight": "weight",
+    "columns": {
+      "hhid": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 42083
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 42083
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 15
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 15
+      },
+      "countrycode": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "int_month": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "4": {
+            "share": 0.085499,
+            "share_w": 0.08495
+          },
+          "9": {
+            "share": 0.084703,
+            "share_w": 0.082568
+          },
+          "3": {
+            "share": 0.084367,
+            "share_w": 0.082241
+          },
+          "5": {
+            "share": 0.084071,
+            "share_w": 0.0872
+          },
+          "12": {
+            "share": 0.084024,
+            "share_w": 0.082323
+          },
+          "1": {
+            "share": 0.083907,
+            "share_w": 0.089115
+          },
+          "2": {
+            "share": 0.083399,
+            "share_w": 0.085173
+          },
+          "7": {
+            "share": 0.082407,
+            "share_w": 0.082178
+          },
+          "10": {
+            "share": 0.082197,
+            "share_w": 0.080393
+          },
+          "11": {
+            "share": 0.081986,
+            "share_w": 0.079633
+          },
+          "8": {
+            "share": 0.081728,
+            "share_w": 0.082709
+          },
+          "6": {
+            "share": 0.081712,
+            "share_w": 0.081516
+          }
+        }
+      },
+      "weight": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 494.004441,
+        "p5": 61.9412,
+        "p50": 330.4492,
+        "p95": 1455.8441,
+        "min": 13.3165,
+        "max": 4188.7479,
+        "mean_w": 951.6648,
+        "p50_w": 772.8658
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2011.0,
+        "p5": 2011.0,
+        "p50": 2011.0,
+        "p95": 2011.0,
+        "min": 2011.0,
+        "max": 2011.0,
+        "mean_w": 2011.0,
+        "p50_w": 2011.0
+      },
+      "gaul_adm1_code": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 1.0,
+        "p5": 1.0,
+        "p50": 1.0,
+        "p95": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean_w": 1.0,
+        "p50_w": 1.0
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "countrycode-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "countrycode"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "countrycode storage type",
+      "detail": ""
+    },
+    {
+      "id": "gaul_adm1_code-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "gaul_adm1_code"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "gaul_adm1_code storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "hhid storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "hhid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "int_month-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month storage type",
+      "detail": ""
+    },
+    {
+      "id": "int_month-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "int_month-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month outside [1, 12]",
+      "detail": ""
+    },
+    {
+      "id": "pid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "pid storage type",
+      "detail": ""
+    },
+    {
+      "id": "pid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "pid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "weight-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "weight storage type",
+      "detail": ""
+    },
+    {
+      "id": "year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "year storage type",
+      "detail": ""
+    },
+    {
+      "id": "weight-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Weight is not constant within household.",
+      "detail": ""
+    },
+    {
+      "id": "year-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Year is not a four digit number.",
+      "detail": ""
+    },
+    {
+      "id": "pid-unique",
+      "kind": "relational",
+      "implicates": [
+        "pid"
+      ],
+      "status": "flagged",
+      "n_flagged": 128071,
+      "base": 128071,
+      "share": 1.0,
+      "description": "pid repeats across the output's rows",
+      "samples": [
+        {
+          "value": "1",
+          "rows": 42083
+        },
+        {
+          "value": "2",
+          "rows": 35288
+        },
+        {
+          "value": "3",
+          "rows": 24295
+        },
+        {
+          "value": "4",
+          "rows": 14505
+        },
+        {
+          "value": "5",
+          "rows": 7112
+        }
+      ]
+    },
+    {
+      "id": "gaul_adm1_code-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "gaul_adm1_code"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "gaul_adm1_code differs within a household"
+    },
+    {
+      "id": "hhid_orig-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "hhid_orig differs within a household"
+    },
+    {
+      "id": "int_month-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "int_month"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "int_month differs within a household"
+    },
+    {
+      "id": "weight-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "weight"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "weight differs within a household"
+    }
+  ],
+  "reference": {
+    "skipped": "no reference requested"
+  },
+  "comparison": null,
+  "summary": {
+    "rows": 128071,
+    "targets": 9,
+    "weighted": true,
+    "checks_applied": 18,
+    "checks_flagged": 1,
+    "by_kind": {
+      "base": {
+        "applied": 13,
+        "flagged": 0
+      },
+      "universe": {
+        "applied": 0,
+        "flagged": 0
+      },
+      "derivation": {
+        "applied": 0,
+        "flagged": 0
+      },
+      "relational": {
+        "applied": 5,
+        "flagged": 1
+      }
+    },
+    "universe_cells": {
+      "value_outside": 0,
+      "reason_outside_not_c": 0,
+      "c_inside": 0
+    },
+    "derivation_mismatches": 0,
+    "line": "9 targets; 1/18 checks flagged; 0 universe cells; no reference"
+  }
+}

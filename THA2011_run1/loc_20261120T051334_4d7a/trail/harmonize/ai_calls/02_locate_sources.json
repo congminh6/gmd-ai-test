@@ -1,0 +1,34 @@
+{
+  "task_type": "locate_sources",
+  "scope_id": "MOD-GEO",
+  "scope_ids": [
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-psu",
+    "VAR-strata",
+    "VAR-subnatid1",
+    "VAR-subnatid1prev",
+    "VAR-subnatid2",
+    "VAR-subnatid2prev",
+    "VAR-subnatid3",
+    "VAR-subnatid3prev",
+    "VAR-subnatid4",
+    "VAR-subnatid4prev",
+    "VAR-subnatidsurvey",
+    "VAR-urban"
+  ],
+  "request_id": "02-locate_sources-MOD-GEO",
+  "tools": [
+    "canon",
+    "codes",
+    "column",
+    "columns",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "69cba24f98e4871884e610e237c6311a54ed785a18b6a7d57943f2ebef3769ab",
+  "transport": "direct",
+  "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

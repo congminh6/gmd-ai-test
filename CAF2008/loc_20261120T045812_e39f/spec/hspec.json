@@ -1,0 +1,1989 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-countrycode",
+              "VAR-year",
+              "VAR-weight",
+              "VAR-intyear"
+            ],
+            "call": "04:t1",
+            "result_sha256": "1c90ba0949b3461815fd069dadc0bda0567e98b08195f03599df3cd5b7eb4591",
+            "tool": "canon"
+          }
+        ],
+        "text": "Country is fixed for the survey; bind from survey identity iso3 (no survey column needed) [04:t1]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_month",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.a4",
+              "hhdata.hhweight"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e924d3b715d792077b71b5fe7cf854858ec8341fa02b8db66fba63731d52f8fd",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-countrycode",
+              "VAR-year",
+              "VAR-weight",
+              "VAR-intyear"
+            ],
+            "call": "04:t1",
+            "result_sha256": "1c90ba0949b3461815fd069dadc0bda0567e98b08195f03599df3cd5b7eb4591",
+            "tool": "canon"
+          }
+        ],
+        "text": "Interview date stored in hhdata.a4 (date de l'interview); prelude parses ddmmyy into month 1..12 [04:t2,04:t1]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.intmonth__",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-intmonth"
+    },
+    {
+      "binding_id": "B-int_year",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.a4",
+              "hhdata.hhweight"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e924d3b715d792077b71b5fe7cf854858ec8341fa02b8db66fba63731d52f8fd",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-countrycode",
+              "VAR-year",
+              "VAR-weight",
+              "VAR-intyear"
+            ],
+            "call": "04:t1",
+            "result_sha256": "1c90ba0949b3461815fd069dadc0bda0567e98b08195f03599df3cd5b7eb4591",
+            "tool": "canon"
+          }
+        ],
+        "text": "Interview date stored in hhdata.a4; prelude parses ddmmyy into 4-digit year [04:t2,04:t1]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.intyear__",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-intyear"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.a4",
+              "hhdata.hhweight"
+            ],
+            "call": "04:t2",
+            "result_sha256": "e924d3b715d792077b71b5fe7cf854858ec8341fa02b8db66fba63731d52f8fd",
+            "tool": "column"
+          }
+        ],
+        "text": "Household final weight in hhdata.hhweight (Pondération définitive) [04:t2]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "hhweight",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-countrycode",
+              "VAR-year",
+              "VAR-weight",
+              "VAR-intyear"
+            ],
+            "call": "04:t1",
+            "result_sha256": "1c90ba0949b3461815fd069dadc0bda0567e98b08195f03599df3cd5b7eb4591",
+            "tool": "canon"
+          }
+        ],
+        "text": "Survey reference year taken from survey identity metadata (fieldwork start year) [04:t1]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-gaul_adm1_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "MOD-GEO",
+              "--part",
+              "all"
+            ],
+            "call": "05:t2",
+            "result_sha256": "bc2d547f8cd8aad4cde52a53af6f41a236123341127e5a9ae722415f855bffcd",
+            "tool": "canon"
+          }
+        ],
+        "text": "05:t2"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-gauladm1code",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-gaul_adm2_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "MOD-GEO",
+              "--part",
+              "all"
+            ],
+            "call": "05:t2",
+            "result_sha256": "bc2d547f8cd8aad4cde52a53af6f41a236123341127e5a9ae722415f855bffcd",
+            "tool": "canon"
+          }
+        ],
+        "text": "05:t2"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-gauladm2code",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-geo_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "--part",
+              "all"
+            ],
+            "call": "05:t5",
+            "part": "VAR-geocode",
+            "result_sha256": "989453e4e9468a0a79b90b047823e6e489764418fe0073e345bd0aef1a653d55",
+            "tool": "canon"
+          },
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          }
+        ],
+        "text": "05:t5#VAR-geocode; 05:t1"
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-geocode",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-psu",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "--part",
+              "all"
+            ],
+            "call": "05:t5",
+            "part": "VAR-psu",
+            "result_sha256": "989453e4e9468a0a79b90b047823e6e489764418fe0073e345bd0aef1a653d55",
+            "tool": "canon"
+          }
+        ],
+        "text": "05:t1; 05:t5#VAR-psu"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "a1",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-psu"
+    },
+    {
+      "binding_id": "B-subnatid1",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          }
+        ],
+        "text": "05:t1"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-subnatid1"
+    },
+    {
+      "binding_id": "B-subnatidsurvey",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "--part",
+              "all"
+            ],
+            "call": "05:t5",
+            "part": "VAR-subnatidsurvey",
+            "result_sha256": "989453e4e9468a0a79b90b047823e6e489764418fe0073e345bd0aef1a653d55",
+            "tool": "canon"
+          }
+        ],
+        "text": "05:t1; 05:t5#VAR-subnatidsurvey"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "region",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-subnatidsurvey"
+    },
+    {
+      "binding_id": "B-urban",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-psu",
+              "VAR-strata",
+              "VAR-subnatid1",
+              "VAR-subnatidsurvey",
+              "VAR-urban",
+              "VAR-geocode",
+              "--part",
+              "all"
+            ],
+            "call": "05:t5",
+            "part": "VAR-urban",
+            "result_sha256": "989453e4e9468a0a79b90b047823e6e489764418fe0073e345bd0aef1a653d55",
+            "tool": "canon"
+          }
+        ],
+        "text": "05:t1; 05:t5#VAR-urban"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "urru",
+        "unit_keys": [
+          "idmen"
+        ]
+      },
+      "table": "hhdata",
+      "target": "VAR-urban",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.b4 age is continuous numeric years (range 0-95) (06:t2)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b4",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "childyr can be taken as completed years from indata.b4 for under-5; gate enforces universe (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 < 5"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b4",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-comm_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No communication-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-communicationdisability"
+    },
+    {
+      "binding_id": "B-conc_dsord",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No concentration-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-concentrationdisorder"
+    },
+    {
+      "binding_id": "B-educat4",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "indata.b4",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.c5",
+              "indata.educ"
+            ],
+            "call": "06:t8",
+            "result_sha256": "ba779af2993d7877889c9cdba0ac0477d38cf958dff983cbfd74b05884be8c90",
+            "tool": "onset"
+          }
+        ],
+        "text": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (06:t2,06:t8)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 >= 7"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-educat4",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat5",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "indata.b4",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.c5",
+              "indata.educ"
+            ],
+            "call": "06:t8",
+            "result_sha256": "ba779af2993d7877889c9cdba0ac0477d38cf958dff983cbfd74b05884be8c90",
+            "tool": "onset"
+          }
+        ],
+        "text": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (06:t2,06:t8)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 >= 7"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-educat5",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educat7",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "indata.b4",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.c5",
+              "indata.educ"
+            ],
+            "call": "06:t8",
+            "result_sha256": "ba779af2993d7877889c9cdba0ac0477d38cf958dff983cbfd74b05884be8c90",
+            "tool": "onset"
+          }
+        ],
+        "text": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (06:t2,06:t8)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 >= 7"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-educat7",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-educy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "indata.b4",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.c5",
+              "indata.educ"
+            ],
+            "call": "06:t8",
+            "result_sha256": "ba779af2993d7877889c9cdba0ac0477d38cf958dff983cbfd74b05884be8c90",
+            "tool": "onset"
+          }
+        ],
+        "text": "Years of schooling read from education correspondence (national standard provides years) using indata.c3 codes; age gate uses mineducatage=7 (06:t2,06:t8)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 >= 7"
+      },
+      "injected": {
+        "raw_value": "correspondence.education"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-educy",
+      "value_map_source": {
+        "correspondence": "education"
+      }
+    },
+    {
+      "binding_id": "B-everattend",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.c2 est-il déjà allé à l'école: 1 oui, 2 non (06:t2)."
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c2",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-everattend",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-eye_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No vision-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-eyedisability"
+    },
+    {
+      "binding_id": "B-hear_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No hearing-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-heardisability"
+    },
+    {
+      "binding_id": "B-literacy",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.c1 sait lire et écrire: 1 oui, 2 non (06:t2)."
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c1",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-literacy",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.b1 sexe: 1 homme, 2 femme (06:t2)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b1",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.b5 etat matrimonial: 1 célibataire, 2 marié monogame, 3 marié polygame, 4 union libre/concubinage, 5 divorcé/séparé, 6 veuf(ve) (06:t2)."
+      },
+      "missing_map": {
+        "null": 5,
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b5",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 3,
+        "6": 4
+      }
+    },
+    {
+      "binding_id": "B-mineducatage",
+      "constant_source": {
+        "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-mineducatage"
+            ],
+            "call": "06:t9",
+            "result_sha256": "a9032a2fbfe3bea7a39ede6fbafff6b842084268bcd52c841da47750fa97a09f",
+            "tool": "canon"
+          }
+        ],
+        "text": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE as required by policy (06:t9)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-mineducatage"
+    },
+    {
+      "binding_id": "B-primarycomp",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "Primary completion inferred from highest class completed: CM2 (code 16) or any higher level implies completed primary (06:t2)."
+      },
+      "gate": {
+        "else_code": ".c",
+        "predicate": "b4 >= 7"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-primarycomp",
+      "value_map": {
+        "0": 0,
+        "1": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0,
+        "16": 1,
+        "21": 1,
+        "22": 1,
+        "23": 1,
+        "24": 1,
+        "25": 1,
+        "26": 1,
+        "27": 1,
+        "31": 1,
+        "32": 1,
+        "33": 1,
+        "41": 1,
+        "42": 1,
+        "43": 1
+      }
+    },
+    {
+      "binding_id": "B-relationcs",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.b3 lien de parenté avec le chef de ménage is a labelled categorical code list (1-8) (06:t2)."
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-relationcs"
+    },
+    {
+      "binding_id": "B-relationharm",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.b3 relationship codes: 1 head, 2 spouse, 3 child, 5 parent, 4 sibling/6 grandchild/7 other relatives -> other relative, 8 none -> non-relative (06:t2)."
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "b3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-relationharm",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 5,
+        "5": 4,
+        "6": 5,
+        "7": 5,
+        "8": 6
+      }
+    },
+    {
+      "binding_id": "B-school",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "indata.c5 fréquente ou a fréquenté l'école pendant l'année 2007-2008: 1 oui, 2 non (06:t1)."
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "c5",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-school",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-slfcre_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No self-care difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-selfcaredisability"
+    },
+    {
+      "binding_id": "B-walk_dsablty",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.c5",
+              "indata.d3"
+            ],
+            "call": "06:t1",
+            "result_sha256": "9447a17d78ce8c3aa2d6dfb2e8ceb26283d6daa6762627e20f94bec3a0453e73",
+            "tool": "column"
+          }
+        ],
+        "text": "No walking-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "cannot_determine",
+      "roles": {
+        "raw_value": "d3",
+        "unit_keys": [
+          "idmen",
+          "memberno"
+        ]
+      },
+      "table": "indata",
+      "target": "VAR-walkdisability"
+    }
+  ],
+  "correspondence": {
+    "education": {
+      "column": "indata.c3",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b1",
+              "indata.b3",
+              "indata.b4",
+              "indata.b5",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.educ"
+            ],
+            "call": "06:t2",
+            "result_sha256": "a6b897266576b2ea83c6165fbac8ebec23377f8ad2a24a94518580b04b784629",
+            "tool": "column"
+          }
+        ],
+        "text": "Education domain column is highest class completed (indata.c3) with detailed labelled codes including preschool/primary/secondary/technical/tertiary cycles; mapping linked accordingly (06:t2)."
+      },
+      "links": {
+        "0": {
+          "direct": {
+            "VAR-educat4": 1,
+            "VAR-educat5": 1,
+            "VAR-educat7": 1,
+            "VAR-educy": 0
+          },
+          "kind": "no_fitting_category",
+          "reason": "Code 0 labelled 'aucune' indicates no schooling; not a programme level in the national standard."
+        },
+        "1": "CAF-EDU-01",
+        "11": "CAF-EDU-02",
+        "12": "CAF-EDU-02",
+        "13": "CAF-EDU-02",
+        "14": "CAF-EDU-02",
+        "15": "CAF-EDU-02",
+        "16": "CAF-EDU-02",
+        "21": "CAF-EDU-03",
+        "22": "CAF-EDU-03",
+        "23": "CAF-EDU-03",
+        "24": "CAF-EDU-03",
+        "25": "CAF-EDU-05",
+        "26": "CAF-EDU-05",
+        "27": "CAF-EDU-05",
+        "31": "CAF-EDU-04",
+        "32": "CAF-EDU-06",
+        "33": "CAF-EDU-11",
+        "41": "CAF-EDU-09",
+        "42": {
+          "candidates": [
+            "CAF-EDU-13",
+            "CAF-EDU-14"
+          ],
+          "kind": "ambiguous",
+          "reason": "Label 'enseignement supérieur deuxième cycle' does not specify degree (Licence vs Maîtrise)."
+        },
+        "43": {
+          "candidates": [
+            "CAF-EDU-15",
+            "CAF-EDU-16",
+            "CAF-EDU-18"
+          ],
+          "kind": "ambiguous",
+          "reason": "Label 'enseignement supérieur troisième cycle' does not specify whether Master/Doctorat/Medecin; national standard distinguishes several tertiary endpoints."
+        }
+      }
+    },
+    "geography": {
+      "column": "hhdata.region",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "hhdata.region",
+              "hhdata.a1",
+              "hhdata.urru",
+              "indata.urru",
+              "indata.deflator"
+            ],
+            "call": "05:t1",
+            "result_sha256": "a75a7e06d6f2906efb0a651c4a4f1ff75e66178918870d1d919db9cf66f77e6c",
+            "tool": "column"
+          }
+        ],
+        "text": "05:t1"
+      },
+      "links": {
+        "1": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "2": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "3": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "4": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "5": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "6": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        },
+        "7": {
+          "kind": "no_fitting_category",
+          "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+        }
+      }
+    }
+  },
+  "coverage": [
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched for strata/strate/stratum wording; only candidate is indata.deflator labelled 'Strate deflator' but it is a continuous deflator factor (not a stratum identifier). No categorical stratum-id column found.",
+      "searches": [
+        {
+          "in": "name,label,question,codes",
+          "terms": "strate|stratum|strata"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-strata"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No second-level admin identifier collected (only region present).",
+      "status": "absent",
+      "variable": "VAR-subnatid2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No third-level admin identifier collected (only region present).",
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "No fourth-level admin identifier collected (only region present).",
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid1prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+      "status": "absent",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid2prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+      "status": "absent",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid3prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+      "status": "absent",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "subnatid4prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+      "status": "absent",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "Survey records age as continuous years (indata.b4); no age-band variable is present/needed (t2).",
+      "status": "absent",
+      "variable": "VAR-agecat"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-age"
+      ],
+      "reason": "Only age in completed years (indata.b4) is available; age-in-months for under-5 cannot be derived without date of birth or months data (t2).",
+      "status": "deferred",
+      "variable": "VAR-childmth"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No language variable found in indata; search for langue/language matched only literacy item wording (t3).",
+      "searches": [
+        {
+          "in": "table indata",
+          "terms": "langue | language | dialect | ethnie"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-language"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "CAF",
+      "year": 2008
+    },
+    "country_parameters": [
+      "PARAM-DEM-MIN-MARRIAGE-AGE",
+      "PARAM-EDU-LEVEL-CROSSWALK",
+      "PARAM-EDU-MIN-EDUCATION-AGE",
+      "PARAM-GEO-GMD-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "output": {
+    "grain": [
+      "idmen",
+      "memberno"
+    ],
+    "roster": "indata",
+    "unit_of_analysis": "individual"
+  },
+  "parameters": {
+    "PARAM-EDU-MIN-EDUCATION-AGE": {
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "indata.b4",
+              "indata.c1",
+              "indata.c2",
+              "indata.c3",
+              "indata.c5",
+              "indata.educ"
+            ],
+            "call": "06:t8",
+            "result_sha256": "ba779af2993d7877889c9cdba0ac0477d38cf958dff983cbfd74b05884be8c90",
+            "tool": "onset"
+          }
+        ],
+        "text": "Education section detailed items (c3/c5) are filled for at least half of individuals from age 7 onward; younger ages have sparse fill, indicating section onset ~7 (06:t8)."
+      },
+      "method": "data_onset",
+      "value": 7
+    }
+  },
+  "prelude": [
+    {
+      "code_ref": "MOD-IDN-parse_intdate.py",
+      "id": "MOD-IDN-parse_intdate",
+      "invariants": [
+        "__derived.intmonth__ in 1..12 when parse succeeds",
+        "__derived.intyear__ is a plausible 4-digit year when parse succeeds"
+      ],
+      "produces": [
+        "__derived.intmonth__",
+        "__derived.intyear__"
+      ],
+      "reads": [
+        "hhdata"
+      ],
+      "reason": "hhdata.a4 stores interview date as an integer but not in a ready month/year form; parse it (treating it as ddmmyy with possible missing leading zero) and guard against invalid months/years to produce intmonth/intyear.",
+      "writes": [
+        "hhdata"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "carquibbconso",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "nso_derived"
+        },
+        "sha256": "785b7951215493fb7c6ce16936ff3f8398cf5d643f91d47da40d29e26d3bd588",
+        "source_file": "carquibbconso.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "carquibwelfare",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "nso_derived"
+        },
+        "sha256": "591f739e6b01c4aae8ef03f0d279856e5c46450df11f475c88dd477acd0f0257",
+        "source_file": "carquib2008welfare.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "a1": "numeric",
+          "hhweight": "numeric",
+          "region": "numeric",
+          "urru": "numeric"
+        },
+        "name": "hhdata",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "d587602f7a1fcb842e8260d859f98ec91d83ffd4a899b74100d2bc6d8507626a",
+        "source_file": "hhdata.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "hhevdata",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "afb56f3337bde944bd6e90cf0e4bfb07d44eb832985aae4d748aafc8dad5e364",
+        "source_file": "hhevdata.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "hhstdata",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "8ed88aea4e83ac0524b96994cd62cb861bce3fed4dbbe222cc30f631ac3f3a6c",
+        "source_file": "hhstdata.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "b1": "numeric",
+          "b3": "numeric",
+          "b4": "numeric",
+          "b5": "numeric",
+          "c1": "numeric",
+          "c2": "numeric",
+          "c3": "numeric",
+          "c5": "numeric",
+          "d3": "numeric"
+        },
+        "name": "indata",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "f6c8ea1dce540b467bb71b717633789f822a74bfb8d1ee80a7c9ab7c93ade5ad",
+        "source_file": "indata.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectj_biend",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "937415832b7634b4a3ee18ae563afc15486bbf395be8e05fb139eb85c611fe8d",
+        "source_file": "sectj_biend.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectk_autoc",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "28309b5a7ea8d41a4473e879d8256c172b2d9f11366ba4879a55377f9147878e",
+        "source_file": "sectk_autoc.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectk_cader",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "fdd7b8e246e6cd6ab4d4655ec76c6682fce536d958d85ff659c89ef5e46907bc",
+        "source_file": "sectk_cader.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectl_depc",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "7bbdf829de6c7fb98839512b54980c135a586c683e0d3da1d982e51990ea57fb",
+        "source_file": "sectl_depc.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectm_depmf",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "5fb29cc0ba2d8740004b87713ee574b97ce3275ff7d011a3be641761ae0f6a63",
+        "source_file": "sectm_depmf.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectn_revag",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "422e452333ee8752e590994947512f86414f0d1b61e2de4d1a3b8bc1748c7cfd",
+        "source_file": "sectn_revag.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "sectn_revna",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "e7a7fc67978eb9205a9bef141e3e6ffb54113eac59c0a77a36d937acc3fd4ef8",
+        "source_file": "sectn_revna.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "secto_trans",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "9670bcb718d64842a257fcced3ec049090566b9e412e8dee93d3452efd13639b",
+        "source_file": "secto_trans.dta"
+      }
+    ]
+  },
+  "survey_id": "CAF_2008_ECASEB",
+  "targets": [
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-intyear",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-psu",
+    "VAR-subnatid1",
+    "VAR-subnatidsurvey",
+    "VAR-urban",
+    "VAR-age",
+    "VAR-childyr",
+    "VAR-communicationdisability",
+    "VAR-concentrationdisorder",
+    "VAR-educat4",
+    "VAR-educat5",
+    "VAR-educat7",
+    "VAR-educy",
+    "VAR-everattend",
+    "VAR-eyedisability",
+    "VAR-heardisability",
+    "VAR-literacy",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-mineducatage",
+    "VAR-primarycomp",
+    "VAR-relationcs",
+    "VAR-relationharm",
+    "VAR-school",
+    "VAR-selfcaredisability",
+    "VAR-walkdisability"
+  ]
+}

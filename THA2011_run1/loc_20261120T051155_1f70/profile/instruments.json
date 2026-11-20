@@ -1,0 +1,109 @@
+{
+  "by_route": {
+    "pdf_mixed": 3,
+    "pdf_text": 1,
+    "xlsx": 1
+  },
+  "files": [
+    {
+      "detail": "",
+      "ext": "xlsx",
+      "extractable": false,
+      "format": "xlsx",
+      "ocr_page_index": [],
+      "path": "Accompanying note SES2011 Data structure.xlsx",
+      "reader": "survey-scribe",
+      "route": "xlsx",
+      "size_bytes": 18849,
+      "tool": "survey-scribe"
+    },
+    {
+      "detail": "14 text / 0 ocr / 1 empty of 15 sampled page(s); 1962 chars/page",
+      "empty_pages": 1,
+      "ext": "pdf",
+      "extractable": true,
+      "format": "pdf",
+      "n_pages": 52,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "HSES 2011 Questionnaire_Expenditure.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 455327,
+      "text_chars_per_page": 1962,
+      "text_pages": 14,
+      "tool": "pymupdf"
+    },
+    {
+      "detail": "12 text / 1 ocr / 0 empty of 13 sampled page(s); 1476 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "format": "pdf",
+      "n_pages": 13,
+      "ocr_page_index": [
+        2
+      ],
+      "ocr_pages": 1,
+      "pages_sampled": 13,
+      "path": "HSES 2011 Questionnaire_Income.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 164027,
+      "text_chars_per_page": 1476,
+      "text_pages": 12,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "detail": "7 text / 7 ocr / 1 empty of 15 sampled page(s); 2983 chars/page",
+      "empty_pages": 1,
+      "ext": "pdf",
+      "extractable": false,
+      "format": "pdf",
+      "n_pages": 52,
+      "ocr_page_index": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "ocr_pages": 7,
+      "pages_sampled": 15,
+      "path": "แบบ สศส.2 (พิเศษ).pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 1011355,
+      "text_chars_per_page": 2983,
+      "text_pages": 7,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "detail": "11 text / 2 ocr / 0 empty of 13 sampled page(s); 1654 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "format": "pdf",
+      "n_pages": 13,
+      "ocr_page_index": [
+        0,
+        2
+      ],
+      "ocr_pages": 2,
+      "pages_sampled": 13,
+      "path": "แบบ สศส.3.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 303443,
+      "text_chars_per_page": 1654,
+      "text_pages": 11,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    }
+  ],
+  "n_files": 5,
+  "root": "C:\\temp\\test\\surveys\\THA_2011_HSES\\Doc",
+  "skipped_extensions": {}
+}

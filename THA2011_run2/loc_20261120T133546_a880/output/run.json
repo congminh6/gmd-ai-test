@@ -1,0 +1,57 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "spec_sha256": "b9e609623047ff5e94a758917c0768ac36d2a4b18c575108cae1681e0056edfe",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 9,
+  "rows": 128071,
+  "tables": [
+    {
+      "table": "ses54_user_rec01",
+      "rows": 42083,
+      "used": true
+    },
+    {
+      "table": "ses54_user_rec02",
+      "rows": 128071,
+      "used": true
+    },
+    {
+      "table": "ses54_user_rec03",
+      "rows": 42083,
+      "used": false
+    },
+    {
+      "table": "ses54_user_rec13",
+      "rows": 34845,
+      "used": false
+    },
+    {
+      "table": "ses54_user_rec16",
+      "rows": 42083,
+      "used": false
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 9,
+    "not_m1": []
+  },
+  "preludes": [],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-20T13:48:45+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+eaa25bb9",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

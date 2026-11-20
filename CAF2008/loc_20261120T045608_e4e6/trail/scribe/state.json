@@ -1,0 +1,7 @@
+{
+ "steps": {
+  "CAF RCAPRIX2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "CAF RCAQRD2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "CAF RCAQUIBB2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+ }
+}

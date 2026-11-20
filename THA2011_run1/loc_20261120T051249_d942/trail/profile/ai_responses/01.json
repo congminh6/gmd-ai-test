@@ -1,0 +1,51 @@
+{
+ "request_id": "01-author_overlay-survey",
+ "grain": {
+  "household_key": "ses54_user_rec01.NEW_HH_N",
+  "roster": "ses54_user_rec02",
+  "weight": "ses54_user_rec03.A52"
+ },
+ "tables": [
+  {
+   "table": "ses54_user_rec01",
+   "verdict": "raw",
+   "evidence": [
+    "t1#placement",
+    "t2#structure"
+   ]
+  },
+  {
+   "table": "ses54_user_rec02",
+   "verdict": "raw",
+   "evidence": [
+    "t1#placement",
+    "t2#structure"
+   ]
+  },
+  {
+   "table": "ses54_user_rec03",
+   "verdict": "raw",
+   "evidence": [
+    "t1#placement",
+    "t2#structure"
+   ]
+  },
+  {
+   "table": "ses54_user_rec13",
+   "verdict": "raw",
+   "evidence": [
+    "t1#placement",
+    "t2#structure"
+   ]
+  },
+  {
+   "table": "ses54_user_rec16",
+   "verdict": "raw",
+   "evidence": [
+    "t1#placement",
+    "t2#structure"
+   ]
+  }
+ ],
+ "notes": "Authored grain from scan keys: household=NEW_HH_N; roster=rec02 (hh-member rows); weight=A52 in rec03. Unlabelled content fields left untouched due to missing questionnaire/question text."
+}

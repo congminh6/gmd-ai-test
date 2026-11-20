@@ -1,0 +1,153 @@
+{
+ "coverage": {
+  "absent": 10,
+  "deferred": 1,
+  "produced": 28,
+  "produced_empty": 9
+ },
+ "data": {
+  "carquibbconso": "785b7951215493fb7c6ce16936ff3f8398cf5d643f91d47da40d29e26d3bd588",
+  "carquibwelfare": "591f739e6b01c4aae8ef03f0d279856e5c46450df11f475c88dd477acd0f0257",
+  "hhdata": "d587602f7a1fcb842e8260d859f98ec91d83ffd4a899b74100d2bc6d8507626a",
+  "hhevdata": "afb56f3337bde944bd6e90cf0e4bfb07d44eb832985aae4d748aafc8dad5e364",
+  "hhstdata": "8ed88aea4e83ac0524b96994cd62cb861bce3fed4dbbe222cc30f631ac3f3a6c",
+  "indata": "f6c8ea1dce540b467bb71b717633789f822a74bfb8d1ee80a7c9ab7c93ade5ad",
+  "sectj_biend": "937415832b7634b4a3ee18ae563afc15486bbf395be8e05fb139eb85c611fe8d",
+  "sectk_autoc": "28309b5a7ea8d41a4473e879d8256c172b2d9f11366ba4879a55377f9147878e",
+  "sectk_cader": "fdd7b8e246e6cd6ab4d4655ec76c6682fce536d958d85ff659c89ef5e46907bc",
+  "sectl_depc": "7bbdf829de6c7fb98839512b54980c135a586c683e0d3da1d982e51990ea57fb",
+  "sectm_depmf": "5fb29cc0ba2d8740004b87713ee574b97ce3275ff7d011a3be641761ae0f6a63",
+  "sectn_revag": "422e452333ee8752e590994947512f86414f0d1b61e2de4d1a3b8bc1748c7cfd",
+  "sectn_revna": "e7a7fc67978eb9205a9bef141e3e6ffb54113eac59c0a77a36d937acc3fd4ef8",
+  "secto_trans": "9670bcb718d64842a257fcced3ec049090566b9e412e8dee93d3452efd13639b"
+ },
+ "flow": "harmonize",
+ "identity": {
+  "agent": {
+   "model": "gpt-5.2"
+  },
+  "canon": "0.1.0+eaa25bb9",
+  "code": [
+   "survey-harmonization local (testing — no sync stamp)"
+  ],
+  "packages": {
+   "gmd": "0.1.0",
+   "harmon": "0.1.0",
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "pyarrow": "26.0.0",
+   "pydantic": "2.12.5",
+   "pyreadstat": "1.3.7",
+   "survey-scribe": "0.1.3"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7"
+ },
+ "output": {
+  "reference_sha256": null,
+  "sha256": "da413519ccc66b2f471de1a47272cbee14ffaee61d3edd029623dd81ec836340"
+ },
+ "preludes": {
+  "MOD-IDN-parse_intdate": {
+   "sha256": "7acdf6b1495fb5bb3c0570f1388156da3de16ec687fec228ff69a778dbdaeb05"
+  }
+ },
+ "profile": {
+  "files": {
+   "profile/data_scan.json": "d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00",
+   "profile/instruments.json": "1396517fdaf8b3e772aa5d1f386128800bbfd5787ea2b3507d2602473cbefad4",
+   "profile/key_checks.json": "d7dcca231b1cebd7112106186d4139971a14c7288ca67a98a6e7dd5cc7464e66",
+   "profile/overlay.json": "8a745c4d1fe6757b992dad42c85fb87995fb797089405e4d07e2294a5277fc60"
+  },
+  "profile_sha": "627ccd377ef80c591df2a283efe4690e78a3d61a33f629fa4243a459d709bcb4"
+ },
+ "requests": [
+  {
+   "brief_sha256": "4ec1931a8cb5265a4702abf215e2cff3772f433e79fae225921499842007c31e",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "01",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "7669ded084a8c15670e98aa85208eb24915a32c50306ec870268568404308b61",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "02",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "59408722fd98b8e06fae0ebec084c4033192f5d52efbe517e3ee5d8703c08850",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "03",
+   "task": "locate_sources",
+   "template_sha256": "eeface748abc7945bc0ef24385cfe375cfbec86d5aae70d01f242fc018f8ffc0",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "96803c77cae9a29998d101135fa802608e1819c12a008dec0278f2c3d2d57dec",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-IDN",
+   "seq": "04",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "37198d7136b5c16ec1b8221d05f3b6cabcba4492e5fa0e409c36362c9dab4693",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-GEO",
+   "seq": "05",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "fb813fff3e5f0e8b1f238b3edefba5323f6d5c0b0d0361068d7076d270f8d588",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "MOD-DEM",
+   "seq": "06",
+   "task": "author_bindings",
+   "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+   "transport": "direct"
+  },
+  {
+   "brief_sha256": "ecd167260290ebd1f736c5b550dadb459ab70333078892ab516e0a07af548865",
+   "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb",
+   "model": "gpt-5.2-2025-12-11",
+   "scope": "survey",
+   "seq": "07",
+   "task": "review_prelude",
+   "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+   "transport": "direct"
+  }
+ ],
+ "stamp": {
+  "canon": "0.1.0+eaa25bb9",
+  "certified_against": {
+   "inputs": {
+    "data_scan": "d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00",
+    "key_checks": "d7dcca231b1cebd7112106186d4139971a14c7288ca67a98a6e7dd5cc7464e66",
+    "overlay": "8a745c4d1fe6757b992dad42c85fb87995fb797089405e4d07e2294a5277fc60"
+   },
+   "profile_sha": "627ccd377ef80c591df2a283efe4690e78a3d61a33f629fa4243a459d709bcb4"
+  },
+  "content_sha256": "24acc3e2be612b37808e9eb9481ef5774489e8010c3610dcd4cd268249800382",
+  "grounded": true,
+  "reference": "0.1.0",
+  "spec_sha256": "353eccd1138c0a6feea2bc7751a639e23e7a9871ce0a1f7aedde504ce900dfe6",
+  "validator_version": "2"
+ },
+ "survey_id": "CAF_2008_ECASEB"
+}

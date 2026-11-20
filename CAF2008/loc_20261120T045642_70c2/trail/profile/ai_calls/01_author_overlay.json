@@ -1,0 +1,23 @@
+{
+  "task_type": "author_overlay",
+  "scope_id": "survey",
+  "prior_findings": [],
+  "request_id": "01-author_overlay-survey",
+  "tools": [
+    "codes",
+    "column",
+    "columns",
+    "gaps",
+    "inventory",
+    "search",
+    "structure",
+    "submit"
+  ],
+  "brief_sha256": "e414b5e68b7863e591cf29f7cc474a047bfa8fee54b749c1f8ffdae264a3d8e4",
+  "untrusted": [
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "7585fbce6f45a3636c2125084b424ee4c976cfeef30f2128602eaa81e02e9064",
+  "contract_sha256": "d566f5b574732ffee4a74d4e82da4933bce978428f62ab40d76ccdd92d396cb7"
+}

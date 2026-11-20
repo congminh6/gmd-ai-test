@@ -1,0 +1,372 @@
+{
+ "request_id": "06-author_bindings-MOD-DEM",
+ "preludes": [
+  {
+   "id": "MOD-DEM-childyr_mask",
+   "reason": "VAR-childyr must be within 0–5 and only defined for children under 5; HM04 contains all ages 0–99 so we mask ages >=5 to missing before binding.",
+   "produces": [
+    "__derived.childyr__"
+   ],
+   "invariants": [
+    "__derived.childyr__ is HM04 where HM04<5, else missing"
+   ],
+   "code_file": "MOD-DEM-childyr_mask.py"
+  }
+ ],
+ "bindings": [
+  {
+   "binding_id": "B-age",
+   "target": "VAR-age",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "HM04",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1#domain"
+  },
+  {
+   "binding_id": "B-childyr",
+   "target": "VAR-childyr",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "__derived.childyr__",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t22#authored"
+  },
+  {
+   "binding_id": "B-male",
+   "target": "VAR-male",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "HM03",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".o"
+   },
+   "register": "resolved",
+   "evidence": "t1#codes"
+  },
+  {
+   "binding_id": "B-marital",
+   "target": "VAR-marital",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "HM10",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 3,
+    "5": 3,
+    "6": 2
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1#codes"
+  },
+  {
+   "binding_id": "B-relationcs",
+   "target": "VAR-relationcs",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "HM02",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1#codes"
+  },
+  {
+   "binding_id": "B-relationharm",
+   "target": "VAR-relationharm",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "raw_value": "HM02",
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "0": 6,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 3,
+    "5": 5,
+    "6": 5,
+    "7": 4,
+    "8": 5,
+    "9": 6
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".o"
+   },
+   "register": "resolved",
+   "evidence": "t1#codes"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-agecat",
+   "kind": "not_collected_by_design",
+   "reason": "t1 shows continuous age in years (HM04) and no survey-defined age-band variable; per VAR-agecat canon, it is only used when continuous age is unavailable.",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-childmth",
+   "kind": "searched_not_found",
+   "reason": "No child age-in-months / DOB-based month-age variable found; only HM04 age in years is present.",
+   "searches": [
+    {
+     "terms": "age in months|months of age|DOB|date of birth",
+     "in": "all tables via search(name,label,question,codes) (t2,t4,t6,t11,t13,t21)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-communicationdisability",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "disability|difficulty|communicat",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-concentrationdisorder",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "concentrat|remember|difficulty",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-educat4",
+   "kind": "searched_not_found",
+   "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+   "searches": [
+    {
+     "terms": "education|school|primary|secondary|tertiary|grade|diploma",
+     "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-educat5",
+   "kind": "searched_not_found",
+   "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+   "searches": [
+    {
+     "terms": "education|school|primary|secondary|tertiary|grade|diploma",
+     "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-educat7",
+   "kind": "searched_not_found",
+   "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+   "searches": [
+    {
+     "terms": "education|school|primary|secondary|tertiary|grade|diploma",
+     "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-educy",
+   "kind": "searched_not_found",
+   "reason": "No years-of-education variable located in any table (no identifiable education section variables found).",
+   "searches": [
+    {
+     "terms": "years of education|educy|school years",
+     "in": "all tables via search(name,label,question,codes) (t11,t12)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-everattend",
+   "kind": "searched_not_found",
+   "reason": "No 'ever attended school' variable located in any table (no identifiable education section variables found).",
+   "searches": [
+    {
+     "terms": "ever attend|attended school|schooling",
+     "in": "all tables via search(name,label,question,codes) (t4,t13)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-eyedisability",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "see|eye|difficulty seeing|blind",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-heardisability",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "hear|hearing|deaf",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-language",
+   "kind": "searched_not_found",
+   "reason": "No household member language variable located (search returned none).",
+   "searches": [
+    {
+     "terms": "language|mother tongue|spoken",
+     "in": "all tables via search(name,label,question,codes) (t5)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-literacy",
+   "kind": "searched_not_found",
+   "reason": "No literacy variable (read/write) located (search returned none).",
+   "searches": [
+    {
+     "terms": "literacy|read|write",
+     "in": "all tables via search(name,label,question,codes) (t2)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-mineducatage",
+   "kind": "searched_not_found",
+   "reason": "Survey materials in this run do not provide the questionnaire universe for the education section, and no identifiable education section variables were found to infer onset.",
+   "searches": [
+    {
+     "terms": "minimum age for education|education section age|mineducatage",
+     "in": "all tables via search(name,label,question,codes) (t11,t13)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-primarycomp",
+   "kind": "searched_not_found",
+   "reason": "No variable indicating primary completion located (no identifiable education section variables found).",
+   "searches": [
+    {
+     "terms": "primary completed|finished primary|primary graduation",
+     "in": "all tables via search(name,label,question,codes) (t21)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-school",
+   "kind": "searched_not_found",
+   "reason": "No current school enrollment variable located (search returned none).",
+   "searches": [
+    {
+     "terms": "currently attending school|enrolled|in school",
+     "in": "all tables via search(name,label,question,codes) (t4,t7,t13)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-selfcaredisability",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "self care|wash|dress|difficulty",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-walkdisability",
+   "kind": "searched_not_found",
+   "reason": "No disability functioning questions/variables located in any table (search returned none).",
+   "searches": [
+    {
+     "terms": "walk|climb|mobility|difficulty walking",
+     "in": "all tables via search(name,label,question,codes) (t6)"
+    }
+   ],
+   "status": "absent"
+  }
+ ],
+ "notes": "Only age/sex/marital/relation variables were identifiable in the provided survey metadata; no labeled education/disability/literacy/language/schooling columns were discoverable via text search."
+}

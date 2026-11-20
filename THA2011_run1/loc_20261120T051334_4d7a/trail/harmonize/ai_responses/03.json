@@ -1,0 +1,62 @@
+{
+ "request_id": "03-locate_sources-MOD-DEM",
+ "routing": {
+  "VAR-age": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "HM04 is a continuous whole-number variable with range 0-99, consistent with age in years (t20)."
+   }
+  ],
+  "VAR-agecat": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "No separate age-category variable located; HM04 appears to be age in years and could be categorized for age groups (t20)."
+   }
+  ],
+  "VAR-childmth": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "No child-months variable located; HM04 appears to be age in years and could support deriving under-5 age measures if months are not separately collected (t20)."
+   }
+  ],
+  "VAR-childyr": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "HM04 appears to be age in years (0-99), suitable for child age in years when restricted to under-5 (t20)."
+   }
+  ],
+  "VAR-male": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM03",
+    "why": "HM03 is labelled Male/Female with codes 1/2, suitable for sex of household member (t19)."
+   }
+  ],
+  "VAR-marital": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM10",
+    "why": "HM10 is labelled marital status (Never married/Married/Widowed/Divorced/Separated/etc.) (t17)."
+   }
+  ],
+  "VAR-relationcs": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM02",
+    "why": "HM02 codes are relationship-to-head categories (Head, Spouse, children, grandchild, other relative, non-relative, etc.) (t21)."
+   }
+  ],
+  "VAR-relationharm": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM02",
+    "why": "Harmonized relationship-to-head (relationharm) is typically derived from country-specific relationship codes; HM02 is the relationship-to-head variable (t21)."
+   }
+  ]
+ },
+ "notes": "Most columns have empty labels/questions; only a few rec02 HMxx variables expose value labels (relationship, sex, marital). Education, schooling, literacy, language, and disability sources were not identifiable from available metadata."
+}

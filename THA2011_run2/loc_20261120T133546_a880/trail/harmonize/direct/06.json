@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 287.0,
+ "usage": {
+  "input_token_count": 872469,
+  "output_token_count": 25733,
+  "total_token_count": 898202,
+  "reasoning_output_token_count": 7236
+ },
+ "tool_calls": 29,
+ "submitted": true,
+ "final_text": "{\"delta\":true,\"bindings\":[{\"binding_id\":\"B-gaul_adm1_code\",\"target\":\"VAR-gauladm1code\",\"table\":\"ses54_user_rec02\",\"roles\":{\"unit_keys\":[\"NEW_HH_N\",\"HM01\"]},\"predicate\":\"all\",\"constant\":1,\"missing_map\":{\"null\":\".a\",\"unmapped\":\".b\"},\"register\":\"assumed\",\"evidence\":\"t26#binding shows prior gauladm1code binding has constant=1 and lacks table/unit_keys; this update adds table=ses54_user_rec02 and roles.unit_keys=[NEW_HH_N, HM01] as required by validate when no raw_value is present.\"}]}",
+ "said": [
+  "{\"delta\":true,\"bindings\":[{\"binding_id\":\"B-gaul_adm1_code\",\"target\":\"VAR-gauladm1code\",\"table\":\"ses54_user_rec02\",\"roles\":{\"unit_keys\":[\"NEW_HH_N\",\"HM01\"]},\"predicate\":\"all\",\"constant\":1,\"missing_map\":{\"null\":\".a\",\"unmapped\":\".b\"},\"register\":\"assumed\",\"evidence\":\"t26#binding shows prior gauladm1code binding has constant=1 and lacks table/unit_keys; this update adds table=ses54_user_rec02 and roles.unit_keys=[NEW_HH_N, HM01] as required by validate when no raw_value is present.\"}]}"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\06.jsonl"
+}

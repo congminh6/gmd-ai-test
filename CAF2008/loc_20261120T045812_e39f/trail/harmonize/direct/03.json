@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 35.7,
+ "usage": {
+  "input_token_count": 160059,
+  "output_token_count": 2420,
+  "total_token_count": 162479,
+  "reasoning_output_token_count": 807
+ },
+ "tool_calls": 15,
+ "submitted": true,
+ "final_text": "Submitted routing for `03-locate_sources-MOD-DEM`.\n\nKey placements:\n- Core demographics (age/sex/relationship/marital): `indata` (`b4`, `b1`, `b3`, `b5`)\n- Education/literacy/schooling: `indata` (`c1`, `c2`, `c3`, `c4`, `c5`, `educ`)\n- Disability: only general item found `indata.d3` (no domain-specific WG-style items found)\n- Language: no candidate column found; flagged for questionnaire/module check",
+ "said": [
+  "Submitted routing for `03-locate_sources-MOD-DEM`.\n\nKey placements:\n- Core demographics (age/sex/relationship/marital): `indata` (`b4`, `b1`, `b3`, `b5`)\n- Education/literacy/schooling: `indata` (`c1`, `c2`, `c3`, `c4`, `c5`, `educ`)\n- Disability: only general item found `indata.d3` (no domain-specific WG-style items found)\n- Language: no candidate column found; flagged for questionnaire/module check"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

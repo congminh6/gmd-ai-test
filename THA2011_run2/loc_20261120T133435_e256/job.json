@@ -1,0 +1,130 @@
+{
+ "job_id": "loc_20261120T133435_e256",
+ "flow": "profile",
+ "survey_id": "THA_2011_HSES",
+ "spec": {
+  "flow": "profile",
+  "survey_id": "THA_2011_HSES",
+  "country": "THA",
+  "year": 2011,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc"
+  },
+  "input_job": "loc_20261120T133351_03c9",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T13:34:35+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T133435_e256",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T133351_03c9",
+  "flow": "scribe",
+  "status": "completed",
+  "manifest_sha256": "8fc58f52b43cdd17124de3a522173b5a88aa9e0f5469a0fea64a0b3810367d49",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-20T13:35:20+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 10,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc",
+   "ss_export": "surveys/THA_2011_HSES/ss",
+   "svis": "surveys/THA_2011_HSES/svis",
+   "reference": "surveys/THA_2011_HSES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+  "A.questionnaire": "ok(0 questionnaire scan(s) -> profile\\questionnaire)",
+  "A.conformance": "ok(no source standard applies)",
+  "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 215 still-missing (codes_missing=14, grain=4, label_empty=197); orphan questions: 0; code conflicts: 0)",
+  "A.prefill-file-links": "ok(no questionnaire - no association needed)",
+  "A.associate": "ok(no questionnaire - skipped)",
+  "A.describe": "ok(no questionnaire - skipped)",
+  "A.author-overlay": "ok(author_overlay: 5 tables, 12 fields, grain; re-merged)",
+  "A.heal": "ok(off (--heal 0))",
+  "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+  "A.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "author_overlay",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 10,
+   "usage": {
+    "input_token_count": 172234,
+    "output_token_count": 2459,
+    "total_token_count": 174693,
+    "reasoning_output_token_count": 1194
+   },
+   "reasoning_effort": "low",
+   "seconds": 44.0
+  }
+ ],
+ "total_tokens": 174693,
+ "log_tail": [
+  "        - ses54_user_rec01.A16: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A17: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A18: unresolved label_empty (has data)",
+  "        ... and 195 more",
+  "  [det] prefill-file-links",
+  "  [judge] associate",
+  "  [judge] describe",
+  "  [judge] author-overlay",
+  "    AI CALL [author_overlay / survey] → trail\\profile\\ai_calls\\01_author_overlay.brief.md",
+  "    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)",
+  "    received trail\\profile\\ai_responses\\01.json via submit (4065 bytes)",
+  "      residual (advisory): 199 still-missing (codes_missing=8, label_empty=191); orphan questions: 0; code conflicts: 6",
+  "        - ses54_user_rec01.A02: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A02_1: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A03: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A04: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A04_1: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A05: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A06: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A07: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A08: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A09: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A10: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A11: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A12: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A13: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A14: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A15: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A16: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A17: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A18: unresolved label_empty (has data)",
+  "        - ses54_user_rec01.A19: unresolved label_empty (has data)",
+  "        ... and 179 more",
+  "  [judge] heal",
+  "  [det] check-keys",
+  "      grain (person) ses54_user_rec02: NEW_HH_N, HM01 -> unique over 128071 rows",
+  "  CHECK A: ok — profile recorded (profile d9d616807acd) — review it and approve (the review app's profile review, or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T133435_e256`)",
+  "",
+  "== all phases complete ==",
+  "  profile complete (profile d9d616807acd). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T133435_e256` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop."
+ ],
+ "finished": "2026-11-20T13:35:20+00:00"
+}

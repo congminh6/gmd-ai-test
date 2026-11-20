@@ -1,0 +1,240 @@
+{
+ "job_id": "loc_20261120T045812_e39f",
+ "flow": "harmonize",
+ "survey_id": "CAF_2008_ECASEB",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "CAF_2008_ECASEB",
+  "country": "CAF",
+  "year": 2008,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc"
+  },
+  "input_job": "loc_20261120T045642_70c2",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "profile",
+    "act": "approve",
+    "by": "zs",
+    "at": "2026-11-20T04:58:12+00:00",
+    "note": "approved in the notebook",
+    "binds": {
+     "manifest_sha256": "ddc15118f97f53022773c448b7eeaf6c36410908d9ef5dfdfdc2370bf32b2094",
+     "profile_sha": "627ccd377ef80c591df2a283efe4690e78a3d61a33f629fa4243a459d709bcb4"
+    }
+   }
+  ],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T04:58:12+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045812_e39f",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T045642_70c2",
+  "flow": "profile",
+  "status": "completed",
+  "manifest_sha256": "ddc15118f97f53022773c448b7eeaf6c36410908d9ef5dfdfdc2370bf32b2094",
+  "files": 5,
+  "partial": false
+ },
+ "updated": "2026-11-20T05:06:00+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 17,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc",
+   "ss_export": "surveys/CAF_2008_ECASEB/ss",
+   "svis": "surveys/CAF_2008_ECASEB/svis",
+   "reference": "surveys/CAF_2008_ECASEB/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile 627ccd377ef8 approved by zs at 2026-11-20T04:58:18+00:00)",
+  "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+  "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+  "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+  "B.modules": "ok(3 module(s) in the canon)",
+  "B.bind-standard": "ok(no source standard (the profile has no conformance record))",
+  "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+  "B.locate-sources": "ok(all 3 modules)",
+  "B.author-bindings": "ok(all modules)",
+  "B.review-prelude": "ok(1 prelude(s) read, 0 concern(s))",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(37 targets; 3/89 checks flagged; 0 universe cells; no reference)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "locate_sources",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 100407,
+    "output_token_count": 1138,
+    "total_token_count": 101545,
+    "reasoning_output_token_count": 545
+   },
+   "reasoning_effort": "low",
+   "seconds": 22.9
+  },
+  {
+   "request": "02",
+   "task": "locate_sources",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 21,
+   "usage": {
+    "input_token_count": 143319,
+    "output_token_count": 2552,
+    "total_token_count": 145871,
+    "reasoning_output_token_count": 1137
+   },
+   "reasoning_effort": "low",
+   "seconds": 48.8
+  },
+  {
+   "request": "03",
+   "task": "locate_sources",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 15,
+   "usage": {
+    "input_token_count": 160059,
+    "output_token_count": 2420,
+    "total_token_count": 162479,
+    "reasoning_output_token_count": 807
+   },
+   "reasoning_effort": "low",
+   "seconds": 35.7
+  },
+  {
+   "request": "04",
+   "task": "author_bindings",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 7,
+   "usage": {
+    "input_token_count": 89931,
+    "output_token_count": 6149,
+    "total_token_count": 96080,
+    "reasoning_output_token_count": 1869
+   },
+   "reasoning_effort": "low",
+   "seconds": 89.8
+  },
+  {
+   "request": "05",
+   "task": "author_bindings",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 10,
+   "usage": {
+    "input_token_count": 140932,
+    "output_token_count": 8358,
+    "total_token_count": 149290,
+    "reasoning_output_token_count": 2040
+   },
+   "reasoning_effort": "low",
+   "seconds": 86.0
+  },
+  {
+   "request": "06",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 13,
+   "usage": {
+    "input_token_count": 283053,
+    "output_token_count": 13327,
+    "total_token_count": 296380,
+    "reasoning_output_token_count": 4020
+   },
+   "reasoning_effort": "low",
+   "seconds": 142.0
+  },
+  {
+   "request": "07",
+   "task": "review_prelude",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 2,
+   "usage": {
+    "input_token_count": 24124,
+    "output_token_count": 417,
+    "total_token_count": 24541,
+    "reasoning_output_token_count": 313
+   },
+   "reasoning_effort": "low",
+   "seconds": 12.3
+  }
+ ],
+ "total_tokens": 976186,
+ "log_tail": [
+  "        resolved: B-educy: raw_value 'indata.c3' (from correspondence.education)",
+  "        kind: hhdata.hhweight: numeric",
+  "        kind: hhdata.region: numeric",
+  "        kind: hhdata.a1: numeric",
+  "        kind: hhdata.urru: numeric",
+  "        kind: indata.b4: numeric",
+  "        kind: indata.d3: numeric",
+  "        kind: indata.c3: numeric",
+  "        kind: indata.c2: numeric",
+  "        kind: indata.c1: numeric",
+  "        kind: indata.b1: numeric",
+  "        kind: indata.b5: numeric",
+  "        kind: indata.b3: numeric",
+  "        kind: indata.c5: numeric",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-20T05:05:43+00:00); coverage bound 37, documented 11",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran",
+  "  [det] hspec-run",
+  "      C:\\Users\\wb327173\\OneDrive - WBG\\Downloads\\ECA\\repo\\survey_harmonization\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb327173\\OneDrive - WBG\\Downloads\\ECA\\repo\\survey_harmonization\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb327173\\OneDrive - WBG\\Downloads\\ECA\\repo\\survey_harmonization\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      C:\\Users\\wb327173\\OneDrive - WBG\\Downloads\\ECA\\repo\\survey_harmonization\\survey-harmonization\\harmonization\\packages\\harmon\\harmon\\hspec\\run.py:233: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`",
+  "        df[keyname[k]] = df[k]",
+  "      PASS — 31966 rows, 37 target(s); contract clean. Outputs in C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045812_e39f\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045812_e39f\\output\\quality.json: 37 targets; 3/89 checks flagged; 0 universe cells; no reference",
+  "  CHECK F: ok — 37 targets; 3/89 checks flagged; 0 universe cells; no reference",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-20T05:06:00+00:00"
+}

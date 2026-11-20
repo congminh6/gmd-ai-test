@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 27.9,
+ "usage": {
+  "input_token_count": 75999,
+  "output_token_count": 1474,
+  "total_token_count": 77473,
+  "reasoning_output_token_count": 595
+ },
+ "tool_calls": 11,
+ "submitted": true,
+ "final_text": "Submitted `routing` for MOD-IDN (`01-locate_sources-MOD-IDN`), routing:\n\n- `VAR-intmonth` → `A01` (Enumeration Month) across modules (primary candidate: `ses54_user_rec01.A01`)\n- `VAR-weight` → `A52` (Household weight) across modules (primary candidate: `ses54_user_rec01.A52`)\n- `VAR-countrycode`, `VAR-intyear`, `VAR-year` → no obvious data columns in the index; routed to `ses54_user_rec01` as “likely metadata/constant” candidates for author-time handling",
+ "said": [
+  "Submitted `routing` for MOD-IDN (`01-locate_sources-MOD-IDN`), routing:\n\n- `VAR-intmonth` → `A01` (Enumeration Month) across modules (primary candidate: `ses54_user_rec01.A01`)\n- `VAR-weight` → `A52` (Household weight) across modules (primary candidate: `ses54_user_rec01.A52`)\n- `VAR-countrycode`, `VAR-intyear`, `VAR-year` → no obvious data columns in the index; routed to `ses54_user_rec01` as “likely metadata/constant” candidates for author-time handling"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\01.jsonl"
+}

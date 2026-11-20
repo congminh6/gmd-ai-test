@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 150.9,
+ "usage": {
+  "input_token_count": 448474,
+  "output_token_count": 10416,
+  "total_token_count": 458890,
+  "reasoning_output_token_count": 2646
+ },
+ "tool_calls": 33,
+ "submitted": true,
+ "final_text": "[t33] submitted — the host is applying your answer now; you are done with this request",
+ "said": [
+  "[t33] submitted — the host is applying your answer now; you are done with this request"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\06.jsonl"
+}

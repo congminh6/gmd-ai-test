@@ -1,0 +1,248 @@
+{
+ "request_id": "05-author_bindings-MOD-GEO",
+ "correspondence": {
+  "geography": {
+   "column": "hhdata.region",
+   "links": {
+    "1": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "2": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "3": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "4": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "5": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "6": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    },
+    "7": {
+     "kind": "no_fitting_category",
+     "reason": "CAF 2008 geography domain has no national-standard categories provided; region codes/labels therefore cannot be linked to a country_entry_id for governed crosswalk resolution."
+    }
+   },
+   "evidence": "t1"
+  }
+ },
+ "bindings": [
+  {
+   "binding_id": "B-subnatid1",
+   "target": "VAR-subnatid1",
+   "table": "hhdata",
+   "roles": {
+    "raw_value": "region",
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1"
+  },
+  {
+   "binding_id": "B-subnatidsurvey",
+   "target": "VAR-subnatidsurvey",
+   "table": "hhdata",
+   "roles": {
+    "raw_value": "region",
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1; t5#VAR-subnatidsurvey"
+  },
+  {
+   "binding_id": "B-psu",
+   "target": "VAR-psu",
+   "table": "hhdata",
+   "roles": {
+    "raw_value": "a1",
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1; t5#VAR-psu"
+  },
+  {
+   "binding_id": "B-urban",
+   "target": "VAR-urban",
+   "table": "hhdata",
+   "roles": {
+    "raw_value": "urru",
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t1; t5#VAR-urban"
+  },
+  {
+   "binding_id": "B-geocode",
+   "target": "VAR-geocode",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t5#VAR-geocode; t1"
+  },
+  {
+   "binding_id": "B-gauladm1code",
+   "target": "VAR-gauladm1code",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t2"
+  },
+  {
+   "binding_id": "B-gauladm2code",
+   "target": "VAR-gauladm2code",
+   "roles": {
+    "unit_keys": [
+     "idmen"
+    ]
+   },
+   "predicate": "all",
+   "value_map_source": {
+    "correspondence": "geography"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "t2"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-strata",
+   "kind": "searched_not_found",
+   "reason": "Searched for strata/strate/stratum wording; only candidate is indata.deflator labelled 'Strate deflator' but it is a continuous deflator factor (not a stratum identifier). No categorical stratum-id column found.",
+   "searches": [
+    {
+     "terms": "strate|stratum|strata",
+     "in": "name,label,question,codes"
+    }
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid2",
+   "kind": "not_collected_by_design",
+   "reason": "No second-level admin identifier collected (only region present).",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3",
+   "kind": "not_collected_by_design",
+   "reason": "No third-level admin identifier collected (only region present).",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4",
+   "kind": "not_collected_by_design",
+   "reason": "No fourth-level admin identifier collected (only region present).",
+   "searches": [],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid1prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid1prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid2prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid2prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid3prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4prev",
+   "kind": "derivable_not_built",
+   "reason": "subnatid4prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here.",
+   "needs": [
+    "VAR-geocode"
+   ],
+   "status": "absent"
+  }
+ ]
+}

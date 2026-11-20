@@ -1,0 +1,172 @@
+{
+ "request_id": "03-locate_sources-MOD-DEM",
+ "routing": {
+  "VAR-age": [
+   {
+    "survey_module": "indata",
+    "column": "b4",
+    "why": "Individual age (continuous) recorded as indata.b4 age"
+   }
+  ],
+  "VAR-agecat": [
+   {
+    "survey_module": "indata",
+    "column": "b4",
+    "why": "Age categories can be derived from indata.b4 age"
+   }
+  ],
+  "VAR-childmth": [
+   {
+    "survey_module": "indata",
+    "column": "b4",
+    "why": "Child age in months (<5) can be derived from indata.b4 age (years) if needed"
+   }
+  ],
+  "VAR-childyr": [
+   {
+    "survey_module": "indata",
+    "column": "b4",
+    "why": "Child age in years (<5) can be derived from indata.b4 age"
+   }
+  ],
+  "VAR-male": [
+   {
+    "survey_module": "indata",
+    "column": "b1",
+    "why": "Sex variable indata.b1 sexe (homme/femme)"
+   }
+  ],
+  "VAR-relationcs": [
+   {
+    "survey_module": "indata",
+    "column": "b3",
+    "why": "Relationship to household head appears as indata.b3 lien de parenté avec le chef de ménage"
+   }
+  ],
+  "VAR-relationharm": [
+   {
+    "survey_module": "indata",
+    "column": "b3",
+    "why": "Harmonized relationship can be mapped from indata.b3 relationship-to-head categories"
+   }
+  ],
+  "VAR-marital": [
+   {
+    "survey_module": "indata",
+    "column": "b5",
+    "why": "Marital status appears as indata.b5 etat matrimonial"
+   }
+  ],
+  "VAR-literacy": [
+   {
+    "survey_module": "indata",
+    "column": "c1",
+    "why": "Literacy appears as indata.c1 sait lire et écrire dans une langue quelconque"
+   }
+  ],
+  "VAR-everattend": [
+   {
+    "survey_module": "indata",
+    "column": "c2",
+    "why": "Ever attended school appears as indata.c2 est-il déjà allé à l'école"
+   }
+  ],
+  "VAR-school": [
+   {
+    "survey_module": "indata",
+    "column": "c5",
+    "why": "Current school attendance approximated by indata.c5 attendance during school year 2007-2008 (and nearby c4 for 2006-2007)"
+   }
+  ],
+  "VAR-educat4": [
+   {
+    "survey_module": "indata",
+    "column": "educ",
+    "why": "Highest education level likely from indata.educ Niveau instruction (5-level); may be recoded to 4 categories"
+   }
+  ],
+  "VAR-educat5": [
+   {
+    "survey_module": "indata",
+    "column": "educ",
+    "why": "Highest education level likely from indata.educ Niveau instruction (5-level), candidate for 5-category harmonization"
+   }
+  ],
+  "VAR-educat7": [
+   {
+    "survey_module": "indata",
+    "column": "c3",
+    "why": "Detailed highest class completed indata.c3 plus haute classe achevée can support 7-level education mapping"
+   }
+  ],
+  "VAR-educy": [
+   {
+    "survey_module": "indata",
+    "column": "c3",
+    "why": "Years of education likely derivable from highest class completed (indata.c3) and/or current level (indata.educ)"
+   }
+  ],
+  "VAR-primarycomp": [
+   {
+    "survey_module": "indata",
+    "column": "c3",
+    "why": "Primary completion can be derived from highest class completed indata.c3 (primary grades completed) and/or indata.educ"
+   }
+  ],
+  "VAR-mineducatage": [
+   {
+    "survey_module": "indata",
+    "why": "Minimum education age is a survey parameter; derive from the education section's universe/onset around indata.c2/c3/c4/c5 rather than a single data column"
+   }
+  ],
+  "VAR-communicationdisability": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No domain-specific functional difficulty items found; only disability-related item is indata.d3 (handicap/infirm), candidate to review"
+   }
+  ],
+  "VAR-concentrationdisorder": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No concentration-specific item found; only general handicap item indata.d3 is a candidate to inspect"
+   }
+  ],
+  "VAR-eyedisability": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No vision-difficulty item found; only general handicap item indata.d3 is a candidate to inspect"
+   }
+  ],
+  "VAR-heardisability": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No hearing-difficulty item found; only general handicap item indata.d3 is a candidate to inspect"
+   }
+  ],
+  "VAR-selfcaredisability": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No self-care difficulty item found; only general handicap item indata.d3 is a candidate to inspect"
+   }
+  ],
+  "VAR-walkdisability": [
+   {
+    "survey_module": "indata",
+    "column": "d3",
+    "why": "No walking difficulty item found; only general handicap item indata.d3 is a candidate to inspect"
+   }
+  ],
+  "VAR-language": [
+   {
+    "survey_module": "indata",
+    "why": "No language variable found in the survey column index via search; check questionnaire/other modules if language was collected"
+   }
+  ]
+ },
+ "notes": "Most DEM targets appear in indata roster (b* demographics, c* education, d3 disability); no dedicated Washington Group functional difficulty battery visible in the column index."
+}

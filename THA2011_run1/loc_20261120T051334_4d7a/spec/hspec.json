@@ -1,0 +1,1559 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-weight",
+              "VAR-year",
+              "VAR-intyear",
+              "VAR-countrycode"
+            ],
+            "call": "04:t2",
+            "result_sha256": "c774ab8464351deff690e08c4459d01b47574043ae10cad45b0723513e3c6238",
+            "tool": "canon"
+          },
+          {
+            "args": [
+              "ses54_user_rec02"
+            ],
+            "call": "04:t5",
+            "result_sha256": "2516e0b311e0b3e74c5e5a682dc5194a1ee49b39dafe8692f41f11ec263a1c6f",
+            "tool": "columns"
+          }
+        ],
+        "text": "countrycode is survey identity ISO3; anchored to person-grain table ses54_user_rec02 [04:t2,04:t5]"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_month",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.A01",
+              "ses54_user_rec03.A01",
+              "ses54_user_rec13.A01",
+              "ses54_user_rec16.a01"
+            ],
+            "call": "04:t1",
+            "result_sha256": "b34668613c135f8edbac8333b7caf5b12c7b947255c790cd187e4b156377a3a4",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-weight",
+              "VAR-year",
+              "VAR-intyear",
+              "VAR-countrycode"
+            ],
+            "call": "04:t2",
+            "result_sha256": "c774ab8464351deff690e08c4459d01b47574043ae10cad45b0723513e3c6238",
+            "tool": "canon"
+          }
+        ],
+        "text": "ses54_user_rec03.A01 labelled 1=January ... 12=December; range 1-12 [04:t1,04:t2]"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "A01",
+        "unit_keys": [
+          "NEW_HH_N"
+        ]
+      },
+      "table": "ses54_user_rec03",
+      "target": "VAR-intmonth"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.A52",
+              "ses54_user_rec03.A52",
+              "ses54_user_rec13.A52",
+              "ses54_user_rec16.a52"
+            ],
+            "call": "04:t4",
+            "result_sha256": "8db9a467d97fdabd2022bb198650fad566af6f97c7b5965b2ecffd8edd52ebb6",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-weight",
+              "VAR-year",
+              "VAR-intyear",
+              "VAR-countrycode"
+            ],
+            "call": "04:t2",
+            "result_sha256": "c774ab8464351deff690e08c4459d01b47574043ae10cad45b0723513e3c6238",
+            "tool": "canon"
+          }
+        ],
+        "text": "ses54_user_rec03.A52 numeric household weight, non-missing [04:t4,04:t2]"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "A52",
+        "unit_keys": [
+          "NEW_HH_N"
+        ]
+      },
+      "table": "ses54_user_rec03",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-weight",
+              "VAR-year",
+              "VAR-intyear",
+              "VAR-countrycode"
+            ],
+            "call": "04:t2",
+            "result_sha256": "c774ab8464351deff690e08c4459d01b47574043ae10cad45b0723513e3c6238",
+            "tool": "canon"
+          },
+          {
+            "args": [
+              "ses54_user_rec02"
+            ],
+            "call": "04:t5",
+            "result_sha256": "2516e0b311e0b3e74c5e5a682dc5194a1ee49b39dafe8692f41f11ec263a1c6f",
+            "tool": "columns"
+          }
+        ],
+        "text": "year is survey identity start year; anchored to person-grain table ses54_user_rec02 [04:t2,04:t5]"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-gaul_adm1_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-geocode"
+            ],
+            "call": "05:t29",
+            "result_sha256": "1c5c7e1bfee982c0e4987dce6d5ce46c2f29f4b2f95ce7dc57b94b1cece74103",
+            "tool": "canon"
+          }
+        ],
+        "text": "GAUL adm1 derived from resolved geo crosswalk; bind through geography correspondence per module policy (canon derived-from VAR-geocode; 05:t29)."
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "cwt",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-gauladm1code",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-gaul_adm2_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-geocode"
+            ],
+            "call": "05:t29",
+            "result_sha256": "1c5c7e1bfee982c0e4987dce6d5ce46c2f29f4b2f95ce7dc57b94b1cece74103",
+            "tool": "canon"
+          }
+        ],
+        "text": "GAUL adm2 derived from resolved geo crosswalk; bind through geography correspondence per module policy (canon derived-from VAR-geocode; 05:t29)."
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "cwt",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-gauladm2code",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-geo_code",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.cwt",
+              "ses54_user_rec02.area",
+              "ses54_user_rec02.reg"
+            ],
+            "call": "05:t25",
+            "result_sha256": "c56a17c069fbc66ff692266ae72fd377ebf44e533a60a084b13f6cfdebb32ce2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "ses54_user_rec02.cwt"
+            ],
+            "call": "05:t33",
+            "result_sha256": "0b869c80850223c7530b66b826a9487af08ca76bdc4494576a2207231bf273e2",
+            "tool": "codes"
+          },
+          {
+            "args": [
+              "VAR-geocode"
+            ],
+            "call": "05:t29",
+            "result_sha256": "1c5c7e1bfee982c0e4987dce6d5ce46c2f29f4b2f95ce7dc57b94b1cece74103",
+            "tool": "canon"
+          }
+        ],
+        "text": "Geography correspondence uses Changwat (province) codes from ses54_user_rec02.cwt (05:t25,05:t33); no national categories exist for THA 2011 geography domain per brief; all links are no_fitting_category so VAR-geocode cannot be resolved (canon 05:t29)."
+      },
+      "injected": {
+        "raw_value": "correspondence.geography"
+      },
+      "missing_map": {
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "cwt",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-geocode",
+      "value_map_source": {
+        "correspondence": "geography"
+      }
+    },
+    {
+      "binding_id": "B-subnatid1",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.cwt",
+              "ses54_user_rec02.area",
+              "ses54_user_rec02.reg"
+            ],
+            "call": "05:t25",
+            "result_sha256": "c56a17c069fbc66ff692266ae72fd377ebf44e533a60a084b13f6cfdebb32ce2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-subnatid1"
+            ],
+            "call": "05:t26",
+            "result_sha256": "9d5fce30b4b2e5a88eaa4020753c0a4e768f3538bac83d69c4eacdca2ef8f35a",
+            "tool": "canon"
+          }
+        ],
+        "text": "VAR-subnatid1 is survey-anchored 'code - label' string; use coded Changwat (province) column (05:t25) for engine-built code-label string per canon (05:t26)."
+      },
+      "missing_map": {
+        "null": ".c"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "cwt",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-subnatid1"
+    },
+    {
+      "binding_id": "B-subnatidsurvey",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.cwt",
+              "ses54_user_rec02.area",
+              "ses54_user_rec02.reg"
+            ],
+            "call": "05:t25",
+            "result_sha256": "c56a17c069fbc66ff692266ae72fd377ebf44e533a60a084b13f6cfdebb32ce2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-subnatidsurvey"
+            ],
+            "call": "05:t27",
+            "result_sha256": "0bc73e353e9d91b0cb4cb61c0886b2f6583a2fef522b71f9faa010bc87938470",
+            "tool": "canon"
+          }
+        ],
+        "text": "Survey has Changwat (province) as lowest available admin id; bind same coded column used for subnatid1 (05:t25) as subnatidsurvey per canon (05:t27)."
+      },
+      "missing_map": {
+        "null": ".a"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "cwt",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-subnatidsurvey"
+    },
+    {
+      "binding_id": "B-urban",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.cwt",
+              "ses54_user_rec02.area",
+              "ses54_user_rec02.reg"
+            ],
+            "call": "05:t25",
+            "result_sha256": "c56a17c069fbc66ff692266ae72fd377ebf44e533a60a084b13f6cfdebb32ce2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-urban"
+            ],
+            "call": "05:t28",
+            "result_sha256": "582d237c3a5d3f083f54cef5fe12e52e84d188179b063f5e4a5fed4ab072474b",
+            "tool": "canon"
+          }
+        ],
+        "text": "ses54_user_rec02.area codes: 1=Municipal, 2=Non-municipal (05:t25); treated as Urban vs Rural for VAR-urban (05:t28)."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "raw_value": "area",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-urban",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-age",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM02",
+              "ses54_user_rec02.HM03",
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10"
+            ],
+            "call": "06:t1",
+            "part": "domain",
+            "result_sha256": "45f24ef2605e73e5266d387270746e76fc3d0420f77b5b17691374fc9208009b",
+            "tool": "column"
+          }
+        ],
+        "text": "06:t1#domain"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "HM04",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-age"
+    },
+    {
+      "binding_id": "B-childyr",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10",
+              "ses54_user_rec02.HM11",
+              "ses54_user_rec02.HM12",
+              "ses54_user_rec02.HM13",
+              "ses54_user_rec02.HM14",
+              "ses54_user_rec02.HM15",
+              "ses54_user_rec02.HM16",
+              "ses54_user_rec02.HM17",
+              "ses54_user_rec02.HM18",
+              "ses54_user_rec02.HM19",
+              "ses54_user_rec02.HM20",
+              "ses54_user_rec02.HM21"
+            ],
+            "call": "06:t22",
+            "part": "authored",
+            "result_sha256": "f800bea20eaa5fbc9b4ba19890d208d34db91b5deb58645f8cd762ddfbe8477d",
+            "tool": "onset"
+          }
+        ],
+        "text": "06:t22#authored"
+      },
+      "missing_map": {
+        "null": ".c",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "__derived.childyr__",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-childyr"
+    },
+    {
+      "binding_id": "B-male",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM02",
+              "ses54_user_rec02.HM03",
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10"
+            ],
+            "call": "06:t1",
+            "part": "codes",
+            "result_sha256": "45f24ef2605e73e5266d387270746e76fc3d0420f77b5b17691374fc9208009b",
+            "tool": "column"
+          }
+        ],
+        "text": "06:t1#codes"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "HM03",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-male",
+      "value_map": {
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "binding_id": "B-marital",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM02",
+              "ses54_user_rec02.HM03",
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10"
+            ],
+            "call": "06:t1",
+            "part": "codes",
+            "result_sha256": "45f24ef2605e73e5266d387270746e76fc3d0420f77b5b17691374fc9208009b",
+            "tool": "column"
+          }
+        ],
+        "text": "06:t1#codes"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "HM10",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-marital",
+      "value_map": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 3,
+        "5": 3,
+        "6": 2
+      }
+    },
+    {
+      "binding_id": "B-relationcs",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM02",
+              "ses54_user_rec02.HM03",
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10"
+            ],
+            "call": "06:t1",
+            "part": "codes",
+            "result_sha256": "45f24ef2605e73e5266d387270746e76fc3d0420f77b5b17691374fc9208009b",
+            "tool": "column"
+          }
+        ],
+        "text": "06:t1#codes"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "HM02",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-relationcs"
+    },
+    {
+      "binding_id": "B-relationharm",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.HM02",
+              "ses54_user_rec02.HM03",
+              "ses54_user_rec02.HM04",
+              "ses54_user_rec02.HM10"
+            ],
+            "call": "06:t1",
+            "part": "codes",
+            "result_sha256": "45f24ef2605e73e5266d387270746e76fc3d0420f77b5b17691374fc9208009b",
+            "tool": "column"
+          }
+        ],
+        "text": "06:t1#codes"
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".o"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "HM02",
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-relationharm",
+      "value_map": {
+        "0": 6,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 5,
+        "6": 5,
+        "7": 4,
+        "8": 5,
+        "9": 6
+      }
+    }
+  ],
+  "correspondence": {
+    "geography": {
+      "column": "ses54_user_rec02.cwt",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec02.cwt",
+              "ses54_user_rec02.area",
+              "ses54_user_rec02.reg"
+            ],
+            "call": "05:t25",
+            "result_sha256": "c56a17c069fbc66ff692266ae72fd377ebf44e533a60a084b13f6cfdebb32ce2",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "ses54_user_rec02.cwt"
+            ],
+            "call": "05:t33",
+            "result_sha256": "0b869c80850223c7530b66b826a9487af08ca76bdc4494576a2207231bf273e2",
+            "tool": "codes"
+          }
+        ],
+        "text": "05:t25 (ses54_user_rec02.cwt Changwat/province codes with labels) + 05:t33 (full cwt code list); brief notes THA 2011 geography has no national-standard categories in this domain."
+      },
+      "links": {
+        "10": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "11": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "12": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "13": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "14": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "15": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "16": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "17": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "18": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "19": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "20": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "21": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "22": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "23": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "24": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "25": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "26": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "27": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "30": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "31": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "32": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "33": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "34": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "35": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "36": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "37": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "39": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "40": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "41": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "42": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "43": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "44": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "45": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "46": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "47": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "48": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "49": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "50": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "51": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "52": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "53": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "54": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "55": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "56": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "57": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "58": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "60": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "61": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "62": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "63": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "64": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "65": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "66": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "67": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "70": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "71": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "72": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "73": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "74": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "75": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "76": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "77": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "80": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "81": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "82": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "83": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "84": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "85": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "86": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "90": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "91": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "92": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "93": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "94": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "95": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        },
+        "96": {
+          "kind": "no_fitting_category",
+          "reason": "THA 2011 geography domain has no national-standard categories in this canon; Changwat (province) code cannot be linked to a national category id."
+        }
+      }
+    }
+  },
+  "coverage": [
+    {
+      "kind": "searched_not_found",
+      "reason": "No interview/enumeration year variable found: search in column names/labels/questions/codes for year/interview/enumeration/date and reviewed ses54_user_rec02 column list; only enumeration month (A01) and weight (A52) present among matches [t3,t5].",
+      "searches": [
+        {
+          "in": "whole survey columns via search tool",
+          "terms": "year interview enumeration date"
+        },
+        {
+          "in": "ses54_user_rec02",
+          "terms": "columns ses54_user_rec02"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-intyear"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No PSU/cluster identifier column found in survey tables after searching for psu/cluster/enumeration area terms; rec01 geography fields are cwt/reg/area only (t18).",
+      "searches": [
+        {
+          "in": "all tables (search)",
+          "terms": "psu"
+        },
+        {
+          "in": "all tables (search)",
+          "terms": "cluster"
+        },
+        {
+          "in": "all tables (search regex)",
+          "terms": "ea|enumeration"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-psu"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No strata/stratum variable found in survey tables after searching for strata/stratum/sample design terms; only geography fields present are cwt/reg/area (t18,t25).",
+      "searches": [
+        {
+          "in": "all tables (search)",
+          "terms": "strata"
+        },
+        {
+          "in": "all tables (search regex)",
+          "terms": "strat|psu|clust"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-strata"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No second-level admin identifier (e.g., district/amphoe/tambon) column found; only Changwat (province) and Region present (t25,t11).",
+      "searches": [
+        {
+          "in": "all tables (search)",
+          "terms": "district"
+        },
+        {
+          "in": "all tables (search)",
+          "terms": "tambon"
+        },
+        {
+          "in": "all tables (search)",
+          "terms": "amp"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-subnatid2"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No third-level admin identifier column found beyond Changwat (province) and Region (t25,t11).",
+      "searches": [
+        {
+          "in": "all tables (search)",
+          "terms": "district"
+        },
+        {
+          "in": "all tables (search)",
+          "terms": "tambon"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No fourth-level/lowest admin identifier column found beyond Changwat (province) and Region (t25,t11).",
+      "searches": [
+        {
+          "in": "all tables (search)",
+          "terms": "village"
+        },
+        {
+          "in": "all tables (search)",
+          "terms": "tambon"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "VAR-subnatid1prev is derived from VAR-geocode via the country crosswalk (canon t31). This survey/canon has no national-standard geography categories for correspondence linking, so VAR-geocode cannot be resolved to a crosswalk code; therefore prior-boundary subnatid*_prev cannot be produced in this spec.",
+      "status": "absent",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "VAR-subnatid2prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev.",
+      "status": "absent",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "VAR-subnatid3prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev.",
+      "status": "absent",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "derivable_not_built",
+      "needs": [
+        "VAR-geocode"
+      ],
+      "reason": "VAR-subnatid4prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev.",
+      "status": "absent",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "t1 shows continuous age in years (HM04) and no survey-defined age-band variable; per VAR-agecat canon, it is only used when continuous age is unavailable.",
+      "status": "absent",
+      "variable": "VAR-agecat"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No child age-in-months / DOB-based month-age variable found; only HM04 age in years is present.",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t2,t4,t6,t11,t13,t21)",
+          "terms": "age in months|months of age|DOB|date of birth"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-childmth"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "disability|difficulty|communicat"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-communicationdisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "concentrat|remember|difficulty"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-concentrationdisorder"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+          "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-educat4"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+          "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-educat5"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey.",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+          "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-educat7"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No years-of-education variable located in any table (no identifiable education section variables found).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t11,t12)",
+          "terms": "years of education|educy|school years"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-educy"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No 'ever attended school' variable located in any table (no identifiable education section variables found).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t4,t13)",
+          "terms": "ever attend|attended school|schooling"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-everattend"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "see|eye|difficulty seeing|blind"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-eyedisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "hear|hearing|deaf"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-heardisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No household member language variable located (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t5)",
+          "terms": "language|mother tongue|spoken"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-language"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No literacy variable (read/write) located (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t2)",
+          "terms": "literacy|read|write"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-literacy"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "Survey materials in this run do not provide the questionnaire universe for the education section, and no identifiable education section variables were found to infer onset.",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t11,t13)",
+          "terms": "minimum age for education|education section age|mineducatage"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-mineducatage"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No variable indicating primary completion located (no identifiable education section variables found).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t21)",
+          "terms": "primary completed|finished primary|primary graduation"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-primarycomp"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No current school enrollment variable located (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t4,t7,t13)",
+          "terms": "currently attending school|enrolled|in school"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-school"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "self care|wash|dress|difficulty"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-selfcaredisability"
+    },
+    {
+      "kind": "searched_not_found",
+      "reason": "No disability functioning questions/variables located in any table (search returned none).",
+      "searches": [
+        {
+          "in": "all tables via search(name,label,question,codes) (t6)",
+          "terms": "walk|climb|mobility|difficulty walking"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-walkdisability"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "THA",
+      "year": 2011
+    },
+    "country_parameters": [
+      "PARAM-DEM-MIN-MARRIAGE-AGE",
+      "PARAM-EDU-LEVEL-CROSSWALK",
+      "PARAM-EDU-MIN-EDUCATION-AGE",
+      "PARAM-GEO-GMD-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-DEM",
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "output": {
+    "grain": [
+      "NEW_HH_N",
+      "HM01"
+    ],
+    "roster": "ses54_user_rec02",
+    "unit_of_analysis": "individual"
+  },
+  "prelude": [
+    {
+      "code_ref": "MOD-DEM-childyr_mask.py",
+      "id": "MOD-DEM-childyr_mask",
+      "invariants": [
+        "__derived.childyr__ is HM04 where HM04<5, else missing"
+      ],
+      "produces": [
+        "__derived.childyr__"
+      ],
+      "reads": [
+        "ses54_user_rec02"
+      ],
+      "reason": "VAR-childyr must be within 0–5 and only defined for children under 5; HM04 contains all ages 0–99 so we mask ages >=5 to missing before binding.",
+      "writes": [
+        "ses54_user_rec02"
+      ]
+    }
+  ],
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "ses54_user_rec01",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "3b41cc1c1132eb1463484ce156e62f04f480598abe0c4a8fe3d9b34c090a148c",
+        "source_file": "ses54_user_rec01.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "HM02": "numeric",
+          "HM03": "numeric",
+          "HM04": "numeric",
+          "HM10": "numeric",
+          "area": "numeric",
+          "cwt": "numeric"
+        },
+        "name": "ses54_user_rec02",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "2fb88ce0d2a7f0e9bac8967384a87ccac6ee5e9ae9bac2fcd5622569f1325be4",
+        "source_file": "ses54_user_rec02.dta"
+      },
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "A01": "numeric",
+          "A52": "numeric"
+        },
+        "name": "ses54_user_rec03",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "5277e812e3a97fd293ffe9535c852ab84dda23383650d8c5d8915a4c23c757e9",
+        "source_file": "ses54_user_rec03.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "ses54_user_rec13",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "db64c73dc0c2e5a917c9ca47292a4afef0baac77614227a9f44bf4023cc74353",
+        "source_file": "ses54_user_rec13.dta"
+      },
+      {
+        "injected": {
+          "key_map": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "key_map": {
+          "new_hh_n": "NEW_HH_N"
+        },
+        "name": "ses54_user_rec16",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "fcb590a169216faa6e14c33ba996a092b6061130baf65c3ff951fcbd9df6d734",
+        "source_file": "ses54_user_rec16.dta"
+      }
+    ]
+  },
+  "survey_id": "THA_2011_HSES",
+  "targets": [
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-subnatid1",
+    "VAR-subnatidsurvey",
+    "VAR-urban",
+    "VAR-age",
+    "VAR-childyr",
+    "VAR-male",
+    "VAR-marital",
+    "VAR-relationcs",
+    "VAR-relationharm"
+  ]
+}

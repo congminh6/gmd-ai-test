@@ -1,0 +1,453 @@
+{
+  "bindings": [
+    {
+      "binding_id": "B-hhid",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhid"
+    },
+    {
+      "binding_id": "B-hhid_orig",
+      "id_from_grain": "household",
+      "kind": "recode",
+      "note": "engine-built: the household id from output.grain, its household keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-hhidorig"
+    },
+    {
+      "binding_id": "B-pid",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pid"
+    },
+    {
+      "binding_id": "B-pid_orig",
+      "id_from_grain": "person",
+      "kind": "recode",
+      "note": "engine-built: the person id from output.grain, its person keys combined — not authored",
+      "register": "resolved",
+      "target": "VAR-pidorig"
+    },
+    {
+      "binding_id": "B-countrycode",
+      "constant_source": {
+        "survey_identity": "iso3"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-intyear",
+              "VAR-weight",
+              "VAR-countrycode",
+              "VAR-year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "a6149452e07b6289bc7647429d203a1bf73c8a5a9edb2ed03b9a0d45bbe7e2ea",
+            "tool": "canon"
+          }
+        ],
+        "text": "countrycode is survey scalar from run identity (ISO3), per contract. Put on person roster table to cover full output grain. Evidence: canon VAR-countrycode [04:t2]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-countrycode"
+    },
+    {
+      "binding_id": "B-int_month",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec01.A01",
+              "ses54_user_rec01.A52"
+            ],
+            "call": "04:t1",
+            "result_sha256": "8d2ff236c4f4271da1417d7afad6687aced890761c259c71db10cadcdf9176e8",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "ses54_user_rec01"
+            ],
+            "call": "04:t3",
+            "result_sha256": "8685c7afe90ba569e8719db35338659c283c9c10de1be9cc5a223962e87f4978",
+            "tool": "columns"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-intyear",
+              "VAR-weight",
+              "VAR-countrycode",
+              "VAR-year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "a6149452e07b6289bc7647429d203a1bf73c8a5a9edb2ed03b9a0d45bbe7e2ea",
+            "tool": "canon"
+          }
+        ],
+        "text": "ses54_user_rec01.A01 label 'Enumeration Month', numeric 1-12 complete; matches VAR-intmonth codes 1=Jan..12=Dec. Evidence: A01 card [04:t1], table columns showing neighbours [04:t3], canon VAR-intmonth [04:t2]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "A01",
+        "unit_keys": [
+          "NEW_HH_N"
+        ]
+      },
+      "table": "ses54_user_rec01",
+      "target": "VAR-intmonth"
+    },
+    {
+      "binding_id": "B-weight",
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "ses54_user_rec01.A01",
+              "ses54_user_rec01.A52"
+            ],
+            "call": "04:t1",
+            "result_sha256": "8d2ff236c4f4271da1417d7afad6687aced890761c259c71db10cadcdf9176e8",
+            "tool": "column"
+          },
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-intyear",
+              "VAR-weight",
+              "VAR-countrycode",
+              "VAR-year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "a6149452e07b6289bc7647429d203a1bf73c8a5a9edb2ed03b9a0d45bbe7e2ea",
+            "tool": "canon"
+          }
+        ],
+        "text": "ses54_user_rec01.A52 labeled 'Household weight', continuous positive numeric. Evidence: A52 card [04:t1], canon VAR-weight [04:t2]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "passthrough": true,
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "raw_value": "A52",
+        "unit_keys": [
+          "NEW_HH_N"
+        ]
+      },
+      "table": "ses54_user_rec01",
+      "target": "VAR-weight"
+    },
+    {
+      "binding_id": "B-year",
+      "constant_source": {
+        "survey_identity": "year"
+      },
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-intmonth",
+              "VAR-intyear",
+              "VAR-weight",
+              "VAR-countrycode",
+              "VAR-year"
+            ],
+            "call": "04:t2",
+            "result_sha256": "a6149452e07b6289bc7647429d203a1bf73c8a5a9edb2ed03b9a0d45bbe7e2ea",
+            "tool": "canon"
+          }
+        ],
+        "text": "year is survey scalar from run identity (survey start year), per contract. Put on person roster table to cover full output grain. Evidence: canon VAR-year [04:t2]"
+      },
+      "missing_map": {
+        "null": ".b",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "resolved",
+      "roles": {
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-year"
+    },
+    {
+      "binding_id": "B-gaul_adm1_code",
+      "constant": 1,
+      "evidence": {
+        "cites": [
+          {
+            "args": [
+              "VAR-gauladm1code"
+            ],
+            "call": "06:t26",
+            "part": "binding",
+            "result_sha256": "211536ec2f98333becab4437cf8c965828889f7c6bb41f57d9b1eedbaa3c5a94",
+            "tool": "current"
+          }
+        ],
+        "text": "06:t26#binding shows prior gauladm1code binding has constant=1 and lacks table/unit_keys; this update adds table=ses54_user_rec02 and roles.unit_keys=[NEW_HH_N, HM01] as required by validate when no raw_value is present."
+      },
+      "missing_map": {
+        "null": ".a",
+        "unmapped": ".b"
+      },
+      "predicate": "all",
+      "register": "assumed",
+      "roles": {
+        "unit_keys": [
+          "NEW_HH_N",
+          "HM01"
+        ]
+      },
+      "table": "ses54_user_rec02",
+      "target": "VAR-gauladm1code"
+    }
+  ],
+  "coverage": [
+    {
+      "kind": "searched_not_found",
+      "reason": "Searched survey for interview/enumeration year/date variables; only 'Enumeration Month' (A01) found and no interview-year/date field present in table indexes.",
+      "searches": [
+        {
+          "in": "survey (search name/label/question)",
+          "terms": "year enumeration interview date intyear A02"
+        },
+        {
+          "in": "survey (regex search in codes/labels/names/questions)",
+          "terms": "2018|2019|2020|2021|2022|2023|2024"
+        }
+      ],
+      "status": "absent",
+      "variable": "VAR-intyear"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-gauladm2code"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-geocode"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-psu"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-strata"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid1"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid1prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid2"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid2prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid3"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid3prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid4"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatid4prev"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-subnatidsurvey"
+    },
+    {
+      "kind": "not_collected_by_design",
+      "reason": "x",
+      "status": "absent",
+      "variable": "VAR-urban"
+    }
+  ],
+  "cvs_ref": {
+    "country_layer": {
+      "iso3": "THA",
+      "year": 2011
+    },
+    "country_parameters": [
+      "PARAM-GEO-GMD-CROSSWALK"
+    ],
+    "schema_version": "0.1"
+  },
+  "hspec_version": "0.1",
+  "modules": [
+    "MOD-GEO",
+    "MOD-IDN"
+  ],
+  "output": {
+    "grain": [
+      "NEW_HH_N",
+      "HM01"
+    ],
+    "roster": "ses54_user_rec02",
+    "unit_of_analysis": "individual"
+  },
+  "source_inventory": {
+    "tables": [
+      {
+        "injected": {
+          "kinds": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "kinds": {
+          "A01": "numeric",
+          "A52": "numeric"
+        },
+        "name": "ses54_user_rec01",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "3b41cc1c1132eb1463484ce156e62f04f480598abe0c4a8fe3d9b34c090a148c",
+        "source_file": "ses54_user_rec01.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "ses54_user_rec02",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "2fb88ce0d2a7f0e9bac8967384a87ccac6ee5e9ae9bac2fcd5622569f1325be4",
+        "source_file": "ses54_user_rec02.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "ses54_user_rec03",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "5277e812e3a97fd293ffe9535c852ab84dda23383650d8c5d8915a4c23c757e9",
+        "source_file": "ses54_user_rec03.dta"
+      },
+      {
+        "injected": {
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "name": "ses54_user_rec13",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "db64c73dc0c2e5a917c9ca47292a4afef0baac77614227a9f44bf4023cc74353",
+        "source_file": "ses54_user_rec13.dta"
+      },
+      {
+        "injected": {
+          "key_map": "data_scan",
+          "sha256": "data_scan",
+          "source_file": "data_scan"
+        },
+        "key_map": {
+          "new_hh_n": "NEW_HH_N"
+        },
+        "name": "ses54_user_rec16",
+        "provenance": {
+          "declared_by": "overlay",
+          "verdict": "raw"
+        },
+        "sha256": "fcb590a169216faa6e14c33ba996a092b6061130baf65c3ff951fcbd9df6d734",
+        "source_file": "ses54_user_rec16.dta"
+      }
+    ]
+  },
+  "survey_id": "THA_2011_HSES",
+  "targets": [
+    "VAR-hhid",
+    "VAR-hhidorig",
+    "VAR-pid",
+    "VAR-pidorig",
+    "VAR-countrycode",
+    "VAR-intmonth",
+    "VAR-weight",
+    "VAR-year",
+    "VAR-gauladm1code"
+  ]
+}

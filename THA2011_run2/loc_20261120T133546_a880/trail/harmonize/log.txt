@@ -1,0 +1,80 @@
+# harmonize THA_2011_HSES @ 2026-11-20T13:35:52+00:00
+  data=C:\temp\test\surveys\THA_2011_HSES\Data  modules=['MOD-IDN', 'MOD-GEO', 'MOD-DEM']  direct=True
+  profile review: approved by mn (profile d9d616807acd)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+eaa25bb9; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'THA_2011_HSES/Data': the data is unversioned
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473
+    input profile/instruments.json  sha256=43466537d9b30766cec681be38b9babc457b749aa9e8e24746c9ea7d1a348806
+    input profile/key_checks.json  sha256=a7cc7c22ebe3f627f3caf0fae28676e50e1c05e8f512f207b5df6f0741ff2b1b
+    input profile/overlay.json  sha256=833d2d5146fd05c917adb11d6e1b1ce396e3051ecf66b77f06bf99e1c6053323
+    profile d9d616807acda67bae3f58e0febd8bb5e23dfed0d49a66444c4f24efb076fa77 — approved by mn at 2026-11-20T13:35:52+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument 'args_note'
+    received trail\harmonize\ai_responses\01.json via submit (2576 bytes)
+    notes: Evidence: intmonth/weight from column cards t9 and t8; absence of year/date from searches t5,t6,t4; weight/month presence across modules from searches t2,t3 and index t1.
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    the framework refused a `search` call before the tool ran: function_specs.<locals>.args_func() got an unexpected keyword argument 'in'
+    received trail\harmonize\ai_responses\02.json via submit (2454 bytes)
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (2415 bytes)
+    notes: Most roster variables in ses54_user_rec02 have empty labels/questions; only HM02/HM03/HM10 expose value labels in scan, so education/disability/language/literacy/school could not be confidently routed from the available metadata.
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (2880 bytes)
+    notes: Explicit tables+unit_keys added per validate; intyear not found in any table.
+    reconciled binding_id 'B-intmonth' → 'B-int_month' (by target VAR-intmonth)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\05_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (2054 bytes)
+    reconciled binding_id 'B-test' → 'B-gaul_adm1_code' (by target VAR-gauladm1code)
+    fixable (attempt 1/3) — re-asking with 2 finding(s): 1 authored; 2 finding(s) on this module
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\06_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (659 bytes)
+    delta merged onto the previous answer: 1 binding(s), 14 absent, 0 prelude(s)
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\07_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (797 bytes)
+    declined — the worker declined: Cannot author MOD-DEM education correspondence or disability/literacy/school bindings: the survey extract lacks question text and value labels for candidate education/disability/literacy columns, so codes cannot be grounded or linked to THA national education categories without guessing. (needs: Column cards (or a codebook) that include question text + value labels for the education attainment/completion variable(s) used to derive educat7/educat5/educat4/educy/primarycomp and the universe (min age) of that section.; Column cards (or a codebook) with value labels for any disability (WG difficulty) items, literacy, school attendance/enrollment, and language variables if present.)
+    MOD-DEM: findings left after the retries — settled at the end of Phase B
+  [judge] review-prelude
+    no prelude code the model has not read
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        kind: ses54_user_rec01.A01: numeric
+        kind: ses54_user_rec01.A52: numeric
+        key-correspondence: ses54_user_rec16: {'new_hh_n': 'NEW_HH_N'}
+      VALID: hspec.json stamped (validator v2, 2026-11-20T13:48:45+00:00); coverage bound 9, documented 15
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      PASS — 128071 rows, 9 target(s); contract clean. Outputs in C:\Users\wb327173\.harmon\work\runs\loc_20261120T133546_a880\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb327173\.harmon\work\runs\loc_20261120T133546_a880\output\quality.json: 9 targets; 1/18 checks flagged; 0 universe cells; no reference
+  CHECK F: ok — 9 targets; 1/18 checks flagged; 0 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==

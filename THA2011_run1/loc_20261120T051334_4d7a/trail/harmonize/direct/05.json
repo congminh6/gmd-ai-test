@@ -1,0 +1,22 @@
+{
+ "task_type": "author_bindings",
+ "scope_id": "MOD-GEO",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 162.2,
+ "usage": {
+  "input_token_count": 339833,
+  "output_token_count": 18378,
+  "total_token_count": 358211,
+  "reasoning_output_token_count": 3028
+ },
+ "tool_calls": 36,
+ "submitted": true,
+ "final_text": "Submitted `05-author_bindings-MOD-GEO` with:\n\n- Geography correspondence block for `ses54_user_rec02.cwt` (all 76 Changwat codes linked as `no_fitting_category` since the THA 2011 geography domain has no national-standard categories in this canon).\n- Bindings:\n  - `VAR-subnatid1` passthrough from `cwt` (table `ses54_user_rec02`)\n  - `VAR-subnatidsurvey` passthrough from `cwt` (table `ses54_user_rec02`)\n  - `VAR-urban` value_map from `area` (1=Municipal→1 Urban, 2=Non-municipal→0 Rural)\n  - `VAR-geocode`, `VAR-gauladm1code`, `VAR-gauladm2code` via `value_map_source: {correspondence: geography}`\n- Absences documented for `VAR-psu`, `VAR-strata`, `VAR-subnatid2/3/4`, and `VAR-subnatid1prev/2prev/3prev/4prev` (derivable_not_built from `VAR-geocode`).",
+ "said": [
+  "Submitted `05-author_bindings-MOD-GEO` with:\n\n- Geography correspondence block for `ses54_user_rec02.cwt` (all 76 Changwat codes linked as `no_fitting_category` since the THA 2011 geography domain has no national-standard categories in this canon).\n- Bindings:\n  - `VAR-subnatid1` passthrough from `cwt` (table `ses54_user_rec02`)\n  - `VAR-subnatidsurvey` passthrough from `cwt` (table `ses54_user_rec02`)\n  - `VAR-urban` value_map from `area` (1=Municipal→1 Urban, 2=Non-municipal→0 Rural)\n  - `VAR-geocode`, `VAR-gauladm1code`, `VAR-gauladm2code` via `value_map_source: {correspondence: geography}`\n- Absences documented for `VAR-psu`, `VAR-strata`, `VAR-subnatid2/3/4`, and `VAR-subnatid1prev/2prev/3prev/4prev` (derivable_not_built from `VAR-geocode`)."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\05.jsonl"
+}

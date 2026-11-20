@@ -1,0 +1,17 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "steps": {
+    "A.from-intake": "ok(profile\\data_scan.json, profile\\instruments.json)",
+    "A.questionnaire": "ok(0 questionnaire scan(s) -> profile\\questionnaire)",
+    "A.conformance": "ok(no source standard applies)",
+    "A.merge": "ok(overlay -> profile\\overlay.json; residual (advisory): 215 still-missing (codes_missing=14, grain=4, label_empty=197); orphan questions: 0; code conflicts: 0)",
+    "A.prefill-file-links": "ok(no questionnaire - no association needed)",
+    "A.associate": "ok(no questionnaire - skipped)",
+    "A.describe": "ok(no questionnaire - skipped)",
+    "A.author-overlay": "ok(author_overlay: 5 tables, 12 fields, grain; re-merged)",
+    "A.heal": "ok(off (--heal 0))",
+    "A.check-keys": "ok(0 key(s), 1 grain key(s) checked -> profile\\key_checks.json)",
+    "A.check": "ok"
+  },
+  "updated": "2026-11-20T13:35:20+00:00"
+}

@@ -1,0 +1,10 @@
+{
+ "declined": {
+  "reason": "Cannot author MOD-DEM education correspondence or disability/literacy/school bindings: the survey extract lacks question text and value labels for candidate education/disability/literacy columns, so codes cannot be grounded or linked to THA national education categories without guessing.",
+  "needs": [
+   "Column cards (or a codebook) that include question text + value labels for the education attainment/completion variable(s) used to derive educat7/educat5/educat4/educy/primarycomp and the universe (min age) of that section.",
+   "Column cards (or a codebook) with value labels for any disability (WG difficulty) items, literacy, school attendance/enrollment, and language variables if present."
+  ]
+ },
+ "request_id": "07-author_bindings-MOD-DEM"
+}

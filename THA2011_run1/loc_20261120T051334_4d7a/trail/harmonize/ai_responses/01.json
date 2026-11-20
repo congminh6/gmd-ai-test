@@ -1,0 +1,68 @@
+{
+ "request_id": "01-locate_sources-MOD-IDN",
+ "routing": {
+  "VAR-intmonth": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "A01",
+    "why": "Column labeled Enumeration Month; plausible interview/enumeration month (1-12)."
+   },
+   {
+    "survey_module": "ses54_user_rec03",
+    "column": "A01",
+    "why": "Column labeled Enumeration Month; plausible interview/enumeration month (1-12)."
+   },
+   {
+    "survey_module": "ses54_user_rec13",
+    "column": "A01",
+    "why": "Column labeled Enumeration Month; plausible interview/enumeration month (1-12)."
+   },
+   {
+    "survey_module": "ses54_user_rec16",
+    "column": "a01",
+    "why": "Column labeled enumeration month; plausible interview/enumeration month (1-12)."
+   }
+  ],
+  "VAR-weight": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "A52",
+    "why": "Column labeled Household weight; likely household sampling weight."
+   },
+   {
+    "survey_module": "ses54_user_rec03",
+    "column": "A52",
+    "why": "Column labeled Household weight; likely household sampling weight."
+   },
+   {
+    "survey_module": "ses54_user_rec13",
+    "column": "A52",
+    "why": "Column labeled Household weight; likely household sampling weight."
+   },
+   {
+    "survey_module": "ses54_user_rec16",
+    "column": "a52",
+    "why": "Column labeled household weight; likely household sampling weight."
+   }
+  ],
+  "VAR-countrycode": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "why": "No obvious country/ISO3 column found in the survey index; likely a constant from survey identity/metadata (Indonesia)."
+   }
+  ],
+  "VAR-intyear": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "why": "No obvious interview/survey year column found by label/name search; may need to be authored from survey identity/metadata or derived from interview date if present elsewhere."
+   }
+  ],
+  "VAR-year": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "why": "No obvious survey year/start year column found; likely a constant from survey identity/metadata (survey start year)."
+   }
+  ]
+ },
+ "notes": "Month and weight are explicit (A01/A52). No columns surfaced for ISO3 or year/intyear via index search; may be constants from survey identity."
+}

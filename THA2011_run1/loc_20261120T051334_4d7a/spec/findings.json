@@ -1,0 +1,29 @@
+{
+ "findings": [
+  {
+   "id": "prelude.concern:VAR-childyr",
+   "kind": "prelude.concern",
+   "area": "spec",
+   "nature": "note",
+   "severity": "low",
+   "subject": "VAR-childyr",
+   "title": "`VAR-childyr` reads prelude `MOD-DEM-childyr_mask`: The masking only applies `age < 5`; it does not guard against sentinel/invalid numeric ages (e.g., negative sentinel codes) that would still satisfy `<5` and be written into `__derived.childyr__`, violating the intended invariant and VAR-childyr range/universe. Consider explicitly treating sentinel/invalid values as missing (e.g., replace known sentinel(s) with NaN and also require `0 <= age < 5`). Evidence: prelude code in t8#prelude and target contract in t6.",
+   "consequence": "",
+   "fix": "",
+   "by": "review_prelude",
+   "detail": "",
+   "evidence": [],
+   "group": "",
+   "source": "review",
+   "message": "$.prelude MOD-DEM-childyr_mask target=VAR-childyr: the prelude review: The masking only applies `age < 5`; it does not guard against sentinel/invalid numeric ages (e.g., negative sentinel codes) that would still satisfy `<5` and be written into `__derived.childyr__`, violating the intended invariant and VAR-childyr range/universe. Consider explicitly treating sentinel/invalid values as missing (e.g., replace known sentinel(s) with NaN and also require `0 <= age < 5`). Evidence: prelude code in t8#prelude and target contract in t6.",
+   "target": "VAR-childyr",
+   "binding_id": null,
+   "prelude_id": "MOD-DEM-childyr_mask",
+   "path": null,
+   "index": null,
+   "spec_sha256": "1af95eab9521c7b994d7ad7ce75e932b58dfb87b2f1c0fa57402beb89dc6fad2",
+   "target_sha256": "4658354e2a66f3c1ab3c0b97d1a8f19e640982d28e07040beebcb025daf0a11d",
+   "reason": null
+  }
+ ]
+}

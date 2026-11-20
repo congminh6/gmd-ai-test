@@ -1,0 +1,9 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "steps": {
+    "I.scan-data": "ok(5 table(s) -> profile\\data_scan.json \u00b7 data unversioned)",
+    "I.scan-docs": "ok(5 file(s): pdf_mixed=3, pdf_text=1, xlsx=1 -> profile\\instruments.json)",
+    "I.check": "ok"
+  },
+  "updated": "2026-11-20T13:33:46+00:00"
+}

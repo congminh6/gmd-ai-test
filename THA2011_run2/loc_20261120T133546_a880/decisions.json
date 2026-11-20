@@ -1,0 +1,14 @@
+{
+ "decisions": [
+  {
+   "review": "profile",
+   "act": "approve",
+   "by": "mn",
+   "at": "2026-11-20T13:35:52+00:00",
+   "binds": {
+    "profile_sha": "d9d616807acda67bae3f58e0febd8bb5e23dfed0d49a66444c4f24efb076fa77"
+   },
+   "note": "approved in the notebook"
+  }
+ ]
+}

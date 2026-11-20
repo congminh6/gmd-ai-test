@@ -1,0 +1,204 @@
+{
+  "grain": {
+    "household_key": "idmen",
+    "person_key": [
+      "idmen",
+      "memberno"
+    ],
+    "roster": "indata",
+    "weight": "hhweight"
+  },
+  "links": [],
+  "overlay_version": "0.1",
+  "survey": "CAF_2008_ECASEB",
+  "tables": {
+    "carquibbconso": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "nso_derived"
+      }
+    },
+    "carquibwelfare": {
+      "fields": {
+        "hgse": {
+          "label": "Groupe socioéconomiue du CM",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Salarié administration",
+            "2": "Salarié entreprise",
+            "3": "Autre dépendant",
+            "4": "Employeur",
+            "5": "Compte propre agricole",
+            "6": "Compte propre non agricole",
+            "7": "Chômeur",
+            "8": "Inactif/Trop jeune"
+          }
+        },
+        "region": {
+          "label": "région",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Plateaux",
+            "2": "Equateur",
+            "3": "Yadé",
+            "4": "Kagas",
+            "5": "Fertit",
+            "6": "Oubangui",
+            "7": "Bangui"
+          }
+        },
+        "strate": {
+          "label": "Strate",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Bangui",
+            "2": "Autre urbain",
+            "3": "Rural"
+          }
+        },
+        "urru": {
+          "label": "Milieu de résidence",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Urbain",
+            "2": "Rural"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "nso_derived"
+      }
+    },
+    "hhdata": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "hhevdata": {
+      "fields": {
+        "hhweight": {
+          "label": "Pondération définitive",
+          "source": "author",
+          "status": "resolved"
+        },
+        "urru": {
+          "label": "Milieu de résidence",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Urbain",
+            "2": "Rural"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "hhstdata": {
+      "fields": {
+        "hhweight": {
+          "label": "Pondération définitive",
+          "source": "author",
+          "status": "resolved"
+        },
+        "urru": {
+          "label": "Milieu de résidence",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Urbain",
+            "2": "Rural"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "indata": {
+      "fields": {
+        "urru": {
+          "label": "Milieu de résidence",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Urbain",
+            "2": "Rural"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectj_biend": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectk_autoc": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectk_cader": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectl_depc": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectm_depmf": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectn_revag": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "sectn_revna": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "secto_trans": {
+      "fields": {},
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    }
+  },
+  "year": 2008
+}

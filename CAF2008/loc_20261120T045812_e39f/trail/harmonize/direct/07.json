@@ -1,0 +1,22 @@
+{
+ "task_type": "review_prelude",
+ "scope_id": "survey",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 12.3,
+ "usage": {
+  "input_token_count": 24124,
+  "output_token_count": 417,
+  "total_token_count": 24541,
+  "reasoning_output_token_count": 313
+ },
+ "tool_calls": 2,
+ "submitted": true,
+ "final_text": "Submitted review for `MOD-IDN-parse_intdate` with verdict **ok**.",
+ "said": [
+  "Submitted review for `MOD-IDN-parse_intdate` with verdict **ok**."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\07.jsonl"
+}

@@ -1,0 +1,85 @@
+{
+ "job_id": "loc_20261120T051155_1f70",
+ "flow": "intake",
+ "survey_id": "THA_2011_HSES",
+ "spec": {
+  "flow": "intake",
+  "survey_id": "THA_2011_HSES",
+  "country": "THA",
+  "year": 2011,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc"
+  },
+  "input_job": "",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T05:11:55+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051155_1f70",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "staged_now": true,
+ "updated": "2026-11-20T05:12:02+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 10,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc",
+   "ss_export": "surveys/THA_2011_HSES/ss",
+   "svis": "surveys/THA_2011_HSES/svis",
+   "reference": "surveys/THA_2011_HSES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "I.scan-data": "ok(5 table(s) -> profile\\data_scan.json · data unversioned)",
+  "I.scan-docs": "ok(5 file(s): pdf_mixed=3, pdf_text=1, xlsx=1 -> profile\\instruments.json)",
+  "I.check": "ok"
+ },
+ "stopped_at": null,
+ "log_tail": [
+  "# intake THA_2011_HSES @ 2026-11-20T05:11:55+00:00",
+  "  data=C:\\temp\\test\\surveys\\THA_2011_HSES\\Data  modules=[]  direct=False",
+  "  identity: survey-harmonization local (testing — no sync stamp); canon none; data unversioned",
+  "  !! data version: no <survey>_v##_M folder in the data path 'THA_2011_HSES/Data': the data is unversioned",
+  "",
+  "== Phase I — intake ==",
+  "  [det] scan-data",
+  "      [1/5] Reading ses54_user_rec01.dta...",
+  "            profiling 42,083 rows x 100 columns (6 shared-name key candidates)...",
+  "      [2/5] Reading ses54_user_rec02.dta...",
+  "            profiling 128,071 rows x 47 columns (7 shared-name key candidates)...",
+  "      [3/5] Reading ses54_user_rec03.dta...",
+  "            profiling 42,083 rows x 51 columns (6 shared-name key candidates)...",
+  "      [4/5] Reading ses54_user_rec13.dta...",
+  "            profiling 34,845 rows x 21 columns (7 shared-name key candidates)...",
+  "      [5/5] Reading ses54_user_rec16.dta...",
+  "            profiling 42,083 rows x 42 columns (3 shared-name key candidates)...",
+  "      Key graph over 5 table(s)...",
+  "      note: pk_candidates_capped [ses54_user_rec01] — PK search considered the first 60 of 99 eligible columns",
+  "  [det] scan-docs",
+  "        probing Accompanying note SES2011 Data structure.xlsx...",
+  "        probing HSES 2011 Questionnaire_Expenditure.pdf...",
+  "        probing HSES 2011 Questionnaire_Income.pdf...",
+  "        probing แบบ สศส.2 (พิเศษ).pdf...",
+  "        probing แบบ สศส.3.pdf...",
+  "  CHECK I: ok — data scanned, documents routed",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-20T05:12:02+00:00"
+}

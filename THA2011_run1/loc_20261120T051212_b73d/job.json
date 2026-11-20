@@ -1,0 +1,173 @@
+{
+ "job_id": "loc_20261120T051212_b73d",
+ "flow": "scribe",
+ "survey_id": "THA_2011_HSES",
+ "spec": {
+  "flow": "scribe",
+  "survey_id": "THA_2011_HSES",
+  "country": "THA",
+  "year": 2011,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc"
+  },
+  "input_job": "loc_20261120T051155_1f70",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T05:12:12+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051212_b73d",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T051155_1f70",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "519b038148213891752b1f210781edd12a963dfa679acf386bac63196b218422",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-20T05:12:18+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 10,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc",
+   "ss_export": "surveys/THA_2011_HSES/ss",
+   "svis": "surveys/THA_2011_HSES/svis",
+   "reference": "surveys/THA_2011_HSES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "Accompanying note SES2011 Data structure.xlsx": "not read: a codebook, and no table of it could be read: no header naming the variable / label / values roles, and no column of names that are the data's columns (the model codebook reader is not built yet)",
+  "HSES 2011 Questionnaire_Expenditure.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "HSES 2011 Questionnaire_Income.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "แบบ สศส.2 (พิเศษ).pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "แบบ สศส.3.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "classify-.2",
+   "task": "classify-document",
+   "scope": "แบบ สศส.2 (พิเศษ).pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 3803,
+    "total_token_count": 3906,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 103,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  },
+  {
+   "request": "classify-.3",
+   "task": "classify-document",
+   "scope": "แบบ สศส.3.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 3742,
+    "total_token_count": 3871,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 129,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  },
+  {
+   "request": "classify-Accompanying_note_SES2011_Data_structure",
+   "task": "classify-document",
+   "scope": "Accompanying note SES2011 Data structure.xlsx",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2578,
+    "total_token_count": 2657,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 79,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  },
+  {
+   "request": "classify-HSES_2011_Questionnaire_Expenditure",
+   "task": "classify-document",
+   "scope": "HSES 2011 Questionnaire_Expenditure.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2192,
+    "total_token_count": 2348,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 156,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 76,
+    "openai.reasoning_tokens": 76
+   }
+  },
+  {
+   "request": "classify-HSES_2011_Questionnaire_Income",
+   "task": "classify-document",
+   "scope": "HSES 2011 Questionnaire_Income.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2146,
+    "total_token_count": 2256,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 110,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  }
+ ],
+ "total_tokens": 15038,
+ "log_tail": [
+  "2026-11-20T05:12:12+00:00 5 document(s) under 'THA_2011_HSES/Doc'; model on; deployment gpt-5.2",
+  "2026-11-20T05:12:12+00:00 Accompanying note SES2011 Data structure.xlsx: 2 block(s), 2 table(s), 0.1s",
+  "2026-11-20T05:12:12+00:00 classifying 5 document(s)",
+  "2026-11-20T05:12:18+00:00 Accompanying note SES2011 Data structure.xlsx: codebook (Thai) — The sample is a data-file structure/record layout listing record types and the fieldnames/variables included in each record (SPSS format) with observation counts.",
+  "2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Expenditure.pdf: codebook (English) — The sample mainly lists survey items as variables/fieldnames (e.g., A01, A02) in a table mapping questionnaire parts to data fields, which is characteristic of a data file layout/codebook rather than the full interview instrument.",
+  "2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Income.pdf: questionnaire (English) — The sample shows a survey instrument with numbered questions, answer categories, skip instructions, and spaces/tables for recording responses (with field codes like IW06, IA11 alongside the questions).",
+  "2026-11-20T05:12:18+00:00 แบบ สศส.2 (พิเศษ).pdf: codebook (Thai) — The sample is a structured list of data items with record/section references and item codes (e.g., A01, A02_1), describing variables/derived fields rather than presenting interview questions.",
+  "2026-11-20T05:12:18+00:00 แบบ สศส.3.pdf: questionnaire (Thai) — The sample contains survey form sections with numbered questions, response categories, and spaces/tables to record household and income/employment details, indicating it is the interview instrument.",
+  "2026-11-20T05:12:18+00:00 Accompanying note SES2011 Data structure.xlsx: not read: a codebook, and no table of it could be read: no header naming the variable / label / values roles, and no column of names that are the data's columns (the model codebook reader is not built yet)",
+  "2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Expenditure.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T05:12:18+00:00 HSES 2011 Questionnaire_Income.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T05:12:18+00:00 แบบ สศส.2 (พิเศษ).pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T05:12:18+00:00 แบบ สศส.3.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T05:12:18+00:00 done: 0 of 5 document(s) produced"
+ ],
+ "finished": "2026-11-20T05:12:18+00:00"
+}

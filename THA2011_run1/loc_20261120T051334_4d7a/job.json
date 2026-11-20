@@ -1,0 +1,240 @@
+{
+ "job_id": "loc_20261120T051334_4d7a",
+ "flow": "harmonize",
+ "survey_id": "THA_2011_HSES",
+ "spec": {
+  "flow": "harmonize",
+  "survey_id": "THA_2011_HSES",
+  "country": "THA",
+  "year": 2011,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc"
+  },
+  "input_job": "loc_20261120T051249_d942",
+  "partial": false,
+  "signoff": [
+   {
+    "review": "profile",
+    "act": "approve",
+    "by": "zs",
+    "at": "2026-11-20T05:13:34+00:00",
+    "note": "approved in the notebook",
+    "binds": {
+     "manifest_sha256": "152a6eb25b76b3a42e3486a8bf70009f0fc35c9e2e51b00a1e0e1404c578d666",
+     "profile_sha": "0d641efc323db75e76e1d14bd6ba40765501d106989fe58ab477f7f9cb5230bc"
+    }
+   }
+  ],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T05:13:34+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051334_4d7a",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T051249_d942",
+  "flow": "profile",
+  "status": "completed",
+  "manifest_sha256": "152a6eb25b76b3a42e3486a8bf70009f0fc35c9e2e51b00a1e0e1404c578d666",
+  "files": 5,
+  "partial": false
+ },
+ "updated": "2026-11-20T11:38:57+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 10,
+  "paths": {
+   "data": "THA_2011_HSES/Data",
+   "docs": "THA_2011_HSES/Doc",
+   "ss_export": "surveys/THA_2011_HSES/ss",
+   "svis": "surveys/THA_2011_HSES/svis",
+   "reference": "surveys/THA_2011_HSES/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "B.handoff": "ok(profile 0d641efc323d approved by zs at 2026-11-20T05:13:34+00:00)",
+  "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+  "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+  "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+  "B.modules": "ok(3 module(s) in the canon)",
+  "B.bind-standard": "ok(no source standard (the profile has no conformance record))",
+  "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+  "B.locate-sources": "ok(all 3 modules)",
+  "B.author-bindings": "ok(all modules)",
+  "B.review-prelude": "ok(1 prelude(s) read, 1 concern(s), 1 advisory)",
+  "B.check": "ok",
+  "E.stamp": "ok(validate clean)",
+  "E.lock": "ok(→ run.lock.json)",
+  "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+  "E.check": "ok",
+  "F.quality": "ok(20 targets; 1/44 checks flagged; 0 universe cells; no reference)",
+  "F.check": "ok",
+  "G.lock": "ok(→ run.lock.json)",
+  "G.check": "ok"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "01",
+   "task": "locate_sources",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 10,
+   "usage": {
+    "input_token_count": 173108,
+    "output_token_count": 1870,
+    "total_token_count": 174978,
+    "reasoning_output_token_count": 1062
+   },
+   "reasoning_effort": "low",
+   "seconds": 40.6
+  },
+  {
+   "request": "02",
+   "task": "locate_sources",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 15,
+   "usage": {
+    "input_token_count": 103817,
+    "output_token_count": 1432,
+    "total_token_count": 105249,
+    "reasoning_output_token_count": 625
+   },
+   "reasoning_effort": "low",
+   "seconds": 31.0
+  },
+  {
+   "request": "03",
+   "task": "locate_sources",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 48,
+   "usage": {
+    "input_token_count": 205841,
+    "output_token_count": 2938,
+    "total_token_count": 208779,
+    "reasoning_output_token_count": 839
+   },
+   "reasoning_effort": "low",
+   "seconds": 46.4
+  },
+  {
+   "request": "04",
+   "task": "author_bindings",
+   "scope": "MOD-IDN",
+   "submitted": true,
+   "tool_calls": 8,
+   "usage": {
+    "input_token_count": 96462,
+    "output_token_count": 2797,
+    "total_token_count": 99259,
+    "reasoning_output_token_count": 888
+   },
+   "reasoning_effort": "low",
+   "seconds": 46.0
+  },
+  {
+   "request": "05",
+   "task": "author_bindings",
+   "scope": "MOD-GEO",
+   "submitted": true,
+   "tool_calls": 36,
+   "usage": {
+    "input_token_count": 339833,
+    "output_token_count": 18378,
+    "total_token_count": 358211,
+    "reasoning_output_token_count": 3028
+   },
+   "reasoning_effort": "low",
+   "seconds": 162.2
+  },
+  {
+   "request": "06",
+   "task": "author_bindings",
+   "scope": "MOD-DEM",
+   "submitted": true,
+   "tool_calls": 33,
+   "usage": {
+    "input_token_count": 448474,
+    "output_token_count": 10416,
+    "total_token_count": 458890,
+    "reasoning_output_token_count": 2646
+   },
+   "reasoning_effort": "low",
+   "seconds": 150.9
+  },
+  {
+   "request": "07",
+   "task": "review_prelude",
+   "scope": "survey",
+   "submitted": true,
+   "tool_calls": 11,
+   "usage": {
+    "input_token_count": 50256,
+    "output_token_count": 1143,
+    "total_token_count": 51399,
+    "reasoning_output_token_count": 639
+   },
+   "reasoning_effort": "low",
+   "seconds": 12008.9
+  }
+ ],
+ "total_tokens": 1456765,
+ "log_tail": [
+  "    notes: Only age/sex/marital/relation variables were identifiable in the provided survey metadata; no labeled education/disability/literacy/language/schooling columns were discoverable via text search.",
+  "  [judge] review-prelude",
+  "    AI CALL [review_prelude / survey] → trail\\harmonize\\ai_calls\\07_review_prelude.brief.md",
+  "    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)",
+  "    received trail\\harmonize\\ai_responses\\07.json via submit (621 bytes)",
+  "    prelude MOD-DEM-childyr_mask: a concern (advisory: its dry run passed) — The masking only applies `age < 5`; it does not guard against sentinel/invalid numeric ages (e.g., negative sentinel codes) that would still satisfy `<5` and be written into `__derived.childyr__`, vio",
+  "  CHECK B: ok — validate clean",
+  "",
+  "== Phase E — run ==",
+  "  [det] stamp",
+  "        resolved: B-gaul_adm1_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)",
+  "        resolved: B-gaul_adm2_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)",
+  "        resolved: B-geo_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)",
+  "        kind: ses54_user_rec03.A01: numeric",
+  "        kind: ses54_user_rec03.A52: numeric",
+  "        kind: ses54_user_rec02.cwt: numeric",
+  "        kind: ses54_user_rec02.area: numeric",
+  "        kind: ses54_user_rec02.HM04: numeric",
+  "        kind: ses54_user_rec02.HM03: numeric",
+  "        kind: ses54_user_rec02.HM10: numeric",
+  "        kind: ses54_user_rec02.HM02: numeric",
+  "        key-correspondence: ses54_user_rec16: {'new_hh_n': 'NEW_HH_N'}",
+  "      VALID: hspec.json stamped (validator v2, 2026-11-20T08:42:18+00:00); coverage bound 20, documented 28",
+  "  [det] lock",
+  "  [rebuild] hspec-run — its inputs changed since it last ran",
+  "  [det] hspec-run",
+  "      PASS — 128071 rows, 20 target(s); contract clean. Outputs in C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051334_4d7a\\output",
+  "  CHECK E: ok — harmonized output: present (output\\harmonized.dta)",
+  "",
+  "== Phase F — qa ==",
+  "  [rebuild] quality — its inputs changed since it last ran",
+  "  [det] quality",
+  "    quality → C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T051334_4d7a\\output\\quality.json: 20 targets; 1/44 checks flagged; 0 universe cells; no reference",
+  "  CHECK F: ok — 20 targets; 1/44 checks flagged; 0 universe cells; no reference",
+  "",
+  "== Phase G — record ==",
+  "  [det] lock",
+  "  CHECK G: ok — run.lock.json: present (run.lock.json)",
+  "",
+  "== all phases complete =="
+ ],
+ "finished": "2026-11-20T11:38:57+00:00"
+}

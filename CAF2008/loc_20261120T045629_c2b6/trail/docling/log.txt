@@ -1,0 +1,2 @@
+2026-11-20T04:56:29+00:00 3 PDF(s) and 0 .doc / .xls to parse; ocr never; 20 page(s) per call, deadline 30 min, partial at the deadline
+2026-11-20T04:56:29+00:00 docling's models are not at C:\Users\wb327173\.harmon\docling-models: docling-tools models download layout tableformer -o <dir>, and DOCLING_ARTIFACTS_PATH=<dir>

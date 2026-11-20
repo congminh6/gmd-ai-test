@@ -1,0 +1,38 @@
+{
+ "survey_id": "CAF_2008_ECASEB",
+ "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+ "paths": {
+  "data": "CAF_2008_ECASEB/Data",
+  "docs": "CAF_2008_ECASEB/Doc",
+  "ss_export": "surveys/CAF_2008_ECASEB/ss",
+  "svis": "surveys/CAF_2008_ECASEB/svis",
+  "reference": "surveys/CAF_2008_ECASEB/Reference"
+ },
+ "kind": "survey",
+ "copied": false,
+ "data_version": null,
+ "staged_at": "2026-11-20T04:55:44+00:00",
+ "data": "../../../../../../temp/test/surveys/CAF_2008_ECASEB/Data",
+ "docs": "../../../../../../temp/test/surveys/CAF_2008_ECASEB/Doc",
+ "ss_export": null,
+ "svis": [],
+ "files": [
+  "CAF_2008_ECASEB/Data/carquib2008welfare.dta",
+  "CAF_2008_ECASEB/Data/carquibbconso.dta",
+  "CAF_2008_ECASEB/Data/hhdata.dta",
+  "CAF_2008_ECASEB/Data/hhevdata.dta",
+  "CAF_2008_ECASEB/Data/hhstdata.dta",
+  "CAF_2008_ECASEB/Data/indata.dta",
+  "CAF_2008_ECASEB/Data/sectj_biend.dta",
+  "CAF_2008_ECASEB/Data/sectk_autoc.dta",
+  "CAF_2008_ECASEB/Data/sectk_cader.dta",
+  "CAF_2008_ECASEB/Data/sectl_depc.dta",
+  "CAF_2008_ECASEB/Data/sectm_depmf.dta",
+  "CAF_2008_ECASEB/Data/sectn_revag.dta",
+  "CAF_2008_ECASEB/Data/sectn_revna.dta",
+  "CAF_2008_ECASEB/Data/secto_trans.dta",
+  "CAF_2008_ECASEB/Doc/CAF RCAPRIX2008.pdf",
+  "CAF_2008_ECASEB/Doc/CAF RCAQRD2008.pdf",
+  "CAF_2008_ECASEB/Doc/CAF RCAQUIBB2008.pdf"
+ ]
+}

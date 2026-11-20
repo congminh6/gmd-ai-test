@@ -1,0 +1,64 @@
+{
+  "by_route": {
+    "pdf_text": 3
+  },
+  "files": [
+    {
+      "detail": "15 text / 0 ocr / 0 empty of 15 sampled page(s); 1097 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "format": "pdf",
+      "n_pages": 28,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "CAF RCAPRIX2008.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 212735,
+      "text_chars_per_page": 1097,
+      "text_pages": 15,
+      "tool": "pymupdf"
+    },
+    {
+      "detail": "15 text / 0 ocr / 0 empty of 15 sampled page(s); 1526 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "format": "pdf",
+      "n_pages": 32,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "CAF RCAQRD2008.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 356378,
+      "text_chars_per_page": 1526,
+      "text_pages": 15,
+      "tool": "pymupdf"
+    },
+    {
+      "detail": "14 text / 0 ocr / 0 empty of 14 sampled page(s); 2725 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": true,
+      "format": "pdf",
+      "n_pages": 14,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 14,
+      "path": "CAF RCAQUIBB2008.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 240855,
+      "text_chars_per_page": 2725,
+      "text_pages": 14,
+      "tool": "pymupdf"
+    }
+  ],
+  "n_files": 3,
+  "root": "C:\\temp\\test\\surveys\\CAF_2008_ECASEB\\Doc",
+  "skipped_extensions": {}
+}

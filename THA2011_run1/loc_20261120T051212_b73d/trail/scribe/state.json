@@ -1,0 +1,9 @@
+{
+ "steps": {
+  "Accompanying note SES2011 Data structure.xlsx": "not read: a codebook, and no table of it could be read: no header naming the variable / label / values roles, and no column of names that are the data's columns (the model codebook reader is not built yet)",
+  "HSES 2011 Questionnaire_Expenditure.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "HSES 2011 Questionnaire_Income.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "แบบ สศส.2 (พิเศษ).pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "แบบ สศส.3.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+ }
+}

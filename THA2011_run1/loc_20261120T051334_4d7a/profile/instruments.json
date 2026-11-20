@@ -1,0 +1,201 @@
+{
+  "by_route": {
+    "pdf_mixed": 3,
+    "pdf_text": 1,
+    "xlsx": 1
+  },
+  "files": [
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "โครงสร้างไฟล์ข้อมูล สศส.54 ในรูปแบบ SPSS Format (สำหรับเผยแพร่ทั่วไป)",
+        "kind": "codebook",
+        "language": "Thai",
+        "reason": "The sample is a data-file structure/record layout listing record types and the fieldnames/variables included in each record (SPSS format) with observation counts.",
+        "sample": "4953 characters of 2 block(s)"
+      },
+      "detail": "",
+      "ext": "xlsx",
+      "extractable": false,
+      "extraction": {
+        "by": "codebook/deterministic",
+        "coverage": {
+          "datasets": [],
+          "tables": [
+            {
+              "accepted": false,
+              "block": "block-000001",
+              "entries": 0,
+              "share": 0.0,
+              "sheet": "English",
+              "why": "no header; 0% of the first column are data columns"
+            },
+            {
+              "accepted": false,
+              "block": "block-000002",
+              "entries": 0,
+              "share": 0.0,
+              "sheet": "Thai",
+              "why": "fewer than two columns, or no column of identifiers"
+            }
+          ]
+        },
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "a codebook, and no table of it could be read: no header naming the variable / label / values roles, and no column of names that are the data's columns (the model codebook reader is not built yet)"
+      },
+      "format": "xlsx",
+      "ocr_page_index": [],
+      "path": "Accompanying note SES2011 Data structure.xlsx",
+      "reader": "survey-scribe",
+      "route": "xlsx",
+      "size_bytes": 18849,
+      "tool": "survey-scribe"
+    },
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "Questionnaire  Part  Fieldname",
+        "kind": "codebook",
+        "language": "English",
+        "reason": "The sample mainly lists survey items as variables/fieldnames (e.g., A01, A02) in a table mapping questionnaire parts to data fields, which is characteristic of a data file layout/codebook rather than the full interview instrument.",
+        "sample": "pages 1, 2, 3, 27 of 52: 6000 characters"
+      },
+      "detail": "14 text / 0 ocr / 1 empty of 15 sampled page(s); 1962 chars/page",
+      "empty_pages": 1,
+      "ext": "pdf",
+      "extractable": true,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+      },
+      "format": "pdf",
+      "n_pages": 52,
+      "ocr_page_index": [],
+      "ocr_pages": 0,
+      "pages_sampled": 15,
+      "path": "HSES 2011 Questionnaire_Expenditure.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_text",
+      "size_bytes": 455327,
+      "text_chars_per_page": 1962,
+      "text_pages": 14,
+      "tool": "pymupdf"
+    },
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "\"4.  How are wage payments made ? ... per item = 1       hourly = 2        daily = 3        weekly = 4        monthly = 5       in-kind =  6       Other = 7\"",
+        "kind": "questionnaire",
+        "language": "English",
+        "reason": "The sample shows a survey instrument with numbered questions, answer categories, skip instructions, and spaces/tables for recording responses (with field codes like IW06, IA11 alongside the questions).",
+        "sample": "pages 1, 2, 3, 7 of 13: 5574 characters"
+      },
+      "detail": "12 text / 1 ocr / 0 empty of 13 sampled page(s); 1476 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+      },
+      "format": "pdf",
+      "n_pages": 13,
+      "ocr_page_index": [
+        2
+      ],
+      "ocr_pages": 1,
+      "pages_sampled": 13,
+      "path": "HSES 2011 Questionnaire_Income.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 164027,
+      "text_chars_per_page": 1476,
+      "text_pages": 12,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "แบบ ตอน รหัสรายการ 1. เดือนที่ปฏิบัติงานจัดเก็บขอมูล สศส. 2  หนาปก A01",
+        "kind": "codebook",
+        "language": "Thai",
+        "reason": "The sample is a structured list of data items with record/section references and item codes (e.g., A01, A02_1), describing variables/derived fields rather than presenting interview questions.",
+        "sample": "pages 1, 2, 3, 27 of 52: 6000 characters"
+      },
+      "detail": "7 text / 7 ocr / 1 empty of 15 sampled page(s); 2983 chars/page",
+      "empty_pages": 1,
+      "ext": "pdf",
+      "extractable": false,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+      },
+      "format": "pdf",
+      "n_pages": 52,
+      "ocr_page_index": [
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "ocr_pages": 7,
+      "pages_sampled": 15,
+      "path": "แบบ สศส.2 (พิเศษ).pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 1011355,
+      "text_chars_per_page": 2983,
+      "text_pages": 7,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    },
+    {
+      "classification": {
+        "by": "model gpt-5.2",
+        "evidence": "4.  แตละอาชีพไดรับคาจางประเภทใด  รายชิ้น/ราย กก. = 1      รายชั่วโมง = 2      รายวัน = 3     รายสัปดาห = 4      รายเดือน = 5",
+        "kind": "questionnaire",
+        "language": "Thai",
+        "reason": "The sample contains survey form sections with numbered questions, response categories, and spaces/tables to record household and income/employment details, indicating it is the interview instrument.",
+        "sample": "pages 1, 2, 3, 7 of 13: 6000 characters"
+      },
+      "detail": "11 text / 2 ocr / 0 empty of 13 sampled page(s); 1654 chars/page",
+      "empty_pages": 0,
+      "ext": "pdf",
+      "extractable": false,
+      "extraction": {
+        "diagnostics": {},
+        "excluded": [],
+        "failed_units": [],
+        "not_read": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+      },
+      "format": "pdf",
+      "n_pages": 13,
+      "ocr_page_index": [
+        0,
+        2
+      ],
+      "ocr_pages": 2,
+      "pages_sampled": 13,
+      "path": "แบบ สศส.3.pdf",
+      "reader": "survey-scribe",
+      "route": "pdf_mixed",
+      "size_bytes": 303443,
+      "text_chars_per_page": 1654,
+      "text_pages": 11,
+      "tool": "pymupdf + survey-scribe (OCR) for image pages"
+    }
+  ],
+  "n_files": 5,
+  "root": "C:\\temp\\test\\surveys\\THA_2011_HSES\\Doc",
+  "skipped_extensions": {}
+}

@@ -1,0 +1,151 @@
+{
+  "grain": {
+    "household_key": "NEW_HH_N",
+    "person_key": [
+      "NEW_HH_N",
+      "HM01"
+    ],
+    "roster": "ses54_user_rec02",
+    "weight": "A52"
+  },
+  "links": [],
+  "overlay_version": "0.1",
+  "survey": "THA_2011_HSES",
+  "tables": {
+    "ses54_user_rec01": {
+      "fields": {
+        "A01": {
+          "label": "Enumeration Month",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "January",
+            "10": "October",
+            "11": "November",
+            "12": "December",
+            "2": "February",
+            "3": "March",
+            "4": "April",
+            "5": "May",
+            "6": "June",
+            "7": "July",
+            "8": "August",
+            "9": "September"
+          }
+        },
+        "A52": {
+          "label": "Household weight",
+          "source": "author",
+          "status": "resolved"
+        },
+        "area": {
+          "label": "Administrative Area",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Municipal",
+            "2": "Non-municipal"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "ses54_user_rec02": {
+      "fields": {
+        "area": {
+          "label": "Administrative Area",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Municipal",
+            "2": "Non-municipal"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "ses54_user_rec03": {
+      "fields": {
+        "area": {
+          "label": "Administrative Area",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Municipal",
+            "2": "Non-municipal"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "ses54_user_rec13": {
+      "fields": {
+        "area": {
+          "label": "Administrative Area",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Municipal",
+            "2": "Non-municipal"
+          }
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    },
+    "ses54_user_rec16": {
+      "fields": {
+        "area": {
+          "label": "Administrative Area",
+          "source": "author",
+          "status": "resolved",
+          "value_codes": {
+            "1": "Municipal",
+            "2": "Non-municipal"
+          }
+        },
+        "io022": {
+          "label": "io02b (numeric amount; continuous)",
+          "source": "author",
+          "status": "resolved"
+        },
+        "io031": {
+          "label": "io03a (numeric amount; continuous)",
+          "source": "author",
+          "status": "resolved"
+        },
+        "io032": {
+          "label": "io03b (numeric amount; continuous)",
+          "source": "author",
+          "status": "resolved"
+        },
+        "io033": {
+          "label": "io03c (numeric amount; continuous)",
+          "source": "author",
+          "status": "resolved"
+        },
+        "io062": {
+          "label": "io06b (numeric amount; continuous)",
+          "source": "author",
+          "status": "resolved"
+        }
+      },
+      "provenance": {
+        "declared_by": "overlay",
+        "verdict": "raw"
+      }
+    }
+  },
+  "year": 2011
+}

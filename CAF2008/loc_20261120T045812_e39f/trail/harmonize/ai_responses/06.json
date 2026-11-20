@@ -1,0 +1,580 @@
+{
+ "request_id": "06-author_bindings-MOD-DEM",
+ "correspondence": {
+  "education": {
+   "column": "indata.c3",
+   "links": {
+    "0": {
+     "kind": "no_fitting_category",
+     "reason": "Code 0 labelled 'aucune' indicates no schooling; not a programme level in the national standard.",
+     "direct": {
+      "VAR-educat7": 1,
+      "VAR-educat5": 1,
+      "VAR-educat4": 1,
+      "VAR-educy": 0
+     }
+    },
+    "1": "CAF-EDU-01",
+    "11": "CAF-EDU-02",
+    "12": "CAF-EDU-02",
+    "13": "CAF-EDU-02",
+    "14": "CAF-EDU-02",
+    "15": "CAF-EDU-02",
+    "16": "CAF-EDU-02",
+    "21": "CAF-EDU-03",
+    "22": "CAF-EDU-03",
+    "23": "CAF-EDU-03",
+    "24": "CAF-EDU-03",
+    "25": "CAF-EDU-05",
+    "26": "CAF-EDU-05",
+    "27": "CAF-EDU-05",
+    "31": "CAF-EDU-04",
+    "32": "CAF-EDU-06",
+    "33": "CAF-EDU-11",
+    "41": "CAF-EDU-09",
+    "42": {
+     "kind": "ambiguous",
+     "reason": "Label 'enseignement supérieur deuxième cycle' does not specify degree (Licence vs Maîtrise).",
+     "candidates": [
+      "CAF-EDU-13",
+      "CAF-EDU-14"
+     ]
+    },
+    "43": {
+     "kind": "ambiguous",
+     "reason": "Label 'enseignement supérieur troisième cycle' does not specify whether Master/Doctorat/Medecin; national standard distinguishes several tertiary endpoints.",
+     "candidates": [
+      "CAF-EDU-15",
+      "CAF-EDU-16",
+      "CAF-EDU-18"
+     ]
+    }
+   },
+   "evidence": "Education domain column is highest class completed (indata.c3) with detailed labelled codes including preschool/primary/secondary/technical/tertiary cycles; mapping linked accordingly (t2)."
+  }
+ },
+ "parameters": {
+  "PARAM-EDU-MIN-EDUCATION-AGE": {
+   "value": 7,
+   "method": "data_onset",
+   "evidence": "Education section detailed items (c3/c5) are filled for at least half of individuals from age 7 onward; younger ages have sparse fill, indicating section onset ~7 (t8)."
+  }
+ },
+ "bindings": [
+  {
+   "binding_id": "B-age",
+   "target": "VAR-age",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b4"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.b4 age is continuous numeric years (range 0-95) (t2)."
+  },
+  {
+   "binding_id": "B-childyr",
+   "target": "VAR-childyr",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b4"
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 < 5",
+    "else_code": ".c"
+   },
+   "passthrough": true,
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "childyr can be taken as completed years from indata.b4 for under-5; gate enforces universe (t2)."
+  },
+  {
+   "binding_id": "B-male",
+   "target": "VAR-male",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b1"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".o"
+   },
+   "register": "resolved",
+   "evidence": "indata.b1 sexe: 1 homme, 2 femme (t2)."
+  },
+  {
+   "binding_id": "B-marital",
+   "target": "VAR-marital",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b5"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 2,
+    "4": 2,
+    "5": 3,
+    "6": 4
+   },
+   "missing_map": {
+    "null": 5,
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.b5 etat matrimonial: 1 célibataire, 2 marié monogame, 3 marié polygame, 4 union libre/concubinage, 5 divorcé/séparé, 6 veuf(ve) (t2)."
+  },
+  {
+   "binding_id": "B-literacy",
+   "target": "VAR-literacy",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "c1"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.c1 sait lire et écrire: 1 oui, 2 non (t2)."
+  },
+  {
+   "binding_id": "B-everattend",
+   "target": "VAR-everattend",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "c2"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.c2 est-il déjà allé à l'école: 1 oui, 2 non (t2)."
+  },
+  {
+   "binding_id": "B-school",
+   "target": "VAR-school",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "c5"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 0
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.c5 fréquente ou a fréquenté l'école pendant l'année 2007-2008: 1 oui, 2 non (t1)."
+  },
+  {
+   "binding_id": "B-relationcs",
+   "target": "VAR-relationcs",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b3"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".c",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "indata.b3 lien de parenté avec le chef de ménage is a labelled categorical code list (1-8) (t2)."
+  },
+  {
+   "binding_id": "B-relationharm",
+   "target": "VAR-relationharm",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "b3"
+   },
+   "predicate": "all",
+   "value_map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "5": 4,
+    "6": 5,
+    "7": 5,
+    "8": 6
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".o"
+   },
+   "register": "resolved",
+   "evidence": "indata.b3 relationship codes: 1 head, 2 spouse, 3 child, 5 parent, 4 sibling/6 grandchild/7 other relatives -> other relative, 8 none -> non-relative (t2)."
+  },
+  {
+   "binding_id": "B-mineducatage",
+   "target": "VAR-mineducatage",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "parameter": "PARAM-EDU-MIN-EDUCATION-AGE"
+   },
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Carrier of PARAM-EDU-MIN-EDUCATION-AGE as required by policy (t9)."
+  },
+  {
+   "binding_id": "B-educat7",
+   "target": "VAR-educat7",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 >= 7",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (t2,t8)."
+  },
+  {
+   "binding_id": "B-educat5",
+   "target": "VAR-educat5",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 >= 7",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (t2,t8)."
+  },
+  {
+   "binding_id": "B-educat4",
+   "target": "VAR-educat4",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 >= 7",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Education attainment derived from correspondence on indata.c3 highest class completed; age gate uses mineducatage=7 from parameter (t2,t8)."
+  },
+  {
+   "binding_id": "B-educy",
+   "target": "VAR-educy",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ]
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 >= 7",
+    "else_code": ".c"
+   },
+   "value_map_source": {
+    "correspondence": "education"
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Years of schooling read from education correspondence (national standard provides years) using indata.c3 codes; age gate uses mineducatage=7 (t2,t8)."
+  },
+  {
+   "binding_id": "B-primarycomp",
+   "target": "VAR-primarycomp",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "c3"
+   },
+   "predicate": "all",
+   "gate": {
+    "predicate": "b4 >= 7",
+    "else_code": ".c"
+   },
+   "value_map": {
+    "0": 0,
+    "1": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 1,
+    "21": 1,
+    "22": 1,
+    "23": 1,
+    "24": 1,
+    "25": 1,
+    "26": 1,
+    "27": 1,
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "41": 1,
+    "42": 1,
+    "43": 1
+   },
+   "missing_map": {
+    "null": ".b",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "Primary completion inferred from highest class completed: CM2 (code 16) or any higher level implies completed primary (t2)."
+  },
+  {
+   "binding_id": "B-eyedisability",
+   "target": "VAR-eyedisability",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No vision-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  },
+  {
+   "binding_id": "B-heardisability",
+   "target": "VAR-heardisability",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No hearing-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  },
+  {
+   "binding_id": "B-walkdisability",
+   "target": "VAR-walkdisability",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No walking-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  },
+  {
+   "binding_id": "B-selfcaredisability",
+   "target": "VAR-selfcaredisability",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No self-care difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  },
+  {
+   "binding_id": "B-communicationdisability",
+   "target": "VAR-communicationdisability",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No communication-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  },
+  {
+   "binding_id": "B-concentrationdisorder",
+   "target": "VAR-concentrationdisorder",
+   "table": "indata",
+   "roles": {
+    "unit_keys": [
+     "idmen",
+     "memberno"
+    ],
+    "raw_value": "d3"
+   },
+   "predicate": "all",
+   "missing_map": {
+    "unmapped": ".b"
+   },
+   "register": "cannot_determine",
+   "evidence": "No concentration-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (t1)."
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-agecat",
+   "kind": "not_collected_by_design",
+   "reason": "Survey records age as continuous years (indata.b4); no age-band variable is present/needed (t2).",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-childmth",
+   "kind": "derivable_not_built",
+   "reason": "Only age in completed years (indata.b4) is available; age-in-months for under-5 cannot be derived without date of birth or months data (t2).",
+   "needs": [
+    "VAR-age"
+   ],
+   "status": "deferred"
+  },
+  {
+   "target": "VAR-language",
+   "kind": "searched_not_found",
+   "reason": "No language variable found in indata; search for langue/language matched only literacy item wording (t3).",
+   "searches": [
+    {
+     "terms": "langue | language | dialect | ethnie",
+     "in": "table indata"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

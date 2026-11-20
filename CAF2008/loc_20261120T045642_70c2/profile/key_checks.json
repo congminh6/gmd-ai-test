@@ -1,0 +1,18 @@
+{
+  "checks": {},
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "idmen",
+        "memberno"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 31966,
+      "source_file": "indata.dta",
+      "table": "indata"
+    }
+  ],
+  "key_maps": {}
+}

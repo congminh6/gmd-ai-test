@@ -1,0 +1,130 @@
+{
+ "job_id": "loc_20261120T045608_e4e6",
+ "flow": "scribe",
+ "survey_id": "CAF_2008_ECASEB",
+ "spec": {
+  "flow": "scribe",
+  "survey_id": "CAF_2008_ECASEB",
+  "country": "CAF",
+  "year": 2008,
+  "model": true,
+  "restage": false,
+  "max_calls": 80,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc"
+  },
+  "input_job": "loc_20261120T045544_644d",
+  "partial": false,
+  "signoff": [],
+  "extra": {}
+ },
+ "status": "completed",
+ "started": "2026-11-20T04:56:08+00:00",
+ "run_dir": "C:\\Users\\wb327173\\.harmon\\work\\runs\\loc_20261120T045608_e4e6",
+ "code": [
+  "survey-harmonization local (testing — no sync stamp)",
+  "canon 0.1.0+eaa25bb9"
+ ],
+ "input": {
+  "job_id": "loc_20261120T045544_644d",
+  "flow": "intake",
+  "status": "completed",
+  "manifest_sha256": "a88a62c34e798e47cc06dac153371ae2bd4f38de108365074c46fe006149b93c",
+  "files": 3,
+  "partial": false
+ },
+ "updated": "2026-11-20T04:56:12+00:00",
+ "data_version": null,
+ "staged": {
+  "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+  "files": 17,
+  "paths": {
+   "data": "CAF_2008_ECASEB/Data",
+   "docs": "CAF_2008_ECASEB/Doc",
+   "ss_export": "surveys/CAF_2008_ECASEB/ss",
+   "svis": "surveys/CAF_2008_ECASEB/svis",
+   "reference": "surveys/CAF_2008_ECASEB/Reference"
+  },
+  "copied": false,
+  "ss_export": null,
+  "svis": []
+ },
+ "rc": 0,
+ "outcome": "complete",
+ "steps": {
+  "CAF RCAPRIX2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "CAF RCAQRD2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "CAF RCAQUIBB2008.pdf": "needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result"
+ },
+ "stopped_at": null,
+ "model_calls": [
+  {
+   "request": "classify-CAF_RCAPRIX2008",
+   "task": "classify-document",
+   "scope": "CAF RCAPRIX2008.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2713,
+    "total_token_count": 2783,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 70,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  },
+  {
+   "request": "classify-CAF_RCAQRD2008",
+   "task": "classify-document",
+   "scope": "CAF RCAQRD2008.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 2858,
+    "total_token_count": 2935,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 77,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  },
+  {
+   "request": "classify-CAF_RCAQUIBB2008",
+   "task": "classify-document",
+   "scope": "CAF RCAQUIBB2008.pdf",
+   "submitted": true,
+   "tool_calls": null,
+   "usage": {
+    "input_token_count": 3108,
+    "total_token_count": 3194,
+    "cache_creation_input_token_count": 0,
+    "cache_read_input_token_count": 0,
+    "openai.cache_write_tokens": 0,
+    "output_token_count": 86,
+    "openai.cached_input_tokens": 0,
+    "reasoning_output_token_count": 0,
+    "openai.reasoning_tokens": 0
+   }
+  }
+ ],
+ "total_tokens": 8912,
+ "log_tail": [
+  "2026-11-20T04:56:08+00:00 3 document(s) under 'CAF_2008_ECASEB/Doc'; model on; deployment gpt-5.2",
+  "2026-11-20T04:56:08+00:00 classifying 3 document(s)",
+  "2026-11-20T04:56:12+00:00 CAF RCAPRIX2008.pdf: questionnaire (French) — The sample is a price survey questionnaire form with fields to be filled during 1st/2nd/3rd price collections, including instructions and sections for the interviewer and outlet type.",
+  "2026-11-20T04:56:12+00:00 CAF RCAQRD2008.pdf: questionnaire (French) — The sample shows a fill-in survey instrument with sections and numbered questions, yes/no bubbles, and item-by-item prompts about household assets and expenditures.",
+  "2026-11-20T04:56:12+00:00 CAF RCAQUIBB2008.pdf: questionnaire (French) — The sample shows an interviewer-administered survey form with numbered questions (e.g., B.1–B.9, C.1–C.10), response options, and skip instructions across sections for household members.",
+  "2026-11-20T04:56:12+00:00 CAF RCAPRIX2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T04:56:12+00:00 CAF RCAQRD2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T04:56:12+00:00 CAF RCAQUIBB2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result",
+  "2026-11-20T04:56:12+00:00 done: 0 of 3 document(s) produced"
+ ],
+ "finished": "2026-11-20T04:56:13+00:00"
+}

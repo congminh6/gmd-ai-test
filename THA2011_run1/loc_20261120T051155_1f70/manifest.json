@@ -1,0 +1,37 @@
+{
+ "job_id": "loc_20261120T051155_1f70",
+ "flow": "intake",
+ "survey_id": "THA_2011_HSES",
+ "status": "completed",
+ "finished": "2026-11-20T05:12:02+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "1b6d05720d52b345e6e6d9b7b816163ee2cdfc2d74b0ad84efa841094e273c25",
+   "size": 3218
+  },
+  "profile/data_scan.json": {
+   "sha256": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+   "size": 257398
+  },
+  "profile/instruments.json": {
+   "sha256": "434a31d1eba212bb2f03197a35696f4fc83808cdfd3e2eda4438e500a04217ce",
+   "size": 2919
+  },
+  "staged.json": {
+   "sha256": "7c4267aff8377709b39e2c69f0719be2761e03924c2164f39831bb53f27ff219",
+   "size": 1235
+  },
+  "trail/intake/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/intake/log.txt": {
+   "sha256": "7bee33d971d9ea1d9b1afe46445cb35944b31f5c9969267ab8e689a365f7862e",
+   "size": 1555
+  },
+  "trail/intake/state.json": {
+   "sha256": "6513df158d88e5dd661aae5d4bfbbeba5ae5df995665a8188baeacd13eb7da85",
+   "size": 310
+  }
+ }
+}

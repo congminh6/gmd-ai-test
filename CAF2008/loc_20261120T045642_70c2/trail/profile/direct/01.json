@@ -1,0 +1,22 @@
+{
+ "task_type": "author_overlay",
+ "scope_id": "survey",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 57.1,
+ "usage": {
+  "input_token_count": 251117,
+  "output_token_count": 3376,
+  "total_token_count": 254493,
+  "reasoning_output_token_count": 1930
+ },
+ "tool_calls": 9,
+ "submitted": true,
+ "final_text": "Submitted `author_overlay` answer (`request_id: 01-author_overlay-survey`) with:\n\n- `grain`: `household_key=idmen`, `roster=indata`, `weight=hhdata.hhweight`\n- `tables` provenance verdicts for all tables listed in gaps\n- `fields` authored to resolve key `label_empty` / `codes_missing` items (hhweight labels; urru codes; carquibwelfare region/urru/hgse/strate codes & labels) with cited evidence",
+ "said": [
+  "Submitted `author_overlay` answer (`request_id: 01-author_overlay-survey`) with:\n\n- `grain`: `household_key=idmen`, `roster=indata`, `weight=hhdata.hhweight`\n- `tables` provenance verdicts for all tables listed in gaps\n- `fields` authored to resolve key `label_empty` / `codes_missing` items (hhweight labels; urru codes; carquibwelfare region/urru/hgse/strate codes & labels) with cited evidence"
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\profile\\tool_log\\01.jsonl"
+}

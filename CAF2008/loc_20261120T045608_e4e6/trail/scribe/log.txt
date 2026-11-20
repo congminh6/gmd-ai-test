@@ -1,0 +1,9 @@
+2026-11-20T04:56:08+00:00 3 document(s) under 'CAF_2008_ECASEB/Doc'; model on; deployment gpt-5.2
+2026-11-20T04:56:08+00:00 classifying 3 document(s)
+2026-11-20T04:56:12+00:00 CAF RCAPRIX2008.pdf: questionnaire (French) — The sample is a price survey questionnaire form with fields to be filled during 1st/2nd/3rd price collections, including instructions and sections for the interviewer and outlet type.
+2026-11-20T04:56:12+00:00 CAF RCAQRD2008.pdf: questionnaire (French) — The sample shows a fill-in survey instrument with sections and numbered questions, yes/no bubbles, and item-by-item prompts about household assets and expenditures.
+2026-11-20T04:56:12+00:00 CAF RCAQUIBB2008.pdf: questionnaire (French) — The sample shows an interviewer-administered survey form with numbered questions (e.g., B.1–B.9, C.1–C.10), response options, and skip instructions across sections for household members.
+2026-11-20T04:56:12+00:00 CAF RCAPRIX2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T04:56:12+00:00 CAF RCAQRD2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T04:56:12+00:00 CAF RCAQUIBB2008.pdf: needs survey-scribe extraction: a PDF is parsed by the docling job (layout model, tables) first; a documents job started from it reads the result
+2026-11-20T04:56:12+00:00 done: 0 of 3 document(s) produced

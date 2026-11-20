@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-IDN",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 22.9,
+ "usage": {
+  "input_token_count": 100407,
+  "output_token_count": 1138,
+  "total_token_count": 101545,
+  "reasoning_output_token_count": 545
+ },
+ "tool_calls": 8,
+ "submitted": true,
+ "final_text": "Submitted routing for `01-locate_sources-MOD-IDN`:\n\n- `VAR-countrycode` → `hhdata` (no clear column; likely constant from survey identity/ISO3)\n- `VAR-intmonth` → `hhdata.a4` (date de l'interview; parse month)\n- `VAR-intyear` → `hhdata.a4` (date de l'interview; parse year)\n- `VAR-weight` → `hhdata.hhweight` (Pondération définitive)\n- `VAR-year` → `hhdata.a4` (derive survey start year from interview date if needed)\n\nNote: `hhweight` also appears in `hhevdata`, `hhstdata`, and `indata`.",
+ "said": [
+  "Submitted routing for `01-locate_sources-MOD-IDN`:\n\n- `VAR-countrycode` → `hhdata` (no clear column; likely constant from survey identity/ISO3)\n- `VAR-intmonth` → `hhdata.a4` (date de l'interview; parse month)\n- `VAR-intyear` → `hhdata.a4` (date de l'interview; parse year)\n- `VAR-weight` → `hhdata.hhweight` (Pondération définitive)\n- `VAR-year` → `hhdata.a4` (derive survey start year from interview date if needed)\n\nNote: `hhweight` also appears in `hhevdata`, `hhstdata`, and `indata`."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\01.jsonl"
+}

@@ -1,0 +1,29 @@
+{
+  "task_type": "review_prelude",
+  "task": "Read each prelude's CODE — the engine will execute it — and give a verdict: `ok`, or a `concern` with the\nconcrete problem. A concern is anything that makes the code unsafe (file / network / exec, imports outside\nthe allowed ones, tables it does not name) or makes it not do what its `reason` and `produces` claim. Judge\nthe code on its merits even if you authored it. Nothing waits for your verdict: a concern is a finding on the\ntargets that read the prelude's columns — it goes back to the author, unless the author's `check` already ran\nthat exact code on the data without failure, when it is a note for the person reviewing the output.",
+  "scope_id": "survey",
+  "preludes": [
+    {
+      "id": "MOD-DEM-childyr_mask",
+      "code_ref": "MOD-DEM-childyr_mask.py",
+      "produces": [
+        "__derived.childyr__"
+      ],
+      "reason": "VAR-childyr must be within 0–5 and only defined for children under 5; HM04 contains all ages 0–99 so we mask ages >=5 to missing before binding."
+    }
+  ],
+  "scope_ids": [
+    "MOD-DEM-childyr_mask"
+  ],
+  "request_id": "07-review_prelude-survey",
+  "tools": [
+    "canon",
+    "contract",
+    "current",
+    "submit"
+  ],
+  "brief_sha256": "b1c5ef7b47e8e4e8fd2942b82abb925e28bd6aa44763416483f92ef89ce46d8f",
+  "transport": "direct",
+  "template_sha256": "da0b7e3bded091a22b6b9c4c1a55a967ceed29cfaf6de73267f61ee88387cd33",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

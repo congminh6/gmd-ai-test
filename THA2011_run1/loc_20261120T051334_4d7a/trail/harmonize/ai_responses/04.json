@@ -1,0 +1,103 @@
+{
+ "request_id": "04-author_bindings-MOD-IDN",
+ "bindings": [
+  {
+   "binding_id": "B-countrycode",
+   "target": "VAR-countrycode",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "iso3"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "countrycode is survey identity ISO3; anchored to person-grain table ses54_user_rec02 [t2,t5]"
+  },
+  {
+   "binding_id": "B-year",
+   "target": "VAR-year",
+   "table": "ses54_user_rec02",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N",
+     "HM01"
+    ]
+   },
+   "predicate": "all",
+   "constant_source": {
+    "survey_identity": "year"
+   },
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "year is survey identity start year; anchored to person-grain table ses54_user_rec02 [t2,t5]"
+  },
+  {
+   "binding_id": "B-intmonth",
+   "target": "VAR-intmonth",
+   "table": "ses54_user_rec03",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N"
+    ],
+    "raw_value": "A01"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "ses54_user_rec03.A01 labelled 1=January ... 12=December; range 1-12 [t1,t2]"
+  },
+  {
+   "binding_id": "B-weight",
+   "target": "VAR-weight",
+   "table": "ses54_user_rec03",
+   "roles": {
+    "unit_keys": [
+     "NEW_HH_N"
+    ],
+    "raw_value": "A52"
+   },
+   "predicate": "all",
+   "passthrough": true,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "resolved",
+   "evidence": "ses54_user_rec03.A52 numeric household weight, non-missing [t4,t2]"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-intyear",
+   "kind": "searched_not_found",
+   "reason": "No interview/enumeration year variable found: search in column names/labels/questions/codes for year/interview/enumeration/date and reviewed ses54_user_rec02 column list; only enumeration month (A01) and weight (A52) present among matches [t3,t5].",
+   "searches": [
+    {
+     "terms": "year interview enumeration date",
+     "in": "whole survey columns via search tool"
+    },
+    {
+     "terms": "columns ses54_user_rec02",
+     "in": "ses54_user_rec02"
+    }
+   ],
+   "status": "absent"
+  }
+ ]
+}

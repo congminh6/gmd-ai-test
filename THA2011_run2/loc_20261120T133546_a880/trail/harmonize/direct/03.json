@@ -1,0 +1,22 @@
+{
+ "task_type": "locate_sources",
+ "scope_id": "MOD-DEM",
+ "transport": "direct",
+ "model": "gpt-5.2-2025-12-11",
+ "reasoning_effort": "low",
+ "seconds": 54.8,
+ "usage": {
+  "input_token_count": 268644,
+  "output_token_count": 2525,
+  "total_token_count": 271169,
+  "reasoning_output_token_count": 1088
+ },
+ "tool_calls": 26,
+ "submitted": true,
+ "final_text": "Submitted routing for the DEM targets that can be placed from available metadata:\n\n- `VAR-age`, `VAR-agecat`, `VAR-childmth`, `VAR-childyr` → `ses54_user_rec02.HM04`\n- `VAR-male` → `ses54_user_rec02.HM03`\n- `VAR-marital` → `ses54_user_rec02.HM10`\n- `VAR-relationcs`, `VAR-relationharm` → `ses54_user_rec02.HM02`\n\nOther DEM targets (education, school, literacy, language, disability, mineducatage) could not be confidently routed because most columns have empty labels/questions and no searchable value labels in the index.",
+ "said": [
+  "Submitted routing for the DEM targets that can be placed from available metadata:\n\n- `VAR-age`, `VAR-agecat`, `VAR-childmth`, `VAR-childyr` → `ses54_user_rec02.HM04`\n- `VAR-male` → `ses54_user_rec02.HM03`\n- `VAR-marital` → `ses54_user_rec02.HM10`\n- `VAR-relationcs`, `VAR-relationharm` → `ses54_user_rec02.HM02`\n\nOther DEM targets (education, school, literacy, language, disability, mineducatage) could not be confidently routed because most columns have empty labels/questions and no searchable value labels in the index."
+ ],
+ "final_message_submits": 0,
+ "tool_log": "trail\\harmonize\\tool_log\\03.jsonl"
+}

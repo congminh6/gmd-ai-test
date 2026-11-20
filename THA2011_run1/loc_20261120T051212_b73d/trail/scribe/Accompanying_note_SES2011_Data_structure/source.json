@@ -1,0 +1,563 @@
+{
+ "source_name": "Accompanying note SES2011 Data structure.xlsx",
+ "media_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+ "blocks": [
+  {
+   "id": "block-000001",
+   "order": 0,
+   "kind": "table",
+   "text": "SES 2011 Data-file Structure in SPSS Format (For public) |  |  |  |  | \n |  |  |  |  | \nRecord No. | Record type | Title | Identification | Fieldnames/variables | No. of observation\n |  |  |  |  | \n01 | Household | Household summary | REG, CWT, AREA,  NEW_HH_N | A01 → A53 , C01 → C23 , CON… , NCON… , FB… , TP… , WS… , PB… , PA… | 42083\n02 | Individual | Household members | REG, CWT, AREA,  NEW_HH_N, HM01 | A01 , A52 , HM02 → HM41 | 128071\n03 | Household | Household characteristics | REG, CWT, AREA,  NEW_HH_N | A01, A52 , HH01 → HH45 | 42083\n04 | Household | Expenditure on goods/service |  | A01, A52 , EG01 → EG12 | 42083\n05 |  |  |  | A01, A52 , EG13 → EG27 | 42083\n06 |  |  |  | A01, A52 , EG28 → EG46 | 42083\n07 |  |  |  | A01, A52 , EG47 → EG60 | 42083\n08 |  |  |  | A01, A52 , EG61 → EG79 | 42083\n09 |  |  |  | A01, A52 , EG80 → EG93 | 42083\n10 |  |  |  | A01, A52 , EG94 → EG112 | 42083\n11 |  |  |  | A01, A52 , EG113 → EG121 | 42083\n12 | Household | Expenditure on food/beverage |  | A01, A52 , EF01 → EF17 | 42083\n13 | Individual | Income from wages/salary | REG, CWT, AREA,  NEW_HH_N,  IW01 | A01, A52 , OCC1 , IW02 → IW14      ( IW01 is HM01 in record 02 ) | 34845\n |  |  |  | (One person may be employed more than one occupation during the year but the survey | \n |  |  |  |   allowed for the maximum at three occupations.) | \n14 | Individual | Profit from non-farm business | REG, CWT, AREA,  NEW_HH_N,  IB01 | A01, A52 , OCC2 , IB02 → IB11      ( IB01 is HM01 in record 02 ) | 16083\n |  |  |  | (One person may run business more than one occupation during the year but the survey | \n |  |  |  |   allowed for the maximum at two occupations.) | \n15 | Household | Profit from farm business | REG, CWT, AREA,  NEW_HH_N | A01, A52 , IA01 → IA29 | 42083\n16 | Household | Income from other sources |  | A01, A52 , IO01 → IO14 | 42083\n17 | Household | Household asset and debt |  | A01, A52 , AD01 → AD26 | 42083\n18 sub 1 | Household | Migration and Remittance |  | A01, A52 , MR01 , MR02, MR03, MR13 ,  MP01, MP02, MP12 | 42083\n18 sub 2 | Individual | Out-migrant and HH inward-remittance | REG, CWT, AREA,  NEW_HH_N,  NN2 | A01, A52 , MR01 → MR13 | 7637\n18 sub 3 | Individual | Out-migrant and HH outward-remittance | REG, CWT, AREA,  NEW_HH_N,  NN3 | A01, A52 , MR01 , MP01 → MP12 | 3599\n25 | Household | Household debt repayment | REG, CWT, AREA,  NEW_HH_N | A01, A52 , AE01 → AE09 | 42083\n30 | Household | Main Shopping Place | REG, CWT, AREA,  NEW_HH_N | A01, A52 , SHOP01 → SHOP04 | 42083",
+   "provenance": {
+    "source_name": "Accompanying note SES2011 Data structure.xlsx",
+    "page": null,
+    "pages": [],
+    "sheet": "English",
+    "section_path": [
+     "English"
+    ],
+    "row_start": 1,
+    "row_end": 30
+   },
+   "table": {
+    "id": "table-000001",
+    "rows": [
+     [
+      "SES 2011 Data-file Structure in SPSS Format (For public)",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Record No.",
+      "Record type",
+      "Title",
+      "Identification",
+      "Fieldnames/variables",
+      "No. of observation"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "01",
+      "Household",
+      "Household summary",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01 → A53 , C01 → C23 , CON… , NCON… , FB… , TP… , WS… , PB… , PA…",
+      "42083"
+     ],
+     [
+      "02",
+      "Individual",
+      "Household members",
+      "REG, CWT, AREA,  NEW_HH_N, HM01",
+      "A01 , A52 , HM02 → HM41",
+      "128071"
+     ],
+     [
+      "03",
+      "Household",
+      "Household characteristics",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , HH01 → HH45",
+      "42083"
+     ],
+     [
+      "04",
+      "Household",
+      "Expenditure on goods/service",
+      "",
+      "A01, A52 , EG01 → EG12",
+      "42083"
+     ],
+     [
+      "05",
+      "",
+      "",
+      "",
+      "A01, A52 , EG13 → EG27",
+      "42083"
+     ],
+     [
+      "06",
+      "",
+      "",
+      "",
+      "A01, A52 , EG28 → EG46",
+      "42083"
+     ],
+     [
+      "07",
+      "",
+      "",
+      "",
+      "A01, A52 , EG47 → EG60",
+      "42083"
+     ],
+     [
+      "08",
+      "",
+      "",
+      "",
+      "A01, A52 , EG61 → EG79",
+      "42083"
+     ],
+     [
+      "09",
+      "",
+      "",
+      "",
+      "A01, A52 , EG80 → EG93",
+      "42083"
+     ],
+     [
+      "10",
+      "",
+      "",
+      "",
+      "A01, A52 , EG94 → EG112",
+      "42083"
+     ],
+     [
+      "11",
+      "",
+      "",
+      "",
+      "A01, A52 , EG113 → EG121",
+      "42083"
+     ],
+     [
+      "12",
+      "Household",
+      "Expenditure on food/beverage",
+      "",
+      "A01, A52 , EF01 → EF17",
+      "42083"
+     ],
+     [
+      "13",
+      "Individual",
+      "Income from wages/salary",
+      "REG, CWT, AREA,  NEW_HH_N,  IW01",
+      "A01, A52 , OCC1 , IW02 → IW14      ( IW01 is HM01 in record 02 )",
+      "34845"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "(One person may be employed more than one occupation during the year but the survey",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "  allowed for the maximum at three occupations.)",
+      ""
+     ],
+     [
+      "14",
+      "Individual",
+      "Profit from non-farm business",
+      "REG, CWT, AREA,  NEW_HH_N,  IB01",
+      "A01, A52 , OCC2 , IB02 → IB11      ( IB01 is HM01 in record 02 )",
+      "16083"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "(One person may run business more than one occupation during the year but the survey",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "  allowed for the maximum at two occupations.)",
+      ""
+     ],
+     [
+      "15",
+      "Household",
+      "Profit from farm business",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , IA01 → IA29",
+      "42083"
+     ],
+     [
+      "16",
+      "Household",
+      "Income from other sources",
+      "",
+      "A01, A52 , IO01 → IO14",
+      "42083"
+     ],
+     [
+      "17",
+      "Household",
+      "Household asset and debt",
+      "",
+      "A01, A52 , AD01 → AD26",
+      "42083"
+     ],
+     [
+      "18 sub 1",
+      "Household",
+      "Migration and Remittance",
+      "",
+      "A01, A52 , MR01 , MR02, MR03, MR13 ,  MP01, MP02, MP12",
+      "42083"
+     ],
+     [
+      "18 sub 2",
+      "Individual",
+      "Out-migrant and HH inward-remittance",
+      "REG, CWT, AREA,  NEW_HH_N,  NN2",
+      "A01, A52 , MR01 → MR13",
+      "7637"
+     ],
+     [
+      "18 sub 3",
+      "Individual",
+      "Out-migrant and HH outward-remittance",
+      "REG, CWT, AREA,  NEW_HH_N,  NN3",
+      "A01, A52 , MR01 , MP01 → MP12",
+      "3599"
+     ],
+     [
+      "25",
+      "Household",
+      "Household debt repayment",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , AE01 → AE09",
+      "42083"
+     ],
+     [
+      "30",
+      "Household",
+      "Main Shopping Place",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , SHOP01 → SHOP04",
+      "42083"
+     ]
+    ],
+    "provenance": {
+     "source_name": "Accompanying note SES2011 Data structure.xlsx",
+     "page": null,
+     "pages": [],
+     "sheet": "English",
+     "section_path": [
+      "English"
+     ],
+     "row_start": 1,
+     "row_end": 30
+    }
+   }
+  },
+  {
+   "id": "block-000002",
+   "order": 1,
+   "kind": "table",
+   "text": "โครงสร้างไฟล์ข้อมูล สศส.54 ในรูปแบบ SPSS Format (สำหรับเผยแพร่ทั่วไป) |  |  |  |  | \n |  |  |  |  | \nRecord ที่ | ประเภท Record | ชื่อหมวดรายการ | ตัวแปร Identification | ตัวแปรอื่นๆ ที่เกี่ยวข้อง | จำนวนข้อมูล\n |  |  |  |  | \n01 | รายครัวเรือน | สรุปข้อมูลครัวเรือน | REG, CWT, AREA,  NEW_HH_N | A01 → A53 , C01 → C23 , CON… , NCON… , FB… , TP… , WS… , PB… , PA… | 42083\n02 | รายคน | สมาชิกครัวเรือน | REG, CWT, AREA,  NEW_HH_N, HM01 | A01 , A52 , HM02 → HM41 | 128071\n03 | รายครัวเรือน | ลักษณะที่อยู่อาศัย | REG, CWT, AREA,  NEW_HH_N | A01, A52 , HH01 → HH45 | 42083\n04 | รายครัวเรือน | ค่าใช้จ่ายเกี่ยวกับสินค้าและบริการ |  | A01, A52 , EG01 → EG12 | 42083\n05 |  |  |  | A01, A52 , EG13 → EG27 | 42083\n06 |  |  |  | A01, A52 , EG28 → EG46 | 42083\n07 |  |  |  | A01, A52 , EG47 → EG60 | 42083\n08 |  |  |  | A01, A52 , EG61 → EG79 | 42083\n09 |  |  |  | A01, A52 , EG80 → EG93 | 42083\n10 |  |  |  | A01, A52 , EG94 → EG112 | 42083\n11 |  |  |  | A01, A52 , EG113 → EG121 | 42083\n12 | รายครัวเรือน | ค่าใช้จ่ายเกี่ยวกับอาหารฯ |  | A01, A52 , EF01 → EF17 | 42083\n13 | รายคน | รายได้จากค่าจ้างเงินเดือน | REG, CWT, AREA,  NEW_HH_N,  IW01 | A01, A52 , OCC1 , IW02 → IW14      ( IW01 คือ HM01 ใน record 02 ) | 34845\n |  |  |  | (บุคคลอาจมีการประกอบอาชีพรับค่าจ้างเงินเดือนมากกว่า 1 อาชีพในรอบปี | \n |  |  |  | แต่ในการสำรวจจะสอบถามมาไม่เกิน 3 อาชีพ) | \n14 | รายคน | กำไรจากการทำธุรกิจที่ไม่ใช่เกษตร | REG, CWT, AREA,  NEW_HH_N,  IB01 | A01, A52 , OCC2 , IB02 → IB11      ( IB01 คือ HM01 ใน  record 02 ) | 16083\n |  |  |  | (บุคคลอาจมีการประกอบอาชีพอิสระมากกว่า 1 อาชีพในรอบปี ในแต่การสำรวจ | \n |  |  |  | จะสอบถามมาไม่เกิน 2 อาชีพ) | \n15 | รายครัวเรือน | กำไรจากการทำการเกษตร | REG, CWT, AREA,  NEW_HH_N | A01, A52 , IA01 → IA29 | 42083\n16 | รายครัวเรือน | รายได้จากแหล่งอื่นๆ |  | A01, A52 , IO01 → IO14 | 42083\n17 | รายครัวเรือน | ทรัพย์สินและหนี้สิน |  | A01, A52 , AD01 → AD26 | 42083\n18 sub 1 | รายครัวเรือน | การย้ายถิ่นและโอนเงิน |  | A01, A52 , MR01 , MR02, MR03, MR13 ,  MP01, MP02, MP12 | 42083\n18 sub 2 | รายคน | การย้ายออกและการรับเงินโอน | REG, CWT, AREA,  NEW_HH_N,  NN2 | A01, A52 , MR01 → MR13 | 7637\n18 sub 3 | รายคน | การย้ายออกและการส่งเงินโอน | REG, CWT, AREA,  NEW_HH_N,  NN3 | A01, A52 , MR01 , MP01 → MP12 | 3599\n25 | รายครัวเรือน | การชำระหนี้ | REG, CWT, AREA,  NEW_HH_N | A01, A52 , AE01 → AE09 | 42083\n30 | รายครัวเรือน | แหล่งซื้อสินค้าอุปโภคบริโภคที่สำคัญ | REG, CWT, AREA,  NEW_HH_N | A01, A52 , SHOP01 → SHOP04 | 42083",
+   "provenance": {
+    "source_name": "Accompanying note SES2011 Data structure.xlsx",
+    "page": null,
+    "pages": [],
+    "sheet": "Thai",
+    "section_path": [
+     "Thai"
+    ],
+    "row_start": 1,
+    "row_end": 30
+   },
+   "table": {
+    "id": "table-000002",
+    "rows": [
+     [
+      "โครงสร้างไฟล์ข้อมูล สศส.54 ในรูปแบบ SPSS Format (สำหรับเผยแพร่ทั่วไป)",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Record ที่",
+      "ประเภท Record",
+      "ชื่อหมวดรายการ",
+      "ตัวแปร Identification",
+      "ตัวแปรอื่นๆ ที่เกี่ยวข้อง",
+      "จำนวนข้อมูล"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "01",
+      "รายครัวเรือน",
+      "สรุปข้อมูลครัวเรือน",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01 → A53 , C01 → C23 , CON… , NCON… , FB… , TP… , WS… , PB… , PA…",
+      "42083"
+     ],
+     [
+      "02",
+      "รายคน",
+      "สมาชิกครัวเรือน",
+      "REG, CWT, AREA,  NEW_HH_N, HM01",
+      "A01 , A52 , HM02 → HM41",
+      "128071"
+     ],
+     [
+      "03",
+      "รายครัวเรือน",
+      "ลักษณะที่อยู่อาศัย",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , HH01 → HH45",
+      "42083"
+     ],
+     [
+      "04",
+      "รายครัวเรือน",
+      "ค่าใช้จ่ายเกี่ยวกับสินค้าและบริการ",
+      "",
+      "A01, A52 , EG01 → EG12",
+      "42083"
+     ],
+     [
+      "05",
+      "",
+      "",
+      "",
+      "A01, A52 , EG13 → EG27",
+      "42083"
+     ],
+     [
+      "06",
+      "",
+      "",
+      "",
+      "A01, A52 , EG28 → EG46",
+      "42083"
+     ],
+     [
+      "07",
+      "",
+      "",
+      "",
+      "A01, A52 , EG47 → EG60",
+      "42083"
+     ],
+     [
+      "08",
+      "",
+      "",
+      "",
+      "A01, A52 , EG61 → EG79",
+      "42083"
+     ],
+     [
+      "09",
+      "",
+      "",
+      "",
+      "A01, A52 , EG80 → EG93",
+      "42083"
+     ],
+     [
+      "10",
+      "",
+      "",
+      "",
+      "A01, A52 , EG94 → EG112",
+      "42083"
+     ],
+     [
+      "11",
+      "",
+      "",
+      "",
+      "A01, A52 , EG113 → EG121",
+      "42083"
+     ],
+     [
+      "12",
+      "รายครัวเรือน",
+      "ค่าใช้จ่ายเกี่ยวกับอาหารฯ",
+      "",
+      "A01, A52 , EF01 → EF17",
+      "42083"
+     ],
+     [
+      "13",
+      "รายคน",
+      "รายได้จากค่าจ้างเงินเดือน",
+      "REG, CWT, AREA,  NEW_HH_N,  IW01",
+      "A01, A52 , OCC1 , IW02 → IW14      ( IW01 คือ HM01 ใน record 02 )",
+      "34845"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "(บุคคลอาจมีการประกอบอาชีพรับค่าจ้างเงินเดือนมากกว่า 1 อาชีพในรอบปี",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "แต่ในการสำรวจจะสอบถามมาไม่เกิน 3 อาชีพ)",
+      ""
+     ],
+     [
+      "14",
+      "รายคน",
+      "กำไรจากการทำธุรกิจที่ไม่ใช่เกษตร",
+      "REG, CWT, AREA,  NEW_HH_N,  IB01",
+      "A01, A52 , OCC2 , IB02 → IB11      ( IB01 คือ HM01 ใน  record 02 )",
+      "16083"
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "(บุคคลอาจมีการประกอบอาชีพอิสระมากกว่า 1 อาชีพในรอบปี ในแต่การสำรวจ",
+      ""
+     ],
+     [
+      "",
+      "",
+      "",
+      "",
+      "จะสอบถามมาไม่เกิน 2 อาชีพ)",
+      ""
+     ],
+     [
+      "15",
+      "รายครัวเรือน",
+      "กำไรจากการทำการเกษตร",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , IA01 → IA29",
+      "42083"
+     ],
+     [
+      "16",
+      "รายครัวเรือน",
+      "รายได้จากแหล่งอื่นๆ",
+      "",
+      "A01, A52 , IO01 → IO14",
+      "42083"
+     ],
+     [
+      "17",
+      "รายครัวเรือน",
+      "ทรัพย์สินและหนี้สิน",
+      "",
+      "A01, A52 , AD01 → AD26",
+      "42083"
+     ],
+     [
+      "18 sub 1",
+      "รายครัวเรือน",
+      "การย้ายถิ่นและโอนเงิน",
+      "",
+      "A01, A52 , MR01 , MR02, MR03, MR13 ,  MP01, MP02, MP12",
+      "42083"
+     ],
+     [
+      "18 sub 2",
+      "รายคน",
+      "การย้ายออกและการรับเงินโอน",
+      "REG, CWT, AREA,  NEW_HH_N,  NN2",
+      "A01, A52 , MR01 → MR13",
+      "7637"
+     ],
+     [
+      "18 sub 3",
+      "รายคน",
+      "การย้ายออกและการส่งเงินโอน",
+      "REG, CWT, AREA,  NEW_HH_N,  NN3",
+      "A01, A52 , MR01 , MP01 → MP12",
+      "3599"
+     ],
+     [
+      "25",
+      "รายครัวเรือน",
+      "การชำระหนี้",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , AE01 → AE09",
+      "42083"
+     ],
+     [
+      "30",
+      "รายครัวเรือน",
+      "แหล่งซื้อสินค้าอุปโภคบริโภคที่สำคัญ",
+      "REG, CWT, AREA,  NEW_HH_N",
+      "A01, A52 , SHOP01 → SHOP04",
+      "42083"
+     ]
+    ],
+    "provenance": {
+     "source_name": "Accompanying note SES2011 Data structure.xlsx",
+     "page": null,
+     "pages": [],
+     "sheet": "Thai",
+     "section_path": [
+      "Thai"
+     ],
+     "row_start": 1,
+     "row_end": 30
+    }
+   }
+  }
+ ],
+ "coverage": {
+  "unit": "document",
+  "total_units": 1,
+  "converted_units": [
+   1
+  ],
+  "failed_units": []
+ },
+ "diagnostics": [],
+ "snapshot_sha256": "26c98de3fd41b9c581548ab6e5b3362d5b62bcdd40abc52071e5bc8c2279d5d0",
+ "trust": "untrusted"
+}

@@ -1,0 +1,2945 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "counts": {
+    "absent": 28,
+    "produced": 17,
+    "produced_empty": 3
+  },
+  "targets": [
+    {
+      "target": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "age",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "HM04"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 128071,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "t1 shows continuous age in years (HM04) and no survey-defined age-band variable; per VAR-agecat canon, it is only used when continuous age is unavailable."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t2,t4,t6,t11,t13,t21)",
+              "terms": "age in months|months of age|DOB|date of birth"
+            }
+          ]
+        },
+        "text": "No child age-in-months / DOB-based month-age variable found; only HM04 age in years is present."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childyr",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "MOD-DEM-childyr_mask",
+        "column": "__derived.childyr__"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 120857,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 7214,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 7214,
+          "reasons": {
+            ".c": 120857
+          },
+          "nonsubstantive_share": 0.943672
+        }
+      },
+      "without_value_share": 0.943672
+    },
+    {
+      "target": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "disability|difficulty|communicat"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "concentrat|remember|difficulty"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+              "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+            }
+          ]
+        },
+        "text": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+              "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+            }
+          ]
+        },
+        "text": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t4,t7,t11,t12,t13,t21)",
+              "terms": "education|school|primary|secondary|tertiary|grade|diploma"
+            }
+          ]
+        },
+        "text": "No education attainment variable with labels/codes (primary/secondary/tertiary etc.) located; unable to populate education correspondence for this survey."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t11,t12)",
+              "terms": "years of education|educy|school years"
+            }
+          ]
+        },
+        "text": "No years-of-education variable located in any table (no identifiable education section variables found)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t4,t13)",
+              "terms": "ever attend|attended school|schooling"
+            }
+          ]
+        },
+        "text": "No 'ever attended school' variable located in any table (no identifiable education section variables found)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "see|eye|difficulty seeing|blind"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "hear|hearing|deaf"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t5)",
+              "terms": "language|mother tongue|spoken"
+            }
+          ]
+        },
+        "text": "No household member language variable located (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t2)",
+              "terms": "literacy|read|write"
+            }
+          ]
+        },
+        "text": "No literacy variable (read/write) located (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "male",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "HM03"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 60443,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 67628,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 128071,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "marital",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "HM10"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 22953,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 65611,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 9925,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "4",
+                "rows": 2121,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 2414,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 8,
+                "rule": "value_map",
+                "value": 2
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 25039,
+          "value_map": 103032,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 103032,
+          "reasons": {
+            ".a": 25039
+          },
+          "nonsubstantive_share": 0.195509
+        }
+      },
+      "without_value_share": 0.195509
+    },
+    {
+      "target": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t11,t13)",
+              "terms": "minimum age for education|education section age|mineducatage"
+            }
+          ]
+        },
+        "text": "Survey materials in this run do not provide the questionnaire universe for the education section, and no identifiable education section variables were found to infer onset."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t21)",
+              "terms": "primary completed|finished primary|primary graduation"
+            }
+          ]
+        },
+        "text": "No variable indicating primary completion located (no identifiable education section variables found)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "relationcs",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "HM02"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 128071,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "relationharm",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "HM02"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 194,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "1",
+                "rows": 42083,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 25460,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 26270,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 7125,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "5",
+                "rows": 4549,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "6",
+                "rows": 13264,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "7",
+                "rows": 3076,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "8",
+                "rows": 5678,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "9",
+                "rows": 372,
+                "rule": "value_map",
+                "value": 6
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 128071,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t4,t7,t13)",
+              "terms": "currently attending school|enrolled|in school"
+            }
+          ]
+        },
+        "text": "No current school enrollment variable located (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "self care|wash|dress|difficulty"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables via search(name,label,question,codes) (t6)",
+              "terms": "walk|climb|mobility|difficulty walking"
+            }
+          ]
+        },
+        "text": "No disability functioning questions/variables located in any table (search returned none)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm1_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "cwt"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "10",
+                "rows": 7740,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "11",
+                "rows": 1612,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "12",
+                "rows": 1682,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "13",
+                "rows": 1837,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "14",
+                "rows": 1496,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "15",
+                "rows": 1353,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "16",
+                "rows": 1675,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "17",
+                "rows": 1468,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "18",
+                "rows": 1374,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "19",
+                "rows": 1308,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "20",
+                "rows": 1570,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "21",
+                "rows": 1481,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "22",
+                "rows": 1302,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "23",
+                "rows": 1538,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "24",
+                "rows": 1424,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "25",
+                "rows": 1088,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "26",
+                "rows": 1209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "27",
+                "rows": 1688,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "30",
+                "rows": 1853,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "31",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "32",
+                "rows": 1909,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "33",
+                "rows": 1683,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "34",
+                "rows": 2168,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "35",
+                "rows": 1741,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "36",
+                "rows": 1845,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "37",
+                "rows": 1644,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "39",
+                "rows": 1664,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "40",
+                "rows": 1867,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "41",
+                "rows": 1912,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "42",
+                "rows": 1827,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 1876,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "44",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "45",
+                "rows": 2069,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "46",
+                "rows": 2209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "47",
+                "rows": 2017,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "48",
+                "rows": 1716,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "49",
+                "rows": 1530,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "50",
+                "rows": 1629,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "51",
+                "rows": 1819,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "52",
+                "rows": 2154,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "53",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "54",
+                "rows": 1842,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "55",
+                "rows": 1786,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "56",
+                "rows": 1887,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "57",
+                "rows": 1854,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "58",
+                "rows": 1519,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "60",
+                "rows": 1818,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "61",
+                "rows": 1632,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "62",
+                "rows": 1501,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "63",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "64",
+                "rows": 1567,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "65",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "66",
+                "rows": 1500,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "67",
+                "rows": 1670,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "70",
+                "rows": 1254,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "71",
+                "rows": 1492,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "72",
+                "rows": 1490,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "73",
+                "rows": 1377,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "74",
+                "rows": 1286,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "75",
+                "rows": 1239,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "76",
+                "rows": 1516,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "77",
+                "rows": 1764,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "80",
+                "rows": 1240,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "81",
+                "rows": 1197,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "82",
+                "rows": 928,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "83",
+                "rows": 877,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "84",
+                "rows": 1717,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "85",
+                "rows": 1333,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "86",
+                "rows": 1300,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "90",
+                "rows": 1529,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "91",
+                "rows": 1344,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "92",
+                "rows": 1365,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "93",
+                "rows": 1342,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "94",
+                "rows": 1677,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "95",
+                "rows": 1367,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "96",
+                "rows": 1661,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 128071,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 0,
+          "reasons": {
+            ".b": 128071
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm2_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "cwt"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "10",
+                "rows": 7740,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "11",
+                "rows": 1612,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "12",
+                "rows": 1682,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "13",
+                "rows": 1837,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "14",
+                "rows": 1496,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "15",
+                "rows": 1353,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "16",
+                "rows": 1675,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "17",
+                "rows": 1468,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "18",
+                "rows": 1374,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "19",
+                "rows": 1308,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "20",
+                "rows": 1570,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "21",
+                "rows": 1481,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "22",
+                "rows": 1302,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "23",
+                "rows": 1538,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "24",
+                "rows": 1424,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "25",
+                "rows": 1088,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "26",
+                "rows": 1209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "27",
+                "rows": 1688,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "30",
+                "rows": 1853,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "31",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "32",
+                "rows": 1909,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "33",
+                "rows": 1683,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "34",
+                "rows": 2168,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "35",
+                "rows": 1741,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "36",
+                "rows": 1845,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "37",
+                "rows": 1644,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "39",
+                "rows": 1664,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "40",
+                "rows": 1867,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "41",
+                "rows": 1912,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "42",
+                "rows": 1827,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 1876,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "44",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "45",
+                "rows": 2069,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "46",
+                "rows": 2209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "47",
+                "rows": 2017,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "48",
+                "rows": 1716,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "49",
+                "rows": 1530,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "50",
+                "rows": 1629,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "51",
+                "rows": 1819,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "52",
+                "rows": 2154,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "53",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "54",
+                "rows": 1842,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "55",
+                "rows": 1786,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "56",
+                "rows": 1887,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "57",
+                "rows": 1854,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "58",
+                "rows": 1519,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "60",
+                "rows": 1818,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "61",
+                "rows": 1632,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "62",
+                "rows": 1501,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "63",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "64",
+                "rows": 1567,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "65",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "66",
+                "rows": 1500,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "67",
+                "rows": 1670,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "70",
+                "rows": 1254,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "71",
+                "rows": 1492,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "72",
+                "rows": 1490,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "73",
+                "rows": 1377,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "74",
+                "rows": 1286,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "75",
+                "rows": 1239,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "76",
+                "rows": 1516,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "77",
+                "rows": 1764,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "80",
+                "rows": 1240,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "81",
+                "rows": 1197,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "82",
+                "rows": 928,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "83",
+                "rows": 877,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "84",
+                "rows": 1717,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "85",
+                "rows": 1333,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "86",
+                "rows": 1300,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "90",
+                "rows": 1529,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "91",
+                "rows": 1344,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "92",
+                "rows": 1365,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "93",
+                "rows": 1342,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "94",
+                "rows": 1677,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "95",
+                "rows": 1367,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "96",
+                "rows": 1661,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 128071,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 0,
+          "reasons": {
+            ".b": 128071
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "geo_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "cwt"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "10",
+                "rows": 7740,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "11",
+                "rows": 1612,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "12",
+                "rows": 1682,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "13",
+                "rows": 1837,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "14",
+                "rows": 1496,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "15",
+                "rows": 1353,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "16",
+                "rows": 1675,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "17",
+                "rows": 1468,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "18",
+                "rows": 1374,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "19",
+                "rows": 1308,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "20",
+                "rows": 1570,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "21",
+                "rows": 1481,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "22",
+                "rows": 1302,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "23",
+                "rows": 1538,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "24",
+                "rows": 1424,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "25",
+                "rows": 1088,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "26",
+                "rows": 1209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "27",
+                "rows": 1688,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "30",
+                "rows": 1853,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "31",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "32",
+                "rows": 1909,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "33",
+                "rows": 1683,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "34",
+                "rows": 2168,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "35",
+                "rows": 1741,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "36",
+                "rows": 1845,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "37",
+                "rows": 1644,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "39",
+                "rows": 1664,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "40",
+                "rows": 1867,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "41",
+                "rows": 1912,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "42",
+                "rows": 1827,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 1876,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "44",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "45",
+                "rows": 2069,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "46",
+                "rows": 2209,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "47",
+                "rows": 2017,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "48",
+                "rows": 1716,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "49",
+                "rows": 1530,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "50",
+                "rows": 1629,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "51",
+                "rows": 1819,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "52",
+                "rows": 2154,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "53",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "54",
+                "rows": 1842,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "55",
+                "rows": 1786,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "56",
+                "rows": 1887,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "57",
+                "rows": 1854,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "58",
+                "rows": 1519,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "60",
+                "rows": 1818,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "61",
+                "rows": 1632,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "62",
+                "rows": 1501,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "63",
+                "rows": 1706,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "64",
+                "rows": 1567,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "65",
+                "rows": 1937,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "66",
+                "rows": 1500,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "67",
+                "rows": 1670,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "70",
+                "rows": 1254,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "71",
+                "rows": 1492,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "72",
+                "rows": 1490,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "73",
+                "rows": 1377,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "74",
+                "rows": 1286,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "75",
+                "rows": 1239,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "76",
+                "rows": 1516,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "77",
+                "rows": 1764,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "80",
+                "rows": 1240,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "81",
+                "rows": 1197,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "82",
+                "rows": 928,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "83",
+                "rows": 877,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "84",
+                "rows": 1717,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "85",
+                "rows": 1333,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "86",
+                "rows": 1300,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "90",
+                "rows": 1529,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "91",
+                "rows": 1344,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "92",
+                "rows": 1365,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "93",
+                "rows": 1342,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "94",
+                "rows": 1677,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "95",
+                "rows": 1367,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "96",
+                "rows": 1661,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 128071,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 0,
+          "reasons": {
+            ".b": 128071
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search)",
+              "terms": "psu"
+            },
+            {
+              "in": "all tables (search)",
+              "terms": "cluster"
+            },
+            {
+              "in": "all tables (search regex)",
+              "terms": "ea|enumeration"
+            }
+          ]
+        },
+        "text": "No PSU/cluster identifier column found in survey tables after searching for psu/cluster/enumeration area terms; rec01 geography fields are cwt/reg/area only (t18)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search)",
+              "terms": "strata"
+            },
+            {
+              "in": "all tables (search regex)",
+              "terms": "strat|psu|clust"
+            }
+          ]
+        },
+        "text": "No strata/stratum variable found in survey tables after searching for strata/stratum/sample design terms; only geography fields present are cwt/reg/area (t18,t25)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatid1",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "cwt"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 128071,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "VAR-subnatid1prev is derived from VAR-geocode via the country crosswalk (canon t31). This survey/canon has no national-standard geography categories for correspondence linking, so VAR-geocode cannot be resolved to a crosswalk code; therefore prior-boundary subnatid*_prev cannot be produced in this spec."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search)",
+              "terms": "district"
+            },
+            {
+              "in": "all tables (search)",
+              "terms": "tambon"
+            },
+            {
+              "in": "all tables (search)",
+              "terms": "amp"
+            }
+          ]
+        },
+        "text": "No second-level admin identifier (e.g., district/amphoe/tambon) column found; only Changwat (province) and Region present (t25,t11)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "VAR-subnatid2prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search)",
+              "terms": "district"
+            },
+            {
+              "in": "all tables (search)",
+              "terms": "tambon"
+            }
+          ]
+        },
+        "text": "No third-level admin identifier column found beyond Changwat (province) and Region (t25,t11)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "VAR-subnatid3prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "all tables (search)",
+              "terms": "village"
+            },
+            {
+              "in": "all tables (search)",
+              "terms": "tambon"
+            }
+          ]
+        },
+        "text": "No fourth-level/lowest admin identifier column found beyond Changwat (province) and Region (t25,t11)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "VAR-subnatid4prev is derived from VAR-geocode via the country crosswalk (canon t31). With no resolvable VAR-geocode for this survey/canon, cannot derive subnatid*_prev."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatidsurvey",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "cwt"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 128071,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "urban",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "area"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 74898,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 53173,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 128071,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "countrycode",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "int_month",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "A01"
+      },
+      "build": {
+        "recode": {
+          "rows": 42083,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 42083,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "whole survey columns via search tool",
+              "terms": "year interview enumeration date"
+            },
+            {
+              "in": "ses54_user_rec02",
+              "terms": "columns ses54_user_rec02"
+            }
+          ]
+        },
+        "text": "No interview/enumeration year variable found: search in column names/labels/questions/codes for year/interview/enumeration/date and reviewed ses54_user_rec02 column list; only enumeration month (A01) and weight (A52) present among matches [t3,t5]."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "weight",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "A52"
+      },
+      "build": {
+        "recode": {
+          "rows": 42083,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 42083,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 128071,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 128071,
+          "values": 128071,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    }
+  ]
+}

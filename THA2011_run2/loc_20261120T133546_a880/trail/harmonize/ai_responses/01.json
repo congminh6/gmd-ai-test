@@ -1,0 +1,78 @@
+{
+ "request_id": "01-locate_sources-MOD-IDN",
+ "routing": {
+  "VAR-intmonth": [
+   {
+    "survey_module": "ses54_user_rec01",
+    "column": "A01",
+    "why": "Enumeration Month; coded 1-12 so likely interview/enumeration month (HH-level)."
+   },
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "A01",
+    "why": "Enumeration Month repeated across roster; candidate if using member/roster file."
+   },
+   {
+    "survey_module": "ses54_user_rec03",
+    "column": "A01",
+    "why": "Enumeration Month repeated in another HH file; candidate source."
+   },
+   {
+    "survey_module": "ses54_user_rec13",
+    "column": "A01",
+    "why": "Enumeration Month repeated in another roster file; candidate source."
+   },
+   {
+    "survey_module": "ses54_user_rec16",
+    "column": "a01",
+    "why": "enumeration month in alternative casing; candidate source."
+   }
+  ],
+  "VAR-weight": [
+   {
+    "survey_module": "ses54_user_rec01",
+    "column": "A52",
+    "why": "Household weight (continuous) at HH grain NEW_HH_N."
+   },
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "A52",
+    "why": "Household weight repeated in roster file; candidate source."
+   },
+   {
+    "survey_module": "ses54_user_rec03",
+    "column": "A52",
+    "why": "Household weight repeated in another HH file; candidate source."
+   },
+   {
+    "survey_module": "ses54_user_rec13",
+    "column": "A52",
+    "why": "Household weight repeated in another roster file; candidate source."
+   },
+   {
+    "survey_module": "ses54_user_rec16",
+    "column": "a52",
+    "why": "household weight (lowercase) in alternative file; candidate source."
+   }
+  ],
+  "VAR-countrycode": [
+   {
+    "survey_module": "ses54_user_rec01",
+    "why": "No country identifier column apparent in the survey index; likely authored as constant from survey identity (ISO3) rather than extracted."
+   }
+  ],
+  "VAR-intyear": [
+   {
+    "survey_module": "ses54_user_rec01",
+    "why": "No interview year/date field apparent in the survey index; likely sourced from survey metadata (fieldwork year) rather than a data column."
+   }
+  ],
+  "VAR-year": [
+   {
+    "survey_module": "ses54_user_rec01",
+    "why": "No survey year variable apparent in the survey index; likely authored from survey identity/metadata (start year) rather than extracted."
+   }
+  ]
+ },
+ "notes": "Evidence: intmonth/weight from column cards t9 and t8; absence of year/date from searches t5,t6,t4; weight/month presence across modules from searches t2,t3 and index t1."
+}

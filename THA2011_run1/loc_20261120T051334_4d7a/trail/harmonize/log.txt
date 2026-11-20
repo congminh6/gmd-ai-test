@@ -1,0 +1,85 @@
+# harmonize THA_2011_HSES @ 2026-11-20T05:13:34+00:00
+  data=C:\temp\test\surveys\THA_2011_HSES\Data  modules=['MOD-IDN', 'MOD-GEO', 'MOD-DEM']  direct=True
+  profile review: approved by zs (profile 0d641efc323d)
+  identity: survey-harmonization local (testing — no sync stamp); canon 0.1.0+eaa25bb9; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'THA_2011_HSES/Data': the data is unversioned
+
+== Phase B — spec-fill ==
+  [det] handoff
+    input profile/data_scan.json  sha256=b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473
+    input profile/instruments.json  sha256=f114ced6f2edf9f0cb8eb5ffd120d49e0edb56efa7a4ea8d6800e87235126393
+    input profile/key_checks.json  sha256=a7cc7c22ebe3f627f3caf0fae28676e50e1c05e8f512f207b5df6f0741ff2b1b
+    input profile/overlay.json  sha256=b027db2710dcb1af7d945ba9b341411fc72c06533556884a64aa914d2e862ecd
+    profile 0d641efc323db75e76e1d14bd6ba40765501d106989fe58ab477f7f9cb5230bc — approved by zs at 2026-11-20T05:13:34+00:00
+  [det] scaffold-header
+  [det] pin-source-inventory
+  [det] pin-grain
+  [det] modules
+  [det] bind-standard
+  [det] pin-engine-ids
+  [judge] locate-sources
+    AI CALL [locate_sources / MOD-IDN] → trail\harmonize\ai_calls\01_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-IDN] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\01.json via submit (2286 bytes)
+    notes: Month and weight are explicit (A01/A52). No columns surfaced for ISO3 or year/intyear via index search; may be constants from survey identity.
+    AI CALL [locate_sources / MOD-GEO] → trail\harmonize\ai_calls\02_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-GEO] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\02.json via submit (1660 bytes)
+    AI CALL [locate_sources / MOD-DEM] → trail\harmonize\ai_calls\03_locate_sources.brief.md
+    DIRECT [locate_sources / MOD-DEM] — 6 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\03.json via submit (2210 bytes)
+    notes: Most columns have empty labels/questions; only a few rec02 HMxx variables expose value labels (relationship, sex, marital). Education, schooling, literacy, language, and disability sources were not identifiable from available metadata.
+  [judge] author-bindings
+    AI CALL [author_bindings / MOD-IDN] → trail\harmonize\ai_calls\04_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-IDN] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\04.json via submit (2500 bytes)
+    reconciled binding_id 'B-intmonth' → 'B-int_month' (by target VAR-intmonth)
+    AI CALL [author_bindings / MOD-GEO] → trail\harmonize\ai_calls\05_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-GEO] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\05.json via submit (24072 bytes)
+    reconciled binding_id 'B-geocode' → 'B-geo_code' (by target VAR-geocode)
+    reconciled binding_id 'B-gauladm1code' → 'B-gaul_adm1_code' (by target VAR-gauladm1code)
+    reconciled binding_id 'B-gauladm2code' → 'B-gaul_adm2_code' (by target VAR-gauladm2code)
+    AI CALL [author_bindings / MOD-DEM] → trail\harmonize\ai_calls\06_author_bindings.brief.md
+    DIRECT [author_bindings / MOD-DEM] — 10 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\06.json via submit (10267 bytes, + MOD-DEM-childyr_mask.py)
+    notes: Only age/sex/marital/relation variables were identifiable in the provided survey metadata; no labeled education/disability/literacy/language/schooling columns were discoverable via text search.
+  [judge] review-prelude
+    AI CALL [review_prelude / survey] → trail\harmonize\ai_calls\07_review_prelude.brief.md
+    DIRECT [review_prelude / survey] — 4 tool(s), budget 80 call(s)
+    received trail\harmonize\ai_responses\07.json via submit (621 bytes)
+    prelude MOD-DEM-childyr_mask: a concern (advisory: its dry run passed) — The masking only applies `age < 5`; it does not guard against sentinel/invalid numeric ages (e.g., negative sentinel codes) that would still satisfy `<5` and be written into `__derived.childyr__`, vio
+  CHECK B: ok — validate clean
+
+== Phase E — run ==
+  [det] stamp
+        resolved: B-gaul_adm1_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)
+        resolved: B-gaul_adm2_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)
+        resolved: B-geo_code: raw_value 'ses54_user_rec02.cwt' (from correspondence.geography)
+        kind: ses54_user_rec03.A01: numeric
+        kind: ses54_user_rec03.A52: numeric
+        kind: ses54_user_rec02.cwt: numeric
+        kind: ses54_user_rec02.area: numeric
+        kind: ses54_user_rec02.HM04: numeric
+        kind: ses54_user_rec02.HM03: numeric
+        kind: ses54_user_rec02.HM10: numeric
+        kind: ses54_user_rec02.HM02: numeric
+        key-correspondence: ses54_user_rec16: {'new_hh_n': 'NEW_HH_N'}
+      VALID: hspec.json stamped (validator v2, 2026-11-20T08:42:18+00:00); coverage bound 20, documented 28
+  [det] lock
+  [rebuild] hspec-run — its inputs changed since it last ran
+  [det] hspec-run
+      PASS — 128071 rows, 20 target(s); contract clean. Outputs in C:\Users\wb327173\.harmon\work\runs\loc_20261120T051334_4d7a\output
+  CHECK E: ok — harmonized output: present (output\harmonized.dta)
+
+== Phase F — qa ==
+  [rebuild] quality — its inputs changed since it last ran
+  [det] quality
+    quality → C:\Users\wb327173\.harmon\work\runs\loc_20261120T051334_4d7a\output\quality.json: 20 targets; 1/44 checks flagged; 0 universe cells; no reference
+  CHECK F: ok — 20 targets; 1/44 checks flagged; 0 universe cells; no reference
+
+== Phase G — record ==
+  [det] lock
+  CHECK G: ok — run.lock.json: present (run.lock.json)
+
+== all phases complete ==

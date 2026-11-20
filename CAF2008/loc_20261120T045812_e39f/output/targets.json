@@ -1,0 +1,2695 @@
+{
+  "survey_id": "CAF_2008_ECASEB",
+  "counts": {
+    "absent": 10,
+    "deferred": 1,
+    "produced": 28,
+    "produced_empty": 9
+  },
+  "targets": [
+    {
+      "target": "VAR-age",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "age",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "b4"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 31966,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-agecat",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "Survey records age as continuous years (indata.b4); no age-band variable is present/needed (t2)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-childmth",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": null,
+      "outcome": "deferred",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-age"
+          ]
+        },
+        "text": "Only age in completed years (indata.b4) is available; age-in-months for under-5 cannot be derived without date of birth or months data (t2)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-childyr",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "childyr",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "b4"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 25830,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6136,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 6136,
+          "reasons": {
+            ".c": 25830
+          },
+          "nonsubstantive_share": 0.808046
+        }
+      },
+      "without_value_share": 0.808046
+    },
+    {
+      "target": "VAR-communicationdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "comm_dsablty",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No communication-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-concentrationdisorder",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "conc_dsord",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No concentration-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-educat4",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat4",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 67,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 136,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "11",
+                "rows": 1358,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "12",
+                "rows": 1852,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "13",
+                "rows": 2085,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "14",
+                "rows": 1665,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "15",
+                "rows": 1721,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "16",
+                "rows": 2087,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "21",
+                "rows": 1048,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "22",
+                "rows": 794,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "23",
+                "rows": 677,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "24",
+                "rows": 642,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "25",
+                "rows": 338,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "26",
+                "rows": 328,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "27",
+                "rows": 396,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "31",
+                "rows": 68,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "32",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "33",
+                "rows": 94,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "41",
+                "rows": 151,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "42",
+                "rows": 71,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 36,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8487,
+          "null": 7814,
+          "value_map": 15558,
+          "to_missing": 107,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 15558,
+          "reasons": {
+            ".b": 7921,
+            ".c": 8487
+          },
+          "nonsubstantive_share": 0.513295
+        }
+      },
+      "without_value_share": 0.513295
+    },
+    {
+      "target": "VAR-educat5",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat5",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 67,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 136,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "11",
+                "rows": 1358,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "12",
+                "rows": 1852,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "13",
+                "rows": 2085,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "14",
+                "rows": 1665,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "15",
+                "rows": 1721,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "16",
+                "rows": 2087,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "21",
+                "rows": 1048,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "22",
+                "rows": 794,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "23",
+                "rows": 677,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "24",
+                "rows": 642,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "25",
+                "rows": 338,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "26",
+                "rows": 328,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "27",
+                "rows": 396,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "31",
+                "rows": 68,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "32",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "33",
+                "rows": 94,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "41",
+                "rows": 151,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "42",
+                "rows": 71,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 36,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8487,
+          "null": 7814,
+          "value_map": 15558,
+          "to_missing": 107,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 15558,
+          "reasons": {
+            ".b": 7921,
+            ".c": 8487
+          },
+          "nonsubstantive_share": 0.513295
+        }
+      },
+      "without_value_share": 0.513295
+    },
+    {
+      "target": "VAR-educat7",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educat7",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 67,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "1",
+                "rows": 136,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "11",
+                "rows": 1358,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "12",
+                "rows": 1852,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "13",
+                "rows": 2085,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "14",
+                "rows": 1665,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "15",
+                "rows": 1721,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "16",
+                "rows": 2087,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "21",
+                "rows": 1048,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "22",
+                "rows": 794,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "23",
+                "rows": 677,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "24",
+                "rows": 642,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "25",
+                "rows": 338,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "26",
+                "rows": 328,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "27",
+                "rows": 396,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "31",
+                "rows": 68,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "32",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "33",
+                "rows": 94,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "41",
+                "rows": 151,
+                "rule": "value_map",
+                "value": 7
+              },
+              {
+                "code": "42",
+                "rows": 71,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 36,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8487,
+          "null": 7814,
+          "value_map": 15558,
+          "to_missing": 107,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 15558,
+          "reasons": {
+            ".b": 7921,
+            ".c": 8487
+          },
+          "nonsubstantive_share": 0.513295
+        }
+      },
+      "without_value_share": 0.513295
+    },
+    {
+      "target": "VAR-educy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "educy",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 67,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "1",
+                "rows": 136,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "11",
+                "rows": 1358,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "12",
+                "rows": 1852,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "13",
+                "rows": 2085,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "14",
+                "rows": 1665,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "15",
+                "rows": 1721,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "16",
+                "rows": 2087,
+                "rule": "value_map",
+                "value": 6
+              },
+              {
+                "code": "21",
+                "rows": 1048,
+                "rule": "value_map",
+                "value": 10
+              },
+              {
+                "code": "22",
+                "rows": 794,
+                "rule": "value_map",
+                "value": 10
+              },
+              {
+                "code": "23",
+                "rows": 677,
+                "rule": "value_map",
+                "value": 10
+              },
+              {
+                "code": "24",
+                "rows": 642,
+                "rule": "value_map",
+                "value": 10
+              },
+              {
+                "code": "25",
+                "rows": 338,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "26",
+                "rows": 328,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "27",
+                "rows": 396,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "31",
+                "rows": 68,
+                "rule": "value_map",
+                "value": 9
+              },
+              {
+                "code": "32",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 12
+              },
+              {
+                "code": "33",
+                "rows": 94,
+                "rule": "value_map",
+                "value": 14
+              },
+              {
+                "code": "41",
+                "rows": 151,
+                "rule": "value_map",
+                "value": 14
+              },
+              {
+                "code": "42",
+                "rows": 71,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "43",
+                "rows": 36,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8487,
+          "null": 7814,
+          "value_map": 15558,
+          "to_missing": 107,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 15558,
+          "reasons": {
+            ".b": 7921,
+            ".c": 8487
+          },
+          "nonsubstantive_share": 0.513295
+        }
+      },
+      "without_value_share": 0.513295
+    },
+    {
+      "target": "VAR-everattend",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "everattend",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c2"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 16505,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 15394,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 67,
+          "value_map": 31899,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31899,
+          "reasons": {
+            ".b": 67
+          },
+          "nonsubstantive_share": 0.002096
+        }
+      },
+      "without_value_share": 0.002096
+    },
+    {
+      "target": "VAR-eyedisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "eye_dsablty",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No vision-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-heardisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "hear_dsablty",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No hearing-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-language",
+      "module": "MOD-DEM",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "table indata",
+              "terms": "langue | language | dialect | ethnie"
+            }
+          ]
+        },
+        "text": "No language variable found in indata; search for langue/language matched only literacy item wording (t3)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-literacy",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "literacy",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c1"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 8143,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 8834,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 14989,
+          "value_map": 16977,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 16977,
+          "reasons": {
+            ".b": 14989
+          },
+          "nonsubstantive_share": 0.468904
+        }
+      },
+      "without_value_share": 0.468904
+    },
+    {
+      "target": "VAR-male",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "male",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "b1"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 15686,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 16280,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 31966,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-marital",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "marital",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "b5"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 5713,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 5883,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 1311,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "4",
+                "rows": 3869,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "5",
+                "rows": 1178,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "6",
+                "rows": 1095,
+                "rule": "value_map",
+                "value": 4
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 12917,
+          "value_map": 19049,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-mineducatage",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "mineducatage",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-primarycomp",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "primarycomp",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "0",
+                "rows": 67,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "1",
+                "rows": 136,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "11",
+                "rows": 1358,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "12",
+                "rows": 1852,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "13",
+                "rows": 2085,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "14",
+                "rows": 1665,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "15",
+                "rows": 1721,
+                "rule": "value_map",
+                "value": 0
+              },
+              {
+                "code": "16",
+                "rows": 2087,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "21",
+                "rows": 1048,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "22",
+                "rows": 794,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "23",
+                "rows": 677,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "24",
+                "rows": 642,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "25",
+                "rows": 338,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "26",
+                "rows": 328,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "27",
+                "rows": 396,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "31",
+                "rows": 68,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "32",
+                "rows": 51,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "33",
+                "rows": 94,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "41",
+                "rows": 151,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "42",
+                "rows": 71,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "43",
+                "rows": 36,
+                "rule": "value_map",
+                "value": 1
+              }
+            ],
+            "more": 0
+          },
+          "gate": 8487,
+          "null": 7814,
+          "value_map": 15665,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 15665,
+          "reasons": {
+            ".b": 7814,
+            ".c": 8487
+          },
+          "nonsubstantive_share": 0.509948
+        }
+      },
+      "without_value_share": 0.509948
+    },
+    {
+      "target": "VAR-relationcs",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "relationcs",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "b3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 31966,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-relationharm",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "relationharm",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "b3"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 6897,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 4776,
+                "rule": "value_map",
+                "value": 2
+              },
+              {
+                "code": "3",
+                "rows": 14626,
+                "rule": "value_map",
+                "value": 3
+              },
+              {
+                "code": "4",
+                "rows": 1202,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "5",
+                "rows": 232,
+                "rule": "value_map",
+                "value": 4
+              },
+              {
+                "code": "6",
+                "rows": 1945,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "7",
+                "rows": 2036,
+                "rule": "value_map",
+                "value": 5
+              },
+              {
+                "code": "8",
+                "rows": 252,
+                "rule": "value_map",
+                "value": 6
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 31966,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-school",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "school",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "c5"
+      },
+      "build": {
+        "recode": {
+          "rows": 31966,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 6947,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 9556,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 15463,
+          "value_map": 16503,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 16503,
+          "reasons": {
+            ".b": 15463
+          },
+          "nonsubstantive_share": 0.483733
+        }
+      },
+      "without_value_share": 0.483733
+    },
+    {
+      "target": "VAR-selfcaredisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "slfcre_dsablty",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No self-care difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-walkdisability",
+      "module": "MOD-DEM",
+      "tier": 1,
+      "column": "walk_dsablty",
+      "outcome": "produced_empty",
+      "reason": {
+        "kind": "not_constructed",
+        "params": {
+          "register": "cannot_determine"
+        },
+        "text": "No walking-difficulty item; only yes/no handicap/infirmity item indata.d3 cannot be mapped to 4-level difficulty scale (06:t1)."
+      },
+      "route": {
+        "kind": "passthrough",
+        "column": "d3"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-gauladm1code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm1_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "region"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 1129,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "2",
+                "rows": 1084,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "3",
+                "rows": 839,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "4",
+                "rows": 1123,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "5",
+                "rows": 1019,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "6",
+                "rows": 1128,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "7",
+                "rows": 575,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 6897,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-gauladm2code",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "gaul_adm2_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "region"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 1129,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "2",
+                "rows": 1084,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "3",
+                "rows": 839,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "4",
+                "rows": 1123,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "5",
+                "rows": 1019,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "6",
+                "rows": 1128,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "7",
+                "rows": 575,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 6897,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-geocode",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "geo_code",
+      "outcome": "produced_empty",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "region"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 1129,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "2",
+                "rows": 1084,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "3",
+                "rows": 839,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "4",
+                "rows": 1123,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "5",
+                "rows": 1019,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "6",
+                "rows": 1128,
+                "rule": "to_missing",
+                "reason": ".b"
+              },
+              {
+                "code": "7",
+                "rows": 575,
+                "rule": "to_missing",
+                "reason": ".b"
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 6897,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 0,
+          "reasons": {
+            ".b": 31966
+          },
+          "nonsubstantive_share": 1.0
+        }
+      },
+      "without_value_share": 1.0
+    },
+    {
+      "target": "VAR-psu",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "psu",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "a1"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6897,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-strata",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "searched_not_found",
+        "params": {
+          "searches": [
+            {
+              "in": "name,label,question,codes",
+              "terms": "strate|stratum|strata"
+            }
+          ]
+        },
+        "text": "Searched for strata/strate/stratum wording; only candidate is indata.deflator labelled 'Strate deflator' but it is a continuous deflator factor (not a stratum identifier). No categorical stratum-id column found."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid1",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatid1",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "region"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6897,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-subnatid1prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "subnatid1prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No second-level admin identifier collected (only region present)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid2prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "subnatid2prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No third-level admin identifier collected (only region present)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid3prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "subnatid3prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "not_collected_by_design",
+        "params": {},
+        "text": "No fourth-level admin identifier collected (only region present)."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatid4prev",
+      "module": "MOD-GEO",
+      "tier": 2,
+      "column": null,
+      "outcome": "absent",
+      "reason": {
+        "kind": "derivable_not_built",
+        "params": {
+          "needs": [
+            "VAR-geocode"
+          ]
+        },
+        "text": "subnatid4prev is derived from VAR-geocode (prior-boundary crosswalk); this survey provides no governed geography crosswalk categories, so the prior-boundary derivation cannot be produced here."
+      },
+      "route": null,
+      "build": null
+    },
+    {
+      "target": "VAR-subnatidsurvey",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "subnatidsurvey",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "region"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6897,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-urban",
+      "module": "MOD-GEO",
+      "tier": 1,
+      "column": "urban",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "direct",
+        "column": "urru"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "table": {
+            "codes": [
+              {
+                "code": "1",
+                "rows": 3935,
+                "rule": "value_map",
+                "value": 1
+              },
+              {
+                "code": "2",
+                "rows": 2962,
+                "rule": "value_map",
+                "value": 0
+              }
+            ],
+            "more": 0
+          },
+          "gate": 0,
+          "null": 0,
+          "value_map": 6897,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 0,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-countrycode",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "countrycode",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-hhidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "hhid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "household"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-intmonth",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "int_month",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "MOD-IDN-parse_intdate",
+        "column": "__derived.intmonth__"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 1,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6896,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31961,
+          "reasons": {
+            ".b": 5
+          },
+          "nonsubstantive_share": 0.000156
+        }
+      },
+      "without_value_share": 0.000156
+    },
+    {
+      "target": "VAR-intyear",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "int_year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "derived",
+        "prelude": "MOD-IDN-parse_intdate",
+        "column": "__derived.intyear__"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 1,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6896,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31961,
+          "reasons": {
+            ".b": 5
+          },
+          "nonsubstantive_share": 0.000156
+        }
+      },
+      "without_value_share": 0.000156
+    },
+    {
+      "target": "VAR-pid",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-pidorig",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "pid_orig",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "grain_id",
+        "level": "person"
+      },
+      "build": {
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-weight",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "weight",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "passthrough",
+        "column": "hhweight"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "raw_type": "numeric",
+          "sentinels": {},
+          "flags_seen": {},
+          "unmapped_codes": {},
+          "unmapped_share": 0.0,
+          "unwaived": 0,
+          "waiver": null,
+          "gate": 0,
+          "null": 0,
+          "value_map": 0,
+          "to_missing": 0,
+          "specific": 0,
+          "unmapped": 0,
+          "propagated": 0,
+          "emitted": 6897,
+          "sentinel": 0,
+          "flag_carried": 0,
+          "flag_dropped": 0
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    },
+    {
+      "target": "VAR-year",
+      "module": "MOD-IDN",
+      "tier": 1,
+      "column": "year",
+      "outcome": "produced",
+      "reason": null,
+      "route": {
+        "kind": "constant"
+      },
+      "build": {
+        "recode": {
+          "rows": 6897,
+          "constant": 1
+        },
+        "contract": {
+          "violations": 0,
+          "first": []
+        },
+        "output": {
+          "rows": 31966,
+          "values": 31966,
+          "reasons": {},
+          "nonsubstantive_share": 0.0
+        }
+      },
+      "without_value_share": 0.0
+    }
+  ]
+}

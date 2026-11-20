@@ -1,0 +1,18 @@
+{
+  "checks": {},
+  "grain": [
+    {
+      "duplicates": 0,
+      "keys": [
+        "NEW_HH_N",
+        "HM01"
+      ],
+      "level": "person",
+      "null_key_rows": 0,
+      "rows": 128071,
+      "source_file": "ses54_user_rec02.dta",
+      "table": "ses54_user_rec02"
+    }
+  ],
+  "key_maps": {}
+}

@@ -1,0 +1,110 @@
+{
+  "survey_id": "CAF_2008_ECASEB",
+  "spec_sha256": "353eccd1138c0a6feea2bc7751a639e23e7a9871ce0a1f7aedde504ce900dfe6",
+  "exit_rule": "clean",
+  "failed_at_run": [],
+  "failed_preludes": [],
+  "unwaived_sinks": 0,
+  "contract_or_golden_failures": 0,
+  "blocked": [],
+  "produced": 37,
+  "rows": 31966,
+  "tables": [
+    {
+      "table": "carquibbconso",
+      "rows": 421117,
+      "used": false
+    },
+    {
+      "table": "carquibwelfare",
+      "rows": 6897,
+      "used": false
+    },
+    {
+      "table": "hhdata",
+      "rows": 6897,
+      "used": true
+    },
+    {
+      "table": "hhevdata",
+      "rows": 55176,
+      "used": false
+    },
+    {
+      "table": "hhstdata",
+      "rows": 6897,
+      "used": false
+    },
+    {
+      "table": "indata",
+      "rows": 31966,
+      "used": true
+    },
+    {
+      "table": "sectj_biend",
+      "rows": 50831,
+      "used": false
+    },
+    {
+      "table": "sectk_autoc",
+      "rows": 83299,
+      "used": false
+    },
+    {
+      "table": "sectk_cader",
+      "rows": 23066,
+      "used": false
+    },
+    {
+      "table": "sectl_depc",
+      "rows": 222128,
+      "used": false
+    },
+    {
+      "table": "sectm_depmf",
+      "rows": 68617,
+      "used": false
+    },
+    {
+      "table": "sectn_revag",
+      "rows": 17397,
+      "used": false
+    },
+    {
+      "table": "sectn_revna",
+      "rows": 1958,
+      "used": false
+    },
+    {
+      "table": "secto_trans",
+      "rows": 1056,
+      "used": false
+    }
+  ],
+  "duplicate_keys": [],
+  "outside_households": [],
+  "merges": {
+    "count": 37,
+    "not_m1": []
+  },
+  "preludes": [
+    {
+      "id": "MOD-IDN-parse_intdate",
+      "invariants": [
+        "declared invariant (checked by the script): __derived.intmonth__ in 1..12 when parse succeeds",
+        "declared invariant (checked by the script): __derived.intyear__ is a plausible 4-digit year when parse succeeds"
+      ]
+    }
+  ],
+  "gate": [
+    "spec stamp verified (validator v2, validated 2026-11-20T05:05:43+00:00)"
+  ],
+  "identity": {
+    "canon": "0.1.0+eaa25bb9",
+    "validator": "2"
+  },
+  "output": {
+    "file": "harmonized.dta",
+    "format": "dta"
+  }
+}

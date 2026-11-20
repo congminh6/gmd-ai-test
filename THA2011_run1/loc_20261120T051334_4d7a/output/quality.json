@@ -1,0 +1,1003 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "output_sha256": "a8ddcee5e694af796fc70ed676a38a8295a85e695802756e91c8a92b96b1c4a8",
+  "spec": "hspec.json",
+  "profile": {
+    "rows": 128071,
+    "weight": "weight",
+    "columns": {
+      "hhid": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 42083
+      },
+      "hhid_orig": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 42083
+      },
+      "pid": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 15
+      },
+      "pid_orig": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 15
+      },
+      "countrycode": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 1
+      },
+      "int_month": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "4": {
+            "share": 0.085499,
+            "share_w": 0.08495
+          },
+          "9": {
+            "share": 0.084703,
+            "share_w": 0.082568
+          },
+          "3": {
+            "share": 0.084367,
+            "share_w": 0.082241
+          },
+          "5": {
+            "share": 0.084071,
+            "share_w": 0.0872
+          },
+          "12": {
+            "share": 0.084024,
+            "share_w": 0.082323
+          },
+          "1": {
+            "share": 0.083907,
+            "share_w": 0.089115
+          },
+          "2": {
+            "share": 0.083399,
+            "share_w": 0.085173
+          },
+          "7": {
+            "share": 0.082407,
+            "share_w": 0.082178
+          },
+          "10": {
+            "share": 0.082197,
+            "share_w": 0.080393
+          },
+          "11": {
+            "share": 0.081986,
+            "share_w": 0.079633
+          },
+          "8": {
+            "share": 0.081728,
+            "share_w": 0.082709
+          },
+          "6": {
+            "share": 0.081712,
+            "share_w": 0.081516
+          }
+        }
+      },
+      "weight": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 494.004441,
+        "p5": 61.9412,
+        "p50": 330.4492,
+        "p95": 1455.8441,
+        "min": 13.3165,
+        "max": 4188.7479,
+        "mean_w": 951.6648,
+        "p50_w": 772.8658
+      },
+      "year": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 2011.0,
+        "p5": 2011.0,
+        "p50": 2011.0,
+        "p95": 2011.0,
+        "min": 2011.0,
+        "max": 2011.0,
+        "mean_w": 2011.0,
+        "p50_w": 2011.0
+      },
+      "gaul_adm1_code": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "gaul_adm2_code": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "geo_code": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 0.0,
+        "valued_w": 0.0,
+        "reasons": {
+          ".b": 1.0
+        },
+        "reasons_w": {
+          ".b": 1.0
+        }
+      },
+      "subnatid1": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 76
+      },
+      "subnatidsurvey": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 76
+      },
+      "urban": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.584816,
+            "share_w": 0.336765
+          },
+          "0": {
+            "share": 0.415184,
+            "share_w": 0.663235
+          }
+        }
+      },
+      "age": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "mean": 37.785299,
+        "p5": 4.0,
+        "p50": 39.0,
+        "p95": 74.0,
+        "min": 0.0,
+        "max": 99.0,
+        "mean_w": 37.223014,
+        "p50_w": 38.0
+      },
+      "childyr": {
+        "kind": "numeric",
+        "rows": 128071,
+        "valued": 0.056328,
+        "valued_w": 0.058099,
+        "reasons": {
+          ".c": 0.943672
+        },
+        "reasons_w": {
+          ".c": 0.941901
+        },
+        "mean": 2.093291,
+        "p5": 0.0,
+        "p50": 2.0,
+        "p95": 4.0,
+        "min": 0.0,
+        "max": 4.0,
+        "mean_w": 2.08056,
+        "p50_w": 2.0
+      },
+      "male": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "0": {
+            "share": 0.528051,
+            "share_w": 0.524103
+          },
+          "1": {
+            "share": 0.471949,
+            "share_w": 0.475897
+          }
+        }
+      },
+      "marital": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 0.804491,
+        "valued_w": 0.795673,
+        "reasons": {
+          ".a": 0.195509
+        },
+        "reasons_w": {
+          ".a": 0.204327
+        },
+        "codes": {
+          "2": {
+            "share": 0.63688,
+            "share_w": 0.65312
+          },
+          "1": {
+            "share": 0.222775,
+            "share_w": 0.215651
+          },
+          "4": {
+            "share": 0.096329,
+            "share_w": 0.091613
+          },
+          "3": {
+            "share": 0.044015,
+            "share_w": 0.039615
+          }
+        }
+      },
+      "relationcs": {
+        "kind": "text",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "distinct": 10
+      },
+      "relationharm": {
+        "kind": "coded",
+        "rows": 128071,
+        "valued": 1.0,
+        "valued_w": 1.0,
+        "reasons": {},
+        "codes": {
+          "1": {
+            "share": 0.328591,
+            "share_w": 0.315894
+          },
+          "3": {
+            "share": 0.260754,
+            "share_w": 0.262591
+          },
+          "2": {
+            "share": 0.198796,
+            "share_w": 0.200905
+          },
+          "5": {
+            "share": 0.183422,
+            "share_w": 0.1937
+          },
+          "4": {
+            "share": 0.024018,
+            "share_w": 0.022967
+          },
+          "6": {
+            "share": 0.004419,
+            "share_w": 0.003944
+          }
+        }
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "age-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "age storage type",
+      "detail": ""
+    },
+    {
+      "id": "age-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "age outside [0, 120]",
+      "detail": ""
+    },
+    {
+      "id": "childyr-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "childyr storage type",
+      "detail": ""
+    },
+    {
+      "id": "childyr-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "childyr"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "childyr outside [0, 5]",
+      "detail": ""
+    },
+    {
+      "id": "countrycode-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "countrycode"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "countrycode storage type",
+      "detail": ""
+    },
+    {
+      "id": "gaul_adm1_code-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "gaul_adm1_code"
+      ],
+      "n_flagged": null,
+      "base": 128071,
+      "share": null,
+      "description": "gaul_adm1_code storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "gaul_adm2_code-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "gaul_adm2_code"
+      ],
+      "n_flagged": null,
+      "base": 128071,
+      "share": null,
+      "description": "gaul_adm2_code storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "geo_code-type",
+      "kind": "base",
+      "status": "not_applicable",
+      "implicates": [
+        "geo_code"
+      ],
+      "n_flagged": null,
+      "base": 128071,
+      "share": null,
+      "description": "geo_code storage type",
+      "detail": "no value in the column to type"
+    },
+    {
+      "id": "hhid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "hhid storage type",
+      "detail": ""
+    },
+    {
+      "id": "hhid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "hhid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "int_month-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month storage type",
+      "detail": ""
+    },
+    {
+      "id": "int_month-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "int_month-range",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "int_month"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "int_month outside [1, 12]",
+      "detail": ""
+    },
+    {
+      "id": "male-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "male storage type",
+      "detail": ""
+    },
+    {
+      "id": "male-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "male"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "male outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "marital-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "marital storage type",
+      "detail": ""
+    },
+    {
+      "id": "marital-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "marital outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "pid-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "pid storage type",
+      "detail": ""
+    },
+    {
+      "id": "pid_orig-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "pid_orig"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "pid_orig storage type",
+      "detail": ""
+    },
+    {
+      "id": "relationcs-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "relationcs"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "relationcs storage type",
+      "detail": ""
+    },
+    {
+      "id": "relationharm-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "relationharm"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "relationharm storage type",
+      "detail": ""
+    },
+    {
+      "id": "relationharm-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "relationharm"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "relationharm outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "subnatid1-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "subnatid1 storage type",
+      "detail": ""
+    },
+    {
+      "id": "subnatidsurvey-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "subnatidsurvey storage type",
+      "detail": ""
+    },
+    {
+      "id": "urban-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "urban"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "urban storage type",
+      "detail": ""
+    },
+    {
+      "id": "urban-domain",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "urban"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "urban outside its coded value set",
+      "detail": ""
+    },
+    {
+      "id": "weight-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "weight storage type",
+      "detail": ""
+    },
+    {
+      "id": "year-type",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "year storage type",
+      "detail": ""
+    },
+    {
+      "id": "weight-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "weight"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Weight is not constant within household.",
+      "detail": ""
+    },
+    {
+      "id": "year-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "year"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Year is not a four digit number.",
+      "detail": ""
+    },
+    {
+      "id": "subnatid1-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "subnatid1"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "It is not if the form [0-9]-[a-z]",
+      "detail": ""
+    },
+    {
+      "id": "hhid-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [],
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "Household identifier is not unique in the database.",
+      "detail": ""
+    },
+    {
+      "id": "age-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Variable is neither an integer or zero",
+      "detail": ""
+    },
+    {
+      "id": "relationharm-1",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "relationharm"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Households without household head",
+      "detail": ""
+    },
+    {
+      "id": "relationharm-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "relationharm"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Households with more than one household head",
+      "detail": ""
+    },
+    {
+      "id": "marital-2",
+      "kind": "base",
+      "status": "pass",
+      "implicates": [
+        "age",
+        "marital"
+      ],
+      "n_flagged": 0,
+      "base": 128071,
+      "share": 0.0,
+      "description": "Classified as married for a child younger than 6 years old",
+      "detail": ""
+    },
+    {
+      "id": "childyr-universe",
+      "kind": "universe",
+      "implicates": [
+        "childyr"
+      ],
+      "gate": "VAR-age < 5",
+      "status": "pass",
+      "n_flagged": 0,
+      "counts": {
+        "value_outside": 0,
+        "reason_outside_not_c": 0,
+        "c_inside": 0
+      },
+      "bases": {
+        "outside": 120857,
+        "inside": 7214,
+        "undetermined": 0
+      },
+      "expression": "(age < 5)",
+      "shares": {
+        "value_outside": 0.0,
+        "reason_outside_not_c": 0.0,
+        "c_inside": 0.0
+      }
+    },
+    {
+      "id": "pid-unique",
+      "kind": "relational",
+      "implicates": [
+        "pid"
+      ],
+      "status": "flagged",
+      "n_flagged": 128071,
+      "base": 128071,
+      "share": 1.0,
+      "description": "pid repeats across the output's rows",
+      "samples": [
+        {
+          "value": "1",
+          "rows": 42083
+        },
+        {
+          "value": "2",
+          "rows": 35288
+        },
+        {
+          "value": "3",
+          "rows": 24295
+        },
+        {
+          "value": "4",
+          "rows": 14505
+        },
+        {
+          "value": "5",
+          "rows": 7112
+        }
+      ]
+    },
+    {
+      "id": "gaul_adm1_code-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "gaul_adm1_code"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "gaul_adm1_code differs within a household"
+    },
+    {
+      "id": "gaul_adm2_code-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "gaul_adm2_code"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "gaul_adm2_code differs within a household"
+    },
+    {
+      "id": "geo_code-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "geo_code"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "geo_code differs within a household"
+    },
+    {
+      "id": "hhid_orig-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "hhid_orig"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "hhid_orig differs within a household"
+    },
+    {
+      "id": "int_month-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "int_month"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "int_month differs within a household"
+    },
+    {
+      "id": "subnatid1-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatid1"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "subnatid1 differs within a household"
+    },
+    {
+      "id": "subnatidsurvey-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "subnatidsurvey"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "subnatidsurvey differs within a household"
+    },
+    {
+      "id": "urban-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "urban"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "urban differs within a household"
+    },
+    {
+      "id": "weight-household-constant",
+      "kind": "relational",
+      "implicates": [
+        "weight"
+      ],
+      "status": "pass",
+      "n_flagged": 0,
+      "base": 42083,
+      "share": 0.0,
+      "description": "weight differs within a household"
+    }
+  ],
+  "reference": {
+    "skipped": "no reference requested"
+  },
+  "comparison": null,
+  "summary": {
+    "rows": 128071,
+    "targets": 20,
+    "weighted": true,
+    "checks_applied": 44,
+    "checks_flagged": 1,
+    "by_kind": {
+      "base": {
+        "applied": 33,
+        "flagged": 0
+      },
+      "universe": {
+        "applied": 1,
+        "flagged": 0
+      },
+      "derivation": {
+        "applied": 0,
+        "flagged": 0
+      },
+      "relational": {
+        "applied": 10,
+        "flagged": 1
+      }
+    },
+    "universe_cells": {
+      "value_outside": 0,
+      "reason_outside_not_c": 0,
+      "c_inside": 0
+    },
+    "derivation_mismatches": 0,
+    "line": "20 targets; 1/44 checks flagged; 0 universe cells; no reference"
+  }
+}

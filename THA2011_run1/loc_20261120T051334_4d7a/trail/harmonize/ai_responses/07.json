@@ -1,0 +1,10 @@
+{
+ "request_id": "07-review_prelude-survey",
+ "reviews": [
+  {
+   "id": "MOD-DEM-childyr_mask",
+   "verdict": "concern",
+   "reason": "The masking only applies `age < 5`; it does not guard against sentinel/invalid numeric ages (e.g., negative sentinel codes) that would still satisfy `<5` and be written into `__derived.childyr__`, violating the intended invariant and VAR-childyr range/universe. Consider explicitly treating sentinel/invalid values as missing (e.g., replace known sentinel(s) with NaN and also require `0 <= age < 5`). Evidence: prelude code in t8#prelude and target contract in t6."
+  }
+ ]
+}

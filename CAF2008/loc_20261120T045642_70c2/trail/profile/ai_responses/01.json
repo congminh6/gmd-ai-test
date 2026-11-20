@@ -1,0 +1,262 @@
+{
+ "request_id": "01-author_overlay-survey",
+ "grain": {
+  "household_key": "idmen",
+  "roster": "indata",
+  "weight": "hhdata.hhweight"
+ },
+ "tables": [
+  {
+   "table": "hhstdata",
+   "verdict": "raw",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "hhdata",
+   "verdict": "raw",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "indata",
+   "verdict": "raw",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "hhevdata",
+   "verdict": "raw",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectj_biend",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectk_autoc",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectk_cader",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectl_depc",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectm_depmf",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectn_revag",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "sectn_revna",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "secto_trans",
+   "verdict": "raw",
+   "evidence": [
+    "t7#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "carquibwelfare",
+   "verdict": "nso_derived",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  },
+  {
+   "table": "carquibbconso",
+   "verdict": "nso_derived",
+   "evidence": [
+    "t2#placement",
+    "t1#structure"
+   ]
+  }
+ ],
+ "fields": [
+  {
+   "table": "hhstdata",
+   "field": "hhweight",
+   "label": "Pondération définitive",
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#identity"
+   ]
+  },
+  {
+   "table": "hhevdata",
+   "field": "hhweight",
+   "label": "Pondération définitive",
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#identity"
+   ]
+  },
+  {
+   "table": "hhstdata",
+   "field": "urru",
+   "label": "Milieu de résidence",
+   "value_codes": {
+    "1": "Urbain",
+    "2": "Rural"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#codes"
+   ]
+  },
+  {
+   "table": "hhevdata",
+   "field": "urru",
+   "label": "Milieu de résidence",
+   "value_codes": {
+    "1": "Urbain",
+    "2": "Rural"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#codes"
+   ]
+  },
+  {
+   "table": "indata",
+   "field": "urru",
+   "label": "Milieu de résidence",
+   "value_codes": {
+    "1": "Urbain",
+    "2": "Rural"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#codes"
+   ]
+  },
+  {
+   "table": "carquibwelfare",
+   "field": "region",
+   "label": "région",
+   "value_codes": {
+    "1": "Plateaux",
+    "2": "Equateur",
+    "3": "Yadé",
+    "4": "Kagas",
+    "5": "Fertit",
+    "6": "Oubangui",
+    "7": "Bangui"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t5#identity",
+    "t6#codes"
+   ]
+  },
+  {
+   "table": "carquibwelfare",
+   "field": "urru",
+   "label": "Milieu de résidence",
+   "value_codes": {
+    "1": "Urbain",
+    "2": "Rural"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t3",
+    "t8#codes"
+   ]
+  },
+  {
+   "table": "carquibwelfare",
+   "field": "hgse",
+   "label": "Groupe socioéconomiue du CM",
+   "value_codes": {
+    "1": "Salarié administration",
+    "2": "Salarié entreprise",
+    "3": "Autre dépendant",
+    "4": "Employeur",
+    "5": "Compte propre agricole",
+    "6": "Compte propre non agricole",
+    "7": "Chômeur",
+    "8": "Inactif/Trop jeune"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#identity",
+    "t8#codes"
+   ]
+  },
+  {
+   "table": "carquibwelfare",
+   "field": "strate",
+   "label": "Strate",
+   "value_codes": {
+    "1": "Bangui",
+    "2": "Autre urbain",
+    "3": "Rural"
+   },
+   "status": "resolved",
+   "source": "author",
+   "evidence": [
+    "t4#codes"
+   ]
+  }
+ ]
+}

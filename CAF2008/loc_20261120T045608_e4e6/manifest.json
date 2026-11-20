@@ -1,0 +1,49 @@
+{
+ "job_id": "loc_20261120T045608_e4e6",
+ "flow": "scribe",
+ "survey_id": "CAF_2008_ECASEB",
+ "status": "completed",
+ "finished": "2026-11-20T04:56:13+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "4c9a4463e9f16ec46b0f1b32068f73d778bfc332cfa296af973ff5310d97dd1a",
+   "size": 5303
+  },
+  "profile/data_scan.json": {
+   "sha256": "d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00",
+   "size": 640583
+  },
+  "profile/instruments.json": {
+   "sha256": "1396517fdaf8b3e772aa5d1f386128800bbfd5787ea2b3507d2602473cbefad4",
+   "size": 4023
+  },
+  "staged.json": {
+   "sha256": "49ba4f67a20b1c4ec3cf479550789edbc1dd4081595a22f3ac74c964d932e0e6",
+   "size": 1391
+  },
+  "trail/scribe/direct/classify-CAF_RCAPRIX2008.json": {
+   "sha256": "1f0e64658c94088638bc793b819028e42e9136b6bc4ce5046edea89abcea39d6",
+   "size": 6114
+  },
+  "trail/scribe/direct/classify-CAF_RCAQRD2008.json": {
+   "sha256": "39350c4a4ea0358afbe20df1c6b2d7f8e8ac57959928481611a2b8952cc53a1e",
+   "size": 6630
+  },
+  "trail/scribe/direct/classify-CAF_RCAQUIBB2008.json": {
+   "sha256": "916767ae01694a2016df2f020177796cdbd4fdbc0fc12c533c929ce94b4880b8",
+   "size": 7619
+  },
+  "trail/scribe/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/scribe/log.txt": {
+   "sha256": "75ab5c1361286dea8258b305cb3375e6470c8ca472a45595f70dec25027c727b",
+   "size": 1560
+  },
+  "trail/scribe/state.json": {
+   "sha256": "3d12e407e80256a3d31fde0cf72ad2df806199db3674108ef73142b1b25ee7fe",
+   "size": 547
+  }
+ }
+}

@@ -1,0 +1,68 @@
+# profile CAF_2008_ECASEB @ 2026-11-20T04:56:42+00:00
+  data=C:\temp\test\surveys\CAF_2008_ECASEB\Data  modules=[]  direct=True
+  identity: survey-harmonization local (testing — no sync stamp); canon none; data unversioned
+  !! data version: no <survey>_v##_M folder in the data path 'CAF_2008_ECASEB/Data': the data is unversioned
+
+== Phase A — profile ==
+  [det] from-intake
+  [det] questionnaire
+  [det] conformance
+  [det] merge
+      residual (advisory): 104 still-missing (codes_missing=96, grain=4, label_empty=4); orphan questions: 0; code conflicts: 30
+        - carquibbconso.a2: unresolved codes_missing (has data)
+        - carquibwelfare.a2: unresolved codes_missing (has data)
+        - carquibwelfare.hgse: unresolved label_empty (has data)
+        - carquibwelfare.hhsize: unresolved codes_missing (has data)
+        - carquibwelfare.npcexp: unresolved codes_missing (has data)
+        - carquibwelfare.region: unresolved codes_missing (has data)
+        - carquibwelfare.strate: unresolved label_empty (has data)
+        - carquibwelfare.urru: unresolved codes_missing (has data)
+        - hhdata.a2: unresolved codes_missing (has data)
+        - hhdata.a6: unresolved codes_missing (has data)
+        - hhdata.f10: unresolved codes_missing (has data)
+        - hhdata.f16: unresolved codes_missing (has data)
+        - hhdata.f2: unresolved codes_missing (has data)
+        - hhdata.g14a2: unresolved codes_missing (has data)
+        - hhdata.g6: unresolved codes_missing (has data)
+        - hhdata.hhsize: unresolved codes_missing (has data)
+        - hhevdata.a2: unresolved codes_missing (has data)
+        - hhevdata.hhweight: unresolved label_empty (has data)
+        - hhevdata.urru: unresolved codes_missing (has data)
+        - hhstdata.a2: unresolved codes_missing (has data)
+        ... and 84 more
+  [det] prefill-file-links
+  [judge] associate
+  [judge] describe
+  [judge] author-overlay
+    AI CALL [author_overlay / survey] → trail\profile\ai_calls\01_author_overlay.brief.md
+    DIRECT [author_overlay / survey] — 8 tool(s), budget 80 call(s)
+    received trail\profile\ai_responses\01.json via submit (4597 bytes)
+      residual (advisory): 91 still-missing (codes_missing=91); orphan questions: 0; code conflicts: 36
+        - carquibbconso.a2: unresolved codes_missing (has data)
+        - carquibwelfare.a2: unresolved codes_missing (has data)
+        - carquibwelfare.hhsize: unresolved codes_missing (has data)
+        - carquibwelfare.npcexp: unresolved codes_missing (has data)
+        - hhdata.a2: unresolved codes_missing (has data)
+        - hhdata.a6: unresolved codes_missing (has data)
+        - hhdata.f10: unresolved codes_missing (has data)
+        - hhdata.f16: unresolved codes_missing (has data)
+        - hhdata.f2: unresolved codes_missing (has data)
+        - hhdata.g14a2: unresolved codes_missing (has data)
+        - hhdata.g6: unresolved codes_missing (has data)
+        - hhdata.hhsize: unresolved codes_missing (has data)
+        - hhevdata.a2: unresolved codes_missing (has data)
+        - hhstdata.a2: unresolved codes_missing (has data)
+        - hhstdata.s13g2: unresolved codes_missing (has data)
+        - hhstdata.s13o2: unresolved codes_missing (has data)
+        - hhstdata.s13p2: unresolved codes_missing (has data)
+        - hhstdata.s8a3: unresolved codes_missing (has data)
+        - hhstdata.s8b3: unresolved codes_missing (has data)
+        - hhstdata.s8c1: unresolved codes_missing (has data)
+        ... and 71 more
+  [judge] heal
+  [det] check-keys
+      grain (person) indata: idmen, memberno -> unique over 31966 rows
+  CHECK A: ok — profile recorded (profile 627ccd377ef8) — review it and approve (the review app's profile review, or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261120T045642_70c2`)
+
+== all phases complete ==
+  profile complete (profile 627ccd377ef8). Next: review its findings (the review app's profile review), then approve it there or `harmon signoff C:\Users\wb327173\.harmon\work\runs\loc_20261120T045642_70c2` — or `gmd harmonize --waive-overlay-review` for the unreviewed test loop.

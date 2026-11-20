@@ -1,0 +1,61 @@
+{
+ "job_id": "loc_20261120T133351_03c9",
+ "flow": "scribe",
+ "survey_id": "THA_2011_HSES",
+ "status": "completed",
+ "finished": "2026-11-20T13:33:59+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "b0d81bfdf94b7873db22ecf11c784aca6df25f6d2fdd2ed3ea9e71388f56080c",
+   "size": 8340
+  },
+  "profile/data_scan.json": {
+   "sha256": "b81e32c0e418802d74542bb0d8e3f3e9bb0c4efd4bad10a6d72b779f59074473",
+   "size": 257398
+  },
+  "profile/instruments.json": {
+   "sha256": "43466537d9b30766cec681be38b9babc457b749aa9e8e24746c9ea7d1a348806",
+   "size": 7999
+  },
+  "staged.json": {
+   "sha256": "cfb606b1d942537a376f5fa8b50c7ffead522159b60e357f939b41221102d56f",
+   "size": 1235
+  },
+  "trail/scribe/Accompanying_note_SES2011_Data_structure/source.json": {
+   "sha256": "156c034e5caa593028d17af3b829dff48cdc9005f4bb27f934751e7582f9c453",
+   "size": 19065
+  },
+  "trail/scribe/direct/classify-.2.json": {
+   "sha256": "c22e096a26e6073221f73c28c9778a3f9c3d766e6d604c22722f3554adc3e60b",
+   "size": 15544
+  },
+  "trail/scribe/direct/classify-.3.json": {
+   "sha256": "145e6fb54d14555120317ad333164ed3ccae26a877d2c4cc23dbdf713666d63e",
+   "size": 15239
+  },
+  "trail/scribe/direct/classify-Accompanying_note_SES2011_Data_structure.json": {
+   "sha256": "faca48f5660dfd2990c93ccac2664ad19b0f12c50b4f127338b7200a8b83e8d6",
+   "size": 7636
+  },
+  "trail/scribe/direct/classify-HSES_2011_Questionnaire_Expenditure.json": {
+   "sha256": "628047846d5c0983263e17a4f90e33f377a84bc2ef3ff572ba7a8761985c989d",
+   "size": 7739
+  },
+  "trail/scribe/direct/classify-HSES_2011_Questionnaire_Income.json": {
+   "sha256": "d5195abc5f77691174c90a264473e1a8d89faa0b23eccc879563d2dd80025fc7",
+   "size": 8463
+  },
+  "trail/scribe/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/scribe/log.txt": {
+   "sha256": "43e517272f876e71eacca2fa704f306efe8a7f9d3f1adac791d07472abaa0eea",
+   "size": 2915
+  },
+  "trail/scribe/state.json": {
+   "sha256": "a988e9584cd1a3564448201e539bec0b21144adb63d543812603b58652d0fe83",
+   "size": 1048
+  }
+ }
+}

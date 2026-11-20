@@ -1,0 +1,103 @@
+{
+ "request_id": "05-author_bindings-MOD-GEO",
+ "bindings": [
+  {
+   "binding_id": "B-test",
+   "target": "VAR-gauladm1code",
+   "predicate": "all",
+   "constant": 1,
+   "missing_map": {
+    "null": ".a",
+    "unmapped": ".b"
+   },
+   "register": "assumed",
+   "evidence": "t10"
+  }
+ ],
+ "absent": [
+  {
+   "target": "VAR-gauladm2code",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-geocode",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-psu",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-strata",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid1",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid1prev",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid2",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid2prev",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid3prev",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatid4prev",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-subnatidsurvey",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  },
+  {
+   "target": "VAR-urban",
+   "kind": "not_collected_by_design",
+   "reason": "x",
+   "status": "absent"
+  }
+ ]
+}

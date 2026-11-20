@@ -1,0 +1,150 @@
+{
+  "task_type": "author_bindings",
+  "scope_id": "MOD-GEO",
+  "scope_ids": [
+    "VAR-gauladm1code",
+    "VAR-gauladm2code",
+    "VAR-geocode",
+    "VAR-psu",
+    "VAR-strata",
+    "VAR-subnatid1",
+    "VAR-subnatid1prev",
+    "VAR-subnatid2",
+    "VAR-subnatid2prev",
+    "VAR-subnatid3",
+    "VAR-subnatid3prev",
+    "VAR-subnatid4",
+    "VAR-subnatid4prev",
+    "VAR-subnatidsurvey",
+    "VAR-urban"
+  ],
+  "data": "C:\\temp\\test\\surveys\\THA_2011_HSES\\Data",
+  "prior_findings": [
+    "$.bindings[8] (B-gaul_adm1_code): missing table (or derived_from) — a binding with no raw_value needs an explicit table",
+    "$.bindings[8] (B-gaul_adm1_code): roles.unit_keys required — omit it only when --profile can resolve it from the source table's grain (table grain ∩ output.grain)"
+  ],
+  "prior_answer": {
+    "bindings": [
+      {
+        "binding_id": "B-test",
+        "target": "VAR-gauladm1code",
+        "predicate": "all",
+        "constant": 1,
+        "missing_map": {
+          "null": ".a",
+          "unmapped": ".b"
+        },
+        "register": "assumed",
+        "evidence": "05:t10"
+      }
+    ],
+    "absent": [
+      {
+        "target": "VAR-gauladm2code",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-geocode",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-psu",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-strata",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid1",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid1prev",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid2",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid2prev",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid3",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid3prev",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid4",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatid4prev",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-subnatidsurvey",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      },
+      {
+        "target": "VAR-urban",
+        "kind": "not_collected_by_design",
+        "reason": "x",
+        "status": "absent"
+      }
+    ]
+  },
+  "prior_files": {},
+  "request_id": "06-author_bindings-MOD-GEO",
+  "tools": [
+    "canon",
+    "check",
+    "codes",
+    "column",
+    "columns",
+    "contract",
+    "current",
+    "onset",
+    "search",
+    "submit"
+  ],
+  "brief_sha256": "9ef319ef6bf90dc78ce6ef90c1821c4f97213a238cd018f30d6c9530cfdb75a4",
+  "untrusted": [
+    "prior_answer",
+    "prior_findings"
+  ],
+  "transport": "direct",
+  "template_sha256": "739b428cf3d1f481417e2a670b1c482035a7feae522f137f7723243359f95bc2",
+  "contract_sha256": "c4ffac02f82c3b26ee34e4346fa52a089d02769f20d9aa14a9c91a7d2508f6eb"
+}

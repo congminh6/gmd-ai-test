@@ -1,0 +1,40 @@
+{
+ "request_id": "01-locate_sources-MOD-IDN",
+ "routing": {
+  "VAR-countrycode": [
+   {
+    "survey_module": "hhdata",
+    "why": "No country code column observed; likely authored constant from survey identity (ISO3) for this file"
+   }
+  ],
+  "VAR-intmonth": [
+   {
+    "survey_module": "hhdata",
+    "column": "a4",
+    "why": "Interview date present; month can be parsed from hhdata.a4 (date de l'interview)"
+   }
+  ],
+  "VAR-intyear": [
+   {
+    "survey_module": "hhdata",
+    "column": "a4",
+    "why": "Interview date present; year can be parsed from hhdata.a4 (date de l'interview)"
+   }
+  ],
+  "VAR-weight": [
+   {
+    "survey_module": "hhdata",
+    "column": "hhweight",
+    "why": "Household weight column present (Pondération définitive)"
+   }
+  ],
+  "VAR-year": [
+   {
+    "survey_module": "hhdata",
+    "column": "a4",
+    "why": "Survey start year may be derived from interview date field (e.g., min year of hhdata.a4) if not otherwise provided"
+   }
+  ]
+ },
+ "notes": "hhweight appears in multiple tables (hhdata/hhevdata/hhstdata/indata); hhdata.hhweight seems the natural household-level source."
+}

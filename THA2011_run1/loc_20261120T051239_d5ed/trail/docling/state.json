@@ -1,0 +1,5 @@
+{
+ "steps": {
+  "start": "failed: docling's models are not at C:\\Users\\wb327173\\.harmon\\docling-models: docling-tools models download layout tableformer -o <dir>, and DOCLING_ARTIFACTS_PATH=<dir>"
+ }
+}

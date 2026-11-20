@@ -1,0 +1,31 @@
+{
+ "survey_id": "THA_2011_HSES",
+ "source": "local:C:\\temp\\test\\surveys | jobs local:C:\\Users\\wb327173\\.harmon\\library",
+ "paths": {
+  "data": "THA_2011_HSES/Data",
+  "docs": "THA_2011_HSES/Doc",
+  "ss_export": "surveys/THA_2011_HSES/ss",
+  "svis": "surveys/THA_2011_HSES/svis",
+  "reference": "surveys/THA_2011_HSES/Reference"
+ },
+ "kind": "survey",
+ "copied": false,
+ "data_version": null,
+ "staged_at": "2026-11-20T13:33:33+00:00",
+ "data": "../../../../../../temp/test/surveys/THA_2011_HSES/Data",
+ "docs": "../../../../../../temp/test/surveys/THA_2011_HSES/Doc",
+ "ss_export": null,
+ "svis": [],
+ "files": [
+  "THA_2011_HSES/Data/ses54_user_rec01.dta",
+  "THA_2011_HSES/Data/ses54_user_rec02.dta",
+  "THA_2011_HSES/Data/ses54_user_rec03.dta",
+  "THA_2011_HSES/Data/ses54_user_rec13.dta",
+  "THA_2011_HSES/Data/ses54_user_rec16.dta",
+  "THA_2011_HSES/Doc/Accompanying note SES2011 Data structure.xlsx",
+  "THA_2011_HSES/Doc/HSES 2011 Questionnaire_Expenditure.pdf",
+  "THA_2011_HSES/Doc/HSES 2011 Questionnaire_Income.pdf",
+  "THA_2011_HSES/Doc/\u0e41\u0e1a\u0e1a \u0e2a\u0e28\u0e2a.2 (\u0e1e\u0e34\u0e40\u0e28\u0e29).pdf",
+  "THA_2011_HSES/Doc/\u0e41\u0e1a\u0e1a \u0e2a\u0e28\u0e2a.3.pdf"
+ ]
+}

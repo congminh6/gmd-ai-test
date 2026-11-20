@@ -1,0 +1,86 @@
+{
+ "request_id": "03-locate_sources-MOD-DEM",
+ "routing": {
+  "VAR-age": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "HM04 is a continuous numeric member attribute with range 0-99 in the household member roster, consistent with age.",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-agecat": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "Age categories can be derived from the continuous age field HM04 in the member roster (inspect during authoring).",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-childmth": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "Child age in months can be derived for under-5s from continuous age field HM04 (verify if months are available separately).",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-childyr": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM04",
+    "why": "Child age in years for under-5s can be derived from continuous age field HM04.",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-male": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM03",
+    "why": "HM03 is a 2-category sex variable with value labels Male/Female in the household member roster.",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-marital": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM10",
+    "why": "HM10 has value labels Never married/Married/Widowed/Divorced/Separated (member roster), matching marital status.",
+    "evidence": [
+     "t12"
+    ]
+   }
+  ],
+  "VAR-relationcs": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM02",
+    "why": "HM02 has detailed relationship-to-head categories (head/spouse/children/parents/other relative/non-relative etc.).",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ],
+  "VAR-relationharm": [
+   {
+    "survey_module": "ses54_user_rec02",
+    "column": "HM02",
+    "why": "Harmonized relationship-to-head is derived from the country-specific relationship codes in HM02.",
+    "evidence": [
+     "t11"
+    ]
+   }
+  ]
+ },
+ "notes": "Most roster variables in ses54_user_rec02 have empty labels/questions; only HM02/HM03/HM10 expose value labels in scan, so education/disability/language/literacy/school could not be confidently routed from the available metadata."
+}

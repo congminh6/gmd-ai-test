@@ -1,0 +1,25 @@
+{
+  "survey_id": "THA_2011_HSES",
+  "steps": {
+    "B.handoff": "ok(profile d9d616807acd approved by mn at 2026-11-20T13:35:52+00:00)",
+    "B.scaffold-header": "ok(scaffolded header -> spec\\hspec.json)",
+    "B.pin-source-inventory": "ok(set header 'source_inventory' in hspec.json (invariant verified))",
+    "B.pin-grain": "ok(set header 'output' in hspec.json (invariant verified))",
+    "B.modules": "ok(3 module(s) in the canon)",
+    "B.bind-standard": "ok(no source standard (the profile has no conformance record))",
+    "B.pin-engine-ids": "ok(pinned VAR-hhid (household), VAR-hhidorig (household), VAR-pid (person), VAR-pidorig (person))",
+    "B.locate-sources": "ok(all 3 modules)",
+    "B.author-bindings": "ok(all modules; findings left in MOD-DEM)",
+    "B.review-prelude": "ok(no prelude code to read)",
+    "B.check": "ok",
+    "E.stamp": "ok(validate clean)",
+    "E.lock": "ok(\u2192 run.lock.json)",
+    "E.hspec-run": "ok(hspec-run exit=0; every certified target produced)",
+    "E.check": "ok",
+    "F.quality": "ok(9 targets; 1/18 checks flagged; 0 universe cells; no reference)",
+    "F.check": "ok",
+    "G.lock": "ok(\u2192 run.lock.json)",
+    "G.check": "ok"
+  },
+  "updated": "2026-11-20T13:49:03+00:00"
+}

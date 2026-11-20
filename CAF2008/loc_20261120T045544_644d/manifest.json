@@ -1,0 +1,37 @@
+{
+ "job_id": "loc_20261120T045544_644d",
+ "flow": "intake",
+ "survey_id": "CAF_2008_ECASEB",
+ "status": "completed",
+ "finished": "2026-11-20T04:55:58+00:00",
+ "files": {
+  "job.json": {
+   "sha256": "e743513f782acd1d2efdb3adbe84ee9baf66366834b05166e6f5a287a7139f8a",
+   "size": 4173
+  },
+  "profile/data_scan.json": {
+   "sha256": "d44dd973350716771019d13918304063e729457ea3d78964434d59dd775faf00",
+   "size": 640583
+  },
+  "profile/instruments.json": {
+   "sha256": "cd2f98994a34e76975928958954cf55ff2787f6edd5654584a5f518048eaf0fd",
+   "size": 1717
+  },
+  "staged.json": {
+   "sha256": "49ba4f67a20b1c4ec3cf479550789edbc1dd4081595a22f3ac74c964d932e0e6",
+   "size": 1391
+  },
+  "trail/intake/identity.json": {
+   "sha256": "62c80a23346c13fc3ba94179270cfc466b8b4b47c7ade1dad0066d08eaf312b4",
+   "size": 439
+  },
+  "trail/intake/log.txt": {
+   "sha256": "84330331f21a9ff09f5ead8a78fe541a4f713eacba3121a4e381057bbd6c1541",
+   "size": 2842
+  },
+  "trail/intake/state.json": {
+   "sha256": "ccc193722d4ee4971b6f664a837d9ad824675f80247c6a9e264a7a6f003b4343",
+   "size": 292
+  }
+ }
+}
